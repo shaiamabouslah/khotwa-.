@@ -1,0 +1,62 @@
+---
+doc_id: oous:/ar/actualites/739/بلاغ_حول_الوثائق_المطلوبة_لمطاالب_المنح_و_منحة_الادماج_و_القروض_للسنة_الجامعية_#index
+site: oous
+org: Office des Œuvres Universitaires pour le Sud (OOUS)
+trust: official
+url: https://oous.rnu.tn/ar/actualites/739/%D8%A8%D9%84%D8%A7%D8%BA_%D8%AD%D9%88%D9%84_%D8%A7%D9%84%D9%88%D8%AB%D8%A7%D9%8A%D9%94%D9%82_%D8%A7%D9%84%D9%85%D8%B7%D9%84%D9%88%D8%A8%D8%A9_%D9%84%D9%85%D8%B7%D8%A7%D8%A7%D9%84%D8%A8_%D8%A7%D9%84%D9%85%D9%86%D8%AD_%D9%88_%D9%85%D9%86%D8%AD%D8%A9_%D8%A7%D9%84%D8%A7%D8%AF%D9%85%D8%A7%D8%AC_%D9%88_%D8%A7%D9%84%D9%82%D8%B1%D9%88%D8%B6_%D9%84%D9%84%D8%B3%D9%86%D8%A9_%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D9%8A%D8%A9_20272026
+lang: ar
+title: مستجدات
+section: null
+breadcrumb: []
+doc_type: announcement
+domain_hint: studies
+subtopic_hint: bourses
+hint_score: 5
+hint_keywords:
+- boursier
+- منحة
+- المنح
+forms:
+- https://oous.rnu.tn/galerie_medias/بلاغ%20وثائق%20مطالب%20المنحة%20و%20منحة%20الادماج%20و%20القروض%20للسنة%20الجامعية%202026%202027._1788342181.pdf
+render: html
+discovered_via: link
+source_updated: null
+http_last_modified: null
+sitemap_lastmod: null
+fetched_at: '2026-10-05T23:53:22+00:00'
+first_seen: '2026-10-05T20:27:24+00:00'
+last_changed: '2026-10-05T23:53:30+00:00'
+content_hash: sha256:395b3dad4f66b1df53e18f89273f54d7486228439c686fafb80e27f9c3dfcb09
+words: 230
+status: active
+---
+
+الجمهورية التونسية
+وزارة التعليم العالي والبحث العلمي
+
+- [AR](https://oous.rnu.tn/change_lang/2?locale=ar&redirect=https%3A%2F%2Foous.rnu.tn%2Far%2Factualites%2F739%2F%25D8%25A8%25D9%2584%25D8%25A7%25D8%25BA_%25D8%25AD%25D9%2588%25D9%2584_%25D8%25A7%25D9%2584%25D9%2588%25D8%25AB%25D8%25A7%25D9%258A%25D9%2594%25D9%2582_%25D8%25A7%25D9%2584%25D9%2585%25D8%25B7%25D9%2584%25D9%2588%25D8%25A8%25D8%25A9_%25D9%2584%25D9%2585%25D8%25B7%25D8%25A7%25D8%25A7%25D9%2584%25D8%25A8_%25D8%25A7%25D9%2584%25D9%2585%25D9%2586%25D8%25AD_%25D9%2588_%25D9%2585%25D9%2586%25D8%25AD%25D8%25A9_%25D8%25A7%25D9%2584%25D8%25A7%25D8%25AF%25D9%2585%25D8%25A7%25D8%25AC_%25D9%2588_%25D8%25A7%25D9%2584%25D9%2582%25D8%25B1%25D9%2588%25D8%25B6_%25D9%2584%25D9%2584%25D8%25B3%25D9%2586%25D8%25A9_%25D8%25A7%25D9%2584%25D8%25AC%25D8%25A7%25D9%2585%25D8%25B9%25D9%258A%25D8%25A9_20272026)
+
+##### فضاء المؤسسات
+
+##### مؤسسات الخدمات الجامعية
+
+[الدخول إلى فضائك](https://oous.rnu.tn/login)
+
+##### مؤسسات التعليم العالي
+
+[الدخول إلى فضائك](https://oous.rnu.tn/ar/liste-boursier-etablissement)
+
+- حدث
+
+# مستجدات
+
+### بلاغ حول الوثائق المطلوبة لمطاالب المنح و منحة الادماج و القروض للسنة الجامعية 2027/2026
+
+[بلاغ حول الوثائق المطلوبة لمطاالب المنح و منحة الادماج و القروض للسنة الجامعية 2027/2026](https://oous.rnu.tn/galerie_medias/بلاغ%20وثائق%20مطالب%20المنحة%20و%20منحة%20الادماج%20و%20القروض%20للسنة%20الجامعية%202026%202027._1788342181.pdf)
+
+شارك على الشبكات الاجتماعية :
+
+##### أجندة الفعاليات
+
+Site créé et optimisé par Tac-Tic - https://tac-tic.tn
+سيتم تحسين تجربتنا على هذا الموقع من خلال السماح بملفات تعريف الارتباط

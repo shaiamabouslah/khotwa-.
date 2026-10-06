@@ -1,0 +1,55 @@
+01:27:12 INFO    tia: 3 URLs discovered
+01:27:19 INFO    tia done: {'changed': 3}
+01:27:24 INFO    oous: 6 URLs discovered
+01:27:30 INFO    ucar: 37 URLs discovered
+01:27:32 INFO    oous done: {'changed': 2, 'unchanged': 3}
+01:28:06 INFO    retry 1/3 for https://ucar.rnu.tn/call-for-applications-erasmus-mobility-scholarship-at-the-university-of-trento-italy/ (ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))
+01:28:15 INFO    retry 2/3 for https://ucar.rnu.tn/call-for-applications-erasmus-mobility-scholarship-at-the-university-of-trento-italy/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:28:27 INFO    retry 3/3 for https://ucar.rnu.tn/call-for-applications-erasmus-mobility-scholarship-at-the-university-of-trento-italy/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:28:33 WARNING FAIL https://ucar.rnu.tn/call-for-applications-erasmus-mobility-scholarship-at-the-university-of-trento-italy/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))): last snapshot reused
+01:29:14 INFO    retry 1/3 for https://ucar.rnu.tn/mobility-scholarship-at-the-university-of-cagliari-italywithin-the-framework-of-the-mare-project/ (ReadTimeout: HTTPSConnectionPool(host='ucar.rnu.tn', port=443): Read timed out. (read timeout=40))
+01:29:23 INFO    retry 2/3 for https://ucar.rnu.tn/mobility-scholarship-at-the-university-of-cagliari-italywithin-the-framework-of-the-mare-project/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:29:34 INFO    retry 3/3 for https://ucar.rnu.tn/mobility-scholarship-at-the-university-of-cagliari-italywithin-the-framework-of-the-mare-project/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:29:40 WARNING FAIL https://ucar.rnu.tn/mobility-scholarship-at-the-university-of-cagliari-italywithin-the-framework-of-the-mare-project/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))): last snapshot reused
+01:29:48 INFO    retry 1/3 for https://ucar.rnu.tn/mobility-scholarship-at-the-university-of-pisa-italywithin-the-framework-of-the-mare-project-extended-deadline/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:29:58 INFO    retry 2/3 for https://ucar.rnu.tn/mobility-scholarship-at-the-university-of-pisa-italywithin-the-framework-of-the-mare-project-extended-deadline/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:30:09 INFO    retry 3/3 for https://ucar.rnu.tn/mobility-scholarship-at-the-university-of-pisa-italywithin-the-framework-of-the-mare-project-extended-deadline/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:30:15 WARNING FAIL https://ucar.rnu.tn/mobility-scholarship-at-the-university-of-pisa-italywithin-the-framework-of-the-mare-project-extended-deadline/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))): last snapshot reused
+01:30:22 INFO    retry 1/3 for https://ucar.rnu.tn/erasmus-mobility-scholarship-at-alanya-alaaddin-keykubat-university-alkuturkey/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:30:31 INFO    retry 2/3 for https://ucar.rnu.tn/erasmus-mobility-scholarship-at-alanya-alaaddin-keykubat-university-alkuturkey/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:30:42 INFO    retry 3/3 for https://ucar.rnu.tn/erasmus-mobility-scholarship-at-alanya-alaaddin-keykubat-university-alkuturkey/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:30:48 WARNING FAIL https://ucar.rnu.tn/erasmus-mobility-scholarship-at-alanya-alaaddin-keykubat-university-alkuturkey/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))): last snapshot reused
+01:31:10 WARNING invalid TLS certificate on ucar.rnu.tn, fetching without verification
+01:31:17 INFO    retry 1/3 for https://ucar.rnu.tn/ihec-carthage-recommended-for-iso-21001-certification-a-proud-moment-for-ucar/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:31:26 INFO    retry 2/3 for https://ucar.rnu.tn/ihec-carthage-recommended-for-iso-21001-certification-a-proud-moment-for-ucar/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:31:38 INFO    retry 3/3 for https://ucar.rnu.tn/ihec-carthage-recommended-for-iso-21001-certification-a-proud-moment-for-ucar/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:31:44 WARNING FAIL https://ucar.rnu.tn/ihec-carthage-recommended-for-iso-21001-certification-a-proud-moment-for-ucar/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))): last snapshot reused
+01:31:51 INFO    retry 1/3 for https://ucar.rnu.tn/erasmus-international-credit-mobility-ka171-2024-project/ (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:32:15 WARNING FAIL https://ucar.rnu.tn/erasmus-international-credit-mobility-ka171-2024-project/ (HTTP 404): last snapshot reused
+01:32:15 WARNING FAIL https://ucar.rnu.tn/call-for-applications-erasmus-mobility-scholarship-at-west-university-of-timisoara-romania/ (HTTP 404): last snapshot reused
+01:32:17 WARNING FAIL https://ucar.rnu.tn/call-for-applicationsan-erasmus-mobility-scholarship-at-alexandru-ioan-cuza-university-of-iasi-romania/ (HTTP 404): last snapshot reused
+01:32:19 WARNING FAIL https://ucar.rnu.tn/call-for-applicationserasmus-mobility-grant-at-alanya-alaaddin-keykubat-university-alku-turkey/ (HTTP 404): last snapshot reused
+01:32:21 WARNING FAIL https://ucar.rnu.tn/call-for-applicationstwo-erasmus-mobility-scholarships-at-the-universitat-autonoma-de-barcelona-spain/ (HTTP 404): last snapshot reused
+01:32:24 WARNING FAIL https://ucar.rnu.tn/call-for-applicationstwo-erasmus-mobility-scholarships-at-the-universitat-autonoma-de-barcelona-spain-2/ (HTTP 404): last snapshot reused
+01:32:25 WARNING FAIL https://ucar.rnu.tn/call-for-applicationsone-erasmus-mobility-scholarship-at-the-open-university-of-cyprus/ (HTTP 404): last snapshot reused
+01:32:27 WARNING FAIL https://ucar.rnu.tn/call-for-applications-pnrr-tne-impact-mobility-scholarships-at-the-university-of-cagliari-italy/ (HTTP 404): last snapshot reused
+01:32:29 WARNING FAIL https://ucar.rnu.tn/national-engineering-school-of-bizerte-enib-recommended-for-iso-90012015-and-iso-210012018-certification/ (HTTP 404): last snapshot reused
+01:32:31 WARNING FAIL https://ucar.rnu.tn/call-for-applicationsan-erasmus-mobility-scholarship-at-alanya-alaaddin-keykubat-university-alkuturkey/ (HTTP 404): last snapshot reused
+01:32:33 WARNING FAIL https://ucar.rnu.tn/call-for-applications-for-incoming-outgoing-mobility-reserved-for-professors-and-researchers-of/ (HTTP 404): last snapshot reused
+01:32:35 WARNING FAIL https://ucar.rnu.tn/call-for-applicationsone-erasmus-mobility-grant-at-the-university-of-trento-italy/ (HTTP 404): last snapshot reused
+01:32:37 WARNING FAIL https://ucar.rnu.tn/call-for-applications-2026-internship-scholarships-pfe/ (HTTP 404): last snapshot reused
+01:32:39 WARNING FAIL https://ucar.rnu.tn/call-for-applications-an-erasmus-mobility-scholarship-at-the-university-of-cordoba-spain/ (HTTP 404): last snapshot reused
+01:32:41 WARNING FAIL https://ucar.rnu.tn/call-for-applications-two-erasmus-mobility-grants-at-the-university-of-seville-spain/ (HTTP 404): last snapshot reused
+01:32:43 WARNING FAIL https://ucar.rnu.tn/call-for-applications-two-erasmus-mobility-scholarships-at-saarland-university-germany/ (HTTP 404): last snapshot reused
+01:32:45 WARNING FAIL https://ucar.rnu.tn/call-for-applications-two-erasmus-mobility-grants-at-alexandru-ioan-cuza-university-of-iasi-romania/ (HTTP 404): last snapshot reused
+01:32:47 WARNING FAIL https://ucar.rnu.tn/call-for-applications-erasmus-mobility-grant-at-cukurova-university-turkiye/ (HTTP 404): last snapshot reused
+01:32:49 WARNING FAIL https://ucar.rnu.tn/the-university-of-carthage-congratulates-insat-on-its-recommendation-for-iso-21001-certification/ (HTTP 404): last snapshot reused
+01:32:51 WARNING FAIL https://ucar.rnu.tn/call-for-applications-for-students-5-erasmus-mobility-grants/ (HTTP 404): last snapshot reused
+01:32:53 WARNING FAIL https://ucar.rnu.tn/call-for-applications-for-administrative-staff-1-erasmus-mobility-grant/ (HTTP 404): last snapshot reused
+01:32:55 WARNING FAIL https://ucar.rnu.tn/call-for-applications-erasmus-mobility-romania/ (HTTP 404): last snapshot reused
+01:32:57 WARNING FAIL https://ucar.rnu.tn/erasmus-mobility/ (HTTP 404): last snapshot reused
+01:32:59 WARNING FAIL https://ucar.rnu.tn/greenmetric-certification/ (HTTP 404): last snapshot reused
+01:32:59 INFO    ucar done: {'new': 8, 'stale': 28, 'duplicate': 1}
+
+Summary: {'changed': 5, 'unchanged': 3, 'new': 8, 'stale': 28, 'duplicate': 1}
+Corpus: data/corpus/ (catalog.jsonl)  History: data/state/changelog.jsonl  Log: data/state/crawl.log

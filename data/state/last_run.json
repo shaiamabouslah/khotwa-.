@@ -1,0 +1,15 @@
+{
+  "finished_at": "2026-10-06T00:32:59+00:00",
+  "sites": [
+    "oous",
+    "ucar",
+    "tia"
+  ],
+  "counts": {
+    "changed": 5,
+    "unchanged": 3,
+    "new": 8,
+    "stale": 28,
+    "duplicate": 1
+  }
+}

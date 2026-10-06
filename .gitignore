@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# Crawl outputs: versioned with DVC, not git
+/data/raw/
+/data/state/crawl.log

@@ -1,0 +1,95 @@
+# Single source of truth for the KB structure.
+# Folders under kb/<domain>/ must match these subtopic keys exactly;
+# scripts/validate_kb.py enforces it.
+
+languages: [fr, ar]          # KB languages (the crawl corpus may also hold "en" sources)
+
+statuses:
+  active: Content verified against the source at last_checked.
+  stale: Source unreachable or removed; last good version kept.
+  deprecated: Replaced by another procedure (see `replaced_by`).
+
+# `keywords` feed the rule-based classifier of the crawler (crawler/classify.py): every
+# crawled document gets a domain/subtopic hint from them, whatever its source.
+# Matching is case- and accent-insensitive; Arabic tatweel and diacritics are ignored.
+domains:
+  studies:
+    label: {fr: "Études & Mobilité Académique", ar: "الدراسة والتنقل الأكاديمي"}
+    subtopics:
+      equivalence:
+        fr: "Équivalence de diplômes"
+        ar: "معادلة الشهائد"
+        keywords: [équivalence, equivalence, diplôme étranger, reconnaissance du diplôme, معادلة, المعادلات, معادلة الشهائد]
+      bourses:
+        fr: "Bourses et prêts universitaires"
+        ar: "المنح والقروض الجامعية"
+        keywords: [bourse, boursier, prêt universitaire, non-boursier, منحة, المنح, منح, قرض جامعي, القروض الجامعية, منحة الإدماج, منحة التربص]
+      inscription:
+        fr: "Inscription et transfert"
+        ar: "التسجيل والنقلة"
+        keywords: [inscription universitaire, orientation universitaire, réorientation, transfert, التسجيل الجامعي, التوجيه الجامعي, إعادة التوجيه, النقلة]
+      releves-attestations:
+        fr: "Relevés de notes et attestations"
+        ar: "كشوف الأعداد والشهائد"
+        keywords: [relevé de notes, attestation d'inscription, attestation de réussite, duplicata, كشف الأعداد, شهادة ترسيم, شهادة نجاح]
+      legalisation:
+        fr: "Légalisation de documents académiques"
+        ar: "المصادقة على الوثائق الجامعية"
+        keywords: [légalisation, certification des diplômes, authentification des documents, apostille, المصادقة على الوثائق, التعريف بالإمضاء]
+      stages-pfe:
+        fr: "Stages et conventions PFE"
+        ar: "التربصات واتفاقيات مشروع ختم الدروس"
+        keywords: [convention de stage, stage obligatoire, PFE, projet de fin d'études, اتفاقية تربص, مشروع ختم الدروس]
+      mobilite:
+        fr: "Mobilité et échanges"
+        ar: "التنقل والتبادل الطلابي"
+        keywords: [Erasmus, mobilité, échange, credit mobility, التنقل, التبادل الطلابي, الدراسة بالخارج]
+
+  employment:
+    label: {fr: "Emploi & Vie Professionnelle", ar: "الشغل والحياة المهنية"}
+    subtopics:
+      affiliation-cnss:
+        fr: "Affiliation CNSS des salariés"
+        ar: "انخراط الأجراء في الضمان الاجتماعي"
+        keywords: [affiliation, immatriculation, employeur, salarié, cotisations, déclaration des salaires, انخراط, الانخراط, تسجيل الأجراء, المؤجر, الاشتراكات]
+      employes-de-maison:
+        fr: "Employés de maison"
+        ar: "عملة المنازل"
+        keywords: [gens de maison, employé de maison, employés de maison, travaux domestiques, عملة المنازل, عاملة منزلية, معينة منزلية]
+      non-salaries:
+        fr: "Travailleurs non salariés"
+        ar: "العملة غير الأجراء"
+        keywords: [non salarié, non-salarié, indépendant, travailleur indépendant, auto-entrepreneur, artiste, غير الأجراء, العامل غير الأجير, مبادر ذاتي]
+      patente-fiscalite:
+        fr: "Patente et identifiant fiscal"
+        ar: "الباتيندا والمعرف الجبائي"
+        keywords: [patente, identifiant fiscal, matricule fiscal, carte d'identification fiscale, déclaration d'existence, immatriculation fiscale, الباتيندا, المعرف الجبائي, التصريح بالوجود]
+      attestations:
+        fr: "Attestations et relevés de cotisations"
+        ar: "الشهائد وكشوف المساهمات"
+        keywords: [attestation d'affiliation, certificat d'adhésion, relevé de carrière, relevé des salaires, شهادة انخراط, شهائد الانخراط, كشف الحياة المهنية]
+      creation-entreprise:
+        fr: "Création d'entreprise"
+        ar: "بعث المؤسسات"
+        keywords: [création d'entreprise, créer une entreprise, promoteur, porteur de projet, registre national des entreprises, RNE, SARL, SUARL, بعث مؤسسة, بعث المؤسسات, الباعثين, السجل الوطني للمؤسسات]
+      recherche-emploi:
+        fr: "Recherche d'emploi et programmes d'insertion"
+        ar: "البحث عن شغل وبرامج الإدماج"
+        keywords: [demandeur d'emploi, offre d'emploi, ANETI, SIVP, stage d'initiation, insertion professionnelle, emploi à l'étranger, طالب شغل, عروض الشغل, البحث عن شغل, الإدماج المهني]
+
+# Body headings, in this exact order, per language.
+# The chunker maps each heading to its section key.
+sections:
+  - {key: resume,     fr: "Résumé",               ar: "ملخص"}
+  - {key: conditions, fr: "Conditions",           ar: "الشروط"}
+  - {key: documents,  fr: "Pièces à fournir",     ar: "الوثائق المطلوبة"}
+  - {key: etapes,     fr: "Étapes",               ar: "المراحل"}
+  - {key: delais,     fr: "Délais et coûts",      ar: "الآجال والمعاليم"}
+  - {key: lieu,       fr: "Où s'adresser",        ar: "الجهة المعنية"}
+  - {key: formulaires, fr: "Formulaires",         ar: "المطبوعات"}
+  - {key: references, fr: "Références juridiques", ar: "المراجع القانونية"}
+
+# Placeholder for a section the source does not cover (skipped by the chunker).
+missing_marker:
+  fr: "_Non précisé par la source._"
+  ar: "_غير مذكور في المصدر._"

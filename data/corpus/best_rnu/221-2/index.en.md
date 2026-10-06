@@ -1,0 +1,72 @@
+---
+doc_id: best_rnu:/221-2#index
+site: best_rnu
+org: Ministère de l'Enseignement Supérieur — Bourses et prêts universitaires à l'étranger
+trust: official
+url: https://best.rnu.tn/221-2/
+lang: en
+title: Buttons
+section: null
+breadcrumb: []
+doc_type: page
+domain_hint: studies
+subtopic_hint: null
+hint_score: 0
+hint_keywords: []
+forms: []
+render: html
+discovered_via: sitemap
+source_updated: null
+http_last_modified: null
+sitemap_lastmod: '2015-01-24T16:39:55+00:00'
+fetched_at: '2026-10-05T23:55:13+00:00'
+first_seen: '2026-10-05T20:28:29+00:00'
+last_changed: '2026-10-05T23:55:18+00:00'
+content_hash: sha256:1b8517dbf61f25c7f499744fe69ae1d8a14ab86361fedb6a16fc804119fa724e
+words: 41
+status: active
+---
+
+# Buttons
+
+### Small Buttons
+
+Small
+Small
+Small
+Small
+Small
+Small
+Small
+Small
+Small
+
+### Medium Buttons
+
+Medium
+Medium
+Medium
+Medium
+Medium
+Medium
+Medium
+Medium
+Medium
+
+### Large Buttons
+
+Large
+Large
+Large
+Large
+Large
+Large
+Large
+Large
+Large
+
+### Buttons With Icons
+
+Download
+Follow
+View Now

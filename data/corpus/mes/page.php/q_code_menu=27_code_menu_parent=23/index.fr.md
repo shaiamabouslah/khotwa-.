@@ -1,0 +1,35 @@
+---
+doc_id: mes:/page.php/q_code_menu=27_code_menu_parent=23#index
+site: mes
+org: Ministère de l'Enseignement Supérieur et de la Recherche Scientifique
+trust: official
+url: https://www.mes.tn/page.php?code_menu=27&code_menu_parent=23
+lang: fr
+title: الدراسات الطبية
+section: null
+breadcrumb: []
+doc_type: page
+domain_hint: studies
+subtopic_hint: null
+hint_score: 0
+hint_keywords: []
+forms: []
+render: html
+discovered_via: link
+source_updated: null
+http_last_modified: null
+sitemap_lastmod: null
+fetched_at: '2026-10-06T00:30:49+00:00'
+first_seen: '2026-10-05T20:26:13+00:00'
+last_changed: '2026-10-06T00:30:49+00:00'
+content_hash: sha256:0ebb6e3b33cd33529f5b72f004ff26c98064679f28019a1dfe27f089acb7f597
+words: 40
+status: active
+---
+
+# الدراسات الطبية
+
+- [التقديم](https://www.mes.tn/page.php?code_menu=24&code_menu_parent=23)
+- [اجازة ، ماجستير ، دكتوراه](http://www.parcours-lmd.salima.tn)
+- [الدراسات الهندسية](https://www.mes.tn/page.php?code_menu=26&code_menu_parent=23)
+- [الدراسات الطبية](https://www.mes.tn/page.php?code_menu=27&code_menu_parent=23)

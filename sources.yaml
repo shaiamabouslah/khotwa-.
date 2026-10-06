@@ -1,0 +1,546 @@
+# ═══════════════════════════════════════════════════════════════════════════════════
+# Khotwa source registry (v2): every source we use, and how to crawl it.
+# ═══════════════════════════════════════════════════════════════════════════════════
+# One entry per SITE (not per page). Adding a source = adding one block here.
+#
+#   status     active     crawled by `python -m crawler crawl`
+#              candidate  evaluated, not crawled yet (see `note`)
+#              excluded   never crawled (see `reason`)
+#   trust      official (ministry, public agency) | institutional (university)
+#              | program (official programme office)
+#   domain     optional prior for the classifier (studies | employment)
+#   render     auto (default: detected per page) | html | js | pdf
+#   discover   how pages are found        -> crawler/discover.py
+#   extract    how a page becomes Markdown -> crawler/extract.py
+#   split      none | headings | accordion | titles   (one page -> several documents)
+#   lang_variants  same page in several languages via URL rewriting -> crawler/registry.py
+#   doc_types  [{match: regex on url+title, type: procedure|announcement|form|guide}]
+#
+# Check a new site before adding it:  python -m crawler probe <url>
+# Check its discovery rules:          python -m crawler discover --site <key>
+# Validate this file:                 python -m crawler validate
+# ═══════════════════════════════════════════════════════════════════════════════════
+
+version: 2
+
+defaults:
+  user_agent: "KhotwaBot/0.1 (academic MLOps project, TEK-UP University)"  # add a contact address before large runs
+  delay_seconds: 2          # between two requests to the same host (sites run in parallel)
+  timeout_seconds: 40
+  respect_robots_txt: true
+  min_words: 30             # shorter documents are skipped (menus, empty sections)
+
+sites:
+
+  # ───────────────────────── cross-domain national portals ─────────────────────────
+  services_gov:
+    status: active
+    trust: official
+    org: Portail national des services administratifs
+    base_url: https://services.gov.tn
+    # WordPress + Elementor: every service is an accordion item with fixed fields
+    # (Service, Conditions, Documents demandés, Étapes, Délais, Lieu de dépôt...).
+    discover:
+      sitemap: true
+      keep:
+        - '/(je-poursuis-mes-etudes-a-luniversite|enseignement-superieur-et-recherche-scientifique(-2)?|je-cherche-un-emploi|emploi-et-formation|recrutement-et-formation-professionnelle|je-souhaite-beneficier-de-la-couverture-sociale|affaires-sociales(-2)?|affaires-etrangeres|finances(-2)?|impots-et-finances)/$'
+    extract:
+      content: ['div[data-elementor-type="wp-page"]']
+    split: accordion
+    doc_types: [{match: '.', type: procedure}]
+    note: "Huge pages (~3 MB): the server sometimes truncates them, retries handle it."
+
+  khadamet:
+    status: active
+    trust: official
+    org: البوابة الوطنية للخدمات الإدارية
+    base_url: https://khadamet.gov.tn
+    discover:
+      sitemap: true
+      keep:
+        - '/(أدرس-في-الجامعة|التعليم-العالي-والبحث-العلمي(-2)?|أبحث-عن-عمل|الشغل-والتكوين|التوظيف-والتكوين-المهني|أرغب-في-الحصول-على-التغطية-الاجتماعية|الشؤون-الاجتماعية(-2)?|الشؤون-الخارجية|المالية(-2)?|الضرائب-والمالية)/$'
+    extract:
+      content: ['div[data-elementor-type="wp-page"]']
+    split: accordion
+    doc_types: [{match: '.', type: procedure}]
+
+  # ─────────────────────────────────── STUDIES ─────────────────────────────────────
+  mes:
+    status: active
+    trust: official
+    domain: studies
+    org: Ministère de l'Enseignement Supérieur et de la Recherche Scientifique
+    base_url: https://www.mes.tn
+    discover:
+      seeds: ["https://www.mes.tn/", "https://www.mes.tn/formulaire.php?code_menu=59"]
+      follow: ['/page\.php\?code_menu=\d+', '/formulaire\.php\?code_menu=\d+']
+      keep: ['/page\.php\?code_menu=\d+', '/formulaire\.php\?code_menu=\d+', '\.pdf$']
+      max_depth: 1
+      max_pages: 80
+    extract:
+      content: ["#imprim"]
+
+  equivalence_rnu:
+    status: active
+    trust: official
+    domain: studies
+    org: Ministère de l'Enseignement Supérieur — Direction des équivalences
+    base_url: https://equivalence.rnu.tn
+    discover:
+      seeds: [https://equivalence.rnu.tn/index_fr.html, https://equivalence.rnu.tn/index.html]
+    extract:
+      content: ["main#main", "main"]
+    split: headings
+    doc_types: [{match: '.', type: procedure}]
+
+  education_gov:
+    status: active
+    trust: official
+    domain: studies
+    org: Ministère de l'Éducation (via le portail SICAD)
+    base_url: http://www.sicad.gov.tn
+    # education.gov.tn itself is a WordPress news/press site with no procedure pages in its
+    # own nav (checked by inspection); the actual procedures live on the government's
+    # unified SICAD services portal. Each seed verified individually with `crawler probe`.
+    discover:
+      seeds:
+        - http://www.sicad.gov.tn/Fr/Prestation_Obtention-dun-duplicata-du-diplome-ou-du--releve-des-notes_57_27_D2152
+        - http://www.sicad.gov.tn/Fr/Prestations_57_3_D622
+    extract:
+      content: ["div.div_padding_prestation"]
+    note: "K-12-level procedures (diploma/transcript duplicates, study-abroad fee transfers for students), distinct from MESRS/equivalence_rnu which only covers university-level equivalence. More SICAD pages (e.g. baccalaureate equivalence) may exist; add only after verifying each URL with `crawler probe`, not by guessing."
+
+  transtu:
+    status: active
+    trust: official
+    domain: studies
+    org: Société des Transports de Tunis (TRANSTU)
+    base_url: https://www.transtu.tn
+    discover:
+      seeds: [https://www.transtu.tn/]
+      follow: ['/(abonnement|scolaire|etudiant|universitair)']
+      keep: ['(abonnement|scolaire|etudiant|universitair)']
+      max_depth: 2
+      max_pages: 30
+    extract:
+      content: ["#content_transtu"]
+      drop: ["#right_content", ".news", ".bar_social"]
+    note: "Student transport subscription (metro/bus/TGM). The actual purchase happens on ichtirak.poste.tn (a transactional ASP.NET form, not informational content — deliberately NOT crawled); TRANSTU's own site should carry the informational page (conditions, required documents, price) once discover finds it. Verify with `discover --site transtu` before activating."
+
+  best_rnu:
+    status: active
+    trust: official
+    domain: studies
+    org: Ministère de l'Enseignement Supérieur — Bourses et prêts universitaires à l'étranger
+    base_url: https://best.rnu.tn
+    discover:
+      sitemap: true
+      # Nominative lists of students / results = personal data: never collected.
+      exclude: ['/(tag|category|author|feed|wp-json|comments)/', '/page/\d+',
+                'liste|nominativ|retenus|resultat|admis']
+      max_pages: 120
+    extract:
+      content: ["div.entry", "article"]
+      drop: [".share-post"]
+
+  ooun:
+    status: active
+    trust: official
+    domain: studies
+    org: Office des Œuvres Universitaires pour le Nord (OOUN)
+    base_url: https://www.ooun.rnu.tn
+    discover:
+      seeds: [https://www.ooun.rnu.tn/web/fr/bourse.html, https://www.ooun.rnu.tn/web/ar/bourse.html]
+    extract:
+      content: ["div#content_section"]
+    split: headings
+    doc_types: [{match: '.', type: procedure}]
+    note: "FR page still quotes the 2014 SMIG (3840 d); AR page quotes 6339,840 d. Contradiction kept as is."
+
+  oouc:
+    status: active
+    trust: official
+    domain: studies
+    org: Office des Œuvres Universitaires pour le Centre (OOUC)
+    base_url: https://www.oouc.rnu.tn
+    discover:
+      seeds: [https://www.oouc.rnu.tn/, https://www.oouc.rnu.tn/subventions-et-aide-sociale]
+      keep: ['/subventions-et-aide-sociale$', '/[^/]*(almnh|alkrod|mnh-|altrbs)[^/]*$']
+      exclude: ['tlb-alaarod|tlb-aarod|tlb-trshhat|aaalan-tlb|sd-shghor|almhrgan|astbyan', 'ntyg|nata|kaem']
+      max_depth: 1
+      max_pages: 40
+    extract:
+      content: ["div.tab-content"]
+    doc_types: [{match: '/(blagh|hol)-', type: announcement}]
+
+  oous:
+    status: active
+    trust: official
+    domain: studies
+    org: Office des Œuvres Universitaires pour le Sud (OOUS)
+    base_url: https://oous.rnu.tn
+    discover:
+      seeds:
+        - https://oous.rnu.tn/ar/bourses-universitaires_2
+        - https://oous.rnu.tn/ar/prets-universitaires
+        - https://oous.rnu.tn/ar/documents-utiles_2
+        - https://oous.rnu.tn/ar/actualites-principales?page=1&categories=22
+      follow: ['/ar/actualites-principales\?page=\d+&categories=22']
+      keep: ['/ar/(bourses-universitaires_2|prets-universitaires|documents-utiles_2)$', '/ar/actualites/\d+', '\.pdf$']
+      exclude: ['change_lang']
+      max_depth: 1
+      max_pages: 50
+    extract:
+      content: ["#dynamicAccordion"]
+    doc_types: [{match: '/actualites/', type: announcement}]
+
+  erasmus_tn:
+    status: active
+    trust: program
+    domain: studies
+    org: Bureau National Erasmus+ Tunisie
+    base_url: https://www.erasmusplus.tn
+    discover:
+      seeds:
+        - https://www.erasmusplus.tn/Index-Etudiants.php
+        - https://www.erasmusplus.tn/International-Credit-Mobility-(ICM).php
+      keep: ['(Etudiant|Mobilit|ICM|Intra|programme)[^/]*\.php$', '/doc/[^/]+\.pdf$']
+      max_depth: 1
+      max_pages: 40
+    extract:
+      content: ["article"]
+
+  ucar:
+    status: active
+    trust: institutional
+    domain: studies
+    org: Université de Carthage
+    base_url: https://www.ucar.rnu.tn
+    discover:
+      sitemap: true
+      keep: ['(stage|pfe|attestation|releve|relevé|diplome|diplôme|certification|legalisation|inscription|mobilit|erasmus)']
+      exclude: ['/(tag|category|author|feed)/', 'liste|nominativ|resultat|admis']
+      max_pages: 60
+    extract:
+      content: ['div[data-elementor-type="wp-page"]']
+    doc_types: [{match: 'call-for|scholarship|grant|appel', type: announcement}]
+    note: "Fills the stages-pfe / releves-attestations gap (rules are set per university)."
+
+  utm:
+    status: active
+    trust: institutional
+    domain: studies
+    org: Université de Tunis El Manar
+    base_url: https://utm.rnu.tn
+    render: js
+    discover:
+      seeds: [https://utm.rnu.tn/]
+      keep: ['(stage|pfe|attestation|certification|diplome|inscription|mobilit)']
+      max_depth: 1
+      max_pages: 40
+    note: "JavaScript site: activate after `pip install -r requirements-js.txt && playwright install chromium`."
+
+  uma:
+    status: active
+    trust: institutional
+    domain: studies
+    org: Université de la Manouba
+    base_url: https://www.uma.rnu.tn
+    discover:
+      sitemap: true
+      keep: ['(stage|pfe|attestation|certification|diplome|inscription|mobilit)']
+      max_pages: 40
+
+  uvt:
+    status: active
+    trust: institutional
+    domain: studies
+    org: Université Virtuelle de Tunis
+    base_url: https://www.uvt.rnu.tn
+    discover:
+      sitemap: true
+      keep: ['(stage|pfe|attestation|certification|diplome|inscription)']
+      max_pages: 40
+
+  usf:
+    status: active
+    trust: institutional
+    domain: studies
+    org: Université de Sfax
+    base_url: https://www.usf.tn
+    render: js
+    discover:
+      seeds: [https://www.usf.tn/]
+      max_depth: 1
+    note: "JavaScript site (detected by probe)."
+
+  orientation:
+    status: candidate
+    trust: official
+    domain: studies
+    org: Ministère de l'Enseignement Supérieur — Orientation universitaire
+    base_url: https://www.orientation.tn
+    discover:
+      seeds: [https://www.orientation.tn/]
+    note: "Mostly an application portal; procedures already described on services.gov.tn."
+
+  # ───────────────────────────────── EMPLOYMENT ────────────────────────────────────
+  cnss:
+    status: active
+    trust: official
+    domain: employment
+    org: Caisse Nationale de Sécurité Sociale (CNSS)
+    base_url: https://www.cnss.tn
+    discover:
+      seeds:
+        - https://www.cnss.tn/web/salarie/salaries
+        - https://www.cnss.tn/web/employeur/employeurs
+        - https://www.cnss.tn/web/non-salarie/nonsalaries
+        - https://www.cnss.tn/web/non-salarie/non_sal_sous_secteur?categorie=1&secteur=1
+        - https://www.cnss.tn/web/non-salarie/non_sal_sous_secteur?categorie=1&secteur=2
+      follow: ['asset_publisher/\w+/content/(sal|emp|non_sal)', '_sous_secteur\?', '/web/(salarie|employeur|non-salarie)/\w+$']
+      keep:
+        - 'asset_publisher/\w+/content/(sal|emp|non_sal)\S*(immatriculation|affiliation|assiette|cotisation|remise_penalites|attestation|licenciement|avantage)'
+        - 'document_library/get_file'
+      # Out of scope (retirement, loans, death benefits, social actions): not even downloaded.
+      exclude: ['nos_echos|notre_reseau|/langue|login|/inscription|recherche|faq|politique|plan_du_site',
+                'pension|prets|indemnite|colonie|creche|handicap|reeduc|prestation|allocations_familiales']
+      drop_query: ['asset_publisher/\w+/content/']
+      max_depth: 3
+      max_pages: 300
+    # Language is kept in a session cookie unless the path is prefixed: fetch both.
+    lang_variants:
+      only: 'asset_publisher'     # articles only: forms (document_library) have no language variant
+      base: ['^(https://www\.cnss\.tn)/(?:fr/|ar/)?web/', '\1/web/']
+      fr: ['^(https://www\.cnss\.tn)/web/', '\1/fr/web/']
+      ar: ['^(https://www\.cnss\.tn)/web/', '\1/ar/web/']
+    extract:
+      content: ["div.journal-content-article"]
+      breadcrumb: ".breadcrumbs a"
+      update_pattern: 'mise [àa] jour effectu\S* le (\d{2}/\d{2}/\d{4})'
+    doc_types: [{match: 'document_library', type: form}, {match: 'asset_publisher', type: procedure}]
+    note: "Mixed encodings in one page (UTF-8 menus, cp1252 articles): handled in crawler/http.py."
+
+  emploi_gov:
+    status: active
+    trust: official
+    domain: employment
+    org: Ministère de l'Emploi et de la Formation Professionnelle
+    base_url: https://www.emploi.gov.tn
+    discover:
+      seeds: [https://www.emploi.gov.tn/fr/123/equivalence-de-diplomes-etrangers, https://www.emploi.gov.tn/fr/131/emploi-des-etrangers-en-tunisie]
+      rewrite: [['^http://', 'https://'], ['/index\.php/', '/']]
+      follow: ['/fr/\d+/[\w-]+$']
+      exclude: ['ministre|secretaire|organigramme|attributions|actualit|appel|annonce|contact|sondage|partenaire']
+      max_depth: 2
+      max_pages: 80
+    extract:
+      content: ["div#block-mfpe-content"]
+    note: "/ar/node/<id> pages serve French text: no Arabic variant."
+
+  jibaya:
+    status: active
+    trust: official
+    domain: employment
+    org: Administration fiscale — Ministère des Finances (DGI)
+    base_url: https://jibaya.tn
+    discover:
+      # The blog mixes news and services: start from the services page instead of the sitemap.
+      seeds: [https://jibaya.tn/services-en-ligne/]
+      keep: ['/blog/', 'wp-content/uploads/.*[Gg]uide.*\.pdf$']
+      exclude: ['/(tag|category|author|feed)/', '__trashed']
+      max_depth: 1
+      max_pages: 60
+    extract:
+      content: ['div#page > div[data-elementor-type="wp-post"]']
+
+  rne:
+    status: active
+    trust: official
+    domain: employment
+    org: Registre National des Entreprises (RNE)
+    base_url: https://www.registre-entreprises.tn
+    render: pdf
+    discover:
+      seeds:
+        - https://www.registre-entreprises.tn/rne-public/assets/pdfs/check-liste-creation/RNEC001_creationt_personne_physique_commer%C3%A7ant_FR.pdf
+        - https://www.registre-entreprises.tn/rne-public/assets/pdfs/check-liste-creation/RNEC003_creation_personne_physique_metier_liberale_FR.pdf
+    doc_types: [{match: '.', type: procedure}]
+    note: "The site itself is an Angular app; its checklists are static PDFs. More checklists: activate `rne_app` (js)."
+
+  rne_app:
+    status: active
+    trust: official
+    domain: employment
+    org: Registre National des Entreprises (RNE)
+    base_url: https://www.registre-entreprises.tn
+    render: js
+    discover:
+      seeds: [https://www.registre-entreprises.tn/rne-public/]
+      keep: ['check-liste-creation/.*\.pdf$']
+      max_depth: 1
+    note: "Needs Playwright to list all checklist PDFs."
+
+  apii_portal:
+    status: active
+    trust: official
+    domain: employment
+    org: Agence de Promotion de l'Industrie et de l'Innovation (APII) — Portail de l'industrie
+    base_url: https://www.tunisieindustrie.nat.tn
+    discover:
+      seeds:
+        - https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=182
+        - https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=186&msrub=268
+        - https://www.tunisieindustrie.nat.tn/fr/download/CFGA/guide_.pdf
+      follow: ['/fr/doc\.asp\?mcat=16']
+      keep: ['/fr/doc\.asp\?mcat=16', '/download/CFGA/[^/]+\.pdf$']
+      rewrite: [['&dev=true', '']]
+      max_depth: 1
+      max_pages: 60
+    note: "Hosts the official 'Guide des procédures de création d'entreprises'."
+
+  tia:
+    status: active
+    trust: official
+    domain: employment
+    org: Tunisia Investment Authority (TIA)
+    base_url: https://tia.gov.tn
+    discover:
+      seeds:
+        - https://tia.gov.tn/investor-guide/step-by-step-prcess/
+        - https://tia.gov.tn/investor-guide/funding/
+        - https://tia.gov.tn/investor-guide/legal-framewrok/
+    extract:
+      content: ['div[data-elementor-type="wp-page"]']
+    note: "English only."
+
+  social_gov:
+    status: active
+    trust: official
+    domain: employment
+    org: Ministère des Affaires Sociales
+    base_url: https://www.social.gov.tn
+    discover:
+      sitemap: true
+      keep: ['/(ar/)?(الشغل-والعلاقات-المهنية|documents)']
+      max_pages: 60
+
+  cnrps:
+    status: active
+    trust: official
+    domain: employment
+    org: Caisse Nationale de Retraite et de Prévoyance Sociale (CNRPS)
+    base_url: https://www.cnrps.nat.tn
+    # Real procedure pages use full descriptive French slugs, not keyword-coded URLs
+    # (confirmed by inspection: homepage has 88 links, 0 matched a keyword keep[] pattern).
+    discover:
+      seeds:
+        - https://www.cnrps.nat.tn/fr/vous-etes-affilie-en-activite-vous-devez-savoir-ce-qui-suit
+        - https://www.cnrps.nat.tn/fr/ceci-vous-interesse
+        - https://www.cnrps.nat.tn/fr/imprimes
+    extract:
+      content: ["div.field--name-body"]
+    note: "Public-sector employees only; mostly pensions (out of scope). Relevant for attestations. Drupal 8 site: content selector is the standard Drupal body-field class."
+
+  aneti:
+    status: active
+    trust: official
+    domain: employment
+    org: Agence Nationale pour l'Emploi et le Travail Indépendant (ANETI)
+    base_url: https://www.emploi.nat.tn
+    discover:
+      seeds: [https://www.emploi.nat.tn/]
+    note: "Homepage exposes no crawlable procedure links (frames/JS?). Needed for recherche-emploi."
+
+  cnam:
+    status: active
+    trust: official
+    org: Caisse Nationale d'Assurance Maladie (CNAM)
+    base_url: https://www.cnam.nat.tn
+    # No single domain: affiliation via a CDI employer is employment, student insurance
+    # is studies. Left unset so the classifier tags each document from its own content.
+    discover:
+      # Site uses short generic jsp names, not keyword-rich slugs (confirmed by inspection):
+      # these ARE the content pages, not index pages to follow further.
+      seeds:
+        - https://www.cnam.nat.tn/ass_maladie.jsp
+        - https://www.cnam.nat.tn/ass_sociale.jsp
+        - https://www.cnam.nat.tn/atmp.jsp
+        - https://www.cnam.nat.tn/tun_etranger.jsp
+    extract:
+      content: ["div.content"]
+    note: "Full site is general healthcare administration (out of scope); only these 4 pages (health insurance, social coverage, work-accident insurance, Tunisians abroad) cover affiliation/coverage relevant to salaried and student status. Added after reconsidering: tied to CDI employment and student status, not purely health admin."
+
+  autoentrepreneur:
+    status: candidate
+    trust: official
+    domain: employment
+    org: Plateforme nationale de l'auto-entrepreneur
+    base_url: https://www.autoentrepreneur.tn
+    render: js
+    discover:
+      seeds: [https://www.autoentrepreneur.tn/public/home]
+    note: "JS app; the procedure is already described on services.gov.tn."
+
+  finances_gov:
+    status: candidate
+    trust: official
+    domain: employment
+    org: Ministère des Finances
+    base_url: https://www.finances.gov.tn
+    discover:
+      sitemap: true
+      keep: ['(patente|identifiant|immatriculation|declaration-d-existence)']
+      max_pages: 40
+    note: "Very large site; tax procedures are better covered by jibaya.tn."
+
+  # ─────────────────────────── evaluated, not usable ───────────────────────────────
+  idaraty:
+    status: excluded
+    trust: program
+    org: Idaraty (private aggregator)
+    base_url: https://www.idaraty.tn
+    reason: "robots.txt disallows AI crawlers (ClaudeBot, GPTBot...); ToS art. 5 requires prior authorization."
+  demarches_tn:
+    status: excluded
+    trust: program
+    org: demarches.tn (private)
+    base_url: https://www.demarches.tn
+    reason: "Private aggregator, not an official source."
+  daralmacharii:
+    status: excluded
+    trust: program
+    org: Dar Al Macharii (Attijari bank)
+    base_url: https://www.daralmacharii.com.tn
+    reason: "Bank initiative, not an official source."
+  unreachable_2026_10_03:
+    status: excluded
+    trust: official
+    org: "dget.rnu.tn, apii.tn, startup.gov.tn, iort.gov.tn, legislation.tn"
+    base_url: https://www.apii.tn
+    reason: "Connection errors / timeouts on 2026-10-03: re-probe later (Startup Act, JORT legal texts)."
+
+# Per-page overrides (optional). Pages listed here are always crawled.
+pages:
+  # OOUN Arabic page marks its sections with plain lines instead of headings.
+  - site: ooun
+    url: https://www.ooun.rnu.tn/web/ar/bourse.html
+    split: titles
+    titles:
+      - إن كنت طالبًا جديدًا
+      - منحة الطلبة القدامى (لأول مرة)
+      - المنحة الجامعية للطلبة الأجانب
+      - منح و قروض الماجستير
+      - منح الدكتوراه
+      - منح و قروض الطلبة أبناء رجال التعليم
+      - منح أبناء العائلات التونسية المقيمة بالخارج
+      - منحة التربص
+  - site: jibaya
+    url: https://jibaya.tn/blog/plateforme-dimmatriculation-fiscale-en-ligne/
+    doc_type: procedure
+  - site: jibaya
+    url: https://jibaya.tn/wp-content/uploads/2026/07/Guide_utilisation_dexel.pdf
+    doc_type: guide
+  - site: erasmus_tn
+    url: https://erasmusplus.tn/doc/E+International-Credit-Mobility.pdf
+    doc_type: guide

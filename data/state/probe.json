@@ -1,0 +1,41 @@
+[
+ {
+  "url": "https://www.cnrps.nat.tn/fr/vous-etes-affilie-en-activite-vous-devez-savoir-ce-qui-suit",
+  "status": "ok",
+  "final_url": "https://www.cnrps.nat.tn/fr/vous-etes-affilie-en-activite-vous-devez-savoir-ce-qui-suit",
+  "render": "html",
+  "render_reason": "2432 visible words in static HTML",
+  "robots_allows_us": true,
+  "blocks_ai_bots": [],
+  "sitemap": "",
+  "tls_valid": false,
+  "cms": "Drupal 8 (https://www.drupal.org)",
+  "title": "Vous êtes affilié en activité? Vous devez savoir ce qui suit.. | CNRPS"
+ },
+ {
+  "url": "https://www.cnrps.nat.tn/fr/ceci-vous-interesse",
+  "status": "ok",
+  "final_url": "https://www.cnrps.nat.tn/fr/ceci-vous-interesse",
+  "render": "html",
+  "render_reason": "935 visible words in static HTML",
+  "robots_allows_us": true,
+  "blocks_ai_bots": [],
+  "sitemap": "",
+  "tls_valid": false,
+  "cms": "Drupal 8 (https://www.drupal.org)",
+  "title": "Ceci vous intéresse | CNRPS"
+ },
+ {
+  "url": "https://www.cnrps.nat.tn/fr/imprimes",
+  "status": "ok",
+  "final_url": "https://www.cnrps.nat.tn/fr/imprimes",
+  "render": "html",
+  "render_reason": "1689 visible words in static HTML",
+  "robots_allows_us": true,
+  "blocks_ai_bots": [],
+  "sitemap": "",
+  "tls_valid": false,
+  "cms": "Drupal 8 (https://www.drupal.org)",
+  "title": "Imprimés | CNRPS"
+ }
+]

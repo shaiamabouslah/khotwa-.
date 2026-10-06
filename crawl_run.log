@@ -1,0 +1,44 @@
+00:42:16 INFO    equivalence_rnu: 2 URLs discovered
+00:42:17 WARNING invalid TLS certificate on khadamet.gov.tn, fetching without verification
+00:42:18 WARNING invalid TLS certificate on www.mes.tn, fetching without verification
+00:42:18 WARNING invalid TLS certificate on services.gov.tn, fetching without verification
+00:42:21 INFO    mes: 34 URLs discovered
+00:42:21 INFO    equivalence_rnu done: {'changed': 8}
+00:42:21 INFO    education_gov: 2 URLs discovered
+00:42:26 INFO    education_gov done: {'new': 2}
+00:42:26 WARNING invalid TLS certificate on www.transtu.tn, fetching without verification
+00:42:29 INFO    transtu: 5 URLs discovered
+00:42:38 INFO    transtu done: {'new': 5}
+00:42:46 INFO    khadamet: 13 URLs discovered
+00:42:49 INFO    services_gov: 13 URLs discovered
+00:42:50 INFO    best_rnu: 95 URLs discovered
+00:45:51 INFO    mes done: {'changed': 34}
+00:45:51 INFO    ooun: 2 URLs discovered
+00:45:52 WARNING invalid TLS certificate on www.ooun.rnu.tn, fetching without verification
+00:46:18 INFO    ooun done: {'unchanged': 18}
+00:46:19 WARNING invalid TLS certificate on www.oouc.rnu.tn, fetching without verification
+00:46:47 INFO    oouc: 14 URLs discovered
+00:51:07 INFO    oouc done: {'changed': 14}
+00:51:55 INFO    oous: 6 URLs discovered
+00:53:30 INFO    oous done: {'changed': 5}
+00:53:40 INFO    erasmus_tn: 13 URLs discovered
+00:54:28 ERROR   FAIL https://www.erasmusplus.tn/Mobilité-Intra-Africa.php (HTTP 404): no snapshot
+00:56:14 INFO    erasmus_tn done: {'changed': 12, 'error': 1}
+00:56:34 INFO    ucar: 37 URLs discovered
+01:05:03 INFO    best_rnu done: {'changed': 74, 'new': 4}
+01:05:07 INFO    utm: 0 URLs discovered
+01:05:07 ERROR   utm: nothing discovered (site down?) - existing documents kept as stale
+01:05:08 WARNING invalid TLS certificate on www.uma.rnu.tn, fetching without verification
+01:05:21 INFO    uma: 14 URLs discovered
+01:07:47 INFO    ucar done: {'new': 37}
+01:08:10 INFO    retry 1/3 for http://www.uvt.rnu.tn/index.php?option=com_xmap&view=xml&tmpl=component&id=1 (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:08:20 INFO    retry 2/3 for http://www.uvt.rnu.tn/index.php?option=com_xmap&view=xml&tmpl=component&id=1 (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:08:31 INFO    retry 3/3 for http://www.uvt.rnu.tn/index.php?option=com_xmap&view=xml&tmpl=component&id=1 (ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)))
+01:08:37 INFO    uvt: 0 URLs discovered
+01:08:37 ERROR   uvt: nothing discovered (site down?) - existing documents kept as stale
+01:08:37 INFO    usf: 1 URLs discovered
+01:09:20 INFO    usf done: {}
+01:09:21 WARNING invalid TLS certificate on www.cnss.tn, fetching without verification
+01:10:27 INFO    uma done: {'new': 14}
+01:12:01 INFO    retry 1/3 for https://www.emploi.gov.tn/fr/57/lexoneration-de-la-taxe-sur-les-voyages (ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))
+01:13:10 INFO    retry 1/3 for https://www.emploi.gov.tn/fr/163/droit-dacces-linformation (ReadTimeout: HTTPSConnectionPool(host='www.emploi.gov.tn', port=443): Read timed out. (read timeout=40))
