@@ -14,9 +14,22 @@ import urllib.parse
 from dataclasses import dataclass, field
 
 from bs4 import BeautifulSoup, Comment
+from bidi.algorithm import get_display
 from markdownify import markdownify
 
 from .http import decode_html
+
+_ARABIC_RE = re.compile(r"[؀-ۿݐ-ݿﭐ-﷿ﹰ-﻿]")
+
+
+def _fix_pdf_bidi(text: str) -> str:
+    """pdfplumber extracts PDF glyphs in left-to-right visual order, which reverses
+    right-to-left Arabic runs (and swaps their position relative to Latin/numeric runs
+    on the same line). HTML pages don't have this problem (the browser/parser already
+    gives logical-order Unicode); only PDF extraction needs this fix."""
+    if not text or not _ARABIC_RE.search(text):
+        return text
+    return "\n".join(get_display(line, base_dir="L") for line in text.splitlines())
 
 ALWAYS_DROP = ["script", "style", "noscript", "iframe", "svg", "form", "button", "nav",
                "header", "footer", "aside", "img", "picture", "video", "audio"]
@@ -145,13 +158,13 @@ def pdf_to_markdown(raw: bytes) -> Extracted:
     parts, title = [], ""
     with pdfplumber.open(io.BytesIO(raw)) as pdf:
         for i, page in enumerate(pdf.pages, start=1):
-            text = (page.extract_text() or "").strip()
+            text = _fix_pdf_bidi((page.extract_text() or "").strip())
             if not title and text:
                 title = _clean_text(text.splitlines()[0])
             tables = page.extract_tables() or []
             body = [text] if text else []
             for table in tables:
-                rows = [[_clean_text(c or "") for c in row] for row in table if row]
+                rows = [[_fix_pdf_bidi(_clean_text(c or "")) for c in row] for row in table if row]
                 if len(rows) >= 2:
                     header = "| " + " | ".join(rows[0]) + " |"
                     sep = "| " + " | ".join("---" for _ in rows[0]) + " |"

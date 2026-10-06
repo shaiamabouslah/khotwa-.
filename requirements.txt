@@ -4,5 +4,6 @@ beautifulsoup4>=4.12
 lxml>=5.0
 markdownify>=0.13
 pdfplumber>=0.11
+python-bidi>=0.6
 charset-normalizer>=3.3
 PyYAML>=6.0

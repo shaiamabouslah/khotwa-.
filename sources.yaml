@@ -73,8 +73,11 @@ sites:
     base_url: https://www.mes.tn
     discover:
       seeds: ["https://www.mes.tn/", "https://www.mes.tn/formulaire.php?code_menu=59"]
-      follow: ['/page\.php\?code_menu=\d+', '/formulaire\.php\?code_menu=\d+']
-      keep: ['/page\.php\?code_menu=\d+', '/formulaire\.php\?code_menu=\d+', '\.pdf$']
+      # image.php?id=N looks like an image URL but actually serves PDF reports/white
+      # papers (confirmed: Content-Type: application/pdf) -- the real substance behind
+      # several thin page.php nav wrappers.
+      follow: ['/page\.php\?code_menu=\d+', '/formulaire\.php\?code_menu=\d+', '/image\.php\?id=\d+']
+      keep: ['/page\.php\?code_menu=\d+', '/formulaire\.php\?code_menu=\d+', '/image\.php\?id=\d+', '\.pdf$']
       max_depth: 1
       max_pages: 80
     extract:
@@ -136,8 +139,11 @@ sites:
     discover:
       sitemap: true
       # Nominative lists of students / results = personal data: never collected.
+      # lightbox/shortcodes/blog-list-layout etc.: WordPress theme demo pages (Lorem
+      # Ipsum placeholder content), not real site content.
       exclude: ['/(tag|category|author|feed|wp-json|comments)/', '/page/\d+',
-                'liste|nominativ|retenus|resultat|admis']
+                'liste|nominativ|retenus|resultat|admis',
+                'lightbox|shortcode|blog-list-layout|portfolio-|gallery-demo']
       max_pages: 120
     extract:
       content: ["div.entry", "article"]

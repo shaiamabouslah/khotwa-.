@@ -72,4 +72,5 @@ def lang_versions(site: dict, url: str) -> tuple[str, dict[str, str]]:
     if not rules or (rules.get("only") and not re.search(rules["only"], url)):
         return url, {}
     base = re.sub(rules["base"][0], rules["base"][1], url) if "base" in rules else url
-    return base, {lang: re.sub(p, r, base) for lang, (p, r) in rules.items() if lang not in ("base", "only")}
+    variants = {k: v for k, v in rules.items() if k not in ("base", "only")}
+    return base, {lang: re.sub(p, r, base) for lang, (p, r) in variants.items()}

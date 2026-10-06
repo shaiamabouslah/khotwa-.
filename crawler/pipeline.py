@@ -51,9 +51,18 @@ def url_segments(url: str) -> list[str]:
 
 
 def doc_identity(site_key: str, base_url: str, section: str | None) -> tuple[str, list[str]]:
+    """Path segments for the corpus file. A whole-page document (no section split) uses
+    the URL's own last segment as the filename directly — no extra 'index' layer, no extra
+    folder nesting. A split page (section set) genuinely needs the folder/filename split,
+    since several section documents share the same URL folder."""
     segs = url_segments(base_url)
-    leaf = slugify(section) if section else "index"
-    return f"{site_key}:/{'/'.join(segs)}#{leaf}", segs + [leaf]
+    if section:
+        leaf = slugify(section)
+        path_segs = segs + [leaf]
+    else:
+        leaf = "index"
+        path_segs = segs
+    return f"{site_key}:/{'/'.join(segs)}#{leaf}", path_segs
 
 
 # ── run ──────────────────────────────────────────────────────────────────────────────
@@ -163,7 +172,11 @@ class Crawler:
         docs = []
         min_words = site.get("min_words", self.defaults.get("min_words", 30))
         for part in parts:
-            words = len(re.findall(r"\w*[^\W\d_]\w*", part.markdown))   # words with letters only
+            # Count only visible text: link *targets* (sharer.php?u=...&text=Title+Encoded)
+            # otherwise get counted as prose words, letting link-only stub pages (a title +
+            # a couple of social-share buttons) slip past the min_words filter.
+            visible = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", part.markdown)
+            words = len(re.findall(r"\w*[^\W\d_]\w*", visible))   # words with letters only
             if words < min_words:
                 continue
             title_m = re.match(r"^# (.+)$", part.markdown, re.M)

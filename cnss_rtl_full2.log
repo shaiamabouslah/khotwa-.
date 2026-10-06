@@ -1,0 +1,3 @@
+14:23:44 WARNING invalid TLS certificate on www.cnss.tn, fetching without verification
+14:26:36 INFO    retry 1/3 for https://www.cnss.tn/web/salarie/sal_asset_services (ReadTimeout: HTTPSConnectionPool(host='www.cnss.tn', port=443): Read timed out. (read timeout=40))
+14:27:19 INFO    retry 2/3 for https://www.cnss.tn/web/salarie/sal_asset_services (ReadTimeout: HTTPSConnectionPool(host='www.cnss.tn', port=443): Read timed out. (read timeout=40))
