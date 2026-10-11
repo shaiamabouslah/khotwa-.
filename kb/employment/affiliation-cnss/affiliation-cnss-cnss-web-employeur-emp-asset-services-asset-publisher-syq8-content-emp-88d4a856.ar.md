@@ -15,11 +15,13 @@ keywords:
 - salarié
 - cotisations
 - déclaration des salaires
+- couverture sociale
 - انخراط
 - الانخراط
 - تسجيل الأجراء
 - المؤجر
 - الاشتراكات
+- التغطية الاجتماعية
 sources:
 - url: https://www.cnss.tn/ar/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr5_affiliation
   breadcrumb:

@@ -10,10 +10,10 @@ section: null
 breadcrumb: []
 doc_type: procedure
 domain_hint: studies
-subtopic_hint: mobilite
-hint_score: 4
+subtopic_hint: bourses
+hint_score: 8
 hint_keywords:
-- mobilité
+- bourse
 forms:
 - https://uma.rnu.tn/userfiles/files/recherche25/coop%C3%A9ration/bourse_malte%202025-2026.pdf
 - https://uma.rnu.tn/userfiles/files/recherche25/coop%C3%A9ration/bourses_espagne.pdf

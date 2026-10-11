@@ -853,12 +853,12 @@
         "discovered_via": "seed",
         "doc_id": "aneti:/fo/Fr/global.php/q_menu1=63#index",
         "doc_type": "procedure",
-        "domain_hint": "studies",
+        "domain_hint": "employment",
         "fetched_at": "2026-10-10T23:50:13+00:00",
         "first_seen": "2026-10-06T22:41:43+00:00",
         "forms": [],
         "hint_keywords": [
-          "réorientation"
+          "employeur"
         ],
         "hint_score": 1,
         "http_last_modified": null,
@@ -871,7 +871,7 @@
         "sitemap_lastmod": null,
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "inscription",
+        "subtopic_hint": "affiliation-cnss",
         "title": "Les conseillers de l’emploi et les conseillers en orientation professionnelle",
         "trust": "official",
         "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=63",
@@ -1051,12 +1051,14 @@
         "discovered_via": "seed",
         "doc_id": "annuaire_administration:/annuaireAdministration/381/11-caisse-nationale-de-securite-sociale.htm#index",
         "doc_type": "page",
-        "domain_hint": null,
+        "domain_hint": "employment",
         "fetched_at": "2026-10-06T23:24:26+00:00",
         "first_seen": "2026-10-06T23:24:26+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "salarié"
+        ],
+        "hint_score": 3,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -1068,7 +1070,7 @@
         "sitemap_lastmod": null,
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "affiliation-cnss",
         "title": "Annuaire d'administration - Portail du Gouvernement Tunisien",
         "trust": "official",
         "url": "http://fr.tunisie.gov.tn/annuaireAdministration/381/11-caisse-nationale-de-securite-sociale.htm",
@@ -1252,8 +1254,10 @@
         "fetched_at": "2026-10-06T22:30:28+00:00",
         "first_seen": "2026-10-06T22:25:43+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "promoteur"
+        ],
+        "hint_score": 1,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -1265,7 +1269,7 @@
         "sitemap_lastmod": null,
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "creation-entreprise",
         "title": "Structures d'appui à la création",
         "trust": "official",
         "url": "https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=182",
@@ -1798,8 +1802,10 @@
         "fetched_at": "2026-10-06T00:21:15+00:00",
         "first_seen": "2026-10-05T20:26:05+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 5,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -1811,7 +1817,7 @@
         "sitemap_lastmod": "2021-09-07T10:04:12+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Annonce de candidature aux bourses universitaires pour la réalisation de Projets de Fin d’Etudes « Stages de recherche-Globalink »",
         "trust": "official",
         "url": "https://best.rnu.tn/annonce-de-candidature-aux-bourses-universitaires-pour-la-realisation-de-projets-de-fin-detudes-stages-de-recherche-globalink/",
@@ -1838,8 +1844,10 @@
         "forms": [
           "https://best.rnu.tn/wp-content/uploads/2019/10/Appel-a-candidature-MITACS-2025-2026.pdf"
         ],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 1,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -1851,7 +1859,7 @@
         "sitemap_lastmod": "2025-08-27T07:07:55+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Appel à candidature MITACS 2025-2026",
         "trust": "official",
         "url": "https://best.rnu.tn/appel-a-candidature-mitacs-2025-2026/",
@@ -1916,8 +1924,10 @@
         "fetched_at": "2026-10-06T00:21:17+00:00",
         "first_seen": "2026-10-05T20:26:08+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "boursier"
+        ],
+        "hint_score": 1,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -1929,7 +1939,7 @@
         "sitemap_lastmod": "2021-11-12T10:00:23+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Appel à candidature pour des prêts universitaires à l’étranger",
         "trust": "official",
         "url": "https://best.rnu.tn/appel-a-candidature-pour-des-prets-universitaires-a-letranger-2/",
@@ -1956,8 +1966,10 @@
         "forms": [
           "https://best.rnu.tn/wp-content/uploads/2019/10/annone-14-nouvembre.pdf"
         ],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "boursier"
+        ],
+        "hint_score": 1,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -1969,7 +1981,7 @@
         "sitemap_lastmod": "2022-11-14T14:25:01+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Appel à candidature pour des prêts universitaires à l’étranger 2022-2023",
         "trust": "official",
         "url": "https://best.rnu.tn/appel-a-candidature-pour-des-prets-universitaires-a-letranger-2022-2023/",
@@ -1994,8 +2006,10 @@
         "fetched_at": "2026-10-06T00:22:35+00:00",
         "first_seen": "2026-10-05T20:28:01+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 6,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -2007,7 +2021,7 @@
         "sitemap_lastmod": "2026-06-04T10:36:20+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Appel à candidatures – Bourses d’études « Ingénieur-Ingénieur » du Gouvernement Français",
         "trust": "official",
         "url": "https://best.rnu.tn/appel-a-candidatures-bourses-detudes-ingenieur-ingenieur-du-gouvernement-francais/",
@@ -2034,8 +2048,10 @@
         "forms": [
           "https://best.rnu.tn/wp-content/uploads/2019/10/Annonce-Bourses-de-Cooperation-Maroc-Algerie-2025-2026-final.pdf"
         ],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 6,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -2047,7 +2063,7 @@
         "sitemap_lastmod": "2025-08-06T12:06:58+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Appel à candidatures pour les bourses d’études de l’année universitaire 2025-2026.",
         "trust": "official",
         "url": "https://best.rnu.tn/appel-a-candidatures-pour-les-bourses-detudes-dans-les-etablissements-universitaires-au-maroc-et-en-algerie-au-titre-de-lannee-universitaire-2025-2026-dediees-aux-bacheliers-de-lannee-2025/",
@@ -2112,8 +2128,10 @@
         "forms": [
           "http://www.mutan.org/Forms/Formulaire_exemptions_Annexe_II_MEES_07-2016.pdf"
         ],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 1,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -2125,7 +2143,7 @@
         "sitemap_lastmod": "2024-04-18T10:12:04+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "AVIS DE REOUVERTURE DE DELAI D’APPEL A CANDIDATURE",
         "trust": "official",
         "url": "https://best.rnu.tn/avis-de-reouverture-de-delai-dappel-a-candidature/",
@@ -2270,8 +2288,10 @@
         "fetched_at": "2026-10-06T00:21:46+00:00",
         "first_seen": "2026-10-05T20:26:36+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 6,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -2283,7 +2303,7 @@
         "sitemap_lastmod": "2023-07-20T10:01:18+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Bourses d’études en Grandes Écoles françaises 2023",
         "trust": "official",
         "url": "https://best.rnu.tn/bourses-detudes-en-grandes-ecoles-francaises-2023/",
@@ -2429,8 +2449,10 @@
         "fetched_at": "2026-10-06T00:22:21+00:00",
         "first_seen": "2026-10-05T20:27:36+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 5,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -2442,7 +2464,7 @@
         "sitemap_lastmod": "2025-05-12T15:30:43+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Bourses d’exemption des frais de scolarité majorés – Session Automne 2025 : AVIS DE PROLONGATION DE DELAI D’APPEL A CANDIDATURE",
         "trust": "official",
         "url": "https://best.rnu.tn/bourses-dexemption-des-frais-de-scolarite-majores-session-automne-2025-avis-de-prolongation-de-delai-dappel-a-candidature/",
@@ -2508,10 +2530,9 @@
         "first_seen": "2026-10-05T20:25:58+00:00",
         "forms": [],
         "hint_keywords": [
-          "pfe",
-          "projet de fin d'études"
+          "bourse"
         ],
-        "hint_score": 3,
+        "hint_score": 25,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -2523,7 +2544,7 @@
         "sitemap_lastmod": "2021-06-10T12:18:49+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "stages-pfe",
+        "subtopic_hint": "bourses",
         "title": "Bourses universitaires à l’étranger",
         "trust": "official",
         "url": "https://best.rnu.tn/bourses-universitaires/",
@@ -2824,8 +2845,10 @@
         "fetched_at": "2026-10-06T00:22:31+00:00",
         "first_seen": "2026-10-05T20:27:57+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 1,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -2837,7 +2860,7 @@
         "sitemap_lastmod": "2026-05-07T14:53:31+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Communiqué exemption des frais de scolarité supplémentaires – Session Automne 2026",
         "trust": "official",
         "url": "https://best.rnu.tn/communique-exemption-des-frais-de-scolarite-supplementaires-session-automne-2026/",
@@ -2938,8 +2961,10 @@
         "fetched_at": "2026-10-06T00:20:54+00:00",
         "first_seen": "2026-10-05T20:25:53+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "boursier"
+        ],
+        "hint_score": 1,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -2951,7 +2976,7 @@
         "sitemap_lastmod": "2020-10-21T14:57:14+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Les deux jumelles Ines et Sirine kammoun boursières du Gouvernement Tunisien…",
         "trust": "official",
         "url": "https://best.rnu.tn/deux-jumelles-tunisiennes-ines-et-sirine-kamoun-accedent-au-meme-moment/",
@@ -3057,7 +3082,7 @@
           "https://best.rnu.tn/wp-content/uploads/2019/10/MESRS-MITACS-2024-2025.pdf"
         ],
         "hint_keywords": [
-          "pfe"
+          "bourse"
         ],
         "hint_score": 5,
         "hint_source": "llm",
@@ -3071,7 +3096,7 @@
         "sitemap_lastmod": "2025-02-04T09:13:21+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "stages-pfe",
+        "subtopic_hint": "bourses",
         "title": "Étudiants sélectionnés pour les bourses PFE – Convention MESRS-MITACS 2024-2025",
         "trust": "official",
         "url": "https://best.rnu.tn/etudiants-selectionnes-pour-les-bourses-pfe-convention-mesrs-mitacs-2024-2025/",
@@ -3100,8 +3125,10 @@
           "https://best.rnu.tn/wp-content/uploads/2019/10/Formulaire-exemption-1er-Cycle-Hiver-2026.pdf",
           "https://best.rnu.tn/wp-content/uploads/2019/10/Formulaire-exemption-2eme-Cycle-Hiver-2026.pdf"
         ],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 1,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -3113,7 +3140,7 @@
         "sitemap_lastmod": "2025-11-10T12:36:43+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Exemption des frais de scolarité supplémentaires Session Hiver 2026",
         "trust": "official",
         "url": "https://best.rnu.tn/exemption-des-frais-de-scolarite-supplementaires-session-hiver-2026/",
@@ -3218,8 +3245,10 @@
         "forms": [
           "https://maisondelatunisie.org/wp-content/uploads/2022/06/Reglement-Dadmission-pour-Lannee-Universitaire-2022-2023.pdf"
         ],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 3,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -3231,7 +3260,7 @@
         "sitemap_lastmod": "2022-06-17T09:39:38+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Fondation de la maison de la Tunisie : Candidatures au Logement pour l'année universitaire 2022-2023. - Bourses et prêts universitaires à l'étranger a distance",
         "trust": "official",
         "url": "https://best.rnu.tn/fondation-de-la-maison-de-la-tunisie-candidatures-au-logement-pour-lannee-universitaire-2022-2023/",
@@ -3294,8 +3323,10 @@
         "fetched_at": "2026-10-05T20:29:14+00:00",
         "first_seen": "2026-10-05T20:29:14+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 3,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -3307,7 +3338,7 @@
         "sitemap_lastmod": "2015-01-31T17:13:17+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "HomePage - Blog Layout - Bourses et prêts universitaires à l'étranger a distance",
         "trust": "official",
         "url": "https://best.rnu.tn/homepage-blog-layout/",
@@ -3371,8 +3402,10 @@
         "fetched_at": "2026-10-05T20:29:16+00:00",
         "first_seen": "2026-10-05T20:29:16+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 7,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -3384,7 +3417,7 @@
         "sitemap_lastmod": "2015-01-31T17:14:53+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "HomePage - Masonry Layout - Bourses et prêts universitaires à l'étranger a distance",
         "trust": "official",
         "url": "https://best.rnu.tn/homepage-masonry-layout/",
@@ -3409,8 +3442,10 @@
         "fetched_at": "2026-10-05T20:29:18+00:00",
         "first_seen": "2026-10-05T20:29:18+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 3,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -3422,7 +3457,7 @@
         "sitemap_lastmod": "2015-01-31T17:16:03+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "HomePage - TimeLine Layout - Bourses et prêts universitaires à l'étranger a distance",
         "trust": "official",
         "url": "https://best.rnu.tn/homepage-timeline-layout/",
@@ -3447,8 +3482,11 @@
         "fetched_at": "2026-10-05T20:29:59+00:00",
         "first_seen": "2026-10-05T20:29:59+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse",
+          "boursier"
+        ],
+        "hint_score": 2,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -3460,7 +3498,7 @@
         "sitemap_lastmod": "2020-06-23T14:06:56+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Le mot du directeur Général",
         "trust": "official",
         "url": "https://best.rnu.tn/le-mot-du-directeur-general/",
@@ -3563,8 +3601,10 @@
         "fetched_at": "2026-10-05T20:28:39+00:00",
         "first_seen": "2026-10-05T20:28:39+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 3,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -3576,7 +3616,7 @@
         "sitemap_lastmod": "2015-01-24T19:49:50+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Masonry Layout - Bourses et prêts universitaires à l'étranger a distance",
         "trust": "official",
         "url": "https://best.rnu.tn/masonry-layout/",
@@ -3644,8 +3684,10 @@
           "https://best.rnu.tn/wp-content/uploads/2020/06/Procedure-UdeM.pdf",
           "https://best.rnu.tn/wp-content/uploads/2020/06/communique-.pdf"
         ],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 5,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -3657,7 +3699,7 @@
         "sitemap_lastmod": "2020-06-23T15:07:09+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Offre de bourses de Mastère et de Doctorat dans le cadre de l’Entente MESRS-INRS",
         "trust": "official",
         "url": "https://best.rnu.tn/offre-de-bourses-dans-le-cadre-des-ententes-avec-luniversite-de-montreal-ludm-et-avec-linstitut-national-de-la-recherche-scientifique-du-quebec-linrs/",
@@ -3767,9 +3809,9 @@
         "first_seen": "2026-10-05T20:25:54+00:00",
         "forms": [],
         "hint_keywords": [
-          "mobilité"
+          "bourse"
         ],
-        "hint_score": 1,
+        "hint_score": 6,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -3781,7 +3823,7 @@
         "sitemap_lastmod": "2021-05-26T14:51:53+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "mobilite",
+        "subtopic_hint": "bourses",
         "title": "Offre de bourses Partenariales – niveau Master 2 recherche – 2021",
         "trust": "official",
         "url": "https://best.rnu.tn/offre-de-bourses-partenariales-niveau-master-2-recherche-2021/",
@@ -3806,8 +3848,10 @@
         "fetched_at": "2026-10-06T00:21:46+00:00",
         "first_seen": "2026-10-05T20:26:34+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 8,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -3819,7 +3863,7 @@
         "sitemap_lastmod": "2023-05-19T09:52:36+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Offre de bourses Partenariales – niveau Master 2 recherches et double diplôme Ingénieur/Ingénieur 2023",
         "trust": "official",
         "url": "https://best.rnu.tn/offre-de-bourses-partenariales-niveau-master-2-recherches-et-double-diplome-ingenieur-ingenieur-2023/",
@@ -4167,8 +4211,11 @@
         "fetched_at": "2026-10-05T20:29:58+00:00",
         "first_seen": "2026-10-05T20:29:58+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse",
+          "boursier"
+        ],
+        "hint_score": 5,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -4180,7 +4227,7 @@
         "sitemap_lastmod": "2020-06-22T10:27:03+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Présentation de la Direction",
         "trust": "official",
         "url": "https://best.rnu.tn/presentation-de-la-direction/",
@@ -4403,9 +4450,9 @@
         "first_seen": "2026-10-05T20:27:39+00:00",
         "forms": [],
         "hint_keywords": [
-          "mobilité"
+          "bourse"
         ],
-        "hint_score": 1,
+        "hint_score": 8,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -4417,7 +4464,7 @@
         "sitemap_lastmod": "2025-06-12T15:48:09+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "mobilite",
+        "subtopic_hint": "bourses",
         "title": "Programme de bourses d’études Ingénieur/Ingénieur – 2025",
         "trust": "official",
         "url": "https://best.rnu.tn/programme-de-bourses-detudes-ingenieur-ingenieur-2025/",
@@ -4527,9 +4574,9 @@
           "https://best.rnu.tn/wp-content/uploads/2019/10/Prolonguation-Mitacs-2022-2023.pdf"
         ],
         "hint_keywords": [
-          "pfe"
+          "bourse"
         ],
-        "hint_score": 1,
+        "hint_score": 5,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -4541,7 +4588,7 @@
         "sitemap_lastmod": "2022-09-23T10:43:59+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "stages-pfe",
+        "subtopic_hint": "bourses",
         "title": "Prolongation de la date limite pour postuler aux bourses dans le cadre de l’entente avec Mitacs",
         "trust": "official",
         "url": "https://best.rnu.tn/prolongation-de-la-date-limite-pour-postuler-aux-bourses-dans-le-cadre-de-lentente-avec-mitacs/",
@@ -14533,9 +14580,10 @@
         "first_seen": "2026-10-05T20:52:17+00:00",
         "forms": [],
         "hint_keywords": [
-          "salarié"
+          "non salarié",
+          "indépendant"
         ],
-        "hint_score": 6,
+        "hint_score": 9,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -14547,7 +14595,7 @@
         "sitemap_lastmod": null,
         "source_updated": "2024-06-27",
         "status": "active",
-        "subtopic_hint": "affiliation-cnss",
+        "subtopic_hint": "non-salaries",
         "title": "Indépendants et autres catégories - CNSS",
         "trust": "official",
         "url": "https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr1_avantages",
@@ -15175,10 +15223,10 @@
         "first_seen": "2026-10-05T20:51:40+00:00",
         "forms": [],
         "hint_keywords": [
-          "affiliation",
-          "salarié"
+          "non salarié",
+          "indépendant"
         ],
-        "hint_score": 9,
+        "hint_score": 13,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -15190,7 +15238,7 @@
         "sitemap_lastmod": null,
         "source_updated": "2024-06-27",
         "status": "active",
-        "subtopic_hint": "affiliation-cnss",
+        "subtopic_hint": "non-salaries",
         "title": "Indépendants et autres catégories - CNSS",
         "trust": "official",
         "url": "https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr2_avantage3",
@@ -17549,10 +17597,10 @@
           "https://www.cnss.tn/c/document_library/get_file?uuid=4d7bbc9b-9c58-489c-99d2-c47f95ddc4cf&groupId=54202"
         ],
         "hint_keywords": [
-          "salarié",
-          "cotisations"
+          "non salarié",
+          "indépendant"
         ],
-        "hint_score": 7,
+        "hint_score": 11,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -17564,7 +17612,7 @@
         "sitemap_lastmod": null,
         "source_updated": "2024-06-27",
         "status": "active",
-        "subtopic_hint": "affiliation-cnss",
+        "subtopic_hint": "non-salaries",
         "title": "Indépendants et autres catégories - CNSS",
         "trust": "official",
         "url": "https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr1_avantage1",
@@ -17731,10 +17779,10 @@
           "https://www.cnss.tn/c/document_library/get_file?uuid=3e2de5c7-89d6-4927-8ea5-54bf229ac6c0&groupId=54202"
         ],
         "hint_keywords": [
-          "affiliation",
-          "salarié"
+          "non salarié",
+          "indépendant"
         ],
-        "hint_score": 8,
+        "hint_score": 12,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -17746,7 +17794,7 @@
         "sitemap_lastmod": null,
         "source_updated": "2024-06-27",
         "status": "active",
-        "subtopic_hint": "affiliation-cnss",
+        "subtopic_hint": "non-salaries",
         "title": "Indépendants et autres catégories - CNSS",
         "trust": "official",
         "url": "https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr1_avantage3",
@@ -20441,9 +20489,10 @@
           "https://www.cnss.tn/c/document_library/get_file?uuid=9489040e-a2d8-4e3c-8187-3d39afdf0e51&groupId=54202"
         ],
         "hint_keywords": [
-          "salarié"
+          "non salarié",
+          "indépendant"
         ],
-        "hint_score": 6,
+        "hint_score": 9,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -20455,7 +20504,7 @@
         "sitemap_lastmod": null,
         "source_updated": "2024-06-27",
         "status": "active",
-        "subtopic_hint": "affiliation-cnss",
+        "subtopic_hint": "non-salaries",
         "title": "Indépendants et autres catégories - CNSS",
         "trust": "official",
         "url": "https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal_autres_etudiants_immatriculation",
@@ -23828,17 +23877,16 @@
         "doc_type": "procedure",
         "domain_hint": "studies",
         "hint_keywords": [
-          "bourse",
-          "prêt universitaire"
+          "transfert"
         ],
-        "hint_score": 6,
+        "hint_score": 7,
         "hint_source": "llm",
         "lang": "fr",
         "org": "Ministère de l'Éducation (via le portail SICAD)",
         "render": "html",
         "section": null,
         "site": "education_gov",
-        "subtopic_hint": "bourses",
+        "subtopic_hint": "inscription",
         "title": "Transfert des frais de scolarité et de séjour au profit des étudiants à l'étranger",
         "trust": "official",
         "url": "http://www.sicad.gov.tn/Fr/Prestations_57_3_D622",
@@ -26655,12 +26703,14 @@
         "discovered_via": "sitemap",
         "doc_id": "khadamet:/أبحث-عن-عمل#البحث-عن-عروض-تربص-عمل-في-بيئة-مهنية-لخريجي-التدريب-المهني-ح",
         "doc_type": "procedure",
-        "domain_hint": null,
+        "domain_hint": "employment",
         "fetched_at": "2026-10-05T20:25:51+00:00",
         "first_seen": "2026-10-05T20:25:52+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "عروض تربص"
+        ],
+        "hint_score": 7,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -26672,7 +26722,7 @@
         "sitemap_lastmod": "2025-05-10T16:27:59+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "recherche-emploi",
         "title": "البحث عن عروض تربص عمل في بيئة مهنية لخريجي التدريب المهني حسب الإختصاص و حسب الشهادة",
         "trust": "official",
         "url": "https://khadamet.gov.tn/%d8%a3%d8%a8%d8%ad%d8%ab-%d8%b9%d9%86-%d8%b9%d9%85%d9%84/",
@@ -27505,12 +27555,14 @@
         "discovered_via": "sitemap",
         "doc_id": "khadamet:/أرغب-في-الحصول-على-التغطية-الاجتماعية#intro",
         "doc_type": "procedure",
-        "domain_hint": null,
+        "domain_hint": "employment",
         "fetched_at": "2026-10-05T20:25:50+00:00",
         "first_seen": "2026-10-05T20:25:50+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "التغطية الاجتماعية"
+        ],
+        "hint_score": 5,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -27522,7 +27574,7 @@
         "sitemap_lastmod": "2025-02-07T13:42:19+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "affiliation-cnss",
         "title": "أرغب في الحصول على التغطية الاجتماعية - البوابة الوطنية للخدمات الإدارية",
         "trust": "official",
         "url": "https://khadamet.gov.tn/%d8%a3%d8%b1%d8%ba%d8%a8-%d9%81%d9%8a-%d8%a7%d9%84%d8%ad%d8%b5%d9%88%d9%84-%d8%b9%d9%84%d9%89-%d8%a7%d9%84%d8%aa%d8%ba%d8%b7%d9%8a%d8%a9-%d8%a7%d9%84%d8%a7%d8%ac%d8%aa%d9%85%d8%a7%d8%b9%d9%8a%d8%a9/",
@@ -31790,12 +31842,14 @@
         "discovered_via": "sitemap",
         "doc_id": "khadamet:/التوظيف-والتكوين-المهني#البحث-عن-عروض-تربص-عمل-في-بيئة-مهنية-لخريجي-التدريب-المهني-ح",
         "doc_type": "procedure",
-        "domain_hint": null,
+        "domain_hint": "employment",
         "fetched_at": "2026-10-05T20:25:53+00:00",
         "first_seen": "2026-10-05T20:25:54+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "عروض تربص"
+        ],
+        "hint_score": 8,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -31807,7 +31861,7 @@
         "sitemap_lastmod": "2025-05-13T13:36:12+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "recherche-emploi",
         "title": "البحث عن عروض تربص عمل في بيئة مهنية لخريجي التدريب المهني حسب الإختصاص و حسب الشهادة",
         "trust": "official",
         "url": "https://khadamet.gov.tn/%d8%a7%d9%84%d8%aa%d9%88%d8%b8%d9%8a%d9%81-%d9%88%d8%a7%d9%84%d8%aa%d9%83%d9%88%d9%8a%d9%86-%d8%a7%d9%84%d9%85%d9%87%d9%86%d9%8a/",
@@ -40085,8 +40139,10 @@
         "fetched_at": "2026-10-05T23:14:10+00:00",
         "first_seen": "2026-10-05T20:26:26+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 3,
         "hint_source": "llm",
         "http_last_modified": "Fri, 07 Sep 2018 12:37:29 GMT",
         "lang": "fr",
@@ -40098,7 +40154,7 @@
         "sitemap_lastmod": null,
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "bourses",
         "title": "Les textes législatifs",
         "trust": "official",
         "url": "https://www.ooun.rnu.tn/web/fr/bourse.html",
@@ -50989,7 +51045,7 @@
         "first_seen": "2026-10-05T20:25:55+00:00",
         "forms": [],
         "hint_keywords": [
-          "orientation universitaire"
+          "bourse"
         ],
         "hint_score": 1,
         "hint_source": "llm",
@@ -51003,7 +51059,7 @@
         "sitemap_lastmod": "2025-09-30T15:22:32+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "inscription",
+        "subtopic_hint": "bourses",
         "title": "Consultation des résultats de la session des excellents",
         "trust": "official",
         "url": "http://services.gov.tn/je-poursuis-mes-etudes-a-luniversite/",
@@ -51228,8 +51284,10 @@
         "fetched_at": "2026-10-05T20:25:54+00:00",
         "first_seen": "2026-10-05T20:25:55+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 10,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 1,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -51241,7 +51299,7 @@
         "sitemap_lastmod": "2025-09-30T15:22:32+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "inscription",
+        "subtopic_hint": "bourses",
         "title": "Je poursuis mes études à l’université - Le portail national des services administratifs",
         "trust": "official",
         "url": "http://services.gov.tn/je-poursuis-mes-etudes-a-luniversite/",
@@ -51391,8 +51449,10 @@
         "fetched_at": "2026-10-05T20:25:54+00:00",
         "first_seen": "2026-10-05T20:25:55+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 10,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 1,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -51404,7 +51464,7 @@
         "sitemap_lastmod": "2025-09-30T15:22:32+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "inscription",
+        "subtopic_hint": "bourses",
         "title": "Remplissage de la fiche de choix pour la session des excellents",
         "trust": "official",
         "url": "http://services.gov.tn/je-poursuis-mes-etudes-a-luniversite/",
@@ -51431,8 +51491,10 @@
         "fetched_at": "2026-10-05T20:25:54+00:00",
         "first_seen": "2026-10-05T20:25:55+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 10,
+        "hint_keywords": [
+          "bourse"
+        ],
+        "hint_score": 1,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -51444,7 +51506,7 @@
         "sitemap_lastmod": "2025-09-30T15:22:32+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "inscription",
+        "subtopic_hint": "bourses",
         "title": "Remplissage de la fiche de choix – session des excellents candidats",
         "trust": "official",
         "url": "http://services.gov.tn/je-poursuis-mes-etudes-a-luniversite/",
@@ -54938,9 +55000,9 @@
           "https://uma.rnu.tn/userfiles/files/boursesalternances/doc00028720250218160819.pdf"
         ],
         "hint_keywords": [
-          "pfe"
+          "bourse"
         ],
-        "hint_score": 6,
+        "hint_score": 10,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -54952,7 +55014,7 @@
         "sitemap_lastmod": "2026-10-05T10:59:22+01:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "stages-pfe",
+        "subtopic_hint": "bourses",
         "title": "UMA - Bourses d’alternance 2025 accordée aux étudiants ingénieurs (PFE) , aux Doctorants et aux étudiants en master - Le dernier délai pour la réception des dossiers est fixé au 11 mars 2025",
         "trust": "institutional",
         "url": "https://uma.rnu.tn/fr/article/209/bourses-dalternance-2025-accordee-aux-etudiants-ingenieurs-pfe-aux-doctorants-et-aux-etudiants-en-master-le-dernier-delai-pour-la-reception-des-dossiers-est-fixe-au-11-mars-2025",
@@ -54982,9 +55044,9 @@
           "https://uma.rnu.tn/userfiles/files/recherche25/coop%C3%A9ration/bourses_espagne1.pdf"
         ],
         "hint_keywords": [
-          "mobilité"
+          "bourse"
         ],
-        "hint_score": 4,
+        "hint_score": 8,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -54996,7 +55058,7 @@
         "sitemap_lastmod": "2026-10-05T22:43:08+01:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "mobilite",
+        "subtopic_hint": "bourses",
         "title": "UMA - Coopération internationale : Mobilité",
         "trust": "institutional",
         "url": "https://uma.rnu.tn/fr/article/306/cooperation-internationale-mobilite",
@@ -55021,8 +55083,10 @@
         "fetched_at": "2026-10-06T23:05:14+00:00",
         "first_seen": "2026-10-06T22:17:43+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "horizon europe"
+        ],
+        "hint_score": 8,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -55034,7 +55098,7 @@
         "sitemap_lastmod": "2026-10-05T14:47:57+01:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "mobilite",
         "title": "UMA - Journée d'information sur le programme HORIZON EUROPE \"WORK PROGRAMME 2025\" - Le 10 juin 2025 - Date limite d'inscription : avant le 9 juin 2025 à 10h",
         "trust": "institutional",
         "url": "https://uma.rnu.tn/fr/article/318/journee-dinformation-sur-le-programme-horizon-europe-work-programme-2025-le-10-juin-2025-date-limite-dinscription-avant-le-9-juin-2025-a-10h",
@@ -55059,8 +55123,10 @@
         "fetched_at": "2026-10-06T23:05:19+00:00",
         "first_seen": "2026-10-06T22:17:45+00:00",
         "forms": [],
-        "hint_keywords": [],
-        "hint_score": 0,
+        "hint_keywords": [
+          "mutation universitaire"
+        ],
+        "hint_score": 4,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -55072,7 +55138,7 @@
         "sitemap_lastmod": "2026-10-05T20:34:40+01:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": null,
+        "subtopic_hint": "inscription",
         "title": "UMA - Ouverture des demandes de mutation universitaire – Année 2025/2026 à l'université de la Manouba : Clôture des inscriptions en ligne : 24 juillet 2025 / Date limite d’envoi par voie postale : 28 juillet 2025",
         "trust": "institutional",
         "url": "https://uma.rnu.tn/fr/article/390/ouverture-des-demandes-de-mutation-universitaire-annee-20252026-a-luniversite-de-la-manouba-cloture-des-inscriptions-en-ligne-24-juillet-2025-date-limite-denvoi-par-voie-postale-28-juillet-2025",

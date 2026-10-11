@@ -1,14 +1,14 @@
 ---
-id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-ab5395a8
+id: non-salaries-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-ab5395a8
 title: Indépendants et autres catégories - CNSS
 domain: employment
-subtopic: affiliation-cnss
+subtopic: non-salaries
 lang: fr
 translations: []
 org: Caisse Nationale de Sécurité Sociale (CNSS)
 keywords:
-- salarié
-- cotisations
+- non salarié
+- indépendant
 sources:
 - url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr1_avantage1
   breadcrumb:

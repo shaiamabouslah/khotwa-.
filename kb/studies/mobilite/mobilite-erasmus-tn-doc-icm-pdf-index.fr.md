@@ -11,6 +11,7 @@ keywords:
 - mobilité
 - échange
 - credit mobility
+- Horizon Europe
 - التنقل
 - التبادل الطلابي
 - الدراسة بالخارج

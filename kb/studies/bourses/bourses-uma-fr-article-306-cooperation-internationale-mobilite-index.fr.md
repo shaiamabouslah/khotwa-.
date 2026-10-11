@@ -1,13 +1,13 @@
 ---
-id: mobilite-uma-fr-article-306-cooperation-internationale-mobilite-index
+id: bourses-uma-fr-article-306-cooperation-internationale-mobilite-index
 title: 'UMA - Coopération internationale : Mobilité'
 domain: studies
-subtopic: mobilite
+subtopic: bourses
 lang: fr
 translations: []
 org: Université de la Manouba
 keywords:
-- mobilité
+- bourse
 sources:
 - url: https://uma.rnu.tn/fr/article/306/cooperation-internationale-mobilite
   breadcrumb: []

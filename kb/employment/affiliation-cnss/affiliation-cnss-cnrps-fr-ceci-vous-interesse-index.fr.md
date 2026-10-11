@@ -15,11 +15,13 @@ keywords:
 - salarié
 - cotisations
 - déclaration des salaires
+- couverture sociale
 - انخراط
 - الانخراط
 - تسجيل الأجراء
 - المؤجر
 - الاشتراكات
+- التغطية الاجتماعية
 sources:
 - url: https://www.cnrps.nat.tn/fr/ceci-vous-interesse
   breadcrumb: []

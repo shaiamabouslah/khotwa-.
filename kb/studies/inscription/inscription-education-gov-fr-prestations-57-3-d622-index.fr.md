@@ -1,14 +1,13 @@
 ---
-id: bourses-education-gov-fr-prestations-57-3-d622-index
+id: inscription-education-gov-fr-prestations-57-3-d622-index
 title: Transfert des frais de scolarité et de séjour au profit des étudiants à l'étranger
 domain: studies
-subtopic: bourses
+subtopic: inscription
 lang: fr
 translations: []
 org: Ministère de l'Éducation (via le portail SICAD)
 keywords:
-- bourse
-- prêt universitaire
+- transfert
 sources:
 - url: http://www.sicad.gov.tn/Fr/Prestations_57_3_D622
   breadcrumb: []

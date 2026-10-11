@@ -15,11 +15,13 @@ keywords:
 - salarié
 - cotisations
 - déclaration des salaires
+- couverture sociale
 - انخراط
 - الانخراط
 - تسجيل الأجراء
 - المؤجر
 - الاشتراكات
+- التغطية الاجتماعية
 sources:
 - url: https://www.cnss.tn/c/document_library/get_file?uuid=099b6e65-483d-46ca-983b-d995e2045aae&groupId=10156
   breadcrumb: []

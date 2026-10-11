@@ -10,10 +10,10 @@ section: null
 breadcrumb: []
 doc_type: procedure
 domain_hint: studies
-subtopic_hint: stages-pfe
-hint_score: 6
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords:
-- pfe
+- bourse
 forms:
 - https://uma.rnu.tn/userfiles/files/acc%C3%A8s%20%C3%A0%20l'informations/boursesalternance.pdf
 - https://uma.rnu.tn/userfiles/files/boursesalternances/boursesalternance.pdf

@@ -1,13 +1,13 @@
 ---
-id: inscription-aneti-fo-fr-global-php-q-menu1-63-index
+id: affiliation-cnss-aneti-fo-fr-global-php-q-menu1-63-index
 title: Les conseillers de l’emploi et les conseillers en orientation professionnelle
-domain: studies
-subtopic: inscription
+domain: employment
+subtopic: affiliation-cnss
 lang: fr
 translations: []
 org: Agence Nationale pour l'Emploi et le Travail Indépendant (ANETI)
 keywords:
-- réorientation
+- employeur
 sources:
 - url: https://www.emploi.nat.tn/fo/Fr/global.php?menu1=63
   breadcrumb: []

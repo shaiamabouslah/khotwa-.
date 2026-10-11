@@ -1,20 +1,13 @@
 ---
-id: inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-intro
+id: bourses-services-gov-je-poursuis-mes-etudes-a-luniversite-intro
 title: Je poursuis mes études à l’université - Le portail national des services administratifs
 domain: studies
-subtopic: inscription
+subtopic: bourses
 lang: fr
 translations: []
 org: Portail national des services administratifs
 keywords:
-- inscription universitaire
-- orientation universitaire
-- réorientation
-- transfert
-- التسجيل الجامعي
-- التوجيه الجامعي
-- إعادة التوجيه
-- النقلة
+- bourse
 sources:
 - url: http://services.gov.tn/je-poursuis-mes-etudes-a-luniversite/
   breadcrumb: []

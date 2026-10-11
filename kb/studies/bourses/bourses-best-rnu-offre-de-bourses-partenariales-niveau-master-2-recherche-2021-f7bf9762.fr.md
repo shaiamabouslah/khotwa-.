@@ -1,13 +1,13 @@
 ---
-id: mobilite-best-rnu-offre-de-bourses-partenariales-niveau-master-2-recherche-2021-f7bf9762
+id: bourses-best-rnu-offre-de-bourses-partenariales-niveau-master-2-recherche-2021-f7bf9762
 title: Offre de bourses Partenariales – niveau Master 2 recherche – 2021
 domain: studies
-subtopic: mobilite
+subtopic: bourses
 lang: fr
 translations: []
 org: Ministère de l'Enseignement Supérieur — Bourses et prêts universitaires à l'étranger
 keywords:
-- mobilité
+- bourse
 sources:
 - url: https://best.rnu.tn/offre-de-bourses-partenariales-niveau-master-2-recherche-2021/
   breadcrumb: []

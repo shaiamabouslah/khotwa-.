@@ -10,9 +10,10 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
-hint_keywords: []
+subtopic_hint: bourses
+hint_score: 1
+hint_keywords:
+- bourse
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/Communique-exemptionHIV-2026-MUTAN.pdf
 - https://best.rnu.tn/wp-content/uploads/2019/10/Formulaire-exemption-1er-Cycle-Hiver-2026.pdf

@@ -10,10 +10,10 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: mobilite
-hint_score: 1
+subtopic_hint: bourses
+hint_score: 6
 hint_keywords:
-- mobilité
+- bourse
 forms: []
 render: html
 discovered_via: sitemap

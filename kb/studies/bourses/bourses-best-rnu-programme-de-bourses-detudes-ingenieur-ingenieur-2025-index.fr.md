@@ -1,13 +1,13 @@
 ---
-id: mobilite-best-rnu-programme-de-bourses-detudes-ingenieur-ingenieur-2025-index
+id: bourses-best-rnu-programme-de-bourses-detudes-ingenieur-ingenieur-2025-index
 title: Programme de bourses d’études Ingénieur/Ingénieur – 2025
 domain: studies
-subtopic: mobilite
+subtopic: bourses
 lang: fr
 translations: []
 org: Ministère de l'Enseignement Supérieur — Bourses et prêts universitaires à l'étranger
 keywords:
-- mobilité
+- bourse
 sources:
 - url: https://best.rnu.tn/programme-de-bourses-detudes-ingenieur-ingenieur-2025/
   breadcrumb: []

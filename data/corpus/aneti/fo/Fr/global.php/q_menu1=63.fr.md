@@ -9,11 +9,11 @@ title: Les conseillers de l’emploi et les conseillers en orientation professio
 section: null
 breadcrumb: []
 doc_type: procedure
-domain_hint: studies
-subtopic_hint: inscription
+domain_hint: employment
+subtopic_hint: affiliation-cnss
 hint_score: 1
 hint_keywords:
-- réorientation
+- employeur
 forms: []
 render: js
 discovered_via: seed

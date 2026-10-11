@@ -10,9 +10,10 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
-hint_keywords: []
+subtopic_hint: bourses
+hint_score: 3
+hint_keywords:
+- bourse
 forms:
 - https://maisondelatunisie.org/wp-content/uploads/2022/06/Reglement-Dadmission-pour-Lannee-Universitaire-2022-2023.pdf
 render: html

@@ -10,9 +10,10 @@ section: null
 breadcrumb: []
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: null
-hint_score: 0
-hint_keywords: []
+subtopic_hint: creation-entreprise
+hint_score: 1
+hint_keywords:
+- promoteur
 forms: []
 render: html
 discovered_via: seed

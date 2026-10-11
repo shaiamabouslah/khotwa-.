@@ -16,11 +16,13 @@ keywords:
 - salarié
 - cotisations
 - déclaration des salaires
+- couverture sociale
 - انخراط
 - الانخراط
 - تسجيل الأجراء
 - المؤجر
 - الاشتراكات
+- التغطية الاجتماعية
 sources:
 - url: https://www.cnss.tn/fr/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_avantage_agricole2
   breadcrumb:

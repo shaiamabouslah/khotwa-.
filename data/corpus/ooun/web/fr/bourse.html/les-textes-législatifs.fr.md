@@ -11,9 +11,10 @@ breadcrumb:
 - Les textes législatifs
 doc_type: procedure
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
-hint_keywords: []
+subtopic_hint: bourses
+hint_score: 3
+hint_keywords:
+- bourse
 forms: []
 render: html
 discovered_via: seed

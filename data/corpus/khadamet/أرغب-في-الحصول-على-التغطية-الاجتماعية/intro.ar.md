@@ -9,10 +9,11 @@ title: أرغب في الحصول على التغطية الاجتماعية - �
 section: intro
 breadcrumb: []
 doc_type: procedure
-domain_hint: null
-subtopic_hint: null
-hint_score: 0
-hint_keywords: []
+domain_hint: employment
+subtopic_hint: affiliation-cnss
+hint_score: 5
+hint_keywords:
+- التغطية الاجتماعية
 forms: []
 render: html
 discovered_via: sitemap

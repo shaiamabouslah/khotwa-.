@@ -11,10 +11,10 @@ breadcrumb:
 - Consultation des résultats de la session des excellents
 doc_type: procedure
 domain_hint: studies
-subtopic_hint: inscription
+subtopic_hint: bourses
 hint_score: 1
 hint_keywords:
-- orientation universitaire
+- bourse
 forms: []
 render: html
 discovered_via: sitemap

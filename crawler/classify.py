@@ -45,7 +45,10 @@ class Classifier:
         scores: dict[tuple[str, str], int] = {}
         matched: dict[tuple[str, str], list[str]] = {}
         for domain, sub, kw in self.rules:
-            pattern = rf"(?<!\w){re.escape(kw)}(?!\w)"
+            # Tolerate a trailing French plural "s" on the keyword's own last word (e.g. a
+            # "bourse" keyword must also match "bourses d'études") -- found by hand after
+            # noticing real procedures missed purely because the source used the plural.
+            pattern = rf"(?<!\w){re.escape(kw)}s?(?!\w)"
             s = 3 * len(re.findall(pattern, head)) + len(re.findall(pattern, text))
             if s:
                 scores[(domain, sub)] = scores.get((domain, sub), 0) + s

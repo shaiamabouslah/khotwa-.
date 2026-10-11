@@ -14,10 +14,11 @@ breadcrumb:
 - Non_Sal Secteur_ non_agr1_avantages
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 6
+subtopic_hint: non-salaries
+hint_score: 9
 hint_keywords:
-- salarié
+- non salarié
+- indépendant
 forms: []
 render: html
 discovered_via: link

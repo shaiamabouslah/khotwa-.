@@ -1,13 +1,13 @@
 ---
-id: stages-pfe-best-rnu-prolongation-de-la-date-limite-pour-postuler-aux-bourses-dans-8684f636
+id: bourses-best-rnu-prolongation-de-la-date-limite-pour-postuler-aux-bourses-dans-8684f636
 title: Prolongation de la date limite pour postuler aux bourses dans le cadre de l’entente avec Mitacs
 domain: studies
-subtopic: stages-pfe
+subtopic: bourses
 lang: fr
 translations: []
 org: Ministère de l'Enseignement Supérieur — Bourses et prêts universitaires à l'étranger
 keywords:
-- pfe
+- bourse
 sources:
 - url: https://best.rnu.tn/prolongation-de-la-date-limite-pour-postuler-aux-bourses-dans-le-cadre-de-lentente-avec-mitacs/
   breadcrumb: []

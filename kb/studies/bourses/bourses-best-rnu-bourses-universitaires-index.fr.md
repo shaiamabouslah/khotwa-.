@@ -1,14 +1,13 @@
 ---
-id: stages-pfe-best-rnu-bourses-universitaires-index
+id: bourses-best-rnu-bourses-universitaires-index
 title: Bourses universitaires à l’étranger
 domain: studies
-subtopic: stages-pfe
+subtopic: bourses
 lang: fr
 translations: []
 org: Ministère de l'Enseignement Supérieur — Bourses et prêts universitaires à l'étranger
 keywords:
-- pfe
-- projet de fin d'études
+- bourse
 sources:
 - url: https://best.rnu.tn/bourses-universitaires/
   breadcrumb: []

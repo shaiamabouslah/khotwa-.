@@ -11,9 +11,10 @@ breadcrumb:
 - Remplissage de la fiche de choix pour la session des excellents
 doc_type: procedure
 domain_hint: studies
-subtopic_hint: inscription
-hint_score: 10
-hint_keywords: []
+subtopic_hint: bourses
+hint_score: 1
+hint_keywords:
+- bourse
 forms: []
 render: html
 discovered_via: sitemap

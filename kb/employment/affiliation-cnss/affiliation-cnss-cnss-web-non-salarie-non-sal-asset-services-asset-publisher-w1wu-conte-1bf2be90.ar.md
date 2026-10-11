@@ -16,11 +16,13 @@ keywords:
 - salarié
 - cotisations
 - déclaration des salaires
+- couverture sociale
 - انخراط
 - الانخراط
 - تسجيل الأجراء
 - المؤجر
 - الاشتراكات
+- التغطية الاجتماعية
 sources:
 - url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_peche3_affiliation
   breadcrumb:

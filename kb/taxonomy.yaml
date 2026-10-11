@@ -27,7 +27,7 @@ domains:
       inscription:
         fr: "Inscription et transfert"
         ar: "التسجيل والنقلة"
-        keywords: [inscription universitaire, orientation universitaire, réorientation, transfert, التسجيل الجامعي, التوجيه الجامعي, إعادة التوجيه, النقلة]
+        keywords: [inscription universitaire, orientation universitaire, réorientation, transfert, mutation universitaire, التسجيل الجامعي, التوجيه الجامعي, إعادة التوجيه, النقلة]
       releves-attestations:
         fr: "Relevés de notes et attestations"
         ar: "كشوف الأعداد والشهائد"
@@ -43,7 +43,7 @@ domains:
       mobilite:
         fr: "Mobilité et échanges"
         ar: "التنقل والتبادل الطلابي"
-        keywords: [Erasmus, mobilité, échange, credit mobility, التنقل, التبادل الطلابي, الدراسة بالخارج]
+        keywords: [Erasmus, mobilité, échange, credit mobility, Horizon Europe, التنقل, التبادل الطلابي, الدراسة بالخارج]
 
   employment:
     label: {fr: "Emploi & Vie Professionnelle", ar: "الشغل والحياة المهنية"}
@@ -53,7 +53,7 @@ domains:
         ar: "انخراط الأجراء في الضمان الاجتماعي"
         # "immatriculation" alone was too generic -- it also matches RNE business registration
         # (immatriculation d'entreprise), so it's qualified here to stay CNSS-specific.
-        keywords: [affiliation, immatriculation employeur, immatriculation à la cnss, immatriculation des salariés, employeur, salarié, cotisations, déclaration des salaires, انخراط, الانخراط, تسجيل الأجراء, المؤجر, الاشتراكات]
+        keywords: [affiliation, immatriculation employeur, immatriculation à la cnss, immatriculation des salariés, employeur, salarié, cotisations, déclaration des salaires, couverture sociale, انخراط, الانخراط, تسجيل الأجراء, المؤجر, الاشتراكات, التغطية الاجتماعية]
       employes-de-maison:
         fr: "Employés de maison"
         ar: "عملة المنازل"
@@ -77,7 +77,7 @@ domains:
       recherche-emploi:
         fr: "Recherche d'emploi et programmes d'insertion"
         ar: "البحث عن شغل وبرامج الإدماج"
-        keywords: [demandeur d'emploi, demandeurs d'emploi, offre d'emploi, offres d'emploi, offres de stage, ANETI, SIVP, stage d'initiation, insertion professionnelle, emploi à l'étranger, طالب شغل, عروض الشغل, البحث عن شغل, الإدماج المهني]
+        keywords: [demandeur d'emploi, demandeurs d'emploi, offre d'emploi, offres d'emploi, offres de stage, ANETI, SIVP, stage d'initiation, insertion professionnelle, emploi à l'étranger, طالب شغل, عروض الشغل, البحث عن شغل, الإدماج المهني, عروض تربص]
 
 # Body headings, in this exact order, per language.
 # The chunker maps each heading to its section key.

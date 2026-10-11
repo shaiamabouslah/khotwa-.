@@ -1,13 +1,13 @@
 ---
-id: stages-pfe-best-rnu-etudiants-selectionnes-pour-les-bourses-pfe-convention-mesrs-8bac0cf3
+id: bourses-best-rnu-etudiants-selectionnes-pour-les-bourses-pfe-convention-mesrs-8bac0cf3
 title: Étudiants sélectionnés pour les bourses PFE – Convention MESRS-MITACS 2024-2025
 domain: studies
-subtopic: stages-pfe
+subtopic: bourses
 lang: fr
 translations: []
 org: Ministère de l'Enseignement Supérieur — Bourses et prêts universitaires à l'étranger
 keywords:
-- pfe
+- bourse
 sources:
 - url: https://best.rnu.tn/etudiants-selectionnes-pour-les-bourses-pfe-convention-mesrs-mitacs-2024-2025/
   breadcrumb: []

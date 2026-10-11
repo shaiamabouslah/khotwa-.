@@ -1,13 +1,13 @@
 ---
-id: stages-pfe-uma-fr-article-209-bourses-dalternance-2025-accordee-aux-etudiants-ing-d77edd27
+id: bourses-uma-fr-article-209-bourses-dalternance-2025-accordee-aux-etudiants-ing-d77edd27
 title: UMA - Bourses d’alternance 2025 accordée aux étudiants ingénieurs (PFE) , aux Doctorants et aux étudiants en master - Le dernier délai pour la réception des dossiers est fixé au 11 mars 2025
 domain: studies
-subtopic: stages-pfe
+subtopic: bourses
 lang: fr
 translations: []
 org: Université de la Manouba
 keywords:
-- pfe
+- bourse
 sources:
 - url: https://uma.rnu.tn/fr/article/209/bourses-dalternance-2025-accordee-aux-etudiants-ingenieurs-pfe-aux-doctorants-et-aux-etudiants-en-master-le-dernier-delai-pour-la-reception-des-dossiers-est-fixe-au-11-mars-2025
   breadcrumb: []

@@ -1,20 +1,13 @@
 ---
-id: inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-remplissage-de-la-fi-a9ba4392
+id: bourses-services-gov-je-poursuis-mes-etudes-a-luniversite-remplissage-de-la-fi-a9ba4392
 title: Remplissage de la fiche de choix – session des excellents candidats
 domain: studies
-subtopic: inscription
+subtopic: bourses
 lang: fr
 translations: []
 org: Portail national des services administratifs
 keywords:
-- inscription universitaire
-- orientation universitaire
-- réorientation
-- transfert
-- التسجيل الجامعي
-- التوجيه الجامعي
-- إعادة التوجيه
-- النقلة
+- bourse
 sources:
 - url: http://services.gov.tn/je-poursuis-mes-etudes-a-luniversite/
   breadcrumb:

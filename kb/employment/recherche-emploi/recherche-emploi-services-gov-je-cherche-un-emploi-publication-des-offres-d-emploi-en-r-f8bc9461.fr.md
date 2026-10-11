@@ -21,6 +21,7 @@ keywords:
 - عروض الشغل
 - البحث عن شغل
 - الإدماج المهني
+- عروض تربص
 sources:
 - url: http://services.gov.tn/je-cherche-un-emploi/
   breadcrumb:

@@ -4,7 +4,8 @@ title: غير الأجراء - CNSS
 domain: employment
 subtopic: non-salaries
 lang: ar
-translations: []
+translations:
+- fr
 org: Caisse Nationale de Sécurité Sociale (CNSS)
 keywords:
 - non salarié

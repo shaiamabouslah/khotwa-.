@@ -21,6 +21,7 @@ keywords:
 - عروض الشغل
 - البحث عن شغل
 - الإدماج المهني
+- عروض تربص
 sources:
 - url: https://khadamet.gov.tn/%d8%a3%d8%a8%d8%ad%d8%ab-%d8%b9%d9%86-%d8%b9%d9%85%d9%84/
   breadcrumb: []

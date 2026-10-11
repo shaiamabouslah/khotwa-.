@@ -1,0 +1,28 @@
+---
+id: bourses-best-rnu-offre-de-bourses-partenariales-niveau-master-2-recherches-et-687d948b
+title: Offre de bourses Partenariales – niveau Master 2 recherches et double diplôme Ingénieur/Ingénieur 2023
+domain: studies
+subtopic: bourses
+lang: fr
+translations: []
+org: Ministère de l'Enseignement Supérieur — Bourses et prêts universitaires à l'étranger
+keywords:
+- bourse
+sources:
+- url: https://best.rnu.tn/offre-de-bourses-partenariales-niveau-master-2-recherches-et-double-diplome-ingenieur-ingenieur-2023/
+  breadcrumb: []
+last_checked: '2026-10-11'
+last_changed: '2026-10-06'
+status: active
+generated: true
+---
+
+## Offre de bourses Partenariales – niveau Master 2 recherches et double diplôme Ingénieur/Ingénieur 2023
+
+19 mai 2023
+
+Offre de bourses Partenariales – niveau Master 2 recherches et double diplôme Ingénieur/Ingénieur 2023 par L’Institut français de Tunisie, pour plus d’informations veuillez visiter les liens suivants:
+
+[programmes de bourses en double diplôme Ingénieur/Ingénieur](https://www.institutfrancais-tunisie.com/programme-de-bourses-d%C3%A9tudes-ing%C3%A9nieuring%C3%A9nieur-2023#/)
+
+[Master 2 recherche](https://www.institutfrancais-tunisie.com/programme-de-bourses-partenariales-niveau-master-2-recherche-2023#/)

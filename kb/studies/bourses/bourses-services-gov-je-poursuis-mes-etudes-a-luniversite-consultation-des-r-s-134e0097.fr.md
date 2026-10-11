@@ -1,13 +1,13 @@
 ---
-id: inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-consultation-des-r-s-134e0097
+id: bourses-services-gov-je-poursuis-mes-etudes-a-luniversite-consultation-des-r-s-134e0097
 title: Consultation des résultats de la session des excellents
 domain: studies
-subtopic: inscription
+subtopic: bourses
 lang: fr
 translations: []
 org: Portail national des services administratifs
 keywords:
-- orientation universitaire
+- bourse
 sources:
 - url: http://services.gov.tn/je-poursuis-mes-etudes-a-luniversite/
   breadcrumb:

@@ -11,6 +11,7 @@ keywords:
 - orientation universitaire
 - réorientation
 - transfert
+- mutation universitaire
 - التسجيل الجامعي
 - التوجيه الجامعي
 - إعادة التوجيه
