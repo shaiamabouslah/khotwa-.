@@ -10,9 +10,12 @@ section: null
 breadcrumb: []
 doc_type: announcement
 domain_hint: studies
-subtopic_hint: stages-pfe
-hint_score: 10
-hint_keywords: []
+subtopic_hint: bourses
+hint_score: 14
+hint_keywords:
+- منحة
+- المنح
+- منحة التربص
 forms: []
 render: html
 discovered_via: link

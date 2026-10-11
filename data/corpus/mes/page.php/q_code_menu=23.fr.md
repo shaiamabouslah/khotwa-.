@@ -24,8 +24,9 @@ first_seen: '2026-10-05T20:25:30+00:00'
 last_changed: '2026-10-06T00:30:04+00:00'
 content_hash: sha256:0644ebdca63c25601a9858e8651df1e29aaf4da67ccfd0fde29dcc49993caaa5
 words: 55
-status: active
+status: removed
 hint_source: llm
+cleaned_v2: true
 ---
 
 - [التقديم](https://www.mes.tn/page.php?code_menu=24&code_menu_parent=23)

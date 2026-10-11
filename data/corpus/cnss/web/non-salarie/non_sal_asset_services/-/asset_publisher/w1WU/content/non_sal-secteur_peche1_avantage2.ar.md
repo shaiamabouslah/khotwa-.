@@ -28,8 +28,9 @@ first_seen: '2026-10-05T20:48:17+00:00'
 last_changed: '2026-10-05T20:48:17+00:00'
 content_hash: sha256:a29d6b44c33acafcee0229b20eab0e21d6140d7510ecc7219fb9858f96078d84
 words: 415
-status: active
+status: removed
 hint_source: llm
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr2_avantage2#index
 ---
 
 يمكن للباعثين الجدد المنخرطين بنظام العملة غير الأجراء في القطاعين الفلاحي وغير الفلاحي أن ينتفعوا بتأجيل دفع اشتراكاتهم بنظام الضمان الاجتماعي لمدة سنتين بداية من تاريخ الانخراط.

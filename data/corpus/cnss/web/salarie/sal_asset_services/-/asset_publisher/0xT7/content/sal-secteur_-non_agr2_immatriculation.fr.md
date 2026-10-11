@@ -29,8 +29,9 @@ first_seen: '2026-10-05T20:34:03+00:00'
 last_changed: '2026-10-06T12:56:18+00:00'
 content_hash: sha256:0a093d3d1f154a09bb2bb40134562e88d593bfd15ed1785f355e9c4a8d54eb07
 words: 214
-status: active
+status: removed
 hint_source: llm
+duplicate_of: cnss:/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_peche1_immatriculation#index
 ---
 
 L'employeur est tenu d'immatriculer le personnel embauché dans un délai  d'un mois à compter de la date  d 'affiliation. Pour les travailleurs engagés ultérieurement à cette date, l'immatriculation intervient dans un délai d'un mois  à  compter de la date de leur engagement.

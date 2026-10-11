@@ -29,8 +29,9 @@ first_seen: '2026-10-05T20:51:25+00:00'
 last_changed: '2026-10-05T20:51:25+00:00'
 content_hash: sha256:1e4bf52fd75aeb3a34a18cbe51dee0b76d54943d2d9092fe6c057dfd20c00bdb
 words: 157
-status: active
+status: removed
 hint_source: llm
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr1_remise_penalites#index
 ---
 
 يتحمل العامل غير الأجير الذي يقوم بخلاص مساهماته بعد الآجال القانونية خطايا تأخير يمكن له تقديم مطلب في طرحها على وجه الفضل إذا اقتضت المصلحة العامة ذلك شريطة أن يكون في حل تجاه الصندوق بعنوان أصل المساهمات والقروض ومصاريف التتبع.

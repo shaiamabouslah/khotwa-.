@@ -14,9 +14,11 @@ breadcrumb:
 - Non_Sal Secteur_ non_agr5_Affiliation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: non-salaries
-hint_score: 10
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 26
+hint_keywords:
+- affiliation
+- salarié
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=bd9925d8-daec-4ed3-9811-42a5f17e6a7a&groupId=54202
 render: html

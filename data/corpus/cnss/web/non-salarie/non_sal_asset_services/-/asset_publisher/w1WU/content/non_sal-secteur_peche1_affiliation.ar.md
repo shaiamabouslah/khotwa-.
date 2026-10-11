@@ -14,9 +14,13 @@ breadcrumb:
 - Non_Sal Secteur_peche1_Affiliation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: non-salaries
-hint_score: 10
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 22
+hint_keywords:
+- affiliation
+- salarié
+- انخراط
+- الانخراط
 forms:
 - http://ccitunis-academy.com:89/ar/c/document_library/get_file?uuid=2da0f812-96d2-474b-a660-1385084f5f6a&groupId=54202
 render: html

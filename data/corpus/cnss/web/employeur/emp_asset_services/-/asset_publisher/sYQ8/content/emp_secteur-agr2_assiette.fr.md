@@ -13,10 +13,14 @@ breadcrumb:
 - Services Employeur
 - Emp_Secteur agr2_Assiette
 doc_type: procedure
-domain_hint: null
-subtopic_hint: null
-hint_score: 1
-hint_keywords: []
+domain_hint: employment
+subtopic_hint: affiliation-cnss
+hint_score: 35
+hint_keywords:
+- affiliation
+- employeur
+- salarié
+- cotisations
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=21fa083f-7c10-46f9-96e1-875611e62962&groupId=33103
 - https://www.cnss.tn/c/document_library/get_file?uuid=72507d42-7a98-4320-9bc9-6245955da3bc&groupId=33103

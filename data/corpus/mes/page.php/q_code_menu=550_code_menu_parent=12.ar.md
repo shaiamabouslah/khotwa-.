@@ -24,8 +24,9 @@ first_seen: '2026-10-05T20:25:44+00:00'
 last_changed: '2026-10-07T20:13:21+00:00'
 content_hash: sha256:fd6f12c34b3e74d233241b36635a649fa1538037b090b29a043dfce86f9bea39
 words: 206
-status: active
+status: removed
 hint_source: llm
+duplicate_of: mes:/page.php/q_code_menu=12#index
 ---
 
 # السيد الوزير

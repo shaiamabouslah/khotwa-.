@@ -9,10 +9,11 @@ title: UMA - Tout savoir sur notre système de formation et nos diplômes
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: studies
-subtopic_hint: equivalence
-hint_score: 10
-hint_keywords: []
+domain_hint: employment
+subtopic_hint: creation-entreprise
+hint_score: 1
+hint_keywords:
+- promoteur
 forms: []
 render: html
 discovered_via: sitemap

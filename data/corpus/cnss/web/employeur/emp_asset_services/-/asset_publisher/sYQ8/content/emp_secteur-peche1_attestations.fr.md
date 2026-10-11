@@ -14,9 +14,12 @@ breadcrumb:
 - Emp_Secteur pêche1_Attestations
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: attestations
-hint_score: 10
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 23
+hint_keywords:
+- affiliation
+- employeur
+- cotisations
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=121f4790-7085-42d1-b7ea-e4c5ac64397e&groupId=33103
 - https://www.cnss.tn/c/document_library/get_file?uuid=7c5d0f36-ee39-405f-93a7-b3ec9561f5b4&groupId=33103

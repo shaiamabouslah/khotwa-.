@@ -24,8 +24,9 @@ first_seen: '2026-10-05T20:25:54+00:00'
 last_changed: '2026-10-05T23:42:55+00:00'
 content_hash: sha256:d67eee647aab4e500572aab966c558f70dfc1873ed352531f16d5295125f9260
 words: 1044
-status: active
+status: removed
 hint_source: llm
+cleaned_v2: true
 ---
 
 | |  |  |  | | --- | --- | --- | | آخر تحيين في 05-10-2026 | - [الإستقبال](https://www.mes.tn/index.php?code_menu=6) - [روابط مفيدة](https://www.mes.tn/lien_utile.php?code_menu=10) - [اتصل بنا](https://www.mes.tn/page.php?code_menu=500) | - [Français](https://www.mes.tn/langue.php?langue=fr&code=559) | |

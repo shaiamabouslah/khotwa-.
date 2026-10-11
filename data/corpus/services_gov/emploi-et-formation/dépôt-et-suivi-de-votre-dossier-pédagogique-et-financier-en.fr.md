@@ -25,8 +25,9 @@ first_seen: '2026-10-05T20:26:07+00:00'
 last_changed: '2026-10-05T23:45:58+00:00'
 content_hash: sha256:c658c7eb37cb50e1a5622038b35d14987be67075166939cc2f82e526df305f45
 words: 117
-status: active
+status: removed
 hint_source: llm
+duplicate_of: services_gov:/emploi-et-formation#dépôt-et-suivi-de-ton-dossier-pédagogique-et-financier-en-li
 ---
 
 # Dépôt et suivi de votre dossier pédagogique et financier en ligne

@@ -31,8 +31,9 @@ first_seen: '2026-10-05T20:42:52+00:00'
 last_changed: '2026-10-05T20:42:52+00:00'
 content_hash: sha256:233d34083b6eaccc6bac323e7f78e0d921c7a30d159775092eea16733197b181
 words: 525
-status: active
+status: removed
 hint_source: llm
+duplicate_of: cnss:/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_assiette#index
 ---
 
 - [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr6_affiliation?secteur=$secteur)

@@ -9,10 +9,11 @@ title: Ministère de l'Enseignement Supérieur et de la Recherche Scientifique
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: null
-subtopic_hint: null
+domain_hint: studies
+subtopic_hint: equivalence
 hint_score: 1
-hint_keywords: []
+hint_keywords:
+- المعادلات
 forms: []
 render: html
 discovered_via: link

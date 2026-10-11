@@ -11,8 +11,8 @@ breadcrumb:
 - Etapes et délais des prêts
 doc_type: procedure
 domain_hint: studies
-subtopic_hint: bourses
-hint_score: 10
+subtopic_hint: null
+hint_score: 0
 hint_keywords: []
 forms: []
 render: html

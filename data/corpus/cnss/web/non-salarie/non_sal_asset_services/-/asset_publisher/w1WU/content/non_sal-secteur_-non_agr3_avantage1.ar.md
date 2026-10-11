@@ -28,8 +28,9 @@ first_seen: '2026-10-05T20:51:16+00:00'
 last_changed: '2026-10-05T20:51:16+00:00'
 content_hash: sha256:25488d7cf93ca3beb63f0cdce40b4ba053857ddb23fadf216d35f236d425a581
 words: 129
-status: active
+status: removed
 hint_source: llm
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr2_avantage1#index
 ---
 
 تتكفل الدولة لمدة سنة قابلة للتجديد مرة واحدة بدفع المساهمات المستوجبة على كل شخص معوق منتصب لحسابه الخاص بعنوان نظام الضمان الاجتماعي للعملة غير الأجراء.

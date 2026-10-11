@@ -13,10 +13,13 @@ breadcrumb:
 - Services Employeur
 - Emp_Secteuré_ non_agr4_Remise_penalites
 doc_type: procedure
-domain_hint: null
-subtopic_hint: null
-hint_score: 1
-hint_keywords: []
+domain_hint: employment
+subtopic_hint: affiliation-cnss
+hint_score: 22
+hint_keywords:
+- affiliation
+- employeur
+- cotisations
 forms:
 - https://www.cnss.tn/fr/c/document_library/get_file?uuid=2eb45d8e-45ff-4a65-87f2-7051174293dd&groupId=33103
 render: html

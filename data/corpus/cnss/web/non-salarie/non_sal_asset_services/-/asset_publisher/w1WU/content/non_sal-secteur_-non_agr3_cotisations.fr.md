@@ -29,8 +29,9 @@ first_seen: '2026-10-05T20:50:55+00:00'
 last_changed: '2026-10-05T20:50:55+00:00'
 content_hash: sha256:15db9613d19ade595028737c836b0e657f1481d6ce65176a82549c2b6197e985
 words: 374
-status: active
+status: removed
 hint_source: llm
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr1_cotisations#index
 ---
 
 ## Assiette des cotisations

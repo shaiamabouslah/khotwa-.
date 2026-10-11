@@ -30,8 +30,9 @@ first_seen: '2026-10-05T20:37:40+00:00'
 last_changed: '2026-10-05T20:37:40+00:00'
 content_hash: sha256:4a9811767a705245e01f935b583bab4a1b70f4f0fcdabb4a1d6871c4163f2258
 words: 458
-status: active
+status: removed
 hint_source: llm
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr2_affiliation#index
 ---
 
 L'affiliation au régime de sécurité sociale est obligatoire pour les travailleurs non salariés du secteur non agricole. L'affiliation intervient dans le mois qui suit le début de l'activité (l'assujettissement).

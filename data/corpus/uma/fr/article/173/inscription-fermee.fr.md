@@ -24,8 +24,9 @@ first_seen: '2026-10-06T00:06:49+00:00'
 last_changed: '2026-10-06T00:06:49+00:00'
 content_hash: sha256:f5197d00e2e59525cd3c02c2e85177e4b5eeab988a9365a2d7df41f4268e5186
 words: 1166
-status: active
+status: removed
 hint_source: llm
+duplicate_of: uma:/fr/article/593/appel-a-candidature-mobilite-erasmus-uma-jamies-deadline-10042026#index
 ---
 
 - ## Université

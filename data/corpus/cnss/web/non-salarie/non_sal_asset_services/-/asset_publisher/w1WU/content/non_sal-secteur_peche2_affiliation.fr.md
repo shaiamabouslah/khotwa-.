@@ -14,9 +14,12 @@ breadcrumb:
 - Non_Sal Secteur_peche2_Affiliation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: non-salaries
-hint_score: 10
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 28
+hint_keywords:
+- affiliation
+- employeur
+- salarié
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=e3ef77c9-66a8-48ff-8268-07b8022dbde2&groupId=54202
 render: html

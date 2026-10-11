@@ -28,8 +28,9 @@ first_seen: '2026-10-05T20:45:12+00:00'
 last_changed: '2026-10-05T20:45:12+00:00'
 content_hash: sha256:40b40da6437455d21a7b48e826b59d03050496e6642bf29a33bdafb8276d8e2d
 words: 426
-status: active
+status: removed
 hint_source: llm
+duplicate_of: cnss:/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_-non_agr1_actions_licenciement3#index
 ---
 
 تسند إعانة للعمال الذين فقدوا شغلهم لأسباب اقتصادية أو فنية أو عند غلق المؤسسة نهائيا وبصفة فجئية دون احترام الإجراءات المنصوص عليها بمجلة الشغل.

@@ -29,8 +29,9 @@ first_seen: '2026-10-05T20:49:15+00:00'
 last_changed: '2026-10-05T20:49:15+00:00'
 content_hash: sha256:656b9dd1f0d8dae60df650b500f81c5166ace62d1614f66ed779ccbeac9fb34c
 words: 192
-status: active
+status: removed
 hint_source: llm
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr1_avantage1#index
 ---
 
 L'Etat prend en charge durant une année renouvelable une seule fois le paiement des cotisations de toute personne handicapée installée pour son propre compte au titre du régime de sécurité sociale des travailleurs non salariés.

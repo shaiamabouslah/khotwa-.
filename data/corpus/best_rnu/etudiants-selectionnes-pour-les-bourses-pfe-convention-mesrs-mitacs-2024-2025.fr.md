@@ -10,9 +10,10 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: bourses
-hint_score: 10
-hint_keywords: []
+subtopic_hint: stages-pfe
+hint_score: 5
+hint_keywords:
+- pfe
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/MESRS-MITACS-2024-2025.pdf
 render: html

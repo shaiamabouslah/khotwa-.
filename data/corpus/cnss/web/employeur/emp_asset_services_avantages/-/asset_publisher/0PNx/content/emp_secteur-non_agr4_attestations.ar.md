@@ -14,9 +14,14 @@ breadcrumb:
 - Emp_Secteur non_agr4_Attestations
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: attestations
-hint_score: 10
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 21
+hint_keywords:
+- affiliation
+- employeur
+- الانخراط
+- المؤجر
+- الاشتراكات
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=e9402dd5-5950-4bad-a2ea-9aa78170748f&groupId=33103
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=ea5a9fe3-d9fd-4e63-9c17-3826a49fcd2e&groupId=33103

@@ -10,9 +10,10 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: employment
-subtopic_hint: patente-fiscalite
-hint_score: 10
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 17
+hint_keywords:
+- employeur
 forms:
 - https://jibaya.tn/wp-content/uploads/2023/11/EMPCCA_20_Final_compressed.pdf
 - https://jibaya.tn/wp-content/uploads/2023/11/EMPCCA_22-23_0_compressed.pdf

@@ -28,8 +28,9 @@ first_seen: '2026-10-05T20:46:45+00:00'
 last_changed: '2026-10-05T20:46:45+00:00'
 content_hash: sha256:1ec156ccc1eef857fdc1b45e2336c5a476c17a2c08e2e8f76fe25d3c8a6fddd6
 words: 598
-status: active
+status: removed
 hint_source: llm
+duplicate_of: cnss:/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_-non_agr2_actions_licenciement3#index
 ---
 
 Une aide est accordée par la CNSS aux salariés du secteur non agricole ayant perdu leur emploi pour des raisons indépendantes de leur volonté, sans bénéficier d'une  réparation, leur entreprise se trouvant en cessation d'activité pour des raisons économiques ou technologiques ou en fermeture inopinée ,si les conditions suivantes sont remplies :

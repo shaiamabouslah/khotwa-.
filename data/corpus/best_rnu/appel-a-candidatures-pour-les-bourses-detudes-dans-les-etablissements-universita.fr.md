@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: bourses
-hint_score: 10
+subtopic_hint: null
+hint_score: 0
 hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/Annonce-Bourses-de-Cooperation-Maroc-Algerie-2025-2026-final.pdf

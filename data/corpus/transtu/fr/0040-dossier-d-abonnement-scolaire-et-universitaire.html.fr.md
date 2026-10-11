@@ -24,8 +24,9 @@ first_seen: '2026-10-06T00:17:18+00:00'
 last_changed: '2026-10-06T00:19:17+00:00'
 content_hash: sha256:0d12bc677a070e5473067a832f7450601118a4b3ca2b38cb57b77c7675e4f545
 words: 31
-status: active
+status: removed
 hint_source: llm
+cleaned_v2: true
 ---
 
 Dossier d'abonnement scolaire et universitaire [Ouvrir dans un nouvelle fenêtre pop-up]

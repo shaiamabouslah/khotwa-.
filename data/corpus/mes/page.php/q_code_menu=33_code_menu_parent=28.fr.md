@@ -24,8 +24,9 @@ first_seen: '2026-10-05T20:26:17+00:00'
 last_changed: '2026-10-07T20:16:08+00:00'
 content_hash: sha256:6fd54a620fa98f5c38e8c46d808231108cb9b59bfb9f7e3828b710c616c706df
 words: 128
-status: active
+status: removed
 hint_source: llm
+duplicate_of: mes:/page.php/q_code_menu=28#index
 ---
 
 # مراكز البحث

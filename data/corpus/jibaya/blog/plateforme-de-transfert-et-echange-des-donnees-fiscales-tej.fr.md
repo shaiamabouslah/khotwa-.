@@ -9,10 +9,11 @@ title: 'Plateforme de transfert et échange des données fiscales : TEJ - JIBAYA
 section: null
 breadcrumb: []
 doc_type: procedure
-domain_hint: employment
-subtopic_hint: attestations
-hint_score: 10
-hint_keywords: []
+domain_hint: studies
+subtopic_hint: inscription
+hint_score: 7
+hint_keywords:
+- transfert
 forms:
 - https://jibaya.tn/wp-content/uploads/2023/12/CC_PrixTransfert_V1.0.pdf
 - https://jibaya.tn/wp-content/uploads/2023/12/Liasse_fiscale-CCT-Assurances_compressed-1.pdf

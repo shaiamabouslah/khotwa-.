@@ -11,9 +11,10 @@ breadcrumb:
 - Obtention du certificat annuel de l’impôt sur le revenu
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: attestations
-hint_score: 10
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 3
+hint_keywords:
+- cotisations
 forms: []
 render: html
 discovered_via: sitemap

@@ -9,10 +9,11 @@ title: Pensions et Accessoires
 section: null
 breadcrumb: []
 doc_type: procedure
-domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 10
-hint_keywords: []
+domain_hint: studies
+subtopic_hint: bourses
+hint_score: 2
+hint_keywords:
+- bourse
 forms:
 - http://www.cnrps.nat.tn/sites/default/files/2022-10/112-5200-21.pdf
 - http://www.cnrps.nat.tn/sites/default/files/2022-10/113-5200-21_0.pdf

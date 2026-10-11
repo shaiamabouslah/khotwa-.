@@ -10,9 +10,11 @@ section: null
 breadcrumb: []
 doc_type: announcement
 domain_hint: studies
-subtopic_hint: stages-pfe
-hint_score: 10
-hint_keywords: []
+subtopic_hint: bourses
+hint_score: 14
+hint_keywords:
+- منحة
+- منحة التربص
 forms:
 - https://www.oouc.rnu.tn/uploads/topics/17310825594054.pdf
 render: html

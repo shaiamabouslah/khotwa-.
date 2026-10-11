@@ -29,8 +29,9 @@ first_seen: '2026-10-05T20:43:37+00:00'
 last_changed: '2026-10-05T20:43:37+00:00'
 content_hash: sha256:11388b9c398586b9e75b536c59cd1017637128b8f7b662c7d0b8497c7c66b47e
 words: 557
-status: active
+status: removed
 hint_source: llm
+duplicate_of: cnss:/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr2_contenu-avantage_3#index
 ---
 
 - [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_affiliation?secteur=$secteur)

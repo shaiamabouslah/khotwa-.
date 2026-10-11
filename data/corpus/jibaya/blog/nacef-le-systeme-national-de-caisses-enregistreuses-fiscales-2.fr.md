@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: employment
-subtopic_hint: patente-fiscalite
-hint_score: 10
+subtopic_hint: null
+hint_score: 0
 hint_keywords: []
 forms:
 - https://jibaya.tn/wp-content/uploads/2025/10/48-2016.pdf

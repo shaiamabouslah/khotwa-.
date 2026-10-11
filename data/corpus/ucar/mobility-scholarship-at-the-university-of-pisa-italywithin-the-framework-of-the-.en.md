@@ -9,9 +9,9 @@ title: (Extended Deadline) MOBILITY SCHOLARSHIP AT THE UNIVERSITY OF PISA (ITALY
 section: null
 breadcrumb: []
 doc_type: announcement
-domain_hint: null
+domain_hint: studies
 subtopic_hint: null
-hint_score: 1
+hint_score: 0
 hint_keywords: []
 forms: []
 render: html

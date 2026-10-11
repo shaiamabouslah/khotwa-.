@@ -24,8 +24,9 @@ first_seen: '2026-10-05T20:29:26+00:00'
 last_changed: '2026-10-06T00:00:36+00:00'
 content_hash: sha256:c192c02841701a16c6c1d54dda8362f2f0f7aeafcfc87d113cf13af3bee43fc3
 words: 114
-status: active
+status: removed
 hint_source: llm
+duplicate_of: best_rnu:/homepage-blog-layout#index
 ---
 
 ## Communiqué exemption des frais de scolarité supplémentaires – Session Automne 2026

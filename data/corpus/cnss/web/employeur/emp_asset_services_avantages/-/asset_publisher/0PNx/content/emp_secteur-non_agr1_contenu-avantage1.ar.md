@@ -14,9 +14,13 @@ breadcrumb:
 - Emp_Secteur non_agr1_Contenu Avantage1
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: non-salaries
-hint_score: 10
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 18
+hint_keywords:
+- affiliation
+- employeur
+- الانخراط
+- الاشتراكات
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=4b2b4ab0-07c2-4291-bb22-78e36f67b27f&groupId=33103
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=576d16fb-5e29-46bb-8407-ee0e58d3154a&groupId=33103

@@ -11,9 +11,10 @@ breadcrumb:
 - Suivi de l’obtention des demandes de permis de main-d’œuvre étrangère (emploi des étrangers)
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 10
-hint_keywords: []
+subtopic_hint: recherche-emploi
+hint_score: 1
+hint_keywords:
+- emploi à l'étranger
 forms: []
 render: html
 discovered_via: sitemap

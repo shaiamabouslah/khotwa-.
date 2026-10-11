@@ -10,9 +10,10 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 10
-hint_keywords: []
+subtopic_hint: bourses
+hint_score: 1
+hint_keywords:
+- المنح
 forms: []
 render: html
 discovered_via: link

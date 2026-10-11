@@ -10,9 +10,10 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: employment
-subtopic_hint: patente-fiscalite
-hint_score: 10
-hint_keywords: []
+subtopic_hint: creation-entreprise
+hint_score: 3
+hint_keywords:
+- digigo
 forms:
 - https://jibaya.tn/wp-content/uploads/2023/12/autorisation_prelevement.pdf
 - https://jibaya.tn/wp-content/uploads/2023/12/formulaire_adhesion_teledeclaration.pdf

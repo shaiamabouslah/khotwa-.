@@ -29,8 +29,9 @@ first_seen: '2026-10-05T20:45:57+00:00'
 last_changed: '2026-10-05T20:45:57+00:00'
 content_hash: sha256:86ddce901753d6b72a8d6285a1f6b8d82d0f9f15c09d0f1d6166bdf586db5013
 words: 350
-status: active
+status: removed
 hint_source: llm
+duplicate_of: cnss:/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_-non_agr2_actions_licenciement2#index
 ---
 
 يتكفل الصندوق بمنح المغادرة والمستحقاتالقانونية للعمال المفصولين عن العمل لأسباب اقتصادية أو فنية أو بسبب الغلق النهائي والفجئي للمؤسسة .لا يشمل التكفل بمنح المغادرة و المستحقات القانونية العمال الذين يقع تسريحهم من قبل المنشآت العمومية وكذلك المنشآت الأخرى المشبهة بها والمخول لها الانتفاع بتدخل صندوق إعادة هيكلة المؤسسات العمومية.

@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: non-salaries
-hint_score: 10
+subtopic_hint: null
+hint_score: 0
 hint_keywords: []
 forms: []
 render: html

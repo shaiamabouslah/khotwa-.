@@ -9,10 +9,11 @@ title: Ministère de l'Enseignement Supérieur et de la Recherche Scientifique
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: null
-subtopic_hint: null
+domain_hint: studies
+subtopic_hint: equivalence
 hint_score: 1
-hint_keywords: []
+hint_keywords:
+- المعادلات
 forms: []
 render: html
 discovered_via: link
@@ -26,6 +27,7 @@ content_hash: sha256:3d0f67deca8b801bc7578184256f686b3153c635a2cfd2adfc68b3ff200
 words: 688
 status: active
 hint_source: llm
+cleaned_v2: true
 ---
 
 | |  |  |  | | --- | --- | --- | | آخر تحيين في 05-10-2026 | - [الإستقبال](https://www.mes.tn/index.php?code_menu=6) - [روابط مفيدة](https://www.mes.tn/lien_utile.php?code_menu=10) - [اتصل بنا](https://www.mes.tn/page.php?code_menu=500) | - [Français](https://www.mes.tn/langue.php?langue=fr&code=129) | |

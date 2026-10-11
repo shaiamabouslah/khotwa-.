@@ -10,9 +10,10 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: inscription
-hint_score: 10
-hint_keywords: []
+subtopic_hint: stages-pfe
+hint_score: 1
+hint_keywords:
+- pfe
 forms: []
 render: html
 discovered_via: link

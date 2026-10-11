@@ -24,8 +24,9 @@ first_seen: '2026-10-07T20:14:31+00:00'
 last_changed: '2026-10-07T20:14:31+00:00'
 content_hash: sha256:49dc4bd8dcd0d815fe3abfa3b0b9d3633e877629d17eaf30b7b89f22db6bb01a
 words: 250
-status: active
+status: removed
 hint_source: llm
+duplicate_of: mes:/page.php/q_code_menu=13#index
 ---
 
 # النشريات والمطويات

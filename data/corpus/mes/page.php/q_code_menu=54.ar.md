@@ -24,8 +24,9 @@ first_seen: '2026-10-05T20:25:36+00:00'
 last_changed: '2026-10-07T20:09:59+00:00'
 content_hash: sha256:e67c9bbd266929cd5af07de3d2e95b2f566b6ce12803061b831f77632960b909
 words: 349
-status: active
+status: removed
 hint_source: llm
+duplicate_of: mes:/page.php/q_code_menu=147_code_menu_parent=54#index
 ---
 
 # التعليم العالي الخاّص

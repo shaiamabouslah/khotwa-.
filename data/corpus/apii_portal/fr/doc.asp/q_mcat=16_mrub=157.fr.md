@@ -9,9 +9,9 @@ title: Les Technopoles en Tunisie
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: null
+domain_hint: employment
 subtopic_hint: null
-hint_score: 10
+hint_score: 0
 hint_keywords: []
 forms:
 - https://www.tunisieindustrie.nat.tn/fr/download/cfga/LOI71-2016_fr.pdf

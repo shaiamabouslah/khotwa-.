@@ -14,9 +14,12 @@ breadcrumb:
 - Non_Sal Secteur_ non_agr4_Remise_penalites
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: recherche-emploi
-hint_score: 1
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 11
+hint_keywords:
+- employeur
+- salarié
+- cotisations
 forms:
 - https://www.cnss.tn/fr/c/document_library/get_file?uuid=2eb45d8e-45ff-4a65-87f2-7051174293dd&groupId=33103
 render: html

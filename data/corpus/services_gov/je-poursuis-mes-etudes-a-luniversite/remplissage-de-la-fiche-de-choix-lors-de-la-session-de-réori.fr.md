@@ -11,9 +11,11 @@ breadcrumb:
 - Remplissage de la fiche de choix lors de la session de réorientation pour des raisons ordinaires, de santé ou sociales
 doc_type: procedure
 domain_hint: studies
-subtopic_hint: releves-attestations
-hint_score: 10
-hint_keywords: []
+subtopic_hint: inscription
+hint_score: 9
+hint_keywords:
+- orientation universitaire
+- réorientation
 forms: []
 render: html
 discovered_via: sitemap

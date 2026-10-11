@@ -10,9 +10,11 @@ section: null
 breadcrumb: []
 doc_type: procedure
 domain_hint: studies
-subtopic_hint: inscription
-hint_score: 10
-hint_keywords: []
+subtopic_hint: bourses
+hint_score: 6
+hint_keywords:
+- bourse
+- prêt universitaire
 forms: []
 render: html
 discovered_via: seed

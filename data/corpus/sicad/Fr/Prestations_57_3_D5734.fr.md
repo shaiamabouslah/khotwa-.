@@ -9,10 +9,11 @@ title: Attestation du caractère culturel dans le cadre du mécénat culturel.
 section: null
 breadcrumb: []
 doc_type: procedure
-domain_hint: studies
-subtopic_hint: releves-attestations
-hint_score: 10
-hint_keywords: []
+domain_hint: employment
+subtopic_hint: creation-entreprise
+hint_score: 1
+hint_keywords:
+- registre national des entreprises
 forms: []
 render: html
 discovered_via: link

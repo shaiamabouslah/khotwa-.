@@ -11,9 +11,10 @@ breadcrumb:
 - Obtention des certificats d’adhésion
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 10
-hint_keywords: []
+subtopic_hint: attestations
+hint_score: 3
+hint_keywords:
+- certificat d'adhésion
 forms: []
 render: html
 discovered_via: sitemap

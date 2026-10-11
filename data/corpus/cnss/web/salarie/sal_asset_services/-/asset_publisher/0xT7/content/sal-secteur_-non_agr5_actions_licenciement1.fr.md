@@ -28,7 +28,8 @@ first_seen: '2026-10-05T20:45:45+00:00'
 last_changed: '2026-10-05T20:45:45+00:00'
 content_hash: sha256:1bbcecdf8f48099fb7d887d4be847774ae7101431ce7c282119c65e4d315082c
 words: 334
-status: active
+status: removed
+duplicate_of: cnss:/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_peche1_actions_licenciement1#index
 hint_source: llm
 ---
 

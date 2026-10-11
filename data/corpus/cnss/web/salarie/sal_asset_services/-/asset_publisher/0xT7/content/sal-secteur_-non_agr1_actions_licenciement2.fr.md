@@ -28,8 +28,9 @@ first_seen: '2026-10-05T20:46:50+00:00'
 last_changed: '2026-10-05T20:46:50+00:00'
 content_hash: sha256:af0bb9bab3453f6f98d2fce9e52b74fbd5ac5333b30bfc749dd6fb77e979ff5b
 words: 471
-status: active
+status: removed
 hint_source: llm
+duplicate_of: cnss:/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_-non_agr2_actions_licenciement2#index
 ---
 
 La  CNSS prend en charge les indemnités et droits légaux des travailleurs ayant perdu leur emploi pour des raisons économiques ou technologiques ou suite à la fermeture définitive et inopinée de l'entreprise. Cette prise en charge ne s'applique pas aux travailleurs licenciés par les entreprises publiques ainsi que les autres entreprises assimilées, habilitées à bénéficier de l'intervention du Fonds de Restructuration des Entreprises Publiques. Cette prise en charge est accordée si les conditions suivantes sont remplies

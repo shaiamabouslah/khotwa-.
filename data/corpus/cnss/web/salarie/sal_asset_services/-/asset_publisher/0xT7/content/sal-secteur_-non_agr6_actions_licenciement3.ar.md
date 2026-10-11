@@ -28,7 +28,8 @@ first_seen: '2026-10-05T20:45:25+00:00'
 last_changed: '2026-10-05T20:45:25+00:00'
 content_hash: sha256:9ffb5040fab3ec7c8092c5f153ab9cca80425441f3b9447713c96ada0ce16722
 words: 434
-status: active
+status: removed
+duplicate_of: cnss:/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_-non_agr1_actions_licenciement3#index
 hint_source: llm
 ---
 

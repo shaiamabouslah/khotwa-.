@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: creation-entreprise
-hint_score: 10
+subtopic_hint: null
+hint_score: 0
 hint_keywords: []
 forms:
 - https://www.tunisieindustrie.nat.tn/fr/download/cfga/Dec/ADD08V01.pdf

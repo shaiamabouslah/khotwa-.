@@ -10,9 +10,11 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: bourses
-hint_score: 10
-hint_keywords: []
+subtopic_hint: stages-pfe
+hint_score: 3
+hint_keywords:
+- pfe
+- projet de fin d'études
 forms: []
 render: html
 discovered_via: sitemap

@@ -29,8 +29,9 @@ first_seen: '2026-10-05T20:33:45+00:00'
 last_changed: '2026-10-06T12:56:07+00:00'
 content_hash: sha256:9fbc5e222be950fe77f00c2f847360ded94109afd7b096bfa605e47e3c7b9713
 words: 230
-status: active
+status: removed
 hint_source: llm
+duplicate_of: cnss:/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal_gens_maison_immatriculation#index
 ---
 
 L'employeur est tenu d'immatriculer le personnel embauché dans un délai   d'un mois à compter de la date d'affiliation. Pour les travailleurs engagés  ultérieurement à cette date, l'immatriculation intervient dans un délai d'un mois  à  compter de la date de leur engagement.

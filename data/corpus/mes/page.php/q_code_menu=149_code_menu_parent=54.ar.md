@@ -9,10 +9,11 @@ title: شروط ومكونـات مطلب الترخيص لإحداث مؤسسـ
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: employment
-subtopic_hint: creation-entreprise
-hint_score: 10
-hint_keywords: []
+domain_hint: studies
+subtopic_hint: bourses
+hint_score: 1
+hint_keywords:
+- منح
 forms: []
 render: html
 discovered_via: link

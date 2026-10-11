@@ -14,9 +14,11 @@ breadcrumb:
 - Non_Sal_autres_tte_Affiliation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: non-salaries
-hint_score: 10
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 18
+hint_keywords:
+- affiliation
+- salarié
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=8b43aabd-94d3-4a85-88b6-b614c2dcfa4e&groupId=54202
 - https://www.cnss.tn/c/document_library/get_file?uuid=a5f2f8bb-0b66-457b-8795-93534534cb65&groupId=54202

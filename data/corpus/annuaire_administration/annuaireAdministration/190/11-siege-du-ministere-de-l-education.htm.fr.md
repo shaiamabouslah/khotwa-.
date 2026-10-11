@@ -26,6 +26,7 @@ content_hash: sha256:3e9d712c96694b8525e494a5c464a4fab42ac570fe9c760e176e0b25612
 words: 23
 status: active
 hint_source: llm
+cleaned_v2: true
 ---
 
 Premier responsable:Monsieur Fethi Sellaouti

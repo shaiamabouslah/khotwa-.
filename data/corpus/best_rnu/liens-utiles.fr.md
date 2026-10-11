@@ -10,9 +10,10 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 5
-hint_keywords: []
+subtopic_hint: inscription
+hint_score: 1
+hint_keywords:
+- orientation universitaire
 forms: []
 render: html
 discovered_via: sitemap

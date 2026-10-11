@@ -24,8 +24,9 @@ first_seen: '2026-10-07T20:16:28+00:00'
 last_changed: '2026-10-07T20:16:28+00:00'
 content_hash: sha256:088de6c744d770b9e43368fa6beed9ca0c75c7e34a703fc5e355069ed6ae56ec
 words: 76
-status: active
+status: removed
 hint_source: llm
+duplicate_of: mes:/page.php/q_code_menu=47#index
 ---
 
 # التقديم العام

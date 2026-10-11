@@ -29,8 +29,9 @@ first_seen: '2026-10-05T20:35:43+00:00'
 last_changed: '2026-10-06T13:32:12+00:00'
 content_hash: sha256:aff2e457555e6282030980b2fef3a90383ab970c5028a3e6c98c085e745074be
 words: 407
-status: active
+status: removed
 hint_source: llm
+duplicate_of: cnss:/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_affiliation#index
 ---
 
 - [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr5_affiliation?secteur=$secteur)

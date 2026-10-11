@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: announcement
 domain_hint: studies
-subtopic_hint: bourses
-hint_score: 10
+subtopic_hint: null
+hint_score: 0
 hint_keywords: []
 forms:
 - http://www.mutan.org/Forms/Formulaire_exemptions_Annexe_II_MEES_07-2016.pdf

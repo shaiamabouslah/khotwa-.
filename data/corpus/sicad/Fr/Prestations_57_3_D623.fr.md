@@ -9,9 +9,9 @@ title: Brevet de patron hauturier (pêche hauturière)
 section: null
 breadcrumb: []
 doc_type: procedure
-domain_hint: employment
+domain_hint: null
 subtopic_hint: null
-hint_score: 10
+hint_score: 0
 hint_keywords: []
 forms: []
 render: html

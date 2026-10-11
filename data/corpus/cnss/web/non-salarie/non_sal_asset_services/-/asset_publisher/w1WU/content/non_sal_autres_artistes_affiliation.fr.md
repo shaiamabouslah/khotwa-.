@@ -14,9 +14,11 @@ breadcrumb:
 - Non_Sal_autres_artistes_Affiliation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: non-salaries
-hint_score: 10
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 18
+hint_keywords:
+- affiliation
+- salarié
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=c1a3baaa-a081-41d3-85f3-9229295d4e4b&groupId=54202
 - https://www.cnss.tn/c/document_library/get_file?uuid=d2886fef-4208-455b-ae84-d82a6b720228&groupId=54202

@@ -29,8 +29,9 @@ first_seen: '2026-10-05T20:43:53+00:00'
 last_changed: '2026-10-05T20:43:53+00:00'
 content_hash: sha256:8a73e5b6e408e055de48f1563831469c386a36b28fed9f7b99dd27ecfbac0521
 words: 355
-status: active
+status: removed
 hint_source: llm
+duplicate_of: cnss:/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_remise_penalites#index
 ---
 
 - [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_affiliation?secteur=$secteur)

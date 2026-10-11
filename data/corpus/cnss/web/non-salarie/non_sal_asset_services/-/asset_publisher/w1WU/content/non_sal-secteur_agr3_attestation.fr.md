@@ -14,9 +14,11 @@ breadcrumb:
 - Non_Sal Secteur_agr3_Attestation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: attestations
-hint_score: 10
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 14
+hint_keywords:
+- salarié
+- cotisations
 forms: []
 render: html
 discovered_via: link

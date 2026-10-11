@@ -10,9 +10,10 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 10
-hint_keywords: []
+subtopic_hint: creation-entreprise
+hint_score: 1
+hint_keywords:
+- digigo
 forms:
 - https://jibaya.tn/wp-content/uploads/2023/12/Guide-dinscription-la-dclaration-pays-par-pays.pdf
 - https://jibaya.tn/wp-content/uploads/2023/12/Guide-dutilisateur-depot-declaration-CBC_compressed.pdf

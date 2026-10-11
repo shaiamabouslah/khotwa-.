@@ -10,10 +10,11 @@ section: Vous êtes nouveau bachelier
 breadcrumb:
 - Vous êtes nouveau bachelier
 doc_type: procedure
-domain_hint: studies
-subtopic_hint: bourses
-hint_score: 10
-hint_keywords: []
+domain_hint: employment
+subtopic_hint: affiliation-cnss
+hint_score: 2
+hint_keywords:
+- affiliation
 forms: []
 render: html
 discovered_via: seed

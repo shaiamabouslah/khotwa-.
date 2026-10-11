@@ -14,9 +14,12 @@ breadcrumb:
 - Non_Sal Secteur_ non_agr1_avantage2
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: non-salaries
-hint_score: 10
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 9
+hint_keywords:
+- affiliation
+- salarié
+- cotisations
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=a80d6c4e-a6a3-4ba3-b8fc-cc03c267204a&groupId=54202
 render: html

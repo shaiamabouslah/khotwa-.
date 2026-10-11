@@ -10,9 +10,10 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
+subtopic_hint: equivalence
 hint_score: 1
-hint_keywords: []
+hint_keywords:
+- المعادلات
 forms: []
 render: html
 discovered_via: link
@@ -26,6 +27,7 @@ content_hash: sha256:1e81268696a5c0c899b518b06b57e94950665c5583a573b1f7f4a1b5841
 words: 790
 status: active
 hint_source: llm
+cleaned_v2: true
 ---
 
 | |  |  |  | | --- | --- | --- | | آخر تحيين في 05-10-2026 | - [الإستقبال](https://www.mes.tn/index.php?code_menu=6) - [روابط مفيدة](https://www.mes.tn/lien_utile.php?code_menu=10) - [اتصل بنا](https://www.mes.tn/page.php?code_menu=500) | - [Français](https://www.mes.tn/langue.php?langue=fr&code=106) | |

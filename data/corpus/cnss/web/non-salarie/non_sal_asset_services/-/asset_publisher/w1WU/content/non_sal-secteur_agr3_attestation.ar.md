@@ -14,9 +14,11 @@ breadcrumb:
 - Non_Sal Secteur_agr3_Attestation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: attestations
+subtopic_hint: affiliation-cnss
 hint_score: 10
-hint_keywords: []
+hint_keywords:
+- salarié
+- المؤجر
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=6f13419f-faed-4d66-8ca3-3c5212320a92&groupId=54202
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=eea87ccd-30f9-42b5-9ccd-b1ac3df69c7c&groupId=54202

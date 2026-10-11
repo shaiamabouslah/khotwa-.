@@ -10,9 +10,9 @@ section: Formation en ligne gratuite pour développer vos compétences professio
 breadcrumb:
 - Formation en ligne gratuite pour développer vos compétences professionnelles et obtenir des certificats reconnus
 doc_type: procedure
-domain_hint: studies
+domain_hint: null
 subtopic_hint: null
-hint_score: 5
+hint_score: 0
 hint_keywords: []
 forms: []
 render: html

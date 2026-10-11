@@ -10,9 +10,10 @@ section: null
 breadcrumb: []
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: patente-fiscalite
-hint_score: 10
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 3
+hint_keywords:
+- affiliation
 forms:
 - https://www.cnrps.nat.tn/sites/default/files/tab_cotisations_fr.pdf
 - https://www.cnrps.nat.tn/sites/default/files/textes/d1988-1675-fr.pdf

@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 5
+subtopic_hint: null
+hint_score: 0
 hint_keywords: []
 forms:
 - https://tia.gov.tn/wp-content/uploads/2025/05/Procédures%20de%20demande%20d’enregistrement%20d’une%20marque%20de%20fabrique%20de%20commerce%20et%20de%20service-en.pdf

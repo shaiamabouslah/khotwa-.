@@ -5,13 +5,13 @@ org: Portail SICAD — Information et Communication Administrative (cross-minist
 trust: official
 url: http://www.sicad.gov.tn/Fr/Prestations_57_3_D559
 lang: fr
-title: Diplôme national de docteur en médecine vétérinaire
+title: Conditions d'obtention du diplôme de docteur en médecine vétérinaire
 section: null
 breadcrumb: []
 doc_type: procedure
-domain_hint: studies
-subtopic_hint: equivalence
-hint_score: 10
+domain_hint: null
+subtopic_hint: null
+hint_score: 0
 hint_keywords: []
 forms: []
 render: html
@@ -26,63 +26,28 @@ content_hash: sha256:53423ebe163b0fdcb9ea1a1ed1aba3713579b07ec65225b56562fa53e5b
 words: 242
 status: active
 hint_source: llm
+cleaned_v2: true
 ---
 
 - **Conditions d'obtention de la prestation :**
-
   - Fin des études en médecine vétérinaire
   - Soutenance d'une thèse de doctorat en médecine vétérinaire
 - **Pièces à fournir :**
-
   - Néant
-
-  | Etapes | Intervenants | Délais |
-  | Réunion du conseil scientifique et évaluation des résultats finaux | Le conseil scientifique |  |
-  | Soutenance d'une thèse de doctorat en médecine vétérinaire | Le jury de thèse |  |
-  | Signature du diplôme | Le Directeur de l'établissement |  |
-  | Délivrance du diplôme | Le bureau des affaires estudiantines | A la fin du cycle des études universitaires |
+- **Etapes :**
+  - Réunion du conseil scientifique et évaluation des résultats finaux : Le conseil scientifique
+  - Soutenance d'une thèse de doctorat en médecine vétérinaire : Le jury de thèse
+  - Signature du diplôme : Le Directeur de l'établissement
+  - Délivrance du diplôme : Le bureau des affaires estudiantines, A la fin du cycle des études universitaires
 - **Lieu de dépôt du dossier :**
-
-  **Service :**
-
-  - Ecole Nationale de Médecine Vétérinaire
-
-  **Adresse :**
-
-  - 2020 Sidi Thabet
-- **Lieu d'obtention de la prestation:**
-
-  **Service :**
-
-  - Ecole Nationale de Médecine Vétérinaire (bureau des affaires estudiantines)
-
-  **Adresse:**
-
-  - 2020 Sidi Thabet
-- **Délai d'octroi de la prestation:**
-
+  - Service : Ecole Nationale de Médecine Vétérinaire
+  - Adresse : 2020 Sidi Thabet
+- **Lieu d'obtention de la prestation :**
+  - Service : Ecole Nationale de Médecine Vétérinaire (bureau des affaires estudiantines)
+  - Adresse : 2020 Sidi Thabet
+- **Délai d'octroi de la prestation :**
   - A la fin du cycle des études universitaires.
 - **Références législatives et / ou réglementaires :**
-
   - Décret n°2001-1913 du 14 août 2001, fixant le cadre général du régime des études et les conditions d'obtention du diplôme national de docteur en médecine vétérinaire.
-- **Date de signature de l’arrêté :**  03/04/2007
-- **Date de publication au JORT :**  03/04/2007
-
-- Ministères & Organismes
-- Secteurs & Domaines
-
-  | **Ministère l’Agriculture, des Ressources Hydrauliques et de la Pêche** | Ministère l’Agriculture, des Ressources Hydrauliques et de la Pêche  |  |  | | --- | --- | | Adresse | 30 Avenue Alain Savary 1002 Tunis | | E-mail | onagri@email.ati.tn | | Téléphone | 71.786.833 | | Fax | 71.780.391 - 71.799.833 | | Site web | <http://www.agriculture.tn> | |
-
-    | **Ecole Nationale de Médecine Vétérinaire** | Ecole Nationale de Médecine Vétérinaire  |  |  | | --- | --- | | Adresse | Rue Djebel El Akhdhar - 1006 Tunis | | En savoir plus |  | |
-
-- **Agriculture**
-
-  - **La Recherche et l'Enseignement Supérieur Agricole**
-
-### Ajouter un commentaire
-
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Diplôme national de docteur en médecine vétérinaire http://www.sicad.gov.tn//Prestations_57_3_D559 "Partager sur twitter")
-Imprimer
+- **Date de signature de l’arrêté :** 03/04/2007
+- **Date de publication au JORT :** 03/04/2007

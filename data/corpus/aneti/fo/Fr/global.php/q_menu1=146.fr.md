@@ -10,10 +10,11 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: employment
-subtopic_hint: recherche-emploi
-hint_score: 15
+subtopic_hint: creation-entreprise
+hint_score: 4
 hint_keywords:
-- aneti
+- بعث المؤسسات
+- الباعثين
 forms:
 - https://www.emploi.nat.tn/ckeditor/ckfinder/userfiles/files/CC_cefe082023.pdf
 - https://www.emploi.nat.tn/ckeditor/ckfinder/userfiles/files/liste_des_facilitateurs_11septembre2024.pdf

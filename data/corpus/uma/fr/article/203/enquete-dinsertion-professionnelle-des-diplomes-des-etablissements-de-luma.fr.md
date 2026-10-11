@@ -9,10 +9,11 @@ title: UMA - Enquête d’insertion professionnelle des diplômés des établiss
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: studies
-subtopic_hint: null
-hint_score: 1
-hint_keywords: []
+domain_hint: employment
+subtopic_hint: recherche-emploi
+hint_score: 5
+hint_keywords:
+- insertion professionnelle
 forms: []
 render: html
 discovered_via: sitemap

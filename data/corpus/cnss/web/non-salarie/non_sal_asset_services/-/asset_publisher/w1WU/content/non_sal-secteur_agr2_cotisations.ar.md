@@ -14,9 +14,13 @@ breadcrumb:
 - Non_Sal Secteur_agr2_Cotisations
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: non-salaries
-hint_score: 10
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 21
+hint_keywords:
+- salarié
+- cotisations
+- الانخراط
+- الاشتراكات
 forms:
 - http://ccitunis-academy.com:89/ar/c/document_library/get_file?uuid=cef8365e-315d-4f69-8355-dd3d00da39ff&groupId=54202
 render: html

@@ -13,10 +13,11 @@ breadcrumb:
 - Services Non Salarié
 - Non_Sal_autres_etudiants_immatriculation
 doc_type: procedure
-domain_hint: studies
-subtopic_hint: bourses
-hint_score: 10
-hint_keywords: []
+domain_hint: employment
+subtopic_hint: affiliation-cnss
+hint_score: 6
+hint_keywords:
+- salarié
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=9489040e-a2d8-4e3c-8187-3d39afdf0e51&groupId=54202
 render: html

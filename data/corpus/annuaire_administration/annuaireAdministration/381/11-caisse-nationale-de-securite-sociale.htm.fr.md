@@ -9,9 +9,9 @@ title: Annuaire d'administration - Portail du Gouvernement Tunisien
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 10
+domain_hint: null
+subtopic_hint: null
+hint_score: 0
 hint_keywords: []
 forms: []
 render: html

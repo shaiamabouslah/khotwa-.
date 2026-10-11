@@ -9,9 +9,9 @@ title: Règlement des factures d'eau par prélèvement bancaire ou postal
 section: null
 breadcrumb: []
 doc_type: procedure
-domain_hint: employment
-subtopic_hint: patente-fiscalite
-hint_score: 10
+domain_hint: null
+subtopic_hint: null
+hint_score: 0
 hint_keywords: []
 forms: []
 render: html

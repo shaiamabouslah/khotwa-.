@@ -26,6 +26,7 @@ last_changed: '2026-10-10T23:51:31+00:00'
 content_hash: sha256:da1495715eed7b1a302cae08a8c9e38f2819b7b8536140d8db9d05c0239f0b81
 words: 889
 status: active
+cleaned_v2: true
 ---
 
 | |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | | ANETI |  |  |  |  |  | [Recherche avancée](https://www.emploi.nat.tn/fo/Fr/global.php?page=83&menu1=167)      **[7855 Offres disponibles](https://www.emploi.nat.tn/fo/Fr/global.php?page=147&menu1=1)** | |

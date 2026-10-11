@@ -29,7 +29,8 @@ first_seen: '2026-10-05T20:34:39+00:00'
 last_changed: '2026-10-06T12:56:50+00:00'
 content_hash: sha256:841453a3ab2ca3b9561c7caa8f47255816c265aaace438fc05b2c1a23537ed03
 words: 210
-status: active
+status: removed
+duplicate_of: cnss:/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_agr2_immatriculation#index
 hint_source: llm
 ---
 

@@ -14,9 +14,12 @@ breadcrumb:
 - Non_Sal Secteur_peche2_Cotisations
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: non-salaries
-hint_score: 10
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 22
+hint_keywords:
+- affiliation
+- salarié
+- cotisations
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=2b4c5a74-61ee-438f-a8ce-7770990b5b9a&groupId=54202
 render: html

@@ -11,9 +11,10 @@ breadcrumb:
 - Consultation des résultats de la session des excellents
 doc_type: procedure
 domain_hint: studies
-subtopic_hint: releves-attestations
-hint_score: 10
-hint_keywords: []
+subtopic_hint: inscription
+hint_score: 1
+hint_keywords:
+- orientation universitaire
 forms: []
 render: html
 discovered_via: sitemap

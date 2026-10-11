@@ -14,9 +14,12 @@ breadcrumb:
 - Non_Sal Secteur_ non_agr5_cotisation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: non-salaries
-hint_score: 10
-hint_keywords: []
+subtopic_hint: affiliation-cnss
+hint_score: 19
+hint_keywords:
+- affiliation
+- salarié
+- cotisations
 forms: []
 render: html
 discovered_via: link
