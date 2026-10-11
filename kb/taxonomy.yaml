@@ -65,7 +65,7 @@ domains:
       patente-fiscalite:
         fr: "Patente et identifiant fiscal"
         ar: "الباتيندا والمعرف الجبائي"
-        keywords: [patente, identifiant fiscal, matricule fiscal, carte d'identification fiscale, déclaration d'existence, immatriculation fiscale, الباتيندا, المعرف الجبائي, التصريح بالوجود]
+        keywords: [patente, identifiant fiscal, matricule fiscal, carte d'identification fiscale, déclaration d'existence, immatriculation fiscale, télé-liquidation fiscale, téléliquidation fiscale, الباتيندا, المعرف الجبائي, التصريح بالوجود]
       attestations:
         fr: "Attestations et relevés de cotisations"
         ar: "الشهائد وكشوف المساهمات"
@@ -73,11 +73,11 @@ domains:
       creation-entreprise:
         fr: "Création d'entreprise"
         ar: "بعث المؤسسات"
-        keywords: [création d'entreprise, créer une entreprise, promoteur, porteur de projet, registre national des entreprises, RNE, SARL, SUARL, immatriculation entreprise, immatriculation au rne, personne physique commerçant, métier libéral, guichet rne, digigo, تسجيل مؤسسة, التسجيل عن بعد, إحداث مؤسسة, إحداث المؤسسات, بعث مؤسسة, بعث المؤسسات, الباعثين, السجل الوطني للمؤسسات]
+        keywords: [création d'entreprise, créer une entreprise, promoteur, porteur de projet, porteurs de projets, registre national des entreprises, RNE, SARL, SUARL, immatriculation entreprise, immatriculation au rne, personne physique commerçant, métier libéral, guichet rne, guichet unique, constitution juridique des sociétés, digigo, تسجيل مؤسسة, التسجيل عن بعد, إحداث مؤسسة, إحداث المؤسسات, بعث مؤسسة, بعث المؤسسات, الباعثين, السجل الوطني للمؤسسات]
       recherche-emploi:
         fr: "Recherche d'emploi et programmes d'insertion"
         ar: "البحث عن شغل وبرامج الإدماج"
-        keywords: [demandeur d'emploi, offre d'emploi, ANETI, SIVP, stage d'initiation, insertion professionnelle, emploi à l'étranger, طالب شغل, عروض الشغل, البحث عن شغل, الإدماج المهني]
+        keywords: [demandeur d'emploi, demandeurs d'emploi, offre d'emploi, offres d'emploi, offres de stage, ANETI, SIVP, stage d'initiation, insertion professionnelle, emploi à l'étranger, طالب شغل, عروض الشغل, البحث عن شغل, الإدماج المهني]
 
 # Body headings, in this exact order, per language.
 # The chunker maps each heading to its section key.

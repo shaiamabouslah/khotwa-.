@@ -13,6 +13,8 @@ keywords:
 - carte d'identification fiscale
 - déclaration d'existence
 - immatriculation fiscale
+- télé-liquidation fiscale
+- téléliquidation fiscale
 - الباتيندا
 - المعرف الجبائي
 - التصريح بالوجود

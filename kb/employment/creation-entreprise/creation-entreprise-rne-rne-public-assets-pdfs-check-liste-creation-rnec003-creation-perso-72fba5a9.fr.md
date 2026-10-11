@@ -11,6 +11,7 @@ keywords:
 - créer une entreprise
 - promoteur
 - porteur de projet
+- porteurs de projets
 - registre national des entreprises
 - RNE
 - SARL
@@ -20,6 +21,8 @@ keywords:
 - personne physique commerçant
 - métier libéral
 - guichet rne
+- guichet unique
+- constitution juridique des sociétés
 - digigo
 - تسجيل مؤسسة
 - التسجيل عن بعد

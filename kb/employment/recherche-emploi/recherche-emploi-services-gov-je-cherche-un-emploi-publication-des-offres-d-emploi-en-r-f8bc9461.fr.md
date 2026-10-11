@@ -8,7 +8,10 @@ translations: []
 org: Portail national des services administratifs
 keywords:
 - demandeur d'emploi
+- demandeurs d'emploi
 - offre d'emploi
+- offres d'emploi
+- offres de stage
 - ANETI
 - SIVP
 - stage d'initiation

@@ -10,9 +10,11 @@ section: null
 breadcrumb: []
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: null
-hint_score: 0
-hint_keywords: []
+subtopic_hint: creation-entreprise
+hint_score: 14
+hint_keywords:
+- guichet unique
+- constitution juridique des sociétés
 forms:
 - https://www.tunisieindustrie.nat.tn/fr/download/CFGA/RNE/Engagement.pdf
 - https://www.tunisieindustrie.nat.tn/fr/download/CFGA/constitution/cnss_agricole.pdf

@@ -10,10 +10,11 @@ section: Espace dédié à la recherche et au suivi des demandeurs d’emploi
 breadcrumb:
 - Espace dédié à la recherche et au suivi des demandeurs d’emploi
 doc_type: procedure
-domain_hint: null
-subtopic_hint: null
-hint_score: 0
-hint_keywords: []
+domain_hint: employment
+subtopic_hint: recherche-emploi
+hint_score: 7
+hint_keywords:
+- demandeurs d'emploi
 forms: []
 render: html
 discovered_via: sitemap

@@ -10,9 +10,10 @@ section: null
 breadcrumb: []
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: null
-hint_score: 0
-hint_keywords: []
+subtopic_hint: patente-fiscalite
+hint_score: 5
+hint_keywords:
+- télé-liquidation fiscale
 forms:
 - https://jibaya.tn/wp-content/uploads/2023/12/formulaire_adhesion_teledeclaration.pdf
 render: html

@@ -9,10 +9,11 @@ title: Je cherche un emploi - Le portail national des services administratifs
 section: intro
 breadcrumb: []
 doc_type: procedure
-domain_hint: null
-subtopic_hint: null
-hint_score: 0
-hint_keywords: []
+domain_hint: employment
+subtopic_hint: recherche-emploi
+hint_score: 1
+hint_keywords:
+- offres d'emploi
 forms: []
 render: html
 discovered_via: sitemap

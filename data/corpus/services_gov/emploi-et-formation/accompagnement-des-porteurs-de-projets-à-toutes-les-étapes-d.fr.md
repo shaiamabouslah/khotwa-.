@@ -10,10 +10,11 @@ section: Accompagnement des porteurs de projets à toutes les étapes de la cré
 breadcrumb:
 - Accompagnement des porteurs de projets à toutes les étapes de la création de leurs projets, de l’idée à l’après-création
 doc_type: procedure
-domain_hint: null
-subtopic_hint: null
-hint_score: 0
-hint_keywords: []
+domain_hint: employment
+subtopic_hint: creation-entreprise
+hint_score: 8
+hint_keywords:
+- porteurs de projets
 forms: []
 render: html
 discovered_via: sitemap
