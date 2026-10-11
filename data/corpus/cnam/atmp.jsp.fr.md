@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 1
-hint_keywords:
-- employeur
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
@@ -26,6 +25,7 @@ last_changed: '2026-10-06T00:17:14+00:00'
 content_hash: sha256:5c3f0efd65dff27543ad8ba02c0e57f8e1f587f2acf881e874bc4dab3e9c9eff
 words: 645
 status: active
+hint_source: llm
 ---
 
 - [Cadre général](https://www.cnam.nat.tn/atmp.jsp)

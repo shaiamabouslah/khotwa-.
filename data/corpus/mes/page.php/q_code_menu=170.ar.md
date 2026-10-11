@@ -11,22 +11,21 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: equivalence
-hint_score: 13
-hint_keywords:
-- معادلة
-- المعادلات
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:29:57+00:00'
+fetched_at: '2026-10-07T20:09:48+00:00'
 first_seen: '2026-10-05T20:25:25+00:00'
-last_changed: '2026-10-06T00:29:57+00:00'
+last_changed: '2026-10-07T20:09:48+00:00'
 content_hash: sha256:1ce43c562291301fbff415590b429bb19865550d06c593d8c2c6727e801ca5a8
-words: 221
+words: 176
 status: active
+hint_source: llm
 ---
 
 # المعادلات

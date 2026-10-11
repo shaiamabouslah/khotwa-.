@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: announcement
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:49:16+00:00'
 content_hash: sha256:83fd292eda29a251ff3ebf6235fc89f948aced42c2106d6a23616a41a17633de
 words: 74
 status: active
+hint_source: llm
 ---
 
 # بلاغ خاص بالقروض الجامعية بعنوان سنة 2024-2025

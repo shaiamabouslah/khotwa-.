@@ -14,13 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_ non_agr5_Affiliation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 23
-hint_keywords:
-- affiliation
-- salarié
-- انخراط
-- الانخراط
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=509dcad4-cee6-4394-9f64-bd05f44175bf&groupId=54202
 render: html
@@ -34,6 +30,7 @@ last_changed: '2026-10-05T20:37:48+00:00'
 content_hash: sha256:ead941f9f53f1fb99ee6fd637348899bd2b2717bdebd2be7f45d208bacfdf4bc
 words: 346
 status: active
+hint_source: llm
 ---
 
 الانخراط بأنظمة الضمان الاجتماعي إجباري على كل  حرفي مشتغل بالقطعة لحسابه الخاص.وعليه القيام بإجراءات الانخراط في الشهر الذي يلي تاريخ شروعه في النشاط المهني

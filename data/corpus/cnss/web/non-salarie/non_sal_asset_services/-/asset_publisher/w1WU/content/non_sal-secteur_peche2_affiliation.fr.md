@@ -14,12 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_peche2_Affiliation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 28
-hint_keywords:
-- affiliation
-- employeur
-- salarié
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=e3ef77c9-66a8-48ff-8268-07b8022dbde2&groupId=54202
 render: html
@@ -33,6 +30,7 @@ last_changed: '2026-10-05T20:38:21+00:00'
 content_hash: sha256:318ff0703bf9654d6f5953697ef9f78f0ec83ae3cf51dcd350636219bbcea3ba
 words: 425
 status: active
+hint_source: llm
 ---
 
 L'affiliation des petits armateurs au régime de sécurité sociale est obligatoire.L'affiliation intervient dans le mois qui suit le début de l'activité.

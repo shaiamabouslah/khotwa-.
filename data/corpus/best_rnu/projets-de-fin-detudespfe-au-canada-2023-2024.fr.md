@@ -10,10 +10,9 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: stages-pfe
-hint_score: 7
-hint_keywords:
-- pfe
+subtopic_hint: bourses
+hint_score: 10
+hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/بلاغ-مايتاكس-2023-2024.pdf
 render: html
@@ -27,6 +26,7 @@ last_changed: '2026-10-06T00:21:50+00:00'
 content_hash: sha256:651e143b48808c8e174987b538a23a46cee76c06674f0975c668dce9f50ca70b
 words: 69
 status: active
+hint_source: llm
 ---
 
 # Projets de fin d’études (PFE) au Canada 2023-2024

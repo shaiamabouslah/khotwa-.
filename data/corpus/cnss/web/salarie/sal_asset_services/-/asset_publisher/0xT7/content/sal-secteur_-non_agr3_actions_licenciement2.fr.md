@@ -14,10 +14,9 @@ breadcrumb:
 - Sal Secteur_ non_agr3_actions_licenciement2
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 3
-hint_keywords:
-- salarié
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -30,6 +29,7 @@ last_changed: '2026-10-05T20:46:19+00:00'
 content_hash: sha256:50190ba1275b641ac29d9baeb8bc5b5734c94a7f411a059784dc727dc7b3c7ad
 words: 114
 status: active
+hint_source: llm
 ---
 
 - ## Nos échos

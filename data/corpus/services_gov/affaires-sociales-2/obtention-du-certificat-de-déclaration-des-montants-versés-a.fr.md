@@ -11,10 +11,9 @@ breadcrumb:
 - Obtention du certificat de déclaration des montants versés au Trésor public
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 1
-hint_keywords:
-- cotisations
+subtopic_hint: attestations
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:50:10+00:00'
 content_hash: sha256:95e5321f15e6b1bf074231c5b36b37907211b4d2a97edb5902108df9964cb2bb
 words: 211
 status: active
+hint_source: llm
 ---
 
 # Obtention du certificat de déclaration des montants versés au Trésor public

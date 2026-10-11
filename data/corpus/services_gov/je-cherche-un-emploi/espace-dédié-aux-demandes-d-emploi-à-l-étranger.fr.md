@@ -12,10 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: recherche-emploi
-hint_score: 8
-hint_keywords:
-- aneti
-- emploi à l'étranger
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -28,6 +26,7 @@ last_changed: '2026-10-05T23:42:56+00:00'
 content_hash: sha256:98d0f454d010b46df00bed205d181164fd2d681977baa5d78ba1a4eb80abc6b5
 words: 129
 status: active
+hint_source: llm
 ---
 
 # Espace dédié aux demandes d’emploi à l’étranger

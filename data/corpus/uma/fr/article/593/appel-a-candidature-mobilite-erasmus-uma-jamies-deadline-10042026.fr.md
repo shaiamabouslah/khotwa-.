@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: mobilite
-hint_score: 6
-hint_keywords:
-- erasmus
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -26,6 +25,7 @@ last_changed: '2026-10-06T00:10:26+00:00'
 content_hash: sha256:80a5513b86d99880bfbbbdf3d2e0418ec4c4999b1ebdda974248bf3ef3b0e44a
 words: 1174
 status: active
+hint_source: llm
 ---
 
 - ## Université

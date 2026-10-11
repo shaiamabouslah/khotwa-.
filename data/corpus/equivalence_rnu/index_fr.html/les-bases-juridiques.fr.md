@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: equivalence
-hint_score: 11
-hint_keywords:
-- équivalence
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:42:19+00:00'
 content_hash: sha256:574f0e345cee8162d2fcde83338b0dcad12bda75731f2223740254cd33409620
 words: 173
 status: active
+hint_source: llm
 ---
 
 # Les bases juridiques

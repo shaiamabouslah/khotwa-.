@@ -64,6 +64,36 @@ def _pick_content(soup: BeautifulSoup, selectors: list[str]):
     return max(candidates, key=lambda el: len(el.get_text(" ", strip=True)))
 
 
+def _strip_empty_table_rows(root):
+    """Old table-layout sites (aneti.tn and similar) nest a nav/menu link inside 2-3 levels of
+    single-column tables used purely for pixel spacing -- every level contributes its own empty
+    "| | | |" / "| --- | --- |" markdown row once converted, burying one real link under a wall
+    of noise. Process innermost tables first: drop fully-empty rows, then unwrap any table left
+    with a single real cell (replace the <table> with just that cell's content, no wrapper)."""
+    tables = root.select("table")
+    for table in reversed(tables):            # innermost/later tables first
+        for row in table.find_all("tr", recursive=False) or table.find_all("tr"):
+            cells = row.find_all(["td", "th"], recursive=False)
+            if cells and all(not c.get_text(strip=True) for c in cells):
+                row.decompose()
+            elif len(cells) > 1:
+                # A kept row can still mix a couple of real cells into a sea of empty spacer
+                # cells (e.g. aneti's search box: "ANETI | <3 real links> | 15 empty tds"),
+                # which still renders as a huge markdown separator line. Drop just the empty
+                # cells -- the row survives as a compact table of only its real cells.
+                empty = [c for c in cells if not c.get_text(strip=True)]
+                if empty and len(empty) < len(cells):
+                    for c in empty:
+                        c.decompose()
+        rows = table.find_all("tr")
+        real_cells = [c for r in rows for c in r.find_all(["td", "th"], recursive=False)
+                      if c.get_text(strip=True)]
+        if not real_cells:
+            table.decompose()
+        elif len(real_cells) == 1:
+            table.replace_with(*real_cells[0].contents) if real_cells[0].contents else table.decompose()
+
+
 def _accordions_to_headings(root, soup):
     """<details><summary>Title</summary> fields...</details>  ->  <h2>Title</h2> + <h3> labels."""
     for item in root.select("details"):
@@ -141,6 +171,7 @@ def html_to_markdown(raw: bytes, url: str, cfg: dict) -> Extracted:
             el.decompose()
     if cfg.get("accordion"):
         _accordions_to_headings(root, soup)
+    _strip_empty_table_rows(root)
     _absolute_links(root, url)
 
     md = markdownify(str(root), heading_style="ATX", bullets="-", strip=["span", "div"])

@@ -15,10 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 5
-hint_keywords:
-- employeur
-- salarié
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -31,6 +29,7 @@ last_changed: '2026-10-05T20:46:50+00:00'
 content_hash: sha256:af0bb9bab3453f6f98d2fce9e52b74fbd5ac5333b30bfc749dd6fb77e979ff5b
 words: 471
 status: active
+hint_source: llm
 ---
 
 La  CNSS prend en charge les indemnités et droits légaux des travailleurs ayant perdu leur emploi pour des raisons économiques ou technologiques ou suite à la fermeture définitive et inopinée de l'entreprise. Cette prise en charge ne s'applique pas aux travailleurs licenciés par les entreprises publiques ainsi que les autres entreprises assimilées, habilitées à bénéficier de l'intervention du Fonds de Restructuration des Entreprises Publiques. Cette prise en charge est accordée si les conditions suivantes sont remplies

@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: mobilite
-hint_score: 8
-hint_keywords:
-- erasmus
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -26,6 +25,7 @@ last_changed: '2026-10-05T23:53:53+00:00'
 content_hash: sha256:0f9e7e0e979a5cc08c70e6d69cb214b9a17f0427fc1a4f416456e168fabf3c22
 words: 84
 status: active
+hint_source: llm
 ---
 
 Adresse : Bureau National Erasmus+ Tunisie,

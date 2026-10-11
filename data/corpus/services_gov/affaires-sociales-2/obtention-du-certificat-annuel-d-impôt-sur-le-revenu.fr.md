@@ -10,9 +10,9 @@ section: Obtention du certificat annuel d’impôt sur le revenu
 breadcrumb:
 - Obtention du certificat annuel d’impôt sur le revenu
 doc_type: procedure
-domain_hint: null
-subtopic_hint: null
-hint_score: 0
+domain_hint: employment
+subtopic_hint: patente-fiscalite
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -26,6 +26,7 @@ last_changed: '2026-10-05T23:50:09+00:00'
 content_hash: sha256:ce7b2d59730835a56889f3e46605371be31e81d1343b4df3108b81b615eccae9
 words: 204
 status: active
+hint_source: llm
 ---
 
 # Obtention du certificat annuel d’impôt sur le revenu

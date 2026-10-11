@@ -15,11 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: non-salaries
-hint_score: 14
-hint_keywords:
-- non salarié
-- غير الأجراء
-- العامل غير الأجير
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=55389f18-14be-457b-9dde-5450d7df2339&groupId=33103
 render: html
@@ -32,7 +29,9 @@ first_seen: '2026-10-05T20:50:52+00:00'
 last_changed: '2026-10-05T20:50:52+00:00'
 content_hash: sha256:1e4bf52fd75aeb3a34a18cbe51dee0b76d54943d2d9092fe6c057dfd20c00bdb
 words: 157
-status: active
+status: removed
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr2_remise_penalites#index
+hint_source: llm
 ---
 
 يتحمل العامل غير الأجير الذي يقوم بخلاص مساهماته بعد الآجال القانونية خطايا تأخير يمكن له تقديم مطلب في طرحها على وجه الفضل إذا اقتضت المصلحة العامة ذلك شريطة أن يكون في حل تجاه الصندوق بعنوان أصل المساهمات والقروض ومصاريف التتبع.

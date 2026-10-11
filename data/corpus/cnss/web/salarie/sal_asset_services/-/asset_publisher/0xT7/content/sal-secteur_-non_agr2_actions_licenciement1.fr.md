@@ -15,9 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 4
-hint_keywords:
-- salarié
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -30,6 +29,7 @@ last_changed: '2026-10-05T20:46:40+00:00'
 content_hash: sha256:1bbcecdf8f48099fb7d887d4be847774ae7101431ce7c282119c65e4d315082c
 words: 334
 status: active
+hint_source: llm
 ---
 
 ## Prestations familiales et droits aux soins pour les salariés ayant perdu leur emploi

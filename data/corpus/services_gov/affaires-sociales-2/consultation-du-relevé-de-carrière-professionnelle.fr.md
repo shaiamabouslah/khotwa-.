@@ -12,21 +12,21 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: attestations
-hint_score: 5
-hint_keywords:
-- relevé de carrière
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: '2025-10-08T12:58:17+00:00'
-fetched_at: '2026-10-05T23:48:04+00:00'
+fetched_at: '2026-10-05T20:26:09+00:00'
 first_seen: '2026-10-05T20:26:11+00:00'
-last_changed: '2026-10-05T23:50:09+00:00'
+last_changed: '2026-10-10T16:38:57+00:00'
 content_hash: sha256:423164ebb75f744a7059b6b4d9f787190e7955ed091907b1aabc8be94fc86cdf
-words: 183
+words: 176
 status: active
+hint_source: llm
 ---
 
 # Consultation du relevé de carrière professionnelle

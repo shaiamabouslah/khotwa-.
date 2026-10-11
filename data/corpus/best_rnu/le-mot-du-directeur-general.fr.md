@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:04:16+00:00'
 content_hash: sha256:d6a28e3e24ea78dce902986fbaed25d04d16f3027d42bddd67f6c023759f3134
 words: 456
 status: active
+hint_source: llm
 ---
 
 # Le mot du directeur Général

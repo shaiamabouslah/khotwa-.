@@ -14,10 +14,9 @@ breadcrumb:
 - Emp_Avantage_agricole2
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 9
-hint_keywords:
-- employeur
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -30,6 +29,7 @@ last_changed: '2026-10-05T20:47:05+00:00'
 content_hash: sha256:4dbe5b27874e650a2040a9a269e274cfbd2694fc4c5be1d9b3d5505f80980f9b
 words: 223
 status: active
+hint_source: llm
 ---
 
 An error occurred while processing the template.

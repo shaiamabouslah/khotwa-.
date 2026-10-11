@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: inscription
-hint_score: 3
-hint_keywords:
-- orientation universitaire
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:43:00+00:00'
 content_hash: sha256:8a14d6cc1c5119cbb144d35a9cbb4774bd894235a6667c5133bfc3febe0b7536
 words: 183
 status: active
+hint_source: llm
 ---
 
 # Correction des informations personnelles des candidats sur la plateforme d’orientation

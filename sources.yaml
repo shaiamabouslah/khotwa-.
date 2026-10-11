@@ -83,6 +83,54 @@ sites:
     extract:
       content: ["#imprim"]
 
+  sicad:
+    status: active
+    trust: official
+    org: Portail SICAD — Information et Communication Administrative (cross-ministère)
+    base_url: http://www.sicad.gov.tn
+    # No single domain: SICAD spans every ministry. Both the ?secteur=N sector filter
+    # AND the ?page=N pagination LOOK like they work over plain GET (200 OK, plausible
+    # result counts) but neither actually does anything -- confirmed with a clean 5-request
+    # test (page=1 through page=5 in one run): byte-for-byte identical results every time.
+    # Both are JS/AJAX-applied client-side; the site has no server-side pagination or
+    # filtering reachable over plain HTTP. (An earlier attempt at this concluded pagination
+    # DID work, based on an inconsistent one-off test -- that was wrong; don't trust it.)
+    # So: one seed, whatever its default listing shows, classified like cnam.
+    discover:
+      seeds:
+        - http://www.sicad.gov.tn/Fr/Prestations_57_3
+      follow: ['Prestations_57_3_D\d+']
+      keep: ['Prestations_57_3_D\d+']
+      max_depth: 1
+      max_pages: 100
+    extract:
+      content: ["div.div_padding_prestation"]
+    note: "SICAD's full catalog is ~992 services, but only ~60 are reachable without automating the JS pagination/filter UI (clicking through, not just loading a URL) -- out of scope for now. Getting the rest would need Playwright driving actual clicks on the pagination controls and reading the AJAX-updated DOM between clicks, a real feature addition to render.py/discover.py, not a config change."
+
+  annuaire_administration:
+    status: active
+    trust: official
+    org: Portail du Gouvernement Tunisien — Annuaire d'administration
+    base_url: http://fr.tunisie.gov.tn
+    # Each organisation's headquarters address/phone/email, in one consistent format
+    # across the whole government -- fills the "où s'adresser" gap that's missing from
+    # almost every procedure page we have (confirmed: only 48% of affiliation-cnss docs,
+    # 0% of equivalence docs mention a location). No single domain: covers organisations
+    # from both Studies and Employment.
+    discover:
+      seeds:
+        - http://fr.tunisie.gov.tn/annuaireAdministration/381/11-caisse-nationale-de-securite-sociale.htm
+        - http://fr.tunisie.gov.tn/annuaireadministration/471/11-caisse-nationale-d-assurance-maladie.htm
+        - http://fr.tunisie.gov.tn/annuaireAdministration/466/11-caisse-nationale-de-la-retraite-et-de-la-prevoyance-sociale.htm
+        - http://fr.tunisie.gov.tn/annuaireAdministration/191/11-siege-du-ministere-de-l-enseignement-superieur-et-de-la-recherche-scientifique.htm
+        - http://fr.tunisie.gov.tn/annuaireAdministration/190/11-siege-du-ministere-de-l-education.htm
+    extract:
+      content: ["div.paragraphe.tpl.TPL_ANNUAIRE_ADMINISTRATION"]
+    min_words: 10   # these are address cards by design -- some (ministries) are just
+                     # "Adresse/Email/Téléphone", legitimately under the site-wide 30-word
+                     # default. A short real address is still exactly what we need here.
+    note: "ANETI and RNE addresses found (19 rue Asdrubal, Tunis / Lac Toba, Les Berges du Lac) but no annuaireAdministration URL located for them yet -- their own sites' contact pages could be added later. Each seed is a single pinned headquarters page, not a crawl target: no follow/keep, so nothing else on fr.tunisie.gov.tn gets traversed."
+
   equivalence_rnu:
     status: active
     trust: official
@@ -95,6 +143,9 @@ sites:
       content: ["main#main", "main"]
     split: headings
     doc_types: [{match: '.', type: procedure}]
+    min_words: 10   # the "Contactez-nous" section (address/tel/email of the Direction des
+                     # équivalences -- exactly the "où on va" info) is only ~15 words and was
+                     # being silently dropped by the default min_words:30 filter
 
   education_gov:
     status: active
@@ -120,15 +171,23 @@ sites:
     org: Société des Transports de Tunis (TRANSTU)
     base_url: https://www.transtu.tn
     discover:
-      seeds: [https://www.transtu.tn/]
+      seeds:
+        - https://www.transtu.tn/
+        # Official press releases: no price in euros/dinars anywhere on the site's own
+        # HTML (checked the main tarif page, both subscription category pages, and this
+        # press release itself -- confirmed exhaustively, the only place a number appears
+        # is the Tarif.jpeg image), but these DO have real text content the thin pages
+        # don't: exact sale dates, the 5 commercial agency addresses, and a linked PDF
+        # with the full 151-office breakdown by gouvernorat.
+        - https://www.transtu.tn/fr/espace-journalistes/0367-avis-aux-scolaires-premiere-tranche-de-la-campagne-de-vente-des-abonnements-scolaires-et-universitaires-2025-2026.html
       follow: ['/(abonnement|scolaire|etudiant|universitair)']
-      keep: ['(abonnement|scolaire|etudiant|universitair)']
+      keep: ['(abonnement|scolaire|etudiant|universitair)', '\.pdf$']
       max_depth: 2
       max_pages: 30
     extract:
       content: ["#content_transtu"]
       drop: ["#right_content", ".news", ".bar_social"]
-    note: "Student transport subscription (metro/bus/TGM). The actual purchase happens on ichtirak.poste.tn (a transactional ASP.NET form, not informational content — deliberately NOT crawled); TRANSTU's own site should carry the informational page (conditions, required documents, price) once discover finds it. Verify with `discover --site transtu` before activating."
+    note: "Student transport subscription (metro/bus/TGM). The actual purchase happens on ichtirak.poste.tn (a transactional ASP.NET form, not informational content — deliberately NOT crawled). The price itself is genuinely only published as an image (Tarif.jpeg). Tesseract OCR was installed and tested on this image, but raw output was too garbled (dense bilingual Arabic/digit layout) to trust for automated parsing, so the full 6-column x 9-tier price grid for the 2024-2025 school year was transcribed manually (verified visually, not by OCR) directly into data/corpus/transtu/fr/0033-tarif-des-abonnements-scolaires-et-universitaires.html.fr.md. This manual addition is safe from being overwritten by future crawls: sync_state.json's stored hash for this doc still reflects the original (unedited) live-page extraction, so as long as TRANSTU's page HTML doesn't change, sync_doc will keep seeing 'unchanged' and will not touch the file. If TRANSTU ever changes this page (e.g. publishes next year's image under a new filename or adds real text), the hash will differ, the crawler will overwrite the file, and this manual table will need to be redone by hand against the new image."
 
   best_rnu:
     status: active
@@ -171,10 +230,17 @@ sites:
     base_url: https://www.oouc.rnu.tn
     discover:
       seeds: [https://www.oouc.rnu.tn/, https://www.oouc.rnu.tn/subventions-et-aide-sociale]
+      # Without a `follow` pattern, nothing beyond the 2 seeds' own direct links was ever
+      # explored (confirmed: announcement pages like mnh-aladmag-2023-2024 link to the real
+      # hub page almnh-algamaay, but that link was never followed -- max_depth=1 stopped
+      # one hop too early, and with no follow[] at all, depth-1 pages' own links were never
+      # even looked at during discovery). Now follow blagh-* (announcements) one hop deeper
+      # to reach the hub pages they point to.
       keep: ['/subventions-et-aide-sociale$', '/[^/]*(almnh|alkrod|mnh-|altrbs)[^/]*$']
+      follow: ['/[^/]*(almnh|alkrod|mnh-|altrbs|blagh)[^/]*$']
       exclude: ['tlb-alaarod|tlb-aarod|tlb-trshhat|aaalan-tlb|sd-shghor|almhrgan|astbyan', 'ntyg|nata|kaem']
-      max_depth: 1
-      max_pages: 40
+      max_depth: 2
+      max_pages: 60
     extract:
       content: ["div.tab-content"]
     doc_types: [{match: '/(blagh|hol)-', type: announcement}]
@@ -214,7 +280,17 @@ sites:
       max_depth: 1
       max_pages: 40
     extract:
-      content: ["article"]
+      # Plain "article" also matches the site-wide footer's <article class="retrait1"> (the
+      # contact address block) -- on pages whose real content is sparse, that footer block
+      # outscores it on word count, so _pick_content() grabbed the SAME footer text on 5
+      # different pages (confirmed: 5 distinct URLs sharing one content_hash, all just the
+      # address/email/copyright footer, zero real page content). This selector fixes it when
+      # tested directly against the saved raw HTML, but a --force re-crawl still produced the
+      # same footer-only hash for those 5 pages -- root cause not fully tracked down (possibly
+      # a fetch-cache path bypassing the fresh selector); the 5 duplicate docs were marked
+      # status=removed by scripts/mark_nav_stubs.py instead of relying on this fix. Revisit if
+      # erasmus_tn content quality matters more later.
+      content: ["article:not(footer article)"]
 
   ucar:
     status: active
@@ -228,7 +304,10 @@ sites:
       exclude: ['/(tag|category|author|feed)/', 'liste|nominativ|resultat|admis']
       max_pages: 60
     extract:
-      content: ['div[data-elementor-type="wp-page"]']
+      # Elementor header/footer templates also carry data-elementor-type="wp-page"/"wp-post"
+      # (same attribute as real content) but are nested inside wrapper divs; only the real
+      # content is a direct child of <body>. Confirmed on both page- and post-template URLs.
+      content: ['body > div[data-elementor-type="wp-page"]', 'body > div[data-elementor-type="wp-post"]']
     doc_types: [{match: 'call-for|scholarship|grant|appel', type: announcement}]
     note: "Fills the stages-pfe / releves-attestations gap (rules are set per university)."
 
@@ -256,6 +335,8 @@ sites:
       sitemap: true
       keep: ['(stage|pfe|attestation|certification|diplome|inscription|mobilit)']
       max_pages: 40
+    extract:
+      content: ["section.page-body"]
 
   uvt:
     status: active
@@ -263,9 +344,18 @@ sites:
     domain: studies
     org: Université Virtuelle de Tunis
     base_url: https://www.uvt.rnu.tn
+    # sitemap: the site's own Joomla xmap component returns 404 (broken on their end,
+    # confirmed over both http and https) -- seeds + follow instead.
     discover:
-      sitemap: true
+      seeds:
+        - https://www.uvt.rnu.tn/l-universite/documents-et-démarches
+        - https://www.uvt.rnu.tn/etudiant/reinscription
+        - https://www.uvt.rnu.tn/futur-etudiant/modalites-de-formation-et-examens
+        - https://www.uvt.rnu.tn/etudiantetranger
+        - https://www.uvt.rnu.tn/formations/frais-inscription-uvt
+      follow: ['(stage|pfe|attestation|certification|diplome|inscription)']
       keep: ['(stage|pfe|attestation|certification|diplome|inscription)']
+      max_depth: 1
       max_pages: 40
 
   usf:
@@ -278,7 +368,7 @@ sites:
     discover:
       seeds: [https://www.usf.tn/]
       max_depth: 1
-    note: "JavaScript site (detected by probe)."
+    note: "Blocks non-browser User-Agents with a ModSecurity 406 (confirmed: our honest KhotwaBot UA and even a bare 'Mozilla/5.0' both get rejected; only a full real-browser UA string gets through). Not spoofing a browser fingerprint just to get past their WAF -- that's circumventing their own security control, not a crawler bug. Separately, the one page that did load under a spoofed UA turned out to be a stale 2015 HTTrack mirror anyway, so there's nothing to gain here right now."
 
   orientation:
     status: candidate
@@ -316,12 +406,22 @@ sites:
       max_pages: 300
     # Language is kept in a session cookie unless the path is prefixed: fetch both.
     lang_variants:
-      only: 'asset_publisher'     # articles only: forms (document_library) have no language variant
+      # Must also require /web/: a pinned page like .../notre_reseau/-/asset_publisher/8Nop/...
+      # matches "asset_publisher" but has no /web/ segment, so the base/fr/ar substitutions
+      # below were silent no-ops (regex didn't match -> returned the URL unchanged for both
+      # "fr" and "ar"), fetching the SAME French URL twice under two different lang labels.
+      # Confirmed on new-new-bureaux-regionaux: its .ar.md was 100% French text.
+      only: '/web/.*asset_publisher'     # articles only: forms (document_library) have no language variant
       base: ['^(https://www\.cnss\.tn)/(?:fr/|ar/)?web/', '\1/web/']
       fr: ['^(https://www\.cnss\.tn)/web/', '\1/fr/web/']
       ar: ['^(https://www\.cnss\.tn)/web/', '\1/ar/web/']
     extract:
-      content: ["div.journal-content-article"]
+      # Plain "div.journal-content-article" also matches the sidebar widgets (Nos échos,
+      # Notre réseau, Contactez nous...) which share the exact same class -- confirmed on
+      # non_sal_secteur_ag1_cotisation: the "Nos échos" widget (7 links) outscored the real
+      # short article on word count, so _pick_content() grabbed the wrong block entirely.
+      # Scoping to the asset-publisher wrapper (only present around the real article) fixes it.
+      content: ["div.asset-content .journal-content-article"]
       breadcrumb: ".breadcrumbs a"
       update_pattern: 'mise [àa] jour effectu\S* le (\d{2}/\d{2}/\d{4})'
     doc_types: [{match: 'document_library', type: form}, {match: 'asset_publisher', type: procedure}]
@@ -375,7 +475,7 @@ sites:
     note: "The site itself is an Angular app; its checklists are static PDFs. More checklists: activate `rne_app` (js)."
 
   rne_app:
-    status: active
+    status: candidate
     trust: official
     domain: employment
     org: Registre National des Entreprises (RNE)
@@ -385,7 +485,7 @@ sites:
       seeds: [https://www.registre-entreprises.tn/rne-public/]
       keep: ['check-liste-creation/.*\.pdf$']
       max_depth: 1
-    note: "Needs Playwright to list all checklist PDFs."
+    note: "Angular app with client-side hash routing (#/login etc.) -- confirmed even after full JS rendering, the checklist links only appear through actual in-app navigation clicks, not from the rendered DOM. Needs a scripted click-through (Playwright page.click on the real menu), not just render+scrape. rne (PDF, active) already covers the 2 main checklists directly."
 
   apii_portal:
     status: active
@@ -403,7 +503,22 @@ sites:
       rewrite: [['&dev=true', '']]
       max_depth: 1
       max_pages: 60
-    note: "Hosts the official 'Guide des procédures de création d'entreprises'."
+    extract:
+      content: ["div.espace-faq"]
+    note: "Hosts the official 'Guide des procédures de création d'entreprises' (guide_.pdf,
+      23963 words -- the real step-by-step APII/CFGA procedures: déclaration d'investissement,
+      constitution juridique, entrée en activité, incitations financières). Its Arabic text
+      is corrupted at extraction: specific letter pairs come out transposed (e.g. 'المؤسسات'
+      extracts as 'املؤسسات' -- lam/meem swapped). Confirmed this is NOT a pdfplumber bug: tried
+      PyMuPDF too, byte-identical corruption, same codepoints swapped -- the PDF's own font
+      ToUnicode CMap has the ligature glyph for 'lam-meem' mapped in the wrong order, so every
+      extraction library reads it the same wrong way. A real fix needs OCR on page renders
+      (Tesseract is installed, but a quick test on a similar dense Arabic image upstream was
+      itself fairly noisy -- 93 pages would be slow with uncertain quality), not attempted
+      without sign-off. Not a blocker in practice: the actionable creation-entreprise content
+      (documents/fees/deadlines, online registration process) is already covered cleanly via
+      the rne site's 2 checklist PDFs and rne_app's pinned registration-process page, neither
+      of which goes through this corrupted PDF."
 
   tia:
     status: active
@@ -430,6 +545,8 @@ sites:
       sitemap: true
       keep: ['/(ar/)?(الشغل-والعلاقات-المهنية|documents)']
       max_pages: 60
+    extract:
+      content: ["div.field--name-body"]
 
   cnrps:
     status: active
@@ -454,9 +571,34 @@ sites:
     domain: employment
     org: Agence Nationale pour l'Emploi et le Travail Indépendant (ANETI)
     base_url: https://www.emploi.nat.tn
+    render: js   # confirmed: homepage has 0 links in raw HTML, 121 once rendered
     discover:
-      seeds: [https://www.emploi.nat.tn/]
-    note: "Homepage exposes no crawlable procedure links (frames/JS?). Needed for recherche-emploi."
+      # Follow every top-level nav tab (menu1=N / menu2=N, no trailing &page= so job-listing/
+      # FAQ/sitemap sub-pages under a tab aren't swept in too -- "7855 Offres disponibles" alone
+      # would otherwise explode into thousands of individual job postings). Anchored with '$'
+      # so it never matches the honeypot (/blackhole/index.php has no menu1/menu2 param at all,
+      # but kept it in `exclude` too as a second guard -- see CAUTION note below).
+      seeds:
+        - https://www.emploi.nat.tn/fo/Fr/global.php?menu1=160
+      follow: ['\?menu[12]=\d+$']
+      keep: ['\?menu[12]=\d+$']
+      exclude: ['blackhole']
+      max_depth: 1
+      max_pages: 40
+    note: "No extract.content override: this site's deeply nested table layout has no
+      clean structural separation between navigation and content -- every selector tried
+      either re-selects almost the whole page (bare 'td': the largest cell is always the
+      outermost one, superset of all nested text) or silently drops pages whose real
+      content cell itself contains a small internal formatting table ('td:not(:has(table))').
+      Default whole-page extraction is used, plus extract.py's _strip_empty_table_rows() which
+      collapses the empty pixel-spacing table cells this nested layout is full of -- the real
+      text is now readable, not buried under hundreds of empty '| | | |' rows. Homepage is a
+      JS shell (0 links in raw HTML); render:js fixes discovery, used for discovery traversal
+      too (Discoverer gets a renderer whenever site.render=='js'), so follow[] actually works
+      against the rendered DOM, not the empty static HTML. CAUTION: every page links to a
+      honeypot trap (/blackhole/) labeled 'do not follow or you will be banned'. Confirmed the
+      'menu1=\\d+$'/'menu2=\\d+$' follow pattern can't match it (no menu param at all), and
+      excluded it explicitly as a second guard -- never traversed."
 
   cnam:
     status: active
@@ -549,4 +691,21 @@ pages:
     doc_type: guide
   - site: erasmus_tn
     url: https://erasmusplus.tn/doc/E+International-Credit-Mobility.pdf
+    doc_type: guide
+  # Describes the 2 ways to register a new business at RNE (100% electronic with DIGIGO
+  # signature, 50% fee discount, 24h processing -- vs. semi-electronic: online pre-filing
+  # + an in-person visit to any RNE office, 48h processing). Found by manually navigating
+  # rne_app's Angular menu (Formalités > Immatriculation Entreprise); the "Démarrer" button
+  # past this point starts a real registration request, so we stopped there deliberately --
+  # it needs a DIGIGO e-signature + live payment, not something to trigger while crawling.
+  - site: rne_app
+    url: https://www.registre-entreprises.tn/rne-public/#/demande-immatriculation-landing
+    doc_type: procedure
+  # Directory of CNSS's 49 regional/local offices by gouvernorat (which office covers
+  # where) -- not matched by cnss's own keep[] pattern (that targets procedure content,
+  # not this reference page), so pinned explicitly. No street address in the static HTML
+  # (the per-office "carte" sub-page is JS-rendered), but "which office for which
+  # gouvernorat" alone is a real improvement over nothing.
+  - site: cnss
+    url: https://www.cnss.tn/fr/notre_reseau/-/asset_publisher/8Nop/content/new-new-bureaux-regionaux
     doc_type: guide

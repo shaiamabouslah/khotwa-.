@@ -8,12 +8,11 @@ lang: fr
 title: CNAM - Assurances sociales
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 1
-hint_keywords:
-- employeur
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
@@ -26,6 +25,7 @@ last_changed: '2026-10-06T00:17:11+00:00'
 content_hash: sha256:b86ba322a4e590c20c04df2e258b1d26fa56b91643f3f41f6536bd67a182d2a7
 words: 988
 status: active
+hint_source: llm
 ---
 
 #### Indemnité de maladie

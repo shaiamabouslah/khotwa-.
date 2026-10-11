@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:22:21+00:00'
 content_hash: sha256:85a2dacb50421dfb2c153269b5324ed92a80c2181ee0edaf620c9fb92f8e3206
 words: 117
 status: active
+hint_source: llm
 ---
 
 # Bourses d’exemption des frais de scolarité majorés – Session Automne 2025 : AVIS DE PROLONGATION DE DELAI D’APPEL A CANDIDATURE

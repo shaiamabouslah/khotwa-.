@@ -15,10 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 4
-hint_keywords:
-- salarié
-- المؤجر
+hint_score: 10
+hint_keywords: []
 forms:
 - http://ccitunis-academy.com:89/ar/c/document_library/get_file?uuid=809f874a-839d-4fc9-a530-860b6c0e7c41&groupId=18410
 render: html
@@ -32,6 +30,7 @@ last_changed: '2026-10-05T20:45:57+00:00'
 content_hash: sha256:86ddce901753d6b72a8d6285a1f6b8d82d0f9f15c09d0f1d6166bdf586db5013
 words: 350
 status: active
+hint_source: llm
 ---
 
 يتكفل الصندوق بمنح المغادرة والمستحقاتالقانونية للعمال المفصولين عن العمل لأسباب اقتصادية أو فنية أو بسبب الغلق النهائي والفجئي للمؤسسة .لا يشمل التكفل بمنح المغادرة و المستحقات القانونية العمال الذين يقع تسريحهم من قبل المنشآت العمومية وكذلك المنشآت الأخرى المشبهة بها والمخول لها الانتفاع بتدخل صندوق إعادة هيكلة المؤسسات العمومية.

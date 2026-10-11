@@ -14,15 +14,9 @@ breadcrumb:
 - Emp_Secteur non_agr3_Attestations
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 23
-hint_keywords:
-- affiliation
-- immatriculation
-- employeur
-- الانخراط
-- المؤجر
-- الاشتراكات
+subtopic_hint: attestations
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=e9402dd5-5950-4bad-a2ea-9aa78170748f&groupId=33103
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=ea5a9fe3-d9fd-4e63-9c17-3826a49fcd2e&groupId=33103
@@ -37,6 +31,7 @@ last_changed: '2026-10-05T20:41:46+00:00'
 content_hash: sha256:7296f4c5892d1928569c423a9ec5d10fe94a51e7d06665838923fa039eca5801
 words: 264
 status: active
+hint_source: llm
 ---
 
 - [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr3_affiliation?secteur=$secteur)

@@ -8,13 +8,11 @@ lang: en
 title: International credit mobility (KA171) in
 section: null
 breadcrumb: []
-doc_type: guide
+doc_type: document
 domain_hint: studies
 subtopic_hint: mobilite
-hint_score: 11
-hint_keywords:
-- erasmus
-- credit mobility
+hint_score: 10
+hint_keywords: []
 forms: []
 render: pdf
 discovered_via: link
@@ -27,6 +25,7 @@ last_changed: '2026-10-05T23:54:59+00:00'
 content_hash: sha256:942b913e24fb639387a3d55c7eabef0cc67d42a3d54065ef7aef38c3960d9f98
 words: 2106
 status: active
+hint_source: llm
 ---
 
 <!-- page 1 -->

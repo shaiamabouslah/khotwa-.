@@ -11,11 +11,8 @@ breadcrumb: []
 doc_type: announcement
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 13
-hint_keywords:
-- منحة
-- المنح
-- قرض جامعي
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.oouc.rnu.tn/uploads/topics/17709808958517.pdf
 render: html
@@ -29,6 +26,7 @@ last_changed: '2026-10-05T23:48:06+00:00'
 content_hash: sha256:a35c7ae4a39a0da7ebcbaf4c1e46dd93babae138cec08770fc3d7253ab4a381b
 words: 133
 status: active
+hint_source: llm
 ---
 
 # حول استكمال ملفات المنح والقروض الجامعية لأبناء رجال التعليم للسنة الجامعية 2025/2026

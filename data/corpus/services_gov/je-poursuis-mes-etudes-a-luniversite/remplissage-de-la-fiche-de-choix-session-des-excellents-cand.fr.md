@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: inscription
-hint_score: 1
-hint_keywords:
-- orientation universitaire
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:43:00+00:00'
 content_hash: sha256:5ace6e4291e23707c396dac8dd01157c8d29fd666921dff08e5c430c12bd4ec8
 words: 187
 status: active
+hint_source: llm
 ---
 
 # Remplissage de la fiche de choix – session des excellents candidats

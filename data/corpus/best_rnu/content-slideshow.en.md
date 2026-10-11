@@ -9,9 +9,9 @@ title: Content SlideShow
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: studies
+domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 1
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:56:52+00:00'
 content_hash: sha256:4b2789b7cfa597d7da1ec645d2e50261473433295287bd917c8345d5fccd08ef
 words: 358
 status: active
+hint_source: llm
 ---
 
 # Content SlideShow

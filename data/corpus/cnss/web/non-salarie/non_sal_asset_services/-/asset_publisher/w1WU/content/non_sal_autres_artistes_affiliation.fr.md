@@ -14,11 +14,9 @@ breadcrumb:
 - Non_Sal_autres_artistes_Affiliation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 18
-hint_keywords:
-- affiliation
-- salarié
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=c1a3baaa-a081-41d3-85f3-9229295d4e4b&groupId=54202
 - https://www.cnss.tn/c/document_library/get_file?uuid=d2886fef-4208-455b-ae84-d82a6b720228&groupId=54202
@@ -33,6 +31,7 @@ last_changed: '2026-10-06T13:05:54+00:00'
 content_hash: sha256:6770e31bb291e18243effead60239d43b03965a0a1c65590f77b7522f6fe9bc7
 words: 378
 status: active
+hint_source: llm
 ---
 
 L'affiliation au régime de sécurité sociale est obligatoire pour les artistes, créateurs et intellectuels .L'affiliation intervient dans le mois qui suit le début de l'activité.

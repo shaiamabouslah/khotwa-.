@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: null
-hint_score: 0
+hint_score: 1
 hint_keywords: []
 forms: []
 render: html
@@ -19,12 +19,13 @@ discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:30:10+00:00'
+fetched_at: '2026-10-07T20:09:55+00:00'
 first_seen: '2026-10-05T20:25:34+00:00'
-last_changed: '2026-10-06T00:30:10+00:00'
+last_changed: '2026-10-07T20:09:55+00:00'
 content_hash: sha256:26ce604969f326580624e3e10c290539688733e890de4f8b1922a762c9fec9b4
-words: 209
+words: 128
 status: active
+hint_source: llm
 ---
 
 # البحث العلمي

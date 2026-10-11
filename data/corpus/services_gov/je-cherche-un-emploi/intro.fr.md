@@ -9,9 +9,9 @@ title: Je cherche un emploi - Le portail national des services administratifs
 section: intro
 breadcrumb: []
 doc_type: procedure
-domain_hint: null
-subtopic_hint: null
-hint_score: 0
+domain_hint: employment
+subtopic_hint: recherche-emploi
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:42:56+00:00'
 content_hash: sha256:1fd41fe0628d5f5536d4e11b80e9ad6ad9d42dd18c0f6676b5032f6f74501682
 words: 58
 status: active
+hint_source: llm
 ---
 
 ### Je cherche un emploi

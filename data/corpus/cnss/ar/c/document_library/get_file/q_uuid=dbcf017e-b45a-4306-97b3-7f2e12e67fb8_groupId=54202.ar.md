@@ -11,10 +11,8 @@ breadcrumb: []
 doc_type: form
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 3
-hint_keywords:
-- affiliation
-- انخراط
+hint_score: 10
+hint_keywords: []
 forms: []
 render: pdf
 discovered_via: link
@@ -27,6 +25,7 @@ last_changed: '2026-10-06T13:06:04+00:00'
 content_hash: sha256:37c045f2a4940213fc3a480e77b8c7e22c2a832a043968262f1589d04d5f6bad
 words: 744
 status: active
+hint_source: llm
 ---
 
 <!-- page 1 -->

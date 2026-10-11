@@ -1,0 +1,14 @@
+affiliation-cnss: 348 docs, 159/328 mention a location/where-to-go
+NONE: 337 docs, 16/37 mention a location/where-to-go
+inscription: 104 docs, 12/13 mention a location/where-to-go
+non-salaries: 51 docs, 1/51 mention a location/where-to-go
+bourses: 48 docs, 2/23 mention a location/where-to-go
+recherche-emploi: 26 docs, 9/19 mention a location/where-to-go
+equivalence: 14 docs, 0/8 mention a location/where-to-go
+attestations: 10 docs, 3/3 mention a location/where-to-go
+mobilite: 5 docs, 0/1 mention a location/where-to-go
+creation-entreprise: 4 docs, 0/0 mention a location/where-to-go
+releves-attestations: 3 docs, 0/0 mention a location/where-to-go
+legalisation: 2 docs, 0/0 mention a location/where-to-go
+patente-fiscalite: 1 docs, 0/0 mention a location/where-to-go
+stages-pfe: 1 docs, 0/1 mention a location/where-to-go

@@ -11,11 +11,8 @@ breadcrumb: []
 doc_type: announcement
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 13
-hint_keywords:
-- منحة
-- المنح
-- قرض جامعي
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.oouc.rnu.tn/uploads/topics/17897236144815.pdf
 render: html
@@ -29,6 +26,7 @@ last_changed: '2026-10-05T23:51:07+00:00'
 content_hash: sha256:61dcab797c83a42c191eb1a38a13b972958dd898ef9ecb4cbb05dda6503b0e49
 words: 105
 status: active
+hint_source: llm
 ---
 
 # بـلاغ إلى الطلبة بخصوص إيداع ملفات المنح والقروض الجامعية

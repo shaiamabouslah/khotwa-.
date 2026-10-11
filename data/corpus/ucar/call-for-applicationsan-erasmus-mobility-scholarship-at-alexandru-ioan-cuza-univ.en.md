@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: announcement
 domain_hint: studies
 subtopic_hint: mobilite
-hint_score: 9
-hint_keywords:
-- erasmus
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -22,19 +21,12 @@ http_last_modified: null
 sitemap_lastmod: '2025-09-23T12:22:43+02:00'
 fetched_at: null
 first_seen: '2026-10-06T00:32:17+00:00'
-last_changed: '2026-10-06T00:32:17+00:00'
-content_hash: sha256:194e9dff9388cec08968dc9fc568a80b1b90446d66b0e24b619f1c5af78b8c22
-words: 373
-status: stale
+last_changed: '2026-10-06T22:13:58+00:00'
+content_hash: sha256:e166653aed0816f51baf0f10dcbc138012fe8338c30311bbc9b68cc85c79d65d
+words: 219
+status: active
+hint_source: llm
 ---
-
-Skip to content
-
-### + 216 71 749 100
-
-### webmaster\_ucar@ucar.rnu.tn
-
-### Avenue de la République BP 77-1054 Amilcar ​
 
 ## Call for applicationsan erasmus+ mobility scholarship at alexandru ioan cuza university of iasi (romania)
 
@@ -71,17 +63,3 @@ Interested students must submit their application files to the Registry Office o
 - [Call for Application](https://ucar.rnu.tn/wp-content/uploads/2025/09/2025-Appel_candidature_stu-1.docx)
 - [Learning studies](https://ucar.rnu.tn/wp-content/uploads/2025/09/learning-studies_en-1-2.docx)
 - [Student Application Form](https://ucar.rnu.tn/wp-content/uploads/2025/09/Student-Application-Form-2025-2026-1.docx)
-
-Established in 1988, the University of Carthage (UCAR) is a Tunisian public institution dedicated to education and research. Operating under the supervision of the Ministry of Higher Education and Scientific Research,
-
-## Useful Links
-
-[Alumni](https://ucar.rnu.tn/alumni/)[Pro emploi](https://proemploi.ucar.rnu.tn)[PMO](https://pmo.ucar.rnu.tn/)[Addmission](http://www.concours.ucar.rnu.tn)[Projects](https://ucar.rnu.tn/projects/)[Jobs alert](https://ucar.rnu.tn/job-alert/)[News and Events](https://ucar.rnu.tn/events-et-news/)
-
-## Subscribe Now
-
-Don’t miss our future updates! Get Subscribed Today!
-
-©2024. University of Carthage. All Rights Reserved.
-
-Developed by Kawther JLASSI under the direction of Mr Mongi BESBES

@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 3
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -26,6 +25,7 @@ last_changed: '2026-10-05T23:58:12+00:00'
 content_hash: sha256:d3fa4f16da729f85fa0d2add0ededb0c0b839064bf34f199850fd121d4fde383
 words: 2619
 status: active
+hint_source: llm
 ---
 
 # Timeline page

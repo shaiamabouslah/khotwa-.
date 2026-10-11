@@ -10,12 +10,9 @@ section: null
 breadcrumb: []
 doc_type: announcement
 domain_hint: studies
-subtopic_hint: bourses
-hint_score: 20
-hint_keywords:
-- منحة
-- المنح
-- منحة التربص
+subtopic_hint: stages-pfe
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -28,6 +25,7 @@ last_changed: '2026-10-05T23:48:38+00:00'
 content_hash: sha256:4c512050b036603d28387fb56f676c8a9e377495cdc296358f107c6de563d603
 words: 122
 status: active
+hint_source: llm
 ---
 
 # بلاغ حول منحة التربص – خاص بالطلبة الممنوحين

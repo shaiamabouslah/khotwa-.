@@ -13,12 +13,10 @@ breadcrumb:
 - Services Non Salarié
 - Non_Sal_autres_etudiants_immatriculation
 doc_type: procedure
-domain_hint: employment
-subtopic_hint: affiliation-cnss
+domain_hint: studies
+subtopic_hint: bourses
 hint_score: 10
-hint_keywords:
-- immatriculation
-- salarié
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=9489040e-a2d8-4e3c-8187-3d39afdf0e51&groupId=54202
 render: html
@@ -32,6 +30,7 @@ last_changed: '2026-10-06T13:06:05+00:00'
 content_hash: sha256:14797b019fef404d5f9640dd468e18faea30268ed284d24f173a7e1ba4d7bf6e
 words: 866
 status: active
+hint_source: llm
 ---
 
 **1-L'étudiant doit être:**

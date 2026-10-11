@@ -9,23 +9,23 @@ title: شروط ومكونـات مطلب الترخيص لإحداث مؤسسـ
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: studies
-subtopic_hint: bourses
-hint_score: 1
-hint_keywords:
-- منح
+domain_hint: employment
+subtopic_hint: creation-entreprise
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:31:02+00:00'
+fetched_at: '2026-10-07T20:17:22+00:00'
 first_seen: '2026-10-05T20:26:27+00:00'
-last_changed: '2026-10-06T00:31:02+00:00'
+last_changed: '2026-10-07T20:17:29+00:00'
 content_hash: sha256:c065b46d4f5a7de3f6f700eaf339024c7cf4c3387789c88098a86693bd2b1152
-words: 1841
+words: 1775
 status: active
+hint_source: llm
 ---
 
 # شروط ومكونـات مطلب الترخيص لإحداث مؤسسـة خـاصة للتعليم العـالي

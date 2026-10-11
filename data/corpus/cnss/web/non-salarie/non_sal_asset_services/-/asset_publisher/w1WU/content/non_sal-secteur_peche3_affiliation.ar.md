@@ -15,13 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 23
-hint_keywords:
-- affiliation
-- immatriculation
-- salarié
-- انخراط
-- الانخراط
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=509dcad4-cee6-4394-9f64-bd05f44175bf&groupId=54202
 render: html
@@ -35,6 +30,7 @@ last_changed: '2026-10-05T20:38:28+00:00'
 content_hash: sha256:8c4d73147bd1f869b87002c3abeff636b3c584be1c22f7b392929a9f1f0ed105
 words: 319
 status: active
+hint_source: llm
 ---
 
 الانخراط بأنظمة الضمان الاجتماعي إجباري على كل صياد بحري صغير يعمل لحسابه الخاص.وعليه القيام بإجراءات الانخراط في الشهر الذي يلي تاريخ شروعه في النشاط المهني.

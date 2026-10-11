@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 8
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -26,6 +25,7 @@ last_changed: '2026-10-06T00:21:25+00:00'
 content_hash: sha256:9325ec206b9fb410b2b1d191a9fa71c4aa00e329c5d642037e005f9ee9a2dbbd
 words: 174
 status: active
+hint_source: llm
 ---
 
 La Mission universitaire de Tunisie en Amérique Du Nord ( MUTAN )

@@ -9,9 +9,9 @@ title: Multiple Pages
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: studies
+domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 1
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:58:48+00:00'
 content_hash: sha256:f4697638bf19a6ce6576450e7afd8f81049ecd33370c5fa85b26a18d8fb25c9c
 words: 312
 status: active
+hint_source: llm
 ---
 
 # Multiple Pages

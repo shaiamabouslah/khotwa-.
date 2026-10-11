@@ -15,13 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 32
-hint_keywords:
-- affiliation
-- immatriculation
-- employeur
-- salarié
-- cotisations
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/fr/c/document_library/get_file?uuid=24cd98b9-eaf6-4566-b22e-151e1fbe55d0&groupId=33103
 - https://www.cnss.tn/fr/c/document_library/get_file?uuid=67296c6c-036d-4bb7-be2d-1bc0efbbce46&groupId=33103
@@ -36,6 +31,7 @@ last_changed: '2026-10-05T20:39:19+00:00'
 content_hash: sha256:ee05930621abcb0ebb0bded45c42008e328d55b9b84301c904ee58b7ab53a5c1
 words: 340
 status: active
+hint_source: llm
 ---
 
 - [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_affiliation?secteur=$secteur)

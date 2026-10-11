@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 7
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:14:10+00:00'
 content_hash: sha256:1a2d780a9b9a319eedbd3b200b287fc80f2ff7d6b9edaae0f11abff3a1376b1b
 words: 103
 status: active
+hint_source: llm
 ---
 
 # Vous êtes doctorant et vous postulez à une bourse ?

@@ -9,9 +9,9 @@ title: Text Formatting and Lists
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: studies
+domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 1
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:55:55+00:00'
 content_hash: sha256:97c21babf3617991706ca2546c96c10493a4f23498f6d086d9490a363cad7110
 words: 746
 status: active
+hint_source: llm
 ---
 
 # Text Formatting and Lists

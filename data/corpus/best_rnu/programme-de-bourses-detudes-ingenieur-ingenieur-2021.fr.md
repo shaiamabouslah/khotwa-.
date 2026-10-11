@@ -11,10 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 4
-hint_keywords:
-- bourse
-- boursier
+hint_score: 10
+hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/2021-05-25-attestation-de-deplacement-vers-la-france-metropolitaine.pdf
 render: html
@@ -28,6 +26,7 @@ last_changed: '2026-10-06T00:20:58+00:00'
 content_hash: sha256:b2560d2a4f37499f9467a5a88b307b255b22bf179995bd016107b38d182afe93
 words: 487
 status: active
+hint_source: llm
 ---
 
 # Programme de bourses d’études Ingénieur/Ingénieur – 2021

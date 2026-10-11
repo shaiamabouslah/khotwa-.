@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:21:15+00:00'
 content_hash: sha256:a0624fb43212ab36db4ed329c8285f7cd6be5ce000ca3f4f4b46f1c712d79cd3
 words: 72
 status: active
+hint_source: llm
 ---
 
 # Annonce de candidature aux bourses universitaires pour la réalisation de Projets de Fin d’Etudes « Stages de recherche-Globalink »

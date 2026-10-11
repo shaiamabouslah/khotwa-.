@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: announcement
 domain_hint: studies
 subtopic_hint: mobilite
-hint_score: 13
-hint_keywords:
-- erasmus
+hint_score: 10
+hint_keywords: []
 forms:
 - https://ucar.rnu.tn/wp-content/uploads/2025/04/KA171_SMS-International-Mobility_INC.pdf
 render: html
@@ -21,21 +20,14 @@ discovered_via: sitemap
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: '2025-04-30T13:17:20+02:00'
-fetched_at: '2026-10-06T00:27:48+00:00'
+fetched_at: '2026-10-06T22:10:42+00:00'
 first_seen: '2026-10-06T00:27:48+00:00'
-last_changed: '2026-10-06T00:27:48+00:00'
-content_hash: sha256:660cae65a4c224d2610accc41207dbe265b40e4f4301005985add7e3e3eae8ab
-words: 509
+last_changed: '2026-10-06T22:10:42+00:00'
+content_hash: sha256:740ee1db5b07f2086b57083c241952796a26189232b41763fee3a8206fa646cd
+words: 348
 status: active
+hint_source: llm
 ---
-
-Skip to content
-
-### + 216 71 749 100
-
-### webmaster\_ucar@ucar.rnu.tn
-
-### Avenue de la République BP 77-1054 Amilcar ​
 
 ## AN ERASMUS+ MOBILITY GRANT AT THE OPEN UNIVERSITY OF CYPRUS
 
@@ -101,17 +93,3 @@ Email: tahar.jallouli@gmail.com and/or Tahar.Jalouli@u-carthage.tn
 - [Call For Paper](https://ucar.rnu.tn/wp-content/uploads/2025/04/2023-Appel_candidature_student01-1.docx)
 - [KA171\_SMS-International-Mobility\_INC](https://ucar.rnu.tn/wp-content/uploads/2025/04/KA171_SMS-International-Mobility_INC.pdf)
 - [II.6-Annex-HE-Learning-agreement-for-studies-2023-KA171-Final-1 (1)](https://ucar.rnu.tn/wp-content/uploads/2025/04/II.6-Annex-HE-Learning-agreement-for-studies-2023-KA171-Final-1-1.docx)
-
-Established in 1988, the University of Carthage (UCAR) is a Tunisian public institution dedicated to education and research. Operating under the supervision of the Ministry of Higher Education and Scientific Research,
-
-## Useful Links
-
-[Alumni](https://ucar.rnu.tn/alumni/)[Pro emploi](https://proemploi.ucar.rnu.tn)[PMO](https://pmo.ucar.rnu.tn/)[Addmission](http://www.concours.ucar.rnu.tn)[Projects](https://ucar.rnu.tn/projects/)[Jobs alert](https://ucar.rnu.tn/job-alert/)[News and Events](https://ucar.rnu.tn/events-et-news/)
-
-## Subscribe Now
-
-Don’t miss our future updates! Get Subscribed Today!
-
-©2024. University of Carthage. All Rights Reserved.
-
-Developed by Kawther JLASSI under the direction of Mr Mongi BESBES

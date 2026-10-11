@@ -15,13 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 40
-hint_keywords:
-- affiliation
-- immatriculation
-- employeur
-- salarié
-- cotisations
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=21fa083f-7c10-46f9-96e1-875611e62962&groupId=33103
 - https://www.cnss.tn/c/document_library/get_file?uuid=bf0ff6a0-faaf-4509-884d-374d23951c66&groupId=33103
@@ -30,12 +25,13 @@ discovered_via: link
 source_updated: '2019-06-18'
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-05T20:38:53+00:00'
+fetched_at: '2026-10-10T20:34:44+00:00'
 first_seen: '2026-10-05T20:38:53+00:00'
-last_changed: '2026-10-05T20:38:53+00:00'
-content_hash: sha256:3ae2867dc2f94e4e92ea9add379edbf3645926e914ee10833c86777f00cc1aac
-words: 452
+last_changed: '2026-10-10T20:34:44+00:00'
+content_hash: sha256:636d7b563797b737054cf7a961214109293d49049c69bb8b52b0cbea3319b802
+words: 346
 status: active
+hint_source: llm
 ---
 
 - [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_affiliation?secteur=$secteur)
@@ -53,7 +49,7 @@ Le taux des cotisations  de sécurité sociale est fixé à 7,5% réparti comme 
 - 5 % à la charge de l'employeur
 - 2,5 % à la charge du Salarié
 
-**Montant des cotisations à partir du  1er janvier 2023**
+**Montant des cotisations à partir du  janvier 2026**
 
 | **Assiette des cotisations  -en Dinars-** | **montant des cotisations mensuelles -en Dinars-** | | |
 | **Employeur** | **Salarié** | **Total** |
@@ -62,10 +58,10 @@ Le taux des cotisations au titre du **régime de réparation des préjudices ré
 
 Ce taux est fixé comme suit  :
 
-| **Catégories professionnelles** | **Assiette de cotisation** | **Taux de cotisation** | **--** | **Montant des cotisations à partir du 4ème 2022 -D-** |
-| les aides de ménages | 1 [SMAG](https://www.cnss.tn/fr/nos_echos/-/asset_publisher/4IkZ/content/echos_3) | 0,53 % | ---- | 7,021 |
-| les conducteurs de voitures. | 1,5  [SMAG](https://www.cnss.tn/fr/nos_echos/-/asset_publisher/4IkZ/content/echos_3) | 1% | ---- | 19,872 |
-| les autres employés de maisons | 1 [SMAG](https://www.cnss.tn/fr/nos_echos/-/asset_publisher/4IkZ/content/echos_3) | 0,75 % | ----- | 9,936 |
+| **Catégories professionnelles** | **Assiette de cotisation** | **Taux de cotisation** | **--** | **Montant des cotisations à partir du 1er Trim 2025 -D-** |
+| les aides de ménages | 1 [SMAG](https://www.cnss.tn/fr/nos_echos/-/asset_publisher/4IkZ/content/echos_3) | 0,53 % | ---- | 8,077 |
+| les conducteurs de voitures. | 1,5  [SMAG](https://www.cnss.tn/fr/nos_echos/-/asset_publisher/4IkZ/content/echos_3) | 1% | ---- | 22,860 |
+| les autres employés de maisons | 1 [SMAG](https://www.cnss.tn/fr/nos_echos/-/asset_publisher/4IkZ/content/echos_3) | 0,75 % | ----- | 11,430 |
 
 ## Pièces à fournir
 

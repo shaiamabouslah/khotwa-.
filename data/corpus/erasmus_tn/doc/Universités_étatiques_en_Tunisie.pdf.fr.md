@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: document
 domain_hint: studies
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: pdf
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:54:06+00:00'
 content_hash: sha256:4ed0d914ee95ca1a4bf912d64d418afcebc9260de847d0a3728077482d3bc229
 words: 940
 status: active
+hint_source: llm
 ---
 
 <!-- page 1 -->

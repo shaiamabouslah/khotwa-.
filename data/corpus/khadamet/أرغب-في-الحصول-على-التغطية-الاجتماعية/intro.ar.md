@@ -9,9 +9,9 @@ title: أرغب في الحصول على التغطية الاجتماعية - �
 section: intro
 breadcrumb: []
 doc_type: procedure
-domain_hint: null
-subtopic_hint: null
-hint_score: 0
+domain_hint: employment
+subtopic_hint: affiliation-cnss
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:42:51+00:00'
 content_hash: sha256:94549feb17d3df51596ad7fe8722fd2b4f45a6ebee56ee8abff2e902a2ba783f
 words: 40
 status: active
+hint_source: llm
 ---
 
 ### أرغب في الحصول على التغطية الاجتماعية

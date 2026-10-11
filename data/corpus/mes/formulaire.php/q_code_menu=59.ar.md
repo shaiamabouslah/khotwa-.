@@ -10,23 +10,22 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: bourses
-hint_score: 5
-hint_keywords:
-- منحة
-- قرض جامعي
+subtopic_hint: inscription
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:29:52+00:00'
-first_seen: '2026-10-06T00:29:52+00:00'
-last_changed: '2026-10-06T00:29:52+00:00'
+fetched_at: '2026-10-07T20:09:41+00:00'
+first_seen: '2026-10-07T20:09:41+00:00'
+last_changed: '2026-10-07T20:09:41+00:00'
 content_hash: sha256:5df934326b26e36f72eb1e28fe9b2749f0525d793493255915e2a228a7bc09d1
-words: 1769
+words: 860
 status: active
+hint_source: llm
 ---
 
 # المطبوعات

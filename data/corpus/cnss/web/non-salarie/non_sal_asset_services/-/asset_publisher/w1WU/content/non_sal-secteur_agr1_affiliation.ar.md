@@ -15,12 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 22
-hint_keywords:
-- affiliation
-- salarié
-- انخراط
-- الانخراط
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=2da0f812-96d2-474b-a660-1385084f5f6a&groupId=54202
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=a8e5c9a0-a12e-49e7-8dd6-9ff5d3e223bd&groupId=54202
@@ -35,6 +31,7 @@ last_changed: '2026-10-05T20:37:58+00:00'
 content_hash: sha256:2c06d3f669f320d2674f728fbb583f14b06379bfb28efcb9560dde8bc011acdb
 words: 427
 status: active
+hint_source: llm
 ---
 
 الانخراط بأنظمة الضمان الاجتماعي إجباري على كل عامل غير أجير يمارس نشاطا مهنيا لحسابه الخاص في القطاع الفلاحي. وعليه القيام بإجراءات الانخراط في الشهر الذي يلي تاريخ شروعه في النشاط المهني.

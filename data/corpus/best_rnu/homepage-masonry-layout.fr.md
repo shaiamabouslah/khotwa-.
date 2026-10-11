@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:59:56+00:00'
 content_hash: sha256:8736406499ca36ae23749fdebea7ef526555c38f2f0c2182f6391a5212d961ad
 words: 115
 status: active
+hint_source: llm
 ---
 
 ## Annonce des résultats des candidatures aux bourses d’études pour la préparation des diplômes de master et de doctorat à l’étranger, au titre de l’année universitaire 2026-2027.

@@ -14,11 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_ non_agr4_avantage3
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 9
-hint_keywords:
-- affiliation
-- salarié
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -30,7 +28,9 @@ first_seen: '2026-10-05T20:50:31+00:00'
 last_changed: '2026-10-05T20:50:31+00:00'
 content_hash: sha256:055dcbc085948103e89203b19ce6e81a2dafae8a094e6ddf70833484169cf13e
 words: 455
-status: active
+status: removed
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr2_avantage3#index
+hint_source: llm
 ---
 
 ## Progressivité dans l'inscription à la classe de revenu dans le cadre du régime des travailleurs non salariés.

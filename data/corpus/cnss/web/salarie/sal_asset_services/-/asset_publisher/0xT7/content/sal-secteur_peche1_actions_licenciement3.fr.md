@@ -15,10 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 6
-hint_keywords:
-- salarié
-- cotisations
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -31,6 +29,7 @@ last_changed: '2026-10-05T20:45:07+00:00'
 content_hash: sha256:4362b00b3844e133e7fc4ea4302b83ed8ea55555e91277ea4cbb9784b860a1d5
 words: 598
 status: active
+hint_source: llm
 ---
 
 Une aide est accordée par la CNSS aux salariés du secteur non agricole ayant perdu leur emploi pour des raisons indépendantes de leur volonté, sans bénéficier d'une  réparation, leur entreprise se trouvant en cessation d'activité pour des raisons économiques ou technologiques ou en fermeture inopinée ,si les conditions suivantes sont remplies :

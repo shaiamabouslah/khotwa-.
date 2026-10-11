@@ -10,9 +10,9 @@ section: Portail des concours publics
 breadcrumb:
 - Portail des concours publics
 doc_type: procedure
-domain_hint: null
+domain_hint: studies
 subtopic_hint: null
-hint_score: 0
+hint_score: 1
 hint_keywords: []
 forms: []
 render: html
@@ -26,6 +26,7 @@ last_changed: '2026-10-05T23:42:56+00:00'
 content_hash: sha256:b74eaa470ca8c78044cb844cf98fd90afb7556fe1c6cfb089161f36af3eb7a9e
 words: 117
 status: active
+hint_source: llm
 ---
 
 # Portail des concours publics

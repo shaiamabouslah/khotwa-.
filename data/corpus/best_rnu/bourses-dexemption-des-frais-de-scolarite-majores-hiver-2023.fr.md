@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 1
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/Form1er-cycle-Hiver2023.pdf
 - https://best.rnu.tn/wp-content/uploads/2019/10/cycle-2-HIV23-1.pdf
@@ -28,6 +27,7 @@ last_changed: '2026-10-06T00:21:40+00:00'
 content_hash: sha256:954e662b442898180df29b68cb8d574fc6b112e212d4061bb8033e8253d1ec1b
 words: 255
 status: active
+hint_source: llm
 ---
 
 # Bourses d’exemption des frais de scolarité majorés : Hiver 2023

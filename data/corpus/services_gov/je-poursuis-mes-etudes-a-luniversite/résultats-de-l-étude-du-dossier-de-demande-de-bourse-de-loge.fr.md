@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 5
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:43:00+00:00'
 content_hash: sha256:9d2f00eafee2eb285aabf44804e8acf0919a05baf9c0bd8e115c1f0f5cbdbea5
 words: 168
 status: active
+hint_source: llm
 ---
 
 # Résultats de l’étude du dossier de demande de bourse de logement

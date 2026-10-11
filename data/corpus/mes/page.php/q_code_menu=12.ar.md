@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: equivalence
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -19,12 +19,13 @@ discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:29:59+00:00'
+fetched_at: '2026-10-07T20:09:49+00:00'
 first_seen: '2026-10-05T20:25:26+00:00'
-last_changed: '2026-10-06T00:29:59+00:00'
+last_changed: '2026-10-07T20:09:49+00:00'
 content_hash: sha256:191f7a338fda00c6bdb88d95d31ed98cce8b4c8ce3fb9a5a2c7e1014038edc95
-words: 254
+words: 206
 status: active
+hint_source: llm
 ---
 
 # الإدارة المركزية

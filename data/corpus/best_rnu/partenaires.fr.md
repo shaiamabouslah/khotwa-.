@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: null
-hint_score: 0
+hint_score: 1
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:03:22+00:00'
 content_hash: sha256:119d44296e763fb9ef438b7d5ebb45081aaf40346ad324a5b43cb1b5f599d8f6
 words: 110
 status: active
+hint_source: llm
 ---
 
 # Partenaires

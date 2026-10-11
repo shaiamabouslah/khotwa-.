@@ -14,11 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_agr3_Affiliation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 25
-hint_keywords:
-- affiliation
-- salarié
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=bd9925d8-daec-4ed3-9811-42a5f17e6a7a&groupId=54202
 - https://www.cnss.tn/fr/c/document_library/get_file?uuid=dec0ed03-df84-4055-9602-0d4c37b147ca&groupId=54202
@@ -33,6 +31,7 @@ last_changed: '2026-10-05T20:38:07+00:00'
 content_hash: sha256:6d28e81f4b969deb52c3e70444921c56211eb36ff188a2ee7fb2c183e025754b
 words: 471
 status: active
+hint_source: llm
 ---
 
 L'affiliation des petits agriculteurs travaillant pour leur propre compte au régime de sécurité sociale est obligatoire. L'affiliation intervient dans le mois qui suit le début de l'activité.

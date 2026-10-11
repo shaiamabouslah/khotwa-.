@@ -15,12 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 20
-hint_keywords:
-- affiliation
-- salarié
-- انخراط
-- الانخراط
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=2ff53607-021b-4461-90d0-c4882c9f5128&groupId=54202
 render: html
@@ -34,6 +30,7 @@ last_changed: '2026-10-06T13:05:55+00:00'
 content_hash: sha256:8a9e98ac6b4db27117bbb8ca1fa4e312f8fb4117b3278e67edeab400b4775db5
 words: 286
 status: active
+hint_source: llm
 ---
 
 الانخراط بأنظمة الضمان الاجتماعي إجباري على الفنانين والمبدعين والمثقفين

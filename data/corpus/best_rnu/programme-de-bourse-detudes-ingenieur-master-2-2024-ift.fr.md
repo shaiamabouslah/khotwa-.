@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 11
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -25,7 +24,8 @@ first_seen: '2026-10-05T20:27:18+00:00'
 last_changed: '2026-10-06T00:22:00+00:00'
 content_hash: sha256:a678fffbd376e50db1943b9c7253378dd613f9eeeb535fcc41c638102c1ab913
 words: 52
-status: active
+status: removed
+hint_source: llm
 ---
 
 # Programme de bourse d’études Ingénieur/Master 2 2024 IFT

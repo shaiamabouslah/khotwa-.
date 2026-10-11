@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: inscription
-hint_score: 6
-hint_keywords:
-- orientation universitaire
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:43:00+00:00'
 content_hash: sha256:f2625bbd83660f7e7efc9e8cc52bdb8df51ba941c1f487624b8aa10ca4a984a7
 words: 163
 status: active
+hint_source: llm
 ---
 
 # Remplissage de la fiche de choix lors de la session principale d’orientation universitaire

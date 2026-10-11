@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:19:17+00:00'
 content_hash: sha256:0d12bc677a070e5473067a832f7450601118a4b3ca2b38cb57b77c7675e4f545
 words: 31
 status: active
+hint_source: llm
 ---
 
 - [Accueil](https://www.transtu.tn/fr/) ›

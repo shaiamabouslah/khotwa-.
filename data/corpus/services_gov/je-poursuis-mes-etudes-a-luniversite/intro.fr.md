@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: inscription
-hint_score: 1
-hint_keywords:
-- orientation universitaire
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -26,6 +25,7 @@ last_changed: '2026-10-05T23:43:00+00:00'
 content_hash: sha256:ecd498476614bb70192fb069736b4c259830276d41a16777f65b1dd62d2a212b
 words: 93
 status: active
+hint_source: llm
 ---
 
 ### Je poursuis mes études à l'université

@@ -14,11 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_ non_agr5_Affiliation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 26
-hint_keywords:
-- affiliation
-- salarié
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=bd9925d8-daec-4ed3-9811-42a5f17e6a7a&groupId=54202
 render: html
@@ -32,6 +30,7 @@ last_changed: '2026-10-05T20:37:44+00:00'
 content_hash: sha256:538ed030208cdf480e403befd8f5c2162c133c8180ce60ea7e45da023828889a
 words: 457
 status: active
+hint_source: llm
 ---
 
 L'affiliation au régime de sécurité sociale est obligatoire pour les artisans travaillant à la pièce. L'affiliation intervient dans le mois qui suit le début de l'activité .

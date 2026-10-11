@@ -10,10 +10,9 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: mobilite
-hint_score: 1
-hint_keywords:
-- mobilité
+subtopic_hint: bourses
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -26,6 +25,7 @@ last_changed: '2026-10-06T00:21:02+00:00'
 content_hash: sha256:b614c6482e5afc877656d44655a2e15eb57aa01c7253b8d12feb15564923d7d0
 words: 147
 status: active
+hint_source: llm
 ---
 
 # Campagne 2021 d’exonération des frais d’inscription pour les études en France

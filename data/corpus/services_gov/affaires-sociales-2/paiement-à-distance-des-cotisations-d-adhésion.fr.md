@@ -11,10 +11,9 @@ breadcrumb:
 - Paiement à distance des cotisations d’adhésion
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 7
-hint_keywords:
-- cotisations
+subtopic_hint: attestations
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:50:10+00:00'
 content_hash: sha256:95b61a4a44163c2512562a5dba41e6dba1440bdd060fb983b4430d9e6c69af60
 words: 209
 status: active
+hint_source: llm
 ---
 
 # Paiement à distance des cotisations d’adhésion

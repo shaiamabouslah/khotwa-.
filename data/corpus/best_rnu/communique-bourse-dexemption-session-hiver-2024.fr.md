@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: announcement
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 8
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -26,6 +25,7 @@ last_changed: '2026-10-06T00:21:51+00:00'
 content_hash: sha256:32368016013f2cb8e251c08c6047cb7db1f289cacde7a1c6cc3fbb7e2cd91e70
 words: 245
 status: active
+hint_source: llm
 ---
 
 # Communiqué bourse d’exemption – Session Hiver 2024

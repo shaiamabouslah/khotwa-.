@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: equivalence
-hint_score: 14
-hint_keywords:
-- équivalence
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:42:19+00:00'
 content_hash: sha256:dd63c97f5cb691b175f3aad998cc8882f23782e0900b8a3c32f9980bd71e8f20
 words: 604
 status: active
+hint_source: llm
 ---
 
 # Procédures d'obtention de l'équivalence

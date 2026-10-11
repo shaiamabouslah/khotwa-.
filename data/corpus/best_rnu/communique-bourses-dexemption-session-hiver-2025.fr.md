@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: announcement
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 1
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/cycle1-Hiver-2025.pdf
 - https://best.rnu.tn/wp-content/uploads/2019/10/cycle2-Hiver-2025.pdf
@@ -28,6 +27,7 @@ last_changed: '2026-10-06T00:22:01+00:00'
 content_hash: sha256:5a3ebebb315403ad317fa758d8c313c935c373875e67b2fdfe78b4e9de51bfa6
 words: 257
 status: active
+hint_source: llm
 ---
 
 # Communiqué bourses d’exemption – Session Hiver 2025

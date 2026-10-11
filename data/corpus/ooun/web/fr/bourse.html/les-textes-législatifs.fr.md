@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 3
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:14:10+00:00'
 content_hash: sha256:82f2ded24ae31aa1675c99ee0301e7e4786a818093e8cdaa664c44302d19e5ea
 words: 193
 status: active
+hint_source: llm
 ---
 
 # Les textes législatifs

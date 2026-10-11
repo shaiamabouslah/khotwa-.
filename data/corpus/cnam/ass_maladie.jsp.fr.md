@@ -9,9 +9,9 @@ title: CNAM - Assurance Maladie
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: null
+domain_hint: employment
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:17:09+00:00'
 content_hash: sha256:e9bc691690fd4dd19cf7a0f4a37b108b926d71fb6c8edc08dee5b46ccf71d0fa
 words: 382
 status: active
+hint_source: llm
 ---
 
 #### Nouveau régime de l'assurance maladie

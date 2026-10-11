@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 1
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/Annonce-Bourse-MITACS-2026-2027.pdf
 render: html
@@ -27,6 +26,7 @@ last_changed: '2026-10-06T00:22:36+00:00'
 content_hash: sha256:76034cd1368289e5f799ddacea9eb283b05792a4ea57c48f36bd3d559529703d
 words: 43
 status: active
+hint_source: llm
 ---
 
 # Bourses MESRS–MITACS « Globalink » 2026-2027 : Appel à candidatures pour des stages de recherche

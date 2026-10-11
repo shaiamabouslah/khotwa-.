@@ -14,11 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_agr1_avantage1
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 7
-hint_keywords:
-- salarié
-- cotisations
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=4d7bbc9b-9c58-489c-99d2-c47f95ddc4cf&groupId=54202
 render: html
@@ -32,6 +30,7 @@ last_changed: '2026-10-05T20:49:52+00:00'
 content_hash: sha256:7cbd55dd1a4338eb51b8f234c5fba4c3245280ac8c34be25ab72abb70dc5d6e9
 words: 193
 status: active
+hint_source: llm
 ---
 
 L'Etat prend en charge durant une année renouvelable une seule fois le paiement des cotisations de toute personne handicapée installée pour son propre compte au titre du régime de sécurité sociale des travailleurs non salariés.

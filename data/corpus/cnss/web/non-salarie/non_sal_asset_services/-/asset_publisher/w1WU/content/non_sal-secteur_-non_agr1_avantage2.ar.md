@@ -15,11 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: non-salaries
-hint_score: 16
-hint_keywords:
-- non salarié
-- غير الأجراء
-- العامل غير الأجير
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -32,6 +29,7 @@ last_changed: '2026-10-05T20:52:30+00:00'
 content_hash: sha256:2e638f5de37fe3761f9adfdce619be9b0134ac7dde6c7b6b42f0e661705e1e84
 words: 360
 status: active
+hint_source: llm
 ---
 
 يمكن للباعثين الجدد المنخرطين بنظام العملة غير الأجراء في القطاعين الفلاحي وغير الفلاحي أن ينتفعوا بتأجيل دفع اشتراكاتهم بنظام الضمان الاجتماعي لمدة سنتين بداية من تاريخ الانخراط.

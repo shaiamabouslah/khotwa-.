@@ -14,11 +14,9 @@ breadcrumb:
 - Non_Sal_autres_etudiants_immatriculation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: non-salaries
-hint_score: 12
-hint_keywords:
-- non salarié
-- غير الأجراء
+subtopic_hint: affiliation-cnss
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=0cc71123-59f3-4552-a62e-fd1d2bad56c6&groupId=10156
 render: html
@@ -32,6 +30,7 @@ last_changed: '2026-10-06T13:06:07+00:00'
 content_hash: sha256:62b0c692621423fd514d525c2bc1e8410121214166ff95b4a9fe0626f4ab2c94
 words: 492
 status: active
+hint_source: llm
 ---
 
 يمكن للطالب طلب تسجيله بالضمان الاجتماعي حسب الشروط التالية:

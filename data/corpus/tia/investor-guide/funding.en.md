@@ -9,9 +9,9 @@ title: Funding – TIA
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: employment
-subtopic_hint: null
-hint_score: 0
+domain_hint: studies
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms:
 - https://guide.tia.gov.tn/uploads/Mecanismes_de_Financement-en.pdf
@@ -26,6 +26,7 @@ last_changed: '2026-10-06T00:27:17+00:00'
 content_hash: sha256:b13a80e9080d1bf27cbb48cce03dce627aeba27bfe5997e4e012b592002c136e
 words: 91
 status: active
+hint_source: llm
 ---
 
 ## Funding

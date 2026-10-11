@@ -14,11 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_ non_agr2_Attestations
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: non-salaries
-hint_score: 12
-hint_keywords:
-- non salarié
-- غير الأجراء
+subtopic_hint: attestations
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=6f13419f-faed-4d66-8ca3-3c5212320a92&groupId=54202
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=eea87ccd-30f9-42b5-9ccd-b1ac3df69c7c&groupId=54202
@@ -32,7 +30,9 @@ first_seen: '2026-10-05T20:51:59+00:00'
 last_changed: '2026-10-05T20:51:59+00:00'
 content_hash: sha256:4f33cdc6a22b55b98e3b3682759f45b93c4cd8346a01fd3a14d52253bc68dab0
 words: 151
-status: active
+status: removed
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr3_attestation#index
+hint_source: llm
 ---
 
 ## شهادة خلاص

@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:30:45+00:00'
 content_hash: sha256:3eba362bbe114ceb05edcc201cbf258b134d124b55a6c95d517a5752432ac63b
 words: 39
 status: active
+hint_source: llm
 ---
 
 # التقديم

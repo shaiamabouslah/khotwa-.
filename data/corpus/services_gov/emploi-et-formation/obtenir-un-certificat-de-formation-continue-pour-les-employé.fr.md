@@ -10,9 +10,9 @@ section: Obtenir un certificat de formation continue pour les employés
 breadcrumb:
 - Obtenir un certificat de formation continue pour les employés
 doc_type: procedure
-domain_hint: null
-subtopic_hint: null
-hint_score: 0
+domain_hint: studies
+subtopic_hint: releves-attestations
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -26,6 +26,7 @@ last_changed: '2026-10-05T23:45:58+00:00'
 content_hash: sha256:b61232460e0a6019c51c555e72751ede65c47b8a416ad23e42b90eac71749eb1
 words: 114
 status: active
+hint_source: llm
 ---
 
 # Obtenir un certificat de formation continue pour les employés

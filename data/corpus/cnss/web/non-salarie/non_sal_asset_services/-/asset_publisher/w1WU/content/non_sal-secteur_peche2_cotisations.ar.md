@@ -14,13 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_peche2_Cotisations
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 22
-hint_keywords:
-- salarié
-- cotisations
-- الانخراط
-- الاشتراكات
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms:
 - http://ccitunis-academy.com:89/ar/c/document_library/get_file?uuid=cef8365e-315d-4f69-8355-dd3d00da39ff&groupId=54202
 render: html
@@ -34,6 +30,7 @@ last_changed: '2026-10-05T20:47:46+00:00'
 content_hash: sha256:b4dba0d9b2adf827dd8fd7273e8e82c592a177c7dc31c2f42e7f283952f341da
 words: 332
 status: active
+hint_source: llm
 ---
 
 ## قاعدة الاشتراكات

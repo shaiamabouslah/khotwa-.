@@ -11,10 +11,8 @@ breadcrumb: []
 doc_type: document
 domain_hint: studies
 subtopic_hint: mobilite
-hint_score: 16
-hint_keywords:
-- erasmus
-- mobilité
+hint_score: 10
+hint_keywords: []
 forms: []
 render: pdf
 discovered_via: link
@@ -27,6 +25,7 @@ last_changed: '2026-10-05T23:55:42+00:00'
 content_hash: sha256:8787b6ecd3ae176cf052eee189bee6873686899cadd6531c603527c90e5f534a
 words: 7724
 status: active
+hint_source: llm
 ---
 
 <!-- page 1 -->

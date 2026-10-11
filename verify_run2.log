@@ -1,9 +1,0 @@
-01:29:47 WARNING invalid TLS certificate on www.oouc.rnu.tn, fetching without verification
-01:29:48 WARNING invalid TLS certificate on www.mes.tn, fetching without verification
-01:29:51 INFO    oouc: 14 URLs discovered
-01:29:51 INFO    mes: 34 URLs discovered
-01:30:22 INFO    oouc done: {'changed': 1, 'unchanged': 13}
-01:31:07 INFO    mes done: {'new': 10, 'changed': 21, 'missing': 13}
-
-Summary: {'new': 10, 'changed': 22, 'missing': 13, 'unchanged': 13}
-Corpus: data/corpus/ (catalog.jsonl)  History: data/state/changelog.jsonl  Log: data/state/crawl.log

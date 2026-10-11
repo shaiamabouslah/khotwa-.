@@ -9,11 +9,10 @@ title: inscription fermée
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: employment
-subtopic_hint: recherche-emploi
-hint_score: 2
-hint_keywords:
-- insertion professionnelle
+domain_hint: studies
+subtopic_hint: inscription
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -26,6 +25,7 @@ last_changed: '2026-10-06T00:06:49+00:00'
 content_hash: sha256:f5197d00e2e59525cd3c02c2e85177e4b5eeab988a9365a2d7df41f4268e5186
 words: 1166
 status: active
+hint_source: llm
 ---
 
 - ## Université

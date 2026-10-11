@@ -15,11 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: non-salaries
-hint_score: 15
-hint_keywords:
-- non salarié
-- غير الأجراء
-- العامل غير الأجير
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -32,6 +29,7 @@ last_changed: '2026-10-05T20:49:54+00:00'
 content_hash: sha256:ea527fdbc493047c1170dd5c4674cc767582dde75d8f14885bb98b753fee0b91
 words: 128
 status: active
+hint_source: llm
 ---
 
 تتكفل الدولة لمدة سنة قابلة للتجديد مرة واحدة بدفع المساهمات المستوجبة على كل شخص معوق منتصب لحسابه الخاص بعنوان نظام الضمان الاجتماعي للعملة غير الأجراء.

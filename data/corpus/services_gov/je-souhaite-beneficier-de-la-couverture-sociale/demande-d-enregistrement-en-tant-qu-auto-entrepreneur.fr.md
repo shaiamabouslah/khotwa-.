@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: non-salaries
-hint_score: 8
-hint_keywords:
-- auto-entrepreneur
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:43:48+00:00'
 content_hash: sha256:cfd648e9daa5f2a157b280673b609de140e18189ea7369490cbc503154106602
 words: 221
 status: active
+hint_source: llm
 ---
 
 # Demande d’enregistrement en tant qu’auto-entrepreneur

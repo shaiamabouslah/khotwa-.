@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: announcement
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:22:31+00:00'
 content_hash: sha256:876e07b395ef5e0589000e79fb5e984a945b2880341df34777af636bd46eb73e
 words: 231
 status: active
+hint_source: llm
 ---
 
 # Communiqué exemption des frais de scolarité supplémentaires – Session Automne 2026

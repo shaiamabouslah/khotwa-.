@@ -11,10 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 3
-hint_keywords:
-- boursier
-- منح
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -27,6 +25,7 @@ last_changed: '2026-10-05T23:52:40+00:00'
 content_hash: sha256:ebc548618729af2096fb0e65a5d40525952fd278b725f679d39210007b41fcdb
 words: 155
 status: active
+hint_source: llm
 ---
 
 الجمهورية التونسية

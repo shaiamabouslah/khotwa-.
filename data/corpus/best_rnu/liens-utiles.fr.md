@@ -10,10 +10,9 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: inscription
-hint_score: 1
-hint_keywords:
-- orientation universitaire
+subtopic_hint: null
+hint_score: 5
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -26,6 +25,7 @@ last_changed: '2026-10-06T00:03:37+00:00'
 content_hash: sha256:2a9feb0f058b5a30ca187228016694e9e0eb5eeb8af77a2d76a64c2d9ab42a9a
 words: 250
 status: active
+hint_source: llm
 ---
 
 # Liens Utiles

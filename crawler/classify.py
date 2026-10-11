@@ -63,8 +63,35 @@ class Classifier:
         return Hint(best[0], best[1], scores[best], matched[best])
 
 
-def doc_type(url: str, title: str, is_pdf: bool, rules: list[dict]) -> str:
-    """procedure | announcement | form | guide | page  (site rules first, then defaults)."""
+_PROCEDURE_MARKERS = [
+    r"pi[èe]ces? (?:à|a) fournir", r"pi[èe]ces? justificatives?",
+    r"documents? (?:demand|requis|n[ée]cessaire|à fournir)",
+    r"conditions? d[’'](?:obtention|acc[èe]s|octroi)", r"conditions? (?:requises?|à remplir|d'admissibilit[ée])",
+    r"[ée]tapes? (?:du|de la|des)? ?(?:service|proc[ée]dure)?", r"d[ée]marches? (?:à|a) (?:suivre|effectuer)",
+    r"lieu de d[ée]p[ôo]t", r"d[ée]lai\w* (?:d[’'](?:obtention|octroi)|de traitement|ne (?:d[ée]passant|exc[ée]dant))",
+    r"d[ée]lai\w* de \d+ jours?", r"dans un d[ée]lai", r"\d+ jours? (?:à compter|ouvrables?)",
+    r"comment (?:avoir|obtenir|faire|b[ée]n[ée]ficier|proc[ée]der)",
+    r"dossier (?:à|a) (?:fournir|constituer|d[ée]poser)", r"constituer (?:un|le) dossier",
+    r"formulaire (?:à|a) remplir", r"demande (?:à|a) (?:remplir|d[ée]poser)", r"d[ée]poser (?:une|sa|votre) demande",
+    r"se pr[ée]senter (?:à|au|aupr[èe]s)", r"s[’']adresser (?:à|au|aupr[èe]s)",
+    r"pour (?:obtenir|b[ée]n[ée]ficier|avoir)", r"inscription en ligne", r"vous (?:devez|pouvez)",
+    r"الوثائق المطلوبة", r"الشروط المطلوبة", r"كيفية الحصول", r"خطوات", r"الإجراءات المطلوبة", r"الوثائق الضرورية",
+    r"يجب (?:تقديم|إحضار)", r"يتم تقديم", r"آجال",
+]
+_PROCEDURE_RE = re.compile("|".join(_PROCEDURE_MARKERS), re.I)
+
+
+def _looks_like_procedure(markdown: str) -> bool:
+    """Site-level doc_types rules only cover 6 of ~24 sites -- everything else defaults
+    to 'page' regardless of actual content, mislabeling genuine step-by-step procedures
+    (confirmed on cnrps, oous, best_rnu, apii_portal...) as generic background pages.
+    Two or more distinct markers (conditions/pièces à fournir/étapes/délai/...) is a much
+    stronger signal than any single one, which could just be an incidental mention."""
+    return len(set(_PROCEDURE_RE.findall(markdown))) >= 2
+
+
+def doc_type(url: str, title: str, is_pdf: bool, rules: list[dict], markdown: str = "") -> str:
+    """procedure | announcement | form | guide | page  (site rules first, then content, then defaults)."""
     for rule in rules or []:
         if re.search(rule["match"], url, re.I) or re.search(rule["match"], title, re.I):
             return rule["type"]
@@ -75,4 +102,6 @@ def doc_type(url: str, title: str, is_pdf: bool, rules: list[dict]) -> str:
         return "form" if re.search(r"demande|formulaire|imprim|مطلب|مطبوع|استمارة", t) else "document"
     if re.search(r"^(communiqu|avis|بلاغ|إعلان|اعلان)", t):
         return "announcement"
+    if _looks_like_procedure(markdown):
+        return "procedure"
     return "page"

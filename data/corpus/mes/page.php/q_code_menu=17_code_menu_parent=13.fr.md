@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -19,12 +19,13 @@ discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:30:39+00:00'
+fetched_at: '2026-10-07T20:14:51+00:00'
 first_seen: '2026-10-05T20:26:06+00:00'
-last_changed: '2026-10-06T00:30:40+00:00'
+last_changed: '2026-10-07T20:14:57+00:00'
 content_hash: sha256:d25bc99afd4e007a4a4d03c48463bd0b350ac6890e8c1df2d10c9ad1b820a746
-words: 250
+words: 50
 status: active
+hint_source: llm
 ---
 
 # التعليم العالي حسب الولايات

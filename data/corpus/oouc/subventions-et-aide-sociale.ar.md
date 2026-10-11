@@ -8,25 +8,24 @@ lang: ar
 title: المنح و المساعدات الإجتماعية | ديوان الخدمات الجامعية للوسط
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: procedure
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 7
-hint_keywords:
-- المنح
-- قرض جامعي
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:29:51+00:00'
+fetched_at: '2026-10-06T23:03:54+00:00'
 first_seen: '2026-10-05T20:26:34+00:00'
-last_changed: '2026-10-06T00:29:52+00:00'
+last_changed: '2026-10-06T23:03:55+00:00'
 content_hash: sha256:a77558524b1c750a7ea270f84b5579aec110ba44dd28fe1c09354b57492b12e9
-words: 2534
+words: 2524
 status: active
+hint_source: llm
 ---
 
 هي مساعدة مالية يتحصل عليها الطالب دفعة واحدة و تكتسي صبغة اجتماعية بالدرجة الأولى

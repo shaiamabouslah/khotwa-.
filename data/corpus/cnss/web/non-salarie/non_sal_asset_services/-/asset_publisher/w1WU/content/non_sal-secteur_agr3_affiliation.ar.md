@@ -15,12 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 23
-hint_keywords:
-- affiliation
-- salarié
-- انخراط
-- الانخراط
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=509dcad4-cee6-4394-9f64-bd05f44175bf&groupId=54202
 - https://www.cnss.tn/c/document_library/get_file?uuid=d91ecfd4-b0fe-4665-b92d-98b70142896e&groupId=54202
@@ -35,6 +31,7 @@ last_changed: '2026-10-05T20:38:09+00:00'
 content_hash: sha256:d394ce684c4612433649b745d3a61bc7da5e1eb59b43a4274189798deeb89e44
 words: 383
 status: active
+hint_source: llm
 ---
 
 الانخراط بأنظمة الضمان الاجتماعي إجباري على كل فلاح صغير أو مربي حيوانات يعمل  لحسابه الخاص.

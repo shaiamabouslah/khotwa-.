@@ -14,12 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_ non_agr4_avantage2
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 11
-hint_keywords:
-- affiliation
-- salarié
-- cotisations
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -31,7 +28,9 @@ first_seen: '2026-10-05T20:50:36+00:00'
 last_changed: '2026-10-05T20:50:36+00:00'
 content_hash: sha256:5d1c417d73b6387192abcced24911889a3c81b9e43f849d93da51d86c00e49d4
 words: 454
-status: active
+status: removed
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr2_avantage2#index
+hint_source: llm
 ---
 
 ## Report de paiement des cotisations des travailleurs non salariés dans le cadre de l'encouragement des nouveaux promoteurs

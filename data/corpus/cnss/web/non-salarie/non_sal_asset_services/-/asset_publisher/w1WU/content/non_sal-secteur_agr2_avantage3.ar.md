@@ -15,11 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: non-salaries
-hint_score: 16
-hint_keywords:
-- non salarié
-- غير الأجراء
-- العامل غير الأجير
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -31,7 +28,9 @@ first_seen: '2026-10-05T20:49:00+00:00'
 last_changed: '2026-10-05T20:49:00+00:00'
 content_hash: sha256:917b317784ebfb3e2d6b8425f522da5119010a4c8fe9a5550d788f0ff8cfb3a7
 words: 390
-status: active
+status: removed
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr1_avantage3#index
+hint_source: llm
 ---
 
 يمكن للباعثين الجدد المنخرطين بنظام العملة غير الأجراء الانتفاع  بالتدرج في الترسيم بشريحة الدخل المناسبة للنشاط الذي يتعاطونه ، وذلك بالحط بدرجتين من هذه الشريحة خلال السنة الأولى من الانخراط وبدرجة واحدة خلال السنة الموالية.

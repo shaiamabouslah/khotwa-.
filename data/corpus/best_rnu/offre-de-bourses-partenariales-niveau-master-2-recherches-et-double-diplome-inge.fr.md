@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:21:46+00:00'
 content_hash: sha256:29ad7d7b57090df03de5a339d3555af95ea9cb16f869d47b0f841ca1473e7990
 words: 78
 status: active
+hint_source: llm
 ---
 
 # Offre de bourses Partenariales – niveau Master 2 recherches et double diplôme Ingénieur/Ingénieur 2023

@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:21:17+00:00'
 content_hash: sha256:3d2739b641dd530ef250a8c86947c69beca82fdba03c4cc9063d931b31cec6b8
 words: 50
 status: active
+hint_source: llm
 ---
 
 # Appel à candidature pour des prêts universitaires à l’étranger

@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -19,12 +19,13 @@ discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:30:37+00:00'
-first_seen: '2026-10-06T00:30:37+00:00'
-last_changed: '2026-10-06T00:30:37+00:00'
+fetched_at: '2026-10-07T20:14:25+00:00'
+first_seen: '2026-10-07T20:14:31+00:00'
+last_changed: '2026-10-07T20:14:31+00:00'
 content_hash: sha256:49dc4bd8dcd0d815fe3abfa3b0b9d3633e877629d17eaf30b7b89f22db6bb01a
-words: 478
+words: 250
 status: active
+hint_source: llm
 ---
 
 # النشريات والمطويات

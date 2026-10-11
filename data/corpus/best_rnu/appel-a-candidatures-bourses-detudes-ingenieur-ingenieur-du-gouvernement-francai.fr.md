@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:22:35+00:00'
 content_hash: sha256:0de5b91f247e3e6924d3730ed6df976d4866ef8d2b0f36cef45166e9df179145
 words: 48
 status: active
+hint_source: llm
 ---
 
 # Appel à candidatures – Bourses d’études « Ingénieur-Ingénieur » du Gouvernement Français

@@ -11,11 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: mobilite
-hint_score: 17
-hint_keywords:
-- erasmus
-- mobilité
-- credit mobility
+hint_score: 10
+hint_keywords: []
 forms:
 - https://ec.europa.eu/programmes/erasmus-plus/sites/erasmusplus2/files/handbook-erasmus-icm_feb2020_en.pdf
 - https://erasmusplus.tn/doc/E+International-Credit-Mobility.pdf
@@ -33,6 +30,7 @@ last_changed: '2026-10-05T23:53:59+00:00'
 content_hash: sha256:976ce55cd3c9fb3559ef327bfd4f1dd26daf32829296d1be5fb3267d539313de
 words: 324
 status: active
+hint_source: llm
 ---
 
 L'International Credit Mobility (ICM) fait partie de l'action clé 1 (KA1) du programme Erasmus+ et permet à un établissement d'enseignement supérieur (EES) d'un pays partenaire d'envoyer des étudiants, du personnel enseignant et non enseignant dans des missions d'étude, d'enseignement et de formation dans un établissement d'enseignement supérieur

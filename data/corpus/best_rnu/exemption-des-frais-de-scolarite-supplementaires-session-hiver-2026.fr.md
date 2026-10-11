@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/Communique-exemptionHIV-2026-MUTAN.pdf
@@ -28,6 +28,7 @@ last_changed: '2026-10-06T00:22:29+00:00'
 content_hash: sha256:4a5c3b8389b615e275185eae90052a0dd0c3e5ef6d5eaa9c3addd0cd6ecb2abd
 words: 278
 status: active
+hint_source: llm
 ---
 
 # Exemption des frais de scolarité supplémentaires Session Hiver 2026

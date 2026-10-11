@@ -8,12 +8,11 @@ lang: fr
 title: Prêts universitaires à l’étranger
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: procedure
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 4
-hint_keywords:
-- prêt universitaire
+hint_score: 10
+hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2020/06/prets-montants-19-20.pdf
 - https://best.rnu.tn/wp-content/uploads/2020/06/مقدار-المداخيل-السنوية-لاولياء-المترشحين.pdf
@@ -28,6 +27,7 @@ last_changed: '2026-10-06T00:20:42+00:00'
 content_hash: sha256:d15f8034c8742a57b5211baa391e2529c8b7bcbfb8bf7ba893522781531e19ac
 words: 265
 status: active
+hint_source: llm
 ---
 
 # Prêts universitaires à l’étranger

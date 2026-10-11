@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: announcement
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 11
-hint_keywords:
-- المنح
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.oouc.rnu.tn/uploads/topics/17885140686121.pdf
 render: html
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:47:29+00:00'
 content_hash: sha256:43a09d31bcc38d8aa1483850601a348d15b803693bc86ca1bfbbf46551a09767
 words: 70
 status: active
+hint_source: llm
 ---
 
 # بــــلاغ حـول الوثائــق المطلوبــة لمـطـلب المنـح ومنحة الادماج والقـروض الجـامعية

@@ -10,9 +10,9 @@ section: Inscription au système de formation professionnelle
 breadcrumb:
 - Inscription au système de formation professionnelle
 doc_type: procedure
-domain_hint: null
-subtopic_hint: null
-hint_score: 0
+domain_hint: studies
+subtopic_hint: inscription
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -26,6 +26,7 @@ last_changed: '2026-10-05T23:45:57+00:00'
 content_hash: sha256:416f7bf4d7e48aa2f5d6d49da0fe06efb2493fce16ecbac9f4ce042449298816
 words: 109
 status: active
+hint_source: llm
 ---
 
 # Inscription au système de formation professionnelle

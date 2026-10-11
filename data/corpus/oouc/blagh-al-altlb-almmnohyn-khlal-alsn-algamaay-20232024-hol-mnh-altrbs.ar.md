@@ -10,11 +10,9 @@ section: null
 breadcrumb: []
 doc_type: announcement
 domain_hint: studies
-subtopic_hint: bourses
-hint_score: 20
-hint_keywords:
-- منحة
-- منحة التربص
+subtopic_hint: stages-pfe
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.oouc.rnu.tn/uploads/topics/17310825594054.pdf
 render: html
@@ -28,6 +26,7 @@ last_changed: '2026-10-05T23:49:53+00:00'
 content_hash: sha256:619138fe26b96d74cda0059d84f298b00b30ea87a1bc57a51a4099561b99bcc1
 words: 104
 status: active
+hint_source: llm
 ---
 
 # بلاغ الى الطلبة الممنوحين خلال السنة الجامعية 2023/2024 : حول منحة التربص

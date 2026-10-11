@@ -15,12 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 16
-hint_keywords:
-- affiliation
-- immatriculation
-- employeur
-- salarié
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=d71dc2cb-515c-4685-b82b-be7abece5b12&groupId=18410
 render: html
@@ -34,6 +30,7 @@ last_changed: '2026-10-06T12:55:58+00:00'
 content_hash: sha256:a8a8145d1e430a302dbb6142596725bd39728baf8fee1675f5b5e4794377ef92
 words: 232
 status: active
+hint_source: llm
 ---
 
 L'employeur est tenu d'immatriculer le personnel embauché dans un délai d'un mois à compter de la date  d 'affiliation. Pour les travailleurs engagés ultérieurement à cette date, l'immatriculation intervient dans un délai d'un mois  à  compter de la date de leur engagement.

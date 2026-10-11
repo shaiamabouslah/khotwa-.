@@ -28,6 +28,7 @@ from .http import PoliteSession
 from .pipeline import Crawler
 from .probe import as_row, probe
 from .registry import load_registry, validate_registry
+from .render import BrowserRenderer
 
 ROOT = Path(__file__).resolve().parent.parent
 REGISTRY = ROOT / "sources.yaml"
@@ -81,10 +82,29 @@ def cmd_probe(reg, urls: list[str], all_sites: bool) -> int:
     return 0
 
 
+def _discover_one(reg, key: str):
+    site = reg["sites"][key]
+    renderer = None
+    if site.get("render") == "js":
+        # Own instance per site: Playwright's sync API isn't safe to share across the
+        # threads this runs under (ThreadPoolExecutor below).
+        renderer = BrowserRenderer(reg["defaults"]["user_agent"])
+        if not renderer.available():
+            print(f"Note: {key} needs JS rendering but Playwright isn't installed "
+                  "(pip install -r requirements-js.txt && playwright install chromium) -- "
+                  "its discovery will find 0 URLs.")
+            renderer = None
+    try:
+        return Discoverer(session(reg), site, renderer).run({})
+    finally:
+        if renderer is not None:
+            renderer.close()
+
+
 def cmd_discover(reg, sites: list[str]) -> int:
     keys = sites or [k for k, s in reg["sites"].items() if s["status"] == "active"]
     with ThreadPoolExecutor(8) as pool:
-        results = list(pool.map(lambda k: Discoverer(session(reg), reg["sites"][k]).run({}), keys))
+        results = list(pool.map(lambda k: _discover_one(reg, k), keys))
     for key, found in zip(keys, results):
         print(f"\n## {key}: {len(found)} URL(s)")
         for f in found:

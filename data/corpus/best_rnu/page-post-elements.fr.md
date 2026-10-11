@@ -9,9 +9,9 @@ title: Page / Post Elements
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: studies
+domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:58:37+00:00'
 content_hash: sha256:c66d5047568105b0a00fe81c8eda531f4a6928e77334e171a9c5bd6556b89bf2
 words: 574
 status: active
+hint_source: llm
 ---
 
 # Page / Post Elements

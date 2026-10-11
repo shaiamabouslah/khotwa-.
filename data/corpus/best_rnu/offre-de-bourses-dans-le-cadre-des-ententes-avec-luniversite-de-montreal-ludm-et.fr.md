@@ -5,36 +5,40 @@ org: Ministère de l'Enseignement Supérieur — Bourses et prêts universitaire
 trust: official
 url: https://best.rnu.tn/offre-de-bourses-dans-le-cadre-des-ententes-avec-luniversite-de-montreal-ludm-et-avec-linstitut-national-de-la-recherche-scientifique-du-quebec-linrs/
 lang: fr
-title: Offre de bourses dans le cadre des ententes avec l’université de Montréal (L’UdM) et avec L’Institut National de la recherche scientifique du Québec (l’INRS)
+title: Offre de bourses de Mastère et de Doctorat dans le cadre de l’Entente MESRS-INRS
 section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms:
-- https://best.rnu.tn/wp-content/uploads/2020/06/ANNONCE-INRS-2020-2021.pdf
-- https://best.rnu.tn/wp-content/uploads/2020/06/Annonce-udm-2020-2021.pdf
-- https://best.rnu.tn/wp-content/uploads/2020/06/Procedure-UdeM.pdf
-- https://best.rnu.tn/wp-content/uploads/2020/06/communique-.pdf
+- https://best.rnu.tn/wp-content/uploads/2019/10/ANNEXE-MESRS-INRS-2023-2024.pdf
+- https://best.rnu.tn/wp-content/uploads/2019/10/ANNONCE-INRS-2023-2024.pdf
+- https://best.rnu.tn/wp-content/uploads/2019/10/Annonce-complementair.pdf
 render: html
 discovered_via: sitemap
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: '2020-06-23T15:07:09+00:00'
-fetched_at: '2026-10-06T00:20:49+00:00'
+fetched_at: '2026-10-06T23:03:53+00:00'
 first_seen: '2026-10-05T20:25:39+00:00'
-last_changed: '2026-10-06T00:20:49+00:00'
-content_hash: sha256:eec65f1b55381109e1ead569089e985c545661e12f1a29b7763488b20d07d2af
-words: 134
+last_changed: '2026-10-07T20:18:45+00:00'
+content_hash: sha256:35095448a386a172dd44c26ebd6732a45b4116b2a640cda17d369d2669c638ac
+words: 70
 status: active
+hint_source: llm
 ---
 
-# Offre de bourses dans le cadre des ententes avec l’université de Montréal (L’UdM) et avec L’Institut National de la recherche scientifique du Québec (l’INRS)
+# Offre de bourses de Mastère et de Doctorat dans le cadre de l’Entente MESRS-INRS
 
-**offre de bourses dans le cadre des ententes avec l’université de Montréal (L’UdM) et avec L’Institut National de la recherche scientifique du Québec (l’INRS) au titre de l’année universitaire 2020-2021  :**
+3 mars 2023
 
-- **[Le communiqué](https://best.rnu.tn/wp-content/uploads/2020/06/communique-.pdf)**
-- **L’annonce de l’Institut National de la recherche scientifique :  [lien](https://best.rnu.tn/wp-content/uploads/2020/06/ANNONCE-INRS-2020-2021.pdf)**
-- **L’annonce de l’université de Montréal (UdM)  : [lien](https://best.rnu.tn/wp-content/uploads/2020/06/Annonce-udm-2020-2021.pdf)**   + [**Procédure de dépôt de demande d’admission auprès de l’UdM**](https://best.rnu.tn/wp-content/uploads/2020/06/Procedure-UdeM.pdf)
+Offre de bourses de Mastère et de Doctorat dans le cadre de l’Entente de coopération entre le Ministère de l’Enseignement Supérieur et de la Recherche Scientifique  (MESRS) et l’Institut national de la recherche scientifique (**INRS**) au Canada au titre de l’année universitaire 2023-2024
+
+[ANNONCE-INRS](https://best.rnu.tn/wp-content/uploads/2019/10/ANNONCE-INRS-2023-2024.pdf)
+
+[ANNEXE MESRS-INRS](https://best.rnu.tn/wp-content/uploads/2019/10/ANNEXE-MESRS-INRS-2023-2024.pdf)
+
+[ANNONCE COMPLÉMENTAIRE](https://best.rnu.tn/wp-content/uploads/2019/10/Annonce-complementair.pdf)

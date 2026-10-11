@@ -9,9 +9,9 @@ title: VO�d�� oKF�� 1995 WOK�u� 7 w� Œ—R� WO�UL��ù«
 section: null
 breadcrumb: []
 doc_type: form
-domain_hint: employment
-subtopic_hint: null
-hint_score: 0
+domain_hint: studies
+subtopic_hint: releves-attestations
+hint_score: 10
 hint_keywords: []
 forms: []
 render: pdf
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T20:37:17+00:00'
 content_hash: sha256:717f3c0eea7e9547fad8b906994b3d09cd52f6a025d677a9c565ac6df22fa11c
 words: 1381
 status: active
+hint_source: llm
 ---
 
 <!-- page 1 -->

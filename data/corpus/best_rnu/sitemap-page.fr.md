@@ -9,9 +9,9 @@ title: Sitemap Page
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: studies
+domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:57:43+00:00'
 content_hash: sha256:cc7521593880fe4083f5e25f17d5d8e36c6bcd35e9059b80d12aa39a0908d6fc
 words: 458
 status: active
+hint_source: llm
 ---
 
 # Sitemap Page

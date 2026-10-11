@@ -9,9 +9,9 @@ title: Step by step process – TIA
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: employment
+domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:27:15+00:00'
 content_hash: sha256:57d62c434c964b64531bdf1cf73d46e1eaa6890eeea75f18759cfeda576895ed
 words: 447
 status: active
+hint_source: llm
 ---
 
 ## Step By Step Process

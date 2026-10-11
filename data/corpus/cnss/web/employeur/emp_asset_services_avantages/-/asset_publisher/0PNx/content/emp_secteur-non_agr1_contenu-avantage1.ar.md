@@ -14,14 +14,9 @@ breadcrumb:
 - Emp_Secteur non_agr1_Contenu Avantage1
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 19
-hint_keywords:
-- affiliation
-- immatriculation
-- employeur
-- الانخراط
-- الاشتراكات
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=4b2b4ab0-07c2-4291-bb22-78e36f67b27f&groupId=33103
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=576d16fb-5e29-46bb-8407-ee0e58d3154a&groupId=33103
@@ -36,6 +31,7 @@ last_changed: '2026-10-05T20:40:00+00:00'
 content_hash: sha256:e29cc385f90a3c69e2fadc5b8273cdf31c34c7f6f8d738e5c5c6f34de28b594a
 words: 921
 status: active
+hint_source: llm
 ---
 
 - [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_affiliation?secteur=$secteur)

@@ -9,9 +9,9 @@ title: Page d’exemple
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: studies
+domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:02:07+00:00'
 content_hash: sha256:d1f9c604b3b08d6942ab5a94a1fca5b1a55fa042360b79e682f18e607daff367
 words: 204
 status: active
+hint_source: llm
 ---
 
 # Page d’exemple

@@ -15,11 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: non-salaries
-hint_score: 17
-hint_keywords:
-- non salarié
-- غير الأجراء
-- العامل غير الأجير
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -32,6 +29,7 @@ last_changed: '2026-10-05T20:51:47+00:00'
 content_hash: sha256:eb03e3043dd4c53a53d2ded613fee44812db7b88883845ad8ce4dfdcb90a760c
 words: 426
 status: active
+hint_source: llm
 ---
 
 ## تأجيل دفع اشتراكات العملة غير الأجراء في إطار تشجيع الباعثين الجدد.

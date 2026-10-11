@@ -9,11 +9,10 @@ title: Diplômées
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: employment
-subtopic_hint: recherche-emploi
-hint_score: 2
-hint_keywords:
-- insertion professionnelle
+domain_hint: studies
+subtopic_hint: null
+hint_score: 1
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -26,6 +25,7 @@ last_changed: '2026-10-06T00:06:30+00:00'
 content_hash: sha256:c50aac72fb240b191b0a4788809ecf5885c715184bde0c29d26e3f1fdd8f5682
 words: 1140
 status: active
+hint_source: llm
 ---
 
 - ## Université

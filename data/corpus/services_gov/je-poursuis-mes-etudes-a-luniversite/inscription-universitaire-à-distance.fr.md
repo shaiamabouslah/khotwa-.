@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: inscription
-hint_score: 4
-hint_keywords:
-- inscription universitaire
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:43:00+00:00'
 content_hash: sha256:e748d8c156fcc731813f73b17af5c8f1434b65b04ac5107c03ea2f6b16e66488
 words: 110
 status: active
+hint_source: llm
 ---
 
 # Inscription universitaire à distance

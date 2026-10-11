@@ -14,10 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_ non_agr3_avantages
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 6
-hint_keywords:
-- salarié
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -29,7 +28,9 @@ first_seen: '2026-10-05T20:51:00+00:00'
 last_changed: '2026-10-05T20:51:00+00:00'
 content_hash: sha256:daf6109307f5665cc5f491de151f90f748354547d939090b9579672b78ae3871
 words: 435
-status: active
+status: removed
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr1_avantages#index
+hint_source: llm
 ---
 
 - Une erreur s'est produite en traitant le calibre.

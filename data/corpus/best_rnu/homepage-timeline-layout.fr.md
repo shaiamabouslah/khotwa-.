@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:00:12+00:00'
 content_hash: sha256:2d96bac3225ed74f0f4437e5a664dcada8d6ced5557eb7e576ea56df5b42fee3
 words: 92
 status: active
+hint_source: llm
 ---
 
 Il est porté à la connaissance des étudiant(e)s tunisien(ne)s que les formulaires de demande d’exemption des frais de scolarité supplémentaires dans les universités Québécoises, au titre de la session d’automne 2026, sont actuellement disponibles sur le site de la MUTAN www.mutan.org, ainsi que sur le site du ministère de l’Enseignement Supérieur et de la Recherche Scientifique www.best.rnu.tn. Les candidats peuvent déposer leur demande d’exemption …

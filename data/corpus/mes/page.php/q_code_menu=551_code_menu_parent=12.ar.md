@@ -10,22 +10,22 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: bourses
-hint_score: 1
-hint_keywords:
-- المنح
+subtopic_hint: null
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:30:27+00:00'
+fetched_at: '2026-10-07T20:13:26+00:00'
 first_seen: '2026-10-05T20:25:46+00:00'
-last_changed: '2026-10-06T00:30:27+00:00'
+last_changed: '2026-10-07T20:13:32+00:00'
 content_hash: sha256:79b887db7f9c534490359abe4dcdb230bf7fafd2af2e2e5924e132ba387ba97a
-words: 339
+words: 268
 status: active
+hint_source: llm
 ---
 
 # تنظيم الوزارة

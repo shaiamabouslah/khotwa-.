@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: recherche-emploi
-hint_score: 2
-hint_keywords:
-- demandeur d'emploi
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:42:56+00:00'
 content_hash: sha256:969b5d1a3f7302623dd341d33a7bf07edd5a3ee4e184656ebbb2e846259206c3
 words: 121
 status: active
+hint_source: llm
 ---
 
 # Espace dédié à la recherche et au suivi des demandeurs d’emploi

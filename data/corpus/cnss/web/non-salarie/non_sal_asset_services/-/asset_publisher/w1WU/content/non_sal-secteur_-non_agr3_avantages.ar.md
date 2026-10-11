@@ -15,10 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: non-salaries
-hint_score: 12
-hint_keywords:
-- non salarié
-- غير الأجراء
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -30,7 +28,9 @@ first_seen: '2026-10-05T20:51:02+00:00'
 last_changed: '2026-10-05T20:51:02+00:00'
 content_hash: sha256:e006f51c2468a5b618348f3bfb536d1e68adb4a9d1a889ceec5ca68db875317e
 words: 433
-status: active
+status: removed
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr1_avantages#index
+hint_source: llm
 ---
 
 - An error occurred while processing the template.

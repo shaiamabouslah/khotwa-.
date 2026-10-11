@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:21:47+00:00'
 content_hash: sha256:5764d55212a05d279454e03a1d7046dec41ab9e204bb67876f620f8e798b3afe
 words: 91
 status: active
+hint_source: llm
 ---
 
 # Bourses d’études en Grandes Écoles françaises 2023

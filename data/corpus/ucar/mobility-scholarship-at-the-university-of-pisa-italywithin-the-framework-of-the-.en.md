@@ -9,9 +9,9 @@ title: (Extended Deadline) MOBILITY SCHOLARSHIP AT THE UNIVERSITY OF PISA (ITALY
 section: null
 breadcrumb: []
 doc_type: announcement
-domain_hint: studies
+domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 1
 hint_keywords: []
 forms: []
 render: html
@@ -19,21 +19,14 @@ discovered_via: sitemap
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: '2025-05-16T12:55:48+02:00'
-fetched_at: null
+fetched_at: '2026-10-06T22:10:54+00:00'
 first_seen: '2026-10-06T00:30:15+00:00'
-last_changed: '2026-10-06T00:30:15+00:00'
-content_hash: sha256:4a1af41d843db8f4480afcc3bfe1dfe41e6ad90e6aeaf0ca732d2d7b55a32719
-words: 478
-status: stale
+last_changed: '2026-10-06T22:10:54+00:00'
+content_hash: sha256:49c10a3456ba43926d6fa8a9733ba3d15b96785372a7d4efc015f0622b7d2ef2
+words: 335
+status: active
+hint_source: llm
 ---
-
-Skip to content
-
-### + 216 71 749 100
-
-### webmaster\_ucar@ucar.rnu.tn
-
-### Avenue de la République BP 77-1054 Amilcar ​
 
 ## MOBILITY SCHOLARSHIP AT THE UNIVERSITY OF PISA (ITALY)WITHIN THE FRAMEWORK OF THE MARE PROJECT (Extended Deadline)
 
@@ -95,17 +88,3 @@ Email: tahar.jallouli@gmail.com and/or tahar.jallouli@ucar.tn
 
 - [Application\_Form\_Student\_Mare](https://ucar.rnu.tn/wp-content/uploads/2025/05/Application_Form_Student_Mare-2.docx)
 - [Mare\_learning-agreement](https://ucar.rnu.tn/wp-content/uploads/2025/05/Mare_learning-agreement-2.docx)
-
-Established in 1988, the University of Carthage (UCAR) is a Tunisian public institution dedicated to education and research. Operating under the supervision of the Ministry of Higher Education and Scientific Research,
-
-## Useful Links
-
-[Alumni](https://ucar.rnu.tn/alumni/)[Pro emploi](https://proemploi.ucar.rnu.tn)[PMO](https://pmo.ucar.rnu.tn/)[Addmission](http://www.concours.ucar.rnu.tn)[Projects](https://ucar.rnu.tn/projects/)[Jobs alert](https://ucar.rnu.tn/job-alert/)[News and Events](https://ucar.rnu.tn/events-et-news/)
-
-## Subscribe Now
-
-Don’t miss our future updates! Get Subscribed Today!
-
-©2024. University of Carthage. All Rights Reserved.
-
-Developed by Kawther JLASSI under the direction of Mr Mongi BESBES

@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: inscription
-hint_score: 7
-hint_keywords:
-- orientation universitaire
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:43:00+00:00'
 content_hash: sha256:0bc03c1980acf0aea080f274a159b9f28d1866e487944b829b87e94b792bcd7c
 words: 150
 status: active
+hint_source: llm
 ---
 
 # Consultation des résultats de la session principale d’orientation universitaire

@@ -14,11 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_agr3_Attestation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 14
-hint_keywords:
-- salarié
-- cotisations
+subtopic_hint: attestations
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -31,6 +29,7 @@ last_changed: '2026-10-05T20:48:39+00:00'
 content_hash: sha256:d6d152a18691b0c229ccf83709c8e6ea2893d40cdb6a39fba1be907df88ad577
 words: 189
 status: active
+hint_source: llm
 ---
 
 ## Attestation relative à la situation d'un travailleur non salarié en matière de paiement des cotisations.

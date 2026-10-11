@@ -15,11 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 9
-hint_keywords:
-- immatriculation
-- salarié
-- المؤجر
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=a03cc0c5-5e1a-4e56-9a7b-9b9e5f5f6bd3&groupId=18410
 render: html
@@ -33,6 +30,7 @@ last_changed: '2026-10-06T12:56:09+00:00'
 content_hash: sha256:c20655384ace4d77a5c1288544b1122b74194d3cef5fccbf22aaa5304ad753a8
 words: 193
 status: active
+hint_source: llm
 ---
 
 يتعين على المؤجر تقديم مطالب تسجيل أجرائه في اجل شهر من تاريخ انخراطه. بالنسبة للعملة المنتدبين بعد هذا التاريخ والذين لم يسبق تسجيلهم بالصندوق، يتعين على المؤجر أن يطلب تسجيلهم في أجل شهر بداية من تاريخ انتدابهم.

@@ -14,13 +14,9 @@ breadcrumb:
 - Emp_Secteur agr1_Attestations
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 22
-hint_keywords:
-- affiliation
-- immatriculation
-- employeur
-- cotisations
+subtopic_hint: attestations
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=121f4790-7085-42d1-b7ea-e4c5ac64397e&groupId=33103
 - https://www.cnss.tn/c/document_library/get_file?uuid=7c5d0f36-ee39-405f-93a7-b3ec9561f5b4&groupId=33103
@@ -35,6 +31,7 @@ last_changed: '2026-10-05T20:43:41+00:00'
 content_hash: sha256:dcfbda847988356727f9394ea75a5edb640cb256c810315ad4581b4570232556
 words: 312
 status: active
+hint_source: llm
 ---
 
 - [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_affiliation?secteur=$secteur)

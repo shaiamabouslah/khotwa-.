@@ -15,14 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 37
-hint_keywords:
-- affiliation
-- immatriculation
-- employeur
-- الانخراط
-- المؤجر
-- الاشتراكات
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=54b53074-9ee0-4ef4-9630-418d064a1cba&groupId=33103
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=b7198ccd-7b3c-4335-b93f-67b1a1f731b2&groupId=33103
@@ -38,6 +32,7 @@ last_changed: '2026-10-05T20:41:33+00:00'
 content_hash: sha256:f7b31369ac2f33010f6ba4870ea4b9a9a6e57acdb6cbf10ad024ce2a0590ce60
 words: 541
 status: active
+hint_source: llm
 ---
 
 - [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr3_affiliation?secteur=$secteur)

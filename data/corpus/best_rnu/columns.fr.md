@@ -9,9 +9,9 @@ title: Columns
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: studies
+domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:54:46+00:00'
 content_hash: sha256:7112134be993882f0e0d0ded885c01f09d8a9a9cfffdd65fd4e21e483a11f816
 words: 658
 status: active
+hint_source: llm
 ---
 
 # Columns

@@ -1,41 +1,54 @@
 [
  {
-  "url": "https://www.cnrps.nat.tn/fr/vous-etes-affilie-en-activite-vous-devez-savoir-ce-qui-suit",
+  "url": "http://fr.tunisie.gov.tn/annuaireadministration/471/11-caisse-nationale-d-assurance-maladie.htm",
   "status": "ok",
-  "final_url": "https://www.cnrps.nat.tn/fr/vous-etes-affilie-en-activite-vous-devez-savoir-ce-qui-suit",
+  "final_url": "http://fr.tunisie.gov.tn/annuaireadministration/471/11-caisse-nationale-d-assurance-maladie.htm",
   "render": "html",
-  "render_reason": "2432 visible words in static HTML",
+  "render_reason": "251 visible words in static HTML",
   "robots_allows_us": true,
   "blocks_ai_bots": [],
-  "sitemap": "",
-  "tls_valid": false,
-  "cms": "Drupal 8 (https://www.drupal.org)",
-  "title": "Vous êtes affilié en activité? Vous devez savoir ce qui suit.. | CNRPS"
+  "sitemap": "http://fr.tunisie.gov.tn/sitemap.xml",
+  "tls_valid": true,
+  "cms": "",
+  "title": "Annuaire d&#039;administration - Portail du Gouvernement Tunisien"
  },
  {
-  "url": "https://www.cnrps.nat.tn/fr/ceci-vous-interesse",
+  "url": "http://fr.tunisie.gov.tn/annuaireAdministration/466/11-caisse-nationale-de-la-retraite-et-de-la-prevoyance-sociale.htm",
   "status": "ok",
-  "final_url": "https://www.cnrps.nat.tn/fr/ceci-vous-interesse",
+  "final_url": "http://fr.tunisie.gov.tn/annuaireAdministration/466/11-caisse-nationale-de-la-retraite-et-de-la-pr%C3%A9voyance-sociale.htm",
   "render": "html",
-  "render_reason": "935 visible words in static HTML",
+  "render_reason": "285 visible words in static HTML",
   "robots_allows_us": true,
   "blocks_ai_bots": [],
-  "sitemap": "",
-  "tls_valid": false,
-  "cms": "Drupal 8 (https://www.drupal.org)",
-  "title": "Ceci vous intéresse | CNRPS"
+  "sitemap": "http://fr.tunisie.gov.tn/sitemap.xml",
+  "tls_valid": true,
+  "cms": "",
+  "title": "Annuaire d&#039;administration - Portail du Gouvernement Tunisien"
  },
  {
-  "url": "https://www.cnrps.nat.tn/fr/imprimes",
+  "url": "http://fr.tunisie.gov.tn/annuaireAdministration/191/11-siege-du-ministere-de-l-enseignement-superieur-et-de-la-recherche-scientifique.htm",
   "status": "ok",
-  "final_url": "https://www.cnrps.nat.tn/fr/imprimes",
+  "final_url": "http://fr.tunisie.gov.tn/annuaireAdministration/191/11-si%C3%A8ge-du-minist%C3%A8re-de-l-enseignement-sup%C3%A9rieur-et-de-la-recherche-scientifique.htm",
   "render": "html",
-  "render_reason": "1689 visible words in static HTML",
+  "render_reason": "188 visible words in static HTML",
   "robots_allows_us": true,
   "blocks_ai_bots": [],
-  "sitemap": "",
-  "tls_valid": false,
-  "cms": "Drupal 8 (https://www.drupal.org)",
-  "title": "Imprimés | CNRPS"
+  "sitemap": "http://fr.tunisie.gov.tn/sitemap.xml",
+  "tls_valid": true,
+  "cms": "",
+  "title": "Annuaire d&#039;administration - Portail du Gouvernement Tunisien"
+ },
+ {
+  "url": "http://fr.tunisie.gov.tn/annuaireAdministration/190/11-siege-du-ministere-de-l-education.htm",
+  "status": "ok",
+  "final_url": "http://fr.tunisie.gov.tn/annuaireAdministration/190/11-si%C3%A8ge-du-minist%C3%A8re-de-l-%C3%A9ducation.htm",
+  "render": "html",
+  "render_reason": "169 visible words in static HTML",
+  "robots_allows_us": true,
+  "blocks_ai_bots": [],
+  "sitemap": "http://fr.tunisie.gov.tn/sitemap.xml",
+  "tls_valid": true,
+  "cms": "",
+  "title": "Annuaire d&#039;administration - Portail du Gouvernement Tunisien"
  }
 ]

@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/Appel-a-candidature-MITACS-2025-2026.pdf
@@ -26,6 +26,7 @@ last_changed: '2026-10-06T00:22:25+00:00'
 content_hash: sha256:edb394f0ff03fe571f84e419a4ad60bcc88dae7438abc8d76b18b042ca9ff179
 words: 70
 status: active
+hint_source: llm
 ---
 
 # Appel à candidature MITACS 2025-2026

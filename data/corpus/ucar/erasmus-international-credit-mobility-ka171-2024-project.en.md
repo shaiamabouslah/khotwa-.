@@ -11,10 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: mobilite
-hint_score: 17
-hint_keywords:
-- erasmus
-- credit mobility
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -23,19 +21,12 @@ http_last_modified: null
 sitemap_lastmod: '2025-09-11T13:04:25+02:00'
 fetched_at: null
 first_seen: '2026-10-06T00:32:15+00:00'
-last_changed: '2026-10-06T00:32:15+00:00'
-content_hash: sha256:302518d23958520f125c47c40288c993138631a241727c1faf1e716356f23510
-words: 267
-status: stale
+last_changed: '2026-10-06T22:13:12+00:00'
+content_hash: sha256:1253f2765d0f9d37a88534b3479d39abf303f5bf4a7103273df41d40096446f9
+words: 121
+status: active
+hint_source: llm
 ---
-
-Skip to content
-
-### + 216 71 749 100
-
-### webmaster\_ucar@ucar.rnu.tn
-
-### Avenue de la République BP 77-1054 Amilcar ​
 
 ## Erasmus+ International Credit Mobility KA171 (2024 Project)
 
@@ -69,17 +60,3 @@ Skip to content
 - One-time travel grant depending on distance (see table below).
 
   [ANNOUNCEMENT ERASMUS+ INTERNATIONAL CREDIT MOBILITY KA171 (2024 PROJECT) FIRST ROUND SELECTION PROCEDURES FOR INCOMING STUDENTS](https://ucar.rnu.tn/wp-content/uploads/2025/09/ANNOUNCEMENT-ERASMUS-INTERNATIONAL-CREDIT-MOBILITY-KA171-2024-PROJECT-FIRST-ROUND-SELECTION-PROCEDURES-FOR-INCOMING-STUDENTS-2.docx)
-
-Established in 1988, the University of Carthage (UCAR) is a Tunisian public institution dedicated to education and research. Operating under the supervision of the Ministry of Higher Education and Scientific Research,
-
-## Useful Links
-
-[Alumni](https://ucar.rnu.tn/alumni/)[Pro emploi](https://proemploi.ucar.rnu.tn)[PMO](https://pmo.ucar.rnu.tn/)[Addmission](http://www.concours.ucar.rnu.tn)[Projects](https://ucar.rnu.tn/projects/)[Jobs alert](https://ucar.rnu.tn/job-alert/)[News and Events](https://ucar.rnu.tn/events-et-news/)
-
-## Subscribe Now
-
-Don’t miss our future updates! Get Subscribed Today!
-
-©2024. University of Carthage. All Rights Reserved.
-
-Developed by Kawther JLASSI under the direction of Mr Mongi BESBES

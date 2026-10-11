@@ -9,9 +9,9 @@ title: Boxes
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: studies
+domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 1
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:54:56+00:00'
 content_hash: sha256:eeeed19009a573b47668b14e11f6464af0561b37c8087c65f77e9dabf59bc1d1
 words: 379
 status: active
+hint_source: llm
 ---
 
 # Boxes

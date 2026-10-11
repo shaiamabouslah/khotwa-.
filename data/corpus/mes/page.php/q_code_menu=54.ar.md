@@ -11,21 +11,21 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: equivalence
-hint_score: 1
-hint_keywords:
-- معادلة
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:30:14+00:00'
+fetched_at: '2026-10-07T20:09:59+00:00'
 first_seen: '2026-10-05T20:25:36+00:00'
-last_changed: '2026-10-06T00:30:14+00:00'
+last_changed: '2026-10-07T20:09:59+00:00'
 content_hash: sha256:e67c9bbd266929cd5af07de3d2e95b2f566b6ce12803061b831f77632960b909
-words: 457
+words: 349
 status: active
+hint_source: llm
 ---
 
 # التعليم العالي الخاّص

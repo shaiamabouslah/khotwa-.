@@ -11,10 +11,9 @@ breadcrumb:
 - Consultation des résultats de la session des excellents
 doc_type: procedure
 domain_hint: studies
-subtopic_hint: inscription
-hint_score: 1
-hint_keywords:
-- orientation universitaire
+subtopic_hint: releves-attestations
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:43:00+00:00'
 content_hash: sha256:e88357390601cd446c672e48c0808dc3e3475b41c49c0152ada701bad65688d2
 words: 165
 status: active
+hint_source: llm
 ---
 
 # Consultation des résultats de la session des excellents

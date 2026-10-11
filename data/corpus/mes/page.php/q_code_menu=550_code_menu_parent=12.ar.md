@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: null
-hint_score: 0
+hint_score: 1
 hint_keywords: []
 forms: []
 render: html
@@ -19,12 +19,13 @@ discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:30:23+00:00'
+fetched_at: '2026-10-07T20:13:18+00:00'
 first_seen: '2026-10-05T20:25:44+00:00'
-last_changed: '2026-10-06T00:30:23+00:00'
+last_changed: '2026-10-07T20:13:21+00:00'
 content_hash: sha256:fd6f12c34b3e74d233241b36635a649fa1538037b090b29a043dfce86f9bea39
-words: 254
+words: 206
 status: active
+hint_source: llm
 ---
 
 # السيد الوزير

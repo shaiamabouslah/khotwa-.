@@ -10,22 +10,22 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: bourses
-hint_score: 1
-hint_keywords:
-- المنح
+subtopic_hint: inscription
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:30:15+00:00'
+fetched_at: '2026-10-07T20:12:45+00:00'
 first_seen: '2026-10-05T20:25:38+00:00'
-last_changed: '2026-10-06T00:30:15+00:00'
+last_changed: '2026-10-07T20:12:52+00:00'
 content_hash: sha256:0e18a7941da10f3b072b7e6042c85c142f1979a5fd6ed375e055d5823039fd97
-words: 982
+words: 712
 status: active
+hint_source: llm
 ---
 
 # الطلبة

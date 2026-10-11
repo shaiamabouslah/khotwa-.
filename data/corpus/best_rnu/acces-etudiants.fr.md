@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -24,7 +24,8 @@ first_seen: '2026-10-05T20:30:09+00:00'
 last_changed: '2026-10-06T00:05:03+00:00'
 content_hash: sha256:c67f5f61b539ad0e21c4656eb909bdc480d3effe486c51284c450b3520ed825e
 words: 36
-status: active
+status: removed
+hint_source: llm
 ---
 
 # Accès étudiants

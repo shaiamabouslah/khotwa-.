@@ -10,10 +10,9 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: mobilite
-hint_score: 1
-hint_keywords:
-- mobilité
+subtopic_hint: bourses
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -26,6 +25,7 @@ last_changed: '2026-10-06T00:22:21+00:00'
 content_hash: sha256:289fa7b1f78e5ebf683b3a71e08e62aced24012c5baf172914a9fa0c502e5033
 words: 120
 status: active
+hint_source: llm
 ---
 
 # Programme de bourses d’études Ingénieur/Ingénieur – 2025

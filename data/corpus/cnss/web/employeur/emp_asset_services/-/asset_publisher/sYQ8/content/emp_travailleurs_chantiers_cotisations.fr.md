@@ -15,13 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 36
-hint_keywords:
-- affiliation
-- immatriculation
-- employeur
-- salarié
-- cotisations
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=21fa083f-7c10-46f9-96e1-875611e62962&groupId=33103
 - https://www.cnss.tn/c/document_library/get_file?uuid=bf0ff6a0-faaf-4509-884d-374d23951c66&groupId=33103
@@ -30,12 +25,13 @@ discovered_via: link
 source_updated: '2019-06-18'
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-05T20:39:14+00:00'
+fetched_at: '2026-10-10T20:34:55+00:00'
 first_seen: '2026-10-05T20:39:14+00:00'
-last_changed: '2026-10-05T20:39:14+00:00'
-content_hash: sha256:450e62152b7410fcf0d6b1c06a93a0e422f75ce43e9bdeab348d7d21c7972516
-words: 347
+last_changed: '2026-10-10T20:34:55+00:00'
+content_hash: sha256:8dcfae1dd60229f68c38e2765aad5228963e5481ffeafe349d9de0682700d85b
+words: 270
 status: active
+hint_source: llm
 ---
 
 - [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_affiliation?secteur=$secteur)
@@ -53,7 +49,7 @@ Le taux des cotisations de sécurité sociale est fixé à 7,5% réparti  comme 
 - 5% à la charge de l'employeur
 - 2,5% à la charge du Salarié
 
-**Montant des cotisations à partir du  1er janvier 2021**
+**Montant des cotisations à partir du  janvier 2026**
 
 | Assiette des cotisations  -en Dinars- | montant des cotisations mensuelles -en Dinars- | | |
 | Employeur | Salarié | Total |

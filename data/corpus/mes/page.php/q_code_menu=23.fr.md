@@ -9,9 +9,9 @@ title: تكوين
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: studies
+domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 1
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:30:04+00:00'
 content_hash: sha256:0644ebdca63c25601a9858e8651df1e29aaf4da67ccfd0fde29dcc49993caaa5
 words: 55
 status: active
+hint_source: llm
 ---
 
 # تكوين

@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 13
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:14:10+00:00'
 content_hash: sha256:a9027b84c68b6916da1d63e812f225c8c9665b1bac98d22c8098eadde9a204a3
 words: 302
 status: active
+hint_source: llm
 ---
 
 # Vous êtes fils de parents tunisiens résidant à l'étranger et vous postulez à une bourse ou un prêt ?

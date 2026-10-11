@@ -11,10 +11,9 @@ breadcrumb:
 - Obtention des certificats d’adhésion
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: attestations
-hint_score: 3
-hint_keywords:
-- certificat d'adhésion
+subtopic_hint: affiliation-cnss
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:43:48+00:00'
 content_hash: sha256:ae226f8c96b7a0015d805c36f36d35d5304ec7fa06b25a280ffbefb93820b35c
 words: 193
 status: active
+hint_source: llm
 ---
 
 # Obtention des certificats d’adhésion

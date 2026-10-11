@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -19,12 +19,13 @@ discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:30:28+00:00'
-first_seen: '2026-10-06T00:30:28+00:00'
-last_changed: '2026-10-06T00:30:28+00:00'
+fetched_at: '2026-10-07T20:13:37+00:00'
+first_seen: '2026-10-07T20:13:41+00:00'
+last_changed: '2026-10-07T20:13:41+00:00'
 content_hash: sha256:987aa3dfc47328b2f97e2df8c37c15c210b9ece59127051efb288cdccd650dbc
-words: 112
+words: 64
 status: active
+hint_source: llm
 ---
 
 # المهام والمشمولات

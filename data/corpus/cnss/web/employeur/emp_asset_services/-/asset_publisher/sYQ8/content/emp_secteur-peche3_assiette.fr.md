@@ -15,14 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 39
-hint_keywords:
-- affiliation
-- immatriculation
-- employeur
-- salarié
-- cotisations
-- déclaration des salaires
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=21fa083f-7c10-46f9-96e1-875611e62962&groupId=33103
 - https://www.cnss.tn/c/document_library/get_file?uuid=72507d42-7a98-4320-9bc9-6245955da3bc&groupId=33103
@@ -38,6 +32,7 @@ last_changed: '2026-10-05T20:44:57+00:00'
 content_hash: sha256:70c906dc0f10fb43fd61c3a1cb12c4d2fa387c8a727f7a23b2775ab719d1087a
 words: 562
 status: active
+hint_source: llm
 ---
 
 - [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_affiliation?secteur=$secteur)

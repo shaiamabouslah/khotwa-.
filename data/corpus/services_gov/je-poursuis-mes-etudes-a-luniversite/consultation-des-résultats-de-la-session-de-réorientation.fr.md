@@ -11,11 +11,9 @@ breadcrumb:
 - Consultation des résultats de la session de réorientation
 doc_type: procedure
 domain_hint: studies
-subtopic_hint: inscription
-hint_score: 9
-hint_keywords:
-- orientation universitaire
-- réorientation
+subtopic_hint: releves-attestations
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -28,6 +26,7 @@ last_changed: '2026-10-05T23:43:00+00:00'
 content_hash: sha256:024c172b697b11055c577ac0985be0243549b93f7f56de1495ebaeed58075b4b
 words: 140
 status: active
+hint_source: llm
 ---
 
 # Consultation des résultats de la session de réorientation

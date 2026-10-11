@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -19,12 +19,13 @@ discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:30:34+00:00'
+fetched_at: '2026-10-07T20:14:07+00:00'
 first_seen: '2026-10-05T20:25:58+00:00'
-last_changed: '2026-10-06T00:30:34+00:00'
+last_changed: '2026-10-07T20:14:10+00:00'
 content_hash: sha256:e1403c8ef7dcbdb0a2d624d41f5f62193f3fbde28029fc85a682fe617db38517
-words: 82
+words: 34
 status: active
+hint_source: llm
 ---
 
 # عنوان الوزارة

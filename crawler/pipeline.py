@@ -40,6 +40,18 @@ def slugify(text: str, max_len: int = 60) -> str:
     return text[:max_len].rstrip("-") or "page"
 
 
+_URL_LANG_RE = re.compile(r"/(ar|fr|en)/")
+
+
+def url_lang_hint(url: str) -> str | None:
+    """A bilingual form (e.g. a CNSS PDF with French and Arabic labels side by side)
+    can't be reliably language-detected from its own text -- the ratio of French to
+    Arabic words varies per form and flips the detector either way. A /ar/ or /fr/
+    path segment is a much stronger, site-authored signal of intended language."""
+    m = _URL_LANG_RE.search(urllib.parse.urlsplit(url).path)
+    return m.group(1) if m else None
+
+
 def url_segments(url: str) -> list[str]:
     """URL path (+ query) as safe folder names: the corpus mirrors each site's structure."""
     parts = urllib.parse.urlsplit(url)
@@ -187,7 +199,7 @@ class Crawler:
                 "section": part.section, "markdown": part.markdown, "title": title,
                 "breadcrumb": ex.breadcrumb + ([part.section] if part.section and part.section != "intro" else []),
                 "source_updated": ex.source_updated, "words": words, "forms": links,
-                "doc_type": override.get("doc_type") or doc_type(url, title, mode == "pdf", site.get("doc_types")),
+                "doc_type": override.get("doc_type") or doc_type(url, title, mode == "pdf", site.get("doc_types"), part.markdown),
                 "domain_hint": override.get("domain") or hint.domain,
                 "subtopic_hint": override.get("subtopic") or hint.subtopic,
                 "hint_score": hint.score, "hint_keywords": hint.matched[:6],
@@ -267,10 +279,21 @@ class Crawler:
         ctx = {"key": site_key, "site": site, "http": self.new_session(), "seen": set(), "cache": {}, "run_hashes": {}}
         counts: Counter = Counter()
         try:
-            found = Discoverer(ctx["http"], site).run(ctx["cache"])
+            renderer = None
+            if site.get("render") == "js":
+                renderer = ctx.setdefault("renderer", BrowserRenderer(self.defaults["user_agent"]))
+                if not renderer.available():
+                    log.error("%s: JS site, install the browser renderer: "
+                              "pip install -r requirements-js.txt && playwright install chromium", site_key)
+                    renderer = None
+            found = Discoverer(ctx["http"], site, renderer).run(ctx["cache"])
             for page in self.reg.get("pages", []):          # pinned pages are always included
                 if page["site"] == site_key and canonical(page["url"]) not in {f.url for f in found}:
-                    found.append(Found(canonical(page["url"]), "pinned"))
+                    # Keep the fragment as-is (not canonical()'d away): a hash-routed SPA
+                    # (e.g. rne_app's #/demande-immatriculation-landing) needs it to reach
+                    # the right view. page_overrides lookups still match since they also
+                    # key off canonical(url) at lookup time.
+                    found.append(Found(page["url"], "pinned"))
             log.info("%s: %d URLs discovered", site_key, len(found))
             if not found:
                 log.error("%s: nothing discovered (site down?) - existing documents kept as stale", site_key)
@@ -289,8 +312,9 @@ class Crawler:
                             counts["error"] += 1
                             continue
                         raw, mode, fresh = got
+                        doc_lang = lang or url_lang_hint(url)
                         for doc in self.documents(ctx, url, raw, mode):
-                            counts[self.sync_doc(ctx, base, url, lang, doc, mode, fresh, f)] += 1
+                            counts[self.sync_doc(ctx, base, url, doc_lang, doc, mode, fresh, f)] += 1
                     except Exception:   # one broken page never stops the site
                         log.exception("crash on %s", url)
                         counts["error"] += 1

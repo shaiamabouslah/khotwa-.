@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 8
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:14:10+00:00'
 content_hash: sha256:e9441454ce99480455a09f98b74e6e80801253bd44c48436f7f0d2eec51799ae
 words: 258
 status: active
+hint_source: llm
 ---
 
 # Vous êtes en mastère ou en cycle agrégatif, et vous postulez à une bourse ou un prêt ?

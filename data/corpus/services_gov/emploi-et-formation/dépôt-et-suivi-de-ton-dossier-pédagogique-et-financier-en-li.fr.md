@@ -10,9 +10,9 @@ section: Dépôt et suivi de ton dossier pédagogique et financier en ligne
 breadcrumb:
 - Dépôt et suivi de ton dossier pédagogique et financier en ligne
 doc_type: procedure
-domain_hint: null
-subtopic_hint: null
-hint_score: 0
+domain_hint: studies
+subtopic_hint: inscription
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -26,6 +26,7 @@ last_changed: '2026-10-05T23:45:59+00:00'
 content_hash: sha256:e11aafd31681d8ddc01318252e1224da4d0c36867924c868a724e9c7e63b954b
 words: 119
 status: active
+hint_source: llm
 ---
 
 # Dépôt et suivi de ton dossier pédagogique et financier en ligne

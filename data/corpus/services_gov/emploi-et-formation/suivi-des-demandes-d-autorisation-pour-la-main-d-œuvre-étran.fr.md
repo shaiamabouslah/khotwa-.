@@ -11,10 +11,9 @@ breadcrumb:
 - Suivi des demandes d’autorisation pour la main-d’œuvre étrangère (emploi des étrangers)
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: recherche-emploi
-hint_score: 1
-hint_keywords:
-- emploi à l'étranger
+subtopic_hint: affiliation-cnss
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:45:54+00:00'
 content_hash: sha256:4268b7d33cdd1f22c896d6780f8ecca1d3a769e57df805447a0d0e9cf6d1268d
 words: 174
 status: active
+hint_source: llm
 ---
 
 # Suivi des demandes d’autorisation pour la main-d’œuvre étrangère (emploi des étrangers)

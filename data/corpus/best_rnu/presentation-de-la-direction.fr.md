@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:04:03+00:00'
 content_hash: sha256:a91061525d60439c650931b6b67bf505aac0580460a65387a5d02655c44d7179
 words: 171
 status: active
+hint_source: llm
 ---
 
 # Présentation de la Direction

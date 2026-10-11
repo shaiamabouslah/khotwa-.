@@ -11,10 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 8
-hint_keywords:
-- قرض جامعي
-- القروض الجامعية
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -27,6 +25,7 @@ last_changed: '2026-10-06T00:27:24+00:00'
 content_hash: sha256:5514e36045b8cd5d6acb514dbfe0e6261b9c1e9cc9983ca8f02a4f37aff23eee
 words: 328
 status: active
+hint_source: llm
 ---
 
 القرض الجامعي هو مساعدة مالية تُمنح للطالب وفق شروط وضوابط محددة، لتمكينه من تغطية جزء من نفقات دراسته، على أن يلتزم بإرجاع المبالغ المنتفَع بها وفق آجال وشروط السداد المعمول بها**.**

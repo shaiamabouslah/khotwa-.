@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 1
-hint_keywords:
-- cotisations
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -26,6 +25,7 @@ last_changed: '2026-10-05T23:43:47+00:00'
 content_hash: sha256:f8d7d34ad564e31844b41456e893393fa2f336867b2798c2f4b1933fb1465d98
 words: 57
 status: active
+hint_source: llm
 ---
 
 ### Je souhaite bénéficier de la couverture sociale

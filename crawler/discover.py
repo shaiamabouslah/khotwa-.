@@ -56,11 +56,14 @@ def _matches(url: str, patterns) -> bool:
 
 
 class Discoverer:
-    def __init__(self, http: PoliteSession, site: dict):
+    def __init__(self, http: PoliteSession, site: dict, renderer=None):
         self.http = http
         self.site = site
         self.cfg = site.get("discover", {})
         self.host = _bare_host(site["base_url"])
+        # A JS-only site (SPA shell, no links in the raw HTML) needs the page actually
+        # rendered to see its navigation -- plain HTTP fetch finds 0 links on these.
+        self.renderer = renderer if site.get("render") == "js" else None
 
     def clean(self, url: str) -> str:
         url = canonical(url)
@@ -147,14 +150,24 @@ class Discoverer:
                 results.setdefault(url, Found(url, "seed" if depth == 0 else "link"))
             if depth >= self.cfg.get("max_depth", 2) or not (follow or self.cfg.get("keep")):
                 continue
-            if url not in fetched_pages:
-                resp = self.http.fetch(url)
-                if not resp.ok:
+            if self.renderer is not None:
+                # Not cached in fetched_pages (Response-shaped): the later content fetch
+                # re-renders it anyway via pipeline.py's own render:js handling.
+                try:
+                    page_content = self.renderer.render(url)
+                except Exception:
+                    log.warning("%s: JS render failed during discovery, skipping", url)
                     continue
-                fetched_pages[url] = resp
-            if fetched_pages[url].content[:5] == b"%PDF-":
+            else:
+                if url not in fetched_pages:
+                    resp = self.http.fetch(url)
+                    if not resp.ok:
+                        continue
+                    fetched_pages[url] = resp
+                page_content = fetched_pages[url].content
+            if page_content[:5] == b"%PDF-":
                 continue
-            for link in self.links(url, fetched_pages[url].content):
+            for link in self.links(url, page_content):
                 if link in seen or not self.allowed_url(link):
                     continue
                 if _matches(link, follow):

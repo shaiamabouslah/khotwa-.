@@ -11,10 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 2
-hint_keywords:
-- boursier
-- non-boursier
+hint_score: 10
+hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2020/06/Manuel-de-proc%C3%A9dures.pdf
 render: html
@@ -28,6 +26,7 @@ last_changed: '2026-10-06T00:03:50+00:00'
 content_hash: sha256:ed66b0695dc188debf84a8486d827183b482890f6bd466e672f836b8982fcc8b
 words: 148
 status: active
+hint_source: llm
 ---
 
 # Procédures

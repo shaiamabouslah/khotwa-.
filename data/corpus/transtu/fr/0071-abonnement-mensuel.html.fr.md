@@ -9,9 +9,9 @@ title: Abonnement mensuel
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: studies
+domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 1
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:17:14+00:00'
 content_hash: sha256:7ac7ea5dd595a0cfcb13eeedb816862070ff936ae11ed5215ef6c9bf7fb51e0f
 words: 187
 status: removed
+hint_source: llm
 ---
 
 - [Accueil](https://www.transtu.tn/fr/) ›

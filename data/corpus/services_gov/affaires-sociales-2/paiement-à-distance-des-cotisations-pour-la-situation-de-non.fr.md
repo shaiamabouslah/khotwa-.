@@ -11,10 +11,9 @@ breadcrumb:
 - Paiement à distance des cotisations pour la situation de non-exercice professionnel spéciale
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 7
-hint_keywords:
-- cotisations
+subtopic_hint: attestations
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:50:10+00:00'
 content_hash: sha256:530161a43f6da8984735209c8d09c0b943bbc55d8476c43080e1eecedff0e415
 words: 224
 status: active
+hint_source: llm
 ---
 
 # Paiement à distance des cotisations pour la situation de non-exercice professionnel spéciale

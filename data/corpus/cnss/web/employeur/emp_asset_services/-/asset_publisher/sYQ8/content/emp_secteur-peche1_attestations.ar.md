@@ -14,15 +14,9 @@ breadcrumb:
 - Emp_Secteur pêche1_Attestations
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 23
-hint_keywords:
-- affiliation
-- immatriculation
-- employeur
-- الانخراط
-- المؤجر
-- الاشتراكات
+subtopic_hint: attestations
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=e9402dd5-5950-4bad-a2ea-9aa78170748f&groupId=33103
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=ea5a9fe3-d9fd-4e63-9c17-3826a49fcd2e&groupId=33103
@@ -37,6 +31,7 @@ last_changed: '2026-10-05T20:44:24+00:00'
 content_hash: sha256:226116c02cc0a72e7e169cdbc423fcff8835c778322d59e90b22d40c9cf35c64
 words: 261
 status: active
+hint_source: llm
 ---
 
 - [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation?secteur=$secteur)

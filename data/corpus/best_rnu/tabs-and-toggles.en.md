@@ -9,9 +9,9 @@ title: Tabs and Toggles
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: studies
+domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 1
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:55:30+00:00'
 content_hash: sha256:67f647f585c2d8a422f8f57a877cfc3f3557263c6053a7c10c53f4a7837658cd
 words: 470
 status: active
+hint_source: llm
 ---
 
 # Tabs and Toggles

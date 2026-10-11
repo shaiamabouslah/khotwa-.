@@ -15,12 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 18
-hint_keywords:
-- affiliation
-- salarié
-- انخراط
-- الانخراط
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=dbcf017e-b45a-4306-97b3-7f2e12e67fb8&groupId=54202
 render: html
@@ -34,6 +30,7 @@ last_changed: '2026-10-06T13:06:01+00:00'
 content_hash: sha256:3fed3f1e5b182d1e708c40c840e82d62f6c72a7ff4a94c273bd2c7283b48eb27
 words: 205
 status: active
+hint_source: llm
 ---
 
 الانخراط بأنظمة الضمان الاجتماعي اختياري بالنسبة  للعامل التونسي بالخارج. يمكنه القيام بإجراءات الانخراط في الشهر الذي يلي تاريخ شروعه في النشاط المهني.

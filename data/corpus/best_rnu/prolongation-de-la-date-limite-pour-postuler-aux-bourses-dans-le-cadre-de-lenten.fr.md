@@ -10,10 +10,9 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: stages-pfe
-hint_score: 1
-hint_keywords:
-- pfe
+subtopic_hint: bourses
+hint_score: 10
+hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/Prolonguation-Mitacs-2022-2023.pdf
 render: html
@@ -27,6 +26,7 @@ last_changed: '2026-10-06T00:21:32+00:00'
 content_hash: sha256:93c6ae268a40ee10649c2a65fc2d160fb3e6faaf451ee60db8efa44fdea9a430
 words: 68
 status: active
+hint_source: llm
 ---
 
 # Prolongation de la date limite pour postuler aux bourses dans le cadre de l’entente avec Mitacs

@@ -15,10 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 4
-hint_keywords:
-- salarié
-- الاشتراكات
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -31,6 +29,7 @@ last_changed: '2026-10-05T20:45:12+00:00'
 content_hash: sha256:40b40da6437455d21a7b48e826b59d03050496e6642bf29a33bdafb8276d8e2d
 words: 426
 status: active
+hint_source: llm
 ---
 
 تسند إعانة للعمال الذين فقدوا شغلهم لأسباب اقتصادية أو فنية أو عند غلق المؤسسة نهائيا وبصفة فجئية دون احترام الإجراءات المنصوص عليها بمجلة الشغل.

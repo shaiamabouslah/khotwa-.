@@ -14,11 +14,9 @@ breadcrumb:
 - Non_Sal_autres_tte_Affiliation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 18
-hint_keywords:
-- affiliation
-- salarié
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=8b43aabd-94d3-4a85-88b6-b614c2dcfa4e&groupId=54202
 - https://www.cnss.tn/c/document_library/get_file?uuid=a5f2f8bb-0b66-457b-8795-93534534cb65&groupId=54202
@@ -33,6 +31,7 @@ last_changed: '2026-10-06T13:05:59+00:00'
 content_hash: sha256:c4585ca52df257b1d361ea1e6b3661de06a66edddb3141cd4ce31d43b1b5a387
 words: 296
 status: active
+hint_source: llm
 ---
 
 L'affiliation au régime de sécurité sociale est facultative pour les travailleurs tunisiens à l'Etranger. L'affiliation intervient dans le mois qui suit le début de l'activité.

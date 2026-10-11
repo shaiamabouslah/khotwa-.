@@ -1,0 +1,5 @@
+00:30:48 INFO    sicad: 30 URLs discovered
+00:32:13 INFO    sicad done: {'new': 30}
+
+Summary: {'new': 30}
+Corpus: data/corpus/ (catalog.jsonl)  History: data/state/changelog.jsonl  Log: data/state/crawl.log

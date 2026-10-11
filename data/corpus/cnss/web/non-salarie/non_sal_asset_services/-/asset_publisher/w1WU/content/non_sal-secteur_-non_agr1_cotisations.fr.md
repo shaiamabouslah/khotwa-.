@@ -14,12 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_ non_agr1_Cotisations
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 23
-hint_keywords:
-- affiliation
-- salarié
-- cotisations
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=2b4c5a74-61ee-438f-a8ce-7770990b5b9a&groupId=54202
 render: html
@@ -33,6 +30,7 @@ last_changed: '2026-10-05T20:52:06+00:00'
 content_hash: sha256:0d9f6146a308698a0db9e68e2f1afe55c9eb6fe7bfdb8530f0774f3c44c6e942
 words: 376
 status: active
+hint_source: llm
 ---
 
 ## Assiette des cotisations

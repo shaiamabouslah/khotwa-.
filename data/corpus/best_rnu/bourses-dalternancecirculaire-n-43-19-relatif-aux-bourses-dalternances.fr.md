@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 8
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/Engagement-PFE-21-22.pdf
 - https://best.rnu.tn/wp-content/uploads/2019/10/engagement-alternance-21-22.pdf
@@ -31,6 +30,7 @@ last_changed: '2026-10-05T23:46:04+00:00'
 content_hash: sha256:a0aea4e0e569c73c4eed56f0342b2d8f4173337e978c87dae1e3c8d71e263f4c
 words: 444
 status: active
+hint_source: llm
 ---
 
 # Bourses d’alternance:Circulaire N° 43/19 relatif aux bourses d’alternances

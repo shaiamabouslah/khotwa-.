@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -19,12 +19,13 @@ discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:30:04+00:00'
-first_seen: '2026-10-06T00:30:04+00:00'
-last_changed: '2026-10-06T00:30:04+00:00'
+fetched_at: '2026-10-07T20:09:51+00:00'
+first_seen: '2026-10-07T20:09:51+00:00'
+last_changed: '2026-10-07T20:09:51+00:00'
 content_hash: sha256:08552fd248db37fba731099e6c1c11314dd5ad350d3e53f570e1f0dabef044be
-words: 478
+words: 250
 status: active
+hint_source: llm
 ---
 
 # الإحصائيات والمؤشرات

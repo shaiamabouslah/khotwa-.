@@ -14,13 +14,9 @@ breadcrumb:
 - Emp_Secteur pêche1_Attestations
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 25
-hint_keywords:
-- affiliation
-- immatriculation
-- employeur
-- cotisations
+subtopic_hint: attestations
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=121f4790-7085-42d1-b7ea-e4c5ac64397e&groupId=33103
 - https://www.cnss.tn/c/document_library/get_file?uuid=7c5d0f36-ee39-405f-93a7-b3ec9561f5b4&groupId=33103
@@ -35,6 +31,7 @@ last_changed: '2026-10-05T20:44:22+00:00'
 content_hash: sha256:bc7211a034989768cf08cc18af4fddcb87c31bb158204e38e5614ed07895682a
 words: 329
 status: active
+hint_source: llm
 ---
 
 - [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation?secteur=$secteur)

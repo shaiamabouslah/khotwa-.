@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 7
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:14:10+00:00'
 content_hash: sha256:5ce496db1f4645f3c1a32d9235c217be2dd888bdb3c9d88eca6a269cb1ac7b9e
 words: 105
 status: active
+hint_source: llm
 ---
 
 # Vous êtes étranger et vous voulez postuler à une bourse !

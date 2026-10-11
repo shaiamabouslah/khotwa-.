@@ -11,10 +11,9 @@ breadcrumb:
 - Consultation de la répartition globale et du classement selon le type de baccalauréat
 doc_type: procedure
 domain_hint: studies
-subtopic_hint: inscription
-hint_score: 3
-hint_keywords:
-- orientation universitaire
+subtopic_hint: releves-attestations
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:43:00+00:00'
 content_hash: sha256:8de9dda709c7280eab9a9a1a9602173300b62fe4438351269f265660b218437e
 words: 182
 status: active
+hint_source: llm
 ---
 
 # Consultation de la répartition globale et du classement selon le type de baccalauréat

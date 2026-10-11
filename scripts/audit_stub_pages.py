@@ -12,6 +12,8 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 ROOT = Path(__file__).resolve().parent.parent
 CORPUS = ROOT / "data" / "corpus"
 MIN_WORDS = 40
@@ -51,10 +53,8 @@ def main():
     for site in sorted(by_site, key=lambda s: -len(by_site[s])):
         docs = by_site[site]
         print(f"{site}: {len(docs)} flagged")
-        for wc, path in sorted(docs)[:5]:
+        for wc, path in sorted(docs):
             print(f"    {wc:3d}w  {path}")
-        if len(docs) > 5:
-            print(f"    ... and {len(docs) - 5} more")
 
 
 if __name__ == "__main__":

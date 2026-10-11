@@ -12,10 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 11
-hint_keywords:
-- bourse
-- boursier
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
@@ -28,6 +26,7 @@ last_changed: '2026-10-05T23:14:10+00:00'
 content_hash: sha256:8cbb2802f7940c6849ecc26e330964bff4e2e83973b56bbd188e7d49b25949f3
 words: 157
 status: active
+hint_source: llm
 ---
 
 # Vous êtes ancien étudiant et vous voulez renouveler votre bourse ou votre prêt

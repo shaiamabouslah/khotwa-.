@@ -51,7 +51,9 @@ domains:
       affiliation-cnss:
         fr: "Affiliation CNSS des salariés"
         ar: "انخراط الأجراء في الضمان الاجتماعي"
-        keywords: [affiliation, immatriculation, employeur, salarié, cotisations, déclaration des salaires, انخراط, الانخراط, تسجيل الأجراء, المؤجر, الاشتراكات]
+        # "immatriculation" alone was too generic -- it also matches RNE business registration
+        # (immatriculation d'entreprise), so it's qualified here to stay CNSS-specific.
+        keywords: [affiliation, immatriculation employeur, immatriculation à la cnss, immatriculation des salariés, employeur, salarié, cotisations, déclaration des salaires, انخراط, الانخراط, تسجيل الأجراء, المؤجر, الاشتراكات]
       employes-de-maison:
         fr: "Employés de maison"
         ar: "عملة المنازل"
@@ -71,7 +73,7 @@ domains:
       creation-entreprise:
         fr: "Création d'entreprise"
         ar: "بعث المؤسسات"
-        keywords: [création d'entreprise, créer une entreprise, promoteur, porteur de projet, registre national des entreprises, RNE, SARL, SUARL, بعث مؤسسة, بعث المؤسسات, الباعثين, السجل الوطني للمؤسسات]
+        keywords: [création d'entreprise, créer une entreprise, promoteur, porteur de projet, registre national des entreprises, RNE, SARL, SUARL, immatriculation entreprise, immatriculation au rne, personne physique commerçant, métier libéral, guichet rne, digigo, تسجيل مؤسسة, التسجيل عن بعد, إحداث مؤسسة, إحداث المؤسسات, بعث مؤسسة, بعث المؤسسات, الباعثين, السجل الوطني للمؤسسات]
       recherche-emploi:
         fr: "Recherche d'emploi et programmes d'insertion"
         ar: "البحث عن شغل وبرامج الإدماج"

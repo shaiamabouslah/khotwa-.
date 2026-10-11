@@ -1,0 +1,60 @@
+---
+doc_id: rne:/rne-public/assets/pdfs/check-liste-creation/RNEC003_creation_personne_physique_metier_liberale_FR.pdf#index
+site: rne
+org: Registre National des Entreprises (RNE)
+trust: official
+url: https://www.registre-entreprises.tn/rne-public/assets/pdfs/check-liste-creation/RNEC003_creation_personne_physique_metier_liberale_FR.pdf
+lang: fr
+title: Liste réferentielle des documents RNE C 003
+section: null
+breadcrumb: []
+doc_type: procedure
+domain_hint: employment
+subtopic_hint: creation-entreprise
+hint_score: 10
+hint_keywords: []
+forms: []
+render: pdf
+discovered_via: seed
+source_updated: null
+http_last_modified: Mon, 28 Sep 2026 11:38:24 GMT
+sitemap_lastmod: null
+fetched_at: '2026-10-07T21:00:45+00:00'
+first_seen: '2026-10-05T20:29:14+00:00'
+last_changed: '2026-10-07T21:00:46+00:00'
+content_hash: sha256:4925e04c35e5fef723ada62c7c74ed61b188365a0b13c438c349bc91d2fcf913
+words: 275
+status: active
+hint_source: llm
+---
+
+<!-- page 1 -->
+Liste réferentielle des documents RNE C 003
+Personne Physique Immatriculation 1.04
+Personne physique professionnel
+Documents demandés
+- Copie de la carte d’identification fiscale
+- Copie de la pièce d’identité
+** Pour les professionnels régis par des réglementations particulières (ex les architectes, les médecins, les experts comptables
+et les avocats, etc. Veuillez ajouter :
+- Copie de l’attestation d’inscription valable et délivrée par les ordres / organismes professionnels
+Délais
+- Pas de délais pour l'immatriculation des professionnels qui ont commencés l'activité avant le 05/02/2019 date de l'entrée en vigueur
+de la loi 52-2018 relative au registre national des entreprises.
+Par ailleurs, la non immatriculation n'est pas opposable au tiers (art. 16)
+- L'immatriculation des professionnels commençant l'activité après le 05/02/2019 date de l'entrée en vigueur de la loi 52-2018 relative
+au registre national des entreprises :
+dans le délai de 30 jours à compter de la date du début de l'activité mentionnée dans la carte d'identification fiscale
+Redevances à acquitter
+20 DINARS
+Observations
+- Tout dépôt après les délais légaux entraîne le paiement de pénalités de retard fixées à la moitié du montant de la redevance due au
+titre de l'opération concernée pour chaque mois de retard ou une partie de celui-ci
+- La publication se fait à travers le bulletin officiel électronique du CNRE, vingt-quatre heures après l'acceptation de la demande et
+sans être soumise à des procédures ou des frais supplémentaires
+
+| Documents demandés |
+| - Copie de la carte d’identification fiscale |
+
+| ** Pour les professionnels régis par des réglementations particulières (ex les architectes, les médecins, les experts comptables et les avocats, etc. Veuillez ajouter : |
+| - Copie de l’attestation d’inscription valable et délivrée par les ordres / organismes professionnels |

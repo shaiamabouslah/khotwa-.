@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: announcement
 domain_hint: studies
 subtopic_hint: mobilite
-hint_score: 9
-hint_keywords:
-- erasmus
+hint_score: 10
+hint_keywords: []
 forms:
 - https://ucar.rnu.tn/wp-content/uploads/2025/05/2025-Appel_candidature_student-3.pdf
 render: html
@@ -21,21 +20,14 @@ discovered_via: sitemap
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: '2025-05-02T13:01:12+02:00'
-fetched_at: '2026-10-06T00:27:52+00:00'
+fetched_at: '2026-10-06T22:10:47+00:00'
 first_seen: '2026-10-06T00:27:52+00:00'
-last_changed: '2026-10-06T00:27:52+00:00'
-content_hash: sha256:06089536ccfcc67a05bf130cba2774c656d142df6123bdce226baa81aa54ddba
-words: 359
+last_changed: '2026-10-06T22:10:48+00:00'
+content_hash: sha256:324ddf85c6f2e529da5756d1f42411626146a7f3a3589f156b7c6aa731476b75
+words: 226
 status: active
+hint_source: llm
 ---
-
-Skip to content
-
-### + 216 71 749 100
-
-### webmaster\_ucar@ucar.rnu.tn
-
-### Avenue de la République BP 77-1054 Amilcar ​
 
 ## CALL FOR APPLICATIONS FOR AN ERASMUS+ MOBILITY SCHOLARSHIP AT ÇUKUROVA UNIVERSITY (Turkey)
 
@@ -90,17 +82,3 @@ Interested students must submit their application files to the **Registry Office
 - **Mobility project (Learning Agreement)** approved and signed by the Director and Director of Studies or Department Head
 
 - [Appel\_candidature\_student](https://ucar.rnu.tn/wp-content/uploads/2025/05/2025-Appel_candidature_student-3.pdf)
-
-Established in 1988, the University of Carthage (UCAR) is a Tunisian public institution dedicated to education and research. Operating under the supervision of the Ministry of Higher Education and Scientific Research,
-
-## Useful Links
-
-[Alumni](https://ucar.rnu.tn/alumni/)[Pro emploi](https://proemploi.ucar.rnu.tn)[PMO](https://pmo.ucar.rnu.tn/)[Addmission](http://www.concours.ucar.rnu.tn)[Projects](https://ucar.rnu.tn/projects/)[Jobs alert](https://ucar.rnu.tn/job-alert/)[News and Events](https://ucar.rnu.tn/events-et-news/)
-
-## Subscribe Now
-
-Don’t miss our future updates! Get Subscribed Today!
-
-©2024. University of Carthage. All Rights Reserved.
-
-Developed by Kawther JLASSI under the direction of Mr Mongi BESBES

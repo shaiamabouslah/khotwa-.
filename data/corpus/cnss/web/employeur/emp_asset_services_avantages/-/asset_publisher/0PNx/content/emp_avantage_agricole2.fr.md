@@ -15,9 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 9
-hint_keywords:
-- employeur
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -30,6 +29,7 @@ last_changed: '2026-10-05T20:47:04+00:00'
 content_hash: sha256:75c2183aee914e815f1f1746d51e1abf769356a39b03e46c2421a8a0100fd286
 words: 225
 status: active
+hint_source: llm
 ---
 
 Une erreur s'est produite en traitant le calibre.

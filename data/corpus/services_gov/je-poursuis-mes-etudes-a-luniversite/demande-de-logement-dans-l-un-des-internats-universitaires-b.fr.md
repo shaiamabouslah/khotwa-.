@@ -10,9 +10,9 @@ section: Demande de logement dans l’un des internats universitaires – Bureau
 breadcrumb:
 - Demande de logement dans l’un des internats universitaires – Bureau des services universitaires du Nord
 doc_type: procedure
-domain_hint: null
-subtopic_hint: null
-hint_score: 0
+domain_hint: studies
+subtopic_hint: inscription
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -26,6 +26,7 @@ last_changed: '2026-10-05T23:43:00+00:00'
 content_hash: sha256:b3f6277efdc30271a545260cd047adad1d8a63e99fbd10999a2d065960a9a359
 words: 471
 status: active
+hint_source: llm
 ---
 
 # Demande de logement dans l’un des internats universitaires – Bureau des services universitaires du Nord

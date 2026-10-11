@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 1
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -26,6 +25,7 @@ last_changed: '2026-10-06T00:21:21+00:00'
 content_hash: sha256:6bee003104be5039876e2b3d8bb8682f98e9e3e81c0adfa68ccabf27c2b2280b
 words: 147
 status: active
+hint_source: llm
 ---
 
 # Bourses d’exemption des frais de scolarité majorés : Hiver 2022

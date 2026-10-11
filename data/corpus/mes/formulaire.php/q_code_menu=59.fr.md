@@ -10,11 +10,9 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: bourses
-hint_score: 5
-hint_keywords:
-- منحة
-- قرض جامعي
+subtopic_hint: equivalence
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
@@ -27,6 +25,7 @@ last_changed: '2026-10-05T23:42:21+00:00'
 content_hash: sha256:7ee6d8f794660bb20735ff0f7f10753c5bd3fdb5cb9d3769b1a569d12dc8a3d4
 words: 2357
 status: active
+hint_source: llm
 ---
 
 | |  |  |  | | --- | --- | --- | | آخر تحيين في 05-10-2026 | - [الإستقبال](https://www.mes.tn/index.php?code_menu=6) - [روابط مفيدة](https://www.mes.tn/lien_utile.php?code_menu=10) - [اتصل بنا](https://www.mes.tn/page.php?code_menu=500) | - [Français](https://www.mes.tn/langue.php?langue=fr&code=59) | |

@@ -14,11 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_agr1_Affiliation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 25
-hint_keywords:
-- affiliation
-- salarié
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=e3ef77c9-66a8-48ff-8268-07b8022dbde2&groupId=54202
 - https://www.cnss.tn/c/document_library/get_file?uuid=f5a9a3e4-d5a1-4a82-ae77-6a1a0ae42821&groupId=54202
@@ -33,6 +31,7 @@ last_changed: '2026-10-05T20:37:56+00:00'
 content_hash: sha256:c579ef8302453848855a17987b5084deff603f7b7f4c322596cb41daf247b502
 words: 522
 status: active
+hint_source: llm
 ---
 
 L'affiliation au régime de sécurité sociale est obligatoire pour les travailleurs non salariés du secteur agricole. L'affiliation intervient dans le mois qui suit le début de l'activité .

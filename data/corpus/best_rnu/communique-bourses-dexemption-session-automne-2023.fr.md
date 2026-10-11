@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: announcement
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/Communique_-Automne2023.pdf
@@ -28,7 +28,8 @@ first_seen: '2026-10-05T20:26:33+00:00'
 last_changed: '2026-10-06T00:21:42+00:00'
 content_hash: sha256:306ab0e82dc8de57f413913aa067c16d69036c22bae1cbb02e96bcea0d99cc60
 words: 66
-status: active
+status: removed
+hint_source: llm
 ---
 
 # Communiqué bourses d’exemption – Session Automne 2023

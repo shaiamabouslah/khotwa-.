@@ -11,11 +11,8 @@ breadcrumb: []
 doc_type: announcement
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 12
-hint_keywords:
-- منحة
-- المنح
-- قرض جامعي
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -28,6 +25,7 @@ last_changed: '2026-10-05T23:49:00+00:00'
 content_hash: sha256:eb73163e6fdb45ce0b0a4b1b9fffa30cd0350c454a1e05ec2b01462761f4011a
 words: 179
 status: active
+hint_source: llm
 ---
 
 # بلاغ إلى الطلبة حول روزنامة تقديم مطالب المنح والقروض الجامعية للسنة الجامعية 2025/2026

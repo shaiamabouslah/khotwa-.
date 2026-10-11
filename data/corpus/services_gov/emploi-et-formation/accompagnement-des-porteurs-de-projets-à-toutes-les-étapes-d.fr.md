@@ -10,9 +10,9 @@ section: Accompagnement des porteurs de projets à toutes les étapes de la cré
 breadcrumb:
 - Accompagnement des porteurs de projets à toutes les étapes de la création de leurs projets, de l’idée à l’après-création
 doc_type: procedure
-domain_hint: null
-subtopic_hint: null
-hint_score: 0
+domain_hint: employment
+subtopic_hint: creation-entreprise
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -26,6 +26,7 @@ last_changed: '2026-10-05T23:46:00+00:00'
 content_hash: sha256:1e86e9458470845306c8c7f64e109f78ddd256104c25977b9891ce2482998844
 words: 188
 status: active
+hint_source: llm
 ---
 
 # Accompagnement des porteurs de projets à toutes les étapes de la création de leurs projets, de l’idée à l’après-création

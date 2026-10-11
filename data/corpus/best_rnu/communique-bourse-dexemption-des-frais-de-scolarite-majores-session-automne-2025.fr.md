@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: announcement
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 8
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -26,6 +25,7 @@ last_changed: '2026-10-06T00:22:18+00:00'
 content_hash: sha256:f6fa47840a6c1857ba667005874534e34fa9b619f36bbd08f63149b049486ee7
 words: 257
 status: active
+hint_source: llm
 ---
 
 # Communiqué Bourse d’exemption des frais de scolarité majorés Session Automne 2025

@@ -12,10 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 7
-hint_keywords:
-- bourse
-- boursier
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
@@ -28,6 +26,7 @@ last_changed: '2026-10-05T23:14:10+00:00'
 content_hash: sha256:da331a807003b64da45bfafd965a15c4f9ae750e257e988115d95579e7d09a7f
 words: 309
 status: active
+hint_source: llm
 ---
 
 # Les bourses en cours d'études

@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: announcement
 domain_hint: studies
 subtopic_hint: mobilite
-hint_score: 7
-hint_keywords:
-- erasmus
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -25,7 +24,8 @@ first_seen: '2026-10-06T00:32:43+00:00'
 last_changed: '2026-10-06T00:32:43+00:00'
 content_hash: sha256:99f79f749825175b7a831ab7562fcce8935b04ce6711b9000f7d46a1ac0b1441
 words: 135
-status: stale
+status: removed
+hint_source: llm
 ---
 
 Skip to content

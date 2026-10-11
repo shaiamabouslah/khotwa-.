@@ -9,9 +9,9 @@ title: Emploi et formation - Le portail national des services administratifs
 section: intro
 breadcrumb: []
 doc_type: procedure
-domain_hint: null
+domain_hint: employment
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:45:54+00:00'
 content_hash: sha256:868f17d7539c6ca4605a136e486528c6b15618f345c8327f43596a4eb58bf87a
 words: 53
 status: active
+hint_source: llm
 ---
 
 ### Emploi et formation

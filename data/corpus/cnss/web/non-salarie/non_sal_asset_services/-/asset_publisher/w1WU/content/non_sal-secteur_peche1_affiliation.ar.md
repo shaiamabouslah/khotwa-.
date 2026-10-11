@@ -14,13 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_peche1_Affiliation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 22
-hint_keywords:
-- affiliation
-- salarié
-- انخراط
-- الانخراط
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms:
 - http://ccitunis-academy.com:89/ar/c/document_library/get_file?uuid=2da0f812-96d2-474b-a660-1385084f5f6a&groupId=54202
 render: html
@@ -34,6 +30,7 @@ last_changed: '2026-10-05T20:38:19+00:00'
 content_hash: sha256:164aaea892a504798b761f2fb64f1a31f2f5562a5b7dc02125d1d7951dd35ae6
 words: 339
 status: active
+hint_source: llm
 ---
 
 الانخراط بأنظمة الضمان الاجتماعي إجباري على كل عامل غير أجير يمارس نشاطا مهنيا لحسابه الخاص .وعليه القيام بإجراءات الانخراط في الشهر الذي يلي تاريخ شروعه في النشاط المهني.

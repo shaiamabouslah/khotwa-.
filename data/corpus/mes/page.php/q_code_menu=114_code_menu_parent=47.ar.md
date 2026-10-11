@@ -11,21 +11,21 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 1
-hint_keywords:
-- منح
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:30:56+00:00'
-first_seen: '2026-10-06T00:30:56+00:00'
-last_changed: '2026-10-06T00:30:56+00:00'
+fetched_at: '2026-10-07T20:16:35+00:00'
+first_seen: '2026-10-07T20:16:42+00:00'
+last_changed: '2026-10-07T20:16:42+00:00'
 content_hash: sha256:33d11912ccbe804e3a4497e9f4443483da34680ad70b8066f5c36522dfe2ec9b
-words: 188
+words: 117
 status: active
+hint_source: llm
 ---
 
 # الطلبة الدوليين

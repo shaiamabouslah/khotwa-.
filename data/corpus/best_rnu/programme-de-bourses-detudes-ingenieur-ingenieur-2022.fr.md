@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 1
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -26,6 +25,7 @@ last_changed: '2026-10-06T00:21:26+00:00'
 content_hash: sha256:6db35f04bde725e65410569231d265e1f1278ed565b5fa77f7fc1e0e67d9691b
 words: 123
 status: active
+hint_source: llm
 ---
 
 # Programme de bourses d’études Ingénieur/Ingénieur – 2022

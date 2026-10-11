@@ -8,14 +8,11 @@ lang: ar
 title: المنح الجامعية - ديوان الخدمات الجامعية للجنوب
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: procedure
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 15
-hint_keywords:
-- منحة
-- المنح
-- منح
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
@@ -28,6 +25,7 @@ last_changed: '2026-10-06T00:27:24+00:00'
 content_hash: sha256:509cbf12ffbec39553d0353406d7adabd08a7df38b9421226a68ede13256b9c7
 words: 981
 status: active
+hint_source: llm
 ---
 
 **1/ تقديم مطلب**

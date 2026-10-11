@@ -15,14 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 36
-hint_keywords:
-- affiliation
-- immatriculation
-- employeur
-- cotisations
-- الانخراط
-- المؤجر
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=54b53074-9ee0-4ef4-9630-418d064a1cba&groupId=33103
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=b7198ccd-7b3c-4335-b93f-67b1a1f731b2&groupId=33103
@@ -31,12 +25,13 @@ discovered_via: link
 source_updated: '2019-06-18'
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-05T20:38:54+00:00'
+fetched_at: '2026-10-10T20:34:45+00:00'
 first_seen: '2026-10-05T20:38:54+00:00'
-last_changed: '2026-10-05T20:38:54+00:00'
-content_hash: sha256:95dfc385600d5a1989acdf630956ecbf1eab0541849c57e7a07a7dea37a63209
-words: 392
+last_changed: '2026-10-10T20:34:45+00:00'
+content_hash: sha256:1efeca7f73b8d5e72a4040cdaac214346a3cdf47042a2e234bd4f1e2efc86e9c
+words: 284
 status: active
+hint_source: llm
 ---
 
 - [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_affiliation?secteur=$secteur)
@@ -54,7 +49,7 @@ status: active
 - 5 % على كاهل المؤجر
 - 2,5 % على كاهل الأجير.
 
-**مبلغ اشتراكات ابتداء من جانفي 2025**
+**مبلغ اشتراكات ابتداء من جانفي 2026**
 
 | **قاعدة الاشتراكات في الشهر- بالدينار-** | **مبلغ الاشتراكات الشهريّة - بالدينار-** | | |
 | **المؤجّر** | **الأجير** | **المجموع** |
@@ -63,10 +58,10 @@ status: active
 
 حددت هذه النسبة كما يلي:
 
-| الاشتراكات بداية من الثلاثية  الرابعة لسنة 2022 | نسبة الاشتراكات | قاعدة الاشتراكات | الفئة المهنية |
-| 7,021 | 0,53 % | [*الأجر الأدنى الفلاحي المضمون*](https://www.cnss.tn/ar/nos_echos/-/asset_publisher/4IkZ/content/echos_4) | معينو المنازل |
-| 19,872 | 1 % | x1,5  [*الأجر الأدنى الفلاحي المضمون*](https://www.cnss.tn/ar/nos_echos/-/asset_publisher/4IkZ/content/echos_4) | سائقو السيارات |
-| 9,936 | 0,75 % | [*الأجر الأدنى الفلاحي المضمون*](https://www.cnss.tn/ar/nos_echos/-/asset_publisher/4IkZ/content/echos_4) | أصناف أخرى من عملة المنازل |
+| الاشتراكات بداية من الثلاثية  الأولى لسنة 2025 | نسبة الاشتراكات | قاعدة الاشتراكات | الفئة المهنية |
+| 8,077 | 0,53 % | [*الأجر الأدنى الفلاحي المضمون*](https://www.cnss.tn/ar/nos_echos/-/asset_publisher/4IkZ/content/echos_4) | معينو المنازل |
+| 22,860 | 1 % | x1,5  [*الأجر الأدنى الفلاحي المضمون*](https://www.cnss.tn/ar/nos_echos/-/asset_publisher/4IkZ/content/echos_4) | سائقو السيارات |
+| 11,430 | 0,75 % | [*الأجر الأدنى الفلاحي المضمون*](https://www.cnss.tn/ar/nos_echos/-/asset_publisher/4IkZ/content/echos_4) | أصناف أخرى من عملة المنازل |
 
 الوثائق المطلوبة
 

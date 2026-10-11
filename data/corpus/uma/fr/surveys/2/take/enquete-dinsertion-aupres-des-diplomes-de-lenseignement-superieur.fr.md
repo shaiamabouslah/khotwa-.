@@ -9,11 +9,10 @@ title: Enquête d’insertion auprès des diplômés de l’enseignement supéri
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: employment
-subtopic_hint: recherche-emploi
-hint_score: 2
-hint_keywords:
-- insertion professionnelle
+domain_hint: null
+subtopic_hint: null
+hint_score: 1
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -26,6 +25,7 @@ last_changed: '2026-10-06T00:05:44+00:00'
 content_hash: sha256:e012ee21a7dba599df40be5762f414166883991c3b9f769fd4095ace8270347e
 words: 1160
 status: active
+hint_source: llm
 ---
 
 - ## Université

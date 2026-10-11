@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:56:18+00:00'
 content_hash: sha256:32570bd58c5ad65eca3f89e9cf3c8d43b82be7f7cfa7fa358471689a46e22bc4
 words: 94
 status: active
+hint_source: llm
 ---
 
 ## Les deux jumelles Ines et Sirine kammoun boursières du Gouvernement Tunisien…

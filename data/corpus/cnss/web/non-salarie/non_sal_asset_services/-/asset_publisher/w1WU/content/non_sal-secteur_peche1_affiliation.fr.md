@@ -14,11 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_peche1_Affiliation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 25
-hint_keywords:
-- affiliation
-- salarié
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=e3ef77c9-66a8-48ff-8268-07b8022dbde2&groupId=54202
 - https://www.cnss.tn/c/document_library/get_file?uuid=f5a9a3e4-d5a1-4a82-ae77-6a1a0ae42821&groupId=54202
@@ -33,6 +31,7 @@ last_changed: '2026-10-05T20:38:15+00:00'
 content_hash: sha256:4dcfb9dd74e26c99b24d0cdb65933129fb17fba3c0bf4aa3b8c6018fa33c595f
 words: 463
 status: active
+hint_source: llm
 ---
 
 L'affiliation au régime de sécurité sociale est obligatoire pour les travailleurs non salariés du secteur pêche. L'affiliation intervient dans le mois qui suit le début de l'activité.

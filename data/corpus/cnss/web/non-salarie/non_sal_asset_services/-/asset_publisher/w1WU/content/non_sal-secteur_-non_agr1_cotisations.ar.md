@@ -14,13 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_ non_agr1_Cotisations
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 21
-hint_keywords:
-- salarié
-- cotisations
-- الانخراط
-- الاشتراكات
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -33,6 +29,7 @@ last_changed: '2026-10-05T20:52:16+00:00'
 content_hash: sha256:26645659f315e281977d4377ef0df89fa9f159bdb2d1d3d4af8b85ac3960788b
 words: 280
 status: active
+hint_source: llm
 ---
 
 ## قاعدة الاشتراكات

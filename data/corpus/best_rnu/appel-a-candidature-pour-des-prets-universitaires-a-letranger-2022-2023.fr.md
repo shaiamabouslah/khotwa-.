@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/annone-14-nouvembre.pdf
@@ -26,6 +26,7 @@ last_changed: '2026-10-06T00:21:36+00:00'
 content_hash: sha256:4f79d482e2320f4c52311f6566a935d47478700875a5220d930262e024d3a76f
 words: 46
 status: active
+hint_source: llm
 ---
 
 # Appel à candidature pour des prêts universitaires à l’étranger 2022-2023

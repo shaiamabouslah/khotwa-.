@@ -10,22 +10,22 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: bourses
+subtopic_hint: null
 hint_score: 1
-hint_keywords:
-- منح
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:30:56+00:00'
-first_seen: '2026-10-06T00:30:56+00:00'
-last_changed: '2026-10-06T00:30:56+00:00'
+fetched_at: '2026-10-07T20:16:23+00:00'
+first_seen: '2026-10-07T20:16:28+00:00'
+last_changed: '2026-10-07T20:16:28+00:00'
 content_hash: sha256:088de6c744d770b9e43368fa6beed9ca0c75c7e34a703fc5e355069ed6ae56ec
-words: 147
+words: 76
 status: active
+hint_source: llm
 ---
 
 # التقديم العام

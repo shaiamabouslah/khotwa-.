@@ -11,10 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 25
-hint_keywords:
-- boursier
-- non-boursier
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +25,7 @@ last_changed: '2026-10-06T00:20:50+00:00'
 content_hash: sha256:27a3c4071be9647a4635914100de5e8dbafb9280d607eca2ad321def6595903e
 words: 348
 status: active
+hint_source: llm
 ---
 
 # Attestation de non boursier à l’étranger

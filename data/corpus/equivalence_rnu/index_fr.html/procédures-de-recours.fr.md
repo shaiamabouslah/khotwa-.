@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: equivalence
-hint_score: 4
-hint_keywords:
-- équivalence
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:42:19+00:00'
 content_hash: sha256:bb052afe9e75cbb3d0d15bdc25eb6d3ef9bcda0f30c34efcb17fcae7b06f9c43
 words: 183
 status: active
+hint_source: llm
 ---
 
 # Procédures de recours

@@ -11,11 +11,8 @@ breadcrumb: []
 doc_type: announcement
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 13
-hint_keywords:
-- منحة
-- المنح
-- منح
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -28,6 +25,7 @@ last_changed: '2026-10-05T23:48:23+00:00'
 content_hash: sha256:8ac6bd8fc24d234b8c5b6930a5cfb25406034a2a5d9dd4dab7a794c109756ee1
 words: 123
 status: active
+hint_source: llm
 ---
 
 # بلاغ حول التمديد في آجال تقديم مطالب المنح الجامعية إلى غاية يوم 25 نوفمبر 2025

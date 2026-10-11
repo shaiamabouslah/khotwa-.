@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -19,12 +19,13 @@ discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:30:44+00:00'
+fetched_at: '2026-10-07T20:15:06+00:00'
 first_seen: '2026-10-05T20:26:06+00:00'
-last_changed: '2026-10-06T00:30:44+00:00'
+last_changed: '2026-10-07T20:15:11+00:00'
 content_hash: sha256:b4135a72996281d3aeade731c39d4664e42cee63b141f97f9ef4ea3bed0a2e5b
-words: 134
+words: 53
 status: active
+hint_source: llm
 ---
 
 # بيانات إحصائية مختلفة

@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -19,12 +19,13 @@ discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:30:21+00:00'
+fetched_at: '2026-10-07T20:13:01+00:00'
 first_seen: '2026-10-05T20:25:40+00:00'
-last_changed: '2026-10-06T00:30:21+00:00'
+last_changed: '2026-10-07T20:13:04+00:00'
 content_hash: sha256:2d08fb2afc0cc0aa437e009b65f81428777b4d7fa4f9d536df66ea86f8418110
-words: 389
+words: 270
 status: active
+hint_source: llm
 ---
 
 # النفاذ إلى المعلومة

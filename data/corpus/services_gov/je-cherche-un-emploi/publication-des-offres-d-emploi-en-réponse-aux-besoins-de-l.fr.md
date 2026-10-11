@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: recherche-emploi
-hint_score: 1
-hint_keywords:
-- demandeur d'emploi
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:42:56+00:00'
 content_hash: sha256:ef4eb3a9fbf1ca44e00702f3efa4d649333cab5fff95ac81d45173b7ea4e3043
 words: 122
 status: active
+hint_source: llm
 ---
 
 # Publication des offres d’emploi en réponse aux besoins de l’entreprise

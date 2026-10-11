@@ -12,29 +12,21 @@ doc_type: announcement
 domain_hint: studies
 subtopic_hint: mobilite
 hint_score: 10
-hint_keywords:
-- erasmus
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: '2025-05-13T12:17:42+02:00'
-fetched_at: null
+fetched_at: '2026-10-06T22:10:49+00:00'
 first_seen: '2026-10-06T00:28:33+00:00'
-last_changed: '2026-10-06T00:28:33+00:00'
-content_hash: sha256:340a13bf055e2c412918896c1eadf1019fdb6e7c8994efa1ee098ac64e46c0da
-words: 328
-status: stale
+last_changed: '2026-10-06T22:10:49+00:00'
+content_hash: sha256:0137db3afd5d9aa21ba09c17908b701f0b0e1abbfac447ce05842b96e62c0a53
+words: 204
+status: active
+hint_source: llm
 ---
-
-Skip to content
-
-### + 216 71 749 100
-
-### webmaster\_ucar@ucar.rnu.tn
-
-### Avenue de la République BP 77-1054 Amilcar ​
 
 ## CALL FOR APPLICATIONS — ERASMUS+ MOBILITY SCHOLARSHIP AT THE UNIVERSITY OF TRENTO (ITALY)
 
@@ -88,17 +80,3 @@ Interested faculty members must submit their application documents to the **Univ
 **Mr. Tahar JALLOULI**
 Director of Academic Affairs and Scientific Partnerships, University of Carthage
 Email: tahar.jallouli@gmail.com and/or tahar.Jallouli@ucar.rnu.tn
-
-Established in 1988, the University of Carthage (UCAR) is a Tunisian public institution dedicated to education and research. Operating under the supervision of the Ministry of Higher Education and Scientific Research,
-
-## Useful Links
-
-[Alumni](https://ucar.rnu.tn/alumni/)[Pro emploi](https://proemploi.ucar.rnu.tn)[PMO](https://pmo.ucar.rnu.tn/)[Addmission](http://www.concours.ucar.rnu.tn)[Projects](https://ucar.rnu.tn/projects/)[Jobs alert](https://ucar.rnu.tn/job-alert/)[News and Events](https://ucar.rnu.tn/events-et-news/)
-
-## Subscribe Now
-
-Don’t miss our future updates! Get Subscribed Today!
-
-©2024. University of Carthage. All Rights Reserved.
-
-Developed by Kawther JLASSI under the direction of Mr Mongi BESBES

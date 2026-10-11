@@ -15,11 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: non-salaries
-hint_score: 17
-hint_keywords:
-- non salarié
-- غير الأجراء
-- العامل غير الأجير
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -31,7 +28,9 @@ first_seen: '2026-10-05T20:50:33+00:00'
 last_changed: '2026-10-05T20:50:33+00:00'
 content_hash: sha256:283ab7b0c27bec15f3819415aad2431580e018fb9fcb12207e7309a466c35ae0
 words: 404
-status: active
+status: removed
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr2_avantage3#index
+hint_source: llm
 ---
 
 ## التدرج في الترسيم بشريحة الدخل بنظام العملة غير الأجراء في إطار تشجيع الباعثين الجدد

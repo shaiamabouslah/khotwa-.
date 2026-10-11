@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: inscription
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -24,7 +24,8 @@ first_seen: '2026-10-05T20:25:33+00:00'
 last_changed: '2026-10-05T23:42:54+00:00'
 content_hash: sha256:f96679e1da7c922bca2814ba972256eb361e9bda08171b4d83a7445e7a3f8363
 words: 41
-status: active
+status: removed
+hint_source: llm
 ---
 
 # Comprendre les procédures d’inscription

@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 1
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/Formulaire-cycle-2-AUT24.pdf
 - https://best.rnu.tn/wp-content/uploads/2019/10/Formulaire_cycle-1-automne20241.pdf
@@ -29,6 +28,7 @@ last_changed: '2026-10-06T00:21:55+00:00'
 content_hash: sha256:def4d5baa083650deaa6fafd5b074e427fae449da380f7576ff61bc656537df2
 words: 279
 status: active
+hint_source: llm
 ---
 
 # Bourses d’exemption des frais de scolarité majorés : Session Automne 2024

@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 1
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2020/06/ANNEXE-final-Appel-doffre-Bourse-Canada-2020-2021.pdf
 - https://best.rnu.tn/wp-content/uploads/2020/06/circulaire-b3c-44-19-signee-20-21.pdf
@@ -28,6 +27,7 @@ last_changed: '2026-10-06T00:20:45+00:00'
 content_hash: sha256:c121e806f3e5e72fab890ee41606680ff146fd2db64e0dccbb67b0da138f33b7
 words: 71
 status: active
+hint_source: llm
 ---
 
 # Offre de bourses nationales pour des études de master et de doctorat

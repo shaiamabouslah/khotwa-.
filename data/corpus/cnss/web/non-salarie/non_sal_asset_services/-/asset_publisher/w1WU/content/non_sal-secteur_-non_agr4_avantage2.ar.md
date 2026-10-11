@@ -15,11 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: non-salaries
-hint_score: 17
-hint_keywords:
-- non salarié
-- غير الأجراء
-- العامل غير الأجير
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -31,7 +28,9 @@ first_seen: '2026-10-05T20:50:37+00:00'
 last_changed: '2026-10-05T20:50:37+00:00'
 content_hash: sha256:eb03e3043dd4c53a53d2ded613fee44812db7b88883845ad8ce4dfdcb90a760c
 words: 426
-status: active
+status: removed
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr2_avantage2#index
+hint_source: llm
 ---
 
 ## تأجيل دفع اشتراكات العملة غير الأجراء في إطار تشجيع الباعثين الجدد.

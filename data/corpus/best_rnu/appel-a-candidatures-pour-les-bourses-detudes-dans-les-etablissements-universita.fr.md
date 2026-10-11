@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/Annonce-Bourses-de-Cooperation-Maroc-Algerie-2025-2026-final.pdf
@@ -26,6 +26,7 @@ last_changed: '2026-10-06T00:22:23+00:00'
 content_hash: sha256:7fad0f256f0b9cec6b35c8b41a4c92667d9c10d20c6bdd6291955bf87b91fb3e
 words: 60
 status: active
+hint_source: llm
 ---
 
 # Appel à candidatures pour les bourses d’études de l’année universitaire 2025-2026.

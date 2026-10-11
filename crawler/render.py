@@ -69,13 +69,21 @@ class BrowserRenderer:
             self._browser = self._pw.chromium.launch()
         page = self._browser.new_page(user_agent=self.user_agent)
         try:
-            page.goto(url, timeout=self.timeout_ms, wait_until="networkidle")
+            # "networkidle" never fires on pages with persistent background connections
+            # (analytics pings, polling, websockets) -- common enough to make it the
+            # wrong default. "domcontentloaded" + an explicit wait for the SPA to paint
+            # is more robust.
+            page.goto(url, timeout=self.timeout_ms, wait_until="domcontentloaded")
+            try:
+                page.wait_for_load_state("networkidle", timeout=5000)
+            except Exception:
+                pass   # fine if it never goes idle; we already waited for the DOM
             # Open collapsed content (accordions, "show more") so it is in the DOM.
             page.evaluate("""() => {
                 document.querySelectorAll('details').forEach(d => d.open = true);
                 document.querySelectorAll('[aria-expanded="false"]').forEach(b => { try { b.click() } catch (e) {} });
             }""")
-            page.wait_for_timeout(500)
+            page.wait_for_timeout(1000)
             return page.content().encode("utf-8")
         finally:
             page.close()

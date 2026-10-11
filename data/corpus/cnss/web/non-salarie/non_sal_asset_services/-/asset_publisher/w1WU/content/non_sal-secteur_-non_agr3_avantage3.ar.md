@@ -15,10 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: non-salaries
-hint_score: 13
-hint_keywords:
-- non salarié
-- غير الأجراء
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -30,7 +28,8 @@ first_seen: '2026-10-05T20:51:06+00:00'
 last_changed: '2026-10-05T20:51:06+00:00'
 content_hash: sha256:3185d40e76c6dc764cbe29536f182700cedf70f56370ea5915590020f43a4764
 words: 107
-status: active
+status: removed
+hint_source: llm
 ---
 
 - ## أخبارنا

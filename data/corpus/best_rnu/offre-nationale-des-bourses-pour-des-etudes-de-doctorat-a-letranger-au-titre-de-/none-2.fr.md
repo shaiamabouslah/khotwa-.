@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 1
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/ANNEXE-Bourse-Canada-2025-2026.pdf
 - https://best.rnu.tn/wp-content/uploads/2019/10/Circulaire-Doctorat-2025-2026-ca.pdf
@@ -27,7 +26,9 @@ first_seen: '2026-10-06T00:22:03+00:00'
 last_changed: '2026-10-06T00:22:03+00:00'
 content_hash: sha256:cff51d627b1f83ffc83197aae8af8164ed8fd51ad4266352d11773a95a0ea4b2
 words: 86
-status: active
+status: removed
+duplicate_of: best_rnu:/offre-nationale-des-bourses-pour-des-etudes-de-doctorat-a-letranger-au-titre-de-#index
+hint_source: llm
 ---
 
 # Offre nationale des bourses pour des études de doctorat à l’étranger au titre de l’année universitaire 2025-2026

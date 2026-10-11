@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/ANNEXE-MESRS-INRS-2023-2024.pdf
@@ -27,7 +27,9 @@ first_seen: '2026-10-06T00:21:40+00:00'
 last_changed: '2026-10-06T00:21:40+00:00'
 content_hash: sha256:35095448a386a172dd44c26ebd6732a45b4116b2a640cda17d369d2669c638ac
 words: 101
-status: active
+status: removed
+duplicate_of: best_rnu:/offre-de-bourses-dans-le-cadre-des-ententes-avec-luniversite-de-montreal-ludm-et#index
+hint_source: llm
 ---
 
 # Offre de bourses de Mastère et de Doctorat dans le cadre de l’Entente MESRS-INRS

@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: inscription
-hint_score: 7
-hint_keywords:
-- orientation universitaire
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:43:00+00:00'
 content_hash: sha256:7dee4f19cfa288cf39cc4bc19915b0f35192c310c30c8ea2fbaf6d757b80cacb
 words: 228
 status: active
+hint_source: llm
 ---
 
 # Obtention du mot de passe pour la plateforme électronique d’orientation universitaire

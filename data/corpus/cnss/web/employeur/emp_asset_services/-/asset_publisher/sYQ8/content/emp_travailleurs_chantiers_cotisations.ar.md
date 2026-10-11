@@ -15,14 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 30
-hint_keywords:
-- affiliation
-- employeur
-- cotisations
-- الانخراط
-- المؤجر
-- الاشتراكات
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=54b53074-9ee0-4ef4-9630-418d064a1cba&groupId=33103
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=b7198ccd-7b3c-4335-b93f-67b1a1f731b2&groupId=33103
@@ -31,12 +25,13 @@ discovered_via: link
 source_updated: '2019-06-18'
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-05T20:39:16+00:00'
+fetched_at: '2026-10-10T20:34:58+00:00'
 first_seen: '2026-10-05T20:39:16+00:00'
-last_changed: '2026-10-05T20:39:16+00:00'
-content_hash: sha256:da11fc3686d8474ee420c8f6e9f4466aaeccce5f51eb74159a990cc24d04f9ad
-words: 314
+last_changed: '2026-10-10T20:34:58+00:00'
+content_hash: sha256:1d9fd6f5bfcd6234cac8676a5b076d4c9d926fe9236b7091023c1cb398bff5ea
+words: 237
 status: active
+hint_source: llm
 ---
 
 - [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_affiliation?secteur=$secteur)
@@ -54,7 +49,7 @@ status: active
 - 5 % على كاهل المؤجر
 - 2,5 % على كاهل الأجير.
 
-**مبلغ اشتراكات ابتداء من جانفي 2025**
+**مبلغ اشتراكات ابتداء من جانفي 2026**
 
 | **قاعدة الاشتراكات في الشهر- بالدينار-** | **مبلغ الاشتراكات الشهريّة - بالدينار-** | | |
 | **المؤجّر** | **الأجير** | **المجموع** |

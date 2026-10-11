@@ -15,11 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 9
-hint_keywords:
-- immatriculation
-- salarié
-- المؤجر
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=e41ef707-c1bc-480a-9868-1253c3afbd46&groupId=18410
 - https://www.cnss.tn/c/document_library/get_file?uuid=ea73e624-35c6-44e0-a2a0-f2cffc0d9b27&groupId=18410
@@ -34,6 +31,7 @@ last_changed: '2026-10-06T12:56:51+00:00'
 content_hash: sha256:d489b74c3c00ff8f857ed49cbd7a3819743bb684fd3df4eeb6be41bdc645f9ae
 words: 190
 status: active
+hint_source: llm
 ---
 
 ## التسجيل

@@ -11,10 +11,9 @@ breadcrumb:
 - Demande d’obtention du certificat de compétence professionnelle
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 1
-hint_keywords:
-- employeur
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:45:58+00:00'
 content_hash: sha256:f6674caecc54536ff206bcc1005381456746459a43a551c5d5ac0af8d624077c
 words: 250
 status: active
+hint_source: llm
 ---
 
 # Demande d’obtention du certificat de compétence professionnelle

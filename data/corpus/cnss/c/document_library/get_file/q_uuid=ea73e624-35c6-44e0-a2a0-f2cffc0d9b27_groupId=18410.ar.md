@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: form
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 1
-hint_keywords:
-- المؤجر
+hint_score: 10
+hint_keywords: []
 forms: []
 render: pdf
 discovered_via: link
@@ -25,7 +24,9 @@ first_seen: '2026-10-05T20:33:39+00:00'
 last_changed: '2026-10-06T12:56:03+00:00'
 content_hash: sha256:94c458d0ef5199a54cfe7246f4358b8b97cb0af898ec36c58962e5cbb7e73b45
 words: 920
-status: active
+status: removed
+duplicate_of: cnss:/c/document_library/get_file/q_uuid=33603117-660a-43a1-a082-2df73b6a263b_groupId=33103#index
+hint_source: llm
 ---
 
 <!-- page 1 -->

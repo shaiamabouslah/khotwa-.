@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: procedure
 domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 1
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:43:01+00:00'
 content_hash: sha256:01175744bad53192895ce75efc1e3e18fa9ec290b0b253e36bd4d6ad8282c538
 words: 49
 status: active
+hint_source: llm
 ---
 
 ### وزارة التشغيل والتكوين المهني

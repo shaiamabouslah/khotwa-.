@@ -14,11 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_agr1_avantage3
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 8
-hint_keywords:
-- affiliation
-- salarié
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=3e2de5c7-89d6-4927-8ea5-54bf229ac6c0&groupId=54202
 render: html
@@ -32,6 +30,7 @@ last_changed: '2026-10-05T20:49:40+00:00'
 content_hash: sha256:fa841a2f6a28d9dde77fe2a04df92807f0f7813aa3c733e31bbd27d3e7bdde2b
 words: 439
 status: active
+hint_source: llm
 ---
 
 Dans le cadre de leur affiliation au régime des travailleurs non salariés dans les secteurs agricole et non agricole, les nouveaux promoteurs peuvent bénéficier d'une progressivité dans l'inscription à la classe de revenu correspondante à l'activité professionnelle qu'ils exercent et ce par un abattement de deux classes durant la première année d'affiliation et d'une classe durant l'année suivante.

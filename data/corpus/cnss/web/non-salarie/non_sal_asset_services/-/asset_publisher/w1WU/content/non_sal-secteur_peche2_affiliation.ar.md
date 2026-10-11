@@ -15,13 +15,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 23
-hint_keywords:
-- affiliation
-- immatriculation
-- salarié
-- انخراط
-- الانخراط
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=509dcad4-cee6-4394-9f64-bd05f44175bf&groupId=54202
 render: html
@@ -35,6 +30,7 @@ last_changed: '2026-10-05T20:38:23+00:00'
 content_hash: sha256:514f9d900a15c3e69dbba63843a0a36a36712881423c55f4a91c14efca12b9ab
 words: 336
 status: active
+hint_source: llm
 ---
 
 الانخراط بأنظمة الضمان الاجتماعي إجباري على كل مجهز مركب صيد بحري لا تفوق حمولتها 5 أطنان حجمية. وعليه القيام بإجراءات الانخراط في الشهر الذي يلي تاريخ شروعه في النشاط المهني.

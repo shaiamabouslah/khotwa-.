@@ -12,8 +12,7 @@ doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
 hint_score: 10
-hint_keywords:
-- المنح
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -25,7 +24,8 @@ first_seen: '2026-10-05T20:27:14+00:00'
 last_changed: '2026-10-05T23:50:32+00:00'
 content_hash: sha256:a99e54dfb8a2e93bbccfda2b600c1d2a2de7b9e2ef28e29334c753916a0393fe
 words: 39
-status: active
+status: removed
+hint_source: llm
 ---
 
 # المنح الجامعية 2023-2024

@@ -14,12 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_ non_agr1_avantage2
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 9
-hint_keywords:
-- affiliation
-- salarié
-- cotisations
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=a80d6c4e-a6a3-4ba3-b8fc-cc03c267204a&groupId=54202
 render: html
@@ -33,6 +30,7 @@ last_changed: '2026-10-05T20:52:27+00:00'
 content_hash: sha256:858d8d5c4e172c5380a569f024b07c2cc43e5e91a46f1f075dfed1857913bd79
 words: 453
 status: active
+hint_source: llm
 ---
 
 Les nouveaux promoteurs affiliés au régime des travailleurs non salariés dans les secteurs agricole et non agricole peuvent bénéficier du report de paiement des cotisations exigibles pour une période de deux ans à partir de la date de leur affiliation.

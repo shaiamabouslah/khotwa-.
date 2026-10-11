@@ -11,11 +11,8 @@ breadcrumb: []
 doc_type: announcement
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 13
-hint_keywords:
-- منحة
-- المنح
-- قرض جامعي
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.oouc.rnu.tn/uploads/topics/17877441467117.pdf
 render: html
@@ -29,6 +26,7 @@ last_changed: '2026-10-05T23:47:51+00:00'
 content_hash: sha256:9682bff4db9a1bd303fdfc5e8f19387c92be3058fd48b49d9be51e95ddbb79ed
 words: 178
 status: active
+hint_source: llm
 ---
 
 # بلاغ إلى الطلبة حول روزنامة تقديم مطالب المنح والقروض الجامعية للسنة الجامعية 2026/2027

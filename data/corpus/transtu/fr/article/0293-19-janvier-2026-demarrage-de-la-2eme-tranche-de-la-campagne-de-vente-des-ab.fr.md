@@ -9,9 +9,9 @@ title: Actualités
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: studies
+domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 1
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:20:38+00:00'
 content_hash: sha256:66cd15316e555f0cecc7991320c3091f9cb58c29dece4f9f1a9be327dd87adcf
 words: 160
 status: active
+hint_source: llm
 ---
 
 - [Accueil](https://www.transtu.tn/fr/) ›

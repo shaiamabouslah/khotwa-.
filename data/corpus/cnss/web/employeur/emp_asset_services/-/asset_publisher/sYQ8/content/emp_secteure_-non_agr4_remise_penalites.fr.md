@@ -13,14 +13,10 @@ breadcrumb:
 - Services Employeur
 - Emp_Secteuré_ non_agr4_Remise_penalites
 doc_type: procedure
-domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 24
-hint_keywords:
-- affiliation
-- immatriculation
-- employeur
-- cotisations
+domain_hint: null
+subtopic_hint: null
+hint_score: 1
+hint_keywords: []
 forms:
 - https://www.cnss.tn/fr/c/document_library/get_file?uuid=2eb45d8e-45ff-4a65-87f2-7051174293dd&groupId=33103
 render: html
@@ -34,6 +30,7 @@ last_changed: '2026-10-05T20:42:04+00:00'
 content_hash: sha256:dd235f5e7080aa8e64cd1e5364a353aa41392608cc326ba9cedd644e62fca0e0
 words: 301
 status: active
+hint_source: llm
 ---
 
 - [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr4_affiliation?secteur=$secteur)

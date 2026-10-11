@@ -11,11 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 21
-hint_keywords:
-- منحة
-- المنح
-- منحة الإدماج
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -27,7 +24,8 @@ first_seen: '2026-10-05T20:27:16+00:00'
 last_changed: '2026-10-05T23:50:50+00:00'
 content_hash: sha256:d00e57eb1923c604d9d0dc895cd23b8792e61e4f6ff6127cdde178b92cbf7817
 words: 39
-status: active
+status: removed
+hint_source: llm
 ---
 
 # منحة الإدماج 2023-2024

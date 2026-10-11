@@ -11,22 +11,22 @@ breadcrumb:
 - Paiement à distance des cotisations dans le cadre de la coopération technique
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 7
-hint_keywords:
-- cotisations
+subtopic_hint: attestations
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: '2025-10-08T12:58:17+00:00'
-fetched_at: '2026-10-05T23:48:04+00:00'
+fetched_at: '2026-10-05T20:26:09+00:00'
 first_seen: '2026-10-05T20:26:11+00:00'
-last_changed: '2026-10-05T23:50:09+00:00'
+last_changed: '2026-10-10T16:38:57+00:00'
 content_hash: sha256:dc3fbbf25adf9ff1db9b7c541fd07dca70d4e06afb90e2753d21a9fe23676cf5
-words: 215
+words: 207
 status: active
+hint_source: llm
 ---
 
 # Paiement à distance des cotisations dans le cadre de la coopération technique

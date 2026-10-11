@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms:
 - https://maisondelatunisie.org/wp-content/uploads/2022/06/Reglement-Dadmission-pour-Lannee-Universitaire-2022-2023.pdf
@@ -26,6 +26,7 @@ last_changed: '2026-10-06T00:21:27+00:00'
 content_hash: sha256:c0c28c8f42cd4e5cc18536b47ae9e38b25d394f4978095e76e50d86b02c16384
 words: 62
 status: active
+hint_source: llm
 ---
 
 La Fondation de la maison de la Tunisie à la cité internationale universitaire de Paris annonce l’ouverture de l’appel à candidature pour l’hébergement à ladite fondation pour l’année universitaire 2022-2023.

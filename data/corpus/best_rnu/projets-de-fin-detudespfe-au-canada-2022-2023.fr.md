@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: stages-pfe
-hint_score: 8
-hint_keywords:
-- pfe
+hint_score: 10
+hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/annonce_2022_mitac.pdf
 render: html
@@ -27,6 +26,7 @@ last_changed: '2026-10-06T00:21:31+00:00'
 content_hash: sha256:fef710f350143683891a7f0ad6d506997515c426436b1d482758333724b64f22
 words: 51
 status: active
+hint_source: llm
 ---
 
 # Projets de fin d’études(PFE) au Canada 2022-2023

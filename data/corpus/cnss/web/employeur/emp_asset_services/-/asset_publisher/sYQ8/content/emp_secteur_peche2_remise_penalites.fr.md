@@ -13,14 +13,10 @@ breadcrumb:
 - Services Employeur
 - Emp_Secteur_pêche2_Remise_penalites
 doc_type: procedure
-domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 22
-hint_keywords:
-- affiliation
-- immatriculation
-- employeur
-- cotisations
+domain_hint: null
+subtopic_hint: null
+hint_score: 1
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=2eb45d8e-45ff-4a65-87f2-7051174293dd&groupId=33103
 render: html
@@ -34,6 +30,7 @@ last_changed: '2026-10-05T20:44:39+00:00'
 content_hash: sha256:ed69cb6586247c223c32827e71278793231703447f66225719e2e55120d8b7cd
 words: 353
 status: active
+hint_source: llm
 ---
 
 - [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_affiliation?secteur=$secteur)

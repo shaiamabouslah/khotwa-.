@@ -10,8 +10,8 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: null
-hint_score: 0
+subtopic_hint: bourses
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -24,7 +24,8 @@ first_seen: '2026-10-05T20:28:12+00:00'
 last_changed: '2026-10-05T23:53:18+00:00'
 content_hash: sha256:b9c183249aeda2cffa957c909399aaf80d0ad55681e321994c6537910e0e5994
 words: 37
-status: active
+status: removed
+hint_source: llm
 ---
 
 Appel à candidatures aux bourses MESRS-MITACS de Stages de recherche « Globalink »  au titre de l’année universitaire 2026-2027: …

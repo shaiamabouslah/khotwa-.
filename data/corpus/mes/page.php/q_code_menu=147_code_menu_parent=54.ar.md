@@ -11,21 +11,21 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: equivalence
-hint_score: 1
-hint_keywords:
-- معادلة
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
 source_updated: null
 http_last_modified: null
 sitemap_lastmod: null
-fetched_at: '2026-10-06T00:31:00+00:00'
+fetched_at: '2026-10-07T20:16:51+00:00'
 first_seen: '2026-10-05T20:26:23+00:00'
-last_changed: '2026-10-06T00:31:00+00:00'
+last_changed: '2026-10-07T20:16:58+00:00'
 content_hash: sha256:55c18e72ed38f4016fb1095d13123f08fc8938ffa2008564077137bfccc32c66
-words: 460
+words: 352
 status: active
+hint_source: llm
 ---
 
 # المؤسسات الخاصة للتعليم التعليم العالي المرخص لها

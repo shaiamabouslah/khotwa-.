@@ -9,9 +9,9 @@ title: بوابة الحكومة
 section: null
 breadcrumb: []
 doc_type: page
-domain_hint: studies
+domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-06T00:30:33+00:00'
 content_hash: sha256:196074da48a8922092e3308ac41bc4262304edca46a87c7354fa1d3dc9701275
 words: 74
 status: active
+hint_source: llm
 ---
 
 # بوابة الحكومة

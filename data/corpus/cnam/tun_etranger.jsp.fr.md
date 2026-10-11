@@ -11,10 +11,8 @@ breadcrumb: []
 doc_type: page
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 2
-hint_keywords:
-- employeur
-- salarié
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnam.nat.tn/doc/upload/allem_francais.pdf
 - https://www.cnam.nat.tn/doc/upload/belgique_francais.pdf
@@ -31,6 +29,7 @@ last_changed: '2026-10-06T00:17:17+00:00'
 content_hash: sha256:a7778d85c6327c9c29b660cb465d5e21eed1df2e920ad21828ccde08cb4ef627
 words: 895
 status: active
+hint_source: llm
 ---
 
 #### Agents publics à l’étranger

@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: page
 domain_hint: studies
 subtopic_hint: null
-hint_score: 0
+hint_score: 1
 hint_keywords: []
 forms: []
 render: html
@@ -24,7 +24,8 @@ first_seen: '2026-10-06T00:32:59+00:00'
 last_changed: '2026-10-06T00:32:59+00:00'
 content_hash: sha256:c9e31e85b26aee9be34c036b20c8109ccfe462e61ab1d1a0b32e8fbd9d416b1a
 words: 115
-status: stale
+status: active
+hint_source: llm
 ---
 
 ## GreenMetric Certification

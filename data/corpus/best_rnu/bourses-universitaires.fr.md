@@ -10,11 +10,9 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: stages-pfe
-hint_score: 3
-hint_keywords:
-- pfe
-- projet de fin d'études
+subtopic_hint: bourses
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -27,6 +25,7 @@ last_changed: '2026-10-06T00:20:59+00:00'
 content_hash: sha256:80ffc0a35c10cd4c875a1606a59b8eaab2c568c61c0355ccc046e06703f388f4
 words: 648
 status: active
+hint_source: llm
 ---
 
 # Bourses universitaires à l’étranger

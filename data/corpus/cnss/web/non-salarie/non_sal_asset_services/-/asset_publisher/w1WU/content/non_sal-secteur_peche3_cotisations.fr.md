@@ -14,12 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_peche3_Cotisations
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 20
-hint_keywords:
-- affiliation
-- salarié
-- cotisations
+subtopic_hint: non-salaries
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=2b4c5a74-61ee-438f-a8ce-7770990b5b9a&groupId=54202
 render: html
@@ -33,6 +30,7 @@ last_changed: '2026-10-05T20:47:29+00:00'
 content_hash: sha256:3c15d24e49d4000914742d3bab65db5025b1a8908364cbc9eb1981fb6da3b0de
 words: 627
 status: active
+hint_source: llm
 ---
 
 ## Assiette des cotisations

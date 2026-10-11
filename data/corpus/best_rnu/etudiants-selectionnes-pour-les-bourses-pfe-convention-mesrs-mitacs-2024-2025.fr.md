@@ -10,10 +10,9 @@ section: null
 breadcrumb: []
 doc_type: page
 domain_hint: studies
-subtopic_hint: stages-pfe
-hint_score: 8
-hint_keywords:
-- pfe
+subtopic_hint: bourses
+hint_score: 10
+hint_keywords: []
 forms:
 - https://best.rnu.tn/wp-content/uploads/2019/10/MESRS-MITACS-2024-2025.pdf
 render: html
@@ -27,6 +26,7 @@ last_changed: '2026-10-06T00:22:17+00:00'
 content_hash: sha256:c1936582c5a2b09c9229be36427e696ddb3fc4be9f6933f6491e3e13d348190c
 words: 46
 status: active
+hint_source: llm
 ---
 
 # Étudiants sélectionnés pour les bourses PFE – Convention MESRS-MITACS 2024-2025

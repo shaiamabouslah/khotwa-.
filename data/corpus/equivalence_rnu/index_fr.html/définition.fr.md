@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: equivalence
-hint_score: 4
-hint_keywords:
-- équivalence
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:42:19+00:00'
 content_hash: sha256:991a07ebbcbb6967f52345360f484646fb836c42c82db3da6b8c1b4913b6ea26
 words: 62
 status: active
+hint_source: llm
 ---
 
 # Définition

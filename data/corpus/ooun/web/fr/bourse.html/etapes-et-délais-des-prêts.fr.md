@@ -12,9 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: studies
 subtopic_hint: bourses
-hint_score: 3
-hint_keywords:
-- bourse
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: seed
@@ -27,6 +26,7 @@ last_changed: '2026-10-05T23:14:10+00:00'
 content_hash: sha256:c54bb641ed1a0c907ff72ea2fa7450277231ec4f1a6c1fd172806486247b2760
 words: 89
 status: active
+hint_source: llm
 ---
 
 # Etapes et délais des prêts

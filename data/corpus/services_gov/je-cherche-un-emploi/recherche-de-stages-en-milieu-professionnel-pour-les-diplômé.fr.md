@@ -10,9 +10,9 @@ section: Recherche de stages en milieu professionnel pour les diplômés de la f
 breadcrumb:
 - Recherche de stages en milieu professionnel pour les diplômés de la formation professionnelle selon la spécialité et le diplôme
 doc_type: procedure
-domain_hint: null
-subtopic_hint: null
-hint_score: 0
+domain_hint: studies
+subtopic_hint: stages-pfe
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -26,6 +26,7 @@ last_changed: '2026-10-05T23:42:56+00:00'
 content_hash: sha256:e7b4f454b84e8c70c6e14366960a6982a222d3fdc0a7843fcf88efa9e68e8320
 words: 112
 status: active
+hint_source: llm
 ---
 
 # Recherche de stages en milieu professionnel pour les diplômés de la formation professionnelle selon la spécialité et le diplôme

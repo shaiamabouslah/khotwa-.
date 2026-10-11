@@ -11,12 +11,8 @@ breadcrumb: []
 doc_type: document
 domain_hint: studies
 subtopic_hint: mobilite
-hint_score: 8
-hint_keywords:
-- erasmus
-- mobilité
-- échange
-- credit mobility
+hint_score: 10
+hint_keywords: []
 forms: []
 render: pdf
 discovered_via: link
@@ -29,6 +25,7 @@ last_changed: '2026-10-05T23:56:14+00:00'
 content_hash: sha256:a039b7342e2e12aadc781f56e7230dee4ab54cab9a2ed12102db7109bbbe1425
 words: 1148
 status: active
+hint_source: llm
 ---
 
 <!-- page 1 -->

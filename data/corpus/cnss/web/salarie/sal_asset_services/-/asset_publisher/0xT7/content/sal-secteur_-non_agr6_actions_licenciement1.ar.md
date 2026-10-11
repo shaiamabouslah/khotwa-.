@@ -13,11 +13,10 @@ breadcrumb:
 - Services Salarié
 - Sal Secteur_ non_agr6_actions_licenciement1
 doc_type: procedure
-domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 3
-hint_keywords:
-- salarié
+domain_hint: null
+subtopic_hint: null
+hint_score: 1
+hint_keywords: []
 forms: []
 render: html
 discovered_via: link
@@ -30,6 +29,7 @@ last_changed: '2026-10-05T20:45:33+00:00'
 content_hash: sha256:fbc0bd78d842334d521b57a3dbe42b010fcba5ef7d7208e34090925c8af03906
 words: 267
 status: active
+hint_source: llm
 ---
 
 ## المنح العائلية ومنحة الزيادة عن الأجر الوحيد لفائدة العمال المفصولين عن العمل

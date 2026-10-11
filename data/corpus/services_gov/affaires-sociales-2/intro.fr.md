@@ -11,7 +11,7 @@ breadcrumb: []
 doc_type: procedure
 domain_hint: null
 subtopic_hint: null
-hint_score: 0
+hint_score: 10
 hint_keywords: []
 forms: []
 render: html
@@ -25,6 +25,7 @@ last_changed: '2026-10-05T23:50:08+00:00'
 content_hash: sha256:154f3650940a54c3cfce506cd15ccef59d172a62d3f4184b2ad4ad71285f219c
 words: 67
 status: active
+hint_source: llm
 ---
 
 ### Affaires sociales

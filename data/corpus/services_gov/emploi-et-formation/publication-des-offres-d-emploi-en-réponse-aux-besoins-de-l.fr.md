@@ -12,10 +12,8 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: recherche-emploi
-hint_score: 2
-hint_keywords:
-- demandeur d'emploi
-- aneti
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -28,6 +26,7 @@ last_changed: '2026-10-05T23:45:54+00:00'
 content_hash: sha256:21d3b240d1ff4116c2b73084af38afcf58f6db24c7d6d01fa72a0dc7ec40b509
 words: 121
 status: active
+hint_source: llm
 ---
 
 # Publication des offres d’emploi en réponse aux besoins de l’entreprise

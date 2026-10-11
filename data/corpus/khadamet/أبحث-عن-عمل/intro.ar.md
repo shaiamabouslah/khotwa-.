@@ -11,9 +11,8 @@ breadcrumb: []
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: recherche-emploi
-hint_score: 1
-hint_keywords:
-- عروض الشغل
+hint_score: 10
+hint_keywords: []
 forms: []
 render: html
 discovered_via: sitemap
@@ -26,6 +25,7 @@ last_changed: '2026-10-05T23:42:56+00:00'
 content_hash: sha256:a1f4a0e071e0fe2332c5c1cd670ec365d40b66897e02864d3adc7b400e28255d
 words: 40
 status: active
+hint_source: llm
 ---
 
 ### أبحث عن عمل

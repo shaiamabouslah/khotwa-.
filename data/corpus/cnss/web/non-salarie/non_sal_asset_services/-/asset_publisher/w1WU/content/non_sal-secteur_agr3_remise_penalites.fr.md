@@ -14,12 +14,9 @@ breadcrumb:
 - Non_Sal Secteur_agr3_Remise_penalites
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 11
-hint_keywords:
-- employeur
-- salarié
-- cotisations
+subtopic_hint: patente-fiscalite
+hint_score: 10
+hint_keywords: []
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=d93d65ef-f1c9-4fba-bce1-5ae16962d0d4&groupId=54202
 render: html
@@ -32,7 +29,9 @@ first_seen: '2026-10-05T20:48:30+00:00'
 last_changed: '2026-10-05T20:48:30+00:00'
 content_hash: sha256:903cae4f2172e11088a7572a5537cb33d4d8ad4ed83c2e2ea6af1fe41f9ab00e
 words: 258
-status: active
+status: removed
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr1_remise_penalites#index
+hint_source: llm
 ---
 
 Les pénalités de retard encourues suite à un paiement tardif des cotisations peuvent faire l'objet d'une remise gracieuse.
