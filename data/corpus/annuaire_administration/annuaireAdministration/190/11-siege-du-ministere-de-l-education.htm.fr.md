@@ -5,7 +5,7 @@ org: Portail du Gouvernement Tunisien — Annuaire d'administration
 trust: official
 url: http://fr.tunisie.gov.tn/annuaireAdministration/190/11-siege-du-ministere-de-l-education.htm
 lang: fr
-title: Annuaire d'administration - Portail du Gouvernement Tunisien
+title: Informations de contact du ministère
 section: null
 breadcrumb: []
 doc_type: page
@@ -29,13 +29,7 @@ hint_source: llm
 ---
 
 Premier responsable:Monsieur Fethi Sellaouti
-
 Adresse :Boulevard Bab B'net.
-
 1030 TUNIS
-
 Email : ministere@minedu.edunet.tn
-
 Téléphone : +(216) 71 568 768
-
-[Retour à la liste des administration](http://fr.tunisie.gov.tn/TPL_CODE/TPL_ANNUAIRELISTE_ADMINISTRATI/11-annuaire-d-administration.htm)

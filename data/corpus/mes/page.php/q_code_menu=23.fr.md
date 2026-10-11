@@ -5,7 +5,7 @@ org: Ministère de l'Enseignement Supérieur et de la Recherche Scientifique
 trust: official
 url: https://www.mes.tn/page.php?code_menu=23
 lang: fr
-title: تكوين
+title: Liens vers les études supérieures
 section: null
 breadcrumb: []
 doc_type: page
@@ -28,13 +28,11 @@ status: active
 hint_source: llm
 ---
 
-# تكوين
-
 - [التقديم](https://www.mes.tn/page.php?code_menu=24&code_menu_parent=23)
 - [اجازة ، ماجستير ، دكتوراه](http://www.parcours-lmd.salima.tn)
 - [الدراسات الهندسية](https://www.mes.tn/page.php?code_menu=26&code_menu_parent=23)
 - [الدراسات الطبية](https://www.mes.tn/page.php?code_menu=27&code_menu_parent=23)
 
-# الكتاب الأبيض
+**الكتاب الأبيض**
 
 الكتاب الأبيض للتكوين الهندسي بتونس - [اضغط هنا](https://www.mes.tn/image.php?id=19593)

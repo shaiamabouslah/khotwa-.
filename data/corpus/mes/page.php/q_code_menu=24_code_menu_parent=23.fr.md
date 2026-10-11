@@ -5,7 +5,7 @@ org: Ministère de l'Enseignement Supérieur et de la Recherche Scientifique
 trust: official
 url: https://www.mes.tn/page.php?code_menu=24&code_menu_parent=23
 lang: fr
-title: التقديم
+title: Liens vers les études supérieures
 section: null
 breadcrumb: []
 doc_type: page
@@ -27,8 +27,6 @@ words: 39
 status: active
 hint_source: llm
 ---
-
-# التقديم
 
 - [التقديم](https://www.mes.tn/page.php?code_menu=24&code_menu_parent=23)
 - [اجازة ، ماجستير ، دكتوراه](http://www.parcours-lmd.salima.tn)

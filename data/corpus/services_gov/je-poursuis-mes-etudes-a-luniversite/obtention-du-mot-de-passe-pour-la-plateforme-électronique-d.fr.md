@@ -5,7 +5,7 @@ org: Portail national des services administratifs
 trust: official
 url: http://services.gov.tn/je-poursuis-mes-etudes-a-luniversite/
 lang: fr
-title: Obtention du mot de passe pour la plateforme électronique d’orientation universitaire
+title: Obtention du mot de passe pour la plateforme d’orientation universitaire
 section: Obtention du mot de passe pour la plateforme électronique d’orientation universitaire
 breadcrumb:
 - Obtention du mot de passe pour la plateforme électronique d’orientation universitaire
@@ -29,56 +29,4 @@ status: active
 hint_source: llm
 ---
 
-# Obtention du mot de passe pour la plateforme électronique d’orientation universitaire
-
-### Service
-
-Ce service permet aux étudiants ayant réussi le baccalauréat de demander leur mot de passe personnel ;
-
-### Conditions d’accès au service
-
-Les candidats ayant réussi le baccalauréat de l’année en cours, lors de la session principale et de la session de rattrapage
-
-### Documents demandés
-
-Aucun
-
-### Étapes du service
-
-Obtention du mot de passe pour la plateforme d’orientation universitaire :
-Méthode 1 :
-Via le service de SMS, envoyez un message au numéro 85000 contenant :
-pwd [espace] numéro du baccalauréat
-depuis le numéro de téléphone que vous avez utilisé lors de l’inscription à l’examen du baccalauréat.
-Méthode 2 :
-Accédez au site "Obtention du mot de passe" : login.orientation.tn
-et remplissez les informations demandées.
-
-### Parties intervenantes
-
-- Les candidats
-- Centre informatique Al-Khwarizmi
-- Direction de l’informatique
-
-### Délais
-
-- Mardi 24 juin 2025 pour les candidats ayant réussi la session principale du baccalauréat.
-- Lundi 14 juillet 2025 pour les candidats ayant réussi la session de rattrapage du baccalauréat.
-
-### Lieu de dépôt du dossier
-
-Aucun
-
-### Lieu d'obtention du service
-
-Aucun
-
-### Délai d’obtention du service
-
-Service disponible à partir du 24 juin 2025 jusqu’à la fin de la session d’orientation universitaire 2025.
-
-### Références législatives et/ou réglementaires
-
-Circulaire conjointe n°10 de l’année 2025, datée du 6 mars 2025, relative au calendrier des opérations d’orientation universitaire pour l’année 2025
-
-[Accès au service](http://www.orientation.tn)
+### Conditions d’accès au service Les candidats ayant réussi le baccalauréat de l’année en cours, lors de la session principale et de la session de rattrapage ### Documents demandés Aucun ### Étapes du service Obtention du mot de passe pour la plateforme d’orientation universitaire : Méthode 1 : Via le service de SMS, envoyez un message au numéro 85000 contenant : pwd [espace] numéro du baccalauréat depuis le numéro de téléphone que vous avez utilisé lors de l’inscription à l’examen du baccalauréat. Méthode 2 : Accédez au site

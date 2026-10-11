@@ -28,9 +28,4 @@ status: active
 hint_source: llm
 ---
 
-- [Accueil](https://www.transtu.tn/fr/) ›
-- Dossier d'abonnement scolaire et universitaire
-
-# Dossier d'abonnement scolaire et universitaire
-
-#### Dossier d'abonnement scolaire et universitaire [Ouvrir dans un nouvelle fenêtre pop-up]
+Dossier d'abonnement scolaire et universitaire [Ouvrir dans un nouvelle fenêtre pop-up]

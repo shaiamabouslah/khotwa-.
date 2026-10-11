@@ -28,7 +28,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": "recherche-emploi",
-        "title": "ANETI, Agence Nationale pour l'Emploi et le Travail Indépendant --Emploi en Tunisie--",
+        "title": "Archives des articles de presse",
         "trust": "official",
         "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=111",
         "words": 190
@@ -36,7 +36,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=111.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "removed",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=111"
     },
     "aneti:/fo/Fr/global.php/q_menu1=130#index:fr": {
@@ -67,7 +67,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": "recherche-emploi",
-        "title": "ANETI, Agence Nationale pour l'Emploi et le Travail Indépendant --Emploi en Tunisie--",
+        "title": "Téléchargement de la barre d'outils ANETI",
         "trust": "official",
         "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=130",
         "words": 407
@@ -75,7 +75,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=130.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=130"
     },
     "aneti:/fo/Fr/global.php/q_menu1=137#index:fr": {
@@ -106,7 +106,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": "recherche-emploi",
-        "title": "ANETI, Agence Nationale pour l'Emploi et le Travail Indépendant --Emploi en Tunisie--",
+        "title": "Enquête de satisfaction",
         "trust": "official",
         "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=137",
         "words": 288
@@ -114,7 +114,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=137.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=137"
     },
     "aneti:/fo/Fr/global.php/q_menu1=143#index:fr": {
@@ -155,7 +155,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=143.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=143"
     },
     "aneti:/fo/Fr/global.php/q_menu1=145#index:fr": {
@@ -195,7 +195,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": "recherche-emploi",
-        "title": "ANETI, Agence Nationale pour l'Emploi et le Travail Indépendant --Emploi en Tunisie--",
+        "title": "Indicateurs de l’ANETI",
         "trust": "official",
         "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=145",
         "words": 213
@@ -203,7 +203,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=145.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=145"
     },
     "aneti:/fo/Fr/global.php/q_menu1=146#index:fr": {
@@ -237,7 +237,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": "recherche-emploi",
-        "title": "ANETI, Agence Nationale pour l'Emploi et le Travail Indépendant --Emploi en Tunisie--",
+        "title": "Consultations CEFE",
         "trust": "official",
         "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=146",
         "words": 344
@@ -245,7 +245,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=146.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=146"
     },
     "aneti:/fo/Fr/global.php/q_menu1=15#index:fr": {
@@ -276,7 +276,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": "recherche-emploi",
-        "title": "ANETI, Agence Nationale pour l'Emploi et le Travail Indépendant --Emploi en Tunisie--",
+        "title": "Présentation de l’ANETI",
         "trust": "official",
         "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=15",
         "words": 494
@@ -284,7 +284,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=15.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=15"
     },
     "aneti:/fo/Fr/global.php/q_menu1=150#index:fr": {
@@ -323,7 +323,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=150.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=150"
     },
     "aneti:/fo/Fr/global.php/q_menu1=152#index:fr": {
@@ -362,7 +362,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": "recherche-emploi",
-        "title": "ANETI, Agence Nationale pour l'Emploi et le Travail Indépendant --Emploi en Tunisie--",
+        "title": "Appels d'Offres de l’ANETI (BM)",
         "trust": "official",
         "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=152",
         "words": 1356
@@ -370,7 +370,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=152.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "removed",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=152"
     },
     "aneti:/fo/Fr/global.php/q_menu1=153#index:fr": {
@@ -401,7 +401,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": "recherche-emploi",
-        "title": "ANETI, Agence Nationale pour l'Emploi et le Travail Indépendant --Emploi en Tunisie--",
+        "title": "Services en ligne de l'ANETI",
         "trust": "official",
         "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=153",
         "words": 259
@@ -409,7 +409,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=153.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=153"
     },
     "aneti:/fo/Fr/global.php/q_menu1=155#index:fr": {
@@ -448,7 +448,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=155.fr.md",
       "site": "aneti",
-      "status": "unchanged",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=155"
     },
     "aneti:/fo/Fr/global.php/q_menu1=159#index:fr": {
@@ -479,7 +479,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": "recherche-emploi",
-        "title": "ANETI, Agence Nationale pour l'Emploi et le Travail Indépendant --Emploi en Tunisie--",
+        "title": "Référentiel Tunisien des Métiers et des Compétences",
         "trust": "official",
         "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=159",
         "words": 194
@@ -487,7 +487,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=159.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=159"
     },
     "aneti:/fo/Fr/global.php/q_menu1=16#index:fr": {
@@ -518,7 +518,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": "recherche-emploi",
-        "title": "ANETI, Agence Nationale pour l'Emploi et le Travail Indépendant --Emploi en Tunisie--",
+        "title": "Offres d’emploi et services de l’ANETI",
         "trust": "official",
         "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=16",
         "words": 291
@@ -526,7 +526,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=16.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=16"
     },
     "aneti:/fo/Fr/global.php/q_menu1=160#index:fr": {
@@ -559,7 +559,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": "recherche-emploi",
-        "title": "ANETI, Agence Nationale pour l'Emploi et le Travail Indépendant --Emploi en Tunisie--",
+        "title": "Programmes d’Encouragement à l’Emploi",
         "trust": "official",
         "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=160",
         "words": 392
@@ -567,7 +567,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=160.fr.md",
       "site": "aneti",
-      "status": "unchanged",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=160"
     },
     "aneti:/fo/Fr/global.php/q_menu1=163#index:fr": {
@@ -606,7 +606,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=163.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=163"
     },
     "aneti:/fo/Fr/global.php/q_menu1=167#index:fr": {
@@ -645,7 +645,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=167.fr.md",
       "site": "aneti",
-      "status": "unchanged",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=167"
     },
     "aneti:/fo/Fr/global.php/q_menu1=168#index:fr": {
@@ -684,7 +684,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=168.fr.md",
       "site": "aneti",
-      "status": "unchanged",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=168"
     },
     "aneti:/fo/Fr/global.php/q_menu1=170#index:fr": {
@@ -723,7 +723,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=170.fr.md",
       "site": "aneti",
-      "status": "unchanged",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=170"
     },
     "aneti:/fo/Fr/global.php/q_menu1=171#index:fr": {
@@ -762,7 +762,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=171.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=171"
     },
     "aneti:/fo/Fr/global.php/q_menu1=172#index:fr": {
@@ -793,7 +793,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": "recherche-emploi",
-        "title": "ANETI, Agence Nationale pour l'Emploi et le Travail Indépendant --Emploi en Tunisie--",
+        "title": "Pointage en ligne",
         "trust": "official",
         "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=172",
         "words": 277
@@ -801,7 +801,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=172.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=172"
     },
     "aneti:/fo/Fr/global.php/q_menu1=18#index:fr": {
@@ -842,7 +842,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=18.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=18"
     },
     "aneti:/fo/Fr/global.php/q_menu1=63#index:fr": {
@@ -881,7 +881,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu1=63.fr.md",
       "site": "aneti",
-      "status": "unchanged",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=63"
     },
     "aneti:/fo/Fr/global.php/q_menu2=88#index:fr": {
@@ -915,7 +915,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": "recherche-emploi",
-        "title": "ANETI, Agence Nationale pour l'Emploi et le Travail Indépendant --Emploi en Tunisie--",
+        "title": "Appels d'Offres de l'ANETI (BM)",
         "trust": "official",
         "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu2=88",
         "words": 352
@@ -923,7 +923,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu2=88.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu2=88"
     },
     "aneti:/fo/Fr/global.php/q_menu2=89#index:fr": {
@@ -956,7 +956,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": "recherche-emploi",
-        "title": "ANETI, Agence Nationale pour l'Emploi et le Travail Indépendant --Emploi en Tunisie--",
+        "title": "Résultat des consultations de l’ANETI",
         "trust": "official",
         "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu2=89",
         "words": 204
@@ -964,7 +964,7 @@
       "missed_runs": 0,
       "path": "data/corpus/aneti/fo/Fr/global.php/q_menu2=89.fr.md",
       "site": "aneti",
-      "status": "new",
+      "status": "active",
       "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu2=89"
     },
     "annuaire_administration:/annuaireAdministration/190/11-siege-du-ministere-de-l-education.htm#index:fr": {
@@ -994,7 +994,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": null,
-        "title": "Annuaire d'administration - Portail du Gouvernement Tunisien",
+        "title": "Informations de contact du ministère",
         "trust": "official",
         "url": "http://fr.tunisie.gov.tn/annuaireAdministration/190/11-siege-du-ministere-de-l-education.htm",
         "words": 23
@@ -25028,7 +25028,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": null,
-        "title": "Contactez-nous",
+        "title": "Informations de contact du Ministère de l'Enseignement Supérieur et de la Recherche Scientifique",
         "trust": "official",
         "url": "https://equivalence.rnu.tn/index_fr.html",
         "words": 26
@@ -37815,7 +37815,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": null,
-        "title": "تكوين",
+        "title": "Liens vers les études supérieures",
         "trust": "official",
         "url": "https://www.mes.tn/page.php?code_menu=23",
         "words": 55
@@ -37853,7 +37853,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": null,
-        "title": "التقديم",
+        "title": "Liens vers les études supérieures",
         "trust": "official",
         "url": "https://www.mes.tn/page.php?code_menu=24&code_menu_parent=23",
         "words": 39
@@ -37891,7 +37891,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": null,
-        "title": "الدراسات الهندسية",
+        "title": "Liens vers les études supérieures",
         "trust": "official",
         "url": "https://www.mes.tn/page.php?code_menu=26&code_menu_parent=23",
         "words": 56
@@ -37929,7 +37929,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": null,
-        "title": "الدراسات الطبية",
+        "title": "Liens vers les études supérieures",
         "trust": "official",
         "url": "https://www.mes.tn/page.php?code_menu=27&code_menu_parent=23",
         "words": 40
@@ -38439,7 +38439,7 @@
       "missed_runs": 0,
       "path": "data/corpus/mes/page.php/q_code_menu=587_code_menu_parent=12.fr.md",
       "site": "mes",
-      "status": "active",
+      "status": "removed",
       "url": "https://www.mes.tn/page.php?code_menu=587&code_menu_parent=12"
     },
     "mes:/page.php/q_code_menu=588_code_menu_parent=12#index:fr": {
@@ -50693,7 +50693,7 @@
         "source_updated": null,
         "status": "active",
         "subtopic_hint": "inscription",
-        "title": "Obtention du mot de passe pour la plateforme électronique d’orientation universitaire",
+        "title": "Obtention du mot de passe pour la plateforme d’orientation universitaire",
         "trust": "official",
         "url": "http://services.gov.tn/je-poursuis-mes-etudes-a-luniversite/",
         "words": 228

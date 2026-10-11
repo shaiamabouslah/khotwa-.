@@ -5,7 +5,7 @@ org: Ministère de l'Enseignement Supérieur — Direction des équivalences
 trust: official
 url: https://equivalence.rnu.tn/index_fr.html
 lang: fr
-title: Contactez-nous
+title: Informations de contact du Ministère de l'Enseignement Supérieur et de la Recherche Scientifique
 section: Contactez-nous
 breadcrumb:
 - Contactez-nous
@@ -29,18 +29,13 @@ status: active
 hint_source: llm
 ---
 
-# Contactez-nous
-
 Ministère de l'Enseignement Supérieur et de la Recherche Scientifique - Tunisie
 
-### Adresse
-
+**Adresse**
 Avenue Ouled Haffouz - 1030 Tunis
 
-### Tél
-
+**Tél**
 +216 71 786 300
 
-### E-mail
-
-service\_equivalence@mes.rnu.tn
+**E-mail**
+service_equivalence@mes.rnu.tn

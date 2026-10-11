@@ -68,12 +68,18 @@ def _strip_empty_table_rows(root):
     """Old table-layout sites (aneti.tn and similar) nest a nav/menu link inside 2-3 levels of
     single-column tables used purely for pixel spacing -- every level contributes its own empty
     "| | | |" / "| --- | --- |" markdown row once converted, burying one real link under a wall
-    of noise. Process innermost tables first: drop fully-empty rows, then unwrap any table left
-    with a single real cell (replace the <table> with just that cell's content, no wrapper)."""
-    tables = root.select("table")
-    for table in reversed(tables):            # innermost/later tables first
-        for row in table.find_all("tr", recursive=False) or table.find_all("tr"):
-            cells = row.find_all(["td", "th"], recursive=False)
+    of noise. Uses .select() (not find_all(recursive=False)) throughout: lxml silently inserts
+    a <tbody> wrapper even for HTML that never had one, which would make a recursive=False scan
+    see zero rows and skip a table entirely. Processes deepest tables first (sorted by DOM
+    nesting depth) so a parent benefits from its children already being simplified."""
+    def depth(el):
+        return sum(1 for _ in el.parents)
+
+    for table in sorted(root.select("table"), key=depth, reverse=True):
+        for row in table.select("tr"):
+            if row.find_parent("table") is not table:
+                continue                       # belongs to a nested table, handled separately
+            cells = [c for c in row.find_all(["td", "th"], recursive=False)]
             if cells and all(not c.get_text(strip=True) for c in cells):
                 row.decompose()
             elif len(cells) > 1:
@@ -85,12 +91,10 @@ def _strip_empty_table_rows(root):
                 if empty and len(empty) < len(cells):
                     for c in empty:
                         c.decompose()
-        rows = table.find_all("tr")
-        real_cells = [c for r in rows for c in r.find_all(["td", "th"], recursive=False)
-                      if c.get_text(strip=True)]
+        real_cells = [c for c in table.select("td, th") if c.get_text(strip=True)]
         if not real_cells:
             table.decompose()
-        elif len(real_cells) == 1:
+        elif len(real_cells) == 1 and table.parent is not None:
             table.replace_with(*real_cells[0].contents) if real_cells[0].contents else table.decompose()
 
 
