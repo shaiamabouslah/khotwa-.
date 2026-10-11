@@ -6,7 +6,7 @@
 |---|---|---|---|
 | 0. Raw | `data/raw/` | crawler | exact bytes fetched (HTML / PDF), for reprocessing |
 | 1. Corpus | `data/corpus/` + `catalog.jsonl` | crawler (`python -m crawler crawl`) | every document from every source, **same front matter**, site structure preserved, domain/subtopic as *hints* |
-| 2. Knowledge base | `kb/` (this folder) | cleaning pipeline (next stage) | de-duplicated, classified, merged FR/AR, one procedure per file in the 8-section template below |
+| 2. Knowledge base | `kb/` (this folder) | `scripts/clean_pipeline.py` (step 5) | de-duplicated, classified, merged FR/AR, one procedure per file, cleaned content as-is (no forced section template) |
 
 Sources and crawling rules: [`sources.yaml`](../sources.yaml) and [`crawler/README.md`](../crawler/README.md).
 
@@ -47,27 +47,18 @@ kb/
    (the chunk index and evaluation set refer to it).
 3. **Languages:** `fr` and `ar`. The two language versions of a procedure share the same `id`
    and list each other in `translations`. A missing translation is allowed.
-4. **Fixed body:** the 8 `##` sections below, always present, always in this order.
-   No other `##` heading, no `#` heading. Use `###`, bold labels or lists inside a section.
-
-   | key | fr | ar |
-   |---|---|---|
-   | resume | Résumé | ملخص |
-   | conditions | Conditions | الشروط |
-   | documents | Pièces à fournir | الوثائق المطلوبة |
-   | etapes | Étapes | المراحل |
-   | delais | Délais et coûts | الآجال والمعاليم |
-   | lieu | Où s'adresser | الجهة المعنية |
-   | formulaires | Formulaires | المطبوعات |
-   | references | Références juridiques | المراجع القانونية |
-
-5. **A section the source does not cover is not deleted.** Write
-   `_Non précisé par la source._` (fr) or `_غير مذكور في المصدر._` (ar).
-   The chunker skips these sections.
-6. **Nothing invented.** Every fact must come from a URL in `sources`. The `Résumé` and the
-   numbered `Étapes` may rephrase the source, but must not add information.
-   Figures that look outdated are kept as written by the source and flagged in `notes`.
-7. **Official sources only.** No aggregator (idaraty.tn, demarches.tn…) in `sources`:
+4. **Body = cleaned source content, as-is.** No forced section skeleton: a file keeps
+   whatever structure the source actually has (its own headings, bold labels, lists). No
+   top-level `#` heading. Imposing a fixed 8-section template was tried and dropped — it kept
+   producing empty placeholder sections and misrouting bold-label content into the wrong
+   section, which is worse for retrieval than leaving the source's own structure alone. The
+   `sections` list in `taxonomy.yaml` is kept only as an *advisory* mapping for the chunker,
+   recognized when a heading happens to match — never required, never enforced.
+5. **Nothing invented.** Every fact must come from a URL in `sources`. Content may be
+   de-duplicated or trimmed of boilerplate, but never rephrased in a way that adds information
+   not present in the source. Figures that look outdated are kept as written by the source and
+   flagged in `notes`.
+6. **Official sources only.** No aggregator (idaraty.tn, demarches.tn…) in `sources`:
    they may be used by hand to *discover* procedures, never as the cited source.
 
 ## Front matter (metadata)
@@ -89,6 +80,7 @@ kb/
 | `last_changed` | ✅ | Last date the content of this procedure actually changed |
 | `status` | ✅ | `active`, `stale` (source unreachable, last good version kept), `deprecated` |
 | `notes` | | Caveats: outdated figures, contradictions between sources |
+| `generated` | | `true` on files written by `clean_pipeline.py`. Absent (or `false`) marks a hand-written file, which the pipeline will never overwrite or delete. |
 
 `breadcrumb` preserves where the procedure sits in the source site's own structure
 (e.g. `[CNSS, Non-salariés, Indépendants, Secteur non agricole, Affiliation]`), so

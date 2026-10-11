@@ -88,22 +88,16 @@ def check_file(path, errors, warnings):
         if "source_updated" in src and not is_date(src["source_updated"]):
             errors.append(f"{rel}: sources[{i}].source_updated is not an ISO date")
 
-    # Body: exactly the taxonomy headings, in order, each with content.
-    if lang in TAXONOMY["languages"]:
-        expected_headings = [s[lang] for s in TAXONOMY["sections"]]
-        headings = re.findall(r"^## (.+?)\s*$", body, re.M)
-        if headings != expected_headings:
-            errors.append(f"{rel}: headings must be exactly {expected_headings}, found {headings}")
-        else:
-            parts = re.split(r"^## .+$", body, flags=re.M)[1:]
-            for heading, content in zip(headings, parts):
-                if not content.strip():
-                    errors.append(f"{rel}: section '{heading}' is empty "
-                                  f"(use {TAXONOMY['missing_marker'][lang]!r})")
-        if re.search(r"^# ", body, re.M):
-            errors.append(f"{rel}: top-level '# ' headings are not allowed in the body")
-        if "<" in body and re.search(r"<[A-Za-z][^>]*>", body):
-            warnings.append(f"{rel}: body contains HTML tags")
+    # Body: real content required. No forced section template -- a doc keeps whatever
+    # structure its source actually has (own headings, bold labels, lists); the 8-key list
+    # in taxonomy.yaml is advisory only (for the chunker to recognize a natural heading when
+    # one happens to match), never enforced.
+    if not body.strip():
+        errors.append(f"{rel}: body is empty")
+    if re.search(r"^# ", body, re.M):
+        errors.append(f"{rel}: top-level '# ' headings are not allowed in the body")
+    if "<" in body and re.search(r"<[A-Za-z][^>]*>", body):
+        warnings.append(f"{rel}: body contains HTML tags")
 
     return meta
 

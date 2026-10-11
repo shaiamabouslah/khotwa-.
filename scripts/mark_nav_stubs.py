@@ -23,7 +23,9 @@ PURE_NAV_STUBS = [
     "data/corpus/mes/page.php/q_code_menu=27_code_menu_parent=23.fr.md",
     "data/corpus/mes/page.php/q_code_menu=587_code_menu_parent=12.fr.md",
     "data/corpus/mes/page.php/q_code_menu=129.ar.md",
+    "data/corpus/mes/page.php/q_code_menu=47.fr.md",
     "data/corpus/transtu/fr/0040-dossier-d-abonnement-scolaire-et-universitaire.html.fr.md",
+    "data/corpus/aneti/fo/Fr/global.php/q_menu1=159.fr.md",
 ]
 
 # Same disposal (status=removed), different root cause: these were caught by a content-selector

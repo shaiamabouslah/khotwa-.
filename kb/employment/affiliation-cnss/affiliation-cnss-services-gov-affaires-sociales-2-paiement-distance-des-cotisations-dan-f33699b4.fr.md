@@ -1,0 +1,72 @@
+---
+id: affiliation-cnss-services-gov-affaires-sociales-2-paiement-distance-des-cotisations-dan-f33699b4
+title: Paiement à distance des cotisations dans le cadre de la coopération technique
+domain: employment
+subtopic: affiliation-cnss
+lang: fr
+translations: []
+org: Portail national des services administratifs
+keywords:
+- cotisations
+sources:
+- url: http://services.gov.tn/affaires-sociales-2/
+  breadcrumb:
+  - Paiement à distance des cotisations dans le cadre de la coopération technique
+last_checked: '2026-10-11'
+last_changed: '2026-10-10'
+status: active
+generated: true
+---
+
+## Paiement à distance des cotisations dans le cadre de la coopération technique
+
+### Service
+
+Ce service permet le paiement à distance des cotisations dans le cadre de la coopération technique.
+
+### Conditions d’accès au service
+
+Adhérent à la Caisse Nationale de Retraite et de Prévoyance Sociale.
+
+### Documents demandés
+
+Aucun
+
+### Étapes du service
+
+1.Création d’un compte d’adhérent social.
+2.Connexion à la plateforme dédiée.
+3.Accès au service de paiement à distance des cotisations dans le cadre de la coopération technique.
+4.Saisie des informations nécessaires pour le paiement des cotisations.
+5.Vérification des détails du paiement avant confirmation.
+6.Finalisation du paiement à distance.
+7.Déconnexion de l’espace adhérent social.
+
+### Parties intervenantes
+
+- Agents du secteur public travaillant à l’étranger dans le cadre de la coopération technique.
+- Ministère des Affaires Sociales.
+
+### Délais
+
+Aucun
+
+### Lieu de dépôt du dossier
+
+Aucun
+
+### Lieu d’obtention du service
+
+Aucun
+
+### Délai d’obtention du service
+
+Aucun
+
+### Références législatives et/ou réglementaires
+
+1.Loi n° 85-12 du 5 mars 1985 relative au régime des pensions civiles et militaires de retraite et aux droits des bénéficiaires dans le secteur public, ainsi que tous les textes qui l’ont modifiée ou complétée.
+2.Circulaire du Premier Ministre n° 15 du 4 mai 1985 et n° 36 du 30 juin 1992.
+3.Circulaire du Premier Ministre n° 23 du 31 juillet 2002.
+
+[Accès au service](https://affilie.cnrps.nat.tn/atct/detail/fr)

@@ -1,0 +1,65 @@
+---
+id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-ffb1d47d
+title: Indépendants et autres catégories - CNSS
+domain: employment
+subtopic: affiliation-cnss
+lang: fr
+translations:
+- ar
+org: Caisse Nationale de Sécurité Sociale (CNSS)
+keywords:
+- affiliation
+- salarié
+sources:
+- url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr1_affiliation
+  breadcrumb:
+  - CNSS
+  - Non Salarié
+  - Services Non Salarié
+  - Non_Sal Secteur_agr1_Affiliation
+  source_updated: '2024-06-27'
+last_checked: '2026-10-11'
+last_changed: '2026-10-05'
+status: active
+generated: true
+---
+
+L'affiliation au régime de sécurité sociale est obligatoire pour les travailleurs non salariés du secteur agricole. L'affiliation intervient dans le mois qui suit le début de l'activité .
+
+L'assuré est placé dans une classe de revenu correspondant à son activité professionnelle [(Arrêté du Ministre des Affaires Sociales et de la solidarité du 07 Juillet 1995 relatif au classement des travailleurs non salariés dans les secteurs agricole et non agricole)](https://www.cnss.tn/c/document_library/get_file?uuid=f5a9a3e4-d5a1-4a82-ae77-6a1a0ae42821&groupId=54202)
+
+## Pièces à fournir
+
+**Dans tous les cas :**
+
+- [Demande d'affiliation](https://www.cnss.tn/c/document_library/get_file?uuid=e3ef77c9-66a8-48ff-8268-07b8022dbde2&groupId=54202) (imprimé CNSS)
+- Extrait d'acte de naissance du travailleur non salarié datant de moins de 3 mois.
+- Copie de la carte d'identité nationale du travailleur non salarié.
+- Attestation de propriété ou copie certifiée conforme du contrat de location enregistré à la Recette de Finances ou d'une attestation de possession ou d'attribution ou attestation de l'Union des Agriculteurs établissant la qualité d'agriculteur et précisant la nature de l'activité agricole, la superficie exploitée et le mode d'exploitation (en sec ou en irrigué)
+
+**Pour le travailleur non salarié marié :**
+
+- Extrait d'acte de naissance du conjoint et de chaque enfant à charge datant de moins de 3 mois, à fournir lors de l'affiliation ou postérieurement.
+
+## Lieu de dépôt
+
+Le dossier d'affiliation est déposé au Bureau Régional ou Local territorialement compétent
+
+## Date d'effet
+
+La date d'effet de l'affiliation correspond à la date d'assujettissement, lorsque la demande d'affiliation est déposée au cours du mois qui suit l'assujettissement ; dans le cas contraire, elle prend effet à compter du premier jour du trimestre en cours à la date de réception par la Caisse de la demande d'affiliation.
+
+En cas d'abstention du travailleur non salarié, la Caisse le met en demeure et procède à son affiliation d'office. La date d'effet est fixée au premier jour du trimestre de la date d'envoi de la mise en demeure.
+
+Le respect des délais d'affiliation évite au travailleur non salarié le paiement des pénalités de retard et des dommages intérêts.
+
+## Délai d'obtention du service
+
+Une carte d'assuré social et un certificat d'affiliation sont envoyés par voie postale dans un délai d'une semaineà partir de la date de dépôt du dossier complet.
+
+## Références législatives et règlementaires
+
+- Loi n°60-30 du 14 décembre 1960, relative à l'organisation des régimes de sécurité sociale, telle que modifiée et complétée par les textes subséquents et notamment : Art. 106
+- Décret 95/1166 du 3/7/1995 tel que modifié par le décret n° 2002-3018 du 19 novembre 2002 et par le décret n° 2004-167 du 20 Janvier 2004 : Art. 2, Art. 4, Art. 5
+- [Arrêté du Ministre des Affaires Sociales et de la solidarité du 07 Juillet 1995](https://www.cnss.tn/c/document_library/get_file?uuid=f5a9a3e4-d5a1-4a82-ae77-6a1a0ae42821&groupId=54202) relatif au classement des travailleurs non salariés dans les secteurs agricole et non agricole.
+- Arrêté du Ministre des Affaires Sociales et de la Solidarité du 26 Janvier 2004 déterminant les procédures et les modalités d'application du décret n° 2004-167 du 20 Janvier 2004 modifiant et complétant le décret n° 95-1166 du 3 Juillet 1995.

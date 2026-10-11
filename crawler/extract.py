@@ -48,6 +48,11 @@ def normalize(text: str) -> str:
     """Compare titles robustly: OOUN headings contain double and non-breaking spaces."""
     text = unicodedata.normalize("NFKC", text)
     text = re.sub(r"[ـً-ْ]", "", text)   # Arabic tatweel (معادلـــة) and diacritics
+    # Alif variants (hamza-above إأ, madda آ, bare ا) are different base Unicode characters,
+    # not combining marks, so NFKC above doesn't merge them -- confirmed as a real bug in
+    # scripts/clean_to_kb.py: a pattern written "آجال" (madda) silently failed to match source
+    # text spelled "الأجال" (hamza), even though both are "the same word" to a reader.
+    text = re.sub(r"[إأآا]", "ا", text)
     text = text.replace("’", "'").replace("‘", "'").replace("`", "'")
     text = re.sub(r"[*_#>]", " ", text)
     return re.sub(r"\s+", " ", text).strip().lower()

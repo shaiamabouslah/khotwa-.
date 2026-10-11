@@ -1,0 +1,132 @@
+---
+id: affiliation-cnss-cnss-ar-c-document-library-get-file-q-uuid-2ff53607-021b-4461-90d0-c48-e4f1b6da
+title: République Tunisienne الجمهوريـة التونسيـة
+domain: employment
+subtopic: affiliation-cnss
+lang: ar
+translations: []
+org: Caisse Nationale de Sécurité Sociale (CNSS)
+keywords:
+- affiliation
+- immatriculation employeur
+- immatriculation à la cnss
+- immatriculation des salariés
+- employeur
+- salarié
+- cotisations
+- déclaration des salaires
+- انخراط
+- الانخراط
+- تسجيل الأجراء
+- المؤجر
+- الاشتراكات
+sources:
+- url: https://www.cnss.tn/ar/c/document_library/get_file?uuid=2ff53607-021b-4461-90d0-c4882c9f5128&groupId=54202
+  breadcrumb: []
+last_checked: '2026-10-11'
+last_changed: '2026-10-06'
+status: active
+generated: true
+---
+
+<!-- page 1 -->
+République Tunisienne الجمهوريـة التونسيـة
+Ministère des Affaires Sociales وزارة الشؤون االجتماعية
+مطلـب انخـراط بنظـام الضمـان االجتماعـي
+للفنانين والمبدعين والمثقفين
+DEMANDE D’AFFILIATION AU REGIME DE SECURITE SOCIALE
+DES ARTISTES, CREATEURS ET INTELLECTUELS
+Nom de famille : ………...….…..……………………… : اللقب العائلي Prénom : ..……………………………………… : االسم
+Prénom du père : .………...........…………… : اسم الجد Prénom du grand- père : .……...................…...........…….... : اسم األب
+Nom de la mère : ………...……………………...……… : لقبها Prénom de la mère : .………………………………… : اسم األم
+Nationalité : .………………………….……………………..…………………… : الجنسية Sexe : ...…………………… : الجنس
+Date de naissance : .…..…..…..….…..….……Lieu : ..…..……..….…….…… : تاريخ الوالدة : …….…….…..…..…..….. مكانها
+Acte de naissance : Année : ……..……………… Numéro : ..………….……… : رسم الوالدة : السنة : ……………………العدد
+Arrondissement : .……...…… : الدائرة Municipalité : …...............……: : البلدية Gouvernorat : …...........…………… : الوالية
+Etat Civil : (célibataire, marié, divorcé ou veuf ) : ….......……………………………………: )الحالة المدنية )أعزب، متزوج، مطلق أو أرمل
+Numéro de la carte d'identité nationale : …………......……….……………………………………… : رقم بطاقة التعريف الوطنية
+Adresse du lieu de travail : ………….………...………………………....…………………………………… : عنوان مقر العمل
+Appt n° ……………شقة عدد Imm n°…………… عمارة عدد Cité : ……....….....…………………………………… : حي
+Code Postal الترقيم البريدي…Localité : ….……….....…....…………………………………………… : البلـدة
+Adresse du domicile : ….………………………………………………….…………………………….………… : عنوان اإلقامة
+Appt n° ……………شقة عدد Imm n°…………… عمارة عدد Cité : ……....….....…………………………………… : حي
+Code Postal الترقيم البريدي…Localité : ….……….....…....…………………………………………… : البلـدة
+Adresse de correspondance (domicile ou lieu de travail) : …..................…………… : )عنوان المراسلة )مقر اإلقامة أو مقر العمل
+Activité professionnelle : ….......…....................………………………………………………………………… : النشاط المهني
+Date de début de l'activité : ……....…..…....…………………………………………………………………… : تاريخ بداية النشاط
+Spécialité : …...…….……..……..…....……….……………………………………………………………………… : االختصاص
+Je soussigné ............................................….... …………......................................................... إني الممضي)ة( أسفله
+déclare sur l’honneur que les renseignements ci-dessus sont ، أص ّرح على شرفي بصدق وص ّحة اإلرشادات المذكورة أعاله
+sincères et exacts,
+وأطلب انخراطي بنظام الضمـان االجتماعـي للفنانين والمبدعيـن
+demande mon affiliation au régime de Sécurité Sociale des
+والمثقفين طبقا ألحكـام القانـون عدد 401 لسنـة 2002 المـؤرخ
+artistes, créateurs et intellectuels conformément aux dispositions
+de la loi n° 2002-104 du 30 décembre 2002 et ce في 00 ديسمبـر 2002 وذلـك بشريحة الدخل
+à la ………….……....….. classe de revenus (en toutes lettres). .)الـ......................)بلسان القلم
+opte pour l'affiliation – opte pour la non affiliation au régime
+(biffer la mention inutile)
+)كما أطلب االنخراط - وال أطلب االنخـراط )تشطب العبارة الزائدة
+de réparation des préjudices résultant des accidents du travail.
+.بنظام التعويض عن األضرار الناتجـة عن حـوادث الشغل
+et m’engage à informer la Caisse Nationale de tout changement وألتزم بإعالم الصندوق الوطني بكل تغيير يطرأ على حالتي
+de ma situation familiale ou professionnelle. .العائلية أو المهنية
+N
+Fait à .……................………………le .……................……………… حرر بــ ………………................……. في
+Signature اإلمضــا
+
+<!-- page 2 -->
+الوثائـق المطلوبـة
+.مضمون والدة اصلي لم تمض 0 أشهر على استخراجه-
+.نسخة من بطاقة التعريف الوطنية -
+قرار اللجنة االستشارية المحدثة لدى الوزارة المكلفة بالثقافة بشأن خضوع صاحب الطلب لنظام الضمان االجتماعي-
+.الخاص بالفنانين والمبدعين والمثقفين
+إرشـادات هامـة
+: يتعين على الفنانين والمبدعين والمثقفين 
+إيداع مطلب االنخراط لدى المكتب الجهوي أو المحلي المختص ترابيا في أجل شهر من تاريخ الخضوع لنظام -
+.الضمان االجتماعي للفنانين والمبدعين والمثقفين
+.اختيار شريحة دخل تحتسب على أساسها االشتراكات والمنافع النقدية -
+.ذكـر رقـم االنخـراط في كل المراسالت واالتصاالت بالصندوق الوطني -
+دفع االشتراكات كل ثالثة أشهر خالل الخمسة عشر يوما األولى الموالية لكل ثالثية بمكاتب البريد أو بشبابيك -
+.المكاتب الجهوية والمحلية للصندوق الوطني. كما يمكن دفع االشتراكات شهريا أو ثالثيا أو سنويا بصفة مسبقة
+تحتسب االشتراكات على قاعدة دخل تقديري يساوي حاصل ضرب األجر األدنى المهني المضمون في الضارب 
+: المناسب لشريحة الدخل والمح ّدد كما يلي
+شريحة الدخل األولى الثانية الثالثة الرابعة الخامسة السادسة السابعة الثامنة التاسعة العاشرة
+18 16 13 10 7 5 4 3 2,5 2 الضـارب
+لترسيم أفراد العائلة ، يتعين على الفنان أو المبدع أو المثقف أن يودع ، لدى أحد المكاتب الجهوية والمحلية 
+.للصندوق الوطني ، مضمون والدة لم تمض 0 أشهر على استخراجه لكل من القرين واألبناء في الكفالة
+Pièces à fournir
+- Extrait d’acte de naissance datant de moins de 3 mois.
+- Copie de la Carte d’Identité Nationale.
+- Décision de la commission consultative instituée auprès du ministère chargé de la culture concernant
+l’assujettissement du postulant au régime de sécurité sociale des artistes, créateurs et intellectuels.
+Important
+ Les artistes, les créateurs et les intellectuels sont tenus de :
+- déposer la demande d’affiliation au bureau régional ou local territorialement compétent dans le mois qui suit
+la date de leur assujettissement au régime de Sécurité Sociale des artistes, créateurs et intellectuels.
+- choisir une classe de revenus servant de base de calcul des cotisations et des prestations en espèces.
+- Mentionner le numéro d’affiliation dans toute correspondance ou contact avec la Caisse Nationale.
+- Payer les cotisations trimestriellement dans les 15 premiers jours qui suivent chaque trimestre aux bureaux
+postaux ou aux guichets des bureaux régionaux et locaux de la Caisse Nationale. Ils peuvent également payer
+les cotisations mensuellement, trimestriellement ou annuellement de façon anticipée.
+ Les cotisations sont calculées sur la base d’un revenu forfaitaire égal au salaire minimum interprofessionnel
+garanti multiplié par le coefficient correspondant à la classe de revenus fixé comme suit :
+Classe de revenus 1ère 2ème 3ème 4ème 5ème 6ème 7ème 8ème 9ème 10ème
+Coefficient 2 2,5 3 4 5 7 10 13 16 18
+ Pour inscrire les membres de sa famille, l’artiste, le créateur ou l’intellectuel doit déposer, auprès de
+l’un des bureaux régionaux et locaux de la Caisse Nationale, un extrait d’acte de naissance datant de moins de
+3 mois de son conjoint et de chaque enfant à sa charge.
+
+| الوثائـق المطلوبـة |
+
+| إرشـادات هامـة |
+
+| العاشرة | التاسعة | الثامنة | السابعة | السادسة | الخامسة | الرابعة | الثالثة | الثانية | األولى | شريحة الدخل |
+| 18 | 16 | 13 | 10 | 7 | 5 | 4 | 3 | 2,5 | 2 | الضـارب |
+
+| Pièces à fournir |
+
+| Important |
+
+| Classe de revenus | 1ère | 2ème | 3ème | 4ème | 5ème | 6ème | 7ème | 8ème | 9ème | 10ème |
+| Coefficient | 2 | 2,5 | 3 | 4 | 5 | 7 | 10 | 13 | 16 | 18 |
