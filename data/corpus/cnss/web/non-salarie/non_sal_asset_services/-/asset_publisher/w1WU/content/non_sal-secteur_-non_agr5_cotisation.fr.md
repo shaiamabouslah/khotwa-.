@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr5_cotisation
 lang: fr
-title: Indépendants et autres catégories - CNSS
+title: Non Sal Secteur non agr5 cotisation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -30,9 +30,10 @@ fetched_at: '2026-10-05T20:50:06+00:00'
 first_seen: '2026-10-05T20:50:06+00:00'
 last_changed: '2026-10-05T20:50:06+00:00'
 content_hash: sha256:715b02d1039b4820d7c2b8da1784c42e34f43d833ad85b77689cdfd9df093d8d
-words: 323
+words: 303
 status: active
 hint_source: llm
+original_title: Indépendants et autres catégories - CNSS
 ---
 
 ## Assiette des cotisations

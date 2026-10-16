@@ -4,11 +4,11 @@ site: mes
 org: Ministère de l'Enseignement Supérieur et de la Recherche Scientifique
 trust: official
 url: https://www.mes.tn/page.php?code_menu=588&code_menu_parent=12
-lang: fr
+lang: ar
 title: عنوان الوزارة
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: directory
 domain_hint: studies
 subtopic_hint: null
 hint_score: 10
@@ -26,16 +26,30 @@ content_hash: sha256:e1403c8ef7dcbdb0a2d624d41f5f62193f3fbde28029fc85a682fe617db
 words: 34
 status: active
 hint_source: llm
+lang_original: fr
+links:
+- text: السيد الوزير
+  url: https://www.mes.tn/page.php?code_menu=550&code_menu_parent=12
+- text: تنظيم الوزارة
+  url: https://www.mes.tn/page.php?code_menu=551&code_menu_parent=12
+- text: المهام والمشمولات
+  url: https://www.mes.tn/page.php?code_menu=556&code_menu_parent=12
+- text: مؤسسات تحت الإشراف
+  url: https://www.mes.tn/page.php?code_menu=559&code_menu_parent=12
+- text: بوابة الحكومة
+  url: https://www.mes.tn/page.php?code_menu=587&code_menu_parent=12
+- text: عنوان الوزارة
+  url: https://www.mes.tn/page.php?code_menu=588&code_menu_parent=12
 ---
 
 # عنوان الوزارة
 
-- [السيد الوزير](https://www.mes.tn/page.php?code_menu=550&code_menu_parent=12)
-- [تنظيم الوزارة](https://www.mes.tn/page.php?code_menu=551&code_menu_parent=12)
-- [المهام والمشمولات](https://www.mes.tn/page.php?code_menu=556&code_menu_parent=12)
-- [مؤسسات تحت الإشراف](https://www.mes.tn/page.php?code_menu=559&code_menu_parent=12)
-- [بوابة الحكومة](https://www.mes.tn/page.php?code_menu=587&code_menu_parent=12)
-- [عنوان الوزارة](https://www.mes.tn/page.php?code_menu=588&code_menu_parent=12)
+- السيد الوزير
+- تنظيم الوزارة
+- المهام والمشمولات
+- مؤسسات تحت الإشراف
+- بوابة الحكومة
+- عنوان الوزارة
 
 # وزارة التعليم العالي والبحث العلمي
 

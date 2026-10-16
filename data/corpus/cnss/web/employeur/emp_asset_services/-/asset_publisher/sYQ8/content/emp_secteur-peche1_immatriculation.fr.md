@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_immatriculation
 lang: fr
-title: Employeurs - CNSS
+title: Emp Secteur pêche1 Immatriculation (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -29,19 +29,27 @@ fetched_at: '2026-10-05T20:44:06+00:00'
 first_seen: '2026-10-05T20:44:07+00:00'
 last_changed: '2026-10-05T20:44:07+00:00'
 content_hash: sha256:ea032c7ad09dfa1f83b666ba2c4f4b47b8efda5ab06d27d5297b5cf75d3a1089
-words: 341
+words: 198
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_immatriculation?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_assiette?secteur=$secteur
+- text: Remise des pénalités
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_remise_penalites?secteur=$secteur
+- text: Avantages
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche1_contenu-avantage_2?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: Attestation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_attestations?secteur=$secteur
+- text: Affiliation au régime complémentaire de pensions
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation_regime_complementaire?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche1_contenu-avantage_2?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_attestations?secteur=$secteur)
-- [Affiliation au régime complémentaire de pensions](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation_regime_complementaire?secteur=$secteur)
-
 L'employeur est tenu d'immatriculer le personnel qu'il emploie dans un délai d'un mois à compter de la date d'affiliation. Pour les travailleurs engagés cette ultérieurement à cette date, l'immatriculation intervient dans un délai d'un mois  à  d'un à compter de la date de leur engagement.
 
 En cas de  défaillance de l'employeur, le salarié a le droit de demander lui-même son immatriculation.

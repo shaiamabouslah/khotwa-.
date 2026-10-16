@@ -31,7 +31,7 @@ fetched_at: '2026-10-05T20:42:51+00:00'
 first_seen: '2026-10-05T20:42:51+00:00'
 last_changed: '2026-10-05T20:42:51+00:00'
 content_hash: sha256:4c1e437b26ac8ad8c70f434720bbf5f8ac46f7b6640084d2fa94096fba3e78f5
-words: 624
+words: 467
 status: removed
 hint_source: llm
 duplicate_of: cnss:/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_assiette#index

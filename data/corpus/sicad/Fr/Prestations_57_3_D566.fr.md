@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:09:45+00:00'
 first_seen: '2026-10-07T20:09:45+00:00'
 last_changed: '2026-10-07T20:09:45+00:00'
 content_hash: sha256:7ec80fd63b8b0760e577ffaeda9807a6a4d298c1391a613f0acbe2005c353834
-words: 318
+words: 310
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Attribution du logo pour les produits de l'agriculture biologique http://www.sicad.gov.tn//Prestations_57_3_D566 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -43,7 +45,7 @@ hint_source: llm
   | - Etude du dossier et préparation de la décision | commissariat régional au développement agricole concerné |  |
   | - Signature de la décision | Direction générale de l'agriculture biologique |  |
   | 6- \* En cas d'avis favorable : Informer par écrit le concerné | Direction générale de l'agriculture biologique |  |
-  | \* En cas de refus: Informer par écrit le concerné avec motivation                     8 jours | | |
+  | \* En cas de refus: Informer par écrit le concerné avec motivation 8 jours | | |
 - **Lieu de dépôt du dossier :**
 
   **Service :**
@@ -74,8 +76,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Attribution du logo pour les produits de l'agriculture biologique http://www.sicad.gov.tn//Prestations_57_3_D566 "Partager sur twitter")
-Imprimer

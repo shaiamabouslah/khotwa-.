@@ -26,6 +26,15 @@ content_hash: sha256:91704880cf6acdf4de9ef77a7a385b326357556cd1ce3a7ec36ee669b8c
 words: 140
 status: active
 hint_source: llm
+links:
+- text: Download the Call for Applications
+  url: https://ucar.rnu.tn/wp-content/uploads/2026/09/2027-Appel_candidature_stt.docx?utm_source=chatgpt.com
+- text: Download the Consent for Personal Data Processing Form
+  url: https://ucar.rnu.tn/wp-content/uploads/2026/09/Consent-for-personal-data-processing-GDPR-consent-for-staff.docx
+- text: Download the Mobility Agreement – Staff Mobility for Teaching
+  url: https://ucar.rnu.tn/wp-content/uploads/2026/09/Teaching-Mobility-Agreement.docx?utm_source=chatgpt.com
+- text: Download the Mobility Agreement – Staff Mobility for Teaching and Training
+  url: https://ucar.rnu.tn/wp-content/uploads/2026/09/Teaching-and-Training-Agreement.docx?utm_source=chatgpt.com
 ---
 
 ## CALL FOR APPLICATIONS – ERASMUS+ MOBILITY (Romania)
@@ -39,16 +48,16 @@ The University of Carthage is launching a call for applications for two (2) Eras
 ## 📄 Documents to download
 
 – **Call for Applications:**
-[Download the Call for Applications](https://ucar.rnu.tn/wp-content/uploads/2026/09/2027-Appel_candidature_stt.docx?utm_source=chatgpt.com)
+Download the Call for Applications
 
 – **Consent for Personal Data Processing:**
-[Download the Consent for Personal Data Processing Form](https://ucar.rnu.tn/wp-content/uploads/2026/09/Consent-for-personal-data-processing-GDPR-consent-for-staff.docx)
+Download the Consent for Personal Data Processing Form
 
 – **Mobility Agreement – Staff Mobility for Teaching:**
-[Download the Mobility Agreement – Staff Mobility for Teaching](https://ucar.rnu.tn/wp-content/uploads/2026/09/Teaching-Mobility-Agreement.docx?utm_source=chatgpt.com)
+Download the Mobility Agreement – Staff Mobility for Teaching
 
 – **Mobility Agreement – Staff Mobility for Teaching and Training:**
-[Download the Mobility Agreement – Staff Mobility for Teaching and Training](https://ucar.rnu.tn/wp-content/uploads/2026/09/Teaching-and-Training-Agreement.docx?utm_source=chatgpt.com)
+Download the Mobility Agreement – Staff Mobility for Teaching and Training
 
 ## 📧 Contact
 

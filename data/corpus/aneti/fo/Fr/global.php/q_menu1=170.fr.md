@@ -24,7 +24,7 @@ fetched_at: '2026-10-10T23:49:57+00:00'
 first_seen: '2026-10-06T22:41:29+00:00'
 last_changed: '2026-10-10T23:49:57+00:00'
 content_hash: sha256:1aa8167de04b1e68b4e9a7b99eecddcdd81b37e7bc293d84de18d75357323eab
-words: 962
+words: 236
 status: active
 cleaned_v2: true
 ---
@@ -45,8 +45,8 @@ Structures intervenantes
 Objectifs général
 Contribuer à renforcer la création d’emploi pour promouvoir l’inclusion économique à travers l’Entrepreneuriat, et le Développement des Compétences
 
-Objectifs spécifiques du programme : 
+Objectifs spécifiques du programme :
 - Renforcer l’employabilité des chercheurs d’emploi en appuyant les mécanismes et programmes de formation complémentaire d’adaptation ou de réadaptation
-- Encourager l’entrepreneurial à travers :​
+- Encourager l’entrepreneurial à travers :
   - L’élargissement du champ d’action des dispositifs d’accompagnement et d’encadrement, avant et après la création des entreprises,
   - Le renforcement de la capacité du système de prêts sans intérêts pour couvrir les

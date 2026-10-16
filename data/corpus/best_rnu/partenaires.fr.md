@@ -8,7 +8,7 @@ lang: fr
 title: Partenaires
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: contact
 domain_hint: studies
 subtopic_hint: null
 hint_score: 1
@@ -23,7 +23,7 @@ fetched_at: '2026-10-06T00:03:16+00:00'
 first_seen: '2026-10-05T20:29:43+00:00'
 last_changed: '2026-10-06T00:03:22+00:00'
 content_hash: sha256:119d44296e763fb9ef438b7d5ebb45081aaf40346ad324a5b43cb1b5f599d8f6
-words: 110
+words: 101
 status: active
 hint_source: llm
 ---

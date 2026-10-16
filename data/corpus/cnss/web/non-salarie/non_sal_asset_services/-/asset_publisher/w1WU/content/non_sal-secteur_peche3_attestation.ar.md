@@ -29,7 +29,7 @@ fetched_at: '2026-10-05T20:47:37+00:00'
 first_seen: '2026-10-05T20:47:37+00:00'
 last_changed: '2026-10-05T20:47:37+00:00'
 content_hash: sha256:4f33cdc6a22b55b98e3b3682759f45b93c4cd8346a01fd3a14d52253bc68dab0
-words: 151
+words: 121
 status: removed
 duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr3_attestation#index
 hint_source: llm

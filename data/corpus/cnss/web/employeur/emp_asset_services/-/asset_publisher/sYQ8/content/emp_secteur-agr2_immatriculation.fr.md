@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_immatriculation
 lang: fr
-title: Employeurs - CNSS
+title: Emp Secteur agr2 Immatriculation (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -29,18 +29,25 @@ fetched_at: '2026-10-05T20:43:46+00:00'
 first_seen: '2026-10-05T20:43:46+00:00'
 last_changed: '2026-10-05T20:43:46+00:00'
 content_hash: sha256:d5e371d914025136fe4e99cf0b826ea35a4eba08db26ff73b75838648f43e154
-words: 323
+words: 197
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_immatriculation?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_assiette?secteur=$secteur
+- text: Remise des pénalités
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_remise_penalites?secteur=$secteur
+- text: Avantages
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_agr2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: Attestation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_attestations?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_agr2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_attestations?secteur=$secteur)
-
 L'employeur est tenu d'immatriculer le personnel qu'il emploie dans un délai d'un mois à compter de la date d'affiliation. Pour les travailleurs engagés ultérieurement à cette date, l'immatriculation intervient dans un délai d'un mois  à compter de la date de leur engagement.
 
 En cas de  défaillance de l'employeur, le salarié a le droit de demander lui-même son immatriculation.

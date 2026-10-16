@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal_autres_artistes_affiliation
 lang: ar
-title: غير الأجراء - CNSS
+title: Non Sal autres artistes Affiliation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -28,9 +28,10 @@ fetched_at: '2026-10-06T13:05:55+00:00'
 first_seen: '2026-10-05T20:36:36+00:00'
 last_changed: '2026-10-06T13:05:55+00:00'
 content_hash: sha256:8a9e98ac6b4db27117bbb8ca1fa4e312f8fb4117b3278e67edeab400b4775db5
-words: 286
+words: 272
 status: active
 hint_source: llm
+original_title: غير الأجراء - CNSS
 ---
 
 الانخراط بأنظمة الضمان الاجتماعي إجباري على الفنانين والمبدعين والمثقفين

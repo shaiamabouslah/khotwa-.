@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr2_contenu-avantage_3
 lang: fr
-title: Employeurs - CNSS
+title: Emp Secteur non agr2 Contenu Avantage 3 (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -28,19 +28,27 @@ fetched_at: '2026-10-05T20:41:15+00:00'
 first_seen: '2026-10-05T20:41:15+00:00'
 last_changed: '2026-10-05T20:41:15+00:00'
 content_hash: sha256:5169df08288cf9b7a17af8e4f496c0ed883f3ab984902da3748fff33d2241cc3
-words: 731
+words: 601
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr2_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr2_immatriculation?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr2_assiette?secteur=$secteur
+- text: Remise des pénalités
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr2_remise_penalites?secteur=$secteur
+- text: Avantages
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: Attestation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr2_attestations?secteur=$secteur
+- text: Affiliation au régime complémentaire de pensions
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr2_affiliation_regime_complementaire?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr2_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr2_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr2_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr2_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr2_attestations?secteur=$secteur)
-- [Affiliation au régime complémentaire de pensions](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr2_affiliation_regime_complementaire?secteur=$secteur)
-
 Les projets d'investissement réalisés par les nouveaux promoteurs bénéficient de la prise en charge par l'Etat de la cotisation patronale au régime légal de sécurité sociale, au titre des salaires versés aux agents de nationalité tunisienne, durant les cinq premières années d'activité effective.Les nouveaux promoteurs doivent être :
 
 - Des personnes physiques de nationalité tunisienne regroupées ou non en société et qui :

@@ -24,7 +24,7 @@ fetched_at: '2026-10-06T00:22:31+00:00'
 first_seen: '2026-10-05T20:27:57+00:00'
 last_changed: '2026-10-06T00:22:31+00:00'
 content_hash: sha256:876e07b395ef5e0589000e79fb5e984a945b2880341df34777af636bd46eb73e
-words: 231
+words: 207
 status: active
 hint_source: llm
 ---
@@ -44,6 +44,6 @@ L’étude des dossiers de candidatures relève des attributions de la Commissio
 **Nombre des places disponibles pour la session d’automne 2026:**
 
 **Baccalauréat** : **1place**
-**Maîtrise**          : **6** **places**
+**Maîtrise** : **6** **places**
 
 Nous vous souhaitons d’excellentes chances.

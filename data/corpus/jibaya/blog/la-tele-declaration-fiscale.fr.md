@@ -26,7 +26,7 @@ fetched_at: '2026-10-07T20:47:59+00:00'
 first_seen: '2026-10-05T20:29:13+00:00'
 last_changed: '2026-10-07T20:48:18+00:00'
 content_hash: sha256:6426505d5d1db741e7eec77977a53aa2080bceaea0628d23e6c160f9d151638c
-words: 381
+words: 383
 status: active
 hint_source: llm
 ---
@@ -37,7 +37,7 @@ hint_source: llm
 
 - [Services en ligne](https://jibaya.tn/services-en-ligne/)
 
-- Télé-déclaration Fiscale​
+- Télé-déclaration Fiscale
 
 ## Etape 1 : Adhésion au système de la télédéclaration
 

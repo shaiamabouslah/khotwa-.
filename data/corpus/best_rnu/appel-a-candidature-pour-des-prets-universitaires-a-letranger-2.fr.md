@@ -8,7 +8,7 @@ lang: fr
 title: Appel à candidature pour des prêts universitaires à l’étranger
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: announcement
 domain_hint: studies
 subtopic_hint: bourses
 hint_score: 1
@@ -24,7 +24,7 @@ fetched_at: '2026-10-06T00:21:17+00:00'
 first_seen: '2026-10-05T20:26:08+00:00'
 last_changed: '2026-10-06T00:21:17+00:00'
 content_hash: sha256:3d2739b641dd530ef250a8c86947c69beca82fdba03c4cc9063d931b31cec6b8
-words: 50
+words: 43
 status: active
 hint_source: llm
 ---

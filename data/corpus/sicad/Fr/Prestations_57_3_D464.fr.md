@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:09:55+00:00'
 first_seen: '2026-10-07T20:09:55+00:00'
 last_changed: '2026-10-07T20:09:55+00:00'
 content_hash: sha256:cb506b38708abe4e8b012afc0596d1c658855c69e230f2a83dfd22c00f6a8c49
-words: 380
+words: 372
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Autorisation anticipée pour la construction d'un bâtiment relatif à l'exploitation agricole http://www.sicad.gov.tn//Prestations_57_3_D464 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -78,8 +80,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Autorisation anticipée pour la construction d'un bâtiment relatif à l'exploitation agricole http://www.sicad.gov.tn//Prestations_57_3_D464 "Partager sur twitter")
-Imprimer

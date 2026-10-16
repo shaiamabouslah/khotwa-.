@@ -24,7 +24,7 @@ fetched_at: '2026-10-05T23:14:10+00:00'
 first_seen: '2026-10-05T20:26:26+00:00'
 last_changed: '2026-10-05T23:14:10+00:00'
 content_hash: sha256:e9441454ce99480455a09f98b74e6e80801253bd44c48436f7f0d2eec51799ae
-words: 258
+words: 253
 status: active
 hint_source: llm
 ---
@@ -34,7 +34,7 @@ hint_source: llm
  **1/Certaines conditions à remplir :**
 **\*** Avoir le diplôme d’études supérieures.
 \* Pour postuler à une bourse: Le revenu net des parents après déduction des charges sociales ne devant pas dépasser le salaire minimum interprofessionnel garanti SMIG (3840d pour l'année 2014).
-\*  Pour postuler à un prêt:   le revenu  net des parents après abattement des charges sociales devant être supérieur au SMIG (3840d pour l'année 2014).
+\*  Pour postuler à un prêt: le revenu  net des parents après abattement des charges sociales devant être supérieur au SMIG (3840d pour l'année 2014).
 
 **2/ Comment constituer le dossier ?**
 - formulaire en ligne à remplir (disponible sur le site web [www.ooun.rnu.tn](http://www.ooun.rnu.tn) )

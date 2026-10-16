@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr3_remise_penalites
 lang: fr
-title: Employeurs - CNSS
+title: Emp Secteuré non agr3 Remise penalites (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -31,19 +31,27 @@ fetched_at: '2026-10-05T20:41:35+00:00'
 first_seen: '2026-10-05T20:41:35+00:00'
 last_changed: '2026-10-05T20:41:35+00:00'
 content_hash: sha256:4475134bcd814077aad01907a1550a7f344d95bcab7d4936494eec53cadca20b
-words: 317
+words: 185
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr3_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr3_immatriculation?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_assiette?secteur=$secteur
+- text: Remise des pénalités
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr3_remise_penalites?secteur=$secteur
+- text: Avantages
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr3_contenu-avantage6?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: Attestation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_attestations?secteur=$secteur
+- text: Affiliation au régime complémentaire de pensions
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_affiliation_regime_complementaire?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr3_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr3_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr3_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr3_contenu-avantage6?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_attestations?secteur=$secteur)
-- [Affiliation au régime complémentaire de pensions](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_affiliation_regime_complementaire?secteur=$secteur)
-
 Les pénalités de retard encourues suite à un paiement tardif des cotisations peuvent faire l'objet d'une remise gracieuse.
 
 Cette remise gracieuse n'est accordée que pour des motifs d'intérêt général et à condition que l'employeur soit en règle au titre du principal des cotisations, des prêts et des frais de poursuites.

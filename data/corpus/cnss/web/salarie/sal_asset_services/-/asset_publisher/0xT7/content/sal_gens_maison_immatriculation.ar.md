@@ -29,7 +29,7 @@ fetched_at: '2026-10-06T12:56:00+00:00'
 first_seen: '2026-10-05T20:33:33+00:00'
 last_changed: '2026-10-06T12:56:00+00:00'
 content_hash: sha256:655dbb8db46b0ff948b2ea740a12c05df7063c500f78ee92de24e65aaa53f97b
-words: 195
+words: 168
 status: removed
 hint_source: llm
 duplicate_of: cnss:/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal_peche3_immatriculation#index

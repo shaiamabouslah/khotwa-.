@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:10:08+00:00'
 first_seen: '2026-10-07T20:10:08+00:00'
 last_changed: '2026-10-07T20:10:08+00:00'
 content_hash: sha256:3988fccc1a42b6041704eda088d88b4534156b50007f009c59d9e8d791d91922
-words: 197
+words: 189
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Transport du lait frais http://www.sicad.gov.tn//Prestations_57_3_D1493 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -71,8 +73,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Transport du lait frais http://www.sicad.gov.tn//Prestations_57_3_D1493 "Partager sur twitter")
-Imprimer

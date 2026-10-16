@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:09:51+00:00'
 first_seen: '2026-10-07T20:09:51+00:00'
 last_changed: '2026-10-07T20:09:51+00:00'
 content_hash: sha256:1711d9f8845b3862cac319ab862a33aa7955e1f0951d48e7f5b880099dee6a9a
-words: 437
+words: 423
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Brevet de patron hauturier (pêche hauturière
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -85,8 +87,4 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Brevet de patron hauturier (pêche hauturière) http://www.sicad.gov.tn//Prestations_57_3_D623 "Partager sur twitter")
-Imprimer
+-  http://www.sicad.gov.tn//Prestations_57_3_D623 "Partager sur twitter")

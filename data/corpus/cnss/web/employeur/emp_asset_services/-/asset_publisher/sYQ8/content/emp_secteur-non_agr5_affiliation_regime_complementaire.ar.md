@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr5_affiliation_regime_complementaire
 lang: ar
-title: المؤجرون - CNSS
+title: Emp secteur-non agr5 affiliation regime complementaire (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -29,19 +29,27 @@ fetched_at: '2026-10-05T20:42:43+00:00'
 first_seen: '2026-10-05T20:42:43+00:00'
 last_changed: '2026-10-05T20:42:43+00:00'
 content_hash: sha256:1a81b62004ddc815db35184d6eb438efa8ea0fd2b56c2ac1e3d0ef8375245f91
-words: 307
+words: 165
 status: active
 hint_source: llm
+nav_links:
+- text: الانخراط
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr5_affiliation?secteur=$secteur
+- text: التسجيل
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr5_immatriculation?secteur=$secteur
+- text: الاشتراكات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr5_assiette?secteur=$secteur
+- text: طرح الخطايا
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr5_remise_penalites?secteur=$secteur
+- text: الامتيازات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr5_contenu-avantage6?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: الشهادات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr5_attestations?secteur=$secteur
+- text: الانخراط بالنظام التكميلي للجرايات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr5_affiliation_regime_complementaire?secteur=$secteur
+original_title: المؤجرون - CNSS
+possibly_outdated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr5_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr5_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr5_assiette?secteur=$secteur)
-- [طرح الخطايا](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr5_remise_penalites?secteur=$secteur)
-- [الامتيازات](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr5_contenu-avantage6?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [الشهادات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr5_attestations?secteur=$secteur)
-- [الانخراط بالنظام التكميلي للجرايات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr5_affiliation_regime_complementaire?secteur=$secteur)
-
 يمكن للمؤجر المنخرط بالنظام القانوني للضمان الاجتماعي والمشغل لأجراء تفوق أجورهم 6 مرات الأجر الأدنى المهني المضمون في السنة، أن ينخرط في النظام التكميلي للجرايات بصفة اختيارية.
 
 و في صورة الانخراط يتعين على المؤجر أن يصرح بكامل الأجراء الذين يتقاضون أجورا تفوق6 مرات الأجر الأدنى المهني المضمون في السنة**.**

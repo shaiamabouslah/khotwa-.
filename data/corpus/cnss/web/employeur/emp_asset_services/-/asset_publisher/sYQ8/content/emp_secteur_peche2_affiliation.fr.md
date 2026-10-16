@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_affiliation
 lang: fr
-title: Employeurs - CNSS
+title: Emp Secteur pêche2 Affiliation (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -28,24 +28,31 @@ fetched_at: '2026-10-06T13:05:42+00:00'
 first_seen: '2026-10-05T20:36:15+00:00'
 last_changed: '2026-10-06T13:05:42+00:00'
 content_hash: sha256:b15a9acdfb6cff41a01e53d9689aa42fc67783dd47bfe233d3264b9d5f565f35
-words: 424
+words: 316
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_immatriculation?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_assiette?secteur=$secteur
+- text: Remise des pénalités
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_remise_penalites?secteur=$secteur
+- text: Avantages
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: Attestation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_attestations?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_attestations?secteur=$secteur)
-
 L'affiliation des employeurs aux régimes de sécurité sociale est obligatoire, elle doit intervenir dans le mois qui  suit l'engagement de  personnel salarié.
 
 ## Pièces à fournir
 
 - [Une demande d'affiliation](https://www.cnss.tn/c/document_library/get_file?uuid=94a8d20a-36b2-4e16-9464-d40454e88866&groupId=10156) (imprimé CNSS)
-- Une copie de la carte d'identité nationale de l'employeur ou du représentant légal de   l'entreprise
+- Une copie de la carte d'identité nationale de l'employeur ou du représentant légal de l'entreprise
 - Une copie certifiée conforme du congé.
 
 ## Lieu de dépôt

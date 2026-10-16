@@ -8,7 +8,7 @@ lang: en
 title: Erasmus+ Tunisia For Students
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: contact
 domain_hint: studies
 subtopic_hint: mobilite
 hint_score: 10
@@ -23,7 +23,7 @@ fetched_at: '2026-10-05T23:54:34+00:00'
 first_seen: '2026-10-05T20:27:17+00:00'
 last_changed: '2026-10-05T23:54:37+00:00'
 content_hash: sha256:d05ac6d88a0ba68bba0d3392c6d46e3731149a2ef7f6c487a203c4715f36b2e3
-words: 83
+words: 75
 status: active
 hint_source: llm
 ---

@@ -27,7 +27,7 @@ fetched_at: '2026-10-05T20:46:19+00:00'
 first_seen: '2026-10-05T20:46:19+00:00'
 last_changed: '2026-10-05T20:46:19+00:00'
 content_hash: sha256:50190ba1275b641ac29d9baeb8bc5b5734c94a7f411a059784dc727dc7b3c7ad
-words: 114
+words: 37
 status: removed
 duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal_secteur_ag1_cotisation#index
 hint_source: llm

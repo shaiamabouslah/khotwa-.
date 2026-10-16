@@ -26,7 +26,7 @@ fetched_at: '2026-10-06T00:22:27+00:00'
 first_seen: '2026-10-06T00:22:27+00:00'
 last_changed: '2026-10-06T00:22:27+00:00'
 content_hash: sha256:7a065f30eb3149e7e89c8d0add3d8bfe84b8290017325479185bfa3fd87b5838
-words: 89
+words: 52
 status: removed
 duplicate_of: best_rnu:/offre-nationale-des-bourses-pour-des-etudes-de-mastere-et-de-doctorat-a-letrange#index
 hint_source: llm

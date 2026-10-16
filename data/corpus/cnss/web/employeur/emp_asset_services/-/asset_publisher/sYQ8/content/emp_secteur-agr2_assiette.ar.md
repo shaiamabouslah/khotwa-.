@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_assiette
 lang: ar
-title: المؤجرون - CNSS
+title: Emp Secteur agr2 Assiette (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -30,18 +30,25 @@ fetched_at: '2026-10-05T20:43:51+00:00'
 first_seen: '2026-10-05T20:43:51+00:00'
 last_changed: '2026-10-05T20:43:51+00:00'
 content_hash: sha256:b8321c8c23eea2099a10b1d25063381f0fa2aa21539a07e56227bcacb2153028
-words: 426
+words: 289
 status: active
 hint_source: llm
+nav_links:
+- text: الانخراط
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_affiliation?secteur=$secteur
+- text: التسجيل
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_immatriculation?secteur=$secteur
+- text: الاشتراكات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_assiette?secteur=$secteur
+- text: طرح الخطايا
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_remise_penalites?secteur=$secteur
+- text: الامتيازات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_avantage_agricole2?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: الشهادات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_attestations?secteur=$secteur
+original_title: المؤجرون - CNSS
+possibly_outdated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_assiette?secteur=$secteur)
-- [طرح الخطايا](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_remise_penalites?secteur=$secteur)
-- [الامتيازات](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_avantage_agricole2?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [الشهادات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_attestations?secteur=$secteur)
-
 ## قاعدة الاشتراكات
 
 تضبط قاعدة احتساب الاشتراكات على أساس الأجور المسندة للعملة أي جميع المبالغ النقدية أو العينية التي يمنحها المؤجر كمقابل لنشاط الأجير بما في ذلك المنح التابعة للأجور مهما كان نوعها.

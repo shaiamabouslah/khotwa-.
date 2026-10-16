@@ -23,9 +23,12 @@ fetched_at: '2026-10-06T00:17:11+00:00'
 first_seen: '2026-10-06T00:17:11+00:00'
 last_changed: '2026-10-06T00:17:11+00:00'
 content_hash: sha256:b86ba322a4e590c20c04df2e258b1d26fa56b91643f3f41f6536bd67a182d2a7
-words: 988
+words: 922
 status: active
 hint_source: llm
+social_links:
+- https://www.youtube.com/channel/UChhnHN2kwYcCyl9XUuqpz-g
+- https://www.facebook.com/CNAM-Tunisie-الصندوق-الوطني-للتأمين-على-المرض-101622205483978
 ---
 
 #### Indemnité de maladie
@@ -119,24 +122,21 @@ Remarque : en cas de retard, l’indemnité de couche ne sera versée qu’à pa
 L’indemnité de couche est payable mensuellement à terme échu.
 
 Contact
-:   12, Rue Abou Hamed El Ghazeli
-:   Montplaisir, 1073 Tunis
-:   Numéro Vert : 80100295
-:   brc@cnam.nat.tn
+: 12, Rue Abou Hamed El Ghazeli
+: Montplaisir, 1073 Tunis
+: Numéro Vert : 80100295
+: brc@cnam.nat.tn
 
 Assuré social
-:   [Espace assuré](https://www.cnam.nat.tn/espace_assure.jsp)
-:   [Services en Ligne](https://centre.e-cnam.tn/login)
-:   [Centres régionaux et locaux](https://www.cnam.nat.tn/bureauxMap.jsp)
+: [Espace assuré](https://www.cnam.nat.tn/espace_assure.jsp)
+: [Services en Ligne](https://centre.e-cnam.tn/login)
+: [Centres régionaux et locaux](https://www.cnam.nat.tn/bureauxMap.jsp)
 
 Professionnel de Santé
-:   [Espace professionnel de santé](https://www.cnam.nat.tn/espace_ps.jsp)
-:   [Services en Ligne](https://centre.e-cnam.tn)
-:   [Centres régionaux et locaux](https://www.cnam.nat.tn/bureauxMap.jsp)
+: [Espace professionnel de santé](https://www.cnam.nat.tn/espace_ps.jsp)
+: [Services en Ligne](https://centre.e-cnam.tn)
+: [Centres régionaux et locaux](https://www.cnam.nat.tn/bureauxMap.jsp)
 
 [Plan du site](https://www.cnam.nat.tn/plan.jsp)
-
-- [Youtube](https://www.youtube.com/channel/UChhnHN2kwYcCyl9XUuqpz-g)
-- [facebook](https://www.facebook.com/CNAM-Tunisie-الصندوق-الوطني-للتأمين-على-المرض-101622205483978)
 
 Dernière mise à jour le : 17/06/2026Caisse Nationale d'Assurance Maladie - Tous droits réservés © 2026

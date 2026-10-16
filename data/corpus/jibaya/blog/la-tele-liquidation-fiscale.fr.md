@@ -36,7 +36,7 @@ hint_source: llm
 
 - [Services en ligne](https://jibaya.tn/services-en-ligne/)
 
-- Télé-liquidation Fiscale​
+- Télé-liquidation Fiscale
 
 Ce service permet aux contribuables adhérents de liquider leurs impôts, et taxes (déclarations mensuelles, dépôt des déclaration de l’impôt sur les sociétés, déclaration de l’avance due par les sociétés de personnes et assimilées, déclaration de l’impôt sur le revenu des personnes physiques, déclaration de l’acompte provisionnel) à partir de leur poste de travail en se connectant sur INTERNET tout en passant par les étapes suivantes :
 

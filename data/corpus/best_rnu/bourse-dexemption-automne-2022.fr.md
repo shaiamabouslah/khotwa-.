@@ -23,7 +23,7 @@ fetched_at: '2026-10-06T00:21:25+00:00'
 first_seen: '2026-10-05T20:26:14+00:00'
 last_changed: '2026-10-06T00:21:25+00:00'
 content_hash: sha256:9325ec206b9fb410b2b1d191a9fa71c4aa00e329c5d642037e005f9ee9a2dbbd
-words: 174
+words: 159
 status: active
 hint_source: llm
 ---

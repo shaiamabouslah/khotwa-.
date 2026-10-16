@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_cotisations
 lang: ar
-title: المؤجرون - CNSS
+title: Emp travailleurs chantiers cotisations (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -29,15 +29,19 @@ fetched_at: '2026-10-10T20:34:58+00:00'
 first_seen: '2026-10-05T20:39:16+00:00'
 last_changed: '2026-10-10T20:34:58+00:00'
 content_hash: sha256:1d9fd6f5bfcd6234cac8676a5b076d4c9d926fe9236b7091023c1cb398bff5ea
-words: 237
+words: 234
 status: active
 hint_source: llm
+nav_links:
+- text: الانخراط
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_affiliation?secteur=$secteur
+- text: التسجيل
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_imma?secteur=$secteur
+- text: الاشتراكات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_cotisations?secteur=$secteur
+original_title: المؤجرون - CNSS
+possibly_outdated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_imma?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_cotisations?secteur=$secteur)
-
 ## قاعدة الاشتراكات
 
 تضبط قاعدة احتساب الاشتراكات على أساس ثلثي [الأجر الأدنى الفلاحي المضمون](https://www.cnss.tn/ar/nos_echos/-/asset_publisher/4IkZ/content/echos_4) المرتبط بمدة عمل تساوي 25 يوما في الشهر.

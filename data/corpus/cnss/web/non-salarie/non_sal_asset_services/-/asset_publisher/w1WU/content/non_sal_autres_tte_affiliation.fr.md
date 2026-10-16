@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal_autres_tte_affiliation
 lang: fr
-title: Indépendants et autres catégories - CNSS
+title: Non Sal autres tte Affiliation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -31,9 +31,10 @@ fetched_at: '2026-10-06T13:05:59+00:00'
 first_seen: '2026-10-05T20:36:43+00:00'
 last_changed: '2026-10-06T13:05:59+00:00'
 content_hash: sha256:c4585ca52df257b1d361ea1e6b3661de06a66edddb3141cd4ce31d43b1b5a387
-words: 296
+words: 269
 status: active
 hint_source: llm
+original_title: Indépendants et autres catégories - CNSS
 ---
 
 L'affiliation au régime de sécurité sociale est facultative pour les travailleurs tunisiens à l'Etranger. L'affiliation intervient dans le mois qui suit le début de l'activité.

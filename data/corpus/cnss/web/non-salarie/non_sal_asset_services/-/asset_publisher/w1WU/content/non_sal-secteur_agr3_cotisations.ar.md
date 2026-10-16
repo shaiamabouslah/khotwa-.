@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr3_cotisations
 lang: ar
-title: غير الأجراء - CNSS
+title: Non Sal Secteur agr3 Cotisations (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -32,9 +32,10 @@ fetched_at: '2026-10-05T20:48:36+00:00'
 first_seen: '2026-10-05T20:48:36+00:00'
 last_changed: '2026-10-05T20:48:36+00:00'
 content_hash: sha256:ef41766b38347963579cfd99aca974bc2e0c9af37c36e0d04ace6a28db4fd062
-words: 269
+words: 246
 status: active
 hint_source: llm
+original_title: غير الأجراء - CNSS
 ---
 
 ## قاعدة الاشتراكات

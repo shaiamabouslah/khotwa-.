@@ -23,7 +23,7 @@ fetched_at: '2026-10-05T23:54:26+00:00'
 first_seen: '2026-10-05T20:27:04+00:00'
 last_changed: '2026-10-05T23:54:27+00:00'
 content_hash: sha256:0f9e7e0e979a5cc08c70e6d69cb214b9a17f0427fc1a4f416456e168fabf3c22
-words: 84
+words: 75
 status: removed
 duplicate_of: erasmus_tn:/Index-Etudiants.php#index
 hint_source: llm

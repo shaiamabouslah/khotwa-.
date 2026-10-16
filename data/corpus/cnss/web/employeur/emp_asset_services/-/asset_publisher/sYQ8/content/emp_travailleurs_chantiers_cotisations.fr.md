@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_cotisations
 lang: fr
-title: Employeurs - CNSS
+title: Emp travailleurs chantiers cotisations (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -29,15 +29,19 @@ fetched_at: '2026-10-10T20:34:55+00:00'
 first_seen: '2026-10-05T20:39:14+00:00'
 last_changed: '2026-10-10T20:34:55+00:00'
 content_hash: sha256:8dcfae1dd60229f68c38e2765aad5228963e5481ffeafe349d9de0682700d85b
-words: 270
+words: 267
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_imma?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_cotisations?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_imma?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_cotisations?secteur=$secteur)
-
 ## Assiette des cotisations
 
 L'assiette des cotisations est égale aux 2/3 du salaire minimum agricole garanti ([SMAG](https://www.cnss.tn/fr/nos_echos/-/asset_publisher/4IkZ/content/echos_3)) rapporté à une durée d'occupation de 25 jours par mois
@@ -66,12 +70,12 @@ Le taux des cotisations de sécurité sociale est fixé à 7,5% réparti  comme 
 
 La déclaration de salaires et l'état récapitulatif sont déposés auprès du Bureau  Régional ou local territorialement compétent accompagnéspar  le paiement des cotisations qui peut avoir lieu :
 
-- en espèces ou par chèque tiré sur le  compte de   l'employeur ou certifié s'il est tiré sur le compte de tiers
+- en espèces ou par chèque tiré sur le  compte de l'employeur ou certifié s'il est tiré sur le compte de tiers
 - par virement bancaire ou postal, auquel cas  l'employeur est invité à porter son numéro d'affiliation sur la copie de l'ordre de virement.
 
 ## Délais de paiement des cotisations
 
-Les cotisations afférentes à un trimestre donné doivent être payées à la fin   du mois qui suit le trimestre échu ou mensuellement ou à l'avance.
+Les cotisations afférentes à un trimestre donné doivent être payées à la fin du mois qui suit le trimestre échu ou mensuellement ou à l'avance.
 
 ## Références législatives et réglementaires
 

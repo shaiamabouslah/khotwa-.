@@ -23,7 +23,7 @@ fetched_at: '2026-10-06T00:21:21+00:00'
 first_seen: '2026-10-05T20:26:10+00:00'
 last_changed: '2026-10-06T00:21:21+00:00'
 content_hash: sha256:6bee003104be5039876e2b3d8bb8682f98e9e3e81c0adfa68ccabf27c2b2280b
-words: 147
+words: 139
 status: active
 hint_source: llm
 ---
@@ -40,8 +40,8 @@ Date limite d’envoi des demandes **: 01 décembre 2021** à minuit, heure loca
 
 **Nombre des places disponibles pour la session d’hiver 2022 :**
 
-- **Doctorat        : 03 places**
-- **Maîtrise         : 21  places**
-- **Baccalauréat :   0 place**
+- **Doctorat : 03 places**
+- **Maîtrise : 21  places**
+- **Baccalauréat : 0 place**
 
 **N.B: Merci de consulter le site web de la Mission Universitaire de la Tunisie à l’Amérique du Nord (MUTAN) pour déposer votre dossier de candidature.** [**http://www.mutan.org**](http://www.mutan.org/)

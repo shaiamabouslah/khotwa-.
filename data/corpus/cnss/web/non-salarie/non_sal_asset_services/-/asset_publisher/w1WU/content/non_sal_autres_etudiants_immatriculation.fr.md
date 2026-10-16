@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal_autres_etudiants_immatriculation
 lang: fr
-title: Indépendants et autres catégories - CNSS
+title: Non Sal autres etudiants immatriculation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -30,9 +30,10 @@ fetched_at: '2026-10-06T13:06:05+00:00'
 first_seen: '2026-10-05T20:36:52+00:00'
 last_changed: '2026-10-06T13:06:05+00:00'
 content_hash: sha256:14797b019fef404d5f9640dd468e18faea30268ed284d24f173a7e1ba4d7bf6e
-words: 866
+words: 853
 status: active
 hint_source: llm
+original_title: Indépendants et autres catégories - CNSS
 ---
 
 **1-L'étudiant doit être:**
@@ -107,7 +108,7 @@ Une carte d'assuré social comportant le numéro d'immatriculation est envoyée 
 - Loi n°60-30 du 14 décembre 1960 relative à l'organisation des régimes de sécurité sociale telle que modifiée et complétée par les textes subséquents.
 - Loi n°65-17 du 28 juin 1965 étendant les régimes de sécurité sociale aux étudiants.
 - Loi n° 88-06 du 08 février 1988 relative à la couverture des stagiaires en matière de sécurité sociale
-- Loi n° 89-67 du 21 juillet 1989 étendant la couverture sociale aux bénéficiaires de stage de    formation professionnelle.
+- Loi n° 89-67 du 21 juillet 1989 étendant la couverture sociale aux bénéficiaires de stage de formation professionnelle.
 - Loi n° 2000-115 du 18 janvier 2000, étendant la couverture sociale aux stagiaires des poursuivant une formation professionnelle initiale au sein des établissements publics et privés de formation professionnelle.
-- Décret n°92-631 du 23 mars 1992 fixant les conditions de bénéfice du régime de sécurité    sociale des étudiants tel que modifié par le décret n°2003-1544 du 2 juillet 2003.
+- Décret n°92-631 du 23 mars 1992 fixant les conditions de bénéfice du régime de sécurité sociale des étudiants tel que modifié par le décret n°2003-1544 du 2 juillet 2003.
 - Décret n°2009-349 du 9 février 2009 fixant les programmes du fonds national de l'emploi, les conditions et les modalités de leur bénéfice tel que modifié et complété par les textes subséquents et notamment le décret n°2011-1du 3 janvier 2011 et le décret n° 2011-98 du 11 janvier 2011.

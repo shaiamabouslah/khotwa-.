@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_peche2_affiliation
 lang: fr
-title: Indépendants et autres catégories - CNSS
+title: Non Sal Secteur peche2 Affiliation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -31,9 +31,10 @@ fetched_at: '2026-10-05T20:38:21+00:00'
 first_seen: '2026-10-05T20:38:21+00:00'
 last_changed: '2026-10-05T20:38:21+00:00'
 content_hash: sha256:318ff0703bf9654d6f5953697ef9f78f0ec83ae3cf51dcd350636219bbcea3ba
-words: 425
+words: 386
 status: active
 hint_source: llm
+original_title: Indépendants et autres catégories - CNSS
 ---
 
 L'affiliation des petits armateurs au régime de sécurité sociale est obligatoire.L'affiliation intervient dans le mois qui suit le début de l'activité.

@@ -29,7 +29,7 @@ fetched_at: '2026-10-06T12:56:47+00:00'
 first_seen: '2026-10-05T20:34:34+00:00'
 last_changed: '2026-10-06T12:56:47+00:00'
 content_hash: sha256:f17896f5b76fcdca256469c3484bc3982f03ada97f623025360a5e7e7dc5f1c9
-words: 180
+words: 153
 status: removed
 hint_source: llm
 duplicate_of: cnss:/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_-non_agr3_immatriculation#index

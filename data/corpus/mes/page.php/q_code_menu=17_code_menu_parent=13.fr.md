@@ -4,11 +4,11 @@ site: mes
 org: Ministère de l'Enseignement Supérieur et de la Recherche Scientifique
 trust: official
 url: https://www.mes.tn/page.php?code_menu=17&code_menu_parent=13
-lang: fr
+lang: ar
 title: التعليم العالي حسب الولايات
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: directory
 domain_hint: studies
 subtopic_hint: null
 hint_score: 10
@@ -26,38 +26,96 @@ content_hash: sha256:d25bc99afd4e007a4a4d03c48463bd0b350ac6890e8c1df2d10c9ad1b82
 words: 50
 status: active
 hint_source: llm
+lang_original: fr
+links:
+- text: النشريات والمطويات
+  url: https://www.mes.tn/page.php?code_menu=14&code_menu_parent=13
+- text: التعليم العالي حسب الجامعات
+  url: https://www.mes.tn/page.php?code_menu=16&code_menu_parent=13
+- text: التعليم العالي حسب الولايات
+  url: https://www.mes.tn/page.php?code_menu=17&code_menu_parent=13
+- text: بيانات إحصائية مختلفة
+  url: https://www.mes.tn/page.php?code_menu=18&code_menu_parent=13
+- text: تونس
+  url: https://www.mes.tn/image.php?id=16205
+- text: أريانة
+  url: https://www.mes.tn/image.php?id=16183
+- text: بن عروس
+  url: https://www.mes.tn/image.php?id=16185
+- text: منوبة
+  url: https://www.mes.tn/image.php?id=16195
+- text: زغوان
+  url: https://www.mes.tn/image.php?id=16206
+- text: نابل
+  url: https://www.mes.tn/image.php?id=16251
+- text: بنزرت
+  url: https://www.mes.tn/image.php?id=16186
+- text: باجة
+  url: https://www.mes.tn/image.php?id=16184
+- text: جندوبة
+  url: https://www.mes.tn/image.php?id=16189
+- text: الكاف
+  url: https://www.mes.tn/image.php?id=16193
+- text: سليانة
+  url: https://www.mes.tn/image.php?id=16253
+- text: القصرين
+  url: https://www.mes.tn/image.php?id=16248
+- text: القيروان
+  url: https://www.mes.tn/image.php?id=16190
+- text: سوسة
+  url: https://www.mes.tn/image.php?id=16202
+- text: المنستير
+  url: https://www.mes.tn/image.php?id=16197
+- text: صفاقس
+  url: https://www.mes.tn/image.php?id=16199
+- text: المهدية
+  url: https://www.mes.tn/image.php?id=16194
+- text: قابس
+  url: https://www.mes.tn/image.php?id=16246
+- text: قفصة
+  url: https://www.mes.tn/image.php?id=16247
+- text: قبلي
+  url: https://www.mes.tn/image.php?id=16249
+- text: مدنين
+  url: https://www.mes.tn/image.php?id=16250
+- text: تطاوين
+  url: https://www.mes.tn/image.php?id=16254
+- text: توزر
+  url: https://www.mes.tn/image.php?id=16204
+- text: سيدي بوزيد
+  url: https://www.mes.tn/image.php?id=16252
 ---
 
 # التعليم العالي حسب الولايات
 
-- [النشريات والمطويات](https://www.mes.tn/page.php?code_menu=14&code_menu_parent=13)
-- [التعليم العالي حسب الجامعات](https://www.mes.tn/page.php?code_menu=16&code_menu_parent=13)
-- [التعليم العالي حسب الولايات](https://www.mes.tn/page.php?code_menu=17&code_menu_parent=13)
-- [بيانات إحصائية مختلفة](https://www.mes.tn/page.php?code_menu=18&code_menu_parent=13)
+- النشريات والمطويات
+- التعليم العالي حسب الجامعات
+- التعليم العالي حسب الولايات
+- بيانات إحصائية مختلفة
 
 # معطيات إحصائية حول التعليم العالي حسب الولايات (2014/2013 -2022/2021)
 
-- [تونس](https://www.mes.tn/image.php?id=16205)
-- [أريانة](https://www.mes.tn/image.php?id=16183)
-- [بن عروس](https://www.mes.tn/image.php?id=16185)
-- [منوبة](https://www.mes.tn/image.php?id=16195)
-- [زغوان](https://www.mes.tn/image.php?id=16206)
-- [نابل](https://www.mes.tn/image.php?id=16251)
-- [بنزرت](https://www.mes.tn/image.php?id=16186)
-- [باجة](https://www.mes.tn/image.php?id=16184)
-- [جندوبة](https://www.mes.tn/image.php?id=16189)
-- [الكاف](https://www.mes.tn/image.php?id=16193)
-- [سليانة](https://www.mes.tn/image.php?id=16253)
-- [القصرين](https://www.mes.tn/image.php?id=16248)
-- [القيروان](https://www.mes.tn/image.php?id=16190)
-- [سوسة](https://www.mes.tn/image.php?id=16202)
-- [المنستير](https://www.mes.tn/image.php?id=16197)
-- [صفاقس](https://www.mes.tn/image.php?id=16199)
-- [المهدية](https://www.mes.tn/image.php?id=16194)
-- [قابس](https://www.mes.tn/image.php?id=16246)
-- [قفصة](https://www.mes.tn/image.php?id=16247)
-- [قبلي](https://www.mes.tn/image.php?id=16249)
-- [مدنين](https://www.mes.tn/image.php?id=16250)
-- [تطاوين](https://www.mes.tn/image.php?id=16254)
-- [توزر](https://www.mes.tn/image.php?id=16204)
-- [سيدي بوزيد](https://www.mes.tn/image.php?id=16252)
+- تونس
+- أريانة
+- بن عروس
+- منوبة
+- زغوان
+- نابل
+- بنزرت
+- باجة
+- جندوبة
+- الكاف
+- سليانة
+- القصرين
+- القيروان
+- سوسة
+- المنستير
+- صفاقس
+- المهدية
+- قابس
+- قفصة
+- قبلي
+- مدنين
+- تطاوين
+- توزر
+- سيدي بوزيد

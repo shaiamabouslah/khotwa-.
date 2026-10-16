@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:15:55+00:00'
 first_seen: '2026-10-07T20:16:04+00:00'
 last_changed: '2026-10-07T20:16:04+00:00'
 content_hash: sha256:58eec8b421133cf8ea2d6afab299f5485fba7e43ed1f5302df48d7d678c11de0
-words: 386
+words: 377
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Obtention d'un duplicata du diplôme ou du  relevé des notes http://www.sicad.gov.tn//Imprimes_66_27_D2152 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -84,8 +86,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Obtention d'un duplicata du diplôme ou du  relevé des notes http://www.sicad.gov.tn//Imprimes_66_27_D2152 "Partager sur twitter")
-Imprimer

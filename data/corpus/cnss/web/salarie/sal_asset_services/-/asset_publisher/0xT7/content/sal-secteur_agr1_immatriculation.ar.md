@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_agr1_immatriculation
 lang: ar
-title: الأجراء - CNSS
+title: Sal Secteur agr1 Immatriculation (Salarie)
 section: null
 breadcrumb:
 - CNSS
@@ -29,9 +29,11 @@ fetched_at: '2026-10-06T12:56:39+00:00'
 first_seen: '2026-10-05T20:34:25+00:00'
 last_changed: '2026-10-06T12:56:39+00:00'
 content_hash: sha256:e3684e4b21bf03d9c02066ee400f32dc0b7401a028715c05eee8150331ed2b2d
-words: 177
+words: 150
 status: active
 hint_source: llm
+original_title: الأجراء - CNSS
+possibly_outdated: true
 ---
 
 ## التسجيل

@@ -26,6 +26,8 @@ content_hash: sha256:15a920d89ebe7efffb7151416813af1b45fc59eab644f3e387c820440f5
 words: 1331
 status: active
 hint_source: llm
+rag_exclude: true
+rag_exclude_reason: symbol_soup
 ---
 
 <!-- page 1 -->

@@ -24,8 +24,15 @@ fetched_at: '2026-10-10T23:56:04+00:00'
 first_seen: '2026-10-10T23:56:04+00:00'
 last_changed: '2026-10-10T23:56:04+00:00'
 content_hash: sha256:956cc7660d3460dc01ac0be34e21d917aac2fbde91c11d7020e1dbae1b58bdea
-words: 259
+words: 72
 status: active
+links:
+- text: Les Services en ligne pour les chercheurs d'emploi
+  url: http://www.emploi.nat.tn/services_en_ligne/services.html
+- text: Les Services en ligne pour les Chefs d'entreprise
+  url: http://www.emploi.nat.tn/services_en_ligne/services.html
+- text: Les Services Informationnels
+  url: http://www.emploi.nat.tn/services_en_ligne/services.html
 ---
 
-LES SERVICES EN LIGNE DE L'ANETI Découvrez les services en ligne de l'ANETI mis à votre disposition et destinés aux chercheurs d'emploi et aux Chefs d'entreprise! Et pour bénéficier de la totalité de nos services à distance n'hésitez pas à vous inscrire dans notre site web! **[Les Services en ligne pour les chercheurs d'emploi](http://www.emploi.nat.tn/services_en_ligne/services.html)** **[Les Services en ligne pour les Chefs d'entreprise](http://www.emploi.nat.tn/services_en_ligne/services.html)** **[Les Services Informationnels​](http://www.emploi.nat.tn/services_en_ligne/services.html)** Dernière mise à jour 10/10/2026 a 23:27
+LES SERVICES EN LIGNE DE L'ANETI Découvrez les services en ligne de l'ANETI mis à votre disposition et destinés aux chercheurs d'emploi et aux Chefs d'entreprise! Et pour bénéficier de la totalité de nos services à distance n'hésitez pas à vous inscrire dans notre site web! **Les Services en ligne pour les chercheurs d'emploi** **Les Services en ligne pour les Chefs d'entreprise** **Les Services Informationnels**

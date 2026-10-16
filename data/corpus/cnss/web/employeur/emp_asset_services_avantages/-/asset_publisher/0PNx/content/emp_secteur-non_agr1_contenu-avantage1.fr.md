@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr1_contenu-avantage1
 lang: fr
-title: Employeurs - CNSS
+title: Emp Secteur non agr1 Contenu Avantage1 (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -29,19 +29,27 @@ fetched_at: '2026-10-05T20:39:58+00:00'
 first_seen: '2026-10-05T20:39:58+00:00'
 last_changed: '2026-10-05T20:39:58+00:00'
 content_hash: sha256:c0b3f8febfbadbb389a44af4820f6982fe27192724b5befefa5aab02b62fce7e
-words: 1283
+words: 1141
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr1_immatriculation?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_assiette?secteur=$secteur
+- text: Remise des pénalités
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_remise_penalites?secteur=$secteur
+- text: Avantages
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr1_contenu-avantage1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: Attestation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_attestations?secteur=$secteur
+- text: Affiliation au régime complémentaire de pensions
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_affiliation_regime_complementaire?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr1_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr1_contenu-avantage1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_attestations?secteur=$secteur)
-- [Affiliation au régime complémentaire de pensions](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_affiliation_regime_complementaire?secteur=$secteur)
-
 Dans le cadre de l'encouragement au développement régional, l'Etat prend en charge, totalement ou partiellement, la contribution patronale au régime légal de sécurité sociale au titre des salaires versés aux employés tunisiens, durant les dix ou les cinq premières années à partir de la date d'entrée en activité effective.
 
 L'avantage de la prise en charge par l'Etat de la contribution patronale couvre les opérations d'investissement relatives à la création, à l'extension, au renouvellement, au réaménagement et à la transformation d'activité, réalisées dans les zones d'encouragement au développement régional délimitées par le décret n° 99-483, dans les activités d'hébergement, d'animation touristique et du thermalisme, dans les activités des industries manufacturières et de l'artisanat et dans les activités de services définies par le décret n°94-539.
@@ -81,7 +89,7 @@ Bénéficient  de  la  prise  en  charge  de  la  totalité de  la  contribution
 | 1ère année | 2ème  année | 3ème  année | 4ème année | 5ème année |
 | 80% | 65% | 50% | 35% | 20% |
 
-Bénéficient de la prise en charge de la totalité de la contribution patronale  durant les 10 première sannées,   d'activité   effective  les  investissements  implantés  dans  les  zones  prioritaires d'encouragement  au  développement  régional  dont  la  déclaration est  déposée à partir  du  1er janvier 2011.
+Bénéficient de la prise en charge de la totalité de la contribution patronale  durant les 10 première sannées, d'activité effective  les  investissements  implantés  dans  les  zones  prioritaires d'encouragement  au  développement  régional  dont  la  déclaration est  déposée à partir  du  1er janvier 2011.
 
 ### Condition générale
 

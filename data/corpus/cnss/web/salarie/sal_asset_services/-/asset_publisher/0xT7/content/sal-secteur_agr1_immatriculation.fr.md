@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_agr1_immatriculation
 lang: fr
-title: Salariés - CNSS
+title: Sal Secteur agr1 Immatriculation (Salarie)
 section: null
 breadcrumb:
 - CNSS
@@ -28,12 +28,14 @@ fetched_at: '2026-10-06T12:56:37+00:00'
 first_seen: '2026-10-05T20:34:23+00:00'
 last_changed: '2026-10-06T12:56:37+00:00'
 content_hash: sha256:abfa057c814c50390e7b1d75a0f13ea72e0f117ebe5c4dfe62551b6e150164e3
-words: 209
+words: 195
 status: active
 hint_source: llm
+original_title: Salariés - CNSS
+possibly_outdated: true
 ---
 
-L'employeur est tenu d'immatriculer le personnel embauché dans un délai   d'un mois à compter de la date d'affiliation. Pour les travailleurs engagés  ultérieurement à cette date, l'immatriculation intervient dans un délai d'un mois  à  compter de la date de leur engagement.
+L'employeur est tenu d'immatriculer le personnel embauché dans un délai d'un mois à compter de la date d'affiliation. Pour les travailleurs engagés  ultérieurement à cette date, l'immatriculation intervient dans un délai d'un mois  à  compter de la date de leur engagement.
 
  En casde défaillance de l'employeur, le salarié a le droit de demander lui-même son immatriculation.
 

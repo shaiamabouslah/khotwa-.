@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr4_remise_penalites
 lang: fr
-title: Indépendants et autres catégories - CNSS
+title: Non Sal Secteur non agr4 Remise penalites (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -31,9 +31,10 @@ fetched_at: '2026-10-05T20:50:14+00:00'
 first_seen: '2026-10-05T20:50:14+00:00'
 last_changed: '2026-10-05T20:50:14+00:00'
 content_hash: sha256:e3ca43e7edbdc4b33033d1371be0b2fe66f7759ffcf874602d21b4ddb4e78838
-words: 200
+words: 185
 status: active
 hint_source: llm
+original_title: Indépendants et autres catégories - CNSS
 ---
 
 Les pénalités de retard encourues suite à un paiement tardif des cotisations peuvent faire l'objet d'une remise gracieuse.

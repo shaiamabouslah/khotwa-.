@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_-non_agr2_actions_licenciement2
 lang: ar
-title: الأجراء - CNSS
+title: Sal Secteur non agr2 actions licenciement2 (Salarie)
 section: null
 breadcrumb:
 - CNSS
@@ -28,9 +28,11 @@ fetched_at: '2026-10-05T20:46:36+00:00'
 first_seen: '2026-10-05T20:46:36+00:00'
 last_changed: '2026-10-05T20:46:36+00:00'
 content_hash: sha256:656a67377ee34b59a89523ff6240b726040a8e0f18633660b4ceb31144ce3c05
-words: 357
+words: 342
 status: active
 hint_source: llm
+original_title: الأجراء - CNSS
+possibly_outdated: true
 ---
 
 يتكفل الصندوق بمنح المغادرة والمستحقاتالقانونية للعمال المفصولين عن العمل لأسباب اقتصادية أو فنية أو بسبب الغلق النهائي والفجئي للمؤسسة .لا يشمل التكفل بمنح المغادرة و المستحقات القانونية العمال الذين يقع تسريحهم من قبل المنشآت العمومية وكذلك المنشآت الأخرى المشبهة بها والمخول لها الانتفاع بتدخل صندوق إعادة هيكلة المؤسسات العمومية.

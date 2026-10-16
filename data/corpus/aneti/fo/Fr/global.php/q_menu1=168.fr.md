@@ -24,9 +24,14 @@ fetched_at: '2026-10-10T23:51:25+00:00'
 first_seen: '2026-10-06T22:41:19+00:00'
 last_changed: '2026-10-10T23:51:25+00:00'
 content_hash: sha256:a2ebf3901f40dcd0cc87df5858f919d52a4917fcb20d5fa0de91c688e4c0a389
-words: 528
+words: 37
 status: active
 cleaned_v2: true
+links:
+- text: ANETI
+  url: https://www.emploi.nat.tn/fo/Fr/global.php?menu=5
+- text: Inscription en ligne
+  url: https://www.emploi.nat.tn/fo/Fr/global.php?menu1=168
 ---
 
-Vous êtes ici : [ANETI](https://www.emploi.nat.tn/fo/Fr/global.php?menu=5)[Inscription en ligne](https://www.emploi.nat.tn/fo/Fr/global.php?menu1=168) Découvrez les services en ligne de l’ANETI destinés aux chercheurs d’emploi et aux Chefs d’entreprise et mis à leurs disposition dans 48 bureaux d’emploi et du travail indépendant
+Vous êtes ici : ANETIInscription en ligne Découvrez les services en ligne de l’ANETI destinés aux chercheurs d’emploi et aux Chefs d’entreprise et mis à leurs disposition dans 48 bureaux d’emploi et du travail indépendant

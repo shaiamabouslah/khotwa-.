@@ -24,18 +24,23 @@ fetched_at: '2026-10-06T22:16:42+00:00'
 first_seen: '2026-10-06T22:16:43+00:00'
 last_changed: '2026-10-06T22:16:43+00:00'
 content_hash: sha256:1018e6d1a6c307ebe9323e20cc769c244dafaf0a288815d3457d8c3d1a86842e
-words: 105
+words: 94
 status: active
 hint_source: llm
+nav_links:
+- text: Actualités
+  url: https://www.uvt.rnu.tn/actualites
+- text: L'IA à L'UVT
+  url: https://www.uvt.rnu.tn/ia
+- text: Observatoire
+  url: https://www.uvt.rnu.tn/presentation/observatoire
+- text: Espace Com'
+  url: https://www.uvt.rnu.tn/espace-communication
+- text: Photothèque
+  url: https://www.uvt.rnu.tn/phototheque
+- text: Contact
+  url: https://www.uvt.rnu.tn/contact-fr
 ---
-
-- [Actualités](https://www.uvt.rnu.tn/actualites)
-- [L'IA à L'UVT](https://www.uvt.rnu.tn/ia)
-- [Observatoire](https://www.uvt.rnu.tn/presentation/observatoire)
-- [Espace Com'](https://www.uvt.rnu.tn/espace-communication)
-- [Photothèque](https://www.uvt.rnu.tn/phototheque)
-- [Contact](https://www.uvt.rnu.tn/contact-fr)
-
 2. [Etudiant à l'UVT](https://www.uvt.rnu.tn/&Itemid=196)
 3. Réinscription & Paiement
 

@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_assiette
 lang: fr
-title: Employeurs - CNSS
+title: Emp Secteur pêche2 Assiette (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -34,21 +34,28 @@ fetched_at: '2026-10-05T20:44:36+00:00'
 first_seen: '2026-10-05T20:44:36+00:00'
 last_changed: '2026-10-05T20:44:36+00:00'
 content_hash: sha256:183a449d3b5910177f940ab18637f3a127bbc96fe7e26f9e7e95becb80d336cd
-words: 614
+words: 456
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_immatriculation?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_assiette?secteur=$secteur
+- text: Remise des pénalités
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_remise_penalites?secteur=$secteur
+- text: Avantages
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: Attestation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_attestations?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_attestations?secteur=$secteur)
-
 ## Assiette des cotisations
 
-L'assiette servant de base pour le calcul des cotisations est composée de   l'ensemble  des versements en espèces ou en nature effectués par l'employeur en   rétribution du   travail  du salarié y compris les indemnités   et primes de toute nature se rattachant  au salaire.
+L'assiette servant de base pour le calcul des cotisations est composée de l'ensemble  des versements en espèces ou en nature effectués par l'employeur en rétribution du travail  du salarié y compris les indemnités et primes de toute nature se rattachant  au salaire.
 
 ## Taux des cotisations
 
@@ -76,7 +83,7 @@ Pour les pêcheurs payés à la part, ce taux est fixé à 0,8% du [SMAG journal
 
 La déclaration de salaires et l'état récapitulatif sont déposés auprès du Bureau Régional ou local territorialement compétent accompagnés par le paiement des cotisations qui peut avoir lieu :
 
-- en espèces ou par chèque tiré sur le  compte de   l'employeur ou certifié s'il est tiré sur le compte de tiers
+- en espèces ou par chèque tiré sur le  compte de l'employeur ou certifié s'il est tiré sur le compte de tiers
 - par virement bancaire ou postal, auquel cas  l'employeur est invité à porter  son numéro d'affiliation sur la copie de l'ordre de virement.
 
 L'employeur peut procéder à la télé déclaration et au télépaiement des cotisations par Internet.

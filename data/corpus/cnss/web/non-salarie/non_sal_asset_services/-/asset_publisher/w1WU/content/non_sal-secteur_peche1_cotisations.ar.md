@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_peche1_cotisations
 lang: ar
-title: غير الأجراء - CNSS
+title: Non Sal Secteur peche1 Cotisations (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -32,9 +32,10 @@ fetched_at: '2026-10-05T20:48:04+00:00'
 first_seen: '2026-10-05T20:48:04+00:00'
 last_changed: '2026-10-05T20:48:04+00:00'
 content_hash: sha256:c62e3b03b1981731232ed3d6a7258582be71751b0b877ad62c44a8c58ab76d82
-words: 295
+words: 272
 status: active
 hint_source: llm
+original_title: غير الأجراء - CNSS
 ---
 
 ## قاعدة الاشتراكات

@@ -23,16 +23,22 @@ fetched_at: '2026-10-06T00:17:14+00:00'
 first_seen: '2026-10-06T00:17:14+00:00'
 last_changed: '2026-10-06T00:17:14+00:00'
 content_hash: sha256:5c3f0efd65dff27543ad8ba02c0e57f8e1f587f2acf881e874bc4dab3e9c9eff
-words: 645
+words: 538
 status: active
 hint_source: llm
+social_links:
+- https://www.youtube.com/channel/UChhnHN2kwYcCyl9XUuqpz-g
+- https://www.facebook.com/CNAM-Tunisie-الصندوق-الوطني-للتأمين-على-المرض-101622205483978
+nav_links:
+- text: Cadre général
+  url: https://www.cnam.nat.tn/atmp.jsp
+- text: Cadre institutionnel
+  url: https://www.cnam.nat.tn/atmp1.jsp
+- text: Guide de l'employeur
+  url: https://www.cnam.nat.tn/atmp2.jsp
+- text: Guide de l'assuré social
+  url: https://www.cnam.nat.tn/atmp3.jsp
 ---
-
-- [Cadre général](https://www.cnam.nat.tn/atmp.jsp)
-- [Cadre institutionnel](https://www.cnam.nat.tn/atmp1.jsp)
-- [Guide de l'employeur](https://www.cnam.nat.tn/atmp2.jsp)
-- [Guide de l'assuré social](https://www.cnam.nat.tn/atmp3.jsp)
-
 ##### Aperçu historique
 
 La couverture contre les risques des accidents du travail est parmi les premières branches de sécurité sociale apparues en Tunisie.
@@ -65,24 +71,21 @@ dans le secteur privé .Cette refonte s'est traduite notamment par :
   et d'amélioration des conditions du travail et l'introduction d'un système de modulation des cotisations (bonus-malus) en fonction de l'effort de l'entreprise en matière de prévention .
 
 Contact
-:   12, Rue Abou Hamed El Ghazeli
-:   Montplaisir, 1073 Tunis
-:   Numéro Vert : 80100295
-:   brc@cnam.nat.tn
+: 12, Rue Abou Hamed El Ghazeli
+: Montplaisir, 1073 Tunis
+: Numéro Vert : 80100295
+: brc@cnam.nat.tn
 
 Assuré social
-:   [Espace assuré](https://www.cnam.nat.tn/espace_assure.jsp)
-:   [Services en Ligne](https://centre.e-cnam.tn/login)
-:   [Centres régionaux et locaux](https://www.cnam.nat.tn/bureauxMap.jsp)
+: [Espace assuré](https://www.cnam.nat.tn/espace_assure.jsp)
+: [Services en Ligne](https://centre.e-cnam.tn/login)
+: [Centres régionaux et locaux](https://www.cnam.nat.tn/bureauxMap.jsp)
 
 Professionnel de Santé
-:   [Espace professionnel de santé](https://www.cnam.nat.tn/espace_ps.jsp)
-:   [Services en Ligne](https://centre.e-cnam.tn)
-:   [Centres régionaux et locaux](https://www.cnam.nat.tn/bureauxMap.jsp)
+: [Espace professionnel de santé](https://www.cnam.nat.tn/espace_ps.jsp)
+: [Services en Ligne](https://centre.e-cnam.tn)
+: [Centres régionaux et locaux](https://www.cnam.nat.tn/bureauxMap.jsp)
 
 [Plan du site](https://www.cnam.nat.tn/plan.jsp)
-
-- [Youtube](https://www.youtube.com/channel/UChhnHN2kwYcCyl9XUuqpz-g)
-- [facebook](https://www.facebook.com/CNAM-Tunisie-الصندوق-الوطني-للتأمين-على-المرض-101622205483978)
 
 Dernière mise à jour le : 17/06/2026Caisse Nationale d'Assurance Maladie - Tous droits réservés © 2026

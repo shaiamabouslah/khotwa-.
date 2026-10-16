@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr3_cotisations
 lang: ar
-title: غير الأجراء - CNSS
+title: Non Sal Secteur non agr3 Cotisations (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -32,9 +32,10 @@ fetched_at: '2026-10-05T20:50:57+00:00'
 first_seen: '2026-10-05T20:50:57+00:00'
 last_changed: '2026-10-05T20:50:57+00:00'
 content_hash: sha256:075b60ad206dd5fe45e4fccf0ecb03df6d6e27a10483ee08678bca38a29b3565
-words: 296
+words: 273
 status: active
 hint_source: llm
+original_title: غير الأجراء - CNSS
 ---
 
 ## قاعدة الاشتراكات
@@ -66,7 +67,7 @@ hint_source: llm
 
 ## آجال خلاص الاشتراكات
 
-يقع دفع الاشتراكات في أجل أقصاه   اليوم الخامس عشر من الشهر الموالي للثلاثية المنقضية.
+يقع دفع الاشتراكات في أجل أقصاه اليوم الخامس عشر من الشهر الموالي للثلاثية المنقضية.
 
 ## خطايا التأخير
 

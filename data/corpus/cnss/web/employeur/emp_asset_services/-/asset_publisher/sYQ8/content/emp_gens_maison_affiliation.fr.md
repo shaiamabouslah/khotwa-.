@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_affiliation
 lang: fr
-title: Employeurs - CNSS
+title: Emp gens maison Affiliation (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -28,15 +28,19 @@ fetched_at: '2026-10-06T12:56:57+00:00'
 first_seen: '2026-10-05T20:34:46+00:00'
 last_changed: '2026-10-06T12:56:57+00:00'
 content_hash: sha256:be22d8b7fc6a36ff4f707f0560dace9faa8378463e9c939dcf239eb7f1ca3f84
-words: 313
+words: 257
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_immatriculation?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_cotisations?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_cotisations?secteur=$secteur)
-
 L'affiliation des employeurs aux régimes de sécurité sociale est obligatoire, elle doit intervenir dans le mois qui  suit l'engagement de personnel salarié.
 
 ## Pièces à fournir
@@ -54,7 +58,7 @@ Un certificat d'affiliation  est délivré séance tenante si le dossier est com
 
 ## Date d'effet
 
-La date d'effet de l'affiliation correspond à la date d'assujettissement , lorsque la demande d'affiliation est déposée au cours du mois qui suit l'assujettissement ; dans le cas contraire, elle prend effet à compter du premier jour du trimestre en cours   à la date de réception par la Caisse de la demande d'affiliation
+La date d'effet de l'affiliation correspond à la date d'assujettissement , lorsque la demande d'affiliation est déposée au cours du mois qui suit l'assujettissement ; dans le cas contraire, elle prend effet à compter du premier jour du trimestre en cours à la date de réception par la Caisse de la demande d'affiliation
 
 ## Références législatives et réglementaires
 

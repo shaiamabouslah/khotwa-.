@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr3_contenu-avantage6
 lang: fr
-title: Employeurs - CNSS
+title: Emp Secteur non agr3 Contenu Avantage6 (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -27,29 +27,37 @@ fetched_at: '2026-10-05T20:41:39+00:00'
 first_seen: '2026-10-05T20:41:39+00:00'
 last_changed: '2026-10-05T20:41:39+00:00'
 content_hash: sha256:1ccc8076413477e0bff0ddbad373e5b46889dc381b2915b7568367c43f8f9200
-words: 636
+words: 519
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr3_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr3_immatriculation?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_assiette?secteur=$secteur
+- text: Remise des pénalités
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr3_remise_penalites?secteur=$secteur
+- text: Avantages
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr3_contenu-avantage6?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: Attestation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_attestations?secteur=$secteur
+- text: Affiliation au régime complémentaire de pensions
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_affiliation_regime_complementaire?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr3_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr3_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr3_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr3_contenu-avantage6?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_attestations?secteur=$secteur)
-- [Affiliation au régime complémentaire de pensions](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_affiliation_regime_complementaire?secteur=$secteur)
-
 - Les entreprises employant des agents de nationalité tunisienne titulaires d'un diplôme d'enseignement supérieur ou d'un diplôme équivalent bénéficient de la prise en charge par le Fonds National de l'Emploi d'une quote-part dégressive de la cotisation patronale au régime légal de sécurité sociale, durant une période de sept ans, si les conditions suivantes sont remplies :
   - Les entreprises du secteur privé ayant effectué de nouveaux recrutements du 1er janvier 2009 au 31 décembre 2011, de demandeurs d'emplois parmi les stagiaires dans le cadre des contrats d'insertion des diplômés de l'enseignement supérieur dont la période de chômage excède trois années à compter de la date d'obtention du diplôme concerné.
   - les entreprises exerçant dans les activités à haute valeur ajoutée et à fort contenu de savoir, ayant effectué de nouveaux recrutements de primo-demandeurs d'emploi, durant une période ne dépassant pas les trois premières années de leur entrée en activité, et ce dans le cadre d'une convention conclue à cet effet entre l'entreprise concernée et le ministère de la formation professionnelle et de l'emploi et sur la base d'un programme annuel de recrutement présenté par l'entreprise.
 
 La quote-part de la prise en charge par le Fonds National de l'Emploi est fixée comme suit :
 
-| **Taux de prise en charge** | 1ère  année | 2ème  année | 3ème  année | 4ème  année | 5ème  année | 6ème   année | 7ème  année |
+| **Taux de prise en charge** | 1ère  année | 2ème  année | 3ème  année | 4ème  année | 5ème  année | 6ème année | 7ème  année |
 | 100% | 100% | 85% | 70% | 55% | 40% | 25% |
 
-- Les entreprises du secteur privé bénéficient de la prise en charge par le Fonds National de l'Emploi   d'une  quote-part dégressive de la cotisation patronale au régime légal de sécurité sociale, durant une période de trois ans, au titre des salaires versés aux agents de nationalité tunisienne titulaires d'un diplôme de l'enseignement supérieur ou d'un diplôme équivalent, et ce pour les nouveaux recrutements effectués entre le 1er janvier 2011 et le 31 décembre 2011,  de demandeurs d'emplois parmi les stagiaires dans le cadre des contrats d'insertion des diplômés de l'enseignement supérieur dont la période de chômage est au moins égale à deux années à compter de la date d'obtention du diplôme concerné.
+- Les entreprises du secteur privé bénéficient de la prise en charge par le Fonds National de l'Emploi d'une  quote-part dégressive de la cotisation patronale au régime légal de sécurité sociale, durant une période de trois ans, au titre des salaires versés aux agents de nationalité tunisienne titulaires d'un diplôme de l'enseignement supérieur ou d'un diplôme équivalent, et ce pour les nouveaux recrutements effectués entre le 1er janvier 2011 et le 31 décembre 2011,  de demandeurs d'emplois parmi les stagiaires dans le cadre des contrats d'insertion des diplômés de l'enseignement supérieur dont la période de chômage est au moins égale à deux années à compter de la date d'obtention du diplôme concerné.
 
 La quote-part de la prise en charge par le Fonds National de l'Emploi est fixée comme suit :
 

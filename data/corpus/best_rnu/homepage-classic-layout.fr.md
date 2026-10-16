@@ -23,7 +23,7 @@ fetched_at: '2026-10-05T23:58:57+00:00'
 first_seen: '2026-10-05T20:29:12+00:00'
 last_changed: '2026-10-05T23:59:09+00:00'
 content_hash: sha256:ec16486d0e91b4fe4e785303351ac267df4fc7bbb0f9e2273669789dd71fcfcc
-words: 133
+words: 105
 status: removed
 duplicate_of: best_rnu:/homepage-blog-layout#index
 hint_source: llm

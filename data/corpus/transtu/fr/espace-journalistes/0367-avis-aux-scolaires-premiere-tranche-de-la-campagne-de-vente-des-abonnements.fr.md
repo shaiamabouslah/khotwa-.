@@ -49,15 +49,15 @@ hint_source: llm
 
 La Transtu a mis aussi à la disposition de sa clientèle cinq points pour assurer la vente des abonnements et qui sont:
 
--          Agence Commerciale à El Mourouj 4 en face du terminus de la ligne de métro n°6.
+- Agence Commerciale à El Mourouj 4 en face du terminus de la ligne de métro n°6.
 
--          Agence Commerciale à Cité El Khadhra à côté de la station de métro
+- Agence Commerciale à Cité El Khadhra à côté de la station de métro
 
--           Agence Commerciale à la station de correspondance « Slimane Kehia » à Manouba.
+- Agence Commerciale à la station de correspondance « Slimane Kehia » à Manouba.
 
--          Agence Commerciale à la station « La Marsa Plage »
+- Agence Commerciale à la station « La Marsa Plage »
 
--          Point de vente au Campus Manouba (ISCAE : Institut Supérieur de Comptabilité et d’Administration des Entreprises).
+- Point de vente au Campus Manouba (ISCAE : Institut Supérieur de Comptabilité et d’Administration des Entreprises).
 
 Le point situé à la station « Tunis Marine »  sera réservé exclusivement aux opérations de changement et de reconstitution des abonnements.
 

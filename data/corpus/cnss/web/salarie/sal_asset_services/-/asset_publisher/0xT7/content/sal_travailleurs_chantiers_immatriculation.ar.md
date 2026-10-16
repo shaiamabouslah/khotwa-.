@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal_travailleurs_chantiers_immatriculation
 lang: ar
-title: الأجراء - CNSS
+title: Sal travailleurs chantiers Immatriculation (Salarie)
 section: null
 breadcrumb:
 - CNSS
@@ -28,9 +28,11 @@ fetched_at: '2026-10-06T12:56:09+00:00'
 first_seen: '2026-10-05T20:33:51+00:00'
 last_changed: '2026-10-06T12:56:09+00:00'
 content_hash: sha256:c20655384ace4d77a5c1288544b1122b74194d3cef5fccbf22aaa5304ad753a8
-words: 193
+words: 178
 status: active
 hint_source: llm
+original_title: الأجراء - CNSS
+possibly_outdated: true
 ---
 
 يتعين على المؤجر تقديم مطالب تسجيل أجرائه في اجل شهر من تاريخ انخراطه. بالنسبة للعملة المنتدبين بعد هذا التاريخ والذين لم يسبق تسجيلهم بالصندوق، يتعين على المؤجر أن يطلب تسجيلهم في أجل شهر بداية من تاريخ انتدابهم.

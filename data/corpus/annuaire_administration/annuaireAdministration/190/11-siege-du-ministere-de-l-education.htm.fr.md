@@ -8,7 +8,7 @@ lang: fr
 title: Informations de contact du ministère
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: contact
 domain_hint: null
 subtopic_hint: null
 hint_score: 10
@@ -23,7 +23,7 @@ fetched_at: '2026-10-06T23:25:30+00:00'
 first_seen: '2026-10-06T23:25:30+00:00'
 last_changed: '2026-10-06T23:25:30+00:00'
 content_hash: sha256:3e9d712c96694b8525e494a5c464a4fab42ac570fe9c760e176e0b256128dd68
-words: 23
+words: 17
 status: active
 hint_source: llm
 cleaned_v2: true

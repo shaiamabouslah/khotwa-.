@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr1_avantage2
 lang: fr
-title: Indépendants et autres catégories - CNSS
+title: Non Sal Secteur non agr1 avantage2 (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -31,9 +31,10 @@ fetched_at: '2026-10-05T20:52:27+00:00'
 first_seen: '2026-10-05T20:52:27+00:00'
 last_changed: '2026-10-05T20:52:27+00:00'
 content_hash: sha256:858d8d5c4e172c5380a569f024b07c2cc43e5e91a46f1f075dfed1857913bd79
-words: 453
+words: 425
 status: active
 hint_source: llm
+original_title: Indépendants et autres catégories - CNSS
 ---
 
 Les nouveaux promoteurs affiliés au régime des travailleurs non salariés dans les secteurs agricole et non agricole peuvent bénéficier du report de paiement des cotisations exigibles pour une période de deux ans à partir de la date de leur affiliation.

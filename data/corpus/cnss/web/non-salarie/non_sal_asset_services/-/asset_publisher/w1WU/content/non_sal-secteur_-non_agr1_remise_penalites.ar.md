@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr1_remise_penalites
 lang: ar
-title: غير الأجراء - CNSS
+title: Non Sal Secteur non agr1 Remise penalites (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -28,9 +28,10 @@ fetched_at: '2026-10-05T20:52:04+00:00'
 first_seen: '2026-10-05T20:52:04+00:00'
 last_changed: '2026-10-05T20:52:04+00:00'
 content_hash: sha256:cf782efeef921142276ff46069998ca8ec5912dad9f1f318432274fb82cbd025
-words: 157
+words: 143
 status: active
 hint_source: llm
+original_title: غير الأجراء - CNSS
 ---
 
 يتحمل العامل غير الأجير الذي يقوم بخلاص مساهماته بعد الآجال القانونية خطايا تأخير يمكن له تقديم مطلب في طرحها على وجه الفضل إذا اقتضت المصلحة العامة ذلك شريطة أن يكون في حل تجاه الصندوق بعنوان أصل المساهمات والقروض ومصاريف التتبع.

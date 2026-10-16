@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_cotisations
 lang: ar
-title: المؤجرون - CNSS
+title: Emp gens maison Cotisations (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -29,15 +29,19 @@ fetched_at: '2026-10-10T20:34:45+00:00'
 first_seen: '2026-10-05T20:38:54+00:00'
 last_changed: '2026-10-10T20:34:45+00:00'
 content_hash: sha256:1efeca7f73b8d5e72a4040cdaac214346a3cdf47042a2e234bd4f1e2efc86e9c
-words: 284
+words: 281
 status: active
 hint_source: llm
+nav_links:
+- text: الانخراط
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_affiliation?secteur=$secteur
+- text: التسجيل
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_immatriculation?secteur=$secteur
+- text: الاشتراكات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_cotisations?secteur=$secteur
+original_title: المؤجرون - CNSS
+possibly_outdated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_cotisations?secteur=$secteur)
-
 ## قاعدة الاشتراكات
 
 تضبط قاعدة احتساب الاشتراكات على أساس [*ثلثي الأجر الأدنى المهني المضمون*](https://www.cnss.tn/ar/nos_echos/-/asset_publisher/4IkZ/content/echos_4)نظام 48 ساعة في الأسبوع المرتبط بمدة عمل تساوي 200 ساعة الشهر.

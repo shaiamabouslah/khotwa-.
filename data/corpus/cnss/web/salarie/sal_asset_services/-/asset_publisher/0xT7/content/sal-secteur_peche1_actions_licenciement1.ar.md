@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_peche1_actions_licenciement1
 lang: ar
-title: الأجراء - CNSS
+title: Sal Secteur peche1 actions licenciement1 (Salarie)
 section: null
 breadcrumb:
 - CNSS
@@ -31,6 +31,8 @@ content_hash: sha256:fbc0bd78d842334d521b57a3dbe42b010fcba5ef7d7208e34090925c8af
 words: 267
 status: active
 hint_source: llm
+original_title: الأجراء - CNSS
+possibly_outdated: true
 ---
 
 ## المنح العائلية ومنحة الزيادة عن الأجر الوحيد لفائدة العمال المفصولين عن العمل

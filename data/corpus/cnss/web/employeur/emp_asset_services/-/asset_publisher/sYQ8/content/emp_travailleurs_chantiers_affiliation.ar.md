@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_affiliation
 lang: ar
-title: المؤجرون - CNSS
+title: Emp travailleurs chantiers Affiliation (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -29,15 +29,19 @@ fetched_at: '2026-10-06T12:57:06+00:00'
 first_seen: '2026-10-05T20:34:58+00:00'
 last_changed: '2026-10-06T12:57:06+00:00'
 content_hash: sha256:d0a665f290c167c75691e1a1ad06828047f26b12467dc6cd66d1eb0cb1601256
-words: 267
+words: 197
 status: active
 hint_source: llm
+nav_links:
+- text: الانخراط
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_affiliation?secteur=$secteur
+- text: التسجيل
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_imma?secteur=$secteur
+- text: الاشتراكات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_cotisations?secteur=$secteur
+original_title: المؤجرون - CNSS
+possibly_outdated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_imma?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_cotisations?secteur=$secteur)
-
 الانخراط بأنظمة الضمان الاجتماعي إجباري على كل مؤجر ينتدب عاملا واحدا على الأقل بصفة أجير وذلك في الشهر الذي يلي تاريخ الانتداب.
 
 ## الوثائق المطلوبة
@@ -65,4 +69,4 @@ hint_source: llm
 
 القانون عدد 28 لسنة 1994 المؤرخ في 21 فيفري 1994 والمتعلق بالتعويض عن الأضرار الناتجة عن حوادث الشغل والأمراض المهنية، كما تمّ تنقيحه وإتمامه بالقانون عدد 103 لسنة 1995 المؤرخ في 27 نوفمبر 1995.
 
-الأمر عدد 538 لسنة 1995 المؤرخ في غرة أفريل 1995 والمتعلق بضبط نسب الاشتراكات في نظام التعويض عن الأضرار الناتجة عن حوادث الشغل والأمراض المهنية كما وقع تنقيحه وإتمامه بالأمر عدد 1010 لسنة 1999 المؤرخ في 10 ماي   1999 **.**
+الأمر عدد 538 لسنة 1995 المؤرخ في غرة أفريل 1995 والمتعلق بضبط نسب الاشتراكات في نظام التعويض عن الأضرار الناتجة عن حوادث الشغل والأمراض المهنية كما وقع تنقيحه وإتمامه بالأمر عدد 1010 لسنة 1999 المؤرخ في 10 ماي 1999 **.**

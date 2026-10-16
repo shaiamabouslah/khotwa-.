@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_peche3_affiliation
 lang: ar
-title: غير الأجراء - CNSS
+title: Non Sal Secteur peche3 Affiliation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -28,9 +28,10 @@ fetched_at: '2026-10-05T20:38:28+00:00'
 first_seen: '2026-10-05T20:38:28+00:00'
 last_changed: '2026-10-05T20:38:28+00:00'
 content_hash: sha256:8c4d73147bd1f869b87002c3abeff636b3c584be1c22f7b392929a9f1f0ed105
-words: 319
+words: 290
 status: active
 hint_source: llm
+original_title: غير الأجراء - CNSS
 ---
 
 الانخراط بأنظمة الضمان الاجتماعي إجباري على كل صياد بحري صغير يعمل لحسابه الخاص.وعليه القيام بإجراءات الانخراط في الشهر الذي يلي تاريخ شروعه في النشاط المهني.

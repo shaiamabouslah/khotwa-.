@@ -8,7 +8,7 @@ lang: fr
 title: Annonce de candidature aux bourses universitaires pour la réalisation de Projets de Fin d’Etudes « Stages de recherche-Globalink »
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: announcement
 domain_hint: studies
 subtopic_hint: bourses
 hint_score: 5

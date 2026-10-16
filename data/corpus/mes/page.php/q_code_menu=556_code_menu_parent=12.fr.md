@@ -4,7 +4,7 @@ site: mes
 org: Ministère de l'Enseignement Supérieur et de la Recherche Scientifique
 trust: official
 url: https://www.mes.tn/page.php?code_menu=556&code_menu_parent=12
-lang: fr
+lang: ar
 title: missions et responsabilités de l'administration
 section: null
 breadcrumb: []
@@ -23,10 +23,11 @@ fetched_at: '2026-10-05T23:42:51+00:00'
 first_seen: '2026-10-05T20:25:53+00:00'
 last_changed: '2026-10-05T23:42:51+00:00'
 content_hash: sha256:baae2f90237bfa9c8257cb5fa36fdef9b621c12a16efd49bdcd3b471b9006724
-words: 755
+words: 40
 status: active
 hint_source: llm
 cleaned_v2: true
+lang_original: fr
 ---
 
 المهام والمشمولات - تنفيذ سياسة الدولة في مجال التعليم العالي والبحث العلمي. - السهر على أنشطة الجامعات ومؤسسات التعليم العالي والبحث العلمي. - السهر على الحياة الجامعية للطلبة وتنسيق أنشطة دواوين الخدمات الجامعية. - تنسيق ومتابعة التعاون الدولي في مجالي التعليم العالي والبحث العلمي.

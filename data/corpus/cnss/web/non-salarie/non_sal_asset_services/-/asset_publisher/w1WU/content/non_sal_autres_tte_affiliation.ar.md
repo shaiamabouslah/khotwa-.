@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal_autres_tte_affiliation
 lang: ar
-title: غير الأجراء - CNSS
+title: Non Sal autres tte Affiliation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -28,9 +28,10 @@ fetched_at: '2026-10-06T13:06:01+00:00'
 first_seen: '2026-10-05T20:36:45+00:00'
 last_changed: '2026-10-06T13:06:01+00:00'
 content_hash: sha256:3fed3f1e5b182d1e708c40c840e82d62f6c72a7ff4a94c273bd2c7283b48eb27
-words: 205
+words: 191
 status: active
 hint_source: llm
+original_title: غير الأجراء - CNSS
 ---
 
 الانخراط بأنظمة الضمان الاجتماعي اختياري بالنسبة  للعامل التونسي بالخارج. يمكنه القيام بإجراءات الانخراط في الشهر الذي يلي تاريخ شروعه في النشاط المهني.

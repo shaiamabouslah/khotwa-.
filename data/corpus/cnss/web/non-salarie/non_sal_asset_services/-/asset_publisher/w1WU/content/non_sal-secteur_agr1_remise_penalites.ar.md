@@ -28,7 +28,7 @@ fetched_at: '2026-10-05T20:49:31+00:00'
 first_seen: '2026-10-05T20:49:31+00:00'
 last_changed: '2026-10-05T20:49:31+00:00'
 content_hash: sha256:5a8015fe476425570e1ed96020b1d1d803f1295ec85d1e11c015e73d87938079
-words: 153
+words: 139
 status: removed
 hint_source: llm
 duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr1_remise_penalites#index

@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr1_avantage1
 lang: fr
-title: Indépendants et autres catégories - CNSS
+title: Non Sal Secteur agr1 avantage1 (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -30,9 +30,10 @@ fetched_at: '2026-10-05T20:49:52+00:00'
 first_seen: '2026-10-05T20:49:52+00:00'
 last_changed: '2026-10-05T20:49:52+00:00'
 content_hash: sha256:7cbd55dd1a4338eb51b8f234c5fba4c3245280ac8c34be25ab72abb70dc5d6e9
-words: 193
+words: 179
 status: active
 hint_source: llm
+original_title: Indépendants et autres catégories - CNSS
 ---
 
 L'Etat prend en charge durant une année renouvelable une seule fois le paiement des cotisations de toute personne handicapée installée pour son propre compte au titre du régime de sécurité sociale des travailleurs non salariés.

@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_assiette
 lang: ar
-title: المؤجرون - CNSS
+title: Emp Secteur pêche1 Assiette (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -31,19 +31,27 @@ fetched_at: '2026-10-05T20:44:12+00:00'
 first_seen: '2026-10-05T20:44:12+00:00'
 last_changed: '2026-10-05T20:44:12+00:00'
 content_hash: sha256:d8724ff595c59d85bdbd87b53ded167c03c62d84972b3116464bef4acbddd54c
-words: 488
+words: 319
 status: active
 hint_source: llm
+nav_links:
+- text: الانخراط
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation?secteur=$secteur
+- text: التسجيل
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_immatriculation?secteur=$secteur
+- text: الاشتراكات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_assiette?secteur=$secteur
+- text: طرح الخطايا
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_remise_penalites?secteur=$secteur
+- text: الامتيازات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche1_contenu-avantage_2?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: الشهادات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_attestations?secteur=$secteur
+- text: الانخراط بالنظام التكميلي للجرايات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation_regime_complementaire?secteur=$secteur
+original_title: المؤجرون - CNSS
+possibly_outdated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_assiette?secteur=$secteur)
-- [طرح الخطايا](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_remise_penalites?secteur=$secteur)
-- [الامتيازات](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche1_contenu-avantage_2?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [الشهادات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_attestations?secteur=$secteur)
-- [الانخراط بالنظام التكميلي للجرايات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation_regime_complementaire?secteur=$secteur)
-
 ## قاعدة الاشتراكات
 
 تتضمّن قاعدة احتساب الاشتراكات مجموع عناصر الأجور و الرّواتب و المنح و غيرها من المنافع النقدية و العينية المرتبطة بصفة الأجير،وتعفى كليا أو جزئيا من قاعدة الاشتراكات المنافع التي تكتسي صبغة استرجاع مصاريف أو تعويضات أو عمل اجتماعي أو ثقافي أو رياضي لفائدة العامل  .وتضبط قائمة المنافع التي وقع استثناؤها أو تحديد قيمتها بمقتضى [الأمر عدد 1098 لسنة 2003](https://www.cnss.tn/ar/c/document_library/get_file?uuid=e9e5f5c2-3c1d-47fe-95fd-d3d62c748db5&groupId=33103) المؤرخ في 19 ماي  2003  .
@@ -82,4 +90,4 @@ hint_source: llm
 
 ## المراجع التشريعية والترتيبية
 
-القانون عدد  30 لسنة 1960 المؤرخ في 14 ديسمبر 1960:  الفصل 40,  الفصل 42,  الفصل 43,  الفصل 44,  الفصل 45,  الفصل 46,  الفصل 47   ,  الفصل 105
+القانون عدد  30 لسنة 1960 المؤرخ في 14 ديسمبر 1960:  الفصل 40,  الفصل 42,  الفصل 43,  الفصل 44,  الفصل 45,  الفصل 46,  الفصل 47 ,  الفصل 105

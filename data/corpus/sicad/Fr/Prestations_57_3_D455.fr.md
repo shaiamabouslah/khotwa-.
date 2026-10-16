@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:11:23+00:00'
 first_seen: '2026-10-07T20:11:29+00:00'
 last_changed: '2026-10-07T20:11:29+00:00'
 content_hash: sha256:f69ac215ff1bfcee8930cca0b75acefec02654e29aa1e53d4cf2449d0f2de222
-words: 367
+words: 359
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Fabrication du charbon en bois en dehors du domaine forestier de l'Etat et les terrains soumis au régime forestier  http://www.sicad.gov.tn//Prestations_57_3_D455 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -83,8 +85,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Fabrication du charbon en bois en dehors du domaine forestier de l'Etat et les terrains soumis au régime forestier  http://www.sicad.gov.tn//Prestations_57_3_D455 "Partager sur twitter")
-Imprimer

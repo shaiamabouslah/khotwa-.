@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_peche2_affiliation
 lang: ar
-title: غير الأجراء - CNSS
+title: Non Sal Secteur peche2 Affiliation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -28,9 +28,10 @@ fetched_at: '2026-10-05T20:38:23+00:00'
 first_seen: '2026-10-05T20:38:23+00:00'
 last_changed: '2026-10-05T20:38:23+00:00'
 content_hash: sha256:514f9d900a15c3e69dbba63843a0a36a36712881423c55f4a91c14efca12b9ab
-words: 336
+words: 307
 status: active
 hint_source: llm
+original_title: غير الأجراء - CNSS
 ---
 
 الانخراط بأنظمة الضمان الاجتماعي إجباري على كل مجهز مركب صيد بحري لا تفوق حمولتها 5 أطنان حجمية. وعليه القيام بإجراءات الانخراط في الشهر الذي يلي تاريخ شروعه في النشاط المهني.

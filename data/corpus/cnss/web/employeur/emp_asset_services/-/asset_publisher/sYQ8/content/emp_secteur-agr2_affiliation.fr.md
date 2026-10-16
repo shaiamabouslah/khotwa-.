@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_affiliation
 lang: fr
-title: Employeurs - CNSS
+title: Emp Secteur agr2 Affiliation (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -28,24 +28,31 @@ fetched_at: '2026-10-06T13:05:34+00:00'
 first_seen: '2026-10-05T20:36:08+00:00'
 last_changed: '2026-10-06T13:05:34+00:00'
 content_hash: sha256:93b1db92c8437eefd33df08df0516d1c6b73ce2be691577042df41f76f23ef44
-words: 450
+words: 340
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_immatriculation?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_assiette?secteur=$secteur
+- text: Remise des pénalités
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_remise_penalites?secteur=$secteur
+- text: Avantages
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_agr2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: Attestation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_attestations?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_agr2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_attestations?secteur=$secteur)
-
 L'affiliation des employeurs aux régimes de sécurité sociale  est obligatoire, elle doit intervenir dans le mois qui  suit l'engagement de  personnel salarié.
 
 ## Pièces à fournir
 
 - [Une demande d'affiliation](https://www.cnss.tn/c/document_library/get_file?uuid=aa0ccd95-ba04-4498-840f-5f54dcf32992&groupId=33103) (imprimé CNSS)
-- une copie de la carte d'identité nationale de l'employeur ou du représentant légal de   l'entreprise
+- une copie de la carte d'identité nationale de l'employeur ou du représentant légal de l'entreprise
 - un certificat de propriété du terrain agricole ou une copie certifiée conforme du contrat de location dûment enregistré
 
 ## Lieu de dépôt

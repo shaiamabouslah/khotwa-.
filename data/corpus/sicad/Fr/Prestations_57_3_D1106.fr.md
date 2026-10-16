@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:10:00+00:00'
 first_seen: '2026-10-07T20:10:00+00:00'
 last_changed: '2026-10-07T20:10:00+00:00'
 content_hash: sha256:fbdfa13791ec13e282e5516a660c543916040f9186c67ad917121e413bf6759c
-words: 438
+words: 425
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Carte d'Adhésion http://www.sicad.gov.tn//Prestations_57_3_D1106 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -82,7 +84,7 @@ hint_source: llm
 
   | **Ministère l’Agriculture, des Ressources Hydrauliques et de la Pêche** | Ministère l’Agriculture, des Ressources Hydrauliques et de la Pêche  |  |  | | --- | --- | | Adresse | 30 Avenue Alain Savary 1002 Tunis | | E-mail | onagri@email.ati.tn | | Téléphone | 71.786.833 | | Fax | 71.780.391 - 71.799.833 | | Site web | <http://www.agriculture.tn> | |
 
-    | **Groupement Inter-professionnel des Produits Avicoles et Cunicoles** | Groupement Inter-professionnel des Produits Avicoles et Cunicoles  |  |  | | --- | --- | | Adresse | 8, rue Ali Ibn Abi taleb - le Belvédère 1002 Tunis | | Site web | <http://www.gipaweb.com.tn> | |
+**Groupement Inter-professionnel des Produits Avicoles et Cunicoles** - Groupement Inter-professionnel des Produits Avicoles et Cunicoles - Adresse - 8, rue Ali Ibn Abi taleb - le Belvédère 1002 Tunis - Site web - <http://www.gipaweb.com.tn>
 
 - **Agriculture**
 
@@ -90,8 +92,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Carte d'Adhésion http://www.sicad.gov.tn//Prestations_57_3_D1106 "Partager sur twitter")
-Imprimer

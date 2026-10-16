@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation_regime_complementaire
 lang: ar
-title: المؤجرون - CNSS
+title: Emp Secteur pêche1 Affiliation regime complementaire (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -27,19 +27,27 @@ fetched_at: '2026-10-05T20:44:28+00:00'
 first_seen: '2026-10-05T20:44:28+00:00'
 last_changed: '2026-10-05T20:44:28+00:00'
 content_hash: sha256:421d1c58c9a16670b9e9400341429a0d87ae1b97bbe670cc4dc14f2b20c664e2
-words: 299
+words: 188
 status: active
 hint_source: llm
+nav_links:
+- text: الانخراط
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation?secteur=$secteur
+- text: التسجيل
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_immatriculation?secteur=$secteur
+- text: الاشتراكات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_assiette?secteur=$secteur
+- text: طرح الخطايا
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_remise_penalites?secteur=$secteur
+- text: الامتيازات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche1_contenu-avantage_2?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: الشهادات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_attestations?secteur=$secteur
+- text: الانخراط بالنظام التكميلي للجرايات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation_regime_complementaire?secteur=$secteur
+original_title: المؤجرون - CNSS
+possibly_outdated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_assiette?secteur=$secteur)
-- [طرح الخطايا](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_remise_penalites?secteur=$secteur)
-- [الامتيازات](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche1_contenu-avantage_2?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [الشهادات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_attestations?secteur=$secteur)
-- [الانخراط بالنظام التكميلي للجرايات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation_regime_complementaire?secteur=$secteur)
-
 يمكن للمؤجر المنخرط بالنظام القانوني للضمان الاجتماعي والمشغل لأجراء تفوق أجورهم 6 مرات الأجر الأدنى المهني المضمون في السنة، أن ينخرط في النظام التكميلي للجرايات بصفة اختيارية.
 
 و في صورة الانخراط يتعين على المؤجر أن يصرح بكامل الأجراء الذين يتقاضون أجورا تفوق6 مرات الأجر الأدنى المهني المضمون في السنة.

@@ -4,7 +4,7 @@ site: aneti
 org: Agence Nationale pour l'Emploi et le Travail Indépendant (ANETI)
 trust: official
 url: https://www.emploi.nat.tn/fo/Fr/global.php?menu1=137
-lang: fr
+lang: ar
 title: Enquête de satisfaction
 section: null
 breadcrumb: []
@@ -23,11 +23,12 @@ fetched_at: '2026-10-10T23:57:52+00:00'
 first_seen: '2026-10-10T23:57:52+00:00'
 last_changed: '2026-10-10T23:57:52+00:00'
 content_hash: sha256:35c1da6ca6eb3d68485e8769f7f8b2ff20de82262c9d3d8dc95e72ccb15bc4b6
-words: 288
+words: 102
 status: active
+lang_original: fr
 ---
 
-استبيان   باتجاه المواطنين الحرفاء
+استبيان باتجاه المواطنين الحرفاء
 
 يتعلّق بالاستقبال وتنشيط فضاء الخدمات الحرة
 

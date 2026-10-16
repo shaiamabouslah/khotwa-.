@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_peche2_immatriculation
 lang: ar
-title: الأجراء - CNSS
+title: Sal Secteur peche2 Immatriculation (Salarie)
 section: null
 breadcrumb:
 - CNSS
@@ -29,9 +29,11 @@ fetched_at: '2026-10-06T12:56:51+00:00'
 first_seen: '2026-10-05T20:34:40+00:00'
 last_changed: '2026-10-06T12:56:51+00:00'
 content_hash: sha256:d489b74c3c00ff8f857ed49cbd7a3819743bb684fd3df4eeb6be41bdc645f9ae
-words: 190
+words: 149
 status: active
 hint_source: llm
+original_title: الأجراء - CNSS
+possibly_outdated: true
 ---
 
 ## التسجيل

@@ -11,7 +11,7 @@ from pathlib import Path
 
 import yaml
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = next(p for p in Path(__file__).resolve().parents if (p / "data/corpus/catalog.jsonl").exists())
 sys.path.insert(0, str(ROOT))                       # lets fixes import crawler.*
 CORPUS, CATALOG = ROOT / "data/corpus", ROOT / "data/corpus/catalog.jsonl"
 LOG = ROOT / "data/state/fixes.jsonl"

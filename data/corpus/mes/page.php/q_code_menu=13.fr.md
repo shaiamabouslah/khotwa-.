@@ -23,7 +23,7 @@ fetched_at: '2026-10-05T23:42:30+00:00'
 first_seen: '2026-10-05T20:25:29+00:00'
 last_changed: '2026-10-05T23:42:31+00:00'
 content_hash: sha256:18668a3617b4692ea0429b449a28b162c646139ecac66b60904a9854096cfb3c
-words: 1110
+words: 432
 status: removed
 hint_source: llm
 duplicate_of: mes:/page.php/q_code_menu=14_code_menu_parent=13#index

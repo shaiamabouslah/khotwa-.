@@ -4,11 +4,11 @@ site: mes
 org: Ministère de l'Enseignement Supérieur et de la Recherche Scientifique
 trust: official
 url: https://www.mes.tn/page.php?code_menu=28
-lang: fr
+lang: ar
 title: البحث العلمي
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: directory
 domain_hint: studies
 subtopic_hint: null
 hint_score: 1
@@ -26,61 +26,93 @@ content_hash: sha256:26ce604969f326580624e3e10c290539688733e890de4f8b1922a762c9f
 words: 128
 status: active
 hint_source: llm
+lang_original: fr
+links:
+- text: إعلانات وبرامج
+  url: https://www.mes.tn/evenement_video.php?code_menu=113&code_menu_parent=28
+- text: مراكز البحث
+  url: https://www.mes.tn/page.php?code_menu=33&code_menu_parent=28
+- text: www.cnrsm.rnrt.tn
+  url: http://www.cnrsm.rnrt.tn
+- text: www.cbbc.rnrt.tn
+  url: http://www.cbbc.rnrt.tn
+- text: www.crten.rnrt.tn
+  url: http://www.crten.rnrt.tn
+- text: www.certe.rnrt.tn
+  url: http://www.certe.rnrt.tn
+- text: www.cnudst.rnrt.tn
+  url: http://www.cnudst.rnrt.tn
+- text: www.ceres.rnrt.tn
+  url: http://www.ceres.rnrt.tn
+- text: www.cnstn.rnrt.tn
+  url: http://www.cnstn.rnrt.tn
+- text: www.inrap.rnrt.tn
+  url: http://www.inrap.rnrt.tn
+- text: www.ceredicrec.rnrt.tn
+  url: http://www.ceredicrec.rnrt.tn
+- text: www.ceik.rnu.tn
+  url: http://www.ceik.rnu.tn
+- text: www.crmn.rnrt.tn
+  url: http://www.crmn.rnrt.tn
+- text: www.crns.rnrt.tn
+  url: http://www.crns.rnrt.tn
+- text: www.cbs.rnrt.tn
+  url: http://www.cbs.rnrt.tn
 ---
 
 # البحث العلمي
 
-- [إعلانات وبرامج](https://www.mes.tn/evenement_video.php?code_menu=113&code_menu_parent=28)
-- [مراكز البحث](https://www.mes.tn/page.php?code_menu=33&code_menu_parent=28)
+- إعلانات وبرامج
+- مراكز البحث
 
 # المركز الوطني للبحوث في علوم المواد
 
-****[www.cnrsm.rnrt.tn](http://www.cnrsm.rnrt.tn)****
+****www.cnrsm.rnrt.tn****
 
 # مركز البيوتكنولوجيا ببرج السدرية
 
-****[www.cbbc.rnrt.tn](http://www.cbbc.rnrt.tn)****
+****www.cbbc.rnrt.tn****
 
 # مركز البحوث وتكنولوجيا الطاقة
 
-****[www.crten.rnrt.tn](http://www.crten.rnrt.tn)****
+****www.crten.rnrt.tn****
 
 # مركز البحوث وتكنولوجيا المياه
 
-**[www.certe.rnrt.tn](http://www.certe.rnrt.tn)**
+**www.certe.rnrt.tn**
 
 # المركز الوطني الجامعي للتوثيق العلمي والتقني
 
-****[www.cnudst.rnrt.tn](http://www.cnudst.rnrt.tn)****
+****www.cnudst.rnrt.tn****
 
 # مركز الدراسات والبحوث الاقتصادية والاجتماعية
 
-****[www.ceres.rnrt.tn](http://www.ceres.rnrt.tn)****
+****www.ceres.rnrt.tn****
 
 # المركز الوطني للعلوم والتكنولوجيا النووية
 
-****[www.cnstn.rnrt.tn](http://www.cnstn.rnrt.tn)****
+****www.cnstn.rnrt.tn****
 
 # المعهد الوطني للبحث والتحليلي الفيزيائي والكيميائي
 
-****[www.inrap.rnrt.tn](http://www.inrap.rnrt.tn)****
+****www.inrap.rnrt.tn****
 
 # مركز البحوث والدراسات في حوار الحضارات والأديان المقارنة بسوسة
 
-****[www.ceredicrec.rnrt.tn](http://www.ceredicrec.rnrt.tn)****
+****www.ceredicrec.rnrt.tn****
 
 # مركز الدراسات الإسلامية بالقيروان
 
-****[www.ceik.rnu.tn](http://www.ceik.rnu.tn)****
+****www.ceik.rnu.tn****
 
 # مركز البحث في الميكرو إلكترونيك والنانوتكنولوجيا بالقطب التكنولوجي بسوسة
 
-**[www.crmn.rnrt.tn](http://www.crmn.rnrt.tn)**
+**www.crmn.rnrt.tn**
 
 # مركز البحث في الرقميات بصفاقس
 
-****[www.crns.rnrt.tn](http://www.crns.rnrt.tn)****
+****www.crns.rnrt.tn****
 
 # مركز البيوتكنولوجيا بصفاقس
 
-****[www.cbs.rnrt.tn](http://www.cbs.rnrt.tn)****
+****www.cbs.rnrt.tn****

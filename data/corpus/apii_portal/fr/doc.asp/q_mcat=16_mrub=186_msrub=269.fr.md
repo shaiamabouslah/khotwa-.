@@ -41,114 +41,317 @@ content_hash: sha256:dfa0dc890f596d331f8cff32c4024d5916f3c2f11bfd95ae48055eafac4
 words: 892
 status: active
 hint_source: llm
+links:
+- text: English
+  url: https://www.tunisieindustrie.nat.tn/en/home.asp "English"
+- text: عربي
+  url: https://www.tunisieindustrie.nat.tn/ar/home.asp "عربي"
+- text: Accueil
+  url: https://www.tunisieindustrie.nat.tn/fr/home.asp
+- text: Incitations et avantages
+  url: https://www.tunisieindustrie.nat.tn/fr/incitations.asp
+- text: Nouveau cadre juridique de l’investissement
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=12&mrub=212
+- text: Fiches Pratiques
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=12&mrub=220
+- text: Nomenclature des activités
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=12&mrub=213
+- text: Activités soumises à autorisation préalable ou aux cahiers des charges
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=12&mrub=218
+- text: Franchise douanière pour les Tunisiens résidents à l’étranger
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=12&mrub=214
+- text: Incitations pour la mise à niveau
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=12&mrub=215
+- text: Loi n° 2016-71 du 30 septembre 2016
+  url: https://www.tunisieindustrie.nat.tn/fr/download/cfga/LOI71-2016_fr.pdf
+- text: Fiche Professionnelle des projets
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=16&mrub=148
+- text: Structures d'appui à la création
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=182
+- text: Déclaration d'un projet en ligne
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=122
+- text: Constitution juridiques des sociétés - Examen de recevabilité en ligne
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=16&mrub=222
+- text: Présentation
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=186&msrub=267&dev=true
+- text: Délivrance des attestations de dépôt de déclaration
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=186&msrub=268&dev=true
+- text: Constitution juridique des sociétés
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=186&msrub=269&dev=true
+- text: Autres types de prestations
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=186&msrub=270&dev=true
+- text: Assistance et information
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=186&msrub=271&dev=true
+- text: Pépinière d'entreprises
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=16&mrub=138
+- text: Centres Techniques
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=203
+- text: Les Technopoles en Tunisie
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=157
+- text: Enterprise Europe Network - EEN
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=194
+- text: Le Guichet Unique de l’API
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=186&msrub=267&dev=true
+- text: Déclaration en Ligne de votre projet d’investissement
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=122
+- text: Statistiques sur la création d'entreprises
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=3&mrub=223
+- text: Bulletin de conjoncture
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=3&mrub=23
+- text: Suivi des grands projets
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=3&mrub=232
+- text: Les chiffres clés de l'industrie
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=3&mrub=24&msrub=276&dev=true
+- text: Entreprises Tunisiennes
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=3&mrub=24&msrub=277&dev=true
+- text: Entreprises Mixtes
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=3&mrub=24&msrub=278&dev=true
+- text: Entreprises à capitaux 100 % étrangers
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=3&mrub=24&msrub=279&dev=true
+- text: Référentiel et Dashboard pour les secteurs Automobile et Aéronautique
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=3&mrub=226
+- text: Courrier de l'Industrie
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=3&mrub=187
+- text: Politique qualité
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=3&mrub=225
+- text: Bulletin de conjoncture
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=3&mrub=23
+- text: Etudes et monographies
+  url: https://www.tunisieindustrie.nat.tn/fr/etudes.asp
+- text: Les études industrielles
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=13&mrub=140
+- text: Fiche Professionnelle des projets
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=13&mrub=234
+- text: Les études régionales
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=13&mrub=172
+- text: Notes sectorielles
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=13&mrub=219
+- text: Etude sur les problématiques de la création d’entreprises
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=13&mrub=209
+- text: Monographies sectorielles
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=13&mrub=195
+- text: Monographies régionales
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=13&mrub=105
+- text: Etudes et monographies sectorielles réalisées par l'API
+  url: https://www.tunisieindustrie.nat.tn/fr/etudes.asp
+- text: Innovation
+  url: https://www.tunisieindustrie.nat.tn/fr/innovation.asp
+- text: Découvrir l’innovation
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=22&mrub=176
+- text: Centre d’innovation et de développement technologique
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=22&mrub=177
+- text: Structures d’appui
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=22&mrub=178
+- text: Programme de mise à niveau – PMN
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=22&mrub=179&msrub=257&dev=true
+- text: Incitations à la création d’entreprises innovantes
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=22&mrub=180&msrub=249&dev=true
+- text: Incitations à la recherche
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=22&mrub=180&msrub=250&dev=true
+- text: Programme de Renforcement des Capacités des Entreprises en matière d’Innovation
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=22&mrub=229
+- text: Guide de l'innovation
+  url: https://www.tunisieindustrie.nat.tn/fr/download/innovation.pdf
+- text: Déclaration d'un projet d’investissement
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=82
+- text: Constitution juridiques des sociétés - Service d’examen de recevabilité et prise de rendez-vous
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=221
+- text: Annuaire des entreprises industrielles
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=193
+- text: Annuaire des entreprises de services
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=233
+- text: Simulateur de recherche d’activités et d’estimation de primes d’investissement
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=227
+- text: Entreprises Certifiées en Tunisie
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=86
+- text: Salon virtuel de l'industrie Tunisienne
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=202
+- text: Base de données documentaires
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=4&mrub=204
+- text: Plan d’Affaires Interactif
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=151
+- text: Documents utiles
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=4&mrub=155
+- text: Publications de l'APII
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=4&mrub=191
+- text: Alerte Corruption
+  url: https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=228
+- text: Annuaire des entreprises industrielles
+  url: https://www.tunisieindustrie.nat.tn/fr/dbi.asp
+- text: Salon virtuel de l'industrie Tunisienne
+  url: https://www.tunisieindustrie.nat.tn/fr/salon.asp
+- text: Accueil
+  url: https://www.tunisieindustrie.nat.tn/fr/home.asp
+- text: www.registre-entreprises.tn
+  url: http://www.registre-entreprises.tn
+- text: www.tunisieindustrie.nat.tn
+  url: http://www.tunisieindustrie.nat.tn/fr/declaration.asp
+- text: www.tunisieindustrie.nat.tn
+  url: http://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=186&msrub=269
+- text: www.tunisieindustrie.nat.tn
+  url: http://www.tunisieindustrie.nat.tn/fr/Entcreation.asp
+- text: Constitution + d’une société de COMMERCE SARL/SUARL
+  url: https://www.tunisieindustrie.nat.tn/fr/download/cfga/SARL-SUARL_SERVICE_INDUSTRIE_AUTRES.pdf
+- text: Constitution + d’une société Industrie Service & Autres SARL/SUARL
+  url: https://www.tunisieindustrie.nat.tn/fr/download/cfga/SARL-SUARL_SERVICE_INDUSTRIE_AUTRES_plus.pdf
+- text: Constitution + d’une entreprise individuelle
+  url: https://www.tunisieindustrie.nat.tn/fr/download/cfga/Entreprise_individuelle.pdf
+- text: Constitution + d’une Succursale
+  url: https://www.tunisieindustrie.nat.tn/fr/download/cfga/Succursale.pdf
+- text: Constitution + d’une SA
+  url: https://www.tunisieindustrie.nat.tn/fr/download/cfga/SA_plus.pdf
+- text: Modèle de Statuts
+  url: https://www.tunisieindustrie.nat.tn/fr/download/CFGA/SARL_STATUTS.doc
+- text: Modèle de Statuts
+  url: https://www.tunisieindustrie.nat.tn/fr/download/CFGA/SUARL_STATUS.doc
+- text: Modèle de Statuts
+  url: https://www.tunisieindustrie.nat.tn/fr/download/CFGA/SA_STATUTS.doc
+- text: Déclaration de souscription et de versement
+  url: https://www.tunisieindustrie.nat.tn/fr/download/CFGA/SA_Declaration_de_souscription_et_de_versement.doc
+- text: Bulletin de souscription
+  url: https://www.tunisieindustrie.nat.tn/fr/download/CFGA/SA_Bulletin_de_Souscription.doc
+- text: Liste des souscripteurs
+  url: https://www.tunisieindustrie.nat.tn/fr/download/CFGA/SA_Liste_des_souscripteurs.doc
+- text: Modèle PV Assemblée Générale Constitutive
+  url: https://www.tunisieindustrie.nat.tn/fr/download/CFGA/pv_AGC.doc
+- text: Modèle PV Premier Conseil d'Administration
+  url: https://www.tunisieindustrie.nat.tn/fr/download/CFGA/pv_CA.doc
+- text: Liasse Unique
+  url: https://www.tunisieindustrie.nat.tn/fr/download/CFGA/liasse_unique_francais.pdf
+- text: الاضبارة الموحدة
+  url: https://www.tunisieindustrie.nat.tn/fr/download/CFGA/liasse_unique_arabe.pdf
+- text: Engagement
+  url: https://www.tunisieindustrie.nat.tn/fr/download/CFGA/RNE/Engagement.pdf
+- text: Demande d'affiliation d'employeur
+  url: https://www.tunisieindustrie.nat.tn/fr/download/CFGA/constitution/cnss_employeur.pdf
+- text: Demande d’affiliation Au régime de sécurité sociale des travailleurs non-salariés dans les secteurs agricole et non agricole
+  url: https://www.tunisieindustrie.nat.tn/fr/download/CFGA/constitution/cnss_agricole.pdf
+- text: Liste nominative du personnel
+  url: https://www.tunisieindustrie.nat.tn/fr/download/CFGA/constitution/liste_cnss.pdf
+- text: Déclaration d’établissement à l’inspection de travail téléchargeable au niveau du site (s’il en a au moment de la création)
+  url: https://www.tunisieindustrie.nat.tn/fr/download/CFGA/constitution/declaration_etablissment_Inspection_de_ travail.pdf
+- text: '### APII / Opportunit s d affaires'
+  url: http://www.eentunisia.tn/opportunites-d-affaires-europe "Publication des opportunit s"
+- text: '### Programme de Renforcement des Capacit s des Entreprises en mati re d Innovation'
+  url: https://www.tunisieindustrie.nat.tn/fr/newsdoc.asp?nom=2018/Programme-Renforcement "Programme de Renforcement des Capacit s des Entreprises en mati re d Innovation"
+- text: '### Courrier de l''Industrie'
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=3&mrub=187 "Courrier de l'Industrie"
+- text: '### Bulletin de conjoncture'
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=3&mrub=23 "Bulletin de conjoncture"
+- text: '### Manuel des proc dures - Guide de l''investisseur'
+  url: https://www.tunisieindustrie.nat.tn/fr/download/CFGA/Manuel_procedures_2016.pdf "Manuel des proc dures - Guide de l'investisseur"
+- text: '### Code de conduite et de d ontologie de l agent public'
+  url: https://www.tunisieindustrie.nat.tn/fr/download/Code-ethique-fr.pdf "Code de conduite et de d ontologie de l agent public"
+- text: Copyright API Tunisia 2018 - Tous droits r serv s
+  url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=25&mrub=205
 ---
 
 Guichet Unique - Constitution juridique des sociétés
 
-- [English](https://www.tunisieindustrie.nat.tn/en/home.asp "English")
-- [عربي](https://www.tunisieindustrie.nat.tn/ar/home.asp "عربي")
+- English
+- عربي
 
 République Tunisienne | Ministère de
 l’Industrie, de l’Energie et des Mines
 
-- [Accueil](https://www.tunisieindustrie.nat.tn/fr/home.asp)
-- [Incitations et avantages](https://www.tunisieindustrie.nat.tn/fr/incitations.asp)
+- Accueil
+- Incitations et avantages
 
-  ### [Nouveau cadre juridique de l’investissement](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=12&mrub=212)
+  ### Nouveau cadre juridique de l’investissement
 
-  ### [Fiches Pratiques](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=12&mrub=220)
+  ### Fiches Pratiques
 
-  ### [Nomenclature des activités](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=12&mrub=213)
+  ### Nomenclature des activités
 
-  ### [Activités soumises à autorisation préalable ou aux cahiers des charges](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=12&mrub=218)
+  ### Activités soumises à autorisation préalable ou aux cahiers des charges
 
-  ### [Franchise douanière pour les Tunisiens résidents à l’étranger](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=12&mrub=214)
+  ### Franchise douanière pour les Tunisiens résidents à l’étranger
 
-  ### [Incitations pour la mise à niveau](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=12&mrub=215)
+  ### Incitations pour la mise à niveau
 
-  [Loi n° 2016-71 du 30 septembre 2016](https://www.tunisieindustrie.nat.tn/fr/download/cfga/LOI71-2016_fr.pdf)- **Création d'entreprises**
+  Loi n° 2016-71 du 30 septembre 2016- **Création d'entreprises**
 
-    ### [Fiche Professionnelle des projets](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=16&mrub=148)
+    ### Fiche Professionnelle des projets
 
-    ### [Structures d'appui à la création](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=182)
+    ### Structures d'appui à la création
 
-    ### [Déclaration d'un projet en ligne](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=122)
+    ### Déclaration d'un projet en ligne
 
-    ### [Constitution juridiques des sociétés - Examen de recevabilité en ligne](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=16&mrub=222)
+    ### Constitution juridiques des sociétés - Examen de recevabilité en ligne
 
     #### Guichet Unique
 
-    ### - [Présentation](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=186&msrub=267&dev=true) - [Délivrance des attestations de dépôt de déclaration](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=186&msrub=268&dev=true) - [Constitution juridique des sociétés](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=186&msrub=269&dev=true) - [Autres types de prestations](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=186&msrub=270&dev=true) - [Assistance et information](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=186&msrub=271&dev=true)[Pépinière d'entreprises](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=16&mrub=138)[Centres Techniques](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=203)[Les Technopoles en Tunisie](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=157)[Enterprise Europe Network - EEN](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=194)
+    ### - Présentation - Délivrance des attestations de dépôt de déclaration - Constitution juridique des sociétés - Autres types de prestations - Assistance et informationPépinière d'entreprisesCentres TechniquesLes Technopoles en TunisieEnterprise Europe Network - EEN
 
-    [Le Guichet Unique de l’API](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=186&msrub=267&dev=true)[Déclaration en Ligne de votre projet d’investissement](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=122)- Informations industrielles
+    Le Guichet Unique de l’APIDéclaration en Ligne de votre projet d’investissement- Informations industrielles
 
-      ### [Statistiques sur la création d'entreprises](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=3&mrub=223)
+      ### Statistiques sur la création d'entreprises
 
-      ### [Bulletin de conjoncture](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=3&mrub=23)
+      ### Bulletin de conjoncture
 
-      ### [Suivi des grands projets](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=3&mrub=232)
+      ### Suivi des grands projets
 
       #### Entreprises opérationnelles dans l'Industrie
 
-      ### - [Les chiffres clés de l'industrie](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=3&mrub=24&msrub=276&dev=true) - [Entreprises Tunisiennes](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=3&mrub=24&msrub=277&dev=true) - [Entreprises Mixtes](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=3&mrub=24&msrub=278&dev=true) - [Entreprises à capitaux 100 % étrangers](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=3&mrub=24&msrub=279&dev=true)[Référentiel et Dashboard pour les secteurs Automobile et Aéronautique](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=3&mrub=226)[Courrier de l'Industrie](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=3&mrub=187)[Politique qualité](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=3&mrub=225)
+      ### - Les chiffres clés de l'industrie - Entreprises Tunisiennes - Entreprises Mixtes - Entreprises à capitaux 100 % étrangersRéférentiel et Dashboard pour les secteurs Automobile et AéronautiqueCourrier de l'IndustriePolitique qualité
 
-      [Bulletin de conjoncture](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=3&mrub=23)- [Etudes et monographies](https://www.tunisieindustrie.nat.tn/fr/etudes.asp)
+      Bulletin de conjoncture- Etudes et monographies
 
-        ### [Les études industrielles](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=13&mrub=140)
+        ### Les études industrielles
 
-        ### [Fiche Professionnelle des projets](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=13&mrub=234)
+        ### Fiche Professionnelle des projets
 
-        ### [Les études régionales](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=13&mrub=172)
+        ### Les études régionales
 
-        ### [Notes sectorielles](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=13&mrub=219)
+        ### Notes sectorielles
 
-        ### [Etude sur les problématiques de la création d’entreprises](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=13&mrub=209)
+        ### Etude sur les problématiques de la création d’entreprises
 
-        ### [Monographies sectorielles](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=13&mrub=195)
+        ### Monographies sectorielles
 
-        ### [Monographies régionales](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=13&mrub=105)
+        ### Monographies régionales
 
-        [Etudes et monographies sectorielles réalisées par l'API](https://www.tunisieindustrie.nat.tn/fr/etudes.asp)- [Innovation](https://www.tunisieindustrie.nat.tn/fr/innovation.asp)
+        Etudes et monographies sectorielles réalisées par l'API- Innovation
 
-          ### [Découvrir l’innovation](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=22&mrub=176)
+          ### Découvrir l’innovation
 
-          ### [Centre d’innovation et de développement technologique](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=22&mrub=177)
+          ### Centre d’innovation et de développement technologique
 
-          ### [Structures d’appui](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=22&mrub=178)
+          ### Structures d’appui
 
           #### Programmes d’appui
 
-          ### - [Programme de mise à niveau – PMN](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=22&mrub=179&msrub=257&dev=true)Financement de l’innovation - [Incitations à la création d’entreprises innovantes](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=22&mrub=180&msrub=249&dev=true) - [Incitations à la recherche](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=22&mrub=180&msrub=250&dev=true)[Programme de Renforcement des Capacités des Entreprises en matière d’Innovation](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=22&mrub=229)
+          ### - Programme de mise à niveau – PMNFinancement de l’innovation - Incitations à la création d’entreprises innovantes - Incitations à la rechercheProgramme de Renforcement des Capacités des Entreprises en matière d’Innovation
 
-          [Guide de l'innovation](https://www.tunisieindustrie.nat.tn/fr/download/innovation.pdf)- Services en ligne
+          Guide de l'innovation- Services en ligne
 
-            ### [Déclaration d'un projet d’investissement](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=82)
+            ### Déclaration d'un projet d’investissement
 
-            ### [Constitution juridiques des sociétés - Service d’examen de recevabilité et prise de rendez-vous](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=221)
+            ### Constitution juridiques des sociétés - Service d’examen de recevabilité et prise de rendez-vous
 
-            ### [Annuaire des entreprises industrielles](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=193)
+            ### Annuaire des entreprises industrielles
 
-            ### [Annuaire des entreprises de services](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=233)
+            ### Annuaire des entreprises de services
 
-            ### [Simulateur de recherche d’activités et d’estimation de primes d’investissement](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=227)
+            ### Simulateur de recherche d’activités et d’estimation de primes d’investissement
 
-            ### [Entreprises Certifiées en Tunisie](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=86)
+            ### Entreprises Certifiées en Tunisie
 
-            ### [Salon virtuel de l'industrie Tunisienne](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=202)
+            ### Salon virtuel de l'industrie Tunisienne
 
-            ### [Base de données documentaires](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=4&mrub=204)
+            ### Base de données documentaires
 
-            ### [Plan d’Affaires Interactif](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=151)
+            ### Plan d’Affaires Interactif
 
-            ### [Documents utiles](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=4&mrub=155)
+            ### Documents utiles
 
-            ### [Publications de l'APII](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=4&mrub=191)
+            ### Publications de l'APII
 
-            ### [Alerte Corruption](https://www.tunisieindustrie.nat.tn/fr/link.asp?mcat=4&mrub=228)
+            ### Alerte Corruption
 
-            [Annuaire des entreprises industrielles](https://www.tunisieindustrie.nat.tn/fr/dbi.asp)[Salon virtuel de l'industrie Tunisienne](https://www.tunisieindustrie.nat.tn/fr/salon.asp)
+            Annuaire des entreprises industriellesSalon virtuel de l'industrie Tunisienne
 
-      [Accueil](https://www.tunisieindustrie.nat.tn/fr/home.asp) Création d'entreprises  Guichet Unique   **Constitution juridique des sociétés**
+      Accueil Création d'entreprises  Guichet Unique **Constitution juridique des sociétés**
 
       # Constitution juridique des sociétés
 
@@ -163,66 +366,66 @@ l’Industrie, de l’Energie et des Mines
 
       **Important : Avant de procéder à la création de votre entreprise ; Merci d’accomplir les étapes 1 et 2**
 
-      |  | **Etape 1 : Service en ligne**  **Réservation en ligne sur le site du RNE de la raison sociale ou du nom commercial le cas échéant**    Demande de certificat de réservation: [www.registre-entreprises.tn](http://www.registre-entreprises.tn) |
-      |  | **Etape 2 : Service en ligne.**   **Attestation de dépôt de déclaration**     Demande de dépôt de déclaration : [www.tunisieindustrie.nat.tn](http://www.tunisieindustrie.nat.tn/fr/declaration.asp)    Non applicable pour les sociétés de commerce, optionnel pour les sociétés de services et industries    \*Attestation ADD ouvre droit aux incitations au vu des dispositions prévues par la loi n° 2016-71 DU 30/09/2016 |
-      |  | **Etape 3 : Service en ligne d’examen de recevabilité de dossier et prise de rendez –vous**      **Constitution juridique entreprise ou société**    Liste des documents à fournir: [www.tunisieindustrie.nat.tn](http://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=186&msrub=269) Constitution juridiques des sociétés - Service d’examen de recevabilité et prise de rendez-vous en ligne: [www.tunisieindustrie.nat.tn](http://www.tunisieindustrie.nat.tn/fr/Entcreation.asp) |
+**Etape 1 : Service en ligne**  **Réservation en ligne sur le site du RNE de la raison sociale ou du nom commercial le cas échéant** Demande de certificat de réservation: www.registre-entreprises.tn
+**Etape 2 : Service en ligne.** **Attestation de dépôt de déclaration** Demande de dépôt de déclaration : www.tunisieindustrie.nat.tn Non applicable pour les sociétés de commerce, optionnel pour les sociétés de services et industries \*Attestation ADD ouvre droit aux incitations au vu des dispositions prévues par la loi n° 2016-71 DU 30/09/2016
+**Etape 3 : Service en ligne d’examen de recevabilité de dossier et prise de rendez –vous** **Constitution juridique entreprise ou société** Liste des documents à fournir: www.tunisieindustrie.nat.tn Constitution juridiques des sociétés - Service d’examen de recevabilité et prise de rendez-vous en ligne: www.tunisieindustrie.nat.tn
 
       ### Constitution + d’une société de COMMERCE SARL/SUARL
 
-      | Télécharger la liste des documents à fournir pour la [Constitution + d’une société de COMMERCE SARL/SUARL](https://www.tunisieindustrie.nat.tn/fr/download/cfga/SARL-SUARL_SERVICE_INDUSTRIE_AUTRES.pdf) |
+      | Télécharger la liste des documents à fournir pour la Constitution + d’une société de COMMERCE SARL/SUARL |
 
       ### Constitution + d’une société Industrie Service & Autres SARL/SUARL/GIE
 
-      | Télécharger la liste des documents à fournir pour la [Constitution + d’une société Industrie Service & Autres SARL/SUARL](https://www.tunisieindustrie.nat.tn/fr/download/cfga/SARL-SUARL_SERVICE_INDUSTRIE_AUTRES_plus.pdf) |
+      | Télécharger la liste des documents à fournir pour la Constitution + d’une société Industrie Service & Autres SARL/SUARL |
 
       ### Constitution + d’une entreprise individuelle
 
-      | Télécharger la liste des documents à fournir pour la [Constitution + d’une entreprise individuelle](https://www.tunisieindustrie.nat.tn/fr/download/cfga/Entreprise_individuelle.pdf) |
+      | Télécharger la liste des documents à fournir pour la Constitution + d’une entreprise individuelle |
 
       ### Constitution + d’une Succursale
 
-      | Télécharger la liste des documents à fournir pour la [Constitution + d’une Succursale](https://www.tunisieindustrie.nat.tn/fr/download/cfga/Succursale.pdf) |
+      | Télécharger la liste des documents à fournir pour la Constitution + d’une Succursale |
 
       ### Constitution + d’une SA
 
-      | Télécharger la liste des documents à fournir pour la [Constitution + d’une SA](https://www.tunisieindustrie.nat.tn/fr/download/cfga/SA_plus.pdf) |
+      | Télécharger la liste des documents à fournir pour la Constitution + d’une SA |
 
       ## Documents utiles à la création d’entreprise
 
       ### Modèle de statuts et documents pour la constitution juridique de sociétés
 
       - **Cas d'une SARL**
-        - [Modèle de Statuts](https://www.tunisieindustrie.nat.tn/fr/download/CFGA/SARL_STATUTS.doc)
+        - Modèle de Statuts
       - **Cas d'une SUARL**
-        - [Modèle de Statuts](https://www.tunisieindustrie.nat.tn/fr/download/CFGA/SUARL_STATUS.doc)
+        - Modèle de Statuts
       - **Cas d'une SA**
-        - [Modèle de Statuts](https://www.tunisieindustrie.nat.tn/fr/download/CFGA/SA_STATUTS.doc)/li>
-        - [Déclaration de souscription et de versement](https://www.tunisieindustrie.nat.tn/fr/download/CFGA/SA_Declaration_de_souscription_et_de_versement.doc)
-        - [Bulletin de souscription](https://www.tunisieindustrie.nat.tn/fr/download/CFGA/SA_Bulletin_de_Souscription.doc)
-        - [Liste des souscripteurs](https://www.tunisieindustrie.nat.tn/fr/download/CFGA/SA_Liste_des_souscripteurs.doc)
-        - [Modèle PV Assemblée Générale Constitutive](https://www.tunisieindustrie.nat.tn/fr/download/CFGA/pv_AGC.doc)
-        - [Modèle PV Premier Conseil d'Administration](https://www.tunisieindustrie.nat.tn/fr/download/CFGA/pv_CA.doc)
+        - Modèle de Statuts/li>
+        - Déclaration de souscription et de versement
+        - Bulletin de souscription
+        - Liste des souscripteurs
+        - Modèle PV Assemblée Générale Constitutive
+        - Modèle PV Premier Conseil d'Administration
 
       ## Attestations de dépôt de déclaration d'un projet - Loi de l’Investissement N°2016-71 du 30 Septembre 2016
 
-      - [Liasse Unique](https://www.tunisieindustrie.nat.tn/fr/download/CFGA/liasse_unique_francais.pdf)
-      - [الاضبارة الموحدة](https://www.tunisieindustrie.nat.tn/fr/download/CFGA/liasse_unique_arabe.pdf)
+      - Liasse Unique
+      - الاضبارة الموحدة
 
       ## Impôt
 
-      - [Engagement](https://www.tunisieindustrie.nat.tn/fr/download/CFGA/RNE/Engagement.pdf)
+      - Engagement
          التزام
 
       ## Formulaires CNSS et Inspection de travail
 
-      - [Demande d'affiliation d'employeur](https://www.tunisieindustrie.nat.tn/fr/download/CFGA/constitution/cnss_employeur.pdf)
-      - [Demande d’affiliation Au régime de sécurité sociale des travailleurs non-salariés dans les secteurs agricole et non agricole](https://www.tunisieindustrie.nat.tn/fr/download/CFGA/constitution/cnss_agricole.pdf)
-      - [Liste nominative du personnel](https://www.tunisieindustrie.nat.tn/fr/download/CFGA/constitution/liste_cnss.pdf)
-      - [Déclaration d’établissement à l’inspection de travail téléchargeable au niveau du site (s’il en a au moment de la création)](https://www.tunisieindustrie.nat.tn/fr/download/CFGA/constitution/declaration_etablissment_Inspection_de_ travail.pdf)
+      - Demande d'affiliation d'employeur
+      - Demande d’affiliation Au régime de sécurité sociale des travailleurs non-salariés dans les secteurs agricole et non agricole
+      - Liste nominative du personnel
+      - Déclaration d’établissement à l’inspection de travail téléchargeable au niveau du site (s’il en a au moment de la création)
 
-      [### APII / Opportunit s d affaires](http://www.eentunisia.tn/opportunites-d-affaires-europe "Publication des opportunit s")[### Programme de Renforcement des Capacit s des Entreprises en mati re d Innovation](https://www.tunisieindustrie.nat.tn/fr/newsdoc.asp?nom=2018/Programme-Renforcement "Programme de Renforcement des Capacit s des Entreprises en mati re d Innovation")[### Courrier de l'Industrie](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=3&mrub=187 "Courrier de l'Industrie")[### Bulletin de conjoncture](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=3&mrub=23 "Bulletin de conjoncture")[### Manuel des proc dures - Guide de l'investisseur](https://www.tunisieindustrie.nat.tn/fr/download/CFGA/Manuel_procedures_2016.pdf "Manuel des proc dures - Guide de l'investisseur")[### Code de conduite et de d ontologie de l agent public](https://www.tunisieindustrie.nat.tn/fr/download/Code-ethique-fr.pdf "Code de conduite et de d ontologie de l agent public")Tunisian Industry Portal Winner 2011
+      ### APII / Opportunit s d affaires### Programme de Renforcement des Capacit s des Entreprises en mati re d Innovation### Courrier de l'Industrie### Bulletin de conjoncture### Manuel des proc dures - Guide de l'investisseur### Code de conduite et de d ontologie de l agent publicTunisian Industry Portal Winner 2011
 
-      [Copyright API Tunisia 2018 - Tous droits r serv s](https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=25&mrub=205)
+      Copyright API Tunisia 2018 - Tous droits r serv s
 
       Date de la derni re MAJ: 25 Mars 2026
 

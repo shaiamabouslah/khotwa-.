@@ -33,7 +33,7 @@ fetched_at: '2026-10-07T20:52:50+00:00'
 first_seen: '2026-10-05T20:29:29+00:00'
 last_changed: '2026-10-07T20:53:09+00:00'
 content_hash: sha256:d3a7ca294d12ba170b272268ca3e052466cf7297a2361de7a4972f42b744670e
-words: 758
+words: 759
 status: active
 hint_source: llm
 ---
@@ -72,9 +72,9 @@ La « DPP » doit être déposée dans les **douze mois** suivant la date de cl�
 - **L’entreprise est détenue**, directement ou indirectement, par une entreprise établie dans une **juridiction qui n’exige pas le dépôt de la DPP** mais qui serait tenue de déposer cette déclaration si elle était établie en Tunisie,
 - **L’entreprise est détenue**, directement ou indirectement, par une entreprise établie dans une **juridiction qui ne figure pas sur la liste des juridictions ayant conclu un accord avec la Tunisie autorisant l’échange automatique de la DPP.**
 
-          Lorsque deux ou plusieurs entités constitutives d’un même groupe d’EMN, résidentes en Tunisie, sont soumises à l’obligation de dépôt de la DPP, **l’une                d’entre elles peut être désignée par le groupe pour déposer ladite déclaration**.
+          Lorsque deux ou plusieurs entités constitutives d’un même groupe d’EMN, résidentes en Tunisie, sont soumises à l’obligation de dépôt de la DPP, **l’une d’entre elles peut être désignée par le groupe pour déposer ladite déclaration**.
 
-**Les autres entités constitutives de ce groupe résidentes en Tunisie doivent informer l’administration fiscale** de l’entité tunisienne désignée pour le                    dépôt local au moyen d’une notification transmise via ce service.
+**Les autres entités constitutives de ce groupe résidentes en Tunisie doivent informer l’administration fiscale** de l’entité tunisienne désignée pour le dépôt local au moyen d’une notification transmise via ce service.
 
 L’accès à la plateforme de dépôt et de notification nécessite un **certificat électronique d’authentification DigiGo**.
 

@@ -128,7 +128,7 @@ c) Après l’âge de vingt et un (21) ans et sans condition de rang ou de nombr
 
 ### Demande d'une avance sur capital-décès
 
-*Dûment rempli et portant signature légalisée du conjoint survivant   (à remplir aussi par l’organisme employeur au cas où le décès survient en activité)*
+*Dûment rempli et portant signature légalisée du conjoint survivant (à remplir aussi par l’organisme employeur au cas où le décès survient en activité)*
 
 **Cadre d’utilisation:**
 - Bénéficie de cette prestation le conjoint survivant, non divorcé de l’affilié(e) actif (ve) ou retraité(e) de cujus.

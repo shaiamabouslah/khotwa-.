@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:10:14+00:00'
 first_seen: '2026-10-07T20:10:21+00:00'
 last_changed: '2026-10-07T20:10:21+00:00'
 content_hash: sha256:1db43813ae3ce9e326124288126e908edec7e337d31264f8565b1c06baf30df3
-words: 215
+words: 201
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Création des centres spécialisés dans le contrôle de la croissance chez les ovins et les caprins (cahier des charges
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -73,8 +75,4 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Création des centres spécialisés dans le contrôle de la croissance chez les ovins et les caprins (cahier des charges) http://www.sicad.gov.tn//Prestations_57_3_D1816 "Partager sur twitter")
-Imprimer
+-  http://www.sicad.gov.tn//Prestations_57_3_D1816 "Partager sur twitter")

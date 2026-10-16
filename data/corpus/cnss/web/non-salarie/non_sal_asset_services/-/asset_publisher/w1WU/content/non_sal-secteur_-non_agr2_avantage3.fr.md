@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr2_avantage3
 lang: fr
-title: Indépendants et autres catégories - CNSS
+title: Non Sal Secteur non agr2 avantage3 (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -32,6 +32,7 @@ content_hash: sha256:055dcbc085948103e89203b19ce6e81a2dafae8a094e6ddf70833484169
 words: 455
 status: active
 hint_source: llm
+original_title: Indépendants et autres catégories - CNSS
 ---
 
 ## Progressivité dans l'inscription à la classe de revenu dans le cadre du régime des travailleurs non salariés.

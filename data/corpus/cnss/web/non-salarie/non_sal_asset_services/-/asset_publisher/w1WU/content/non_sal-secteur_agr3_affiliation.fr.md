@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr3_affiliation
 lang: fr
-title: Indépendants et autres catégories - CNSS
+title: Non Sal Secteur agr3 Affiliation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -31,9 +31,10 @@ fetched_at: '2026-10-05T20:38:07+00:00'
 first_seen: '2026-10-05T20:38:07+00:00'
 last_changed: '2026-10-05T20:38:07+00:00'
 content_hash: sha256:6d28e81f4b969deb52c3e70444921c56211eb36ff188a2ee7fb2c183e025754b
-words: 471
+words: 419
 status: active
 hint_source: llm
+original_title: Indépendants et autres catégories - CNSS
 ---
 
 L'affiliation des petits agriculteurs travaillant pour leur propre compte au régime de sécurité sociale est obligatoire. L'affiliation intervient dans le mois qui suit le début de l'activité.

@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_assiette
 lang: fr
-title: Employeurs - CNSS
+title: Emp Secteur non agr1 Assiette (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -31,19 +31,27 @@ fetched_at: '2026-10-05T20:39:22+00:00'
 first_seen: '2026-10-05T20:39:22+00:00'
 last_changed: '2026-10-05T20:39:22+00:00'
 content_hash: sha256:42031910ce5765131a114c1d7a4f99283b118f81894019065daea961b1f2c820
-words: 640
+words: 454
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr1_immatriculation?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_assiette?secteur=$secteur
+- text: Remise des pénalités
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_remise_penalites?secteur=$secteur
+- text: Avantages
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr1_contenu-avantage1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: Attestations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_attestations?secteur=$secteur
+- text: Affiliation au régime complémentaire de pensions
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_affiliation_regime_complementaire?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr1_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr1_contenu-avantage1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_attestations?secteur=$secteur)
-- [Affiliation au régime complémentaire de pensions](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_affiliation_regime_complementaire?secteur=$secteur)
-
 ## Assiette des cotisations
 
 Les cotisations sont assises sur l'ensemble des éléments des salaires, émoluments, indemnités et tous autres avantages, en espèces ou en nature, liés à la qualité de salarié. Sont entièrement ou partiellement exclus de l'assiette des cotisations les avantages  revêtant un caractère de remboursement de frais, d'indemnisation ou d'action sociale, culturelle et sportive au profit du salarié. La liste des avantages exclus de l'assiette des cotisations, ainsi  que les taux  et  les  plafonds  d'exemption  sont  fixés  par  le  [décret n°2003-1098 du 19 Mai 2003](https://www.cnss.tn/c/document_library/get_file?uuid=d474e491-2c0d-4ef1-b5c4-472c3ef1cb89&groupId=33103).
@@ -92,4 +100,4 @@ En cas de non dépôt de déclaration de salaires, une pénalité de retard supp
 
 ## Références législatives et réglementaires
 
-- Loi n°60-30 du 14 décembre 1960, relative à l'organisation des régimes de sécurité sociale, telle que modifiée et complétée par les textes subséquents et notamment : Art. 40,  Art. 42,  Art. 43,  Art. 44,  Art. 45,  Art. 46,  Art. 47,   Art. 105
+- Loi n°60-30 du 14 décembre 1960, relative à l'organisation des régimes de sécurité sociale, telle que modifiée et complétée par les textes subséquents et notamment : Art. 40,  Art. 42,  Art. 43,  Art. 44,  Art. 45,  Art. 46,  Art. 47, Art. 105

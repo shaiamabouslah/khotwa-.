@@ -24,9 +24,11 @@ fetched_at: '2026-10-07T20:09:41+00:00'
 first_seen: '2026-10-07T20:09:42+00:00'
 last_changed: '2026-10-07T20:09:42+00:00'
 content_hash: sha256:d149add4ae35a9cbb3f595829c32128718f5f86a0d0323a932ccf8fb878d5cd0
-words: 492
+words: 484
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Attestation du caractère culturel dans le cadre du mécénat culturel. http://www.sicad.gov.tn//Prestations_57_3_D5734 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -37,7 +39,7 @@ hint_source: llm
   Un dossier comprenant :
 
   - Une demande manuscrite au nom du ministre des affaires culturelles.
-  - un dossier de presse comprenant   tous les données et les informations justifiant l’aspect culturel d’établissement ou du projet ou de l’œuvre.
+  - un dossier de presse comprenant tous les données et les informations justifiant l’aspect culturel d’établissement ou du projet ou de l’œuvre.
 
   **Et il doit être accompagné obligatoirement des pièces suivantes :**
 
@@ -107,8 +109,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Attestation du caractère culturel dans le cadre du mécénat culturel. http://www.sicad.gov.tn//Prestations_57_3_D5734 "Partager sur twitter")
-Imprimer

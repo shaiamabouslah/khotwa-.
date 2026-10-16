@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_assiette
 lang: fr
-title: Employeurs - CNSS
+title: Emp Secteur agr1 Assiette (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -30,18 +30,25 @@ fetched_at: '2026-10-05T20:43:13+00:00'
 first_seen: '2026-10-05T20:43:13+00:00'
 last_changed: '2026-10-05T20:43:13+00:00'
 content_hash: sha256:0bb68e962e9ad5afe09a51d00b89fb33d5721551b65a6910a109c3ecb8525d7e
-words: 566
+words: 408
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_immatriculation?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_assiette?secteur=$secteur
+- text: Remise des pénalités
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_remise_penalites?secteur=$secteur
+- text: Avantages
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_agr1_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: Attestation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_attestations?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_agr1_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_attestations?secteur=$secteur)
-
 ## Assiette des cotisations
 
 Les cotisations sont assises sur un salaire forfaitaire calculé sur la base du salaire minimum agricole garanti ([SMAG](https://www.cnss.tn/fr/nos_echos/-/asset_publisher/4IkZ/content/echos_3)) rapporté à une période de travail de 45 jours par trimestre et affecté d'un coefficient multiplicateur selon la spécialité de l'ouvrier.
@@ -77,7 +84,7 @@ Ce taux est fixé à 0,8% du [SMAG journalier](https://www.cnss.tn/web/guest/nos
 
 La déclaration de salaires et l'état récapitulatif sont déposés auprès du Bureau Régional ou Local territorialement compétent accompagnés par le paiement des cotisations qui peut avoir lieu :
 
-- en espèces ou par chèque tiré sur le  compte de   l'employeur ou certifié s'il est tiré sur le compte de tiers
+- en espèces ou par chèque tiré sur le  compte de l'employeur ou certifié s'il est tiré sur le compte de tiers
 - par virement bancaire ou postal, auquel cas  l'employeur est invité à porter son numéro d'affiliation sur la copie de l'ordre de virement.
 
 ## Délai de paiement des cotisations

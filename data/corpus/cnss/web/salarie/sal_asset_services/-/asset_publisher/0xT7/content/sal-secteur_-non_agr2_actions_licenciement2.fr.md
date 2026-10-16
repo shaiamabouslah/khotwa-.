@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_-non_agr2_actions_licenciement2
 lang: fr
-title: Salariés - CNSS
+title: Sal Secteur non agr2 actions licenciement2 (Salarie)
 section: null
 breadcrumb:
 - CNSS
@@ -30,6 +30,8 @@ content_hash: sha256:8f0ba64224128d37ad3502635cd16b3023757329a92ad0669332887fc49
 words: 471
 status: active
 hint_source: llm
+original_title: Salariés - CNSS
+possibly_outdated: true
 ---
 
 ## La CNSS prend en charge les indemnités et droits légaux des travailleurs ayant perdu leur emploi pour des raisons économiques ou technologiques ou suite à la fermeture définitive et inopinée de l'entreprise. Cette prise en charge ne s'applique pas aux travailleurs licenciés par les entreprises publiques ainsi que les autres entreprises assimilées, habilitées à bénéficier de l'intervention du Fonds de Restructuration des Entreprises Publiques. Cette prise en charge est accordée si les conditions suivantes sont remplies

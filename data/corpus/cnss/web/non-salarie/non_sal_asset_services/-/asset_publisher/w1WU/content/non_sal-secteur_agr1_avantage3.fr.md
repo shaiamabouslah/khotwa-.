@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr1_avantage3
 lang: fr
-title: Indépendants et autres catégories - CNSS
+title: Non Sal Secteur agr1 avantage3 (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -30,9 +30,10 @@ fetched_at: '2026-10-05T20:49:40+00:00'
 first_seen: '2026-10-05T20:49:40+00:00'
 last_changed: '2026-10-05T20:49:40+00:00'
 content_hash: sha256:fa841a2f6a28d9dde77fe2a04df92807f0f7813aa3c733e31bbd27d3e7bdde2b
-words: 439
+words: 426
 status: active
 hint_source: llm
+original_title: Indépendants et autres catégories - CNSS
 ---
 
 Dans le cadre de leur affiliation au régime des travailleurs non salariés dans les secteurs agricole et non agricole, les nouveaux promoteurs peuvent bénéficier d'une progressivité dans l'inscription à la classe de revenu correspondante à l'activité professionnelle qu'ils exercent et ce par un abattement de deux classes durant la première année d'affiliation et d'une classe durant l'année suivante.

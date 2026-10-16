@@ -29,7 +29,7 @@ fetched_at: '2026-10-05T20:38:00+00:00'
 first_seen: '2026-10-05T20:38:00+00:00'
 last_changed: '2026-10-05T20:38:00+00:00'
 content_hash: sha256:c5196af5ad8bf12c24c6fbfa7ac00edfc251923580e87034858f7d9786d6b2e1
-words: 522
+words: 481
 status: removed
 hint_source: llm
 duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr1_affiliation#index

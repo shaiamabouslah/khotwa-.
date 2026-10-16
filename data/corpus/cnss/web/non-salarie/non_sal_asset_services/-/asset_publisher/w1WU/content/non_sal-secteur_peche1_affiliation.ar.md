@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_peche1_affiliation
 lang: ar
-title: غير الأجراء - CNSS
+title: Non Sal Secteur peche1 Affiliation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -32,9 +32,10 @@ fetched_at: '2026-10-05T20:38:19+00:00'
 first_seen: '2026-10-05T20:38:19+00:00'
 last_changed: '2026-10-05T20:38:19+00:00'
 content_hash: sha256:164aaea892a504798b761f2fb64f1a31f2f5562a5b7dc02125d1d7951dd35ae6
-words: 339
+words: 324
 status: active
 hint_source: llm
+original_title: غير الأجراء - CNSS
 ---
 
 الانخراط بأنظمة الضمان الاجتماعي إجباري على كل عامل غير أجير يمارس نشاطا مهنيا لحسابه الخاص .وعليه القيام بإجراءات الانخراط في الشهر الذي يلي تاريخ شروعه في النشاط المهني.

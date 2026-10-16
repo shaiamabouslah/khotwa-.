@@ -8,7 +8,7 @@ lang: fr
 title: Appel à candidature MITACS 2025-2026
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: announcement
 domain_hint: studies
 subtopic_hint: bourses
 hint_score: 1
@@ -25,7 +25,7 @@ fetched_at: '2026-10-06T00:22:25+00:00'
 first_seen: '2026-10-05T20:27:42+00:00'
 last_changed: '2026-10-06T00:22:25+00:00'
 content_hash: sha256:edb394f0ff03fe571f84e419a4ad60bcc88dae7438abc8d76b18b042ca9ff179
-words: 70
+words: 58
 status: active
 hint_source: llm
 ---

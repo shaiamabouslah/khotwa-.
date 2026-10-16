@@ -8,7 +8,7 @@ lang: fr
 title: Une plateforme électronique a été mise en place pour les élèves concernés afin de s’inscrire au processus exceptionnel de vaccination
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: announcement
 domain_hint: studies
 subtopic_hint: null
 hint_score: 0
@@ -23,7 +23,7 @@ fetched_at: '2026-10-06T00:21:03+00:00'
 first_seen: '2026-10-05T20:26:02+00:00'
 last_changed: '2026-10-06T00:21:03+00:00'
 content_hash: sha256:df8536cb66d3d6394fd9dae5b0280839303f79df795808fcbefb45d35ce86dfe
-words: 149
+words: 144
 status: active
 hint_source: llm
 ---

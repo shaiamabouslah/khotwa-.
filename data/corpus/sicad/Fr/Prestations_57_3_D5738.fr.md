@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:09:49+00:00'
 first_seen: '2026-10-07T20:09:49+00:00'
 last_changed: '2026-10-07T20:09:49+00:00'
 content_hash: sha256:307583ed4910c680cf31c7f0658900e674d39640abbffa5a0f024a809692e9dc
-words: 285
+words: 277
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Exercice de la profession de conseiller agricole http://www.sicad.gov.tn//Prestations_57_3_D5738 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -81,8 +83,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Exercice de la profession de conseiller agricole http://www.sicad.gov.tn//Prestations_57_3_D5738 "Partager sur twitter")
-Imprimer

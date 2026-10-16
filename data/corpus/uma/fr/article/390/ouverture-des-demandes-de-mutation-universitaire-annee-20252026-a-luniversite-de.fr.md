@@ -33,4 +33,4 @@ hint_source: llm
 - Nombre de vues: 18657
 Ouverture des demandes de mutation universitaire – Année 2025/2026 à l'université de la Manouba : Clôture des inscriptions en ligne : 24 juillet 2025 / Date limite d’envoi par voie postale : 28 juillet 2025
 
-| Les étudiantes et étudiants souhaitant changer d’établissement universitaire pour la prochaine année académique sont invités à soumettre leurs demandes via la plateforme en ligne. **Modalités et échéances :**   - **Clôture des inscriptions en ligne :** **24 juillet 2025** - **Date limite d’envoi par voie postale : 28 juillet 2025** (cachet de la poste faisant foi)    Toutes les informations utiles ainsi que les conditions de candidature sont disponibles ici. | |
+Les étudiantes et étudiants souhaitant changer d’établissement universitaire pour la prochaine année académique sont invités à soumettre leurs demandes via la plateforme en ligne. **Modalités et échéances :** - **Clôture des inscriptions en ligne :** **24 juillet 2025** - **Date limite d’envoi par voie postale : 28 juillet 2025** (cachet de la poste faisant foi) Toutes les informations utiles ainsi que les conditions de candidature sont disponibles ici.

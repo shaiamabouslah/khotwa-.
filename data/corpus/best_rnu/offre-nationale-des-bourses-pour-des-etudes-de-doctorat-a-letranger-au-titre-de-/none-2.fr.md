@@ -25,7 +25,7 @@ fetched_at: '2026-10-06T00:22:03+00:00'
 first_seen: '2026-10-06T00:22:03+00:00'
 last_changed: '2026-10-06T00:22:03+00:00'
 content_hash: sha256:cff51d627b1f83ffc83197aae8af8164ed8fd51ad4266352d11773a95a0ea4b2
-words: 86
+words: 64
 status: removed
 duplicate_of: best_rnu:/offre-nationale-des-bourses-pour-des-etudes-de-doctorat-a-letranger-au-titre-de-#index
 hint_source: llm

@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_peche1_affiliation
 lang: fr
-title: Indépendants et autres catégories - CNSS
+title: Non Sal Secteur peche1 Affiliation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -31,9 +31,10 @@ fetched_at: '2026-10-05T20:38:15+00:00'
 first_seen: '2026-10-05T20:38:15+00:00'
 last_changed: '2026-10-05T20:38:15+00:00'
 content_hash: sha256:4dcfb9dd74e26c99b24d0cdb65933129fb17fba3c0bf4aa3b8c6018fa33c595f
-words: 463
+words: 422
 status: active
 hint_source: llm
+original_title: Indépendants et autres catégories - CNSS
 ---
 
 L'affiliation au régime de sécurité sociale est obligatoire pour les travailleurs non salariés du secteur pêche. L'affiliation intervient dans le mois qui suit le début de l'activité.

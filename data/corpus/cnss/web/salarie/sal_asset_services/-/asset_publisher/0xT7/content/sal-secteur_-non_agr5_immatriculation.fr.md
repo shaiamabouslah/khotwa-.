@@ -28,7 +28,7 @@ fetched_at: '2026-10-06T12:56:29+00:00'
 first_seen: '2026-10-05T20:34:15+00:00'
 last_changed: '2026-10-06T12:56:29+00:00'
 content_hash: sha256:f489016e5d3f6139d4b78b1d43b9bd75e4b8396417217d922bcf3e7060edbf15
-words: 215
+words: 201
 status: removed
 hint_source: llm
 duplicate_of: cnss:/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_peche1_immatriculation#index

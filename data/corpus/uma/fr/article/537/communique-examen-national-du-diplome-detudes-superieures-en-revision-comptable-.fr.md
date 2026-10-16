@@ -8,7 +8,7 @@ lang: fr
 title: 'UMA - Communiqué : Examen national du diplôme d''études supérieures en révision comptable, session 2026.'
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: announcement
 domain_hint: studies
 subtopic_hint: null
 hint_score: 0

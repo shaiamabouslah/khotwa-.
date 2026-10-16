@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr4_immatriculation
 lang: fr
-title: Employeurs - CNSS
+title: Emp Secteur non agr4 Immatriculation (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -29,18 +29,25 @@ fetched_at: '2026-10-05T20:41:54+00:00'
 first_seen: '2026-10-05T20:41:54+00:00'
 last_changed: '2026-10-05T20:41:54+00:00'
 content_hash: sha256:beb5f97f4f82b024c571ddfb2f8229e80b181974339f5f3f988d794058c88997
-words: 324
+words: 194
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr4_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr4_immatriculation?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr4_assiette?secteur=$secteur
+- text: Remise des pénalités
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr4_remise_penalites?secteur=$secteur
+- text: Attestation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr4_attestations?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: Affiliation au régime complémentaire de pensions
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr4_affiliation_regime_complementaire?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr4_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr4_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr4_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr4_remise_penalites?secteur=$secteur)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr4_attestations?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Affiliation au régime complémentaire de pensions](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr4_affiliation_regime_complementaire?secteur=$secteur)
-
 L'employeur est tenu d'immatriculer le personnel qu'il emploie dans un délai d'un mois à compter de la date d'affiliation. Pour les travailleurs engagés ultérieurement à cette date, l'immatriculation intervient dans un délai d'un mois à compter de la date de leur engagement.
 
 En cas de  défaillance de l'employeur, le salarié a le droit de demander lui-même  son immatriculation.

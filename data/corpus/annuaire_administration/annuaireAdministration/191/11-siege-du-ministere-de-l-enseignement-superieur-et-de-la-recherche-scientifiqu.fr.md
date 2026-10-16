@@ -8,7 +8,7 @@ lang: fr
 title: Annuaire d'administration - Portail du Gouvernement Tunisien
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: directory
 domain_hint: null
 subtopic_hint: null
 hint_score: 10
@@ -26,6 +26,9 @@ content_hash: sha256:0433f85dc8a08accda4d0939ece8787c0cb6cffa8880557ab48b04b3096
 words: 24
 status: active
 hint_source: llm
+links:
+- text: Retour à la liste des administration
+  url: http://fr.tunisie.gov.tn/TPL_CODE/TPL_ANNUAIRELISTE_ADMINISTRATI/11-annuaire-d-administration.htm
 ---
 
 Premier responsable:Mme. Olfa Ben Ouda
@@ -40,4 +43,4 @@ Téléphone : +(216) 71 786 300
 
 Fax : +(216) 71 786 300
 
-[Retour à la liste des administration](http://fr.tunisie.gov.tn/TPL_CODE/TPL_ANNUAIRELISTE_ADMINISTRATI/11-annuaire-d-administration.htm)
+Retour à la liste des administration

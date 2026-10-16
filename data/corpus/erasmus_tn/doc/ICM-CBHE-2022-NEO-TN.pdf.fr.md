@@ -23,7 +23,7 @@ fetched_at: '2026-10-05T23:55:25+00:00'
 first_seen: '2026-10-05T20:28:49+00:00'
 last_changed: '2026-10-05T23:55:42+00:00'
 content_hash: sha256:8787b6ecd3ae176cf052eee189bee6873686899cadd6531c603527c90e5f534a
-words: 7724
+words: 7718
 status: active
 hint_source: llm
 ---
@@ -1456,11 +1456,11 @@ Higher Education and Partenaire 500 000 Euro
 à 17 heures
 Youth
 
-| Appel | Tunisie (partenaire/coordinateur) | Budget par projet | Durée | Date limite de dépôt des candidatures |
-| EMJM: Erasmus Mundus Coordinateur 6 années 16 février 2022 ~5 MEuro Joint Masters Partenaire académiques à 17 heures |  |  |  |  |
-| Coordinateur EMDM: Erasmus Mundus 16 février 2022 Partenaire 55 000 Euro 15 Mois Design Measures à 17 heures |  |  |  |  |
-| Coordinateur 30 000Euro→100 01 Mars 2022 Activités Jean Monnet Partenaire 000 Euro à 17 heures |  |  |  |  |
-| Virtual Exchanges in 22 Février 2022 Higher Education and Partenaire 500 000 Euro à 17 heures Youth |  |  |  |  |
+Appel - Tunisie (partenaire/coordinateur) - Budget par projet - Durée - Date limite de dépôt des candidatures
+EMJM: Erasmus Mundus Coordinateur 6 années 16 février 2022 ~5 MEuro Joint Masters Partenaire académiques à 17 heures
+Coordinateur EMDM: Erasmus Mundus 16 février 2022 Partenaire 55 000 Euro 15 Mois Design Measures à 17 heures
+Coordinateur 30 000Euro→100 01 Mars 2022 Activités Jean Monnet Partenaire 000 Euro à 17 heures
+Virtual Exchanges in 22 Février 2022 Higher Education and Partenaire 500 000 Euro à 17 heures Youth
 
 <!-- page 108 -->
 VET et Jeunesse

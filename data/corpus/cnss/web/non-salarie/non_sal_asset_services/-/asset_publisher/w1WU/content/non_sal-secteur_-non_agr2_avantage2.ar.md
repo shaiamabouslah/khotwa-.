@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr2_avantage2
 lang: ar
-title: غير الأجراء - CNSS
+title: Non Sal Secteur non agr2 avantage2 (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -30,6 +30,7 @@ content_hash: sha256:eb03e3043dd4c53a53d2ded613fee44812db7b88883845ad8ce4dfdcb90
 words: 426
 status: active
 hint_source: llm
+original_title: غير الأجراء - CNSS
 ---
 
 ## تأجيل دفع اشتراكات العملة غير الأجراء في إطار تشجيع الباعثين الجدد.

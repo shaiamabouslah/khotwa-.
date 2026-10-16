@@ -24,9 +24,11 @@ fetched_at: '2026-10-07T20:14:29+00:00'
 first_seen: '2026-10-07T20:14:41+00:00'
 last_changed: '2026-10-07T20:14:41+00:00'
 content_hash: sha256:4d50cf03d9763c9924a7452e2b9c144e69502b69820d402b325441bf4e592a31
-words: 880
+words: 872
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Protection d'une obtention végétale et octroi de certificat d'obtention végétale http://www.sicad.gov.tn//Prestations_57_3_D872 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -94,8 +96,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Protection d'une obtention végétale et octroi de certificat d'obtention végétale http://www.sicad.gov.tn//Prestations_57_3_D872 "Partager sur twitter")
-Imprimer

@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr5_cotisation
 lang: ar
-title: غير الأجراء - CNSS
+title: Non Sal Secteur non agr5 cotisation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -30,9 +30,10 @@ fetched_at: '2026-10-05T20:50:08+00:00'
 first_seen: '2026-10-05T20:50:08+00:00'
 last_changed: '2026-10-05T20:50:08+00:00'
 content_hash: sha256:9d811b3d48031f6e404c898670e3eeb0c4f4c858c467c361ca803dd36d4f0e3d
-words: 254
+words: 243
 status: active
 hint_source: llm
+original_title: غير الأجراء - CNSS
 ---
 
 ## قاعدة الاشتراكات
@@ -51,7 +52,7 @@ hint_source: llm
 
 | مبلغ الاشتراكات الشهري  - بالدينار- | قاعدة الاشتراكات في الشهر  - بالدينار- |
 
-الانخراط بنظام جبر الأضرار الناتجة عن حوادث الشغل اختياري. حددت نسبة الاشتراك بـ 0,5 %  من ثلثي الأجر الأدنى المهني المضمون أي   3,797 دينارا في الثلاثية  الثانية 2019  و 3,876  دينارا بداية من الثلاثية الثالثة  2019.
+الانخراط بنظام جبر الأضرار الناتجة عن حوادث الشغل اختياري. حددت نسبة الاشتراك بـ 0,5 %  من ثلثي الأجر الأدنى المهني المضمون أي 3,797 دينارا في الثلاثية  الثانية 2019  و 3,876  دينارا بداية من الثلاثية الثالثة  2019.
 
 ## الوثائق المطلوبة
 

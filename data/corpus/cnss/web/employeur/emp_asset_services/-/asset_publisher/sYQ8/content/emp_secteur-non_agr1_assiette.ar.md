@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_assiette
 lang: ar
-title: المؤجرون - CNSS
+title: Emp Secteur non agr1 Assiette (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -31,22 +31,30 @@ fetched_at: '2026-10-05T20:39:26+00:00'
 first_seen: '2026-10-05T20:39:26+00:00'
 last_changed: '2026-10-05T20:39:26+00:00'
 content_hash: sha256:19523d0e4a729447c9715e19f99651c5ed80b084a64d4805b732c83682b9570b
-words: 555
+words: 370
 status: active
 hint_source: llm
+nav_links:
+- text: الانخراط
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_affiliation?secteur=$secteur
+- text: التسجيل
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr1_immatriculation?secteur=$secteur
+- text: الاشتراكات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_assiette?secteur=$secteur
+- text: طرح الخطايا
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_remise_penalites?secteur=$secteur
+- text: الامتيازات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr1_contenu-avantage1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: الشهادات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_attestations?secteur=$secteur
+- text: الانخراط بالنظام التكميلي للجرايات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_affiliation_regime_complementaire?secteur=$secteur
+original_title: المؤجرون - CNSS
+possibly_outdated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr1_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_assiette?secteur=$secteur)
-- [طرح الخطايا](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_remise_penalites?secteur=$secteur)
-- [الامتيازات](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr1_contenu-avantage1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [الشهادات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_attestations?secteur=$secteur)
-- [الانخراط بالنظام التكميلي للجرايات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_affiliation_regime_complementaire?secteur=$secteur)
-
 ## قاعدة الاشتراكات
 
- تتضمّن قاعدة احتساب الاشتراكات مجموع عناصر الأجور و الرّواتب و المنح     و غيرها من المنافع النقدية و العينية المرتبطة بصفة الأجير،وتعفى كليا أو جزئيا من قاعدة الاشتراكات المنافع التي تكتسي صبغة استرجاع مصاريف أو تعويضات أو عمل اجتماعي أو ثقافي أو رياضي لفائدة العامل .وتضبط قائمة المنافع التي وقع استثناؤها أو تحديد قيمتها بمقتضى [الأمر عدد1098 لسنة 2003 المؤرخ في 19 ماي  2003](https://www.cnss.tn/ar/c/document_library/get_file?uuid=e9e5f5c2-3c1d-47fe-95fd-d3d62c748db5&groupId=33103).
+ تتضمّن قاعدة احتساب الاشتراكات مجموع عناصر الأجور و الرّواتب و المنح و غيرها من المنافع النقدية و العينية المرتبطة بصفة الأجير،وتعفى كليا أو جزئيا من قاعدة الاشتراكات المنافع التي تكتسي صبغة استرجاع مصاريف أو تعويضات أو عمل اجتماعي أو ثقافي أو رياضي لفائدة العامل .وتضبط قائمة المنافع التي وقع استثناؤها أو تحديد قيمتها بمقتضى [الأمر عدد1098 لسنة 2003 المؤرخ في 19 ماي  2003](https://www.cnss.tn/ar/c/document_library/get_file?uuid=e9e5f5c2-3c1d-47fe-95fd-d3d62c748db5&groupId=33103).
 
 ## نسبة الاشتراكات
 
@@ -57,7 +65,7 @@ hint_source: llm
 
 يتحمل المؤجر نسبة الاشتراكات بنظام جبر الأضرار الناتجة عن حوادث الشغل و الأمراض المهنية.
 
-تتراوح هذه النسبة بين   0,4 %  و4 % حسب النشاط الاقتصادي طبقا [للأمر عدد 538 لسنة 1995 المؤرخ في غرة أفريل 1995](https://www.cnss.tn/ar/c/document_library/get_file?uuid=421cca15-9bd9-4673-a441-ed547fa9958f&groupId=33103) المتعلق بضبط نسب الاشتراكات في نظام التعويض عن الأضرار الناتجة عن حوادث الشغل والأمراض المهنية
+تتراوح هذه النسبة بين 0,4 %  و4 % حسب النشاط الاقتصادي طبقا [للأمر عدد 538 لسنة 1995 المؤرخ في غرة أفريل 1995](https://www.cnss.tn/ar/c/document_library/get_file?uuid=421cca15-9bd9-4673-a441-ed547fa9958f&groupId=33103) المتعلق بضبط نسب الاشتراكات في نظام التعويض عن الأضرار الناتجة عن حوادث الشغل والأمراض المهنية
 
 ## الوثائق المطلوبة
 

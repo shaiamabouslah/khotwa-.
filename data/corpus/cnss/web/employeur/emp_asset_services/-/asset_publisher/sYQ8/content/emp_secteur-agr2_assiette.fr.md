@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_assiette
 lang: fr
-title: Employeurs - CNSS
+title: Emp Secteur agr2 Assiette (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -34,18 +34,25 @@ fetched_at: '2026-10-05T20:43:49+00:00'
 first_seen: '2026-10-05T20:43:49+00:00'
 last_changed: '2026-10-05T20:43:49+00:00'
 content_hash: sha256:8cc014e2589c23cad6db5052616d090afa344aaeecedc7ef03c253f2cb0fef0e
-words: 509
+words: 372
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_immatriculation?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_assiette?secteur=$secteur
+- text: Remise des pénalités
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_remise_penalites?secteur=$secteur
+- text: Avantages
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_agr2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: Attestation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_attestations?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_agr2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_attestations?secteur=$secteur)
-
 ## Assiette des cotisations
 
 L'assiette servant de base pour le calcul des cotisations est composée de l'ensemble des versements en espèces ou en nature effectués par l'employeur en rétribution du travail du salarié y compris les indemnités  et primes de toute nature se rattachant au salaire.
@@ -71,14 +78,14 @@ Le taux de cotisation au titre des accidents du travail et des maladies professi
 
 La déclaration de salaires et l'état récapitulatif sont déposés auprès du Bureau Régional ou local territorialement compétent accompagnéspar  le paiement des cotisations qui peut avoir lieu :
 
-- en espèces ou par chèque tiré sur le  compte de   l'employeur ou certifié s'il est tiré sur le compte de tiers
+- en espèces ou par chèque tiré sur le  compte de l'employeur ou certifié s'il est tiré sur le compte de tiers
 - par virement bancaire ou postal, auquel cas  l'employeur est invité à porter son numéro d'affiliation sur la copie de l'ordre de virement.
 
  L'employeur peut procéder à la télé déclaration et au télépaiement des cotisations par Internet
 
 ## Délais de paiement des cotisations
 
-Les cotisations afférentes  à un trimestre donné doivent être payées au plus tard le quinzième  jour  du mois qui   suit  le trimestre échu.
+Les cotisations afférentes  à un trimestre donné doivent être payées au plus tard le quinzième  jour  du mois qui suit  le trimestre échu.
 
 ## Pénalités de retard
 

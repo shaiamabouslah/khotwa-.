@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_affiliation
 lang: ar
-title: المؤجرون - CNSS
+title: Emp Secteur pêche2 Affiliation (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -29,18 +29,25 @@ fetched_at: '2026-10-06T13:05:43+00:00'
 first_seen: '2026-10-05T20:36:18+00:00'
 last_changed: '2026-10-06T13:05:43+00:00'
 content_hash: sha256:99a362b1002a9e3322297b8bf121606863afc7a3b981fba40c8e734eb074539f
-words: 381
+words: 261
 status: active
 hint_source: llm
+nav_links:
+- text: الانخراط
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_affiliation?secteur=$secteur
+- text: التسجيل
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_immatriculation?secteur=$secteur
+- text: الاشتراكات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_assiette?secteur=$secteur
+- text: طرح الخطايا
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_remise_penalites?secteur=$secteur
+- text: الامتيازات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre
+- text: الشهادات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_attestations?secteur=$secteur
+original_title: المؤجرون - CNSS
+possibly_outdated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_assiette?secteur=$secteur)
-- [طرح الخطايا](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_remise_penalites?secteur=$secteur)
-- [الامتيازات](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [الشهادات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_attestations?secteur=$secteur)
-
 الانخراط بأنظمة الضمان الاجتماعي إجباري على كل مؤجر ينتدب عاملا واحدا على الأقل بصفة أجير وذلك في الشهر الذي يلي تاريخ الانتداب.
 
 ## الوثائق المطلوبة
@@ -71,4 +78,4 @@ hint_source: llm
 
 القانون عدد 28 لسنة 1994 المؤرخ في 21 فيفري 1994 والمتعلق بالتعويض عن الأضرار الناتجة عن حوادث الشغل والأمراض المهنية، كما تمّ تنقيحه وإتمامه بالقانون عدد 103 لسنة 1995 المؤرخ في 27 نوفمبر 1995.
 
-الأمر عدد 538 لسنة 1995 المؤرخ في غرة أفريل 1995 والمتعلق بضبط نسب الاشتراكات في نظام التعويض عن الأضرار الناتجة عن حوادث الشغل والأمراض المهنية كما وقع تنقيحه وإتمامه بالأمر عدد 1010 لسنة 1999 المؤرخ في 10 ماي   1999**.**
+الأمر عدد 538 لسنة 1995 المؤرخ في غرة أفريل 1995 والمتعلق بضبط نسب الاشتراكات في نظام التعويض عن الأضرار الناتجة عن حوادث الشغل والأمراض المهنية كما وقع تنقيحه وإتمامه بالأمر عدد 1010 لسنة 1999 المؤرخ في 10 ماي 1999**.**

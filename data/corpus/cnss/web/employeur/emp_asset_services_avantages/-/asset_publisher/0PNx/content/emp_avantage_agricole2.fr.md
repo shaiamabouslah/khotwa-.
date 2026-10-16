@@ -30,6 +30,8 @@ content_hash: sha256:75c2183aee914e815f1f1746d51e1abf769356a39b03e46c2421a8a0100
 words: 225
 status: active
 hint_source: llm
+rag_exclude: true
+rag_exclude_reason: server_error_page
 ---
 
 Une erreur s'est produite en traitant le calibre.

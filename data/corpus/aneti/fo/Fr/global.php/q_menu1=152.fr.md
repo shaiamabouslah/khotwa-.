@@ -31,7 +31,7 @@ fetched_at: '2026-10-10T23:56:38+00:00'
 first_seen: '2026-10-10T23:56:38+00:00'
 last_changed: '2026-10-10T23:56:38+00:00'
 content_hash: sha256:34c135d41159e580e09e721f221e8c1b169372bbe1d8db178f631dae8ccbbe5e
-words: 1356
+words: 24
 status: removed
 ---
 

@@ -28,7 +28,7 @@ fetched_at: '2026-10-05T20:43:31+00:00'
 first_seen: '2026-10-05T20:43:31+00:00'
 last_changed: '2026-10-05T20:43:31+00:00'
 content_hash: sha256:e0bd83f5a484b2d6622aca9a8cc5311dc6868c936e364be716b3f05421ef5353
-words: 355
+words: 252
 status: removed
 hint_source: llm
 duplicate_of: cnss:/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_remise_penalites#index

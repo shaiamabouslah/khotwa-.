@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_assiette
 lang: ar
-title: المؤجرون - CNSS
+title: Emp Secteur pêche3 Assiette (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -30,16 +30,21 @@ fetched_at: '2026-10-05T20:44:58+00:00'
 first_seen: '2026-10-05T20:44:58+00:00'
 last_changed: '2026-10-05T20:44:58+00:00'
 content_hash: sha256:59ff8f5124938d40f94efc78c8c5a224526bda4fdda90df49cb95e38bf82a214
-words: 458
+words: 347
 status: active
 hint_source: llm
+nav_links:
+- text: الانخراط
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_affiliation?secteur=$secteur
+- text: التسجيل
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_immatriculation?secteur=$secteur
+- text: الاشتراكات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_assiette?secteur=$secteur
+- text: طرح الخطايا
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_remise_penalites?secteur=$secteur
+original_title: المؤجرون - CNSS
+possibly_outdated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_assiette?secteur=$secteur)
-- [طرح الخطايا](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_remise_penalites?secteur=$secteur)
-
 ## قاعدة الاشتراكات
 
 تضبط قاعدة احتساب الاشتراكات على أساس ثلثي [الأجر الأدنى الفلاحي المضمون](https://www.cnss.tn/nos_echos/-/asset_publisher/4IkZ/content/echos_4) المرتبط بمدة عمل تساوي 25 يوما في الشهر.

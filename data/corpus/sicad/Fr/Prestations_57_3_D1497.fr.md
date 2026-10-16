@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:10:28+00:00'
 first_seen: '2026-10-07T20:10:37+00:00'
 last_changed: '2026-10-07T20:10:37+00:00'
 content_hash: sha256:94391c67323c90abfd056cbc82c5cb2a7ecb9d1a1925e7023cb718ac666370ab
-words: 215
+words: 201
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Création des centres spécialisés dans le contrôle de la productivité du lait chez les bovins (cahier des charges
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -71,8 +73,4 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Création des centres spécialisés dans le contrôle de la productivité du lait chez les bovins (cahier des charges) http://www.sicad.gov.tn//Prestations_57_3_D1497 "Partager sur twitter")
-Imprimer
+-  http://www.sicad.gov.tn//Prestations_57_3_D1497 "Partager sur twitter")

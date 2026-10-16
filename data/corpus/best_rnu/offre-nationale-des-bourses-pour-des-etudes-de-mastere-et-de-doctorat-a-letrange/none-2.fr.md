@@ -8,7 +8,7 @@ lang: fr
 title: Offre nationale des bourses pour des études de mastère et de doctorat à l’étranger au titre de l’année 2023-2024
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: directory
 domain_hint: studies
 subtopic_hint: bourses
 hint_score: 10
@@ -25,9 +25,14 @@ fetched_at: '2026-10-06T00:21:35+00:00'
 first_seen: '2026-10-06T00:21:35+00:00'
 last_changed: '2026-10-06T00:21:35+00:00'
 content_hash: sha256:74e774fd31c75e4617d820c87b8f46b8c4ed1c176b3458f15d14773b0b43a57e
-words: 63
+words: 43
 status: active
 hint_source: llm
+links:
+- text: Circulaire 2023-2024
+  url: https://best.rnu.tn/wp-content/uploads/2019/10/circulaire-2023-2024.pdf
+- text: ANNEXE – Bourse Canada 2023-2024
+  url: https://best.rnu.tn/wp-content/uploads/2019/10/ANNEXE-Bourse-Canada-2023-2024.pdf
 ---
 
 # Offre nationale des bourses pour des études de mastère et de doctorat à l’étranger au titre de l’année 2023-2024
@@ -36,6 +41,6 @@ hint_source: llm
 
 Offre nationale des bourses pour des études de mastère et de doctorat à l’étranger au titre de 2023-2024:
 
-[Circulaire 2023-2024](https://best.rnu.tn/wp-content/uploads/2019/10/circulaire-2023-2024.pdf)
+Circulaire 2023-2024
 
-[ANNEXE – Bourse Canada 2023-2024](https://best.rnu.tn/wp-content/uploads/2019/10/ANNEXE-Bourse-Canada-2023-2024.pdf)
+ANNEXE – Bourse Canada 2023-2024

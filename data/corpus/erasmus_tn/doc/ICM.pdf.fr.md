@@ -153,10 +153,10 @@ Received Projects 93 81 169 156
 Contracted Projects 71 72 140 135
 Acceptation Rate 76,34% 88,88% 82,84% 86,53%
 
-|  | 2015 2016 2017 2018 Tunisia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| Received Projects | 93 |  |  |  | 81 |  |  |  | 169 |  |  |  | 156 |  |  |
-| Contracted Projects | 71 |  |  |  | 72 |  |  |  | 140 |  |  |  | 135 |  |  |
-| Acceptation Rate | 76,34% |  |  |  | 88,88% |  |  |  | 82,84% |  |  |  | 86,53% |  |  |
+2015 2016 2017 2018 Tunisia
+Received Projects - 93 - 81 - 169 - 156
+Contracted Projects - 71 - 72 - 140 - 135
+Acceptation Rate - 76,34% - 88,88% - 82,84% - 86,53%
 
 <!-- page 15 -->
 ICM Requested and Contracted Grant

@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_-non_agr1_actions_licenciement3
 lang: ar
-title: الأجراء - CNSS
+title: Sal Secteur non agr1 actions licenciement3 (Salarie)
 section: null
 breadcrumb:
 - CNSS
@@ -30,6 +30,8 @@ content_hash: sha256:9ffb5040fab3ec7c8092c5f153ab9cca80425441f3b9447713c96ada0ce
 words: 434
 status: active
 hint_source: llm
+original_title: الأجراء - CNSS
+possibly_outdated: true
 ---
 
 تسند إعانة للعمال الذين فقدوا شغلهم لأسباب اقتصادية أو فنية أو عند غلق المؤسسة نهائيا وبصفة فجئية دون احترام الإجراءات المنصوص عليها بمجلة الشغل.

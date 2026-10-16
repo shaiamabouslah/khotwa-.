@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:11:05+00:00'
 first_seen: '2026-10-07T20:11:14+00:00'
 last_changed: '2026-10-07T20:11:14+00:00'
 content_hash: sha256:e405654ea4a20c704917941d85f64bed1cc4812592178cc96f29e7ec17bf565e
-words: 511
+words: 503
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Certificat de validité d'un véhicule de transport des viandes ou des produits de la mer ou des produits de volaille. http://www.sicad.gov.tn//Prestations_57_3_D2111 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -89,8 +91,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Certificat de validité d'un véhicule de transport des viandes ou des produits de la mer ou des produits de volaille. http://www.sicad.gov.tn//Prestations_57_3_D2111 "Partager sur twitter")
-Imprimer

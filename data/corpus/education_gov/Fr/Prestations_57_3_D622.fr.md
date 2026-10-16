@@ -24,9 +24,11 @@ fetched_at: '2026-10-07T20:16:27+00:00'
 first_seen: '2026-10-07T20:16:34+00:00'
 last_changed: '2026-10-07T20:16:34+00:00'
 content_hash: sha256:46334361a8b7773eff3c6aa3f43086e5b15a6367be3cfff096f96cd518af95ee
-words: 487
+words: 475
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Transfert des frais de scolarité et de séjour au profit des étudiants à l'étranger http://www.sicad.gov.tn//Prestations_57_3_D622 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -62,7 +64,7 @@ hint_source: llm
 
   | **Ministère des Technologies de la Communication et de l'Economie Numérique** | Ministère des Technologies de la Communication et de l'Economie Numérique  |  |  | | --- | --- | | Adresse | 3, bis rue d''Angleterre 1000 Tunis | | E-mail | info@infocom.tn | | Téléphone | 71.359.000 | | Fax | 71.359.000 | | Site web | <http://www.mincom.tn> | | En savoir plus |  | |
 
-    | **Office Nationale des Postes** | Office Nationale des Postes  |  |  | | --- | --- | | Adresse | Rue Hédi Nouira 1001 Tunis | | Site web | <http://www.poste.tn> | |
+**Office Nationale des Postes** - Office Nationale des Postes - Adresse - Rue Hédi Nouira 1001 Tunis - Site web - <http://www.poste.tn>
 
 - **Technologie de l'Information et de la Communication**
 
@@ -70,8 +72,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Transfert des frais de scolarité et de séjour au profit des étudiants à l'étranger http://www.sicad.gov.tn//Prestations_57_3_D622 "Partager sur twitter")
-Imprimer

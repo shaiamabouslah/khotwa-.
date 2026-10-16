@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr1_avantage2
 lang: ar
-title: غير الأجراء - CNSS
+title: Non Sal Secteur non agr1 avantage2 (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -30,6 +30,7 @@ content_hash: sha256:2e638f5de37fe3761f9adfdce619be9b0134ac7dde6c7b6b42f0e661705
 words: 360
 status: active
 hint_source: llm
+original_title: غير الأجراء - CNSS
 ---
 
 يمكن للباعثين الجدد المنخرطين بنظام العملة غير الأجراء في القطاعين الفلاحي وغير الفلاحي أن ينتفعوا بتأجيل دفع اشتراكاتهم بنظام الضمان الاجتماعي لمدة سنتين بداية من تاريخ الانخراط.

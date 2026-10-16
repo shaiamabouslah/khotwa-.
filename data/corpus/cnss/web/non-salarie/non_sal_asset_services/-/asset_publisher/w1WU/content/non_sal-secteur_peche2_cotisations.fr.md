@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_peche2_cotisations
 lang: fr
-title: Indépendants et autres catégories - CNSS
+title: Non Sal Secteur peche2 Cotisations (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -31,9 +31,10 @@ fetched_at: '2026-10-05T20:47:43+00:00'
 first_seen: '2026-10-05T20:47:43+00:00'
 last_changed: '2026-10-05T20:47:43+00:00'
 content_hash: sha256:2b6dace44028e276bd620f598c9b95a3e4cd3783830610a14e980a7646d7596d
-words: 389
+words: 353
 status: active
 hint_source: llm
+original_title: Indépendants et autres catégories - CNSS
 ---
 
 ## Assiette des cotisations

@@ -8,7 +8,7 @@ lang: fr
 title: UMA - Enquête d’insertion professionnelle des diplômés des établissements de l’UMA
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: directory
 domain_hint: employment
 subtopic_hint: recherche-emploi
 hint_score: 5
@@ -27,15 +27,28 @@ content_hash: sha256:86a2a245a28a18c09d9056f75f335844592d2f8c070d93c02726b822a8a
 words: 43
 status: active
 hint_source: llm
+links:
+- text: Actualités observatoire
+  url: https://uma.rnu.tn/fr/categories/34/actualites-observatoire
+- text: Etablissements
+  url: https://uma.rnu.tn/fr/categories/3/etablissements
+- text: Derniers événements
+  url: https://uma.rnu.tn/fr/categories/10/derniers-evenements
+- text: Actualités institutionnelles
+  url: https://uma.rnu.tn/fr/categories/24/actualites-institutionnelles
+- text: Nouveautés
+  url: https://uma.rnu.tn/fr/categories/1/nouveautes
+- text: Enquête d’insertion professionnelle des diplômés des établissements de l’UMA
+  url: https://uma.rnu.tn/userfiles/files/Observatoire/VISUEL%20FINAL%20ENQUETE%201%20UMA%20(1
 ---
 
 - Date de dernière mise à jour: mercredi 7 octobre 2026
 - Nombre de vues: 570
-- [Actualités observatoire](https://uma.rnu.tn/fr/categories/34/actualites-observatoire)
-- [Etablissements](https://uma.rnu.tn/fr/categories/3/etablissements)
-- [Derniers événements](https://uma.rnu.tn/fr/categories/10/derniers-evenements)
-- [Actualités institutionnelles](https://uma.rnu.tn/fr/categories/24/actualites-institutionnelles)
-- [Nouveautés](https://uma.rnu.tn/fr/categories/1/nouveautes)
+- Actualités observatoire
+- Etablissements
+- Derniers événements
+- Actualités institutionnelles
+- Nouveautés
 Enquête d’insertion professionnelle des diplômés des établissements de l’UMA
 
-Resultat :[Enquête d’insertion professionnelle des diplômés des établissements de l’UMA](https://uma.rnu.tn/userfiles/files/Observatoire/VISUEL%20FINAL%20ENQUETE%201%20UMA%20(1)%20(1)%20(1).pdf)
+Resultat :Enquête d’insertion professionnelle des diplômés des établissements de l’UMA%20(1)%20(1).pdf)

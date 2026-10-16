@@ -23,7 +23,7 @@ fetched_at: '2026-10-06T00:01:34+00:00'
 first_seen: '2026-10-05T20:29:30+00:00'
 last_changed: '2026-10-06T00:01:43+00:00'
 content_hash: sha256:c192c02841701a16c6c1d54dda8362f2f0f7aeafcfc87d113cf13af3bee43fc3
-words: 114
+words: 101
 status: removed
 duplicate_of: best_rnu:/flexslider#index
 hint_source: llm

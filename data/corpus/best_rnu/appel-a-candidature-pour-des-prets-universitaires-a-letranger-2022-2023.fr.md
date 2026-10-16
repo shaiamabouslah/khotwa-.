@@ -8,7 +8,7 @@ lang: fr
 title: Appel à candidature pour des prêts universitaires à l’étranger 2022-2023
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: announcement
 domain_hint: studies
 subtopic_hint: bourses
 hint_score: 1
@@ -25,7 +25,7 @@ fetched_at: '2026-10-06T00:21:36+00:00'
 first_seen: '2026-10-05T20:26:26+00:00'
 last_changed: '2026-10-06T00:21:36+00:00'
 content_hash: sha256:4f79d482e2320f4c52311f6566a935d47478700875a5220d930262e024d3a76f
-words: 46
+words: 36
 status: active
 hint_source: llm
 ---

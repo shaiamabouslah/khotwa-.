@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_affiliation
 lang: ar
-title: المؤجرون - CNSS
+title: Emp Secteur pêche3 Affiliation (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -29,16 +29,21 @@ fetched_at: '2026-10-06T13:05:47+00:00'
 first_seen: '2026-10-05T20:36:21+00:00'
 last_changed: '2026-10-06T13:05:47+00:00'
 content_hash: sha256:4c9e7b8681147b3785a126700b0cc0a4a8001458af1caa01488e614d24143268
-words: 326
+words: 240
 status: active
 hint_source: llm
+nav_links:
+- text: الانخراط
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_affiliation?secteur=$secteur
+- text: التسجيل
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_immatriculation?secteur=$secteur
+- text: الاشتراكات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_assiette?secteur=$secteur
+- text: طرح الخطايا
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_remise_penalites?secteur=$secteur
+original_title: المؤجرون - CNSS
+possibly_outdated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_assiette?secteur=$secteur)
-- [طرح الخطايا](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_remise_penalites?secteur=$secteur)
-
 الانخراط بأنظمة الضمان الاجتماعي إجباري على كل مؤجر ينتدب عاملا واحدا على الأقل بصفة أجير وذلك في الشهر الذي يلي تاريخ الانتداب.
 
 ## الوثائق المطلوبة
@@ -69,4 +74,4 @@ hint_source: llm
 
 القانون عدد 28 لسنة 1994 المؤرخ في 21 فيفري 1994 والمتعلق بالتعويض عن الأضرار الناتجة عن حوادث الشغل والأمراض المهنية، كما تمّ تنقيحه وإتمامه بالقانون عدد 103 لسنة 1995 المؤرخ في 27 نوفمبر 1995.
 
-الأمر عدد 538 لسنة 1995 المؤرخ في غرة أفريل 1995 والمتعلق بضبط نسب الاشتراكات في نظام التعويض عن الأضرار الناتجة عن حوادث الشغل والأمراض المهنية كما وقع تنقيحه وإتمامه بالأمر عدد 1010 لسنة 1999 المؤرخ في 10 ماي   1999**.**
+الأمر عدد 538 لسنة 1995 المؤرخ في غرة أفريل 1995 والمتعلق بضبط نسب الاشتراكات في نظام التعويض عن الأضرار الناتجة عن حوادث الشغل والأمراض المهنية كما وقع تنقيحه وإتمامه بالأمر عدد 1010 لسنة 1999 المؤرخ في 10 ماي 1999**.**

@@ -8,7 +8,7 @@ lang: fr
 title: Appel à candidatures pour les bourses d’études de l’année universitaire 2025-2026.
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: announcement
 domain_hint: studies
 subtopic_hint: bourses
 hint_score: 6
@@ -25,7 +25,7 @@ fetched_at: '2026-10-06T00:22:23+00:00'
 first_seen: '2026-10-05T20:27:40+00:00'
 last_changed: '2026-10-06T00:22:23+00:00'
 content_hash: sha256:7fad0f256f0b9cec6b35c8b41a4c92667d9c10d20c6bdd6291955bf87b91fb3e
-words: 60
+words: 45
 status: active
 hint_source: llm
 ---

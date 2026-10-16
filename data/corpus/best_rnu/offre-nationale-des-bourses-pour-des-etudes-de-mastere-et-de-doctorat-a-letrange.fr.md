@@ -8,7 +8,7 @@ lang: fr
 title: Offre nationale des bourses pour des études de mastère et de doctorat à l’étranger au titre de l’année universitaire 2026-2027
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: directory
 domain_hint: studies
 subtopic_hint: bourses
 hint_score: 10
@@ -29,6 +29,13 @@ content_hash: sha256:7a065f30eb3149e7e89c8d0add3d8bfe84b8290017325479185bfa3fd87
 words: 51
 status: active
 hint_source: llm
+links:
+- text: '**Circulaire 2026-2027**'
+  url: https://best.rnu.tn/wp-content/uploads/2019/10/Circulaire-61-25-Bourses-Mastere-et-Doctorat-2026-2027.pdf
+- text: ANNEXE – Bourse Canada 2026-2027 Doctorat
+  url: https://best.rnu.tn/wp-content/uploads/2019/10/ANNEXE-Bourse-Canada-2026-2027-Doctorat.pdf
+- text: ANNEXE – Bourse Canada 2026-2027 Maitrise
+  url: https://best.rnu.tn/wp-content/uploads/2019/10/ANNEXE-Bourse-Canada-2026-2027-Maitrise.pdf
 ---
 
 # Offre nationale des bourses pour des études de mastère et de doctorat à l’étranger au titre de l’année universitaire 2026-2027
@@ -37,4 +44,4 @@ hint_source: llm
 
 #### Offre nationale des bourses pour des études de mastère et de doctorat à l’étranger au titre de l’année universitaire 2026-2027 :
 
-[**Circulaire 2026-2027**](https://best.rnu.tn/wp-content/uploads/2019/10/Circulaire-61-25-Bourses-Mastere-et-Doctorat-2026-2027.pdf)[ANNEXE – Bourse Canada 2026-2027 Doctorat](https://best.rnu.tn/wp-content/uploads/2019/10/ANNEXE-Bourse-Canada-2026-2027-Doctorat.pdf)[ANNEXE – Bourse Canada 2026-2027 Maitrise](https://best.rnu.tn/wp-content/uploads/2019/10/ANNEXE-Bourse-Canada-2026-2027-Maitrise.pdf)
+**Circulaire 2026-2027**ANNEXE – Bourse Canada 2026-2027 DoctoratANNEXE – Bourse Canada 2026-2027 Maitrise

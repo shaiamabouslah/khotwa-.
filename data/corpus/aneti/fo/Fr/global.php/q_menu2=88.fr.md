@@ -26,8 +26,19 @@ fetched_at: '2026-10-10T23:56:45+00:00'
 first_seen: '2026-10-10T23:56:45+00:00'
 last_changed: '2026-10-10T23:56:45+00:00'
 content_hash: sha256:22a0cfa199cf40c1eeeaf7cccba309d944363afa7a182875199baf1e76d8df59
-words: 352
+words: 56
 status: active
+links:
+- text: Visualiser
+  url: https://www.emploi.nat.tn/ckeditor/ckfinder/userfiles/files/PEES_ANETI_RETF Digitalisation_P180325.pdf
+- text: Visualiser
+  url: https://www.emploi.nat.tn/ckeditor/ckfinder/userfiles/files/PGES_ANETI_RETF Digitalisation_P180325.pdf
+- text: Visualiser
+  url: https://www.emploi.nat.tn/ckeditor/ckfinder/userfiles/files/PGMO_ANETI_RETF Digitalisation_P180325.pdf
+- text: Visualiser
+  url: https://www.emploi.nat.tn/ckeditor/ckfinder/userfiles/files/PMPP_ANETI_RETF_Digitalisation_P180325_SI.pdf
+- text: Visualiser
+  url: https://www.emploi.nat.tn/fo/Fr/global.php?page=152&menu2=88
 ---
 
-PLAN D’ENGAGEMENT ENVIRONNEMENTAL ET SOCIAL (PEES) [Visualiser](https://www.emploi.nat.tn/ckeditor/ckfinder/userfiles/files/PEES_ANETI_RETF Digitalisation_P180325.pdf) PLAN DE GESTION ENVIRONNEMENTALE ET SOCIALE (PGES) [Visualiser](https://www.emploi.nat.tn/ckeditor/ckfinder/userfiles/files/PGES_ANETI_RETF Digitalisation_P180325.pdf) PROCEDURE DE GESTION DE LA MAIN D’ŒUVRE & CONDITIONS DE TRAVAIL [Visualiser](https://www.emploi.nat.tn/ckeditor/ckfinder/userfiles/files/PGMO_ANETI_RETF Digitalisation_P180325.pdf) PLAN DE MOBILISATION DES PARTIES PRENANTES (PMPP) [Visualiser](https://www.emploi.nat.tn/ckeditor/ckfinder/userfiles/files/PMPP_ANETI_RETF_Digitalisation_P180325_SI.pdf) Avis de demande de proposition n° TN-ANETI-07/2025-NC-RFB Refonte du système d’information métier de l’ANETI [Visualiser](https://www.emploi.nat.tn/fo/Fr/global.php?page=152&menu2=88)
+PLAN D’ENGAGEMENT ENVIRONNEMENTAL ET SOCIAL (PEES) Visualiser PLAN DE GESTION ENVIRONNEMENTALE ET SOCIALE (PGES) Visualiser PROCEDURE DE GESTION DE LA MAIN D’ŒUVRE & CONDITIONS DE TRAVAIL Visualiser PLAN DE MOBILISATION DES PARTIES PRENANTES (PMPP) Visualiser Avis de demande de proposition n° TN-ANETI-07/2025-NC-RFB Refonte du système d’information métier de l’ANETI Visualiser

@@ -28,7 +28,7 @@ fetched_at: '2026-10-05T20:52:22+00:00'
 first_seen: '2026-10-05T20:52:22+00:00'
 last_changed: '2026-10-05T20:52:22+00:00'
 content_hash: sha256:1e8ea38ef4ae93dd6c200094cd5c7ea5ca395341dea5d45746f0bf8e771ebf12
-words: 439
+words: 426
 status: removed
 hint_source: llm
 duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr1_avantage3#index

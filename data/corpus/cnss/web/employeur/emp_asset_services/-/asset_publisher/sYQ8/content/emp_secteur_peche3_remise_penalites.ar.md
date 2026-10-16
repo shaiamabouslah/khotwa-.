@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_remise_penalites
 lang: ar
-title: المؤجرون - CNSS
+title: Emp Secteur pêche3 Remise penalites (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -28,16 +28,21 @@ fetched_at: '2026-10-05T20:45:03+00:00'
 first_seen: '2026-10-05T20:45:03+00:00'
 last_changed: '2026-10-05T20:45:03+00:00'
 content_hash: sha256:1332a5e707d39e1dc04c68e9a106e7cb7d56124f970933fb738c143de81f4556
-words: 212
+words: 139
 status: active
 hint_source: llm
+nav_links:
+- text: الانخراط
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_affiliation?secteur=$secteur
+- text: التسجيل
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_immatriculation?secteur=$secteur
+- text: الاشتراكات
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_assiette?secteur=$secteur
+- text: طرح الخطايا
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_remise_penalites?secteur=$secteur
+original_title: المؤجرون - CNSS
+possibly_outdated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_assiette?secteur=$secteur)
-- [طرح الخطايا](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_remise_penalites?secteur=$secteur)
-
 يتحمل المؤجر الذي يقوم بخلاص مساهماته بعد الآجال القانونية خطايا تأخير يمكن له تقديم مطلب في طرحها على وجه الفضل إذا اقتضت المصلحة العامة ذلك شريطة أن يكون في حل تجاه الصندوق بعنوان أصل المساهمات والقروض ومصاريف التتبع.
 
 ## الوثائق المطلوبة

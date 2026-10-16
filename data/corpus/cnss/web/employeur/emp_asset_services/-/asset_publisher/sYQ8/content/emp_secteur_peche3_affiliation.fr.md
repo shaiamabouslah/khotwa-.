@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_affiliation
 lang: fr
-title: Employeurs - CNSS
+title: Emp Secteur pêche3 Affiliation (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -28,16 +28,21 @@ fetched_at: '2026-10-06T13:05:45+00:00'
 first_seen: '2026-10-05T20:36:20+00:00'
 last_changed: '2026-10-06T13:05:45+00:00'
 content_hash: sha256:422c88c56d6fa170671ac85c7c9f4a9cf648974911c6255c72942937c78995ed
-words: 498
+words: 413
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_immatriculation?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_assiette?secteur=$secteur
+- text: Remise des pénalités
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_remise_penalites?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_remise_penalites?secteur=$secteur)
-
 L'affiliation des employeurs aux régimes de sécurité sociale est obligatoire, elle doit intervenir dans le mois qui  suit l'engagement de  personnel salarié.
 
 Le régime specifique est celui appliqué aux [pêcheurs dont la jauge brut est inferieure à 30 tonneaux](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_affiliation?secteur=3). toutefois, l'employeur peut s'affilier au régime prévu par la loi n°2002-32 du 12 mars 20002 relative à certaines catégories de travailleurs si les salariés choisissent d'opter pour ce régime.
@@ -46,7 +51,7 @@ Le régime specifique est celui appliqué aux [pêcheurs dont la jauge brut est 
 
 - [Une demande d'affiliation](https://www.cnss.tn/c/document_library/get_file?uuid=55c5e469-f0c8-4050-894b-cb51a6dbd037&groupId=33103) (imprimé CNSS)
 - une copie de la carte d'identité nationale de l'employeur
-- une copie certifiée conforme de l'attestation déterminant la jauge du bateau délivrée  par les   autorités maritimes du port d'attache ou par le service régional  ou local  de la Marine Marchande.
+- une copie certifiée conforme de l'attestation déterminant la jauge du bateau délivrée  par les autorités maritimes du port d'attache ou par le service régional  ou local  de la Marine Marchande.
 
 ## Lieu de dépôt
 

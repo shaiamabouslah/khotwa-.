@@ -8,7 +8,7 @@ lang: ar
 title: الطلبة الدوليين
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: directory
 domain_hint: studies
 subtopic_hint: bourses
 hint_score: 10
@@ -23,21 +23,40 @@ fetched_at: '2026-10-07T20:16:35+00:00'
 first_seen: '2026-10-07T20:16:42+00:00'
 last_changed: '2026-10-07T20:16:42+00:00'
 content_hash: sha256:33d11912ccbe804e3a4497e9f4443483da34680ad70b8066f5c36522dfe2ec9b
-words: 117
+words: 100
 status: active
 hint_source: llm
+links:
+- text: التقديم العام
+  url: https://www.mes.tn/page.php?code_menu=106&code_menu_parent=47
+- text: العروض الدولية
+  url: https://www.mes.tn/evenement_video.php?code_menu=105&code_menu_parent=47
+- text: منــــح
+  url: https://www.mes.tn/evenement_video.php?code_menu=107&code_menu_parent=47
+- text: تربصات بالخارج
+  url: https://www.mes.tn/evenement_video.php?code_menu=108&code_menu_parent=47
+- text: الشواغر في المنظمات الدولية
+  url: https://www.mes.tn/evenement_video.php?code_menu=109&code_menu_parent=47
+- text: الجوائز العالمية
+  url: https://www.mes.tn/evenement_video.php?code_menu=110&code_menu_parent=47
+- text: مشاريع مشتركة
+  url: https://www.mes.tn/evenement_video.php?code_menu=111&code_menu_parent=47
+- text: الطلبة الدوليين
+  url: https://www.mes.tn/page.php?code_menu=114&code_menu_parent=47
+- text: PDFدليل الطالب الدولي بتونس
+  url: https://www.mes.tn/image.php?id=13210
 ---
 
 # الطلبة الدوليين
 
-- [التقديم العام](https://www.mes.tn/page.php?code_menu=106&code_menu_parent=47)
-- [العروض الدولية](https://www.mes.tn/evenement_video.php?code_menu=105&code_menu_parent=47)
-  - [منــــح](https://www.mes.tn/evenement_video.php?code_menu=107&code_menu_parent=47)
-  - [تربصات بالخارج](https://www.mes.tn/evenement_video.php?code_menu=108&code_menu_parent=47)
-  - [الشواغر في المنظمات الدولية](https://www.mes.tn/evenement_video.php?code_menu=109&code_menu_parent=47)
-  - [الجوائز العالمية](https://www.mes.tn/evenement_video.php?code_menu=110&code_menu_parent=47)
-  - [مشاريع مشتركة](https://www.mes.tn/evenement_video.php?code_menu=111&code_menu_parent=47)
-- [الطلبة الدوليين](https://www.mes.tn/page.php?code_menu=114&code_menu_parent=47)
+- التقديم العام
+- العروض الدولية
+  - منــــح
+  - تربصات بالخارج
+  - الشواغر في المنظمات الدولية
+  - الجوائز العالمية
+  - مشاريع مشتركة
+- الطلبة الدوليين
  مشروع دعم إدماج الطلبة الدوليين في تونس
 
 تعلم وزارة التعليم العالي والبحث العلمي أن مطالب ترشح الطلبة الدوليين الراغبين في الالتحاق بالجامعات العمومية التونسية مقابل دفع معاليم الدراسة تكون بصفة حصرية بطريقة الكترونية وعبر الرابط التالي https://forms.gle/p1X4Ew5kMm8uWCPU9للتعرف على مزيد من المعلومات يتعين على المترشحين الاطلاع على المطوية التالية https://shorturl.at/ABHK6للاطلاع على آخر أجل لتقديم الترشحات يتوجب الدخول إلى الرابط التالي https://shorturl.at/emnqvلمتابعة وضعية الترشح يمكن للمعني بالأمر ارسال بريد الكتروني إلى العنوان التالي : international@mesrs.state.tn
@@ -46,4 +65,4 @@ hint_source: llm
 
 <http://www.mes.tn/FlayerGuide>
 
-[PDFدليل الطالب الدولي بتونس](https://www.mes.tn/image.php?id=13210)
+PDFدليل الطالب الدولي بتونس

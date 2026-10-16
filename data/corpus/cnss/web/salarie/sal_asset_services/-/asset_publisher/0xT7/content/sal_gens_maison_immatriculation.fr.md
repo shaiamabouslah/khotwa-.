@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal_gens_maison_immatriculation
 lang: fr
-title: Salariés - CNSS
+title: Sal gens maison Immatriculation (Salarie)
 section: null
 breadcrumb:
 - CNSS
@@ -28,9 +28,11 @@ fetched_at: '2026-10-06T12:55:58+00:00'
 first_seen: '2026-10-05T20:33:29+00:00'
 last_changed: '2026-10-06T12:55:58+00:00'
 content_hash: sha256:a8a8145d1e430a302dbb6142596725bd39728baf8fee1675f5b5e4794377ef92
-words: 232
+words: 219
 status: active
 hint_source: llm
+original_title: Salariés - CNSS
+possibly_outdated: true
 ---
 
 L'employeur est tenu d'immatriculer le personnel embauché dans un délai d'un mois à compter de la date  d 'affiliation. Pour les travailleurs engagés ultérieurement à cette date, l'immatriculation intervient dans un délai d'un mois  à  compter de la date de leur engagement.

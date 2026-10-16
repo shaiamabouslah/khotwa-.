@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:10:48+00:00'
 first_seen: '2026-10-07T20:10:56+00:00'
 last_changed: '2026-10-07T20:10:56+00:00'
 content_hash: sha256:e32391b6ba8a089c0db32d72ca7bbc450e32b3d4e8f26d4390f1a04be5bdeeb5
-words: 244
+words: 236
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Equipements et conditions sanitaires qui doivent être fournis dans les moyens de transport des viandes et des abats http://www.sicad.gov.tn//Prestations_57_3_D1815 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -71,8 +73,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Equipements et conditions sanitaires qui doivent être fournis dans les moyens de transport des viandes et des abats http://www.sicad.gov.tn//Prestations_57_3_D1815 "Partager sur twitter")
-Imprimer

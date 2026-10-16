@@ -30,6 +30,8 @@ content_hash: sha256:e006f51c2468a5b618348f3bfb536d1e68adb4a9d1a889ceec5ca68db87
 words: 433
 status: active
 hint_source: llm
+rag_exclude: true
+rag_exclude_reason: server_error_page
 ---
 
 - An error occurred while processing the template.

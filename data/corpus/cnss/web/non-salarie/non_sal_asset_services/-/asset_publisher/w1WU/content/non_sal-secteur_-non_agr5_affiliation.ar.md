@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr5_affiliation
 lang: ar
-title: غير الأجراء - CNSS
+title: Non Sal Secteur non agr5 Affiliation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -32,9 +32,10 @@ fetched_at: '2026-10-05T20:37:48+00:00'
 first_seen: '2026-10-05T20:37:48+00:00'
 last_changed: '2026-10-05T20:37:48+00:00'
 content_hash: sha256:ead941f9f53f1fb99ee6fd637348899bd2b2717bdebd2be7f45d208bacfdf4bc
-words: 346
+words: 322
 status: active
 hint_source: llm
+original_title: غير الأجراء - CNSS
 ---
 
 الانخراط بأنظمة الضمان الاجتماعي إجباري على كل  حرفي مشتغل بالقطعة لحسابه الخاص.وعليه القيام بإجراءات الانخراط في الشهر الذي يلي تاريخ شروعه في النشاط المهني

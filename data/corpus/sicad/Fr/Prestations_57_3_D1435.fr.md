@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:10:07+00:00'
 first_seen: '2026-10-07T20:10:07+00:00'
 last_changed: '2026-10-07T20:10:07+00:00'
 content_hash: sha256:506c24f7414d7f470fea0969ef28c9edc8938dded9579ba2bf143d0051194e82
-words: 908
+words: 900
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Autorisation d'occupation temporaire dans le domaine forestier de l'Etat http://www.sicad.gov.tn//Prestations_57_3_D1435 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -96,8 +98,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Autorisation d'occupation temporaire dans le domaine forestier de l'Etat http://www.sicad.gov.tn//Prestations_57_3_D1435 "Partager sur twitter")
-Imprimer

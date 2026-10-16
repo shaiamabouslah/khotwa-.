@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:12:20+00:00'
 first_seen: '2026-10-07T20:12:26+00:00'
 last_changed: '2026-10-07T20:12:26+00:00'
 content_hash: sha256:717946c3cdc50a354299fc5852489619b2aa24b22507e121f27cb95a7d990c0f
-words: 346
+words: 333
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Changement de calibre du compteur http://www.sicad.gov.tn//Prestations_57_3_D1072 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -74,7 +76,7 @@ hint_source: llm
 
   | **Ministère l’Agriculture, des Ressources Hydrauliques et de la Pêche** | Ministère l’Agriculture, des Ressources Hydrauliques et de la Pêche  |  |  | | --- | --- | | Adresse | 30 Avenue Alain Savary 1002 Tunis | | E-mail | onagri@email.ati.tn | | Téléphone | 71.786.833 | | Fax | 71.780.391 - 71.799.833 | | Site web | <http://www.agriculture.tn> | |
 
-    | **Société Nationale d'Exploitation et de Distribution des Eaux** | Société Nationale d'Exploitation et de Distribution des Eaux  |  |  | | --- | --- | | Adresse | Avenue Slimane Ben Slimane El Manar II 2092 Tunis | | Site web | <http://www.Sonede.Com.tn> | |
+**Société Nationale d'Exploitation et de Distribution des Eaux** - Société Nationale d'Exploitation et de Distribution des Eaux - Adresse - Avenue Slimane Ben Slimane El Manar II 2092 Tunis - Site web - <http://www.Sonede.Com.tn>
 
 - **Agriculture**
 
@@ -86,8 +88,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Changement de calibre du compteur http://www.sicad.gov.tn//Prestations_57_3_D1072 "Partager sur twitter")
-Imprimer

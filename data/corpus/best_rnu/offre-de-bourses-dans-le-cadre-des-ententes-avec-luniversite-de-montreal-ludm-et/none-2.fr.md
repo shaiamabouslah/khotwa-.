@@ -26,7 +26,7 @@ fetched_at: '2026-10-06T00:21:40+00:00'
 first_seen: '2026-10-06T00:21:40+00:00'
 last_changed: '2026-10-06T00:21:40+00:00'
 content_hash: sha256:35095448a386a172dd44c26ebd6732a45b4116b2a640cda17d369d2669c638ac
-words: 101
+words: 70
 status: removed
 duplicate_of: best_rnu:/offre-de-bourses-dans-le-cadre-des-ententes-avec-luniversite-de-montreal-ludm-et#index
 hint_source: llm

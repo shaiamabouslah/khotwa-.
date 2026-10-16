@@ -8,7 +8,7 @@ lang: fr
 title: Offre de bourses nationales pour des études de master et de doctorat
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: directory
 domain_hint: studies
 subtopic_hint: bourses
 hint_score: 10
@@ -25,14 +25,19 @@ fetched_at: '2026-10-06T00:20:45+00:00'
 first_seen: '2026-10-05T20:25:35+00:00'
 last_changed: '2026-10-06T00:20:45+00:00'
 content_hash: sha256:c121e806f3e5e72fab890ee41606680ff146fd2db64e0dccbb67b0da138f33b7
-words: 71
+words: 46
 status: active
 hint_source: llm
+links:
+- text: lien
+  url: https://best.rnu.tn/wp-content/uploads/2020/06/circulaire-b3c-44-19-signee-20-21.pdf
+- text: lien
+  url: https://best.rnu.tn/wp-content/uploads/2020/06/ANNEXE-final-Appel-doffre-Bourse-Canada-2020-2021.pdf
 ---
 
 # Offre de bourses nationales pour des études de master et de doctorat
 
 **Offre de bourses nationales pour des études de master et de doctorat à l’étranger au titre de l’année 2020-2021 :**
 
-- **Circulaire (+ le nombre de bourses offertes) : [lien](https://best.rnu.tn/wp-content/uploads/2020/06/circulaire-b3c-44-19-signee-20-21.pdf)**
-- **Annexe pour les études au Canada : [lien](https://best.rnu.tn/wp-content/uploads/2020/06/ANNEXE-final-Appel-doffre-Bourse-Canada-2020-2021.pdf)**
+- **Circulaire (+ le nombre de bourses offertes) : lien**
+- **Annexe pour les études au Canada : lien**

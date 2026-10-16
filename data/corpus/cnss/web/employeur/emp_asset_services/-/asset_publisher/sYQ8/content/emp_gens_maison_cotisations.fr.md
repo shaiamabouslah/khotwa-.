@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_cotisations
 lang: fr
-title: Employeurs - CNSS
+title: Emp gens maison Cotisations (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -29,15 +29,19 @@ fetched_at: '2026-10-10T20:34:44+00:00'
 first_seen: '2026-10-05T20:38:53+00:00'
 last_changed: '2026-10-10T20:34:44+00:00'
 content_hash: sha256:636d7b563797b737054cf7a961214109293d49049c69bb8b52b0cbea3319b802
-words: 346
+words: 343
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_immatriculation?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_cotisations?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_cotisations?secteur=$secteur)
-
 ## Assiette des cotisations
 
 L'assiette des cotisations est égale aux 2/3 du salaire minimum interprofessionnel garanti ([SMIG](https://www.cnss.tn/fr/nos_echos/-/asset_publisher/4IkZ/content/echos_3)) régime de 48 H par semaine rapporté à une durée d'occupation de 200 heures par mois
@@ -73,9 +77,9 @@ Ce taux est fixé comme suit  :
 
 ## Lieu de dépôt
 
-La déclaration de salaires et l'état récapitulatif sont déposés auprès du    Bureau Régional ou local territorialement compétent accompagnés par le paiement des cotisations qui peut avoir lieu :
+La déclaration de salaires et l'état récapitulatif sont déposés auprès du Bureau Régional ou local territorialement compétent accompagnés par le paiement des cotisations qui peut avoir lieu :
 
-- en espèces ou par chèque tiré sur le  compte de   l'employeur ou certifié s'il est tiré sur le compte de tiers
+- en espèces ou par chèque tiré sur le  compte de l'employeur ou certifié s'il est tiré sur le compte de tiers
 - par virement bancaire ou postal, auquel cas  l'employeur est invité à porter  son numéro d'affiliation sur la copie de l'ordre de virement.
 
 ## Délais de paiement des cotisations

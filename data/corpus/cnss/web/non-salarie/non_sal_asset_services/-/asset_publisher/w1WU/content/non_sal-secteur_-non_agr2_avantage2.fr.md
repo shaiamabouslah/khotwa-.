@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr2_avantage2
 lang: fr
-title: Indépendants et autres catégories - CNSS
+title: Non Sal Secteur non agr2 avantage2 (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -33,6 +33,7 @@ content_hash: sha256:5d1c417d73b6387192abcced24911889a3c81b9e43f849d93da51d86c00
 words: 454
 status: active
 hint_source: llm
+original_title: Indépendants et autres catégories - CNSS
 ---
 
 ## Report de paiement des cotisations des travailleurs non salariés dans le cadre de l'encouragement des nouveaux promoteurs

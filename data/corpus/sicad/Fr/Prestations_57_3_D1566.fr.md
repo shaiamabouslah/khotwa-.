@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:09:57+00:00'
 first_seen: '2026-10-07T20:09:57+00:00'
 last_changed: '2026-10-07T20:09:57+00:00'
 content_hash: sha256:c30ab06f0fe8ccec87e67b303fd1581e71f65e2795ad4238fd7fc6b4fe7f3425
-words: 326
+words: 318
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Bénéfice de l'indication de provenance du produit http://www.sicad.gov.tn//Prestations_57_3_D1566 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -71,8 +73,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Bénéfice de l'indication de provenance du produit http://www.sicad.gov.tn//Prestations_57_3_D1566 "Partager sur twitter")
-Imprimer

@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:09:47+00:00'
 first_seen: '2026-10-07T20:09:47+00:00'
 last_changed: '2026-10-07T20:09:47+00:00'
 content_hash: sha256:345e24dad492358d9cbf7104c81165b8c4e2e8df129d486b6cbe9f16b83ee800
-words: 300
+words: 292
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Rôle d'equipage d'un bateau de pêche http://www.sicad.gov.tn//Prestations_57_3_D362 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -78,8 +80,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Rôle d'equipage d'un bateau de pêche http://www.sicad.gov.tn//Prestations_57_3_D362 "Partager sur twitter")
-Imprimer

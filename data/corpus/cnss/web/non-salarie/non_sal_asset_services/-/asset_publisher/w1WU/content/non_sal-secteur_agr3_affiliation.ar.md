@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr3_affiliation
 lang: ar
-title: غير الأجراء - CNSS
+title: Non Sal Secteur agr3 Affiliation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -29,9 +29,10 @@ fetched_at: '2026-10-05T20:38:08+00:00'
 first_seen: '2026-10-05T20:38:09+00:00'
 last_changed: '2026-10-05T20:38:09+00:00'
 content_hash: sha256:d394ce684c4612433649b745d3a61bc7da5e1eb59b43a4274189798deeb89e44
-words: 383
+words: 324
 status: active
 hint_source: llm
+original_title: غير الأجراء - CNSS
 ---
 
 الانخراط بأنظمة الضمان الاجتماعي إجباري على كل فلاح صغير أو مربي حيوانات يعمل  لحسابه الخاص.

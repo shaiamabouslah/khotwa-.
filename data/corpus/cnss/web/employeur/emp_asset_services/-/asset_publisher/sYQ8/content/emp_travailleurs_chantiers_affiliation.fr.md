@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_affiliation
 lang: fr
-title: Employeurs - CNSS
+title: Emp travailleurs chantiers Affiliation (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -29,15 +29,19 @@ fetched_at: '2026-10-06T12:57:03+00:00'
 first_seen: '2026-10-05T20:34:57+00:00'
 last_changed: '2026-10-06T12:57:03+00:00'
 content_hash: sha256:2730377dd9351290b76f9252654de2608569cec7059dbc37c9c9d752923fc85b
-words: 234
+words: 164
 status: active
 hint_source: llm
+nav_links:
+- text: Affiliation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_affiliation?secteur=$secteur
+- text: Immatriculation
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_imma?secteur=$secteur
+- text: Cotisations
+  url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_cotisations?secteur=$secteur
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_imma?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_cotisations?secteur=$secteur)
-
 L'affiliation des employeurs aux régimes de sécurité sociale est  obligatoire, elle doit intervenir dans le mois qui  suit l'engagement de  personnel salarié.
 
 ## Pièces à fournir

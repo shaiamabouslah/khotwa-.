@@ -28,7 +28,7 @@ fetched_at: '2026-10-05T20:43:57+00:00'
 first_seen: '2026-10-05T20:43:57+00:00'
 last_changed: '2026-10-05T20:43:57+00:00'
 content_hash: sha256:94ae6a21d39ced365d526a069a2471c87d906d3dfbe0192a3f127be3ce2c31b0
-words: 711
+words: 609
 status: removed
 hint_source: llm
 duplicate_of: cnss:/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr2_contenu-avantage_3#index

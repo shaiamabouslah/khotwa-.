@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_immatriculation
 lang: fr
-title: Employeurs - CNSS
+title: Emp gens maison Immatriculation (Employeur)
 section: null
 breadcrumb:
 - CNSS
@@ -29,9 +29,11 @@ fetched_at: '2026-10-05T20:38:29+00:00'
 first_seen: '2026-10-05T20:38:29+00:00'
 last_changed: '2026-10-05T20:38:29+00:00'
 content_hash: sha256:af83825e8bcd7a1ecf098720ffb618ea58a689e2c8ad95e086c8d93c9fdaa48b
-words: 272
+words: 217
 status: active
 hint_source: llm
+original_title: Employeurs - CNSS
+possibly_outdated: true
 ---
 
 - [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_affiliation?secteur=$secteur)

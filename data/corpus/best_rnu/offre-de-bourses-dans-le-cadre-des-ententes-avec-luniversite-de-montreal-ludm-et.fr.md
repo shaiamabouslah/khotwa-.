@@ -8,7 +8,7 @@ lang: fr
 title: Offre de bourses de Mastère et de Doctorat dans le cadre de l’Entente MESRS-INRS
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: directory
 domain_hint: studies
 subtopic_hint: bourses
 hint_score: 5
@@ -30,6 +30,13 @@ content_hash: sha256:35095448a386a172dd44c26ebd6732a45b4116b2a640cda17d369d2669c
 words: 70
 status: active
 hint_source: llm
+links:
+- text: ANNONCE-INRS
+  url: https://best.rnu.tn/wp-content/uploads/2019/10/ANNONCE-INRS-2023-2024.pdf
+- text: ANNEXE MESRS-INRS
+  url: https://best.rnu.tn/wp-content/uploads/2019/10/ANNEXE-MESRS-INRS-2023-2024.pdf
+- text: ANNONCE COMPLÉMENTAIRE
+  url: https://best.rnu.tn/wp-content/uploads/2019/10/Annonce-complementair.pdf
 ---
 
 # Offre de bourses de Mastère et de Doctorat dans le cadre de l’Entente MESRS-INRS
@@ -38,8 +45,8 @@ hint_source: llm
 
 Offre de bourses de Mastère et de Doctorat dans le cadre de l’Entente de coopération entre le Ministère de l’Enseignement Supérieur et de la Recherche Scientifique  (MESRS) et l’Institut national de la recherche scientifique (**INRS**) au Canada au titre de l’année universitaire 2023-2024
 
-[ANNONCE-INRS](https://best.rnu.tn/wp-content/uploads/2019/10/ANNONCE-INRS-2023-2024.pdf)
+ANNONCE-INRS
 
-[ANNEXE MESRS-INRS](https://best.rnu.tn/wp-content/uploads/2019/10/ANNEXE-MESRS-INRS-2023-2024.pdf)
+ANNEXE MESRS-INRS
 
-[ANNONCE COMPLÉMENTAIRE](https://best.rnu.tn/wp-content/uploads/2019/10/Annonce-complementair.pdf)
+ANNONCE COMPLÉMENTAIRE

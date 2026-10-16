@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr2_affiliation
 lang: fr
-title: Indépendants et autres catégories - CNSS
+title: Non Sal Secteur non agr2 Affiliation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -31,9 +31,10 @@ fetched_at: '2026-10-05T20:37:32+00:00'
 first_seen: '2026-10-05T20:37:32+00:00'
 last_changed: '2026-10-05T20:37:32+00:00'
 content_hash: sha256:caf643c3e97f40a5f9d5e17123ebe461316ea8eb37be1d0bd9fcd3e3ec5b3be0
-words: 489
+words: 448
 status: active
 hint_source: llm
+original_title: Indépendants et autres catégories - CNSS
 ---
 
 L'affiliation au régime de sécurité sociale est obligatoire pour les travailleurs non salariés du secteur non agricole. L'affiliation intervient dans le mois qui suit le début de l'activité .

@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr2_avantage1
 lang: ar
-title: غير الأجراء - CNSS
+title: Non Sal Secteur agr2 avantage1 (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -30,6 +30,7 @@ content_hash: sha256:0a707fb53419ebc9c7dfb7cbf93440cfa554075dffdffa98a8b18ad5243
 words: 136
 status: active
 hint_source: llm
+original_title: غير الأجراء - CNSS
 ---
 
 تتكفل الدولة لمدة سنة قابلة للتجديد مرة واحدة بدفع المساهمات المستوجبة على كل شخص معوق منتصب لحسابه الخاص بعنوان نظام الضمان الاجتماعي للعملة غير الأجراء.

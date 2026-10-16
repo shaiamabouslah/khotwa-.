@@ -24,7 +24,7 @@ fetched_at: '2026-10-10T23:52:27+00:00'
 first_seen: '2026-10-10T23:52:27+00:00'
 last_changed: '2026-10-10T23:52:27+00:00'
 content_hash: sha256:53511411415edb465557f6bbff70d40a0406ef2fd939f798594325930457907f
-words: 447
+words: 197
 status: active
 cleaned_v2: true
 ---

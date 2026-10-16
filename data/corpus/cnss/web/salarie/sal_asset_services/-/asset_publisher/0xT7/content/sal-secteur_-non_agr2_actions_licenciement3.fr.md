@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_-non_agr2_actions_licenciement3
 lang: fr
-title: Salariés - CNSS
+title: Sal Secteur non agr2 actions licenciement3 (Salarie)
 section: null
 breadcrumb:
 - CNSS
@@ -30,6 +30,8 @@ content_hash: sha256:ee09a1b0343424b9c6d640c13b771fa321ecafdba2b9ca7fb9e62592d01
 words: 598
 status: active
 hint_source: llm
+original_title: Salariés - CNSS
+possibly_outdated: true
 ---
 
 ## Une aide est accordée par la CNSS aux salariés du secteur non agricole ayant perdu leur emploi pour des raisons indépendantes de leur volonté, sans bénéficier d'une réparation, leur entreprise se trouvant en cessation d'activité pour des raisons économiques ou technologiques ou en fermeture inopinée ,si les conditions suivantes sont remplies :

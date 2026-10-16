@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal_autres_etudiants_immatriculation
 lang: ar
-title: غير الأجراء - CNSS
+title: Non Sal autres etudiants immatriculation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -30,9 +30,10 @@ fetched_at: '2026-10-06T13:06:07+00:00'
 first_seen: '2026-10-05T20:36:54+00:00'
 last_changed: '2026-10-06T13:06:07+00:00'
 content_hash: sha256:62b0c692621423fd514d525c2bc1e8410121214166ff95b4a9fe0626f4ab2c94
-words: 492
+words: 479
 status: active
 hint_source: llm
+original_title: غير الأجراء - CNSS
 ---
 
 يمكن للطالب طلب تسجيله بالضمان الاجتماعي حسب الشروط التالية:

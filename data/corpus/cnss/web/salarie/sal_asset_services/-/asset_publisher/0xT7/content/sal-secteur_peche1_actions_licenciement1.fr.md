@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_peche1_actions_licenciement1
 lang: fr
-title: Salariés - CNSS
+title: Sal Secteur peche1 actions licenciement1 (Salarie)
 section: null
 breadcrumb:
 - CNSS
@@ -30,6 +30,8 @@ content_hash: sha256:1bbcecdf8f48099fb7d887d4be847774ae7101431ce7c282119c65e4d31
 words: 334
 status: active
 hint_source: llm
+original_title: Salariés - CNSS
+possibly_outdated: true
 ---
 
 ## Prestations familiales et droits aux soins pour les salariés ayant perdu leur emploi
@@ -52,7 +54,7 @@ Le dossier est déposé au Bureau régional ou local territorialement compétent
 
 ## Mode et délai de paiement
 
-Le montant de ces prestations correspond aux taux plafond accordés aux salariés du secteur  non agricole.   Elles sont servies par mandat postal dans les  15 jours à partir de la date de dépôt du dossier.
+Le montant de ces prestations correspond aux taux plafond accordés aux salariés du secteur  non agricole. Elles sont servies par mandat postal dans les  15 jours à partir de la date de dépôt du dossier.
 
 ## Références législatives et réglementaires
 

@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal_peche3_immatriculation
 lang: fr
-title: Salariés - CNSS
+title: Sal peche3 Immatriculation (Salarie)
 section: null
 breadcrumb:
 - CNSS
@@ -28,12 +28,14 @@ fetched_at: '2026-10-06T12:56:53+00:00'
 first_seen: '2026-10-05T20:34:42+00:00'
 last_changed: '2026-10-06T12:56:53+00:00'
 content_hash: sha256:567bc9367657df6009f5ce8ae58ac135459e4004d9c3deabd2ec91d01209fa58
-words: 232
+words: 218
 status: active
 hint_source: llm
+original_title: Salariés - CNSS
+possibly_outdated: true
 ---
 
-L'employeur est tenu d'immatriculer le personnel embauché dans un délai   d'un mois à compter de la date d'affiliation. Pour les travailleurs engagés  ultérieurement à cette date, l'immatriculation intervient dans un délai d'un mois  à  compter de la date de leur engagement.
+L'employeur est tenu d'immatriculer le personnel embauché dans un délai d'un mois à compter de la date d'affiliation. Pour les travailleurs engagés  ultérieurement à cette date, l'immatriculation intervient dans un délai d'un mois  à  compter de la date de leur engagement.
 
 En cas de défaillance de l'employeur, le salarié a le droit de demander lui-même son immatriculation.
 

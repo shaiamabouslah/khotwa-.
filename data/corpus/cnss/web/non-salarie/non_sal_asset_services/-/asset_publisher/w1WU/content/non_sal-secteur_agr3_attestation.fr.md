@@ -5,7 +5,7 @@ org: Caisse Nationale de Sécurité Sociale (CNSS)
 trust: official
 url: https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr3_attestation
 lang: fr
-title: Indépendants et autres catégories - CNSS
+title: Non Sal Secteur agr3 Attestation (Non Salarié)
 section: null
 breadcrumb:
 - CNSS
@@ -32,6 +32,7 @@ content_hash: sha256:d6d152a18691b0c229ccf83709c8e6ea2893d40cdb6a39fba1be907df88
 words: 189
 status: active
 hint_source: llm
+original_title: Indépendants et autres catégories - CNSS
 ---
 
 ## Attestation relative à la situation d'un travailleur non salarié en matière de paiement des cotisations.

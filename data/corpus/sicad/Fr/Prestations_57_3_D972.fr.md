@@ -23,9 +23,11 @@ fetched_at: '2026-10-07T20:09:55+00:00'
 first_seen: '2026-10-07T20:09:55+00:00'
 last_changed: '2026-10-07T20:09:55+00:00'
 content_hash: sha256:7c61182f2de05f17fba1c0b6fc320ac23d0827d5c48bb0399ca1f27a2fb299db
-words: 307
+words: 299
 status: active
 hint_source: llm
+social_links:
+- http://twitter.com/home?status=Attestation de bénéfice d'avantages fiscaux pour l'importation des animaux vivants destinés à l'élevage http://www.sicad.gov.tn//Prestations_57_3_D972 "Partager sur twitter"
 ---
 
 - **Conditions d'obtention de la prestation :**
@@ -83,8 +85,3 @@ hint_source: llm
 
 ### Ajouter un commentaire
 
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Attestation de bénéfice d'avantages fiscaux pour l'importation des animaux vivants destinés à l'élevage http://www.sicad.gov.tn//Prestations_57_3_D972 "Partager sur twitter")
-Imprimer

@@ -25,7 +25,7 @@ fetched_at: '2026-10-06T00:27:19+00:00'
 first_seen: '2026-10-05T20:30:14+00:00'
 last_changed: '2026-10-06T00:27:19+00:00'
 content_hash: sha256:27a8aa967ac02873073f06089145c1423b08da4b34114427df32cd527e3dcb62
-words: 4898
+words: 4848
 status: active
 hint_source: llm
 ---
@@ -226,7 +226,7 @@ Tax system
 
 |  | Rate CT | CSS |
 | The general corporate income tax rate | 15% | 1% |
-| - Banks and financial institutions (leasing companies, factoring companies, invesment banks).  - Offshore financial institutions governed by the code related to financial services destined to non-residents.   - Insurance, mutual insurance, and reinsurance companies.  - Takaful insurance and reinsurance companies. | 35% | 3% |
+| - Banks and financial institutions (leasing companies, factoring companies, invesment banks).  - Offshore financial institutions governed by the code related to financial services destined to non-residents. - Insurance, mutual insurance, and reinsurance companies.  - Takaful insurance and reinsurance companies. | 35% | 3% |
 | - Investment companies.  - Debt collection companies..  - Telecommunications operators..  - Profits derived from services relating provided to the Hydrocarbons sector (listed by Article 130.1 of the Hydrocarbons Code promulgated by the Law 1999-93)..  - Companies rendering services to companies operating in the oil and gas field..  - Companies operating in the production and the transport of hydrocarbons and governed by particular conventions, as well as companies operating in the transfer of hydrocarbons via pipeline..  - Companies operating in the oil refining sector and the wholesale of hydrocarbon products. - Hypermarkets..  - Car dealers..  - Franchisees of a foreign brand or trademark, except for entreprises with a rate of integration equal or greater than 30%. . | 35% | 2% |
 | - Companies carrying out craft activities, agricultural and fishing activities, and fitting out fishing boats.  - Companies operating in the regional development zones after the expiry of the total deduction period.  - Benefits derived from investments in the agricultural or fishing sectors at the end of the total deduction period  - Support and pollution control activities. | 10% | 1% |
 | Tax-exempt companies or companies benefiting from the whole exemption of profits deriving from operations (e.g. companies established in the regional development zones, companies operating in the agricultural sector) during the period of tax holidays. | - | 200 TND |

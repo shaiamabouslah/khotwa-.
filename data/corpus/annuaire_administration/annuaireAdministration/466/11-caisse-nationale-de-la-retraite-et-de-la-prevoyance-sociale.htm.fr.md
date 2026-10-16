@@ -8,7 +8,7 @@ lang: fr
 title: Annuaire d'administration - Portail du Gouvernement Tunisien
 section: null
 breadcrumb: []
-doc_type: page
+doc_type: contact
 domain_hint: null
 subtopic_hint: null
 hint_score: 10
@@ -23,7 +23,7 @@ fetched_at: '2026-10-06T23:24:30+00:00'
 first_seen: '2026-10-06T23:24:30+00:00'
 last_changed: '2026-10-06T23:24:30+00:00'
 content_hash: sha256:c9152ffac03c42a540c5c602755667707ca640e2c0ece802642f5ef1e5f019e6
-words: 123
+words: 118
 status: active
 hint_source: llm
 ---
