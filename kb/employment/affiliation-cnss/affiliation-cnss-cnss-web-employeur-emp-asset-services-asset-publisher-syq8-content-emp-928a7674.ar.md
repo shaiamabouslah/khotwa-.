@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-928a7674
-title: المؤجرون - CNSS
+title: Emp Secteur pêche3 Assiette (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar
@@ -31,16 +31,11 @@ sources:
   - Services Employeur
   - Emp_Secteur pêche3_Assiette
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_assiette?secteur=$secteur)
-- [طرح الخطايا](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_remise_penalites?secteur=$secteur)
 
 ## قاعدة الاشتراكات
 

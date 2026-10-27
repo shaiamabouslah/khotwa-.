@@ -29,7 +29,7 @@ first_seen: '2026-10-05T20:44:41+00:00'
 last_changed: '2026-10-05T20:44:41+00:00'
 content_hash: sha256:fcc16b5c558c86c104b3defa34db1a54e3cc111b485c38aef3565f2e5e0b9705
 words: 139
-status: active
+status: removed
 hint_source: llm
 nav_links:
 - text: الانخراط
@@ -46,6 +46,7 @@ nav_links:
   url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_attestations?secteur=$secteur
 original_title: المؤجرون - CNSS
 possibly_outdated: true
+duplicate_of: cnss:/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_remise_penalites#index
 ---
 يتحمل المؤجر الذي يقوم بخلاص مساهماته بعد الآجال القانونية خطايا تأخير يمكن له تقديم مطلب في طرحها على وجه الفضل إذا اقتضت المصلحة العامة ذلك شريطة أن يكون في حل تجاه الصندوق بعنوان أصل المساهمات والقروض ومصاريف التتبع.
 

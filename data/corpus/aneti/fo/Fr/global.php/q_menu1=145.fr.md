@@ -33,7 +33,7 @@ first_seen: '2026-10-10T23:56:30+00:00'
 last_changed: '2026-10-10T23:56:30+00:00'
 content_hash: sha256:1d9007888f967cb7217d652b07e0bd4a2140bf0a13eb2b044c846c071133f9cd
 words: 26
-status: active
+status: removed
 links:
 - text: Rapport 2021
   url: https://www.emploi.nat.tn/upload/rapport_aneti2021.pdf

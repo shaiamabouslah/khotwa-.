@@ -21,7 +21,7 @@ keywords:
 sources:
 - url: https://jibaya.tn/wp-content/uploads/2026/07/Guide_utilisation_dexel.pdf
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-07'
 status: active
 generated: true

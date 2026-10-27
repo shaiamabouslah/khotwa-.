@@ -21,7 +21,7 @@ keywords:
 sources:
 - url: https://best.rnu.tn/offre-nationale-des-bourses-pour-des-etudes-de-mastere-et-de-doctorat-a-letranger-au-titre-de-lannee-2023-2024/
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true
@@ -33,6 +33,6 @@ generated: true
 
 Offre nationale des bourses pour des études de mastère et de doctorat à l’étranger au titre de 2023-2024:
 
-[Circulaire 2023-2024](https://best.rnu.tn/wp-content/uploads/2019/10/circulaire-2023-2024.pdf)
+Circulaire 2023-2024
 
-[ANNEXE – Bourse Canada 2023-2024](https://best.rnu.tn/wp-content/uploads/2019/10/ANNEXE-Bourse-Canada-2023-2024.pdf)
+ANNEXE – Bourse Canada 2023-2024

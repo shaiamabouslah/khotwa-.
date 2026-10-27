@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-ac739d59
-title: غير الأجراء - CNSS
+title: Non Sal Secteur non agr5 cotisation (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar
@@ -19,7 +19,7 @@ sources:
   - Services Non Salarié
   - Non_Sal Secteur_ non_agr5_cotisation
   source_updated: '2024-06-27'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
@@ -41,7 +41,7 @@ generated: true
 
 | مبلغ الاشتراكات الشهري  - بالدينار- | قاعدة الاشتراكات في الشهر  - بالدينار- |
 
-الانخراط بنظام جبر الأضرار الناتجة عن حوادث الشغل اختياري. حددت نسبة الاشتراك بـ 0,5 %  من ثلثي الأجر الأدنى المهني المضمون أي   3,797 دينارا في الثلاثية  الثانية 2019  و 3,876  دينارا بداية من الثلاثية الثالثة  2019.
+الانخراط بنظام جبر الأضرار الناتجة عن حوادث الشغل اختياري. حددت نسبة الاشتراك بـ 0,5 %  من ثلثي الأجر الأدنى المهني المضمون أي 3,797 دينارا في الثلاثية  الثانية 2019  و 3,876  دينارا بداية من الثلاثية الثالثة  2019.
 
 ## الوثائق المطلوبة
 

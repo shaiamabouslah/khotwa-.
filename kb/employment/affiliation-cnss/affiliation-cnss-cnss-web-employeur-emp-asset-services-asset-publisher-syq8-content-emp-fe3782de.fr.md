@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-fe3782de
-title: Employeurs - CNSS
+title: Emp gens maison Cotisations (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -31,15 +31,11 @@ sources:
   - Services Employeur
   - Emp_gens_maison_Cotisations
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-10'
 status: active
 generated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_cotisations?secteur=$secteur)
 
 ## Assiette des cotisations
 
@@ -76,9 +72,9 @@ Ce taux est fixé comme suit  :
 
 ## Lieu de dépôt
 
-La déclaration de salaires et l'état récapitulatif sont déposés auprès du    Bureau Régional ou local territorialement compétent accompagnés par le paiement des cotisations qui peut avoir lieu :
+La déclaration de salaires et l'état récapitulatif sont déposés auprès du Bureau Régional ou local territorialement compétent accompagnés par le paiement des cotisations qui peut avoir lieu :
 
-- en espèces ou par chèque tiré sur le  compte de   l'employeur ou certifié s'il est tiré sur le compte de tiers
+- en espèces ou par chèque tiré sur le  compte de l'employeur ou certifié s'il est tiré sur le compte de tiers
 - par virement bancaire ou postal, auquel cas  l'employeur est invité à porter  son numéro d'affiliation sur la copie de l'ordre de virement.
 
 ## Délais de paiement des cotisations

@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-a6baf47a
-title: Employeurs - CNSS
+title: Emp Secteur pêche2 Affiliation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -31,25 +31,18 @@ sources:
   - Services Employeur
   - Emp_Secteur_pêche2_Affiliation
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_attestations?secteur=$secteur)
 
 L'affiliation des employeurs aux régimes de sécurité sociale est obligatoire, elle doit intervenir dans le mois qui  suit l'engagement de  personnel salarié.
 
 ## Pièces à fournir
 
 - [Une demande d'affiliation](https://www.cnss.tn/c/document_library/get_file?uuid=94a8d20a-36b2-4e16-9464-d40454e88866&groupId=10156) (imprimé CNSS)
-- Une copie de la carte d'identité nationale de l'employeur ou du représentant légal de   l'entreprise
+- Une copie de la carte d'identité nationale de l'employeur ou du représentant légal de l'entreprise
 - Une copie certifiée conforme du congé.
 
 ## Lieu de dépôt

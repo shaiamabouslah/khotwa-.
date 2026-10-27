@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://uma.rnu.tn/fr/article/209/bourses-dalternance-2025-accordee-aux-etudiants-ingenieurs-pfe-aux-doctorants-et-aux-etudiants-en-master-le-dernier-delai-pour-la-reception-des-dossiers-est-fixe-au-11-mars-2025
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-07'
 status: active
 generated: true

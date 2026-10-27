@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://best.rnu.tn/fondation-de-la-maison-de-la-tunisie-candidatures-au-logement-pour-lannee-universitaire-2022-2023/
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true

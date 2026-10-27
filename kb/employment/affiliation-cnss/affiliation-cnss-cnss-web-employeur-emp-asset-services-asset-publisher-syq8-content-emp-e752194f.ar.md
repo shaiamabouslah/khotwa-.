@@ -1,11 +1,10 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-e752194f
-title: المؤجرون - CNSS
+title: Emp Secteur non agr2 Immatriculation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar
-translations:
-- fr
+translations: []
 org: Caisse Nationale de Sécurité Sociale (CNSS)
 keywords:
 - affiliation
@@ -31,19 +30,11 @@ sources:
   - Services Employeur
   - Emp_Secteur_non_agr2_Immatriculation
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr2_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr2_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr2_assiette?secteur=$secteur)
-- [طرح الخطايا](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr2_remise_penalites?secteur=$secteur)
-- [الامتيازات](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr2_contenu-avantage_3?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [الشهادات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr2_attestations?secteur=$secteur)
-- [الانخراط بالنظام التكميلي للجرايات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr2_affiliation_regime_complementaire?secteur=$secteur)
 
 يتعين على المؤجر تقديم مطالب تسجيل أجرائه في اجل شهر من تاريخانخراطه. بالنسبة للعملة المنتدبين بعد هذا التاريخ وغير المسجلين بالصندوق، يتعين على المؤجر أن يطلب تسجيلهم في أجل شهر بداية من تاريخ انتدابهم.
  وفي صورةتخلف المؤجر عن القيام بهذا الواجب يمكن للأجير غير المسجل أن يبادر بنفسه بتقديممطلب التسجيل إلى المكتب الجهوي أو المحلي الراجع له بالنظر**.**

@@ -17,7 +17,7 @@ keywords:
 sources:
 - url: http://www.sicad.gov.tn/Fr/Prestation_Obtention-dun-duplicata-du-diplome-ou-du--releve-des-notes_57_27_D2152
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-07'
 status: active
 generated: true
@@ -78,9 +78,3 @@ generated: true
 - **[Demande d'un duplicata du diplôme ou du relevé des notes (AR)](http://www.sicad.gov.tn/Fr/Imprime_Demande-dun-duplicata-du-diplome-ou-du-releve-des-notes-AR_66_27_D5530)**
 
 ### Ajouter un commentaire
-
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Obtention d'un duplicata du diplôme ou du  relevé des notes http://www.sicad.gov.tn//Imprimes_66_27_D2152 "Partager sur twitter")
-Imprimer

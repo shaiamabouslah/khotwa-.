@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-1bf2be90
-title: غير الأجراء - CNSS
+title: Non Sal Secteur peche3 Affiliation (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar
@@ -31,7 +31,7 @@ sources:
   - Services Non Salarié
   - Non_Sal Secteur_peche3_Affiliation
   source_updated: '2024-06-27'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true

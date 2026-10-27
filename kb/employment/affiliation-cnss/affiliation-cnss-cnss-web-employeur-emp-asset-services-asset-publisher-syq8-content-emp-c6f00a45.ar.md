@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-c6f00a45
-title: المؤجرون - CNSS
+title: Emp travailleurs chantiers cotisations (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar
@@ -31,15 +31,11 @@ sources:
   - Services Employeur
   - Emp_travailleurs_chantiers_cotisations
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-10'
 status: active
 generated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_imma?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_cotisations?secteur=$secteur)
 
 ## قاعدة الاشتراكات
 

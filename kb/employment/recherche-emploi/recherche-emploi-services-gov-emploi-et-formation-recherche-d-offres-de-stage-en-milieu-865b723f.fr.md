@@ -12,7 +12,7 @@ sources:
 - url: http://services.gov.tn/emploi-et-formation/
   breadcrumb:
   - Recherche d’offres de stage en milieu professionnel pour les diplômés de la formation professionnelle, selon la spécialité et le diplôme
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true

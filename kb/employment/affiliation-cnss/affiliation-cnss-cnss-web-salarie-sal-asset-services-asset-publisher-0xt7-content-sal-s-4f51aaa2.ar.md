@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-4f51aaa2
-title: الأجراء - CNSS
+title: Sal Secteur non agr1 actions licenciement3 (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar
@@ -30,7 +30,7 @@ sources:
   - Services Salarié
   - Sal Secteur_ non_agr1_actions_licenciement3
   source_updated: '2016-09-02'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true

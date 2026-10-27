@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-ae109703
-title: Employeurs - CNSS
+title: Emp Secteur non agr1 Assiette (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -31,19 +31,11 @@ sources:
   - Services Employeur
   - Emp_Secteur non_agr1_Assiette
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr1_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr1_contenu-avantage1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_attestations?secteur=$secteur)
-- [Affiliation au régime complémentaire de pensions](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_affiliation_regime_complementaire?secteur=$secteur)
 
 ## Assiette des cotisations
 
@@ -93,4 +85,4 @@ En cas de non dépôt de déclaration de salaires, une pénalité de retard supp
 
 ## Références législatives et réglementaires
 
-- Loi n°60-30 du 14 décembre 1960, relative à l'organisation des régimes de sécurité sociale, telle que modifiée et complétée par les textes subséquents et notamment : Art. 40,  Art. 42,  Art. 43,  Art. 44,  Art. 45,  Art. 46,  Art. 47,   Art. 105
+- Loi n°60-30 du 14 décembre 1960, relative à l'organisation des régimes de sécurité sociale, telle que modifiée et complétée par les textes subséquents et notamment : Art. 40,  Art. 42,  Art. 43,  Art. 44,  Art. 45,  Art. 46,  Art. 47, Art. 105

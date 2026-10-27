@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-avantages-asset-publisher-0pnx-c-94800483
-title: Employeurs - CNSS
+title: Emp Secteur non agr1 Contenu Avantage1 (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -31,19 +31,11 @@ sources:
   - Services Employeur Avantages
   - Emp_Secteur non_agr1_Contenu Avantage1
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr1_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr1_contenu-avantage1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_attestations?secteur=$secteur)
-- [Affiliation au régime complémentaire de pensions](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_affiliation_regime_complementaire?secteur=$secteur)
 
 Dans le cadre de l'encouragement au développement régional, l'Etat prend en charge, totalement ou partiellement, la contribution patronale au régime légal de sécurité sociale au titre des salaires versés aux employés tunisiens, durant les dix ou les cinq premières années à partir de la date d'entrée en activité effective.
 
@@ -84,7 +76,7 @@ Bénéficient  de  la  prise  en  charge  de  la  totalité de  la  contribution
 | 1ère année | 2ème  année | 3ème  année | 4ème année | 5ème année |
 | 80% | 65% | 50% | 35% | 20% |
 
-Bénéficient de la prise en charge de la totalité de la contribution patronale  durant les 10 première sannées,   d'activité   effective  les  investissements  implantés  dans  les  zones  prioritaires d'encouragement  au  développement  régional  dont  la  déclaration est  déposée à partir  du  1er janvier 2011.
+Bénéficient de la prise en charge de la totalité de la contribution patronale  durant les 10 première sannées, d'activité effective  les  investissements  implantés  dans  les  zones  prioritaires d'encouragement  au  développement  régional  dont  la  déclaration est  déposée à partir  du  1er janvier 2011.
 
 ### Condition générale
 

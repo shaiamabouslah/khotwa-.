@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-79f36d35
-title: Salariés - CNSS
+title: Sal Secteur agr2 Immatriculation (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -30,13 +30,13 @@ sources:
   - Services Salarié
   - Sal Secteur_agr2_Immatriculation
   source_updated: '2016-09-02'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true
 ---
 
-L'employeur est tenu d'immatriculer le personnel embauché dans un délai   d'un mois à compter de la date d'affiliation. Pour les travailleurs engagés  ultérieurement à cette date, l'immatriculation intervient dans un délai d'un mois  à  compter de la date de leur engagement.
+L'employeur est tenu d'immatriculer le personnel embauché dans un délai d'un mois à compter de la date d'affiliation. Pour les travailleurs engagés  ultérieurement à cette date, l'immatriculation intervient dans un délai d'un mois  à  compter de la date de leur engagement.
 
  En cas de défaillance de l'employeur, le salarié a le droit de demander lui-même son immatriculation.
 

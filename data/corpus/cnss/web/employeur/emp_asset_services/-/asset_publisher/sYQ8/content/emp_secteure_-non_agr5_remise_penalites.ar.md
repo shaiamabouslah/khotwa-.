@@ -29,7 +29,7 @@ first_seen: '2026-10-05T20:42:29+00:00'
 last_changed: '2026-10-05T20:42:29+00:00'
 content_hash: sha256:cb0dd3cd2dd8f274a447a5383740ac8df7ef6ba3e4126e155d7a468711609388
 words: 139
-status: active
+status: removed
 hint_source: llm
 nav_links:
 - text: الانخراط
@@ -48,6 +48,7 @@ nav_links:
   url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr5_affiliation_regime_complementaire?secteur=$secteur
 original_title: المؤجرون - CNSS
 possibly_outdated: true
+duplicate_of: cnss:/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_remise_penalites#index
 ---
 يتحمل المؤجر الذي يقوم بخلاص مساهماته بعد الآجال القانونية خطايا تأخير يمكن له تقديم مطلب في طرحها على وجه الفضل إذا اقتضت المصلحة العامة ذلك شريطة أن يكون في حل تجاه الصندوق بعنوان أصل المساهمات والقروض ومصاريف التتبع.
 

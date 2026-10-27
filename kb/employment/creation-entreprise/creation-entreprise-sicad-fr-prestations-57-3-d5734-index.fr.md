@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: http://www.sicad.gov.tn/Fr/Prestations_57_3_D5734
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-07'
 status: active
 generated: true
@@ -25,7 +25,7 @@ generated: true
   Un dossier comprenant :
 
   - Une demande manuscrite au nom du ministre des affaires culturelles.
-  - un dossier de presse comprenant   tous les données et les informations justifiant l’aspect culturel d’établissement ou du projet ou de l’œuvre.
+  - un dossier de presse comprenant tous les données et les informations justifiant l’aspect culturel d’établissement ou du projet ou de l’œuvre.
 
   **Et il doit être accompagné obligatoirement des pièces suivantes :**
 
@@ -94,9 +94,3 @@ generated: true
   - **Activités touristiques**
 
 ### Ajouter un commentaire
-
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Attestation du caractère culturel dans le cadre du mécénat culturel. http://www.sicad.gov.tn//Prestations_57_3_D5734 "Partager sur twitter")
-Imprimer

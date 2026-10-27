@@ -178,7 +178,7 @@ def reclassify_all(state: dict, path_to_key: dict):
             continue
         front, body = m.groups()
         meta = yaml.safe_load(front)
-        if meta.get("status") != "active":
+        if meta.get("status") != "active" or meta.get("rag_exclude") or not body.strip():
             continue
         site = sites.get(meta.get("site"), {})
         old = (meta.get("domain_hint"), meta.get("subtopic_hint"))

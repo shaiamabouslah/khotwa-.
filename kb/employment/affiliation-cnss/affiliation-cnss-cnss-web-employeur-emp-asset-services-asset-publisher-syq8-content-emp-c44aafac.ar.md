@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-c44aafac
-title: المؤجرون - CNSS
+title: Emp Secteur pêche2 Assiette (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar
@@ -31,22 +31,15 @@ sources:
   - Services Employeur
   - Emp_Secteur pêche2_Assiette
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
 ---
 
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_assiette?secteur=$secteur)
-- [طرح الخطايا](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_remise_penalites?secteur=$secteur)
-- [الامتيازات](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [الشهادات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_attestations?secteur=$secteur)
-
 ## قاعدة الاشتراكات
 
-تضبط قاعدة احتساب الاشتراكات على أساس الأجور المسندة للعملة أي جميع المبالغ النقدية أو العينية التي يمنحها المؤجر كمقابل لنشاط الأجير بما   في ذلك المنح التابعة للأجور مهما كان نوعها.
+تضبط قاعدة احتساب الاشتراكات على أساس الأجور المسندة للعملة أي جميع المبالغ النقدية أو العينية التي يمنحها المؤجر كمقابل لنشاط الأجير بما في ذلك المنح التابعة للأجور مهما كان نوعها.
 
 ## نسبة الاشتراكات
 

@@ -11,18 +11,11 @@ keywords:
 sources:
 - url: https://www.uvt.rnu.tn/etudiant/reinscription
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true
 ---
-
-- [Actualités](https://www.uvt.rnu.tn/actualites)
-- [L'IA à L'UVT](https://www.uvt.rnu.tn/ia)
-- [Observatoire](https://www.uvt.rnu.tn/presentation/observatoire)
-- [Espace Com'](https://www.uvt.rnu.tn/espace-communication)
-- [Photothèque](https://www.uvt.rnu.tn/phototheque)
-- [Contact](https://www.uvt.rnu.tn/contact-fr)
 
 2. [Etudiant à l'UVT](https://www.uvt.rnu.tn/&Itemid=196)
 3. Réinscription & Paiement

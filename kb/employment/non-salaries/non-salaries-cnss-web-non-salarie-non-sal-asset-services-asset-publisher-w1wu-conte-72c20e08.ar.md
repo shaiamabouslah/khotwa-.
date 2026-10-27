@@ -1,6 +1,6 @@
 ---
 id: non-salaries-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-72c20e08
-title: غير الأجراء - CNSS
+title: Non Sal Secteur non agr1 Remise penalites (Non Salarié)
 domain: employment
 subtopic: non-salaries
 lang: ar
@@ -24,7 +24,7 @@ sources:
   - Services Non Salarié
   - Non_Sal Secteur_ non_agr1_Remise_penalites
   source_updated: '2024-06-27'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true

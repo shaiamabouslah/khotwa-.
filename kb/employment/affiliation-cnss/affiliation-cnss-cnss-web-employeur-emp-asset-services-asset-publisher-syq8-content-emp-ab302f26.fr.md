@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-ab302f26
-title: Employeurs - CNSS
+title: Emp gens maison Affiliation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -31,15 +31,11 @@ sources:
   - Services Employeur
   - Emp_gens_maison_Affiliation
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_cotisations?secteur=$secteur)
 
 L'affiliation des employeurs aux régimes de sécurité sociale est obligatoire, elle doit intervenir dans le mois qui  suit l'engagement de personnel salarié.
 
@@ -58,7 +54,7 @@ Un certificat d'affiliation  est délivré séance tenante si le dossier est com
 
 ## Date d'effet
 
-La date d'effet de l'affiliation correspond à la date d'assujettissement , lorsque la demande d'affiliation est déposée au cours du mois qui suit l'assujettissement ; dans le cas contraire, elle prend effet à compter du premier jour du trimestre en cours   à la date de réception par la Caisse de la demande d'affiliation
+La date d'effet de l'affiliation correspond à la date d'assujettissement , lorsque la demande d'affiliation est déposée au cours du mois qui suit l'assujettissement ; dans le cas contraire, elle prend effet à compter du premier jour du trimestre en cours à la date de réception par la Caisse de la demande d'affiliation
 
 ## Références législatives et réglementaires
 

@@ -22,7 +22,7 @@ sources:
 - url: https://www.ooun.rnu.tn/web/fr/bourse.html
   breadcrumb:
   - Vous êtes fils de parents tunisiens résidant à l'étranger et vous postulez à une bourse ou un prêt ?
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
@@ -36,7 +36,7 @@ generated: true
 
 | Etapes et délais des bourses | |
 | **Les nouveaux bacheliers** | **Les anciens** |
-| 1- Imprimé en ligne à remplir   2- Envoi du dossier à l'office concerné  3- Etude des dossiers   4-Information des étudiants dont les dossiers sont acceptés (à travers notre site web) et l’obligation de faire parvenir l’attestation d’inscription.  5- payement de la première tranche de bourse selon la date d'arrivée de l'inscription 6- payement de la deuxième, de la troisième et de la dernière tranche, suivant des délais annoncés sur le site web | 1- Imprimé en ligne à remplir   2- Envoi du dossier à l'office concerné  3- Etude des dossiers   4- le résultat de l'étude des dossiers est annoncé sur le site web  5- payement de la première tranche de bourse selon la date d'arrivée des dossiers (au cours du premier trimestre) 6- payement de la deuxième, de la troisième et de la dernière tranche, suivant des délais annoncés sur le site web |
+| 1- Imprimé en ligne à remplir 2- Envoi du dossier à l'office concerné  3- Etude des dossiers 4-Information des étudiants dont les dossiers sont acceptés (à travers notre site web) et l’obligation de faire parvenir l’attestation d’inscription.  5- payement de la première tranche de bourse selon la date d'arrivée de l'inscription 6- payement de la deuxième, de la troisième et de la dernière tranche, suivant des délais annoncés sur le site web | 1- Imprimé en ligne à remplir 2- Envoi du dossier à l'office concerné  3- Etude des dossiers 4- le résultat de l'étude des dossiers est annoncé sur le site web  5- payement de la première tranche de bourse selon la date d'arrivée des dossiers (au cours du premier trimestre) 6- payement de la deuxième, de la troisième et de la dernière tranche, suivant des délais annoncés sur le site web |
 
 | Montants des bourses par type | | | |
 | **type** | **Montant mensuel** | **Nombre de mois** | **Montant de  fournitures** |

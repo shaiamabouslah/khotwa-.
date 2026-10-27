@@ -35,7 +35,7 @@ first_seen: '2026-10-05T20:42:10+00:00'
 last_changed: '2026-10-05T20:42:10+00:00'
 content_hash: sha256:232911a246eac99789ea08921cdde000500e032161d6fea07c5094a0f4f8ab11
 words: 121
-status: active
+status: removed
 hint_source: llm
 nav_links:
 - text: الانخراط
@@ -52,6 +52,7 @@ nav_links:
   url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr4_affiliation_regime_complementaire?secteur=$secteur
 original_title: المؤجرون - CNSS
 possibly_outdated: true
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_agr3_attestation#index
 ---
 ## شهادة خلاص
 

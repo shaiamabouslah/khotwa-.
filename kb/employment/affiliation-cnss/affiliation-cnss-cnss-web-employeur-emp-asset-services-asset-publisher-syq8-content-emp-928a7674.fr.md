@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-928a7674
-title: Employeurs - CNSS
+title: Emp Secteur pêche3 Assiette (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -31,16 +31,11 @@ sources:
   - Services Employeur
   - Emp_Secteur pêche3_Assiette
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_remise_penalites?secteur=$secteur)
 
 ## Assiette des cotisations
 
@@ -77,7 +72,7 @@ Ce taux est fixé à 0,8% du [SMAG journalier](https://www.cnss.tn/fr/nos_echos/
 
 La déclaration de salaires et l'état récapitulatif sont déposés auprès du  Bureau Régional ou local territorialement compétent accompagnés par le paiement des cotisations qui peut avoir lieu :
 
-- en espèces ou par chèque tiré sur le  compte de   l'employeur ou certifié s'il est tiré sur le compte de tiers
+- en espèces ou par chèque tiré sur le  compte de l'employeur ou certifié s'il est tiré sur le compte de tiers
 - par virement bancaire ou postal, auquel cas  l'employeur est invité à porter son numéro d'affiliation sur la copie de l'ordre de virement.
 
 ## Délais de paiement des cotisations

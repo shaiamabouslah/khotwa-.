@@ -21,7 +21,7 @@ keywords:
 sources:
 - url: https://best.rnu.tn/bourses-dexemption-des-frais-de-scolarite-majores-hiver-2022/
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true
@@ -39,8 +39,8 @@ Date limite d’envoi des demandes **: 01 décembre 2021** à minuit, heure loca
 
 **Nombre des places disponibles pour la session d’hiver 2022 :**
 
-- **Doctorat        : 03 places**
-- **Maîtrise         : 21  places**
-- **Baccalauréat :   0 place**
+- **Doctorat : 03 places**
+- **Maîtrise : 21  places**
+- **Baccalauréat : 0 place**
 
 **N.B: Merci de consulter le site web de la Mission Universitaire de la Tunisie à l’Amérique du Nord (MUTAN) pour déposer votre dossier de candidature.** [**http://www.mutan.org**](http://www.mutan.org/)

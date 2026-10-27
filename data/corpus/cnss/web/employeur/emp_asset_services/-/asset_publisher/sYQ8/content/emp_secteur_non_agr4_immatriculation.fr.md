@@ -30,7 +30,7 @@ first_seen: '2026-10-05T20:41:54+00:00'
 last_changed: '2026-10-05T20:41:54+00:00'
 content_hash: sha256:beb5f97f4f82b024c571ddfb2f8229e80b181974339f5f3f988d794058c88997
 words: 194
-status: active
+status: removed
 hint_source: llm
 nav_links:
 - text: Affiliation
@@ -47,6 +47,7 @@ nav_links:
   url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr4_affiliation_regime_complementaire?secteur=$secteur
 original_title: Employeurs - CNSS
 possibly_outdated: true
+duplicate_of: cnss:/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr1_immatriculation#index
 ---
 L'employeur est tenu d'immatriculer le personnel qu'il emploie dans un délai d'un mois à compter de la date d'affiliation. Pour les travailleurs engagés ultérieurement à cette date, l'immatriculation intervient dans un délai d'un mois à compter de la date de leur engagement.
 

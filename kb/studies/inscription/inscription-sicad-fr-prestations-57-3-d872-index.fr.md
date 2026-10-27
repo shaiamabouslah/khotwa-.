@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: http://www.sicad.gov.tn/Fr/Prestations_57_3_D872
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-07'
 status: active
 generated: true
@@ -81,9 +81,3 @@ generated: true
   - **Protection et contrôle de la qualité des produits agricoles**
 
 ### Ajouter un commentaire
-
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Protection d'une obtention végétale et octroi de certificat d'obtention végétale http://www.sicad.gov.tn//Prestations_57_3_D872 "Partager sur twitter")
-Imprimer

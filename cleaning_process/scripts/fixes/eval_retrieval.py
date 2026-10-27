@@ -39,6 +39,14 @@ for q in qs:
     for k in (1, 3, 5): hits[k] += 0 < pos <= k
     rr += 1 / pos if pos else 0
     if not pos: miss.append(q)
+if not pos:
+    print("\nMISSED QUERY:", q["q"])
+    print("Expected doc:", q["doc_id"])
+
+    results = search(q["q"], q.get("lang"), k=5)
+    print("Retrieved:", results)
 n = len(qs)
 print(f"{n} questions | hit@1 {hits[1]/n:.2f}  hit@3 {hits[3]/n:.2f}  hit@5 {hits[5]/n:.2f}  MRR {rr/n:.2f}")
-for m in miss[:8]: print("  miss:", m["q"][:70], "->", m["doc_id"][:60])
+for m in miss[:8]:
+    print("\nMISS:", m["q"], "->", m["doc_id"])
+    print("Retrieved:", search(m["q"], m.get("lang"), k=5))

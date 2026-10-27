@@ -32,7 +32,7 @@ first_seen: '2026-10-05T20:42:27+00:00'
 last_changed: '2026-10-05T20:42:27+00:00'
 content_hash: sha256:9881569f444903889b70c481d88af64a817a1af49a01cfc0dbd0b901fbd19c0c
 words: 185
-status: active
+status: removed
 hint_source: llm
 nav_links:
 - text: Affiliation
@@ -51,6 +51,7 @@ nav_links:
   url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr5_affiliation_regime_complementaire?secteur=$secteur
 original_title: Employeurs - CNSS
 possibly_outdated: true
+duplicate_of: cnss:/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr4_remise_penalites#index
 ---
 Les pénalités de retard encourues suite à un paiement tardif des cotisations peuvent faire l'objet d'une remise gracieuse.
 

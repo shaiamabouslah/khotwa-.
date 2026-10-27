@@ -21,7 +21,7 @@ keywords:
 sources:
 - url: https://oous.rnu.tn/ar/bourses-universitaires_2
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true

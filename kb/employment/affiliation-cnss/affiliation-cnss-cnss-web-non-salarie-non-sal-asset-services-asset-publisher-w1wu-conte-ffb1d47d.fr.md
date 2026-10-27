@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-ffb1d47d
-title: Indépendants et autres catégories - CNSS
+title: Non Sal Secteur agr1 Affiliation (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -18,7 +18,7 @@ sources:
   - Services Non Salarié
   - Non_Sal Secteur_agr1_Affiliation
   source_updated: '2024-06-27'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true

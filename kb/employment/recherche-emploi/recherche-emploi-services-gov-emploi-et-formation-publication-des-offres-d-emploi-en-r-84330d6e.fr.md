@@ -26,7 +26,7 @@ sources:
 - url: http://services.gov.tn/emploi-et-formation/
   breadcrumb:
   - Publication des offres d’emploi en réponse aux besoins de l’entreprise
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true

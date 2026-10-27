@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-avantages-asset-publisher-0pnx-c-c53a5b2f
-title: Employeurs - CNSS
+title: Emp Secteur non agr3 Contenu Avantage6 (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -30,19 +30,11 @@ sources:
   - Services Employeur Avantages
   - Emp_Secteur non_agr3_Contenu Avantage6
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr3_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr3_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr3_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr3_contenu-avantage6?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_attestations?secteur=$secteur)
-- [Affiliation au régime complémentaire de pensions](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_affiliation_regime_complementaire?secteur=$secteur)
 
 - Les entreprises employant des agents de nationalité tunisienne titulaires d'un diplôme d'enseignement supérieur ou d'un diplôme équivalent bénéficient de la prise en charge par le Fonds National de l'Emploi d'une quote-part dégressive de la cotisation patronale au régime légal de sécurité sociale, durant une période de sept ans, si les conditions suivantes sont remplies :
   - Les entreprises du secteur privé ayant effectué de nouveaux recrutements du 1er janvier 2009 au 31 décembre 2011, de demandeurs d'emplois parmi les stagiaires dans le cadre des contrats d'insertion des diplômés de l'enseignement supérieur dont la période de chômage excède trois années à compter de la date d'obtention du diplôme concerné.
@@ -50,10 +42,10 @@ generated: true
 
 La quote-part de la prise en charge par le Fonds National de l'Emploi est fixée comme suit :
 
-| **Taux de prise en charge** | 1ère  année | 2ème  année | 3ème  année | 4ème  année | 5ème  année | 6ème   année | 7ème  année |
+| **Taux de prise en charge** | 1ère  année | 2ème  année | 3ème  année | 4ème  année | 5ème  année | 6ème année | 7ème  année |
 | 100% | 100% | 85% | 70% | 55% | 40% | 25% |
 
-- Les entreprises du secteur privé bénéficient de la prise en charge par le Fonds National de l'Emploi   d'une  quote-part dégressive de la cotisation patronale au régime légal de sécurité sociale, durant une période de trois ans, au titre des salaires versés aux agents de nationalité tunisienne titulaires d'un diplôme de l'enseignement supérieur ou d'un diplôme équivalent, et ce pour les nouveaux recrutements effectués entre le 1er janvier 2011 et le 31 décembre 2011,  de demandeurs d'emplois parmi les stagiaires dans le cadre des contrats d'insertion des diplômés de l'enseignement supérieur dont la période de chômage est au moins égale à deux années à compter de la date d'obtention du diplôme concerné.
+- Les entreprises du secteur privé bénéficient de la prise en charge par le Fonds National de l'Emploi d'une  quote-part dégressive de la cotisation patronale au régime légal de sécurité sociale, durant une période de trois ans, au titre des salaires versés aux agents de nationalité tunisienne titulaires d'un diplôme de l'enseignement supérieur ou d'un diplôme équivalent, et ce pour les nouveaux recrutements effectués entre le 1er janvier 2011 et le 31 décembre 2011,  de demandeurs d'emplois parmi les stagiaires dans le cadre des contrats d'insertion des diplômés de l'enseignement supérieur dont la période de chômage est au moins égale à deux années à compter de la date d'obtention du diplôme concerné.
 
 La quote-part de la prise en charge par le Fonds National de l'Emploi est fixée comme suit :
 

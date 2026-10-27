@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-49877a09
-title: Employeurs - CNSS
+title: Emp Secteur pêche1 Assiette (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -31,19 +31,11 @@ sources:
   - Services Employeur
   - Emp_Secteur pêche1_Assiette
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche1_contenu-avantage_2?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_attestations?secteur=$secteur)
-- [Affiliation au régime complémentaire de pensions](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation_regime_complementaire?secteur=$secteur)
 
 ## Assiette des cotisations
 
@@ -70,7 +62,7 @@ Le taux de cotisation au titre des accidents du travail et des maladies professi
 
 La déclarationde salaires et l'état récapitulatif sont déposés auprès du Bureau Régional ou local territorialement compétent accompagnéspar le paiement des cotisations qui peut avoir lieu :
 
-- en espèces ou par chèque tiré sur le  compte de   l'employeur ou certifié s'il est tiré sur le compte de tiers
+- en espèces ou par chèque tiré sur le  compte de l'employeur ou certifié s'il est tiré sur le compte de tiers
 - par virement bancaire ou postal, auquel cas  l'employeur est invité à porter  son numéro d'affiliation sur la copie de l'ordre de virement.
 
 L'employeur peut procéder à la télé déclaration et au télépaiement des cotisations par Internet.
@@ -87,4 +79,4 @@ En cas de non dépôt de déclaration de salaires, une pénalité de retard supp
 
 ## Références législatives et réglementaires
 
-- Loi n°60-30 du 14 décembre 1960, relative à l'organisation des régimes de sécurité sociale, telle que modifiée et complétée par les textes subséquents et notamment : Art. 40,  Art. 42,  Art. 43,  Art. 44,  Art. 45,  Art. 46,  Art. 47,   Art. 105
+- Loi n°60-30 du 14 décembre 1960, relative à l'organisation des régimes de sécurité sociale, telle que modifiée et complétée par les textes subséquents et notamment : Art. 40,  Art. 42,  Art. 43,  Art. 44,  Art. 45,  Art. 46,  Art. 47, Art. 105

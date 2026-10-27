@@ -1,11 +1,10 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-avantages-asset-publisher-0pnx-c-f6e048cd
-title: Employeurs - CNSS
+title: Emp Secteur non agr4 Attestations (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
-translations:
-- ar
+translations: []
 org: Caisse Nationale de Sécurité Sociale (CNSS)
 keywords:
 - affiliation
@@ -19,18 +18,11 @@ sources:
   - Services Employeur Avantages
   - Emp_Secteur non_agr4_Attestations
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr4_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr4_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr4_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr4_remise_penalites?secteur=$secteur)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr4_attestations?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Affiliation au régime complémentaire de pensions](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr4_affiliation_regime_complementaire?secteur=$secteur)
 
 ## Attestation de solde
 

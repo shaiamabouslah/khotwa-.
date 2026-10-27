@@ -22,7 +22,7 @@ sources:
 - url: https://www.ooun.rnu.tn/web/fr/bourse.html
   breadcrumb:
   - Vous êtes en mastère ou en cycle agrégatif, et vous postulez à une bourse ou un prêt ?
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
@@ -33,7 +33,7 @@ generated: true
  **1/Certaines conditions à remplir :**
 **\*** Avoir le diplôme d’études supérieures.
 \* Pour postuler à une bourse: Le revenu net des parents après déduction des charges sociales ne devant pas dépasser le salaire minimum interprofessionnel garanti SMIG (3840d pour l'année 2014).
-\*  Pour postuler à un prêt:   le revenu  net des parents après abattement des charges sociales devant être supérieur au SMIG (3840d pour l'année 2014).
+\*  Pour postuler à un prêt: le revenu  net des parents après abattement des charges sociales devant être supérieur au SMIG (3840d pour l'année 2014).
 
 **2/ Comment constituer le dossier ?**
 - formulaire en ligne à remplir (disponible sur le site web [www.ooun.rnu.tn](http://www.ooun.rnu.tn) )

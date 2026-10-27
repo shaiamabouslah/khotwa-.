@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-g-86b5913f
-title: Salariés - CNSS
+title: Sal gens maison Immatriculation (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -30,7 +30,7 @@ sources:
   - Services Salarié
   - Sal_gens_maison_Immatriculation
   source_updated: '2016-09-02'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true

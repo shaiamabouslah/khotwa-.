@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-06af8f82
-title: المؤجرون - CNSS
+title: Emp Secteur pêche3 Immatriculation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar
@@ -31,16 +31,11 @@ sources:
   - Services Employeur
   - Emp_Secteur pêche3_Immatriculation
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_assiette?secteur=$secteur)
-- [طرح الخطايا](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_remise_penalites?secteur=$secteur)
 
 يتعين على المؤجر تقديم مطالب تسجيل أجرائه في اجل شهر من تاريخ انخراطه. بالنسبة للعملة المنتدبين بعد هذا التاريخ، الذين لم يسبق تسجيلهم بالصندوق، يتعين على المؤجر أن يطلب تسجيلهم في أجل شهر بداية من تاريخ انتدابهم.
  وفي صورة تخلف المؤجر عن القيام بهذا الواجب يمكن للأجير غير المسجل أن يبادر بنفسه بتقديم مطلب التسجيل إلى المكتب الجهوي أو المحلي.

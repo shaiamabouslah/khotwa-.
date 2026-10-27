@@ -20,7 +20,7 @@ sources:
 - url: http://services.gov.tn/je-poursuis-mes-etudes-a-luniversite/
   breadcrumb:
   - Remplissage de la fiche de choix lors de la session principale d’orientation universitaire
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true

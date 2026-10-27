@@ -30,7 +30,7 @@ first_seen: '2026-10-05T20:35:54+00:00'
 last_changed: '2026-10-06T13:32:22+00:00'
 content_hash: sha256:50ace98652d3f3019b0083945d5c95a6979ab8558d22cff32cf8dd8a87b2017f
 words: 268
-status: active
+status: removed
 hint_source: llm
 nav_links:
 - text: الانخراط
@@ -47,6 +47,7 @@ nav_links:
   url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_attestations?secteur=$secteur
 original_title: المؤجرون - CNSS
 possibly_outdated: true
+duplicate_of: cnss:/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_affiliation#index
 ---
 الانخراط بأنظمة الضمان الاجتماعي إجباري على كل مؤجر ينتدب عاملا واحدا على الأقل بصفة أجير وذلك في الشهر الذي يلي تاريخ الانتداب.
 

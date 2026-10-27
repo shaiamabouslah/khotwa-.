@@ -12,7 +12,7 @@ keywords:
 sources:
 - url: https://www.oouc.rnu.tn/blagh-al-altlb-almmnohyn-khlal-alsn-algamaay-20232024-hol-mnh-altrbs
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true

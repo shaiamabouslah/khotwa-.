@@ -21,7 +21,7 @@ keywords:
 sources:
 - url: https://www.oouc.rnu.tn/blagh-hol-astkmal-mlfat-almnh-oalkrod-algamaay-labnaaa-rgal-altaalym-llsn-algamaay-20242025
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true

@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-47afd536
-title: المؤجرون - CNSS
+title: Emp Secteur agr1 Assiette (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar
@@ -31,18 +31,11 @@ sources:
   - Services Employeur
   - Emp_Secteur agr1_Assiette
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_assiette?secteur=$secteur)
-- [طرح الخطايا](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_remise_penalites?secteur=$secteur)
-- [الامتيازات](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_agr1_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [الشهادات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_attestations?secteur=$secteur)
 
 ## قاعدة الاشتراكات
 
@@ -53,17 +46,17 @@ generated: true
  حددت نسبة اشتراكات الضمان الاجتماعي بـ 12,29 %  موزعة كما يلي**:**
 
 - 7,72 % على كاهل المؤجر
-- 4,57 %   على كاهل الأجير.
+- 4,57 % على كاهل الأجير.
 
 مبلغ الاشتراكات بداية من الثلاثية الاولى لسنة 2025
 
-| الاختصاص | الدخل الجزافي  (بالدينار) | اشتراكات بداية من الثلاثية الأولى  لسنة    (بالدينار)   2025 | | |
+| الاختصاص | الدخل الجزافي  (بالدينار) | اشتراكات بداية من الثلاثية الأولى  لسنة (بالدينار) 2025 | | |
 | المؤجر | الأجير | المجموع |
 | عامل عادي (1)  عامل مختص (1,5)  عامل ماهر (2) | 914,400 | 70,592 | 41,788 | 112,380 |
 
 يتحمل المؤجر نسبة الاشتراكات بنظام جبر الأضرار الناتجة عن حوادث الشغل و الأمراض المهنية.
 
-حددت هذه النسبة بـ 0,8   % من الأجر الأدنى الفلاحي المضمون  اليومي  مع تطبيق ضارب 1,5مضروب في عدد أيام العمل حسب نوع الزراعة أو النشاط طبقا [للأمر عدد 538 لسنة 1995 المؤرخ في غرة أفريل 1995(الفصل 4).](https://www.cnss.tn/ar/c/document_library/get_file?uuid=421cca15-9bd9-4673-a441-ed547fa9958f&groupId=33103)
+حددت هذه النسبة بـ 0,8 % من الأجر الأدنى الفلاحي المضمون  اليومي  مع تطبيق ضارب 1,5مضروب في عدد أيام العمل حسب نوع الزراعة أو النشاط طبقا [للأمر عدد 538 لسنة 1995 المؤرخ في غرة أفريل 1995(الفصل 4).](https://www.cnss.tn/ar/c/document_library/get_file?uuid=421cca15-9bd9-4673-a441-ed547fa9958f&groupId=33103)
 
 ## الوثائق المطلوبة
 

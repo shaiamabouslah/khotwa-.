@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-3d1a0cb6
-title: Employeurs - CNSS
+title: Emp travailleurs chantiers Affiliation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -31,15 +31,11 @@ sources:
   - Services Employeur
   - Emp_travailleurs_chantiers_Affiliation
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_imma?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_cotisations?secteur=$secteur)
 
 L'affiliation des employeurs aux régimes de sécurité sociale est  obligatoire, elle doit intervenir dans le mois qui  suit l'engagement de  personnel salarié.
 

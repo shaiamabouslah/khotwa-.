@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-t-8ae3f5d8
-title: الأجراء - CNSS
+title: Sal travailleurs chantiers Immatriculation (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar
@@ -30,7 +30,7 @@ sources:
   - Services Salarié
   - Sal_travailleurs_chantiers_Immatriculation
   source_updated: '2016-09-02'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true

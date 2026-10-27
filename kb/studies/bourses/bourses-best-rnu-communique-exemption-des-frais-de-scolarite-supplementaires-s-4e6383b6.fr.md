@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://best.rnu.tn/communique-exemption-des-frais-de-scolarite-supplementaires-session-automne-2026/
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true
@@ -32,6 +32,6 @@ L’étude des dossiers de candidatures relève des attributions de la Commissio
 **Nombre des places disponibles pour la session d’automne 2026:**
 
 **Baccalauréat** : **1place**
-**Maîtrise**          : **6** **places**
+**Maîtrise** : **6** **places**
 
 Nous vous souhaitons d’excellentes chances.

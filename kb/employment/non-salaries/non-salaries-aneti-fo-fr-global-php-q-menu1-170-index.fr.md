@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://www.emploi.nat.tn/fo/Fr/global.php?menu1=170
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-10'
 status: active
 generated: true
@@ -33,8 +33,8 @@ Structures intervenantes
 Objectifs général
 Contribuer à renforcer la création d’emploi pour promouvoir l’inclusion économique à travers l’Entrepreneuriat, et le Développement des Compétences
 
-Objectifs spécifiques du programme : 
+Objectifs spécifiques du programme :
 - Renforcer l’employabilité des chercheurs d’emploi en appuyant les mécanismes et programmes de formation complémentaire d’adaptation ou de réadaptation
-- Encourager l’entrepreneurial à travers :​
+- Encourager l’entrepreneurial à travers :
   - L’élargissement du champ d’action des dispositifs d’accompagnement et d’encadrement, avant et après la création des entreprises,
   - Le renforcement de la capacité du système de prêts sans intérêts pour couvrir les

@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-0d4f8540
-title: Salariés - CNSS
+title: Sal Secteur peche1 actions licenciement1 (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -31,7 +31,7 @@ sources:
   - Services Salarié
   - Sal Secteur_peche1_actions_licenciement1
   source_updated: '2016-09-02'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
@@ -57,7 +57,7 @@ Le dossier est déposé au Bureau régional ou local territorialement compétent
 
 ## Mode et délai de paiement
 
-Le montant de ces prestations correspond aux taux plafond accordés aux salariés du secteur  non agricole.   Elles sont servies par mandat postal dans les  15 jours à partir de la date de dépôt du dossier.
+Le montant de ces prestations correspond aux taux plafond accordés aux salariés du secteur  non agricole. Elles sont servies par mandat postal dans les  15 jours à partir de la date de dépôt du dossier.
 
 ## Références législatives et réglementaires
 

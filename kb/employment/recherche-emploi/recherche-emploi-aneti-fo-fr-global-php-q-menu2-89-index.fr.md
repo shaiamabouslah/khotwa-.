@@ -11,16 +11,16 @@ keywords:
 sources:
 - url: https://www.emploi.nat.tn/fo/Fr/global.php?menu2=89
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-10'
 status: active
 generated: true
 ---
 
-vous êtes ici : [ANETI](https://www.emploi.nat.tn/fo/Fr/global.php?menu=5)[Consultations de l’ANETI](https://www.emploi.nat.tn/fo/Fr/global.php?menu1=150)[Résultat des consultations](https://www.emploi.nat.tn/fo/Fr/global.php?menu2=89)
+vous êtes ici : ANETIConsultations de l’ANETIRésultat des consultations
 
 نُشر الإعلان عن نتيجة الاستشارة عدد 29/2025 المتعلقة بتعيين مراقب حسابات الوكالة لسنوات 2017 و2018 و2019
 
-[الاعلان](https://www.emploi.nat.tn/ckeditor/ckfinder/userfiles/files/resultat.pdf)
+الاعلان
 
 آخر تحديث 10/10/2026 a 23:27

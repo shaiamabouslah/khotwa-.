@@ -21,7 +21,7 @@ keywords:
 sources:
 - url: https://best.rnu.tn/bourses-mesrs-mitacs-globalink-2026-2027-appel-a-candidatures-pour-des-stages-de-recherche/
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true

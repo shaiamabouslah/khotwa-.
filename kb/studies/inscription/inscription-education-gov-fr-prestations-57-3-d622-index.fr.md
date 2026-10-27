@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: http://www.sicad.gov.tn/Fr/Prestations_57_3_D622
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-07'
 status: active
 generated: true
@@ -50,16 +50,10 @@ generated: true
 
   | **Ministère des Technologies de la Communication et de l'Economie Numérique** | Ministère des Technologies de la Communication et de l'Economie Numérique  |  |  | | --- | --- | | Adresse | 3, bis rue d''Angleterre 1000 Tunis | | E-mail | info@infocom.tn | | Téléphone | 71.359.000 | | Fax | 71.359.000 | | Site web | <http://www.mincom.tn> | | En savoir plus |  | |
 
-    | **Office Nationale des Postes** | Office Nationale des Postes  |  |  | | --- | --- | | Adresse | Rue Hédi Nouira 1001 Tunis | | Site web | <http://www.poste.tn> | |
+**Office Nationale des Postes** - Office Nationale des Postes - Adresse - Rue Hédi Nouira 1001 Tunis - Site web - <http://www.poste.tn>
 
 - **Technologie de l'Information et de la Communication**
 
   - **Services financiers de la poste**
 
 ### Ajouter un commentaire
-
-Partager
-
-- Facebook
-- [Twitter](http://twitter.com/home?status=Transfert des frais de scolarité et de séjour au profit des étudiants à l'étranger http://www.sicad.gov.tn//Prestations_57_3_D622 "Partager sur twitter")
-Imprimer

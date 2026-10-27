@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://best.rnu.tn/offre-de-bourses-dans-le-cadre-des-ententes-avec-luniversite-de-montreal-ludm-et-avec-linstitut-national-de-la-recherche-scientifique-du-quebec-linrs/
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-07'
 status: active
 generated: true
@@ -23,8 +23,8 @@ generated: true
 
 Offre de bourses de Mastère et de Doctorat dans le cadre de l’Entente de coopération entre le Ministère de l’Enseignement Supérieur et de la Recherche Scientifique  (MESRS) et l’Institut national de la recherche scientifique (**INRS**) au Canada au titre de l’année universitaire 2023-2024
 
-[ANNONCE-INRS](https://best.rnu.tn/wp-content/uploads/2019/10/ANNONCE-INRS-2023-2024.pdf)
+ANNONCE-INRS
 
-[ANNEXE MESRS-INRS](https://best.rnu.tn/wp-content/uploads/2019/10/ANNEXE-MESRS-INRS-2023-2024.pdf)
+ANNEXE MESRS-INRS
 
-[ANNONCE COMPLÉMENTAIRE](https://best.rnu.tn/wp-content/uploads/2019/10/Annonce-complementair.pdf)
+ANNONCE COMPLÉMENTAIRE

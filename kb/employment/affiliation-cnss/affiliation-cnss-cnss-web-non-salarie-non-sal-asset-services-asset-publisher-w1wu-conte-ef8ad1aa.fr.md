@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-ef8ad1aa
-title: Indépendants et autres catégories - CNSS
+title: Non Sal autres tte Affiliation (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -18,7 +18,7 @@ sources:
   - Services Non Salarié
   - Non_Sal_autres_tte_Affiliation
   source_updated: '2024-06-27'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true

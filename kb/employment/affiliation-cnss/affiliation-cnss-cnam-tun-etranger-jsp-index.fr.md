@@ -25,7 +25,7 @@ keywords:
 sources:
 - url: https://www.cnam.nat.tn/tun_etranger.jsp
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true
@@ -128,24 +128,21 @@ Sont également exclus les frais des soins prodigués suite aux dommages provoqu
 - [Convention bilatérale tuniso-hollandaise](https://www.cnam.nat.tn/doc/upload/pb_francais.pdf)
 
 Contact
-:   12, Rue Abou Hamed El Ghazeli
-:   Montplaisir, 1073 Tunis
-:   Numéro Vert : 80100295
-:   brc@cnam.nat.tn
+: 12, Rue Abou Hamed El Ghazeli
+: Montplaisir, 1073 Tunis
+: Numéro Vert : 80100295
+: brc@cnam.nat.tn
 
 Assuré social
-:   [Espace assuré](https://www.cnam.nat.tn/espace_assure.jsp)
-:   [Services en Ligne](https://centre.e-cnam.tn/login)
-:   [Centres régionaux et locaux](https://www.cnam.nat.tn/bureauxMap.jsp)
+: [Espace assuré](https://www.cnam.nat.tn/espace_assure.jsp)
+: [Services en Ligne](https://centre.e-cnam.tn/login)
+: [Centres régionaux et locaux](https://www.cnam.nat.tn/bureauxMap.jsp)
 
 Professionnel de Santé
-:   [Espace professionnel de santé](https://www.cnam.nat.tn/espace_ps.jsp)
-:   [Services en Ligne](https://centre.e-cnam.tn)
-:   [Centres régionaux et locaux](https://www.cnam.nat.tn/bureauxMap.jsp)
+: [Espace professionnel de santé](https://www.cnam.nat.tn/espace_ps.jsp)
+: [Services en Ligne](https://centre.e-cnam.tn)
+: [Centres régionaux et locaux](https://www.cnam.nat.tn/bureauxMap.jsp)
 
 [Plan du site](https://www.cnam.nat.tn/plan.jsp)
-
-- [Youtube](https://www.youtube.com/channel/UChhnHN2kwYcCyl9XUuqpz-g)
-- [facebook](https://www.facebook.com/CNAM-Tunisie-الصندوق-الوطني-للتأمين-على-المرض-101622205483978)
 
 Dernière mise à jour le : 17/06/2026Caisse Nationale d'Assurance Maladie - Tous droits réservés © 2026

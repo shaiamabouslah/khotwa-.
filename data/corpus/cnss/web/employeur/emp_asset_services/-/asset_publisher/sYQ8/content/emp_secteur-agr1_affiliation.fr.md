@@ -29,7 +29,7 @@ first_seen: '2026-10-05T20:35:51+00:00'
 last_changed: '2026-10-06T13:32:20+00:00'
 content_hash: sha256:83010f4658560f768703810cabde32589b308fe848b91d41782ed18923f9c67e
 words: 333
-status: active
+status: removed
 hint_source: llm
 nav_links:
 - text: Affiliation
@@ -46,6 +46,7 @@ nav_links:
   url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_attestations?secteur=$secteur
 original_title: Employeurs - CNSS
 possibly_outdated: true
+duplicate_of: cnss:/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_affiliation#index
 ---
 L'affiliation des employeurs aux  régimes  de sécurité sociale  est obligatoire, elle doit intervenir dans le mois qui  suit l'engagement de personnel salarié.
 

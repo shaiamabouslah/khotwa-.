@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-258276fe
-title: Employeurs - CNSS
+title: Emp Secteur agr2 Assiette (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -20,18 +20,11 @@ sources:
   - Services Employeur
   - Emp_Secteur agr2_Assiette
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_agr2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_attestations?secteur=$secteur)
 
 ## Assiette des cotisations
 
@@ -58,14 +51,14 @@ Le taux de cotisation au titre des accidents du travail et des maladies professi
 
 La déclaration de salaires et l'état récapitulatif sont déposés auprès du Bureau Régional ou local territorialement compétent accompagnéspar  le paiement des cotisations qui peut avoir lieu :
 
-- en espèces ou par chèque tiré sur le  compte de   l'employeur ou certifié s'il est tiré sur le compte de tiers
+- en espèces ou par chèque tiré sur le  compte de l'employeur ou certifié s'il est tiré sur le compte de tiers
 - par virement bancaire ou postal, auquel cas  l'employeur est invité à porter son numéro d'affiliation sur la copie de l'ordre de virement.
 
  L'employeur peut procéder à la télé déclaration et au télépaiement des cotisations par Internet
 
 ## Délais de paiement des cotisations
 
-Les cotisations afférentes  à un trimestre donné doivent être payées au plus tard le quinzième  jour  du mois qui   suit  le trimestre échu.
+Les cotisations afférentes  à un trimestre donné doivent être payées au plus tard le quinzième  jour  du mois qui suit  le trimestre échu.
 
 ## Pénalités de retard
 

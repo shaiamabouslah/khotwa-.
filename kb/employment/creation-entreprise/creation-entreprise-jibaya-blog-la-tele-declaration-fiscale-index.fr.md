@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://jibaya.tn/blog/la-tele-declaration-fiscale/
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-07'
 status: active
 generated: true
@@ -23,7 +23,7 @@ generated: true
 
 - [Services en ligne](https://jibaya.tn/services-en-ligne/)
 
-- Télé-déclaration Fiscale​
+- Télé-déclaration Fiscale
 
 ## Etape 1 : Adhésion au système de la télédéclaration
 

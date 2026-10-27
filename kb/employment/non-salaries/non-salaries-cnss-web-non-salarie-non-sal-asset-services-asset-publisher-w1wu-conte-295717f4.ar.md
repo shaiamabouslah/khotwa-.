@@ -1,11 +1,10 @@
 ---
 id: non-salaries-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-295717f4
-title: غير الأجراء - CNSS
+title: Non Sal Secteur non agr2 avantage3 (Non Salarié)
 domain: employment
 subtopic: non-salaries
 lang: ar
-translations:
-- fr
+translations: []
 org: Caisse Nationale de Sécurité Sociale (CNSS)
 keywords:
 - non salarié
@@ -25,7 +24,7 @@ sources:
   - Services Non Salarié
   - Non_Sal Secteur_ non_agr2_avantage3
   source_updated: '2024-06-27'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
@@ -65,7 +64,7 @@ generated: true
 
 ### المراجع التشريعية والترتيبية
 
- الفصلان 44 و45   من مجلة تشجيع الاستثمارات الصادرة بمقتضى القانون عدد 120 لسنة 1993 المؤرخ في 27 ديسمبر 1993 مثلما تم تنقيحها وإتمامها بالنصوص اللاحقة وخاصة القانون عدد 69 لسنة 2007 المؤرخ في 27 ديسمبر 2007 والمتعلق بحفز المبادرة الاقتصادية.
+ الفصلان 44 و45 من مجلة تشجيع الاستثمارات الصادرة بمقتضى القانون عدد 120 لسنة 1993 المؤرخ في 27 ديسمبر 1993 مثلما تم تنقيحها وإتمامها بالنصوص اللاحقة وخاصة القانون عدد 69 لسنة 2007 المؤرخ في 27 ديسمبر 2007 والمتعلق بحفز المبادرة الاقتصادية.
 
  الأمر عدد 1166 لسنة 1995 المؤرخ في 3 جويلية 1995 والمتعلق بنظام الضمان الاجتماعي للعملة غير الأجراء في القطاعين الفلاحي وغير الفلاحي.
 

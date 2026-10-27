@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-c6f00a45
-title: Employeurs - CNSS
+title: Emp travailleurs chantiers cotisations (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -31,15 +31,11 @@ sources:
   - Services Employeur
   - Emp_travailleurs_chantiers_cotisations
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-10'
 status: active
 generated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_imma?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_travailleurs_chantiers_cotisations?secteur=$secteur)
 
 ## Assiette des cotisations
 
@@ -69,12 +65,12 @@ Le taux des cotisations de sécurité sociale est fixé à 7,5% réparti  comme 
 
 La déclaration de salaires et l'état récapitulatif sont déposés auprès du Bureau  Régional ou local territorialement compétent accompagnéspar  le paiement des cotisations qui peut avoir lieu :
 
-- en espèces ou par chèque tiré sur le  compte de   l'employeur ou certifié s'il est tiré sur le compte de tiers
+- en espèces ou par chèque tiré sur le  compte de l'employeur ou certifié s'il est tiré sur le compte de tiers
 - par virement bancaire ou postal, auquel cas  l'employeur est invité à porter son numéro d'affiliation sur la copie de l'ordre de virement.
 
 ## Délais de paiement des cotisations
 
-Les cotisations afférentes à un trimestre donné doivent être payées à la fin   du mois qui suit le trimestre échu ou mensuellement ou à l'avance.
+Les cotisations afférentes à un trimestre donné doivent être payées à la fin du mois qui suit le trimestre échu ou mensuellement ou à l'avance.
 
 ## Références législatives et réglementaires
 

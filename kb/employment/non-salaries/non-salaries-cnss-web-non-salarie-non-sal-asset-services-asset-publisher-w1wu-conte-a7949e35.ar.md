@@ -1,6 +1,6 @@
 ---
 id: non-salaries-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-a7949e35
-title: غير الأجراء - CNSS
+title: Non Sal Secteur agr2 avantage1 (Non Salarié)
 domain: employment
 subtopic: non-salaries
 lang: ar
@@ -24,7 +24,7 @@ sources:
   - Services Non Salarié
   - Non_Sal Secteur_agr2_avantage1
   source_updated: '2024-06-27'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true

@@ -30,7 +30,7 @@ first_seen: '2026-10-05T20:43:46+00:00'
 last_changed: '2026-10-05T20:43:46+00:00'
 content_hash: sha256:d5e371d914025136fe4e99cf0b826ea35a4eba08db26ff73b75838648f43e154
 words: 197
-status: active
+status: removed
 hint_source: llm
 nav_links:
 - text: Affiliation
@@ -47,6 +47,7 @@ nav_links:
   url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr2_attestations?secteur=$secteur
 original_title: Employeurs - CNSS
 possibly_outdated: true
+duplicate_of: cnss:/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_immatriculation#index
 ---
 L'employeur est tenu d'immatriculer le personnel qu'il emploie dans un délai d'un mois à compter de la date d'affiliation. Pour les travailleurs engagés ultérieurement à cette date, l'immatriculation intervient dans un délai d'un mois  à compter de la date de leur engagement.
 

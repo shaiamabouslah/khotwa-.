@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-38f57942
-title: Employeurs - CNSS
+title: Emp Secteur pêche3 Affiliation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -31,16 +31,11 @@ sources:
   - Services Employeur
   - Emp_Secteur_pêche3_Affiliation
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche3_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche3_remise_penalites?secteur=$secteur)
 
 L'affiliation des employeurs aux régimes de sécurité sociale est obligatoire, elle doit intervenir dans le mois qui  suit l'engagement de  personnel salarié.
 
@@ -50,7 +45,7 @@ Le régime specifique est celui appliqué aux [pêcheurs dont la jauge brut est 
 
 - [Une demande d'affiliation](https://www.cnss.tn/c/document_library/get_file?uuid=55c5e469-f0c8-4050-894b-cb51a6dbd037&groupId=33103) (imprimé CNSS)
 - une copie de la carte d'identité nationale de l'employeur
-- une copie certifiée conforme de l'attestation déterminant la jauge du bateau délivrée  par les   autorités maritimes du port d'attache ou par le service régional  ou local  de la Marine Marchande.
+- une copie certifiée conforme de l'attestation déterminant la jauge du bateau délivrée  par les autorités maritimes du port d'attache ou par le service régional  ou local  de la Marine Marchande.
 
 ## Lieu de dépôt
 

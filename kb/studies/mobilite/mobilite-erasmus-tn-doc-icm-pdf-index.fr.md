@@ -18,7 +18,7 @@ keywords:
 sources:
 - url: https://www.erasmusplus.tn/doc/ICM.pdf
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
@@ -149,10 +149,10 @@ Received Projects 93 81 169 156
 Contracted Projects 71 72 140 135
 Acceptation Rate 76,34% 88,88% 82,84% 86,53%
 
-|  | 2015 2016 2017 2018 Tunisia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| Received Projects | 93 |  |  |  | 81 |  |  |  | 169 |  |  |  | 156 |  |  |
-| Contracted Projects | 71 |  |  |  | 72 |  |  |  | 140 |  |  |  | 135 |  |  |
-| Acceptation Rate | 76,34% |  |  |  | 88,88% |  |  |  | 82,84% |  |  |  | 86,53% |  |  |
+2015 2016 2017 2018 Tunisia
+Received Projects - 93 - 81 - 169 - 156
+Contracted Projects - 71 - 72 - 140 - 135
+Acceptation Rate - 76,34% - 88,88% - 82,84% - 86,53%
 
 <!-- page 15 -->
 ICM Requested and Contracted Grant

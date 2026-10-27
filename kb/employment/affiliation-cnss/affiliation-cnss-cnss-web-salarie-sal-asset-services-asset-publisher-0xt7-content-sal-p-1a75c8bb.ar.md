@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-p-1a75c8bb
-title: الأجراء - CNSS
+title: Sal peche3 Immatriculation (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar
@@ -31,7 +31,7 @@ sources:
   - Services Salarié
   - Sal_peche3_Immatriculation
   source_updated: '2016-09-02'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true

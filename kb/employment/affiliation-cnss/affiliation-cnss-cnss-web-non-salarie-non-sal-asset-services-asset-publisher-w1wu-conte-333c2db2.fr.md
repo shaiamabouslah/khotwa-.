@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-333c2db2
-title: Indépendants et autres catégories - CNSS
+title: Non Sal Secteur agr2 Cotisations (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -19,7 +19,7 @@ sources:
   - Services Non Salarié
   - Non_Sal Secteur_agr2_Cotisations
   source_updated: '2024-06-27'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
@@ -39,7 +39,7 @@ Le taux des cotisations de sécurité sociale est fixé à 14,71%.
 
 | **Classe de revenus** | **Coefficient multiplicateur du SMIG** | **Assiette  de cotisation -D-** | **Montant des cotisations -D-** | |
 
-L'adhésion au régime des accidents du travail est facultative, Le taux de cotisation y afférent est fixé à 0,6 % du revenu correspondant à la classe à laquelle appartient l'assuré   et ce conformément [au décret n°95-538 du 1er avril 1995 relatif à la fixation des taux de cotisation au régime de réparation des préjudices résultant des accidents du travail et des maladies professionnelles.](http://www.ccitunis-academy.com/c/document_library/get_file?uuid=2b4c5a74-61ee-438f-a8ce-7770990b5b9a&groupId=54202)
+L'adhésion au régime des accidents du travail est facultative, Le taux de cotisation y afférent est fixé à 0,6 % du revenu correspondant à la classe à laquelle appartient l'assuré et ce conformément [au décret n°95-538 du 1er avril 1995 relatif à la fixation des taux de cotisation au régime de réparation des préjudices résultant des accidents du travail et des maladies professionnelles.](http://www.ccitunis-academy.com/c/document_library/get_file?uuid=2b4c5a74-61ee-438f-a8ce-7770990b5b9a&groupId=54202)
 
 ## Pièces à fournir
 

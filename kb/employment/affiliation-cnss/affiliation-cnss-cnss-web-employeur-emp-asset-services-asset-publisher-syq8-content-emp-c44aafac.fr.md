@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-c44aafac
-title: Employeurs - CNSS
+title: Emp Secteur pêche2 Assiette (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
@@ -20,22 +20,15 @@ sources:
   - Services Employeur
   - Emp_Secteur pêche2_Assiette
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
 ---
 
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche2_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche2_contenu-avantage_1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_attestations?secteur=$secteur)
-
 ## Assiette des cotisations
 
-L'assiette servant de base pour le calcul des cotisations est composée de   l'ensemble  des versements en espèces ou en nature effectués par l'employeur en   rétribution du   travail  du salarié y compris les indemnités   et primes de toute nature se rattachant  au salaire.
+L'assiette servant de base pour le calcul des cotisations est composée de l'ensemble  des versements en espèces ou en nature effectués par l'employeur en rétribution du travail  du salarié y compris les indemnités et primes de toute nature se rattachant  au salaire.
 
 ## Taux des cotisations
 
@@ -63,7 +56,7 @@ Pour les pêcheurs payés à la part, ce taux est fixé à 0,8% du [SMAG journal
 
 La déclaration de salaires et l'état récapitulatif sont déposés auprès du Bureau Régional ou local territorialement compétent accompagnés par le paiement des cotisations qui peut avoir lieu :
 
-- en espèces ou par chèque tiré sur le  compte de   l'employeur ou certifié s'il est tiré sur le compte de tiers
+- en espèces ou par chèque tiré sur le  compte de l'employeur ou certifié s'il est tiré sur le compte de tiers
 - par virement bancaire ou postal, auquel cas  l'employeur est invité à porter  son numéro d'affiliation sur la copie de l'ordre de virement.
 
 L'employeur peut procéder à la télé déclaration et au télépaiement des cotisations par Internet.

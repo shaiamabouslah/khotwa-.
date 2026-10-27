@@ -30,7 +30,7 @@ first_seen: '2026-10-05T20:41:28+00:00'
 last_changed: '2026-10-05T20:41:28+00:00'
 content_hash: sha256:6afb527f59b3b9fc077c9024a9093555d57e4a8555be4fa38a70ac84074271bd
 words: 150
-status: active
+status: removed
 hint_source: llm
 nav_links:
 - text: الانخراط
@@ -49,6 +49,7 @@ nav_links:
   url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_affiliation_regime_complementaire?secteur=$secteur
 original_title: المؤجرون - CNSS
 possibly_outdated: true
+duplicate_of: cnss:/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr2_immatriculation#index
 ---
 يتعين على المؤجر تقديم مطالب تسجيل أجرائه في اجل شهر من تاريخانخراطه. بالنسبة للعملة المنتدبين بعد هذا التاريخ وغير المسجلين بالصندوق، يتعين على المؤجر أن يطلب تسجيلهم في أجل شهر بداية من تاريخ انتدابهم.
  وفي صورةتخلف المؤجر عن القيام بهذا الواجب يمكن للأجير غير المسجل أن يبادر بنفسه بتقديممطلب التسجيل إلى المكتب الجهوي أو المحلي الراجع له بالنظر**.**

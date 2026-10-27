@@ -21,7 +21,7 @@ keywords:
 sources:
 - url: https://www.mes.tn/image.php?id=622
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-07'
 status: active
 generated: true
@@ -35,9 +35,9 @@ generated: true
 
 - شهادة التحصيل
 
-- اختصاص: 
+- اختصاص:
 
-- السنة الجامعية: 
+- السنة الجامعية:
 
 - الوثائق المطلوبة:
 1. طلب التحويل

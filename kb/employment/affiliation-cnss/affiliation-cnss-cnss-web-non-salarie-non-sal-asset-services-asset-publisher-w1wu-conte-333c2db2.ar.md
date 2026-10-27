@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-333c2db2
-title: غير الأجراء - CNSS
+title: Non Sal Secteur agr2 Cotisations (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar
@@ -20,7 +20,7 @@ sources:
   - Services Non Salarié
   - Non_Sal Secteur_agr2_Cotisations
   source_updated: '2024-06-27'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
@@ -55,11 +55,11 @@ generated: true
 
 ## آجال خلاص الاشتراكات
 
-يقع دفع الاشتراكات في أجل أقصاه   اليوم الخامس عشر من الشهر الموالي للثلاثية المنقضية.
+يقع دفع الاشتراكات في أجل أقصاه اليوم الخامس عشر من الشهر الموالي للثلاثية المنقضية.
 
 ## خطايا التأخير
 
-يتحمل العامل غير الأجير الذي لم يقم بدفع اشتراكاته في الآجال القانونية خطايا تأخير بنسبة  1   %عن كل شهر تأخير أو جزء من الشهر .
+يتحمل العامل غير الأجير الذي لم يقم بدفع اشتراكاته في الآجال القانونية خطايا تأخير بنسبة  1 %عن كل شهر تأخير أو جزء من الشهر .
 
 ## المراجع التشريعية والترتيبية
 

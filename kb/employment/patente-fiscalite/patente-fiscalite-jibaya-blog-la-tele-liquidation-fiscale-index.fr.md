@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://jibaya.tn/blog/la-tele-liquidation-fiscale/
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-07'
 status: active
 generated: true
@@ -23,7 +23,7 @@ generated: true
 
 - [Services en ligne](https://jibaya.tn/services-en-ligne/)
 
-- Télé-liquidation Fiscale​
+- Télé-liquidation Fiscale
 
 Ce service permet aux contribuables adhérents de liquider leurs impôts, et taxes (déclarations mensuelles, dépôt des déclaration de l’impôt sur les sociétés, déclaration de l’avance due par les sociétés de personnes et assimilées, déclaration de l’impôt sur le revenu des personnes physiques, déclaration de l’acompte provisionnel) à partir de leur poste de travail en se connectant sur INTERNET tout en passant par les étapes suivantes :
 

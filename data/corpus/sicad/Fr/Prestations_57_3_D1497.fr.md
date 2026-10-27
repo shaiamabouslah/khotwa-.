@@ -24,10 +24,11 @@ first_seen: '2026-10-07T20:10:37+00:00'
 last_changed: '2026-10-07T20:10:37+00:00'
 content_hash: sha256:94391c67323c90abfd056cbc82c5cb2a7ecb9d1a1925e7023cb718ac666370ab
 words: 201
-status: active
+status: removed
 hint_source: llm
 social_links:
 - http://twitter.com/home?status=Création des centres spécialisés dans le contrôle de la productivité du lait chez les bovins (cahier des charges
+duplicate_of: sicad:/Fr/Prestations_57_3_D1817#index
 ---
 
 - **Conditions d'obtention de la prestation :**

@@ -12,7 +12,7 @@ sources:
 - url: http://services.gov.tn/emploi-et-formation/
   breadcrumb:
   - Suivi de l’obtention des demandes de permis de main-d’œuvre étrangère (emploi des étrangers)
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true

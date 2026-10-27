@@ -28,7 +28,7 @@ first_seen: '2026-10-05T20:41:49+00:00'
 last_changed: '2026-10-05T20:41:49+00:00'
 content_hash: sha256:a2ae6d603dcd3e52466ac2faf76ef3c3a2ab6242a9fdd2ea24461b3e8d8c6c4d
 words: 224
-status: active
+status: removed
 hint_source: llm
 nav_links:
 - text: Affiliation
@@ -47,6 +47,7 @@ nav_links:
   url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_affiliation_regime_complementaire?secteur=$secteur
 original_title: Employeurs - CNSS
 possibly_outdated: true
+duplicate_of: cnss:/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_affiliation_regime_complementaire#index
 ---
 L'employeur affilié au régime légal et occupant au moins un salarié dont la rémunération est supérieure à  6 fois le salaire minimum interprofessionnel garanti (SMIG) par an peut s'affilier au régime complémentaire de pensions.
 

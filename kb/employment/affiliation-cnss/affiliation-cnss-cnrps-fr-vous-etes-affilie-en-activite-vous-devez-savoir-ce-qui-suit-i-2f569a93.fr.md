@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://www.cnrps.nat.tn/fr/vous-etes-affilie-en-activite-vous-devez-savoir-ce-qui-suit
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true
@@ -85,7 +85,7 @@ La Caisse nationale de retraite et de prévoyance sociale contribue au profit de
 ***Pour les retraités :***
 - 0.5%
 
-|  | [**Tableau d'évolution des cotisations au titre des régimes de retraite, d'assurance maladie et du capital-décès**](https://www.cnrps.nat.tn/sites/default/files/tab_cotisations_fr.pdf) |
+[**Tableau d'évolution des cotisations au titre des régimes de retraite, d'assurance maladie et du capital-décès**](https://www.cnrps.nat.tn/sites/default/files/tab_cotisations_fr.pdf)
 
 #### Régularisation des périodes de coopération technique
 

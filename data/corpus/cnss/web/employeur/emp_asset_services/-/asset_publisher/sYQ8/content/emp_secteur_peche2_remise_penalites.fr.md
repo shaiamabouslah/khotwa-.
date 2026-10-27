@@ -32,7 +32,7 @@ first_seen: '2026-10-05T20:44:39+00:00'
 last_changed: '2026-10-05T20:44:39+00:00'
 content_hash: sha256:ed69cb6586247c223c32827e71278793231703447f66225719e2e55120d8b7cd
 words: 244
-status: active
+status: removed
 hint_source: llm
 nav_links:
 - text: Affiliation
@@ -49,6 +49,7 @@ nav_links:
   url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche2_attestations?secteur=$secteur
 original_title: Employeurs - CNSS
 possibly_outdated: true
+duplicate_of: cnss:/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_remise_penalites#index
 ---
 Les pénalités de retard encourues suite à un paiement tardif des cotisations peuvent faire l'objet d'une remise gracieuse.
 

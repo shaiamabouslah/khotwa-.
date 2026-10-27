@@ -30,7 +30,7 @@ first_seen: '2026-10-05T20:34:09+00:00'
 last_changed: '2026-10-06T12:56:23+00:00'
 content_hash: sha256:b5a7c9410268fc0fd401bfe723b609250eacee13c6bd1503224aa78afcef1d0b
 words: 153
-status: active
+status: removed
 hint_source: llm
 links:
 - text: مطلب تسجيل (مطبوعة  الصندوق)
@@ -43,6 +43,7 @@ links:
   url: http://ccitunis-academy.com:89/html/js/editor/editor.jsp?p_l_id=74817&p_main_path=%2Far%2Fc&doAsUserId=J6%2BkpsyW9Xg%3D&editorImpl=ckeditor&toolbarSet=liferay-article&initMethod=_15_initEditorr846A5r1&onChangeMethod=_15_editorContentChanged&cssPath=%2Fsalarie-theme%2Fcss&cssClasses=portlet+portlet-journal#inline112312 "الفصل 38"
 original_title: الأجراء - CNSS
 possibly_outdated: true
+duplicate_of: cnss:/web/salarie/sal_asset_services/-/asset_publisher/0xT7/content/sal-secteur_-non_agr1_immatriculation#index
 ---
 
 ## التسجيل

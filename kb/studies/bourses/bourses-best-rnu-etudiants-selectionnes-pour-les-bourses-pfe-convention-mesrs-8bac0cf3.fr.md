@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://best.rnu.tn/etudiants-selectionnes-pour-les-bourses-pfe-convention-mesrs-mitacs-2024-2025/
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true

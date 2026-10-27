@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: http://fr.tunisie.gov.tn/annuaireAdministration/381/11-caisse-nationale-de-securite-sociale.htm
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true

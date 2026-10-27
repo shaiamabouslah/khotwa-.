@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-49877a09
-title: المؤجرون - CNSS
+title: Emp Secteur pêche1 Assiette (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar
@@ -31,19 +31,11 @@ sources:
   - Services Employeur
   - Emp_Secteur pêche1_Assiette
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_assiette?secteur=$secteur)
-- [طرح الخطايا](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_remise_penalites?secteur=$secteur)
-- [الامتيازات](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur_peche1_contenu-avantage_2?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [الشهادات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-peche1_attestations?secteur=$secteur)
-- [الانخراط بالنظام التكميلي للجرايات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_peche1_affiliation_regime_complementaire?secteur=$secteur)
 
 ## قاعدة الاشتراكات
 
@@ -83,4 +75,4 @@ generated: true
 
 ## المراجع التشريعية والترتيبية
 
-القانون عدد  30 لسنة 1960 المؤرخ في 14 ديسمبر 1960:  الفصل 40,  الفصل 42,  الفصل 43,  الفصل 44,  الفصل 45,  الفصل 46,  الفصل 47   ,  الفصل 105
+القانون عدد  30 لسنة 1960 المؤرخ في 14 ديسمبر 1960:  الفصل 40,  الفصل 42,  الفصل 43,  الفصل 44,  الفصل 45,  الفصل 46,  الفصل 47 ,  الفصل 105

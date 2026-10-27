@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-4f9bc7bc
-title: المؤجرون - CNSS
+title: Emp gens maison Immatriculation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar
@@ -31,7 +31,7 @@ sources:
   - Services Employeur
   - Emp_gens_maison_Immatriculation
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true

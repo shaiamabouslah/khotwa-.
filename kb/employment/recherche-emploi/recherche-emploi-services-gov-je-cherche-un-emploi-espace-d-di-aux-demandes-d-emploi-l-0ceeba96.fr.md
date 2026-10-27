@@ -26,7 +26,7 @@ sources:
 - url: http://services.gov.tn/je-cherche-un-emploi/
   breadcrumb:
   - Espace dédié aux demandes d’emploi à l’étranger
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true

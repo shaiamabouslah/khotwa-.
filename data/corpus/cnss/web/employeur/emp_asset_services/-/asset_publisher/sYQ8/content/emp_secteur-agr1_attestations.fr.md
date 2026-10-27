@@ -33,7 +33,7 @@ first_seen: '2026-10-05T20:43:41+00:00'
 last_changed: '2026-10-05T20:43:41+00:00'
 content_hash: sha256:dcfbda847988356727f9394ea75a5edb640cb256c810315ad4581b4570232556
 words: 188
-status: active
+status: removed
 hint_source: llm
 nav_links:
 - text: Affiliation
@@ -50,6 +50,7 @@ nav_links:
   url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-agr1_attestations?secteur=$secteur
 original_title: Employeurs - CNSS
 possibly_outdated: true
+duplicate_of: cnss:/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr4_attestations#index
 ---
 ## Attestation de solde
 

@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://www.cnss.tn/c/document_library/get_file?uuid=1d1b6ee7-0b81-4c60-ba10-fd718513894a&groupId=33103
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true
@@ -53,14 +53,14 @@ N° acte de naissance : ..........…… : عدد رسم الوالدة Année :
 P 1 Municipalité :……....................… : البلدية Gouvernorat : ..……............………: 2( : الوالية(Acte de naissance رسم الوالدة
 N° acte de naissance : ..........…… : عدد رسم الوالدة Année :....…......… : سنة الترسيم Commune :..................…… : الدائرة
 
-|  |  |  |  | a | nts |  |  |  |  | االسم واسم األب واسم الجد واللقب إرشادات تتعلـق باألبنــــــــاء Prénom, prénoms du père et du grand-père et Nom | إرشادات تتعلـق باألبنــــــــاء |  |
-|  |  | Renseignements concernant les e | nf |  |  |  |  | اسم االم ولقبها |  |  |  |  |
-|  |  | تاريخ الوالدة |  |  |  |  |  | Nom et Prénom |  |  |  |  |
-|  |  | Date de naissance |  |  |  |  |  | de la mère |  |  |  |  |
-|  | Municipalité :…….................… : البلدية Gouvernorat : ..……...............………: 2(: الوالية( Acte de naissance رسم الوالدة N° acte de naissance : .........…… : عدد رسم الوالدة Année :....…......… : سنة الترسيم Commune :...................…… : الدائرة |  |  |  |  |  |  |  |  |  |  |  |
-|  | Municipalité :……....................… : البلدية Gouvernorat : ..……............………: 2( : الوالية(Acte de naissance رسم الوالدة N° acte de naissance : ..........…… : عدد رسم الوالدة Année :....…......… : سنة الترسيم Commune :..................…… : الدائرة |  |  |  |  |  |  |  |  |  |  |  |
-| 0 0 1 P |  |  |  |  |  |  |  |  |  | -3 |  |  |
-|  | Municipalité :……....................… : البلدية Gouvernorat : ..……............………: 2( : الوالية(Acte de naissance رسم الوالدة N° acte de naissance : ..........…… : عدد رسم الوالدة Année :....…......… : سنة الترسيم Commune :..................…… : الدائرة |  |  |  |  |  |  |  |  |  |  |  |
+a - nts - االسم واسم األب واسم الجد واللقب إرشادات تتعلـق باألبنــــــــاء Prénom, prénoms du père et du grand-père et Nom - إرشادات تتعلـق باألبنــــــــاء
+Renseignements concernant les e - nf - اسم االم ولقبها
+تاريخ الوالدة - Nom et Prénom
+Date de naissance - de la mère
+Municipalité :…….................… : البلدية Gouvernorat : ..……...............………: 2(: الوالية( Acte de naissance رسم الوالدة N° acte de naissance : .........…… : عدد رسم الوالدة Année :....…......… : سنة الترسيم Commune :...................…… : الدائرة
+Municipalité :……....................… : البلدية Gouvernorat : ..……............………: 2( : الوالية(Acte de naissance رسم الوالدة N° acte de naissance : ..........…… : عدد رسم الوالدة Année :....…......… : سنة الترسيم Commune :..................…… : الدائرة
+0 0 1 P - -3
+Municipalité :……....................… : البلدية Gouvernorat : ..……............………: 2( : الوالية(Acte de naissance رسم الوالدة N° acte de naissance : ..........…… : عدد رسم الوالدة Année :....…......… : سنة الترسيم Commune :..................…… : الدائرة
 
 <!-- page 2 -->
 Renseignements concernant les ascendants إرشادات تتعلـق باألصــــــول
@@ -107,16 +107,16 @@ Pour le travailleur ayant des parents à charge :
 (1) Mettre (x) dans la case utile. .في الخانة المناسبة )x( 1) وضع عالمة)
 (2) Remplir avec précision. .2( التعمير بكل دقّة(
 
-| Renseignements concernant les ascendants |  |  |  |  |  | إرشادات تتعلـق باألصــــــول |  |  |  |
-| تاريخ الوالدة Date de naissance |  | اسم االم ولقبها Nom et Prénom de la mère |  |  | االسم واسم األب واسم الجد واللقب |  |  |  | الوالدين في الكفالة Parents à charge |
-|  |  |  |  |  | Prénom, prénoms du père et du grand-père |  |  |  |  |
-|  |  |  |  |  | et Nom |  |  |  |  |
-|  |  |  |  |  |  |  |  | األم La mère |  |
-| Municipalité :……....................… : البلدية Gouvernorat : ..……............………: 2( : الوالية(Acte de naissance رسم الوالدة N° acte de naissance : ..............…… : عدد رسم الوالدة Année :....…......… : سنة الترسيم Commune :......................…… : الدائرة |  |  |  |  |  |  |  |  |  |
-| N° d'immatriculation à la CNSS : رقم التسجيل بالضمان االجتماعي |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  | االب Le père |  |
-| Municipalité :……....................… : البلدية Gouvernorat : ..……............………: 2( : الوالية(Acte de naissance رسم الوالدة N° acte de naissance : ........…… : عدد رسم الوالدة Année :....…......… : سنة الترسيم Commune :............................…… : الدائرة |  |  |  |  |  |  |  |  |  |
-| N° d'immatriculation à la sécurité sociale : رقم التسجيل بالضمان االجتماعي |  |  |  |  |  |  |  |  |  |
+Renseignements concernant les ascendants - إرشادات تتعلـق باألصــــــول
+تاريخ الوالدة Date de naissance - اسم االم ولقبها Nom et Prénom de la mère - االسم واسم األب واسم الجد واللقب - الوالدين في الكفالة Parents à charge
+Prénom, prénoms du père et du grand-père
+et Nom
+األم La mère
+Municipalité :……....................… : البلدية Gouvernorat : ..……............………: 2( : الوالية(Acte de naissance رسم الوالدة N° acte de naissance : ..............…… : عدد رسم الوالدة Année :....…......… : سنة الترسيم Commune :......................…… : الدائرة
+N° d'immatriculation à la CNSS : رقم التسجيل بالضمان االجتماعي
+االب Le père
+Municipalité :……....................… : البلدية Gouvernorat : ..……............………: 2( : الوالية(Acte de naissance رسم الوالدة N° acte de naissance : ........…… : عدد رسم الوالدة Année :....…......… : سنة الترسيم Commune :............................…… : الدائرة
+N° d'immatriculation à la sécurité sociale : رقم التسجيل بالضمان االجتماعي
 
 | Pièces à Fournir |
 

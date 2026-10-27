@@ -30,7 +30,7 @@ first_seen: '2026-10-05T20:41:52+00:00'
 last_changed: '2026-10-05T20:41:52+00:00'
 content_hash: sha256:703e1b155eef89180ad1ac13a1232ff489b402649f73d288cb4ebef40af2d494
 words: 165
-status: active
+status: removed
 hint_source: llm
 nav_links:
 - text: الانخراط
@@ -49,6 +49,7 @@ nav_links:
   url: https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr3_affiliation_regime_complementaire?secteur=$secteur
 original_title: المؤجرون - CNSS
 possibly_outdated: true
+duplicate_of: cnss:/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_affiliation_regime_complementaire#index
 ---
 يمكن للمؤجر المنخرط بالنظام القانوني للضمان الاجتماعي والمشغل لأجراء تفوق أجورهم 6 مرات الأجر الأدنى المهني المضمون في السنة، أن ينخرط في النظام التكميلي للجرايات بصفة اختيارية.
 

@@ -25,7 +25,7 @@ keywords:
 sources:
 - url: https://www.cnss.tn/ar/c/document_library/get_file?uuid=69af8c52-7135-4ae1-93d5-67f13f1b38a7&groupId=33103
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true
@@ -76,8 +76,8 @@ I
 
 | رمز االستغالل Code d’exploitation |
 
-| األصناف المهنية Catégories Professionnelles | الضارب Coefficient | عدد األجراء Nombre de salariés | عن األجير الواحد االشتراكات الجزافية Cotisation forfaitaire par salarié | المجموع Total |
-| عــادي Ordinaire | 1 |  |  |  |
-| متخصص Spécialisé | 1,5 |  |  |  |
-| ماهــر Qualifié | 2 |  |  |  |
-|  |  |  | اشتراكات نظام الضمان االجتماعي Cotisations Sécurité Sociale |  |
+األصناف المهنية Catégories Professionnelles - الضارب Coefficient - عدد األجراء Nombre de salariés - عن األجير الواحد االشتراكات الجزافية Cotisation forfaitaire par salarié - المجموع Total
+عــادي Ordinaire - 1
+متخصص Spécialisé - 1,5
+ماهــر Qualifié - 2
+اشتراكات نظام الضمان االجتماعي Cotisations Sécurité Sociale

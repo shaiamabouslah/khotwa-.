@@ -12,7 +12,7 @@ sources:
 - url: http://services.gov.tn/affaires-sociales-2/
   breadcrumb:
   - Obtention du certificat de déclaration des montants versés au Trésor public
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true

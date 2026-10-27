@@ -40,19 +40,34 @@ def script_ratio(s):
 
 
 # ───────────────────────── 1. load + validate ─────────────────────────
+import re
+import yaml
+from pathlib import Path
+
 def load(path):
+    path = Path(path)  # Convert manually provided path to Path object
+
     t = path.read_text(encoding="utf-8")
     m = re.match(r"---\n(.*?)\n---\n(.*)", t, re.S)
-    if not m: return None, t, ["no_front_matter"]
+
+    if not m:
+        return None, t, ["no_front_matter"]
+
     fm = yaml.safe_load(m.group(1)) or {}
     errs = [f"missing:{k}" for k in REQUIRED if not fm.get(k)]
+
     parts = path.parts
     if "kb" in parts:
         rel = parts[parts.index("kb") + 1:]
         if len(rel) >= 3:
-            if fm.get("domain") != rel[0]: errs.append("domain_path_mismatch")
-            if fm.get("subtopic") != rel[1]: errs.append("subtopic_path_mismatch")
-    if fm.get("lang") not in ("fr", "ar"): errs.append("bad_lang")
+            if fm.get("domain") != rel[0]:
+                errs.append("domain_path_mismatch")
+            if fm.get("subtopic") != rel[1]:
+                errs.append("subtopic_path_mismatch")
+
+    if fm.get("lang") not in ("fr", "ar"):
+        errs.append("bad_lang")
+
     return fm, m.group(2), errs
 
 

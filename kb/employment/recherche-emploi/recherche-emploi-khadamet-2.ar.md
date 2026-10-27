@@ -26,7 +26,7 @@ sources:
 - url: https://khadamet.gov.tn/%d8%a7%d9%84%d8%aa%d9%88%d8%b8%d9%8a%d9%81-%d9%88%d8%a7%d9%84%d8%aa%d9%83%d9%88%d9%8a%d9%86-%d8%a7%d9%84%d9%85%d9%87%d9%86%d9%8a/
   breadcrumb:
   - نشر عروض الشغل إستجابة للمتطلبات المؤسسة
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-10'
 status: active
 generated: true

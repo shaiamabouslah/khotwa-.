@@ -18,7 +18,7 @@ keywords:
 sources:
 - url: https://www.erasmusplus.tn/doc/ICM-CBHE-2022-NEO-TN.pdf
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-05'
 status: active
 generated: true
@@ -1452,11 +1452,11 @@ Higher Education and Partenaire 500 000 Euro
 à 17 heures
 Youth
 
-| Appel | Tunisie (partenaire/coordinateur) | Budget par projet | Durée | Date limite de dépôt des candidatures |
-| EMJM: Erasmus Mundus Coordinateur 6 années 16 février 2022 ~5 MEuro Joint Masters Partenaire académiques à 17 heures |  |  |  |  |
-| Coordinateur EMDM: Erasmus Mundus 16 février 2022 Partenaire 55 000 Euro 15 Mois Design Measures à 17 heures |  |  |  |  |
-| Coordinateur 30 000Euro→100 01 Mars 2022 Activités Jean Monnet Partenaire 000 Euro à 17 heures |  |  |  |  |
-| Virtual Exchanges in 22 Février 2022 Higher Education and Partenaire 500 000 Euro à 17 heures Youth |  |  |  |  |
+Appel - Tunisie (partenaire/coordinateur) - Budget par projet - Durée - Date limite de dépôt des candidatures
+EMJM: Erasmus Mundus Coordinateur 6 années 16 février 2022 ~5 MEuro Joint Masters Partenaire académiques à 17 heures
+Coordinateur EMDM: Erasmus Mundus 16 février 2022 Partenaire 55 000 Euro 15 Mois Design Measures à 17 heures
+Coordinateur 30 000Euro→100 01 Mars 2022 Activités Jean Monnet Partenaire 000 Euro à 17 heures
+Virtual Exchanges in 22 Février 2022 Higher Education and Partenaire 500 000 Euro à 17 heures Youth
 
 <!-- page 108 -->
 VET et Jeunesse

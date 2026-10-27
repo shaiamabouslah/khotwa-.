@@ -1,6 +1,6 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-ab302f26
-title: المؤجرون - CNSS
+title: Emp gens maison Affiliation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar
@@ -31,15 +31,11 @@ sources:
   - Services Employeur
   - Emp_gens_maison_Affiliation
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true
 ---
-
-- [الانخراط](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_affiliation?secteur=$secteur)
-- [التسجيل](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_immatriculation?secteur=$secteur)
-- [الاشتراكات](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_gens_maison_cotisations?secteur=$secteur)
 
 الانخراط بأنظمة الضمان الاجتماعي إجباري على كل مؤجر ينتدب عاملا واحدا على الأقل بصفة أجير وذلك في الشهر الذي يلي تاريخ الانتداب.
 
@@ -68,4 +64,4 @@ generated: true
 
 القانون عدد 28 لسنة 1994 المؤرخ في 21 فيفري 1994 والمتعلق بالتعويض عن الأضرار الناتجة عن حوادث الشغل والأمراض المهنية، كما تمّ تنقيحه وإتمامه بالقانون عدد 103 لسنة 1995 المؤرخ في 27 نوفمبر 1995.
 
-الأمر عدد 538 لسنة 1995 المؤرخ في غرة أفريل 1995 والمتعلق بضبط نسب الاشتراكات في نظام التعويض عن الأضرار الناتجة عن حوادث الشغل والأمراض المهنية كما وقع تنقيحه وإتمامه بالأمر عدد 1010 لسنة 1999 المؤرخ في 10 ماي   1999**.**
+الأمر عدد 538 لسنة 1995 المؤرخ في غرة أفريل 1995 والمتعلق بضبط نسب الاشتراكات في نظام التعويض عن الأضرار الناتجة عن حوادث الشغل والأمراض المهنية كما وقع تنقيحه وإتمامه بالأمر عدد 1010 لسنة 1999 المؤرخ في 10 ماي 1999**.**

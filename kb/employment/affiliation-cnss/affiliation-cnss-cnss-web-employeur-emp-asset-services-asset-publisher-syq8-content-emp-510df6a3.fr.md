@@ -1,11 +1,10 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-510df6a3
-title: Employeurs - CNSS
+title: Emp Secteuré non agr1 Affiliation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr
-translations:
-- ar
+translations: []
 org: Caisse Nationale de Sécurité Sociale (CNSS)
 keywords:
 - affiliation
@@ -31,19 +30,11 @@ sources:
   - Services Employeur
   - Emp_Secteuré_ non_agr1_Affiliation
   source_updated: '2019-06-18'
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-06'
 status: active
 generated: true
 ---
-
-- [Affiliation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_affiliation?secteur=$secteur)
-- [Immatriculation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur_non_agr1_immatriculation?secteur=$secteur)
-- [Cotisations](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_assiette?secteur=$secteur)
-- [Remise des pénalités](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteure_-non_agr1_remise_penalites?secteur=$secteur)
-- [Avantages](https://www.cnss.tn/web/employeur/emp_asset_services_avantages/-/asset_publisher/0PNx/content/emp_secteur-non_agr1_contenu-avantage1?secteur=$secteur&avantage=1&tagParam=tag$secteur$indexSousTitre)
-- [Attestation](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_attestations?secteur=$secteur)
-- [Affiliation au régime complémentaire de pensions](https://www.cnss.tn/web/employeur/emp_asset_services/-/asset_publisher/sYQ8/content/emp_secteur-non_agr1_affiliation_regime_complementaire?secteur=$secteur)
 
 L'affiliation des employeurs aux régimes de sécurité sociale est obligatoire, elle doit intervenir dans le mois qui  suit l'engagement de personnel salarié.
 
@@ -71,6 +62,6 @@ Un certificat d'affiliation est délivré séance tenante si le dossier est comp
 
 ## Références législatives et réglementaires
 
-- Loi n°60-30 du 14 décembre 1960, relative à l'organisation des régimes de sécurité sociale, telle que modifiée et complétée par les textes subséquents et notamment : Art. 36,   Art. 37,  Art. 38,  Art. 39,  Art.97,  Art. 105,  Art. 106.
+- Loi n°60-30 du 14 décembre 1960, relative à l'organisation des régimes de sécurité sociale, telle que modifiée et complétée par les textes subséquents et notamment : Art. 36, Art. 37,  Art. 38,  Art. 39,  Art.97,  Art. 105,  Art. 106.
 - Loi n° 94-28 du 21 février 1994 portant régime de réparation des préjudices résultant des accidents  du  travail  et  des  maladies professionnelles  telle  que modifiée  et  complétée  par la loi n° 95-103 du 27 novembre 1995.
 - Décret n° 95-538 du 1er avril 1995 relatif à la fixation des taux de cotisation au régime de réparation  des  préjudices  résultant  des accidents du travail et des maladies professionnelles tel que modifié et complété par le décret n° 99-1010 du 10 mai 1999.

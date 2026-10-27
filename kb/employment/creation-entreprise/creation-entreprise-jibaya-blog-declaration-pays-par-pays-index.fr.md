@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://jibaya.tn/blog/declaration-pays-par-pays/
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-07'
 status: active
 generated: true
@@ -51,9 +51,9 @@ La « DPP » doit être déposée dans les **douze mois** suivant la date de cl�
 - **L’entreprise est détenue**, directement ou indirectement, par une entreprise établie dans une **juridiction qui n’exige pas le dépôt de la DPP** mais qui serait tenue de déposer cette déclaration si elle était établie en Tunisie,
 - **L’entreprise est détenue**, directement ou indirectement, par une entreprise établie dans une **juridiction qui ne figure pas sur la liste des juridictions ayant conclu un accord avec la Tunisie autorisant l’échange automatique de la DPP.**
 
-          Lorsque deux ou plusieurs entités constitutives d’un même groupe d’EMN, résidentes en Tunisie, sont soumises à l’obligation de dépôt de la DPP, **l’une                d’entre elles peut être désignée par le groupe pour déposer ladite déclaration**.
+          Lorsque deux ou plusieurs entités constitutives d’un même groupe d’EMN, résidentes en Tunisie, sont soumises à l’obligation de dépôt de la DPP, **l’une d’entre elles peut être désignée par le groupe pour déposer ladite déclaration**.
 
-**Les autres entités constitutives de ce groupe résidentes en Tunisie doivent informer l’administration fiscale** de l’entité tunisienne désignée pour le                    dépôt local au moyen d’une notification transmise via ce service.
+**Les autres entités constitutives de ce groupe résidentes en Tunisie doivent informer l’administration fiscale** de l’entité tunisienne désignée pour le dépôt local au moyen d’une notification transmise via ce service.
 
 L’accès à la plateforme de dépôt et de notification nécessite un **certificat électronique d’authentification DigiGo**.
 

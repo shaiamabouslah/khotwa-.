@@ -21,7 +21,7 @@ keywords:
 sources:
 - url: https://www.mes.tn/image.php?id=618
   breadcrumb: []
-last_checked: '2026-10-11'
+last_checked: '2026-10-16'
 last_changed: '2026-10-07'
 status: active
 generated: true
@@ -130,12 +130,12 @@ Fait à ……………….. le …… ……
 Signature
 (*) Il est impératif d’indiquer la moyenne sur 20 pour toutes les années où des examens ont été passés 20 (*)
 
-| * 20 Moyenne sur 20 * | Résultats ou diplôme | Nature de la bourse | Etablissement Universitaire | Discipline | A. universitaire |
-|  |  |  |  |  | .…. /… |
-|  |  |  |  |  | .…. /… |
-|  |  |  |  |  | .…. /… |
-|  |  |  |  |  | .…. /… |
-|  |  |  |  |  | .…. /… |
-|  |  |  |  |  | .…. /… |
+* 20 Moyenne sur 20 * - Résultats ou diplôme - Nature de la bourse - Etablissement Universitaire - Discipline - A. universitaire
+.…. /…
+.…. /…
+.…. /…
+.…. /…
+.…. /…
+.…. /…
 
 | Diplôme envisagé | Lieu des études | Discipline | A. universitaire |

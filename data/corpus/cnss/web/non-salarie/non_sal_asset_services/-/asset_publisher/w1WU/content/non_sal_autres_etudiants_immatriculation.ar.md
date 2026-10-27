@@ -14,11 +14,10 @@ breadcrumb:
 - Non_Sal_autres_etudiants_immatriculation
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: non-salaries
+subtopic_hint: affiliation-cnss
 hint_score: 9
 hint_keywords:
-- non salarié
-- غير الاجراء
+- salarié
 forms:
 - https://www.cnss.tn/c/document_library/get_file?uuid=0cc71123-59f3-4552-a62e-fd1d2bad56c6&groupId=10156
 render: html
