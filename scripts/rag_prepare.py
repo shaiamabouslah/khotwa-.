@@ -1,18 +1,26 @@
 #!/usr/bin/env python3
 """kb/ -> RAG-ready chunks.   Usage: python scripts/rag_prepare.py [--kb kb] [--out data/rag]
 
-Stages (each one is deterministic, no LLM):
+Stages (each one is deterministic except the chunker itself, which has 3 interchangeable
+strategies -- see --strategy below):
   1 load+validate   front matter schema, path/metadata consistency
   2 normalize       unicode, bidi marks, list/heading repair, nav boilerplate, empty sections
   3 language gate   declared `lang` must match the script actually used
   4 quality gate    too short / too noisy  -> quarantine (never silently dropped)
   5 dedup           exact + near-duplicate (same lang); borderline pairs go to a review list
-  6 chunk           heading-aware, size-bounded, every chunk carries a context header; overlap
-                    between consecutive chunks keeps whole trailing rows/sentences, never a
-                    blind word-count tail-slice (that used to cut mid-row/mid-sentence)
+  6 chunk           --strategy heading (default, production): split on headings, group up to
+                    TARGET_WORDS, pack oversize sections row/sentence-safely.
+                    --strategy fixed: naive sliding word-count window, no heading-awareness --
+                    the control group, to check heading-awareness is actually worth it.
+                    --strategy semantic: embed paragraph units (sentence-transformers, default
+                    BGE-M3) and cut where topic similarity drops, not at a fixed size.
+                    All three reuse the same row/sentence-safe overlap packing.
   7 emit            chunks.jsonl, parents.jsonl (multi-chunk docs' full text, for "expand to
                     the whole procedure" hierarchical retrieval), quarantine.jsonl,
                     review_dupes.json, report.md
+
+To compare the 3 strategies side by side (chunk quality + BM25/dense retrieval score), use
+scripts/compare_chunking.py instead of calling this directly.
 """
 import argparse, collections, hashlib, json, re, sys, unicodedata
 from pathlib import Path
@@ -194,7 +202,9 @@ def pack(blocks):
     return chunks
 
 
-def chunk_doc(fm, body):
+def chunk_heading(fm, body):
+    """Structure-aware: split on ## / ### / #### headings, group consecutive sections up to
+    TARGET_WORDS, pack oversize sections row/sentence-safely. Current production default."""
     title, org = fm["title"], fm.get("org", "")
     prefix = f"[{org}] " if org else ""
     # a whole procedure that fits stays ONE chunk: best unit for "how do I ..." questions
@@ -224,12 +234,73 @@ def chunk_doc(fm, body):
     return out
 
 
+def chunk_fixed(fm, body):
+    """Naive baseline: ignores headings entirely, one sliding word-count window over the whole
+    body. Row/sentence-safe packing is reused (same pack()), so this isolates exactly one
+    variable against chunk_heading: does heading-awareness help, or is it not worth the
+    complexity? "section" stays the title for every chunk since there's no structure to name."""
+    title, org = fm["title"], fm.get("org", "")
+    prefix = f"[{org}] " if org else ""
+    if words(body) <= MAX_WORDS:
+        return [{"section": title, "text": f"{prefix}{title}\n\n{body}"}]
+    return [{"section": title, "text": f"{prefix}{title}\n\n{piece}"}
+            for piece in pack(split_blocks(body))]
+
+
+def _cosine(a, b):
+    import numpy as np
+    return float(np.dot(a, b) / ((np.linalg.norm(a) * np.linalg.norm(b)) + 1e-9))
+
+
+def chunk_semantic(fm, body, embed, threshold=0.45):
+    """Embedding-based: split into paragraph-level units, embed each, greedily merge
+    consecutive units into a chunk while they stay topically close (cosine similarity to the
+    chunk's running mean embedding above `threshold`) and under MAX_WORDS; cut a new chunk on
+    either a topic shift or the size cap. Needs an `embed(list[str]) -> list[vector]` callable
+    (dependency injected so this module has no hard torch/sentence-transformers import)."""
+    import numpy as np
+    title, org = fm["title"], fm.get("org", "")
+    prefix = f"[{org}] " if org else ""
+    if words(body) <= MAX_WORDS:
+        return [{"section": title, "text": f"{prefix}{title}\n\n{body}"}]
+    units = [u for blk in split_blocks(body) for u in units_of(blk)]
+    if len(units) <= 1:
+        return [{"section": title, "text": f"{prefix}{title}\n\n{p}"} for p in pack(split_blocks(body))]
+    vecs = embed(units)
+    chunks, cur, cur_vecs, n = [], [], [], 0
+    for u, v in zip(units, vecs):
+        uw = words(u)
+        if cur:
+            mean_vec = np.mean(cur_vecs, axis=0)
+            sim = _cosine(mean_vec, v)
+            if n + uw > MAX_WORDS or sim < threshold:
+                chunks.append("\n\n".join(cur))
+                cur, cur_vecs, n = [], [], 0
+        cur.append(u); cur_vecs.append(v); n += uw
+    if cur: chunks.append("\n\n".join(cur))
+    return [{"section": title, "text": f"{prefix}{title}\n\n{piece}"} for piece in chunks]
+
+
+STRATEGIES = {"heading": chunk_heading, "fixed": chunk_fixed}  # "semantic" needs an embedder, wired in main()
+
+
 # ───────────────────────── main ─────────────────────────
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--kb", default="kb"); ap.add_argument("--out", default="data/rag")
+    ap.add_argument("--strategy", default="heading", choices=["heading", "fixed", "semantic"],
+                     help="chunking strategy; 'semantic' needs --embed-model (sentence-transformers)")
+    ap.add_argument("--embed-model", default="BAAI/bge-m3", help="only used by --strategy semantic")
     a = ap.parse_args()
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
+
+    if a.strategy == "semantic":
+        from sentence_transformers import SentenceTransformer
+        model = SentenceTransformer(a.embed_model)
+        def chunker(fm, body): return chunk_semantic(fm, body, embed=lambda texts: model.encode(texts, normalize_embeddings=True))
+    else:
+        chunker = STRATEGIES[a.strategy]
+
     stats, quarantine, docs = collections.Counter(), [], []
 
     for p in sorted(Path(a.kb).rglob("*.md")):
@@ -255,7 +326,7 @@ def main():
         for d in kept:
             fm = d["fm"]
             src = (fm.get("sources") or [{}])[0]
-            doc_chunks = chunk_doc(fm, d["body"])
+            doc_chunks = chunker(fm, d["body"])
             for k, c in enumerate(doc_chunks):
                 rec = {
                     "chunk_id": f"{uid(fm)}#{k:02d}", "doc_id": fm["id"], "lang": fm["lang"],
