@@ -2,8 +2,10 @@
   python scripts/fixes/eval_retrieval.py --auto                       # each doc must be found from its own title
   python scripts/fixes/eval_retrieval.py --file my_questions.jsonl    # {"q": "...", "doc_id": "...", "lang": "fr"} per line
 Reports hit@1/3/5, MRR and lists the misses. Real questions beat --auto: write 30-50."""
-import argparse, collections, json, math, re
+import argparse, collections, json, math, re, sys
 from pathlib import Path
+
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # missed queries can be Arabic titles
 
 ap = argparse.ArgumentParser(); ap.add_argument("--chunks", default="data/rag/chunks.jsonl")
 ap.add_argument("--file"); ap.add_argument("--auto", action="store_true"); a = ap.parse_args()
@@ -39,12 +41,6 @@ for q in qs:
     for k in (1, 3, 5): hits[k] += 0 < pos <= k
     rr += 1 / pos if pos else 0
     if not pos: miss.append(q)
-if not pos:
-    print("\nMISSED QUERY:", q["q"])
-    print("Expected doc:", q["doc_id"])
-
-    results = search(q["q"], q.get("lang"), k=5)
-    print("Retrieved:", results)
 n = len(qs)
 print(f"{n} questions | hit@1 {hits[1]/n:.2f}  hit@3 {hits[3]/n:.2f}  hit@5 {hits[5]/n:.2f}  MRR {rr/n:.2f}")
 for m in miss[:8]:

@@ -11,6 +11,9 @@ from pathlib import Path
 
 import yaml
 
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # samples can contain Arabic titles;
+# Windows' default console codepage (cp1252) crashes on them otherwise
+
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "data/corpus/catalog.jsonl").exists())
 sys.path.insert(0, str(ROOT))                       # lets fixes import crawler.*
 CORPUS, CATALOG = ROOT / "data/corpus", ROOT / "data/corpus/catalog.jsonl"

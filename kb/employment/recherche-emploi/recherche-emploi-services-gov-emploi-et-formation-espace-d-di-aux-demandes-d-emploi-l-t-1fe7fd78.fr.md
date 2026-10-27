@@ -26,7 +26,7 @@ sources:
 - url: http://services.gov.tn/emploi-et-formation/
   breadcrumb:
   - Espace dédié aux demandes d’emploi à l’étranger
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-05'
 status: active
 generated: true

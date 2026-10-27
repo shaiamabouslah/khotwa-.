@@ -12,7 +12,7 @@ keywords:
 sources:
 - url: https://www.registre-entreprises.tn/rne-public/assets/pdfs/check-liste-creation/RNEC001_creationt_personne_physique_commer%C3%A7ant_FR.pdf
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-07'
 status: active
 generated: true

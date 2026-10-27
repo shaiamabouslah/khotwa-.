@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://uma.rnu.tn/fr/article/318/journee-dinformation-sur-le-programme-horizon-europe-work-programme-2025-le-10-juin-2025-date-limite-dinscription-avant-le-9-juin-2025-a-10h
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-07'
 status: active
 generated: true

@@ -22,7 +22,7 @@ sources:
 - url: https://www.ooun.rnu.tn/web/ar/bourse.html
   breadcrumb:
   - منحة الطلبة القدامى (لأول مرة)
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-05'
 status: active
 generated: true

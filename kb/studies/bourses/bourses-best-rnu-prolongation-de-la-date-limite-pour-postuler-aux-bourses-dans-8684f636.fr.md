@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://best.rnu.tn/prolongation-de-la-date-limite-pour-postuler-aux-bourses-dans-le-cadre-de-lentente-avec-mitacs/
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-06'
 status: active
 generated: true

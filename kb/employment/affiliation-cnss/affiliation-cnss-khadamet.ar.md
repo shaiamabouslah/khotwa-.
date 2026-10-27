@@ -26,7 +26,7 @@ sources:
 - url: https://khadamet.gov.tn/%d8%a3%d8%b1%d8%ba%d8%a8-%d9%81%d9%8a-%d8%a7%d9%84%d8%ad%d8%b5%d9%88%d9%84-%d8%b9%d9%84%d9%89-%d8%a7%d9%84%d8%aa%d8%ba%d8%b7%d9%8a%d8%a9-%d8%a7%d9%84%d8%a7%d8%ac%d8%aa%d9%85%d8%a7%d8%b9%d9%8a%d8%a9/
   breadcrumb:
   - استخراج شهائد الانخراط
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-05'
 status: active
 generated: true

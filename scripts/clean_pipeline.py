@@ -1,37 +1,52 @@
 """The ONE cleaning pipeline for data/corpus/ -- no LLM, no Ollama. Run this single script,
-single command, to bring the corpus up to date after a crawl, and to (re)populate kb/ from
-it. Consolidates what used to be several separate scripts (audit_noise, dedupe_corpus,
-mark_nav_stubs, fix_subtopic_labels, resync_catalog, plus the now-dropped Ollama-based
-llm_classify/llm_clean) into one pipeline so there's one thing to run, not many files to
-remember and re-run in the right order.
+single command, to bring the corpus up to date after a crawl, populate kb/ from it, and
+prepare RAG-ready chunks. Consolidates every separate cleaning/prep script that has existed
+for this project (audit_noise, dedupe_corpus, mark_nav_stubs, fix_subtopic_labels,
+resync_catalog, the fine-grained scripts/fixes/* pass, rag_prepare, plus the now-dropped
+Ollama-based llm_classify/llm_clean) into one pipeline, so there's one thing to run, not many
+files scattered across folders to remember and re-run in the right order.
 
 Steps, always in this order:
-  1. remove link-only / pure-navigation stub documents (status=removed)
+  1. fine-grained document fixes (scripts/fixes/run_all.py): unreadable text quarantined as
+     rag_exclude, layout junk stripped, wrong `lang` labels corrected from actual content,
+     link noise moved to front matter, doc types inferred, generic titles rebuilt from the
+     breadcrumb, stale `source_updated` flagged, catalog fields resynced from front matter.
+     Each fix is its own file under scripts/fixes/ (one fix = one file, easy to audit or
+     disable individually) but this step is what runs them all, in order, to a fixed point.
+  2. remove link-only / pure-navigation stub documents (status=removed)
      -- automatic, not a hand-curated list: a doc with ~0 real prose (just links) is removed
      UNLESS it's guarded (contains a phone number, an email, or a price -- an address/contact
      card is short on purpose and is real information, not noise).
-  2. deduplicate: exact-hash and near-duplicate (Jaccard on word shingles) documents, keeping
+  3. deduplicate: exact-hash and near-duplicate (Jaccard on word shingles) documents, keeping
      the longest as canonical (status=removed on the rest, with `duplicate_of` for traceability)
-  3. reclassify domain/subtopic with the rule-based keyword Classifier (crawler/classify.py,
+  4. reclassify domain/subtopic with the rule-based keyword Classifier (crawler/classify.py,
      kb/taxonomy.yaml) -- no LLM call, deterministic, re-run any time the taxonomy keywords change
-  4. resync catalog.jsonl and sync_state.json from the corpus files' own current front matter
-     (the single source of truth after steps 1-3 edited files directly)
-  5. populate kb/<domain>/<subtopic>/<id>.<lang>.md from every cleaned, classified, active
+  5. resync catalog.jsonl and sync_state.json from the corpus files' own current front matter
+     (the single source of truth after steps 1-4 edited files directly) -- copies every
+     front-matter field generically, not a hand-maintained list, so a field a fix script adds
+     later (e.g. rag_exclude) is never silently dropped from the catalog.
+  6. populate kb/<domain>/<subtopic>/<id>.<lang>.md from every cleaned, classified, active
      corpus doc -- NO forced 8-section template (that approach was tried and rejected: it kept
      producing empty placeholder sections and misrouted bold-label content into the wrong
      section). The body is the doc's own cleaned content as-is. Hand-written kb/ files are
      never touched or overwritten; only files this step itself generated (marked
      `generated: true`) are refreshed or pruned on a later run.
+  7. prepare RAG chunks (scripts/rag_prepare.py): kb/ -> data/rag/chunks.jsonl, with its own
+     independent language/quality gate and near-duplicate check as a second safety net, plus
+     data/rag/quarantine.jsonl and review_dupes.json for anything it held back.
 
 Usage:
     PYTHONPATH=. .venv/Scripts/python.exe scripts/clean_pipeline.py            # dry run, report only
     PYTHONPATH=. .venv/Scripts/python.exe scripts/clean_pipeline.py --apply    # write changes
+    PYTHONPATH=. .venv/Scripts/python.exe scripts/clean_pipeline.py --apply --skip-fixes --skip-rag
+        # steps 2-6 only (the original corpus/kb cleaning, skip the fine-grained fixes and RAG prep)
 """
 import argparse
 import datetime as dt
 import hashlib
 import json
 import re
+import subprocess
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -223,11 +238,11 @@ def resync(state: dict):
         page = state["pages"][key]
         page["status"] = meta.get("status", page.get("status"))
         page.setdefault("meta", {})
-        for field in ("domain_hint", "subtopic_hint", "hint_score", "hint_keywords", "doc_type",
-                      "duplicate_of", "doc_id", "site", "org", "trust", "url", "lang", "title",
-                      "section", "breadcrumb", "words", "render", "discovered_via"):
-            if field in meta:
-                page["meta"][field] = meta[field]
+        # Copy every front-matter field, not a hand-maintained whitelist -- a fixed field list
+        # silently drops whatever a new fix script adds (found: content_hash was missing from
+        # every catalog row because it was never in this list, same for rag_exclude etc. added
+        # by scripts/fixes/*.py). "status" is tracked separately above.
+        page["meta"].update({k: v for k, v in meta.items() if k != "status"})
 
     STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
     ghosts = 0
@@ -363,19 +378,47 @@ def mark_removed(path: Path, front: str, body: str, duplicate_of: str | None = N
     path.write_text(f"---\n{new_front}\n---\n{body}", encoding="utf-8")
 
 
+def run_fine_grained_fixes(apply: bool):
+    cmd = [sys.executable, str(ROOT / "scripts" / "fixes" / "run_all.py")]
+    if apply:
+        cmd.append("--apply")
+    r = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace")
+    print(r.stdout, end="")
+    if r.returncode:
+        print(r.stderr, file=sys.stderr)
+        sys.exit(f"scripts/fixes/run_all.py failed (exit {r.returncode})")
+
+
+def run_rag_prepare():
+    cmd = [sys.executable, str(ROOT / "scripts" / "rag_prepare.py"), "--kb", str(KB), "--out", str(ROOT / "data" / "rag")]
+    r = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace")
+    print(r.stdout, end="")
+    if r.returncode:
+        print(r.stderr, file=sys.stderr)
+        sys.exit(f"scripts/rag_prepare.py failed (exit {r.returncode})")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true", help="write changes (default: dry run, report only)")
+    ap.add_argument("--skip-fixes", action="store_true", help="skip step 1 (scripts/fixes/run_all.py)")
+    ap.add_argument("--skip-rag", action="store_true", help="skip step 7 (scripts/rag_prepare.py)")
     args = ap.parse_args()
 
-    print("Step 1/5: link-only / pure-navigation stubs")
+    print("Step 1/7: fine-grained document fixes (scripts/fixes/)")
+    if args.skip_fixes:
+        print("  skipped (--skip-fixes)")
+    else:
+        run_fine_grained_fixes(args.apply)
+
+    print("\nStep 2/7: link-only / pure-navigation stubs")
     stubs = list(find_link_only_stubs())
     print(f"  {len(stubs)} found")
     if args.apply:
         for p, front, body in stubs:
             mark_removed(p, front, body)
 
-    print("\nStep 2/5: deduplication (exact hash + near-duplicate)")
+    print("\nStep 3/7: deduplication (exact hash + near-duplicate)")
     dupes = dedup_pass()
     print(f"  {len(dupes)} duplicate(s) found")
     if args.apply:
@@ -386,24 +429,32 @@ def main():
                 mark_removed(p, m.group(1), m.group(2), duplicate_of=canon_id)
 
     if args.apply:
-        print("\nStep 3/5: reclassify domain/subtopic (rule-based, no LLM)")
+        print("\nStep 4/7: reclassify domain/subtopic (rule-based, no LLM)")
         state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
         path_to_key = {p["path"]: k for k, p in state["pages"].items()}
         changed = reclassify_all(state, path_to_key)
         print(f"  {changed} doc(s) reclassified")
 
-        print("\nStep 4/5: resync catalog.jsonl / sync_state.json")
+        print("\nStep 5/7: resync catalog.jsonl / sync_state.json")
         ghosts = resync(state)
         print(f"  done, {ghosts} ghost entrie(s) excluded from catalog.jsonl")
     else:
-        print("\nSteps 3-4 (reclassify, resync) only run with --apply.")
+        print("\nSteps 4-5 (reclassify, resync) only run with --apply.")
 
-    print("\nStep 5/5: populate kb/ from the cleaned corpus (no forced section template)")
+    print("\nStep 6/7: populate kb/ from the cleaned corpus (no forced section template)")
     written, stale, skipped = populate_kb(args.apply)
     verb = "written" if args.apply else "would be written"
     print(f"  {written} file(s) {verb}, {stale} stale generated file(s) "
           f"{'removed' if args.apply else 'would be removed'}, "
           f"{skipped} hand-written file(s) left untouched")
+
+    print("\nStep 7/7: prepare RAG chunks (scripts/rag_prepare.py)")
+    if not args.apply:
+        print("  only runs with --apply (needs the kb/ step 6 just wrote)")
+    elif args.skip_rag:
+        print("  skipped (--skip-rag)")
+    else:
+        run_rag_prepare()
 
     if not args.apply:
         print("\nDry run only -- re-run with --apply to write changes.")

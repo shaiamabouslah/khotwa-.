@@ -18,7 +18,7 @@ keywords:
 sources:
 - url: https://uma.rnu.tn/fr/article/593/appel-a-candidature-mobilite-erasmus-uma-jamies-deadline-10042026
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-06'
 status: active
 generated: true

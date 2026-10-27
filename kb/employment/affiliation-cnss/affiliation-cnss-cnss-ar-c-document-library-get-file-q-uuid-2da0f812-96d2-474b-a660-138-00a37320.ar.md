@@ -25,7 +25,7 @@ keywords:
 sources:
 - url: https://www.cnss.tn/ar/c/document_library/get_file?uuid=2da0f812-96d2-474b-a660-1385084f5f6a&groupId=54202
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-06'
 status: active
 generated: true

@@ -25,7 +25,7 @@ keywords:
 sources:
 - url: http://services.gov.tn/je-souhaite-beneficier-de-la-couverture-sociale/
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-05'
 status: active
 generated: true

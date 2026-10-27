@@ -13,7 +13,7 @@ keywords:
 sources:
 - url: https://www.registre-entreprises.tn/rne-public/#/demande-immatriculation-landing
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-09'
 status: active
 generated: true

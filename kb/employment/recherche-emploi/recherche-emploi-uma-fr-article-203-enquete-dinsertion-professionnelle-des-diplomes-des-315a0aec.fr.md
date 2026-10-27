@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://uma.rnu.tn/fr/article/203/enquete-dinsertion-professionnelle-des-diplomes-des-etablissements-de-luma
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-07'
 status: active
 generated: true

@@ -18,7 +18,7 @@ sources:
 - url: https://equivalence.rnu.tn/index_fr.html
   breadcrumb:
   - Définition
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-05'
 status: active
 generated: true

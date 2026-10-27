@@ -25,7 +25,7 @@ keywords:
 sources:
 - url: https://www.cnrps.nat.tn/fr/ceci-vous-interesse
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-06'
 status: active
 generated: true

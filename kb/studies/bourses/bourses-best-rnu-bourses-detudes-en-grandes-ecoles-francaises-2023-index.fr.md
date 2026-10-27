@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://best.rnu.tn/bourses-detudes-en-grandes-ecoles-francaises-2023/
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-06'
 status: active
 generated: true

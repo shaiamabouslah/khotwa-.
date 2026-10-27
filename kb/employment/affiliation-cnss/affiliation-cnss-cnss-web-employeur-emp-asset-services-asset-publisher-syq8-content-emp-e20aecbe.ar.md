@@ -30,7 +30,7 @@ sources:
   - Services Employeur
   - Emp_Secteur_non_agr5_Immatriculation
   source_updated: '2019-06-18'
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-05'
 status: active
 generated: true

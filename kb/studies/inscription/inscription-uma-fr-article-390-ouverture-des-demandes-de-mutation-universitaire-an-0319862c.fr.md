@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://uma.rnu.tn/fr/article/390/ouverture-des-demandes-de-mutation-universitaire-annee-20252026-a-luniversite-de-la-manouba-cloture-des-inscriptions-en-ligne-24-juillet-2025-date-limite-denvoi-par-voie-postale-28-juillet-2025
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-07'
 status: active
 generated: true

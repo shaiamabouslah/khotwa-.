@@ -17,7 +17,7 @@ keywords:
 sources:
 - url: http://www.sicad.gov.tn/Fr/Prestation_Obtention-dun-duplicata-du-diplome-ou-du--releve-des-notes_57_27_D2152
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-07'
 status: active
 generated: true

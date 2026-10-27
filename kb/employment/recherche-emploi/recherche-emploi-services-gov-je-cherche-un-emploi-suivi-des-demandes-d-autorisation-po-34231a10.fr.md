@@ -12,7 +12,7 @@ sources:
 - url: http://services.gov.tn/je-cherche-un-emploi/
   breadcrumb:
   - Suivi des demandes d’autorisation pour la main-d’œuvre étrangère (emploi des étrangers)
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-05'
 status: active
 generated: true

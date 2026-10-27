@@ -12,7 +12,7 @@ sources:
 - url: https://www.ooun.rnu.tn/web/fr/bourse.html
   breadcrumb:
   - Les textes législatifs
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-05'
 status: active
 generated: true

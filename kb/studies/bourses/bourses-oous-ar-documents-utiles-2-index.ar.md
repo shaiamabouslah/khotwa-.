@@ -21,7 +21,7 @@ keywords:
 sources:
 - url: https://oous.rnu.tn/ar/documents-utiles_2
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-05'
 status: active
 generated: true

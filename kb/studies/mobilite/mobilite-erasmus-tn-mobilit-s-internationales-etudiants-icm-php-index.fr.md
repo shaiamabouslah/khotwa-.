@@ -18,7 +18,7 @@ keywords:
 sources:
 - url: https://www.erasmusplus.tn/Mobilités-Internationales-Etudiants-ICM.php
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-10'
 status: active
 generated: true

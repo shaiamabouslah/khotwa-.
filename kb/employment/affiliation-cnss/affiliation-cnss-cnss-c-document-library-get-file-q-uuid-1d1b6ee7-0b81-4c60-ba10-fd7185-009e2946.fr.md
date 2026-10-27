@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://www.cnss.tn/c/document_library/get_file?uuid=1d1b6ee7-0b81-4c60-ba10-fd718513894a&groupId=33103
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-06'
 status: active
 generated: true

@@ -12,7 +12,7 @@ keywords:
 sources:
 - url: https://www.tunisieindustrie.nat.tn/fr/doc.asp?mcat=16&mrub=194
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-06'
 status: active
 generated: true

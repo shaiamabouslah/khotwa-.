@@ -15,6 +15,8 @@ from pathlib import Path
 
 import yaml
 
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 REQUIRED = ["id", "title", "domain", "subtopic", "lang", "sources", "last_changed"]
 MIN_WORDS = 40            # after cleaning
 TARGET_WORDS, MAX_WORDS, OVERLAP = 280, 420, 40
@@ -40,10 +42,6 @@ def script_ratio(s):
 
 
 # ───────────────────────── 1. load + validate ─────────────────────────
-import re
-import yaml
-from pathlib import Path
-
 def load(path):
     path = Path(path)  # Convert manually provided path to Path object
 

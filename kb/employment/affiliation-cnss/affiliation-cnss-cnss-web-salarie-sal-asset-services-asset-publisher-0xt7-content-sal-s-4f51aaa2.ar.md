@@ -30,7 +30,7 @@ sources:
   - Services Salarié
   - Sal Secteur_ non_agr1_actions_licenciement3
   source_updated: '2016-09-02'
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-05'
 status: active
 generated: true

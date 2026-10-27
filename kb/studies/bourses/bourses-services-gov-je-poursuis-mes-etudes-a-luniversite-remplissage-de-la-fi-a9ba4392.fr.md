@@ -12,7 +12,7 @@ sources:
 - url: http://services.gov.tn/je-poursuis-mes-etudes-a-luniversite/
   breadcrumb:
   - Remplissage de la fiche de choix – session des excellents candidats
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-05'
 status: active
 generated: true

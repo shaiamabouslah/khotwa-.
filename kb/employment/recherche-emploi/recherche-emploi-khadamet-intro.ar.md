@@ -25,7 +25,7 @@ keywords:
 sources:
 - url: https://khadamet.gov.tn/%d8%a3%d8%a8%d8%ad%d8%ab-%d8%b9%d9%86-%d8%b9%d9%85%d9%84/
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-05'
 status: active
 generated: true

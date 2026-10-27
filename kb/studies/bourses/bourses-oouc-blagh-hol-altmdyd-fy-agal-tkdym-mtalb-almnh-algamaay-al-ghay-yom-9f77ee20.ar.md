@@ -21,7 +21,7 @@ keywords:
 sources:
 - url: https://www.oouc.rnu.tn/blagh-hol-altmdyd-fy-agal-tkdym-mtalb-almnh-algamaay-al-ghay-yom-25-nofmbr-2025
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-05'
 status: active
 generated: true

@@ -21,7 +21,7 @@ keywords:
 sources:
 - url: https://oous.rnu.tn/ar/actualites/739/%D8%A8%D9%84%D8%A7%D8%BA_%D8%AD%D9%88%D9%84_%D8%A7%D9%84%D9%88%D8%AB%D8%A7%D9%8A%D9%94%D9%82_%D8%A7%D9%84%D9%85%D8%B7%D9%84%D9%88%D8%A8%D8%A9_%D9%84%D9%85%D8%B7%D8%A7%D8%A7%D9%84%D8%A8_%D8%A7%D9%84%D9%85%D9%86%D8%AD_%D9%88_%D9%85%D9%86%D8%AD%D8%A9_%D8%A7%D9%84%D8%A7%D8%AF%D9%85%D8%A7%D8%AC_%D9%88_%D8%A7%D9%84%D9%82%D8%B1%D9%88%D8%B6_%D9%84%D9%84%D8%B3%D9%86%D8%A9_%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D9%8A%D8%A9_20272026
   breadcrumb: []
-last_checked: '2026-10-16'
+last_checked: '2026-10-27'
 last_changed: '2026-10-05'
 status: active
 generated: true
