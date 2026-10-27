@@ -34,6 +34,9 @@ def clean(b):
     b = b.replace("\ufffd", "").replace("\u00a0", " ").replace("\u200b", "")
     b = SOCIAL.sub("", b)
     b = STAMP.sub("", b)
+    # an indented "# Title" is invisible to every markdown-heading regex downstream (chunker,
+    # validate_kb's H1 check) -- the literal "#" just leaks into the text as noise instead
+    b = re.sub(r"^[ \t]+(#{1,6} )", r"\1", b, flags=re.M)
     b = "\n".join(l for l in b.split("\n") if not NAV_LINE.match(l))
     b = flatten_tables(b)
     b = re.sub(r"(?<=\S) {3,}", " ", b)                           # inner whitespace runs, keeps indentation

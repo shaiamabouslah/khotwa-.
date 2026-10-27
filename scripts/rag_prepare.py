@@ -7,8 +7,12 @@ Stages (each one is deterministic, no LLM):
   3 language gate   declared `lang` must match the script actually used
   4 quality gate    too short / too noisy  -> quarantine (never silently dropped)
   5 dedup           exact + near-duplicate (same lang); borderline pairs go to a review list
-  6 chunk           heading-aware, size-bounded, every chunk carries a context header
-  7 emit            chunks.jsonl, quarantine.jsonl, review_dupes.json, report.md
+  6 chunk           heading-aware, size-bounded, every chunk carries a context header; overlap
+                    between consecutive chunks keeps whole trailing rows/sentences, never a
+                    blind word-count tail-slice (that used to cut mid-row/mid-sentence)
+  7 emit            chunks.jsonl, parents.jsonl (multi-chunk docs' full text, for "expand to
+                    the whole procedure" hierarchical retrieval), quarantine.jsonl,
+                    review_dupes.json, report.md
 """
 import argparse, collections, hashlib, json, re, sys, unicodedata
 from pathlib import Path
@@ -174,8 +178,17 @@ def pack(blocks):
             uw = words(u)
             if n + uw > MAX_WORDS and cur:
                 chunks.append("\n\n".join(cur))
-                tail = " ".join("\n\n".join(cur).split()[-OVERLAP:])
-                cur, n = [tail], words(tail)
+                # Overlap = whole trailing units (table rows / sentences), not a raw word-count
+                # slice -- a blind tail-slice cuts mid-row/mid-sentence (measured: 87% of
+                # non-final chunks on long headingless docs ended with no terminal punctuation).
+                tail, tn = [], 0
+                for prev in reversed(cur):
+                    pw = words(prev)
+                    if tn and tn + pw > OVERLAP:
+                        break
+                    tail.insert(0, prev)
+                    tn += pw
+                cur, n = tail, tn
             cur.append(u); n += uw
     if cur: chunks.append("\n\n".join(cur))
     return chunks
@@ -236,20 +249,31 @@ def main():
         quarantine.append({"id": i, "reasons": ["near_duplicate"], **d})
     kept = [d for d in docs if uid(d["fm"]) not in dropped]
 
-    n_chunks, cw = 0, []
-    with open(out / "chunks.jsonl", "w", encoding="utf-8") as f:
+    n_chunks, n_parents, cw = 0, 0, []
+    with open(out / "chunks.jsonl", "w", encoding="utf-8") as f, \
+         open(out / "parents.jsonl", "w", encoding="utf-8") as pf:
         for d in kept:
             fm = d["fm"]
             src = (fm.get("sources") or [{}])[0]
-            for k, c in enumerate(chunk_doc(fm, d["body"])):
+            doc_chunks = chunk_doc(fm, d["body"])
+            for k, c in enumerate(doc_chunks):
                 rec = {
                     "chunk_id": f"{uid(fm)}#{k:02d}", "doc_id": fm["id"], "lang": fm["lang"],
                     "domain": fm["domain"], "subtopic": fm["subtopic"], "title": fm["title"],
                     "org": fm.get("org", ""), "section": c["section"], "url": src.get("url", ""),
                     "last_changed": str(fm.get("last_changed", "")), "missing_fields": d["missing"],
-                    "text": c["text"],
+                    "text": c["text"], "n_chunks": len(doc_chunks),
                 }
                 f.write(json.dumps(rec, ensure_ascii=False) + "\n"); n_chunks += 1; cw.append(words(c["text"]))
+            # Hierarchical retrieval ("small-to-big"): a chunk hit can be expanded to its full
+            # procedure via doc_id+lang. Only worth storing for docs that actually got split --
+            # a single-chunk doc's chunk text already IS the whole document.
+            if len(doc_chunks) > 1:
+                pf.write(json.dumps({"doc_id": fm["id"], "lang": fm["lang"], "title": fm["title"],
+                                      "domain": fm["domain"], "subtopic": fm["subtopic"],
+                                      "url": src.get("url", ""), "text": f"{fm['title']}\n\n{d['body']}"},
+                                     ensure_ascii=False) + "\n")
+                n_parents += 1
     (out / "quarantine.jsonl").write_text("\n".join(json.dumps(q, ensure_ascii=False) for q in quarantine), encoding="utf-8")
     (out / "review_dupes.json").write_text(json.dumps(review, ensure_ascii=False, indent=1), encoding="utf-8")
 
@@ -257,6 +281,7 @@ def main():
     cw.sort()
     rep = [f"# RAG prepare report", f"- files scanned: {stats['files']}", f"- kept docs: {len(kept)}",
            f"- chunks: {n_chunks}  (words p10/median/p90: {cw[len(cw)//10]}/{cw[len(cw)//2]}/{cw[9*len(cw)//10]})" if cw else "- chunks: 0",
+           f"- parent docs (multi-chunk, expandable): {n_parents}",
            f"- quarantined: {len(quarantine)}", f"- borderline duplicate pairs to review: {len(review)}", "", "## Quarantine reasons"]
     rep += [f"- {k}: {v}" for k, v in reasons.most_common()]
     (out / "report.md").write_text("\n".join(rep), encoding="utf-8")

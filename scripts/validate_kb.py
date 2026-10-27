@@ -94,7 +94,7 @@ def check_file(path, errors, warnings):
     # one happens to match), never enforced.
     if not body.strip():
         errors.append(f"{rel}: body is empty")
-    if re.search(r"^# ", body, re.M):
+    if re.search(r"^[ \t]*# ", body, re.M):
         errors.append(f"{rel}: top-level '# ' headings are not allowed in the body")
     if "<" in body and re.search(r"<[A-Za-z][^>]*>", body):
         warnings.append(f"{rel}: body contains HTML tags")

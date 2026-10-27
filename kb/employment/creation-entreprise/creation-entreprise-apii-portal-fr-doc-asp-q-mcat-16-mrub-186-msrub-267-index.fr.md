@@ -29,103 +29,103 @@ l’Industrie, de l’Energie et des Mines
 - Accueil
 - Incitations et avantages
 
-  ### Nouveau cadre juridique de l’investissement
+### Nouveau cadre juridique de l’investissement
 
-  ### Fiches Pratiques
+### Fiches Pratiques
 
-  ### Nomenclature des activités
+### Nomenclature des activités
 
-  ### Activités soumises à autorisation préalable ou aux cahiers des charges
+### Activités soumises à autorisation préalable ou aux cahiers des charges
 
-  ### Franchise douanière pour les Tunisiens résidents à l’étranger
+### Franchise douanière pour les Tunisiens résidents à l’étranger
 
-  ### Incitations pour la mise à niveau
+### Incitations pour la mise à niveau
 
   Loi n° 2016-71 du 30 septembre 2016- **Création d'entreprises**
 
-    ### Fiche Professionnelle des projets
+### Fiche Professionnelle des projets
 
-    ### Structures d'appui à la création
+### Structures d'appui à la création
 
-    ### Déclaration d'un projet en ligne
+### Déclaration d'un projet en ligne
 
-    ### Constitution juridiques des sociétés - Examen de recevabilité en ligne
+### Constitution juridiques des sociétés - Examen de recevabilité en ligne
 
-    #### Guichet Unique
+#### Guichet Unique
 
-    ### - Présentation - Délivrance des attestations de dépôt de déclaration - Constitution juridique des sociétés - Autres types de prestations - Assistance et informationPépinière d'entreprisesCentres TechniquesLes Technopoles en TunisieEnterprise Europe Network - EEN
+### - Présentation - Délivrance des attestations de dépôt de déclaration - Constitution juridique des sociétés - Autres types de prestations - Assistance et informationPépinière d'entreprisesCentres TechniquesLes Technopoles en TunisieEnterprise Europe Network - EEN
 
     Le Guichet Unique de l’APIDéclaration en Ligne de votre projet d’investissement- Informations industrielles
 
-      ### Statistiques sur la création d'entreprises
+### Statistiques sur la création d'entreprises
 
-      ### Bulletin de conjoncture
+### Bulletin de conjoncture
 
-      ### Suivi des grands projets
+### Suivi des grands projets
 
-      #### Entreprises opérationnelles dans l'Industrie
+#### Entreprises opérationnelles dans l'Industrie
 
-      ### - Les chiffres clés de l'industrie - Entreprises Tunisiennes - Entreprises Mixtes - Entreprises à capitaux 100 % étrangersRéférentiel et Dashboard pour les secteurs Automobile et AéronautiqueCourrier de l'IndustriePolitique qualité
+### - Les chiffres clés de l'industrie - Entreprises Tunisiennes - Entreprises Mixtes - Entreprises à capitaux 100 % étrangersRéférentiel et Dashboard pour les secteurs Automobile et AéronautiqueCourrier de l'IndustriePolitique qualité
 
       Bulletin de conjoncture- Etudes et monographies
 
-        ### Les études industrielles
+### Les études industrielles
 
-        ### Fiche Professionnelle des projets
+### Fiche Professionnelle des projets
 
-        ### Les études régionales
+### Les études régionales
 
-        ### Notes sectorielles
+### Notes sectorielles
 
-        ### Etude sur les problématiques de la création d’entreprises
+### Etude sur les problématiques de la création d’entreprises
 
-        ### Monographies sectorielles
+### Monographies sectorielles
 
-        ### Monographies régionales
+### Monographies régionales
 
         Etudes et monographies sectorielles réalisées par l'API- Innovation
 
-          ### Découvrir l’innovation
+### Découvrir l’innovation
 
-          ### Centre d’innovation et de développement technologique
+### Centre d’innovation et de développement technologique
 
-          ### Structures d’appui
+### Structures d’appui
 
-          #### Programmes d’appui
+#### Programmes d’appui
 
-          ### - Programme de mise à niveau – PMNFinancement de l’innovation - Incitations à la création d’entreprises innovantes - Incitations à la rechercheProgramme de Renforcement des Capacités des Entreprises en matière d’Innovation
+### - Programme de mise à niveau – PMNFinancement de l’innovation - Incitations à la création d’entreprises innovantes - Incitations à la rechercheProgramme de Renforcement des Capacités des Entreprises en matière d’Innovation
 
           Guide de l'innovation- Services en ligne
 
-            ### Déclaration d'un projet d’investissement
+### Déclaration d'un projet d’investissement
 
-            ### Constitution juridiques des sociétés - Service d’examen de recevabilité et prise de rendez-vous
+### Constitution juridiques des sociétés - Service d’examen de recevabilité et prise de rendez-vous
 
-            ### Annuaire des entreprises industrielles
+### Annuaire des entreprises industrielles
 
-            ### Annuaire des entreprises de services
+### Annuaire des entreprises de services
 
-            ### Simulateur de recherche d’activités et d’estimation de primes d’investissement
+### Simulateur de recherche d’activités et d’estimation de primes d’investissement
 
-            ### Entreprises Certifiées en Tunisie
+### Entreprises Certifiées en Tunisie
 
-            ### Salon virtuel de l'industrie Tunisienne
+### Salon virtuel de l'industrie Tunisienne
 
-            ### Base de données documentaires
+### Base de données documentaires
 
-            ### Plan d’Affaires Interactif
+### Plan d’Affaires Interactif
 
-            ### Documents utiles
+### Documents utiles
 
-            ### Publications de l'APII
+### Publications de l'APII
 
-            ### Alerte Corruption
+### Alerte Corruption
 
             Annuaire des entreprises industriellesSalon virtuel de l'industrie Tunisienne
 
       Accueil Création d'entreprises  Guichet Unique **Présentation**
 
-      # Présentation du Guichet Unique
+## Présentation du Guichet Unique
 
       Le Guichet Unique de l’API est un centre de
       formalités administratives et légales réunissant, en un même espace, les

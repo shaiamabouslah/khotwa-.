@@ -29,103 +29,103 @@ l’Industrie, de l’Energie et des Mines
 - Accueil
 - Incitations et avantages
 
-  ### Nouveau cadre juridique de l’investissement
+### Nouveau cadre juridique de l’investissement
 
-  ### Fiches Pratiques
+### Fiches Pratiques
 
-  ### Nomenclature des activités
+### Nomenclature des activités
 
-  ### Activités soumises à autorisation préalable ou aux cahiers des charges
+### Activités soumises à autorisation préalable ou aux cahiers des charges
 
-  ### Franchise douanière pour les Tunisiens résidents à l’étranger
+### Franchise douanière pour les Tunisiens résidents à l’étranger
 
-  ### Incitations pour la mise à niveau
+### Incitations pour la mise à niveau
 
   Loi n° 2016-71 du 30 septembre 2016- **Création d'entreprises**
 
-    ### Fiche Professionnelle des projets
+### Fiche Professionnelle des projets
 
-    ### Structures d'appui à la création
+### Structures d'appui à la création
 
-    ### Déclaration d'un projet en ligne
+### Déclaration d'un projet en ligne
 
-    ### Constitution juridiques des sociétés - Examen de recevabilité en ligne
+### Constitution juridiques des sociétés - Examen de recevabilité en ligne
 
-    #### Guichet Unique
+#### Guichet Unique
 
-    ### - Présentation - Délivrance des attestations de dépôt de déclaration - Constitution juridique des sociétés - Autres types de prestations - Assistance et informationPépinière d'entreprisesCentres TechniquesLes Technopoles en TunisieEnterprise Europe Network - EEN
+### - Présentation - Délivrance des attestations de dépôt de déclaration - Constitution juridique des sociétés - Autres types de prestations - Assistance et informationPépinière d'entreprisesCentres TechniquesLes Technopoles en TunisieEnterprise Europe Network - EEN
 
     Le Guichet Unique de l’APIDéclaration en Ligne de votre projet d’investissement- Informations industrielles
 
-      ### Statistiques sur la création d'entreprises
+### Statistiques sur la création d'entreprises
 
-      ### Bulletin de conjoncture
+### Bulletin de conjoncture
 
-      ### Suivi des grands projets
+### Suivi des grands projets
 
-      #### Entreprises opérationnelles dans l'Industrie
+#### Entreprises opérationnelles dans l'Industrie
 
-      ### - Les chiffres clés de l'industrie - Entreprises Tunisiennes - Entreprises Mixtes - Entreprises à capitaux 100 % étrangersRéférentiel et Dashboard pour les secteurs Automobile et AéronautiqueCourrier de l'IndustriePolitique qualité
+### - Les chiffres clés de l'industrie - Entreprises Tunisiennes - Entreprises Mixtes - Entreprises à capitaux 100 % étrangersRéférentiel et Dashboard pour les secteurs Automobile et AéronautiqueCourrier de l'IndustriePolitique qualité
 
       Bulletin de conjoncture- Etudes et monographies
 
-        ### Les études industrielles
+### Les études industrielles
 
-        ### Fiche Professionnelle des projets
+### Fiche Professionnelle des projets
 
-        ### Les études régionales
+### Les études régionales
 
-        ### Notes sectorielles
+### Notes sectorielles
 
-        ### Etude sur les problématiques de la création d’entreprises
+### Etude sur les problématiques de la création d’entreprises
 
-        ### Monographies sectorielles
+### Monographies sectorielles
 
-        ### Monographies régionales
+### Monographies régionales
 
         Etudes et monographies sectorielles réalisées par l'API- Innovation
 
-          ### Découvrir l’innovation
+### Découvrir l’innovation
 
-          ### Centre d’innovation et de développement technologique
+### Centre d’innovation et de développement technologique
 
-          ### Structures d’appui
+### Structures d’appui
 
-          #### Programmes d’appui
+#### Programmes d’appui
 
-          ### - Programme de mise à niveau – PMNFinancement de l’innovation - Incitations à la création d’entreprises innovantes - Incitations à la rechercheProgramme de Renforcement des Capacités des Entreprises en matière d’Innovation
+### - Programme de mise à niveau – PMNFinancement de l’innovation - Incitations à la création d’entreprises innovantes - Incitations à la rechercheProgramme de Renforcement des Capacités des Entreprises en matière d’Innovation
 
           Guide de l'innovation- Services en ligne
 
-            ### Déclaration d'un projet d’investissement
+### Déclaration d'un projet d’investissement
 
-            ### Constitution juridiques des sociétés - Service d’examen de recevabilité et prise de rendez-vous
+### Constitution juridiques des sociétés - Service d’examen de recevabilité et prise de rendez-vous
 
-            ### Annuaire des entreprises industrielles
+### Annuaire des entreprises industrielles
 
-            ### Annuaire des entreprises de services
+### Annuaire des entreprises de services
 
-            ### Simulateur de recherche d’activités et d’estimation de primes d’investissement
+### Simulateur de recherche d’activités et d’estimation de primes d’investissement
 
-            ### Entreprises Certifiées en Tunisie
+### Entreprises Certifiées en Tunisie
 
-            ### Salon virtuel de l'industrie Tunisienne
+### Salon virtuel de l'industrie Tunisienne
 
-            ### Base de données documentaires
+### Base de données documentaires
 
-            ### Plan d’Affaires Interactif
+### Plan d’Affaires Interactif
 
-            ### Documents utiles
+### Documents utiles
 
-            ### Publications de l'APII
+### Publications de l'APII
 
-            ### Alerte Corruption
+### Alerte Corruption
 
             Annuaire des entreprises industriellesSalon virtuel de l'industrie Tunisienne
 
       Accueil Création d'entreprises  Guichet Unique **Autres types de prestations**
 
-      # Autres types de prestations
+## Autres types de prestations
 
       **Autres types de prestations rendues au guichet unique de l’API à Tunis, à Sousse et à Sfax**
       - Délivrance des numéros d’identification en douane / code en douane - **Guichet Unique – Tunis, Sousse et Sfax**
@@ -134,7 +134,7 @@ l’Industrie, de l’Energie et des Mines
       - Délivrance des attestations de non soumission au visa du contrat de travail - **Guichet Unique - Tunis**
       - Délivrance des cartes de séjour : **Guichet Unique – Tunis, Sousse et Sfax**
 
-      ## Délivrance des numéros d’identification en douane / code en douane -  Guichet Unique – Tunis, Sousse et Sfax
+## Délivrance des numéros d’identification en douane / code en douane -  Guichet Unique – Tunis, Sousse et Sfax
 
       - Eligibilité:Entreprises créées dans le cadre du Code d’Incitation aux Investissements.
       - Bureau intervenant :Bureau des douanes
@@ -148,7 +148,7 @@ l’Industrie, de l’Energie et des Mines
       - Copie de la CIN du représentant légal de l’entreprise;
       - Timbre fiscal de 1DT.
 
-      ## Affiliation au régime légal de sécurité sociale / P. P. Physique / P. Morale : Guichet Unique - Tunis
+## Affiliation au régime légal de sécurité sociale / P. P. Physique / P. Morale : Guichet Unique - Tunis
 
       Eligibilité : Entreprises créées dans le cadre du Code d’Incitation aux Investissements.
       - Bureau intervenant : Caisse nationale de sécurité sociale / CNSS
@@ -166,7 +166,7 @@ l’Industrie, de l’Energie et des Mines
 
       NB : l’affiliation à la CNSS est soumise au paiement d’un droit d’inscription de 5DT.
 
-      ## Affiliation des travailleurs non salariés – Guichet Unique - Tunis
+## Affiliation des travailleurs non salariés – Guichet Unique - Tunis
 
       - Eligibilité : Promoteurs, Gérants et PDG d’Entreprises.
       - Bureau intervenant : Caisse nationale de sécurité sociale / CNSS
@@ -181,7 +181,7 @@ l’Industrie, de l’Energie et des Mines
       - Une copie conforme de la déclaration d’existence et de la carte d’identification fiscale ou de l’autorisation d’exercice de l’activité ou de l’attestation de l’exercice de l’activité ou de la carte de professionnelle délivrée par les services administratifs compétents.Cas de personne physique exerçant une activité agricole
       - Certificat de propriété du terrain agricole ou copie conforme du contrat de location dûment enregistré ou d’une attestation de possession ou d’attribution ou une attestation de l’union des agriculteurs stipulant que la superficie exploitée ne dépasse pas 5 hectares en sec et 1 hectare en irrigué.NB : L’affiliation à la CNSS est soumise au paiement d’un droit d’inscription de 5 DT.
 
-      ## Délivrance des attestations de non soumission au visa du contrat de travail  - Guichet Unique - Tunis
+## Délivrance des attestations de non soumission au visa du contrat de travail  - Guichet Unique - Tunis
 
       - Eligibilité : Employeurs et travailleurs étrangers : Promoteurs de projets, Gérants et PDG d’entreprises…
       - Bureau intervenant : Bureau du Ministère de la formation professionnelle et de l'emploi
@@ -250,7 +250,7 @@ l’Industrie, de l’Energie et des Mines
       - Un certificat de détachement en cas où l’employeur est adjudicataire d’un marché public conclu en Tunisie ;
       - 2 timbres fiscaux de 3 DT.
 
-      ## Délivrance des cartes de séjour : Guichet Unique – Tunis, Sousse et Sfax
+## Délivrance des cartes de séjour : Guichet Unique – Tunis, Sousse et Sfax
 
       - Eligibilité : Promoteurs et investisseurs étrangers
       - Bureau intervenant : Bureau du Ministère de l’Intérieur
@@ -273,7 +273,7 @@ l’Industrie, de l’Energie et des Mines
       - Une copie de la carte consulaire ;
       - Un extrait de naissance.
 
-      ### APII / Opportunit s d affaires### Programme de Renforcement des Capacit s des Entreprises en mati re d Innovation### Courrier de l'Industrie### Bulletin de conjoncture### Manuel des proc dures - Guide de l'investisseur### Code de conduite et de d ontologie de l agent publicTunisian Industry Portal Winner 2011
+### APII / Opportunit s d affaires### Programme de Renforcement des Capacit s des Entreprises en mati re d Innovation### Courrier de l'Industrie### Bulletin de conjoncture### Manuel des proc dures - Guide de l'investisseur### Code de conduite et de d ontologie de l agent publicTunisian Industry Portal Winner 2011
 
       Copyright API Tunisia 2018 - Tous droits r serv s
 

@@ -295,9 +295,10 @@ def build_kb_entries(taxonomy: dict):
             continue
         doc_id = meta.get("doc_id") or p.as_posix()
         kb_id = f"{subtopic}-{slugify(doc_id)}"
-        # Demote a leading H1 (the extractor sometimes duplicates the title as a "# " line) --
-        # the kb contract forbids top-level headings in the body.
-        body = re.sub(r"^#(?!#)[ \t]+", "## ", body.strip(), flags=re.M)
+        # Demote a leading H1 (the extractor sometimes duplicates the title as a "# " line,
+        # sometimes indented -- an indented "#" is invisible to a bare "^#" regex) -- the kb
+        # contract forbids top-level headings in the body.
+        body = re.sub(r"^[ \t]*#(?!#)[ \t]+", "## ", body.strip(), flags=re.M)
         by_id[kb_id][lang] = (meta, body, domain, subtopic)
     return by_id
 

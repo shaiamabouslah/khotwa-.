@@ -29,107 +29,107 @@ l’Industrie, de l’Energie et des Mines
 - Accueil
 - Incitations et avantages
 
-  ### Nouveau cadre juridique de l’investissement
+### Nouveau cadre juridique de l’investissement
 
-  ### Fiches Pratiques
+### Fiches Pratiques
 
-  ### Nomenclature des activités
+### Nomenclature des activités
 
-  ### Activités soumises à autorisation préalable ou aux cahiers des charges
+### Activités soumises à autorisation préalable ou aux cahiers des charges
 
-  ### Franchise douanière pour les Tunisiens résidents à l’étranger
+### Franchise douanière pour les Tunisiens résidents à l’étranger
 
-  ### Incitations pour la mise à niveau
+### Incitations pour la mise à niveau
 
   Loi n° 2016-71 du 30 septembre 2016- **Création d'entreprises**
 
-    ### Fiche Professionnelle des projets
+### Fiche Professionnelle des projets
 
-    ### Structures d'appui à la création
+### Structures d'appui à la création
 
-    ### Déclaration d'un projet en ligne
+### Déclaration d'un projet en ligne
 
-    ### Constitution juridiques des sociétés - Examen de recevabilité en ligne
+### Constitution juridiques des sociétés - Examen de recevabilité en ligne
 
-    #### Guichet Unique
+#### Guichet Unique
 
-    ### - Présentation - Délivrance des attestations de dépôt de déclaration - Constitution juridique des sociétés - Autres types de prestations - Assistance et informationPépinière d'entreprisesCentres TechniquesLes Technopoles en TunisieEnterprise Europe Network - EEN
+### - Présentation - Délivrance des attestations de dépôt de déclaration - Constitution juridique des sociétés - Autres types de prestations - Assistance et informationPépinière d'entreprisesCentres TechniquesLes Technopoles en TunisieEnterprise Europe Network - EEN
 
     Le Guichet Unique de l’APIDéclaration en Ligne de votre projet d’investissement- Informations industrielles
 
-      ### Statistiques sur la création d'entreprises
+### Statistiques sur la création d'entreprises
 
-      ### Bulletin de conjoncture
+### Bulletin de conjoncture
 
-      ### Suivi des grands projets
+### Suivi des grands projets
 
-      #### Entreprises opérationnelles dans l'Industrie
+#### Entreprises opérationnelles dans l'Industrie
 
-      ### - Les chiffres clés de l'industrie - Entreprises Tunisiennes - Entreprises Mixtes - Entreprises à capitaux 100 % étrangersRéférentiel et Dashboard pour les secteurs Automobile et AéronautiqueCourrier de l'IndustriePolitique qualité
+### - Les chiffres clés de l'industrie - Entreprises Tunisiennes - Entreprises Mixtes - Entreprises à capitaux 100 % étrangersRéférentiel et Dashboard pour les secteurs Automobile et AéronautiqueCourrier de l'IndustriePolitique qualité
 
       Bulletin de conjoncture- Etudes et monographies
 
-        ### Les études industrielles
+### Les études industrielles
 
-        ### Fiche Professionnelle des projets
+### Fiche Professionnelle des projets
 
-        ### Les études régionales
+### Les études régionales
 
-        ### Notes sectorielles
+### Notes sectorielles
 
-        ### Etude sur les problématiques de la création d’entreprises
+### Etude sur les problématiques de la création d’entreprises
 
-        ### Monographies sectorielles
+### Monographies sectorielles
 
-        ### Monographies régionales
+### Monographies régionales
 
         Etudes et monographies sectorielles réalisées par l'API- Innovation
 
-          ### Découvrir l’innovation
+### Découvrir l’innovation
 
-          ### Centre d’innovation et de développement technologique
+### Centre d’innovation et de développement technologique
 
-          ### Structures d’appui
+### Structures d’appui
 
-          #### Programmes d’appui
+#### Programmes d’appui
 
-          ### - Programme de mise à niveau – PMNFinancement de l’innovation - Incitations à la création d’entreprises innovantes - Incitations à la rechercheProgramme de Renforcement des Capacités des Entreprises en matière d’Innovation
+### - Programme de mise à niveau – PMNFinancement de l’innovation - Incitations à la création d’entreprises innovantes - Incitations à la rechercheProgramme de Renforcement des Capacités des Entreprises en matière d’Innovation
 
           Guide de l'innovation- Services en ligne
 
-            ### Déclaration d'un projet d’investissement
+### Déclaration d'un projet d’investissement
 
-            ### Constitution juridiques des sociétés - Service d’examen de recevabilité et prise de rendez-vous
+### Constitution juridiques des sociétés - Service d’examen de recevabilité et prise de rendez-vous
 
-            ### Annuaire des entreprises industrielles
+### Annuaire des entreprises industrielles
 
-            ### Annuaire des entreprises de services
+### Annuaire des entreprises de services
 
-            ### Simulateur de recherche d’activités et d’estimation de primes d’investissement
+### Simulateur de recherche d’activités et d’estimation de primes d’investissement
 
-            ### Entreprises Certifiées en Tunisie
+### Entreprises Certifiées en Tunisie
 
-            ### Salon virtuel de l'industrie Tunisienne
+### Salon virtuel de l'industrie Tunisienne
 
-            ### Base de données documentaires
+### Base de données documentaires
 
-            ### Plan d’Affaires Interactif
+### Plan d’Affaires Interactif
 
-            ### Documents utiles
+### Documents utiles
 
-            ### Publications de l'APII
+### Publications de l'APII
 
-            ### Alerte Corruption
+### Alerte Corruption
 
             Annuaire des entreprises industriellesSalon virtuel de l'industrie Tunisienne
 
       Accueil Création d'entreprises  Guichet Unique **Délivrance des attestations de dépôt de déclaration**
 
-      # Délivrance des attestations de dépôt de déclaration
+## Délivrance des attestations de dépôt de déclaration
 
       Les attestations de dépôt de déclaration de projets sont délivrées sur la base d’une déclaration de projet déposée sur site ou à  envoyée en ligne via le site Web de l’API.
 
-      ## Activités éligibles
+## Activités éligibles
 
       Cf. Décret n°94-492 du 28 février 1994, portant fixation des listes des activités relevant des secteurs prévus par les articles 1,2,3 et 27 du code d’incitation aux investissements tel que modifié et complété par les textes subséquents.- Les industries manufacturières y compris les industries agro-alimentaires et les activités de première transformation et de conditionnement de produits agricoles et de pêche et les activités de service suivantes:
       - Travaux publics
@@ -143,7 +143,7 @@ l’Industrie, de l’Energie et des Mines
       - Promotion immobilière
       - Autres services non financiers (Etudes, Conseils, Expertises, Recherches et développements...)
 
-      ## Compétence d’attribution et territoriale du bureau API au guichet unique
+## Compétence d’attribution et territoriale du bureau API au guichet unique
 
       - Compétence d’attribution du bureau de l’API au Guichet Unique de Tunis
         - Les projets de création industriels et de services ;
@@ -157,11 +157,11 @@ l’Industrie, de l’Energie et des Mines
       - Les déclarations de changement de régime d’investissement.- Compétence territoriale du bureau l’API aux Guichets Uniques des directions régionales
       La compétence territoriale du bureau API au Guichet Unique est fonction également du lieu d’implantation prévu pour le projet.
 
-      ## Délai d’octroi de l’attestation de dépôt de déclaration de projet:
+## Délai d’octroi de l’attestation de dépôt de déclaration de projet:
 
       24 heures ouvrables à compter de la date et l’heure de dépôt de la déclaration d’investissement sur site via le site Web de l’Agence ou de sa réception.
 
-      ## Pièces à fournir : Guichet Unique de l’ API de Tunis
+## Pièces à fournir : Guichet Unique de l’ API de Tunis
 
       - Projets industriels et de services sans participation étrangère :
       **Les projets de création**

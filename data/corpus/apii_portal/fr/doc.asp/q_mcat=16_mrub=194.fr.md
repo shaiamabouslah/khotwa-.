@@ -216,103 +216,103 @@ l’Industrie, de l’Energie et des Mines
 - Accueil
 - Incitations et avantages
 
-  ### Nouveau cadre juridique de l’investissement
+### Nouveau cadre juridique de l’investissement
 
-  ### Fiches Pratiques
+### Fiches Pratiques
 
-  ### Nomenclature des activités
+### Nomenclature des activités
 
-  ### Activités soumises à autorisation préalable ou aux cahiers des charges
+### Activités soumises à autorisation préalable ou aux cahiers des charges
 
-  ### Franchise douanière pour les Tunisiens résidents à l’étranger
+### Franchise douanière pour les Tunisiens résidents à l’étranger
 
-  ### Incitations pour la mise à niveau
+### Incitations pour la mise à niveau
 
   Loi n° 2016-71 du 30 septembre 2016- **Création d'entreprises**
 
-    ### Fiche Professionnelle des projets
+### Fiche Professionnelle des projets
 
-    ### Structures d'appui à la création
+### Structures d'appui à la création
 
-    ### Déclaration d'un projet en ligne
+### Déclaration d'un projet en ligne
 
-    ### Constitution juridiques des sociétés - Examen de recevabilité en ligne
+### Constitution juridiques des sociétés - Examen de recevabilité en ligne
 
-    #### Guichet Unique
+#### Guichet Unique
 
-    ### - Présentation - Délivrance des attestations de dépôt de déclaration - Constitution juridique des sociétés - Autres types de prestations - Assistance et informationPépinière d'entreprisesCentres TechniquesLes Technopoles en TunisieEnterprise Europe Network - EEN
+### - Présentation - Délivrance des attestations de dépôt de déclaration - Constitution juridique des sociétés - Autres types de prestations - Assistance et informationPépinière d'entreprisesCentres TechniquesLes Technopoles en TunisieEnterprise Europe Network - EEN
 
     Le Guichet Unique de l’APIDéclaration en Ligne de votre projet d’investissement- Informations industrielles
 
-      ### Statistiques sur la création d'entreprises
+### Statistiques sur la création d'entreprises
 
-      ### Bulletin de conjoncture
+### Bulletin de conjoncture
 
-      ### Suivi des grands projets
+### Suivi des grands projets
 
-      #### Entreprises opérationnelles dans l'Industrie
+#### Entreprises opérationnelles dans l'Industrie
 
-      ### - Les chiffres clés de l'industrie - Entreprises Tunisiennes - Entreprises Mixtes - Entreprises à capitaux 100 % étrangersRéférentiel et Dashboard pour les secteurs Automobile et AéronautiqueCourrier de l'IndustriePolitique qualité
+### - Les chiffres clés de l'industrie - Entreprises Tunisiennes - Entreprises Mixtes - Entreprises à capitaux 100 % étrangersRéférentiel et Dashboard pour les secteurs Automobile et AéronautiqueCourrier de l'IndustriePolitique qualité
 
       Bulletin de conjoncture- Etudes et monographies
 
-        ### Les études industrielles
+### Les études industrielles
 
-        ### Fiche Professionnelle des projets
+### Fiche Professionnelle des projets
 
-        ### Les études régionales
+### Les études régionales
 
-        ### Notes sectorielles
+### Notes sectorielles
 
-        ### Etude sur les problématiques de la création d’entreprises
+### Etude sur les problématiques de la création d’entreprises
 
-        ### Monographies sectorielles
+### Monographies sectorielles
 
-        ### Monographies régionales
+### Monographies régionales
 
         Etudes et monographies sectorielles réalisées par l'API- Innovation
 
-          ### Découvrir l’innovation
+### Découvrir l’innovation
 
-          ### Centre d’innovation et de développement technologique
+### Centre d’innovation et de développement technologique
 
-          ### Structures d’appui
+### Structures d’appui
 
-          #### Programmes d’appui
+#### Programmes d’appui
 
-          ### - Programme de mise à niveau – PMNFinancement de l’innovation - Incitations à la création d’entreprises innovantes - Incitations à la rechercheProgramme de Renforcement des Capacités des Entreprises en matière d’Innovation
+### - Programme de mise à niveau – PMNFinancement de l’innovation - Incitations à la création d’entreprises innovantes - Incitations à la rechercheProgramme de Renforcement des Capacités des Entreprises en matière d’Innovation
 
           Guide de l'innovation- Services en ligne
 
-            ### Déclaration d'un projet d’investissement
+### Déclaration d'un projet d’investissement
 
-            ### Constitution juridiques des sociétés - Service d’examen de recevabilité et prise de rendez-vous
+### Constitution juridiques des sociétés - Service d’examen de recevabilité et prise de rendez-vous
 
-            ### Annuaire des entreprises industrielles
+### Annuaire des entreprises industrielles
 
-            ### Annuaire des entreprises de services
+### Annuaire des entreprises de services
 
-            ### Simulateur de recherche d’activités et d’estimation de primes d’investissement
+### Simulateur de recherche d’activités et d’estimation de primes d’investissement
 
-            ### Entreprises Certifiées en Tunisie
+### Entreprises Certifiées en Tunisie
 
-            ### Salon virtuel de l'industrie Tunisienne
+### Salon virtuel de l'industrie Tunisienne
 
-            ### Base de données documentaires
+### Base de données documentaires
 
-            ### Plan d’Affaires Interactif
+### Plan d’Affaires Interactif
 
-            ### Documents utiles
+### Documents utiles
 
-            ### Publications de l'APII
+### Publications de l'APII
 
-            ### Alerte Corruption
+### Alerte Corruption
 
             Annuaire des entreprises industriellesSalon virtuel de l'industrie Tunisienne
 
       Accueil Création d'entreprises  **Enterprise Europe Network - EEN**
 
-      # Enterprise Europe Network - EEN
+# Enterprise Europe Network - EEN
 
       Enterprise Europe Network - EEN, Réseau européen de services d’appui aux entreprises et à l’innovation.
       - Présentation de l'EEN
@@ -326,7 +326,7 @@ l’Industrie, de l’Energie et des Mines
       - Espace Téléchargements
       - F.A.Q
 
-      ## Présentation de l'EEN
+## Présentation de l'EEN
 
       **Enterprise Europe Network - EEN**, Réseau européen de services d’appui
       aux entreprises et à l’innovation.
@@ -364,7 +364,7 @@ l’Industrie, de l’Energie et des Mines
       d'aider les entreprises européennes à être plus compétitives et innovantes
       et à leur faciliter l’accès aux marchés européens et internationaux.
 
-      ## EEN Tunisie
+## EEN Tunisie
 
       **Membre du réseau EEN depuis octobre 2010 (date de signature de la
       convention avec l’UE), la Tunisie, est le 2ème pays africain et 3ème pays
@@ -380,7 +380,7 @@ l’Industrie, de l’Energie et des Mines
       chaque entreprise que toute question trouvera une réponse adaptée quelque
       soit le partenaire à qui la requête sera adressée.
 
-      ## Qui sommes nous ?
+## Qui sommes nous ?
 
       EEN Tunisie est un Consortium regroupant :
       - **API - Agence de Promotion de l'Industrie et de l'Innovation**
@@ -412,7 +412,7 @@ l’Industrie, de l’Energie et des Mines
 
       Site web : www.conect.org.tn
 
-      ## Missions
+## Missions
 
       Les 4 missions du réseau sont :
       - Informer les entreprises, les centres de recherches et les laboratoires sur les matières communautaires,
@@ -431,7 +431,7 @@ l’Industrie, de l’Energie et des Mines
       3. des services encourageant la participation des PME au programme-cadre
       communautaire (7ème PCRD) mis en œuvre par EEN Tunisie.
 
-      ## Objectifs et Services
+## Objectifs et Services
 
       La mise en place de cette association de compétences nationales, à travers
       le consortium EEN Tunisie, a pour objectif principal de proposer des
@@ -453,7 +453,7 @@ l’Industrie, de l’Energie et des Mines
         qu’à soutenir leur développement économique et technologique à l’échelle
         internationale.
 
-      ## Bénéficiaires
+## Bénéficiaires
 
       Qui peut bénéficier des services de l’EEN Tunisie
       - Entreprises et
@@ -470,22 +470,22 @@ l’Industrie, de l’Energie et des Mines
       - Entreprises et organismes tunisiens capables de participer à la RDT de la CE (PMEs et universités, etc..) ;
       - Entreprises et organismes en dehors de la Tunisie susceptibles de mener des recherches pertinentes pour la Tunisie.
 
-      ## Nos Partenaires
+## Nos Partenaires
 
       Le Réseau EEN: <http://een.ec.europa.eu/>
 
-      ## Annuaire
+## Annuaire
 
       « Services de EEN Tunisie »
       <http://www.tunisieindustrie.nat.tn/fr/newsdoc.asp?nom=2018/een>: Inscription, Recherche de Partenaires, Agenda des événements,…
 
-      ## Espace Téléchargements
+## Espace Téléchargements
 
       - Formulaire de Profil de Coopération (BCD Profile)
       - Formulaire Offre Technologique (BBS Technology Offer)
       - Formulaire Demande Technologique (BBS Technology Request)
 
-      ## F.A.Q.
+## F.A.Q.
 
       - Posez votre question### APII / Opportunit s d affaires### Programme de Renforcement des Capacit s des Entreprises en mati re d Innovation### Courrier de l'Industrie### Bulletin de conjoncture### Manuel des proc dures - Guide de l'investisseur### Code de conduite et de d ontologie de l agent publicTunisian Industry Portal Winner 2011
 

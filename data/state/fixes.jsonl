@@ -1658,3 +1658,12 @@
 {"fix": "catalog", "path": "data/corpus/uma/fr/article/593/appel-a-candidature-mobilite-erasmus-uma-jamies-deadline-10042026.fr.md", "note": "fields: content_hash"}
 {"fix": "catalog", "path": "data/corpus/uma/fr/article/67/diplomees.fr.md", "note": "fields: content_hash"}
 {"fix": "catalog", "path": "data/corpus/uma/fr/surveys/2/take/enquete-dinsertion-aupres-des-diplomes-de-lenseignement-superieur.fr.md", "note": "fields: content_hash"}
+{"fix": "layout_junk", "path": "data/corpus/apii_portal/fr/doc.asp/q_mcat=16_mrub=122.fr.md", "note": "cleaned (0 social links kept in front matter)"}
+{"fix": "layout_junk", "path": "data/corpus/apii_portal/fr/doc.asp/q_mcat=16_mrub=157.fr.md", "note": "cleaned (0 social links kept in front matter)"}
+{"fix": "layout_junk", "path": "data/corpus/apii_portal/fr/doc.asp/q_mcat=16_mrub=186_msrub=267.fr.md", "note": "cleaned (0 social links kept in front matter)"}
+{"fix": "layout_junk", "path": "data/corpus/apii_portal/fr/doc.asp/q_mcat=16_mrub=186_msrub=268.fr.md", "note": "cleaned (0 social links kept in front matter)"}
+{"fix": "layout_junk", "path": "data/corpus/apii_portal/fr/doc.asp/q_mcat=16_mrub=186_msrub=269.fr.md", "note": "cleaned (0 social links kept in front matter)"}
+{"fix": "layout_junk", "path": "data/corpus/apii_portal/fr/doc.asp/q_mcat=16_mrub=186_msrub=270.fr.md", "note": "cleaned (0 social links kept in front matter)"}
+{"fix": "layout_junk", "path": "data/corpus/apii_portal/fr/doc.asp/q_mcat=16_mrub=186_msrub=271.fr.md", "note": "cleaned (0 social links kept in front matter)"}
+{"fix": "layout_junk", "path": "data/corpus/apii_portal/fr/doc.asp/q_mcat=16_mrub=194.fr.md", "note": "cleaned (0 social links kept in front matter)"}
+{"fix": "layout_junk", "path": "data/corpus/apii_portal/fr/doc.asp/q_mcat=16_mrub=203.fr.md", "note": "cleaned (0 social links kept in front matter)"}

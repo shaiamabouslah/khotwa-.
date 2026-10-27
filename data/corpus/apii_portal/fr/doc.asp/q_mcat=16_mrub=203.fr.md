@@ -210,107 +210,107 @@ l’Industrie, de l’Energie et des Mines
 - Accueil
 - Incitations et avantages
 
-  ### Nouveau cadre juridique de l’investissement
+### Nouveau cadre juridique de l’investissement
 
-  ### Fiches Pratiques
+### Fiches Pratiques
 
-  ### Nomenclature des activités
+### Nomenclature des activités
 
-  ### Activités soumises à autorisation préalable ou aux cahiers des charges
+### Activités soumises à autorisation préalable ou aux cahiers des charges
 
-  ### Franchise douanière pour les Tunisiens résidents à l’étranger
+### Franchise douanière pour les Tunisiens résidents à l’étranger
 
-  ### Incitations pour la mise à niveau
+### Incitations pour la mise à niveau
 
   Loi n° 2016-71 du 30 septembre 2016- **Création d'entreprises**
 
-    ### Fiche Professionnelle des projets
+### Fiche Professionnelle des projets
 
-    ### Structures d'appui à la création
+### Structures d'appui à la création
 
-    ### Déclaration d'un projet en ligne
+### Déclaration d'un projet en ligne
 
-    ### Constitution juridiques des sociétés - Examen de recevabilité en ligne
+### Constitution juridiques des sociétés - Examen de recevabilité en ligne
 
-    #### Guichet Unique
+#### Guichet Unique
 
-    ### - Présentation - Délivrance des attestations de dépôt de déclaration - Constitution juridique des sociétés - Autres types de prestations - Assistance et informationPépinière d'entreprisesCentres TechniquesLes Technopoles en TunisieEnterprise Europe Network - EEN
+### - Présentation - Délivrance des attestations de dépôt de déclaration - Constitution juridique des sociétés - Autres types de prestations - Assistance et informationPépinière d'entreprisesCentres TechniquesLes Technopoles en TunisieEnterprise Europe Network - EEN
 
     Le Guichet Unique de l’APIDéclaration en Ligne de votre projet d’investissement- Informations industrielles
 
-      ### Statistiques sur la création d'entreprises
+### Statistiques sur la création d'entreprises
 
-      ### Bulletin de conjoncture
+### Bulletin de conjoncture
 
-      ### Suivi des grands projets
+### Suivi des grands projets
 
-      #### Entreprises opérationnelles dans l'Industrie
+#### Entreprises opérationnelles dans l'Industrie
 
-      ### - Les chiffres clés de l'industrie - Entreprises Tunisiennes - Entreprises Mixtes - Entreprises à capitaux 100 % étrangersRéférentiel et Dashboard pour les secteurs Automobile et AéronautiqueCourrier de l'IndustriePolitique qualité
+### - Les chiffres clés de l'industrie - Entreprises Tunisiennes - Entreprises Mixtes - Entreprises à capitaux 100 % étrangersRéférentiel et Dashboard pour les secteurs Automobile et AéronautiqueCourrier de l'IndustriePolitique qualité
 
       Bulletin de conjoncture- Etudes et monographies
 
-        ### Les études industrielles
+### Les études industrielles
 
-        ### Fiche Professionnelle des projets
+### Fiche Professionnelle des projets
 
-        ### Les études régionales
+### Les études régionales
 
-        ### Notes sectorielles
+### Notes sectorielles
 
-        ### Etude sur les problématiques de la création d’entreprises
+### Etude sur les problématiques de la création d’entreprises
 
-        ### Monographies sectorielles
+### Monographies sectorielles
 
-        ### Monographies régionales
+### Monographies régionales
 
         Etudes et monographies sectorielles réalisées par l'API- Innovation
 
-          ### Découvrir l’innovation
+### Découvrir l’innovation
 
-          ### Centre d’innovation et de développement technologique
+### Centre d’innovation et de développement technologique
 
-          ### Structures d’appui
+### Structures d’appui
 
-          #### Programmes d’appui
+#### Programmes d’appui
 
-          ### - Programme de mise à niveau – PMNFinancement de l’innovation - Incitations à la création d’entreprises innovantes - Incitations à la rechercheProgramme de Renforcement des Capacités des Entreprises en matière d’Innovation
+### - Programme de mise à niveau – PMNFinancement de l’innovation - Incitations à la création d’entreprises innovantes - Incitations à la rechercheProgramme de Renforcement des Capacités des Entreprises en matière d’Innovation
 
           Guide de l'innovation- Services en ligne
 
-            ### Déclaration d'un projet d’investissement
+### Déclaration d'un projet d’investissement
 
-            ### Constitution juridiques des sociétés - Service d’examen de recevabilité et prise de rendez-vous
+### Constitution juridiques des sociétés - Service d’examen de recevabilité et prise de rendez-vous
 
-            ### Annuaire des entreprises industrielles
+### Annuaire des entreprises industrielles
 
-            ### Annuaire des entreprises de services
+### Annuaire des entreprises de services
 
-            ### Simulateur de recherche d’activités et d’estimation de primes d’investissement
+### Simulateur de recherche d’activités et d’estimation de primes d’investissement
 
-            ### Entreprises Certifiées en Tunisie
+### Entreprises Certifiées en Tunisie
 
-            ### Salon virtuel de l'industrie Tunisienne
+### Salon virtuel de l'industrie Tunisienne
 
-            ### Base de données documentaires
+### Base de données documentaires
 
-            ### Plan d’Affaires Interactif
+### Plan d’Affaires Interactif
 
-            ### Documents utiles
+### Documents utiles
 
-            ### Publications de l'APII
+### Publications de l'APII
 
-            ### Alerte Corruption
+### Alerte Corruption
 
             Annuaire des entreprises industriellesSalon virtuel de l'industrie Tunisienne
 
       Accueil Création d'entreprises  **Centres Techniques**
 
-      # Centres Techniques
+# Centres Techniques
 
-      ## Centre Technique de l’Industrie du Bois et de l'Ameublement - CETIBA
+## Centre Technique de l’Industrie du Bois et de l'Ameublement - CETIBA
 
-      ### Missions
+### Missions
 
       - diagnostics stratégiques et assistance technique de mise à niveau,
       - diagnostics qualité et mise en place de systèmes d'assurance qualité,
@@ -318,11 +318,11 @@ l’Industrie, de l’Energie et des Mines
       - essais de laboratoire,
       - formation continue et toute action de promotion du secteur.
 
-      ### Données disponibles
+### Données disponibles
 
       Statistiques du secteur, ouvrages techniques, revues spécialisées…
 
-      ### Contact
+### Contact
 
       12, rue de l’usine Z.I Charguia II, 2035 Tunis Carthage - TUNISE
       Tél : (216) 71 940 730
@@ -330,9 +330,9 @@ l’Industrie, de l’Energie et des Mines
       E-mail : contact@cetiba.tn
       Web: www.cetiba.com.tn
 
-      ## Centre Technique des Industries Mécaniques et Electriques (CETIME)
+## Centre Technique des Industries Mécaniques et Electriques (CETIME)
 
-      ### Missions
+### Missions
 
       - diagnostics stratégiques et assistance technique de mise à niveau,
       - diagnostics qualité et mise en place de systèmes d'assurance qualité,
@@ -340,11 +340,11 @@ l’Industrie, de l’Energie et des Mines
       - essais de laboratoire,
       - formation continue et toute action de promotion du secteur.
 
-      ### Données disponibles
+### Données disponibles
 
       Base de données entreprises/ Informations relatives au secteur des IME/ Informations techniques.
 
-      ### Contact
+### Contact
 
       **Direction Générale du CETIME**Z.I. Ksar Said – 2086 Douar Hicher La Manouba – Tunisie
       Tél. : (216) 70 146 000 / 70 146 023
@@ -353,9 +353,9 @@ l’Industrie, de l’Energie et des Mines
       webmaster@cetime.ind.tn
       Site web : <http://www.cetime.ind.tn>
 
-      ## Centre Technique du Textile (CETTEX)
+## Centre Technique du Textile (CETTEX)
 
-      ### Missions
+### Missions
 
       - diagnostics stratégiques et assistance technique de mise à niveau,
       - diagnostics qualité et mise en place de
@@ -364,13 +364,13 @@ l’Industrie, de l’Energie et des Mines
       - essais de laboratoire
       - formation continue et toute action de promotion du secteur.
 
-      ### Données disponibles
+### Données disponibles
 
       - base de données bibliographiques
       - banque de données sur les entreprises du textile-habillement
       - banque de données statistiques sur le commerce extérieur du textile-habillement.
 
-      ### Contact
+### Contact
 
       Avenue des Industries B.P 279, ZI Bir El Kassâa, 2013 Ben Arous - TUNISIE
       Tél : (216) 71 381 133
@@ -378,9 +378,9 @@ l’Industrie, de l’Energie et des Mines
       E-mail : cettex@cettex.com.tn
       Web: www.textiletunisia.com.tn
 
-      ## Centre National du Cuir et de la Chaussure (CNCC)
+## Centre National du Cuir et de la Chaussure (CNCC)
 
-      ### Missions
+### Missions
 
       - diagnostics stratégiques et assistance technique de mise à niveau
       - diagnostics qualité et mise en place de systèmes d'assurance qualité
@@ -388,11 +388,11 @@ l’Industrie, de l’Energie et des Mines
       - essais de laboratoire
       - formation continue et toute action de promotion du secteur.
 
-      ### Données disponibles
+### Données disponibles
 
       Banque de données bibliographiques
 
-      ### Contact
+### Contact
 
       17, rue du Cuir, ZI Sidi Rézig, 2033 Mégrine - TUNUISE
       Tél : (216) 71 432 255
@@ -400,9 +400,9 @@ l’Industrie, de l’Energie et des Mines
       E-mail : boc@cnccleather.tn
       Web: www.cnccleather.nat.tn
 
-      ## Centre Technique de l'Agro-Alimentaire (CTAA)
+## Centre Technique de l'Agro-Alimentaire (CTAA)
 
-      ### Missions
+### Missions
 
       - diagnostics stratégiques et assistance technique de mise à niveau
       - diagnostics qualité et mise en place de systèmes d'assurance qualité et des démarches HACCP
@@ -410,11 +410,11 @@ l’Industrie, de l’Energie et des Mines
       - analyses pour l’auto-contrôle, analyses réglementaires et essais technologiques
       - formation continue et toute action de promotion du secteur.
 
-      ### Données disponibles
+### Données disponibles
 
       Informations dans les domaines technologiques et législatifs concernant le secteur à l’échelle nationale et internationale.
 
-      ### Contact
+### Contact
 
       12, rue de l’usine 2035 Charguia II, Tunis Carthage - TUNISIE
       Tél : (216) 71 940 198
@@ -422,9 +422,9 @@ l’Industrie, de l’Energie et des Mines
       E-mail : ctaa@email.ati.tn
       Web: www.ctaa.com.tn
 
-      ## Centre Technique des Matériaux de Construction, de la Céramique et du Verre (CTMCCV)
+## Centre Technique des Matériaux de Construction, de la Céramique et du Verre (CTMCCV)
 
-      ### Missions
+### Missions
 
       - diagnostics stratégiques et assistance technique de mise à niveau
       - diagnostics qualité et mise en place de systèmes d'assurance qualité
@@ -432,11 +432,11 @@ l’Industrie, de l’Energie et des Mines
       - essais de laboratoire
       - formation continue et toute action de promotion du secteur.
 
-      ### Données disponibles
+### Données disponibles
 
       Bulletin des matériaux de construction (trimestriel).
 
-      ### Contact
+### Contact
 
       Route de lacagna, 1009 El Ouardia - TUNISIE
       Tél : (216) 71 392 300
@@ -444,9 +444,9 @@ l’Industrie, de l’Energie et des Mines
       E-mail : ctmccv@planet.tn
       Web: www.ctmccv.ind.tn
 
-      ## Centre Technique de l’Emballage et du Conditionnement (PACKTEC)
+## Centre Technique de l’Emballage et du Conditionnement (PACKTEC)
 
-      ### Missions
+### Missions
 
       - diagnostics stratégiques et assistance technique de mise à niveau
       - diagnostics qualité et mise en place de systèmes d'assurance qualité
@@ -454,11 +454,11 @@ l’Industrie, de l’Energie et des Mines
       - essais de laboratoire
       - formation continue et toute action de promotion du secteur.
 
-      ### Données disponibles
+### Données disponibles
 
       Base de données sur les entreprises du secteur.
 
-      ### Contact
+### Contact
 
       Cité El Khadra, 1003 Tunis-El Khadra - TUNISIE
       Tél : (216) 71 772 755
@@ -466,9 +466,9 @@ l’Industrie, de l’Energie et des Mines
       E-mail : packtec@email.ati.tn
       Web: www.packtec.tn
 
-      ## Centre technique de la chimie
+## Centre technique de la chimie
 
-      ### Missions
+### Missions
 
       - Assistance technique & organisationnelle
       - Etudes de MAN, étude sectorielle .....
@@ -478,7 +478,7 @@ l’Industrie, de l’Energie et des Mines
       - Veuille technique & règlementaire
       - Innovation et R&D
 
-      ### Contact
+### Contact
 
       12, Rue de l’usine, Charguia II - 2035 Tunis TUNISIE
       Téléphone : 216-71 940 755 / 772
