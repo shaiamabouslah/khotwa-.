@@ -19,7 +19,7 @@ keywords:
 sources:
 - url: https://www.mes.tn/image.php?id=712
   breadcrumb: []
-last_checked: '2026-10-27'
+last_checked: '2026-10-28'
 last_changed: '2026-10-07'
 status: active
 generated: true

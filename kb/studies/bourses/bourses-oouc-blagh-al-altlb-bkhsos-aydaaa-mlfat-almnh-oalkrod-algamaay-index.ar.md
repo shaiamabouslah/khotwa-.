@@ -21,7 +21,7 @@ keywords:
 sources:
 - url: https://www.oouc.rnu.tn/blagh-al-altlb-bkhsos-aydaaa-mlfat-almnh-oalkrod-algamaay
   breadcrumb: []
-last_checked: '2026-10-27'
+last_checked: '2026-10-28'
 last_changed: '2026-10-05'
 status: active
 generated: true

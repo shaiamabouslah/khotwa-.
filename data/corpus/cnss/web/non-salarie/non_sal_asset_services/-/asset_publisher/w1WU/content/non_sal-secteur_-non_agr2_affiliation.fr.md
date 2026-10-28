@@ -34,6 +34,8 @@ content_hash: sha256:caf643c3e97f40a5f9d5e17123ebe461316ea8eb37be1d0bd9fcd3e3ec5
 words: 448
 status: active
 hint_source: llm
+rag_exclude: true
+rag_exclude_reason: duplicate_of:non-salaries-affiliation-non-agricole
 original_title: Indépendants et autres catégories - CNSS
 ---
 

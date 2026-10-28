@@ -32,6 +32,8 @@ content_hash: sha256:3ad95d523a8e5b514a8f1f681fb7f277de3e283f14e9a70448896e8b6ff
 words: 355
 status: active
 hint_source: llm
+rag_exclude: true
+rag_exclude_reason: duplicate_of:non-salaries-affiliation-non-agricole
 original_title: غير الأجراء - CNSS
 ---
 
