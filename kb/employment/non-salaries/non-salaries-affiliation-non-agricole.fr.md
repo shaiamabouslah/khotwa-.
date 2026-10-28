@@ -4,7 +4,7 @@ title: Affiliation à la CNSS d'un travailleur non salarié (secteur non agricol
 domain: employment
 subtopic: non-salaries
 lang: fr
-translations: []
+translations: [ar]
 org: CNSS
 audience: [travailleur indépendant, commerçant, artisan, profession libérale, freelance]
 keywords: [affiliation, CNSS, non-salarié, indépendant, freelance, carte d'assuré social, classe de revenu, الضمان الاجتماعي, غير الأجراء]

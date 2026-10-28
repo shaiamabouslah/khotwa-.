@@ -21,7 +21,7 @@ keywords:
 sources:
 - url: https://www.oouc.rnu.tn/almnh-algamaay
   breadcrumb: []
-last_checked: '2026-10-27'
+last_checked: '2026-10-28'
 last_changed: '2026-10-07'
 status: active
 generated: true

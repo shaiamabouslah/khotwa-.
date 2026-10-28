@@ -22092,7 +22092,9 @@
         "trust": "official",
         "url": "https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr1_affiliation",
         "words": 404,
-        "original_title": "غير الأجراء - CNSS"
+        "original_title": "غير الأجراء - CNSS",
+        "rag_exclude": true,
+        "rag_exclude_reason": "duplicate_of:non-salaries-affiliation-non-agricole"
       },
       "missed_runs": 0,
       "path": "data/corpus/cnss/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr1_affiliation.ar.md",
@@ -22142,7 +22144,9 @@
         "trust": "official",
         "url": "https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr1_affiliation",
         "words": 530,
-        "original_title": "Indépendants et autres catégories - CNSS"
+        "original_title": "Indépendants et autres catégories - CNSS",
+        "rag_exclude": true,
+        "rag_exclude_reason": "duplicate_of:non-salaries-affiliation-non-agricole"
       },
       "missed_runs": 0,
       "path": "data/corpus/cnss/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr1_affiliation.fr.md",
@@ -22838,7 +22842,9 @@
         "trust": "official",
         "url": "https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr2_affiliation",
         "words": 355,
-        "original_title": "غير الأجراء - CNSS"
+        "original_title": "غير الأجراء - CNSS",
+        "rag_exclude": true,
+        "rag_exclude_reason": "duplicate_of:non-salaries-affiliation-non-agricole"
       },
       "missed_runs": 0,
       "path": "data/corpus/cnss/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr2_affiliation.ar.md",
@@ -22888,7 +22894,9 @@
         "trust": "official",
         "url": "https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr2_affiliation",
         "words": 448,
-        "original_title": "Indépendants et autres catégories - CNSS"
+        "original_title": "Indépendants et autres catégories - CNSS",
+        "rag_exclude": true,
+        "rag_exclude_reason": "duplicate_of:non-salaries-affiliation-non-agricole"
       },
       "missed_runs": 0,
       "path": "data/corpus/cnss/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr2_affiliation.fr.md",
@@ -25028,7 +25036,9 @@
         "trust": "official",
         "url": "https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr5_affiliation",
         "words": 322,
-        "original_title": "غير الأجراء - CNSS"
+        "original_title": "غير الأجراء - CNSS",
+        "rag_exclude": true,
+        "rag_exclude_reason": "duplicate_of:non-salaries-affiliation-non-agricole"
       },
       "missed_runs": 0,
       "path": "data/corpus/cnss/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr5_affiliation.ar.md",
@@ -25077,7 +25087,9 @@
         "trust": "official",
         "url": "https://www.cnss.tn/fr/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr5_affiliation",
         "words": 430,
-        "original_title": "Indépendants et autres catégories - CNSS"
+        "original_title": "Indépendants et autres catégories - CNSS",
+        "rag_exclude": true,
+        "rag_exclude_reason": "duplicate_of:non-salaries-affiliation-non-agricole"
       },
       "missed_runs": 0,
       "path": "data/corpus/cnss/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal-secteur_-non_agr5_affiliation.fr.md",

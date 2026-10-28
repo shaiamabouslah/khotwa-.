@@ -9,14 +9,16 @@ Library usage:
         print(h.score, h.title, h.url)
     full_text = r.expand(hits[0])                 # None if hits[0] is already a whole doc
 
-    hits = r.search(q, k=5, rerank=True)          # bi-encoder top candidate_k -> cross-encoder
-                                                    # reranks to the final k (slower, more precise)
+    # rerank defaults to True: bi-encoder fetches candidate_k candidates, a cross-encoder
+    # rescores them and returns the final k (slower per query, +0.06 hit@1 on the 33-question
+    # eval set). Pass rerank=False to skip it.
+    hits = r.search(q, k=5, rerank=False)
 
 CLI usage (manual testing, one question at a time):
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py "Comment affilier un salarie ?"
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --domain employment "..."
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --lang ar "..."
-    PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --rerank "..."
+    PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --no-rerank "..."
 """
 import argparse
 import json
@@ -97,7 +99,7 @@ class Retriever:
 
     def search(self, query: str, k: int = 5, lang: str | None = None,
                domain: str | None = None, subtopic: str | None = None,
-               rerank: bool = False, candidate_k: int = 20) -> list[Hit]:
+               rerank: bool = True, candidate_k: int = 20) -> list[Hit]:
         """rerank=True: fetch `candidate_k` candidates with the fast bi-encoder, then rescore
         them with a cross-encoder (query, chunk_text pairs) and return the top `k` by that
         score -- slower per query but typically more precise, especially at k=1."""
@@ -149,7 +151,8 @@ def main():
     ap.add_argument("--domain")
     ap.add_argument("--subtopic")
     ap.add_argument("--expand", action="store_true", help="also print the full parent procedure for the top hit")
-    ap.add_argument("--rerank", action="store_true", help="rerank top candidates with a cross-encoder")
+    ap.add_argument("--no-rerank", dest="rerank", action="store_false",
+                     help="skip the cross-encoder rerank stage (on by default: +0.06 hit@1 on the eval set)")
     a = ap.parse_args()
 
     r = Retriever()

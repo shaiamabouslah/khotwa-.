@@ -285,7 +285,7 @@ def build_kb_entries(taxonomy: dict):
             continue
         front, body = m.groups()
         meta = yaml.safe_load(front)
-        if meta.get("status") != "active" or not body.strip():
+        if meta.get("status") != "active" or meta.get("rag_exclude") or not body.strip():
             continue
         lang = meta.get("lang")
         if lang not in kb_languages:
