@@ -9,10 +9,14 @@ Library usage:
         print(h.score, h.title, h.url)
     full_text = r.expand(hits[0])                 # None if hits[0] is already a whole doc
 
+    hits = r.search(q, k=5, rerank=True)          # bi-encoder top candidate_k -> cross-encoder
+                                                    # reranks to the final k (slower, more precise)
+
 CLI usage (manual testing, one question at a time):
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py "Comment affilier un salarie ?"
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --domain employment "..."
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --lang ar "..."
+    PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --rerank "..."
 """
 import argparse
 import json
@@ -27,6 +31,7 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 ROOT = Path(__file__).resolve().parent.parent
 RAG_DIR = ROOT / "data" / "rag"
 EMBED_MODEL = "BAAI/bge-m3"
+RERANK_MODEL = "BAAI/bge-reranker-v2-m3"
 
 
 @dataclass
@@ -43,12 +48,16 @@ class Hit:
     url: str
     text: str
     n_chunks: int
+    bi_score: float | None = None  # pre-rerank cosine score, set only when rerank=True
 
 
 class Retriever:
-    def __init__(self, rag_dir: Path = RAG_DIR, embed_model: str = EMBED_MODEL, use_cache: bool = True):
+    def __init__(self, rag_dir: Path = RAG_DIR, embed_model: str = EMBED_MODEL,
+                 rerank_model: str = RERANK_MODEL, use_cache: bool = True):
         self.rag_dir = Path(rag_dir)
         self.embed_model_name = embed_model
+        self.rerank_model_name = rerank_model
+        self._reranker = None  # lazy: only load the cross-encoder if search(rerank=True) is used
         chunks_path = self.rag_dir / "chunks.jsonl"
         self.chunks = [json.loads(l) for l in chunks_path.open(encoding="utf-8")]
         if not self.chunks:
@@ -80,11 +89,22 @@ class Retriever:
     def _embed(self, texts: list[str]):
         return self.model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
 
+    def _get_reranker(self):
+        if self._reranker is None:
+            from sentence_transformers import CrossEncoder
+            self._reranker = CrossEncoder(self.rerank_model_name)
+        return self._reranker
+
     def search(self, query: str, k: int = 5, lang: str | None = None,
-               domain: str | None = None, subtopic: str | None = None) -> list[Hit]:
+               domain: str | None = None, subtopic: str | None = None,
+               rerank: bool = False, candidate_k: int = 20) -> list[Hit]:
+        """rerank=True: fetch `candidate_k` candidates with the fast bi-encoder, then rescore
+        them with a cross-encoder (query, chunk_text pairs) and return the top `k` by that
+        score -- slower per query but typically more precise, especially at k=1."""
         qv = np.asarray(self._embed([query])[0], dtype=np.float32)
         sims = self.matrix @ qv
         order = np.argsort(-sims)
+        fetch_k = max(candidate_k, k) if rerank else k
         hits, seen_docs = [], set()
         for i in order:
             c = self.chunks[i]
@@ -102,9 +122,17 @@ class Retriever:
                              lang=c["lang"], domain=c["domain"], subtopic=c["subtopic"],
                              title=c["title"], org=c.get("org", ""), section=c["section"],
                              url=c.get("url", ""), text=c["text"], n_chunks=c.get("n_chunks", 1)))
-            if len(hits) == k:
+            if len(hits) == fetch_k:
                 break
-        return hits
+        if not rerank or not hits:
+            return hits
+        reranker = self._get_reranker()
+        scores = reranker.predict([(query, h.text) for h in hits])
+        for h, s in zip(hits, scores):
+            h.bi_score = h.score
+            h.score = float(s)
+        hits.sort(key=lambda h: -h.score)
+        return hits[:k]
 
     def expand(self, hit: Hit) -> str | None:
         """Full procedure text for a hit that came from a multi-chunk document (small-to-big
@@ -121,15 +149,17 @@ def main():
     ap.add_argument("--domain")
     ap.add_argument("--subtopic")
     ap.add_argument("--expand", action="store_true", help="also print the full parent procedure for the top hit")
+    ap.add_argument("--rerank", action="store_true", help="rerank top candidates with a cross-encoder")
     a = ap.parse_args()
 
     r = Retriever()
-    hits = r.search(a.query, k=a.k, lang=a.lang, domain=a.domain, subtopic=a.subtopic)
+    hits = r.search(a.query, k=a.k, lang=a.lang, domain=a.domain, subtopic=a.subtopic, rerank=a.rerank)
     if not hits:
         print("no results")
         return
     for i, h in enumerate(hits):
-        print(f"\n[{i + 1}] score={h.score:.3f}  {h.domain}/{h.subtopic}  [{h.lang}]  n_chunks={h.n_chunks}")
+        bi = f" (bi={h.bi_score:.3f})" if h.bi_score is not None else ""
+        print(f"\n[{i + 1}] score={h.score:.3f}{bi}  {h.domain}/{h.subtopic}  [{h.lang}]  n_chunks={h.n_chunks}")
         print(f"    {h.title}  ({h.org})")
         print(f"    section: {h.section}")
         print(f"    {h.url}")
