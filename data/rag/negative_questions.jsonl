@@ -1,0 +1,10 @@
+{"q": "Quelle est la recette du couscous tunisien traditionnel ?", "expect": "out_of_domain"}
+{"q": "Quel temps fait-il à Tunis aujourd'hui ?", "expect": "out_of_domain"}
+{"q": "Quel est le classement de l'équipe nationale de football de Tunisie ?", "expect": "out_of_domain"}
+{"q": "Comment configurer une connexion wifi sur mon routeur ?", "expect": "out_of_domain"}
+{"q": "Quels sont les meilleurs restaurants à Sousse ?", "expect": "out_of_domain"}
+{"q": "Comment renouveler mon passeport tunisien ?", "expect": "adjacent_not_covered"}
+{"q": "Quelle est la procédure pour un visa Schengen depuis la Tunisie ?", "expect": "adjacent_not_covered"}
+{"q": "Comment obtenir ou renouveler mon permis de conduire ?", "expect": "adjacent_not_covered"}
+{"q": "Quelle est la procédure de légalisation d'un diplôme pour l'étranger ?", "expect": "in_taxonomy_no_content"}
+{"q": "ما هي إجراءات تجديد جواز السفر التونسي؟", "expect": "adjacent_not_covered"}
