@@ -14,16 +14,27 @@ Library usage:
     # eval set). Pass rerank=False to skip it.
     hits = r.search(q, k=5, rerank=False)
 
+    # A repeat of the exact same (query, k, lang, domain, subtopic, rerank, candidate_k) call
+    # skips both the embedding and the rerank pass -- see query_cache.json below.
+
 CLI usage (manual testing, one question at a time):
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py "Comment affilier un salarie ?"
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --domain employment "..."
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --lang ar "..."
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --no-rerank "..."
+    PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --no-query-cache "..."
+
+Query cache: each CLI call is its own process, so an in-memory cache alone is useless here --
+results are persisted to data/rag/query_cache.json, keyed on (normalized query, k, lang, domain,
+subtopic, rerank, candidate_k). It's invalidated as a whole whenever chunks.jsonl changes (size +
+mtime signature), so a kb/ rebuild can never serve a stale answer.
 """
 import argparse
+import hashlib
 import json
+import re
 import sys
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
 from pathlib import Path
 
 import numpy as np
@@ -53,9 +64,14 @@ class Hit:
     bi_score: float | None = None  # pre-rerank cosine score, set only when rerank=True
 
 
+def _norm_query(q: str) -> str:
+    return re.sub(r"\s+", " ", q.strip().lower())
+
+
 class Retriever:
     def __init__(self, rag_dir: Path = RAG_DIR, embed_model: str = EMBED_MODEL,
-                 rerank_model: str = RERANK_MODEL, use_cache: bool = True):
+                 rerank_model: str = RERANK_MODEL, use_cache: bool = True,
+                 use_query_cache: bool = True):
         self.rag_dir = Path(rag_dir)
         self.embed_model_name = embed_model
         self.rerank_model_name = rerank_model
@@ -64,6 +80,19 @@ class Retriever:
         self.chunks = [json.loads(l) for l in chunks_path.open(encoding="utf-8")]
         if not self.chunks:
             raise ValueError(f"{chunks_path}: no chunks -- run clean_pipeline.py --apply first")
+
+        self.use_query_cache = use_query_cache
+        self.query_cache_path = self.rag_dir / "query_cache.json"
+        st = chunks_path.stat()
+        self._chunks_sig = f"{st.st_size}:{st.st_mtime_ns}"
+        self._query_cache = {}
+        if use_query_cache and self.query_cache_path.exists():
+            try:
+                saved = json.loads(self.query_cache_path.read_text(encoding="utf-8"))
+                if saved.get("chunks_sig") == self._chunks_sig:
+                    self._query_cache = saved.get("entries", {})
+            except (json.JSONDecodeError, OSError):
+                pass  # corrupt/unreadable cache -> start fresh rather than fail the search
 
         self.parents = {}
         parents_path = self.rag_dir / "parents.jsonl"
@@ -97,12 +126,27 @@ class Retriever:
             self._reranker = CrossEncoder(self.rerank_model_name)
         return self._reranker
 
+    def _cache_key(self, query, k, lang, domain, subtopic, rerank, candidate_k) -> str:
+        raw = "|".join(str(x) for x in (_norm_query(query), k, lang, domain, subtopic, rerank, candidate_k))
+        return hashlib.sha1(raw.encode("utf-8")).hexdigest()
+
+    def _save_query_cache(self):
+        payload = {"chunks_sig": self._chunks_sig, "entries": self._query_cache}
+        self.query_cache_path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+
     def search(self, query: str, k: int = 5, lang: str | None = None,
                domain: str | None = None, subtopic: str | None = None,
                rerank: bool = True, candidate_k: int = 20) -> list[Hit]:
         """rerank=True: fetch `candidate_k` candidates with the fast bi-encoder, then rescore
         them with a cross-encoder (query, chunk_text pairs) and return the top `k` by that
-        score -- slower per query but typically more precise, especially at k=1."""
+        score -- slower per query but typically more precise, especially at k=1.
+
+        An exact repeat of the same call (same normalized query + all these params) is served
+        from query_cache.json without touching the embedding model or the reranker."""
+        cache_key = self._cache_key(query, k, lang, domain, subtopic, rerank, candidate_k)
+        if self.use_query_cache and cache_key in self._query_cache:
+            return [Hit(**h) for h in self._query_cache[cache_key]]
+
         qv = np.asarray(self._embed([query])[0], dtype=np.float32)
         sims = self.matrix @ qv
         order = np.argsort(-sims)
@@ -126,15 +170,19 @@ class Retriever:
                              url=c.get("url", ""), text=c["text"], n_chunks=c.get("n_chunks", 1)))
             if len(hits) == fetch_k:
                 break
-        if not rerank or not hits:
-            return hits
-        reranker = self._get_reranker()
-        scores = reranker.predict([(query, h.text) for h in hits])
-        for h, s in zip(hits, scores):
-            h.bi_score = h.score
-            h.score = float(s)
-        hits.sort(key=lambda h: -h.score)
-        return hits[:k]
+        if rerank and hits:
+            reranker = self._get_reranker()
+            scores = reranker.predict([(query, h.text) for h in hits])
+            for h, s in zip(hits, scores):
+                h.bi_score = h.score
+                h.score = float(s)
+            hits.sort(key=lambda h: -h.score)
+            hits = hits[:k]
+
+        if self.use_query_cache:
+            self._query_cache[cache_key] = [asdict(h) for h in hits]
+            self._save_query_cache()
+        return hits
 
     def expand(self, hit: Hit) -> str | None:
         """Full procedure text for a hit that came from a multi-chunk document (small-to-big
@@ -153,9 +201,11 @@ def main():
     ap.add_argument("--expand", action="store_true", help="also print the full parent procedure for the top hit")
     ap.add_argument("--no-rerank", dest="rerank", action="store_false",
                      help="skip the cross-encoder rerank stage (on by default: +0.06 hit@1 on the eval set)")
+    ap.add_argument("--no-query-cache", dest="query_cache", action="store_false",
+                     help="don't read/write data/rag/query_cache.json for this call")
     a = ap.parse_args()
 
-    r = Retriever()
+    r = Retriever(use_query_cache=a.query_cache)
     hits = r.search(a.query, k=a.k, lang=a.lang, domain=a.domain, subtopic=a.subtopic, rerank=a.rerank)
     if not hits:
         print("no results")
