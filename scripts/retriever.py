@@ -17,12 +17,18 @@ Library usage:
     # A repeat of the exact same (query, k, lang, domain, subtopic, rerank, candidate_k) call
     # skips both the embedding and the rerank pass -- see query_cache.json below.
 
+    # min_score (default DEFAULT_MIN_RERANK_SCORE, rerank=True only): search() returns []
+    # instead of a confident-looking wrong answer when the top hit's score is too low --
+    # calibrated on real questions vs. out-of-scope ones, see scripts/fixes/calibrate_threshold.py.
+    hits = r.search("Quelle est la recette du couscous ?")   # -> [] (out of scope)
+
 CLI usage (manual testing, one question at a time):
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py "Comment affilier un salarie ?"
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --domain employment "..."
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --lang ar "..."
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --no-rerank "..."
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --no-query-cache "..."
+    PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --no-min-score "..."
 
 Query cache: each CLI call is its own process, so an in-memory cache alone is useless here --
 results are persisted to data/rag/query_cache.json, keyed on (normalized query, k, lang, domain,
@@ -45,6 +51,14 @@ ROOT = Path(__file__).resolve().parent.parent
 RAG_DIR = ROOT / "data" / "rag"
 EMBED_MODEL = "BAAI/bge-m3"
 RERANK_MODEL = "BAAI/bge-reranker-v2-m3"
+
+# Calibrated via scripts/fixes/calibrate_threshold.py on the 33 real questions (data/rag/
+# questions.jsonl) vs. 10 out-of-scope/adjacent-but-uncovered ones (data/rag/negative_questions
+# .jsonl): with rerank=True, genuine top-1 hits scored >=0.664 (one exception: a wrong top-1
+# answer that scored 0.024 -- correctly low), true negatives topped out at 0.221. 0.3 sits in
+# that gap. Only meaningful for rerank=True -- the raw bi-encoder cosine score was not
+# calibrated this way and sits on a different scale.
+DEFAULT_MIN_RERANK_SCORE = 0.3
 
 
 @dataclass
@@ -134,18 +148,34 @@ class Retriever:
         payload = {"chunks_sig": self._chunks_sig, "entries": self._query_cache}
         self.query_cache_path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
 
+    @staticmethod
+    def _apply_min_score(hits: list["Hit"], rerank: bool, min_score: float | None) -> list["Hit"]:
+        if not rerank or min_score is None or not hits or hits[0].score >= min_score:
+            return hits
+        return []
+
     def search(self, query: str, k: int = 5, lang: str | None = None,
                domain: str | None = None, subtopic: str | None = None,
-               rerank: bool = True, candidate_k: int = 20) -> list[Hit]:
+               rerank: bool = True, candidate_k: int = 20,
+               min_score: float | None = DEFAULT_MIN_RERANK_SCORE) -> list[Hit]:
         """rerank=True: fetch `candidate_k` candidates with the fast bi-encoder, then rescore
         them with a cross-encoder (query, chunk_text pairs) and return the top `k` by that
         score -- slower per query but typically more precise, especially at k=1.
 
-        An exact repeat of the same call (same normalized query + all these params) is served
-        from query_cache.json without touching the embedding model or the reranker."""
+        min_score: abstain (return []) when the top hit's score falls below this -- a question
+        with no real match in the KB (or genuinely ambiguous) scores low; forcing an answer
+        anyway is how a future generation layer would end up confidently citing the wrong
+        procedure. Only applied when rerank=True (see DEFAULT_MIN_RERANK_SCORE); pass
+        min_score=None to always return the top k regardless of confidence.
+
+        An exact repeat of the same call (same normalized query, k, lang, domain, subtopic,
+        rerank, candidate_k -- min_score is applied after the cache lookup, so it's not part
+        of the key) is served from query_cache.json without touching the embedding model or
+        the reranker."""
         cache_key = self._cache_key(query, k, lang, domain, subtopic, rerank, candidate_k)
         if self.use_query_cache and cache_key in self._query_cache:
-            return [Hit(**h) for h in self._query_cache[cache_key]]
+            hits = [Hit(**h) for h in self._query_cache[cache_key]]
+            return self._apply_min_score(hits, rerank, min_score)
 
         qv = np.asarray(self._embed([query])[0], dtype=np.float32)
         sims = self.matrix @ qv
@@ -182,7 +212,7 @@ class Retriever:
         if self.use_query_cache:
             self._query_cache[cache_key] = [asdict(h) for h in hits]
             self._save_query_cache()
-        return hits
+        return self._apply_min_score(hits, rerank, min_score)
 
     def expand(self, hit: Hit) -> str | None:
         """Full procedure text for a hit that came from a multi-chunk document (small-to-big
@@ -203,12 +233,18 @@ def main():
                      help="skip the cross-encoder rerank stage (on by default: +0.06 hit@1 on the eval set)")
     ap.add_argument("--no-query-cache", dest="query_cache", action="store_false",
                      help="don't read/write data/rag/query_cache.json for this call")
+    ap.add_argument("--min-score", type=float, default=DEFAULT_MIN_RERANK_SCORE,
+                     help=f"abstain if the top (reranked) hit scores below this (default {DEFAULT_MIN_RERANK_SCORE})")
+    ap.add_argument("--no-min-score", dest="min_score", action="store_const", const=None,
+                     help="always return the top k, regardless of confidence")
     a = ap.parse_args()
 
     r = Retriever(use_query_cache=a.query_cache)
-    hits = r.search(a.query, k=a.k, lang=a.lang, domain=a.domain, subtopic=a.subtopic, rerank=a.rerank)
+    hits = r.search(a.query, k=a.k, lang=a.lang, domain=a.domain, subtopic=a.subtopic,
+                     rerank=a.rerank, min_score=a.min_score)
     if not hits:
-        print("no results")
+        print("no confident match for this question in the KB" if a.rerank and a.min_score is not None
+              else "no results")
         return
     for i, h in enumerate(hits):
         bi = f" (bi={h.bi_score:.3f})" if h.bi_score is not None else ""
