@@ -1,17 +1,17 @@
 ---
-id: affiliation-cnss-jibaya-blog-depot-sur-support-magnetique-index
+id: patente-fiscalite-jibaya-blog-depot-sur-support-magnetique-index
 title: Dépôt sur Support Magnétique - JIBAYA
 domain: employment
-subtopic: affiliation-cnss
+subtopic: patente-fiscalite
 lang: fr
 translations: []
 org: Administration fiscale — Ministère des Finances (DGI)
 keywords:
-- employeur
+- manual_override
 sources:
 - url: https://jibaya.tn/blog/depot-sur-support-magnetique/
   breadcrumb: []
-last_checked: '2026-10-28'
+last_checked: '2026-10-29'
 last_changed: '2026-10-07'
 status: active
 generated: true

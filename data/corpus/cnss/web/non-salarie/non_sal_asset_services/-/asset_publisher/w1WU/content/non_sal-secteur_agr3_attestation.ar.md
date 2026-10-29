@@ -15,7 +15,7 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 10
+hint_score: 13
 hint_keywords:
 - salarié
 - المؤجر

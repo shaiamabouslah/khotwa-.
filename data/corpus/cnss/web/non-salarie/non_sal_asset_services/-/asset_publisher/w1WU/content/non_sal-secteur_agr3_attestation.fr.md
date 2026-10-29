@@ -15,7 +15,7 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 14
+hint_score: 17
 hint_keywords:
 - salarié
 - cotisations

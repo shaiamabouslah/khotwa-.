@@ -28,6 +28,8 @@ content_hash: sha256:dc3fbbf25adf9ff1db9b7c541fd07dca70d4e06afb90e2753d21a9fe236
 words: 207
 status: active
 hint_source: llm
+rag_exclude: true
+rag_exclude_reason: out_of_scope_org:CNRPS_not_CNSS
 ---
 
 # Paiement à distance des cotisations dans le cadre de la coopération technique

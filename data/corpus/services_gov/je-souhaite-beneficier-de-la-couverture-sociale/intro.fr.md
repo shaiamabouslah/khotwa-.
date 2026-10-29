@@ -26,6 +26,8 @@ content_hash: sha256:f8d7d34ad564e31844b41456e893393fa2f336867b2798c2f4b1933fb14
 words: 57
 status: active
 hint_source: llm
+rag_exclude: true
+rag_exclude_reason: thin_section_landing_page
 ---
 
 ### Je souhaite bénéficier de la couverture sociale

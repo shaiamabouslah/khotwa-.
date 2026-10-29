@@ -27,6 +27,8 @@ content_hash: sha256:4cf15ba268bf9e840fd76b787b54c2d00a255c6735fb6977e4042f11ed3
 words: 271
 status: active
 hint_source: llm
+rag_exclude: true
+rag_exclude_reason: directory_contact_card_not_a_procedure
 ---
 
 Premier responsable:Rachid BAROUNI

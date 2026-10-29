@@ -1,18 +1,18 @@
 ---
-id: affiliation-cnss-ooun-web-fr-bourse-html-vous-tes-nouveau-bachelier
+id: bourses-ooun-web-fr-bourse-html-vous-tes-nouveau-bachelier
 title: Vous êtes nouveau bachelier
-domain: employment
-subtopic: affiliation-cnss
+domain: studies
+subtopic: bourses
 lang: fr
 translations: []
 org: Office des Œuvres Universitaires pour le Nord (OOUN)
 keywords:
-- affiliation
+- manual_override
 sources:
 - url: https://www.ooun.rnu.tn/web/fr/bourse.html
   breadcrumb:
   - Vous êtes nouveau bachelier
-last_checked: '2026-10-28'
+last_checked: '2026-10-29'
 last_changed: '2026-10-05'
 status: active
 generated: true

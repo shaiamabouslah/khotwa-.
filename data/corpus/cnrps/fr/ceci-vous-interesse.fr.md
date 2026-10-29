@@ -26,6 +26,8 @@ content_hash: sha256:949337216f57ac53e8d5e0178ea0c0cae22779df8c63f239301d2a92b58
 words: 703
 status: active
 hint_source: llm
+rag_exclude: true
+rag_exclude_reason: out_of_scope_org:CNRPS_not_CNSS
 ---
 
 ### Ceci vous intéresse

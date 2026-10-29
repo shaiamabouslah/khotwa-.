@@ -30,6 +30,8 @@ content_hash: sha256:a7778d85c6327c9c29b660cb465d5e21eed1df2e920ad21828ccde08cb4
 words: 793
 status: active
 hint_source: llm
+rag_exclude: true
+rag_exclude_reason: out_of_scope_org:CNAM_not_CNSS
 social_links:
 - https://www.youtube.com/channel/UChhnHN2kwYcCyl9XUuqpz-g
 - https://www.facebook.com/CNAM-Tunisie-الصندوق-الوطني-للتأمين-على-المرض-101622205483978

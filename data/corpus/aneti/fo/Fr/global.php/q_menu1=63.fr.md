@@ -10,10 +10,10 @@ section: null
 breadcrumb: []
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 1
+subtopic_hint: recherche-emploi
+hint_score: 999
 hint_keywords:
-- employeur
+- manual_override
 forms: []
 render: js
 discovered_via: seed

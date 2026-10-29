@@ -28,6 +28,8 @@ content_hash: sha256:95b61a4a44163c2512562a5dba41e6dba1440bdd060fb983b4430d9e6c6
 words: 201
 status: active
 hint_source: llm
+rag_exclude: true
+rag_exclude_reason: out_of_scope_org:CNRPS_not_CNSS
 ---
 
 # Paiement à distance des cotisations d’adhésion

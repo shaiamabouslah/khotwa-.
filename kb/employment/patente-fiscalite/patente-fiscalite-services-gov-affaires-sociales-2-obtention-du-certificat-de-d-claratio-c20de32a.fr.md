@@ -1,18 +1,18 @@
 ---
-id: affiliation-cnss-services-gov-affaires-sociales-2-obtention-du-certificat-de-d-claratio-c20de32a
+id: patente-fiscalite-services-gov-affaires-sociales-2-obtention-du-certificat-de-d-claratio-c20de32a
 title: Obtention du certificat de déclaration des montants versés au Trésor public
 domain: employment
-subtopic: affiliation-cnss
+subtopic: patente-fiscalite
 lang: fr
 translations: []
 org: Portail national des services administratifs
 keywords:
-- cotisations
+- manual_override
 sources:
 - url: http://services.gov.tn/affaires-sociales-2/
   breadcrumb:
   - Obtention du certificat de déclaration des montants versés au Trésor public
-last_checked: '2026-10-28'
+last_checked: '2026-10-29'
 last_changed: '2026-10-05'
 status: active
 generated: true

@@ -15,7 +15,7 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 19
+hint_score: 22
 hint_keywords:
 - salarié
 - الانخراط

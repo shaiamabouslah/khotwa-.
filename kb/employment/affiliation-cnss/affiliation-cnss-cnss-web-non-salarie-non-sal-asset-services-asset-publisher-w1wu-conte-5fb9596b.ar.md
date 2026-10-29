@@ -9,20 +9,9 @@ translations:
 org: Caisse Nationale de Sécurité Sociale (CNSS)
 keywords:
 - affiliation
-- immatriculation employeur
-- immatriculation à la cnss
-- immatriculation des salariés
-- employeur
 - salarié
-- cotisations
-- déclaration des salaires
-- couverture sociale
 - انخراط
 - الانخراط
-- تسجيل الأجراء
-- المؤجر
-- الاشتراكات
-- التغطية الاجتماعية
 sources:
 - url: https://www.cnss.tn/ar/web/non-salarie/non_sal_asset_services/-/asset_publisher/w1WU/content/non_sal_autres_artistes_affiliation
   breadcrumb:
@@ -31,7 +20,7 @@ sources:
   - Services Non Salarié
   - Non_Sal_autres_artistes_Affiliation
   source_updated: '2024-06-27'
-last_checked: '2026-10-28'
+last_checked: '2026-10-29'
 last_changed: '2026-10-06'
 status: active
 generated: true

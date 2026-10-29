@@ -1,14 +1,12 @@
 # RAG prepare report
-- files scanned: 358
-- kept docs: 333
-- chunks: 591  (words p10/median/p90: 107/260/422)
-- parent docs (multi-chunk, expandable): 73
-- quarantined: 25
+- files scanned: 325
+- kept docs: 315
+- chunks: 549  (words p10/median/p90: 107/260/421)
+- parent docs (multi-chunk, expandable): 66
+- quarantined: 10
 - borderline duplicate pairs to review: 8
 
 ## Quarantine reasons
-- lang_mismatch:declared_ar_but_latin: 8
-- noisy_symbols: 8
 - too_short: 6
-- lang_mismatch:declared_fr_but_arabic: 5
+- lang_mismatch:declared_fr_but_arabic: 4
 - near_duplicate: 1

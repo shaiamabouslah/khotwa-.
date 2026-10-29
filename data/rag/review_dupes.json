@@ -1,5 +1,32 @@
 [
  {
+  "a": "affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-f106ebc5.ar",
+  "b": "affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-a6baf47a.ar",
+  "jaccard": 0.86,
+  "titles": [
+   "Emp Secteur agr2 Affiliation (Employeur)",
+   "Emp Secteur pêche2 Affiliation (Employeur)"
+  ]
+ },
+ {
+  "a": "affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-2555d3f1.ar",
+  "b": "affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-44b537ac.ar",
+  "jaccard": 0.897,
+  "titles": [
+   "Sal Secteur agr1 Immatriculation (Salarie)",
+   "Sal Secteur peche2 Immatriculation (Salarie)"
+  ]
+ },
+ {
+  "a": "affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-e20aecbe.ar",
+  "b": "affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-e752194f.ar",
+  "jaccard": 0.895,
+  "titles": [
+   "Emp Secteur non agr5 Immatriculation (Employeur)",
+   "Emp Secteur non agr2 Immatriculation (Employeur)"
+  ]
+ },
+ {
   "a": "affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-5d9779d6.fr",
   "b": "affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-f1ea7a04.fr",
   "jaccard": 0.886,
@@ -42,33 +69,6 @@
   "titles": [
    "Sal peche3 Immatriculation (Salarie)",
    "Sal gens maison Immatriculation (Salarie)"
-  ]
- },
- {
-  "a": "affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-f106ebc5.ar",
-  "b": "affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-a6baf47a.ar",
-  "jaccard": 0.86,
-  "titles": [
-   "Emp Secteur agr2 Affiliation (Employeur)",
-   "Emp Secteur pêche2 Affiliation (Employeur)"
-  ]
- },
- {
-  "a": "affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-2555d3f1.ar",
-  "b": "affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-44b537ac.ar",
-  "jaccard": 0.897,
-  "titles": [
-   "Sal Secteur agr1 Immatriculation (Salarie)",
-   "Sal Secteur peche2 Immatriculation (Salarie)"
-  ]
- },
- {
-  "a": "affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-e20aecbe.ar",
-  "b": "affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-e752194f.ar",
-  "jaccard": 0.895,
-  "titles": [
-   "Emp Secteur non agr5 Immatriculation (Employeur)",
-   "Emp Secteur non agr2 Immatriculation (Employeur)"
   ]
  }
 ]

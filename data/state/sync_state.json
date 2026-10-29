@@ -1562,9 +1562,9 @@
         "first_seen": "2026-10-06T22:41:43+00:00",
         "forms": [],
         "hint_keywords": [
-          "employeur"
+          "manual_override"
         ],
-        "hint_score": 1,
+        "hint_score": 999,
         "http_last_modified": null,
         "lang": "fr",
         "last_changed": "2026-10-10T23:50:13+00:00",
@@ -1575,7 +1575,7 @@
         "sitemap_lastmod": null,
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "affiliation-cnss",
+        "subtopic_hint": "recherche-emploi",
         "title": "Les conseillers de l’emploi et les conseillers en orientation professionnelle",
         "trust": "official",
         "url": "https://www.emploi.nat.tn/fo/Fr/global.php?menu1=63",
@@ -1826,7 +1826,9 @@
         "title": "Annuaire d'administration - Portail du Gouvernement Tunisien",
         "trust": "official",
         "url": "http://fr.tunisie.gov.tn/annuaireAdministration/381/11-caisse-nationale-de-securite-sociale.htm",
-        "words": 271
+        "words": 271,
+        "rag_exclude": true,
+        "rag_exclude_reason": "directory_contact_card_not_a_procedure"
       },
       "missed_runs": 0,
       "path": "data/corpus/annuaire_administration/annuaireAdministration/381/11-caisse-nationale-de-securite-sociale.htm.fr.md",
@@ -9272,7 +9274,9 @@
         "social_links": [
           "https://www.youtube.com/channel/UChhnHN2kwYcCyl9XUuqpz-g",
           "https://www.facebook.com/CNAM-Tunisie-الصندوق-الوطني-للتأمين-على-المرض-101622205483978"
-        ]
+        ],
+        "rag_exclude": true,
+        "rag_exclude_reason": "out_of_scope_org:CNAM_not_CNSS"
       },
       "missed_runs": 0,
       "path": "data/corpus/cnam/ass_sociale.jsp.fr.md",
@@ -9379,7 +9383,9 @@
         "social_links": [
           "https://www.youtube.com/channel/UChhnHN2kwYcCyl9XUuqpz-g",
           "https://www.facebook.com/CNAM-Tunisie-الصندوق-الوطني-للتأمين-على-المرض-101622205483978"
-        ]
+        ],
+        "rag_exclude": true,
+        "rag_exclude_reason": "out_of_scope_org:CNAM_not_CNSS"
       },
       "missed_runs": 0,
       "path": "data/corpus/cnam/tun_etranger.jsp.fr.md",
@@ -9417,7 +9423,9 @@
         "title": "Ceci vous intéresse | CNRPS",
         "trust": "official",
         "url": "https://www.cnrps.nat.tn/fr/ceci-vous-interesse",
-        "words": 703
+        "words": 703,
+        "rag_exclude": true,
+        "rag_exclude_reason": "out_of_scope_org:CNRPS_not_CNSS"
       },
       "missed_runs": 0,
       "path": "data/corpus/cnrps/fr/ceci-vous-interesse.fr.md",
@@ -9527,7 +9535,9 @@
         "title": "Vous êtes affilié en activité? Vous devez savoir ce qui suit.. | CNRPS",
         "trust": "official",
         "url": "https://www.cnrps.nat.tn/fr/vous-etes-affilie-en-activite-vous-devez-savoir-ce-qui-suit",
-        "words": 2168
+        "words": 2168,
+        "rag_exclude": true,
+        "rag_exclude_reason": "out_of_scope_org:CNRPS_not_CNSS"
       },
       "missed_runs": 0,
       "path": "data/corpus/cnrps/fr/vous-etes-affilie-en-activite-vous-devez-savoir-ce-qui-suit.fr.md",
@@ -22404,7 +22414,7 @@
           "salarié",
           "cotisations"
         ],
-        "hint_score": 9,
+        "hint_score": 15,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -22636,7 +22646,7 @@
           "الانخراط",
           "الاشتراكات"
         ],
-        "hint_score": 21,
+        "hint_score": 27,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -22686,7 +22696,7 @@
           "salarié",
           "cotisations"
         ],
-        "hint_score": 23,
+        "hint_score": 30,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -23152,7 +23162,7 @@
           "salarié",
           "cotisations"
         ],
-        "hint_score": 11,
+        "hint_score": 18,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -23423,7 +23433,7 @@
           "salarié",
           "cotisations"
         ],
-        "hint_score": 22,
+        "hint_score": 29,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -24102,7 +24112,7 @@
           "الانخراط",
           "الاشتراكات"
         ],
-        "hint_score": 21,
+        "hint_score": 27,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -24828,7 +24838,7 @@
           "الانخراط",
           "الاشتراكات"
         ],
-        "hint_score": 20,
+        "hint_score": 26,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -24968,7 +24978,7 @@
           "salarié",
           "cotisations"
         ],
-        "hint_score": 11,
+        "hint_score": 14,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -25211,7 +25221,7 @@
           "الانخراط",
           "الاشتراكات"
         ],
-        "hint_score": 19,
+        "hint_score": 22,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -25259,7 +25269,7 @@
           "salarié",
           "cotisations"
         ],
-        "hint_score": 19,
+        "hint_score": 22,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -25397,8 +25407,13 @@
           "https://www.cnss.tn/ar/c/document_library/get_file?uuid=2da0f812-96d2-474b-a660-1385084f5f6a&groupId=54202",
           "https://www.cnss.tn/ar/c/document_library/get_file?uuid=a8e5c9a0-a12e-49e7-8dd6-9ff5d3e223bd&groupId=54202"
         ],
-        "hint_keywords": [],
-        "hint_score": 10,
+        "hint_keywords": [
+          "affiliation",
+          "salarié",
+          "انخراط",
+          "الانخراط"
+        ],
+        "hint_score": 28,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -25448,7 +25463,7 @@
           "affiliation",
           "salarié"
         ],
-        "hint_score": 25,
+        "hint_score": 33,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -26502,7 +26517,7 @@
           "الانخراط",
           "الاشتراكات"
         ],
-        "hint_score": 21,
+        "hint_score": 27,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -26552,7 +26567,7 @@
           "salarié",
           "cotisations"
         ],
-        "hint_score": 25,
+        "hint_score": 32,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -26690,8 +26705,13 @@
           "https://www.cnss.tn/ar/c/document_library/get_file?uuid=509dcad4-cee6-4394-9f64-bd05f44175bf&groupId=54202",
           "https://www.cnss.tn/c/document_library/get_file?uuid=d91ecfd4-b0fe-4665-b92d-98b70142896e&groupId=54202"
         ],
-        "hint_keywords": [],
-        "hint_score": 10,
+        "hint_keywords": [
+          "affiliation",
+          "salarié",
+          "انخراط",
+          "الانخراط"
+        ],
+        "hint_score": 29,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -26741,7 +26761,7 @@
           "affiliation",
           "salarié"
         ],
-        "hint_score": 25,
+        "hint_score": 32,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -26791,7 +26811,7 @@
           "salarié",
           "المؤجر"
         ],
-        "hint_score": 10,
+        "hint_score": 13,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -26838,7 +26858,7 @@
           "salarié",
           "cotisations"
         ],
-        "hint_score": 14,
+        "hint_score": 17,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -26889,7 +26909,7 @@
           "الانخراط",
           "الاشتراكات"
         ],
-        "hint_score": 22,
+        "hint_score": 28,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -26939,7 +26959,7 @@
           "salarié",
           "cotisations"
         ],
-        "hint_score": 21,
+        "hint_score": 27,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -27082,7 +27102,7 @@
           "انخراط",
           "الانخراط"
         ],
-        "hint_score": 22,
+        "hint_score": 28,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -27132,7 +27152,7 @@
           "affiliation",
           "salarié"
         ],
-        "hint_score": 25,
+        "hint_score": 35,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -27544,7 +27564,7 @@
           "الانخراط",
           "الاشتراكات"
         ],
-        "hint_score": 21,
+        "hint_score": 27,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -27594,7 +27614,7 @@
           "salarié",
           "cotisations"
         ],
-        "hint_score": 25,
+        "hint_score": 32,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -27731,8 +27751,13 @@
         "forms": [
           "https://www.cnss.tn/ar/c/document_library/get_file?uuid=509dcad4-cee6-4394-9f64-bd05f44175bf&groupId=54202"
         ],
-        "hint_keywords": [],
-        "hint_score": 10,
+        "hint_keywords": [
+          "affiliation",
+          "salarié",
+          "انخراط",
+          "الانخراط"
+        ],
+        "hint_score": 28,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -27782,7 +27807,7 @@
           "employeur",
           "salarié"
         ],
-        "hint_score": 28,
+        "hint_score": 35,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -27833,7 +27858,7 @@
           "الانخراط",
           "الاشتراكات"
         ],
-        "hint_score": 22,
+        "hint_score": 28,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -27883,7 +27908,7 @@
           "salarié",
           "cotisations"
         ],
-        "hint_score": 22,
+        "hint_score": 28,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -28020,8 +28045,13 @@
         "forms": [
           "https://www.cnss.tn/ar/c/document_library/get_file?uuid=509dcad4-cee6-4394-9f64-bd05f44175bf&groupId=54202"
         ],
-        "hint_keywords": [],
-        "hint_score": 10,
+        "hint_keywords": [
+          "affiliation",
+          "salarié",
+          "انخراط",
+          "الانخراط"
+        ],
+        "hint_score": 28,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -28072,7 +28102,7 @@
           "employeur",
           "salarié"
         ],
-        "hint_score": 26,
+        "hint_score": 33,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -28214,7 +28244,7 @@
           "الانخراط",
           "الاشتراكات"
         ],
-        "hint_score": 22,
+        "hint_score": 28,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -28264,7 +28294,7 @@
           "salarié",
           "cotisations"
         ],
-        "hint_score": 20,
+        "hint_score": 26,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -28443,8 +28473,13 @@
         "forms": [
           "https://www.cnss.tn/ar/c/document_library/get_file?uuid=2ff53607-021b-4461-90d0-c4882c9f5128&groupId=54202"
         ],
-        "hint_keywords": [],
-        "hint_score": 10,
+        "hint_keywords": [
+          "affiliation",
+          "salarié",
+          "انخراط",
+          "الانخراط"
+        ],
+        "hint_score": 26,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -28494,7 +28529,7 @@
           "affiliation",
           "salarié"
         ],
-        "hint_score": 18,
+        "hint_score": 24,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -28635,8 +28670,13 @@
         "forms": [
           "https://www.cnss.tn/ar/c/document_library/get_file?uuid=dbcf017e-b45a-4306-97b3-7f2e12e67fb8&groupId=54202"
         ],
-        "hint_keywords": [],
-        "hint_score": 10,
+        "hint_keywords": [
+          "affiliation",
+          "salarié",
+          "انخراط",
+          "الانخراط"
+        ],
+        "hint_score": 24,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "ar",
@@ -28686,7 +28726,7 @@
           "affiliation",
           "salarié"
         ],
-        "hint_score": 18,
+        "hint_score": 24,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -34756,16 +34796,16 @@
         "doc_type": "directory",
         "domain_hint": "employment",
         "hint_keywords": [
-          "employeur"
+          "manual_override"
         ],
-        "hint_score": 17,
+        "hint_score": 999,
         "hint_source": "llm",
         "lang": "fr",
         "org": "Administration fiscale — Ministère des Finances (DGI)",
         "render": "html",
         "section": null,
         "site": "jibaya",
-        "subtopic_hint": "affiliation-cnss",
+        "subtopic_hint": "patente-fiscalite",
         "title": "Dépôt sur Support Magnétique - JIBAYA",
         "trust": "official",
         "url": "https://jibaya.tn/blog/depot-sur-support-magnetique/",
@@ -36210,7 +36250,9 @@
         "title": "أرغب في الحصول على التغطية الاجتماعية - البوابة الوطنية للخدمات الإدارية",
         "trust": "official",
         "url": "https://khadamet.gov.tn/%d8%a3%d8%b1%d8%ba%d8%a8-%d9%81%d9%8a-%d8%a7%d9%84%d8%ad%d8%b5%d9%88%d9%84-%d8%b9%d9%84%d9%89-%d8%a7%d9%84%d8%aa%d8%ba%d8%b7%d9%8a%d8%a9-%d8%a7%d9%84%d8%a7%d8%ac%d8%aa%d9%85%d8%a7%d8%b9%d9%8a%d8%a9/",
-        "words": 40
+        "words": 40,
+        "rag_exclude": true,
+        "rag_exclude_reason": "thin_section_landing_page"
       },
       "missed_runs": 0,
       "path": "data/corpus/khadamet/أرغب-في-الحصول-على-التغطية-الاجتماعية/intro.ar.md",
@@ -36250,7 +36292,9 @@
         "title": "استخراج شهائد الانخراط",
         "trust": "official",
         "url": "https://khadamet.gov.tn/%d8%a3%d8%b1%d8%ba%d8%a8-%d9%81%d9%8a-%d8%a7%d9%84%d8%ad%d8%b5%d9%88%d9%84-%d8%b9%d9%84%d9%89-%d8%a7%d9%84%d8%aa%d8%ba%d8%b7%d9%8a%d8%a9-%d8%a7%d9%84%d8%a7%d8%ac%d8%aa%d9%85%d8%a7%d8%b9%d9%8a%d8%a9/",
-        "words": 142
+        "words": 142,
+        "rag_exclude": true,
+        "rag_exclude_reason": "out_of_scope_org:CNRPS_not_CNSS"
       },
       "missed_runs": 0,
       "path": "data/corpus/khadamet/أرغب-في-الحصول-على-التغطية-الاجتماعية/استخراج-شهائد-الانخراط.ar.md",
@@ -52293,15 +52337,14 @@
         "discovered_via": "seed",
         "doc_id": "ooun:/web/ar/bourse.html#إن-كنت-طالبا-جديدا",
         "doc_type": "procedure",
-        "domain_hint": "employment",
+        "domain_hint": "studies",
         "fetched_at": "2026-10-05T23:14:14+00:00",
         "first_seen": "2026-10-05T20:26:28+00:00",
         "forms": [],
         "hint_keywords": [
-          "انخراط",
-          "الانخراط"
+          "manual_override"
         ],
-        "hint_score": 5,
+        "hint_score": 999,
         "hint_source": "llm",
         "http_last_modified": "Wed, 10 Sep 2025 16:08:37 GMT",
         "lang": "ar",
@@ -52313,7 +52356,7 @@
         "sitemap_lastmod": null,
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "affiliation-cnss",
+        "subtopic_hint": "bourses",
         "title": "إن كنت طالبًا جديدًا",
         "trust": "official",
         "url": "https://www.ooun.rnu.tn/web/ar/bourse.html",
@@ -52938,14 +52981,14 @@
         "discovered_via": "seed",
         "doc_id": "ooun:/web/fr/bourse.html#vous-êtes-nouveau-bachelier",
         "doc_type": "procedure",
-        "domain_hint": "employment",
+        "domain_hint": "studies",
         "fetched_at": "2026-10-05T23:14:10+00:00",
         "first_seen": "2026-10-05T20:26:26+00:00",
         "forms": [],
         "hint_keywords": [
-          "affiliation"
+          "manual_override"
         ],
-        "hint_score": 2,
+        "hint_score": 999,
         "hint_source": "llm",
         "http_last_modified": "Fri, 07 Sep 2018 12:37:29 GMT",
         "lang": "fr",
@@ -52957,7 +53000,7 @@
         "sitemap_lastmod": null,
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "affiliation-cnss",
+        "subtopic_hint": "bourses",
         "title": "Vous êtes nouveau bachelier",
         "trust": "official",
         "url": "https://www.ooun.rnu.tn/web/fr/bourse.html",
@@ -56508,9 +56551,9 @@
         "first_seen": "2026-10-05T20:26:11+00:00",
         "forms": [],
         "hint_keywords": [
-          "cotisations"
+          "manual_override"
         ],
-        "hint_score": 3,
+        "hint_score": 999,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -56522,7 +56565,7 @@
         "sitemap_lastmod": "2025-10-08T12:58:17+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "affiliation-cnss",
+        "subtopic_hint": "patente-fiscalite",
         "title": "Obtention du certificat annuel de l’impôt sur le revenu",
         "trust": "official",
         "url": "http://services.gov.tn/affaires-sociales-2/",
@@ -56550,9 +56593,9 @@
         "first_seen": "2026-10-05T20:26:11+00:00",
         "forms": [],
         "hint_keywords": [
-          "cotisations"
+          "manual_override"
         ],
-        "hint_score": 1,
+        "hint_score": 999,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -56564,7 +56607,7 @@
         "sitemap_lastmod": "2025-10-08T12:58:17+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "affiliation-cnss",
+        "subtopic_hint": "patente-fiscalite",
         "title": "Obtention du certificat de déclaration des montants versés au Trésor public",
         "trust": "official",
         "url": "http://services.gov.tn/affaires-sociales-2/",
@@ -56610,7 +56653,9 @@
         "title": "Paiement à distance des cotisations d’adhésion",
         "trust": "official",
         "url": "http://services.gov.tn/affaires-sociales-2/",
-        "words": 201
+        "words": 201,
+        "rag_exclude": true,
+        "rag_exclude_reason": "out_of_scope_org:CNRPS_not_CNSS"
       },
       "missed_runs": 0,
       "path": "data/corpus/services_gov/affaires-sociales-2/paiement-à-distance-des-cotisations-d-adhésion.fr.md",
@@ -56694,7 +56739,9 @@
         "title": "Paiement à distance des cotisations dans le cadre de la coopération technique",
         "trust": "official",
         "url": "http://services.gov.tn/affaires-sociales-2/",
-        "words": 207
+        "words": 207,
+        "rag_exclude": true,
+        "rag_exclude_reason": "out_of_scope_org:CNRPS_not_CNSS"
       },
       "missed_runs": 0,
       "path": "data/corpus/services_gov/affaires-sociales-2/paiement-à-distance-des-cotisations-dans-le-cadre-de-la-coop.fr.md",
@@ -56736,7 +56783,9 @@
         "title": "Paiement à distance des cotisations pour la situation de non-exercice professionnel spéciale",
         "trust": "official",
         "url": "http://services.gov.tn/affaires-sociales-2/",
-        "words": 216
+        "words": 216,
+        "rag_exclude": true,
+        "rag_exclude_reason": "out_of_scope_org:CNRPS_not_CNSS"
       },
       "missed_runs": 0,
       "path": "data/corpus/services_gov/affaires-sociales-2/paiement-à-distance-des-cotisations-pour-la-situation-de-non.fr.md",
@@ -57077,9 +57126,9 @@
         "first_seen": "2026-10-05T20:26:07+00:00",
         "forms": [],
         "hint_keywords": [
-          "employeur"
+          "manual_override"
         ],
-        "hint_score": 1,
+        "hint_score": 999,
         "hint_source": "llm",
         "http_last_modified": null,
         "lang": "fr",
@@ -57091,7 +57140,7 @@
         "sitemap_lastmod": "2025-10-06T12:55:57+00:00",
         "source_updated": null,
         "status": "active",
-        "subtopic_hint": "affiliation-cnss",
+        "subtopic_hint": "recherche-emploi",
         "title": "Demande d’obtention du certificat de compétence professionnelle",
         "trust": "official",
         "url": "http://services.gov.tn/emploi-et-formation/",
@@ -64247,7 +64296,9 @@
         "title": "Je souhaite bénéficier de la couverture sociale - Le portail national des services administratifs",
         "trust": "official",
         "url": "http://services.gov.tn/je-souhaite-beneficier-de-la-couverture-sociale/",
-        "words": 57
+        "words": 57,
+        "rag_exclude": true,
+        "rag_exclude_reason": "thin_section_landing_page"
       },
       "missed_runs": 0,
       "path": "data/corpus/services_gov/je-souhaite-beneficier-de-la-couverture-sociale/intro.fr.md",

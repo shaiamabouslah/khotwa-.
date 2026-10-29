@@ -15,8 +15,12 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 10
-hint_keywords: []
+hint_score: 26
+hint_keywords:
+- affiliation
+- salarié
+- انخراط
+- الانخراط
 forms:
 - https://www.cnss.tn/ar/c/document_library/get_file?uuid=2ff53607-021b-4461-90d0-c4882c9f5128&groupId=54202
 render: html

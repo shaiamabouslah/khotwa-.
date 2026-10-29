@@ -1,17 +1,17 @@
 ---
-id: affiliation-cnss-aneti-fo-fr-global-php-q-menu1-63-index
+id: recherche-emploi-aneti-fo-fr-global-php-q-menu1-63-index
 title: Les conseillers de l’emploi et les conseillers en orientation professionnelle
 domain: employment
-subtopic: affiliation-cnss
+subtopic: recherche-emploi
 lang: fr
 translations: []
 org: Agence Nationale pour l'Emploi et le Travail Indépendant (ANETI)
 keywords:
-- employeur
+- manual_override
 sources:
 - url: https://www.emploi.nat.tn/fo/Fr/global.php?menu1=63
   breadcrumb: []
-last_checked: '2026-10-28'
+last_checked: '2026-10-29'
 last_changed: '2026-10-10'
 status: active
 generated: true

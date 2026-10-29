@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://jibaya.tn/blog/plateforme-de-transfert-et-echange-des-donnees-fiscales-tej/
   breadcrumb: []
-last_checked: '2026-10-28'
+last_checked: '2026-10-29'
 last_changed: '2026-10-07'
 status: active
 generated: true
