@@ -34,6 +34,8 @@ content_hash: sha256:444bd1492818764ed4d700594129617b217ae81a798d7077cf7fbb813c8
 words: 2168
 status: active
 hint_source: llm
+rag_exclude: true
+rag_exclude_reason: out_of_scope_org:CNRPS_not_CNSS
 ---
 
 ### Vous êtes affilié en activité? Vous devez savoir ce qui suit..

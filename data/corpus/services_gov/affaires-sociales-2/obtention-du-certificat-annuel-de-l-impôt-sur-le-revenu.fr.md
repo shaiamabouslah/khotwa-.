@@ -11,10 +11,10 @@ breadcrumb:
 - Obtention du certificat annuel de l’impôt sur le revenu
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 3
+subtopic_hint: patente-fiscalite
+hint_score: 999
 hint_keywords:
-- cotisations
+- manual_override
 forms: []
 render: html
 discovered_via: sitemap

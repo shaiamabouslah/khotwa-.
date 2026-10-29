@@ -180,6 +180,43 @@ def dedup_pass():
 threshold_near_dup = 0.8
 
 
+# A handful of docs the keyword classifier confidently puts in the wrong place, found by hand
+# while cleaning up the employment/affiliation-cnss subtopic (2026-10-29): CNAM/CNRPS content
+# (different funds from CNSS, not covered by this taxonomy at all), an OOUN "nouveau bachelier"
+# page (wrong domain entirely -- studies, not employment), a jibaya tax-platform page and two
+# services_gov certificates that matched on "cotisations"/"affiliation" but are really
+# patente-fiscalite / recherche-emploi content. One doc_id per override so a future corpus
+# re-crawl can't silently drift these back without the override being visibly out of date.
+MANUAL_SUBTOPIC_OVERRIDES: dict[str, tuple[str, str]] = {
+    "aneti:/fo/Fr/global.php/q_menu1=63#index": ("employment", "recherche-emploi"),
+    "jibaya:/blog/depot-sur-support-magnetique#index": ("employment", "patente-fiscalite"),
+    "ooun:/web/ar/bourse.html#إن-كنت-طالبا-جديدا": ("studies", "bourses"),
+    "ooun:/web/fr/bourse.html#vous-êtes-nouveau-bachelier": ("studies", "bourses"),
+    "services_gov:/affaires-sociales-2#obtention-du-certificat-annuel-de-l-impôt-sur-le-revenu": ("employment", "patente-fiscalite"),
+    "services_gov:/affaires-sociales-2#obtention-du-certificat-de-déclaration-des-montants-versés-a": ("employment", "patente-fiscalite"),
+    "services_gov:/emploi-et-formation#demande-d-obtention-du-certificat-de-compétence-professionne": ("employment", "recherche-emploi"),
+}
+
+
+def _subtopic_override(meta: dict, hint) -> tuple[str | None, str | None]:
+    """Applied after the keyword classifier, before its hint is trusted."""
+    if meta.get("doc_id") in MANUAL_SUBTOPIC_OVERRIDES:
+        return MANUAL_SUBTOPIC_OVERRIDES[meta["doc_id"]]
+
+    # The keyword classifier is purely additive-score, no specificity bonus: a CNSS tab titled
+    # "Non Sal Secteur non agr1 Affiliation (Non Salarié)" matches both "non salarié" (->
+    # subtopic non-salaries) AND "affiliation" + "salarié" individually (-> subtopic
+    # affiliation-cnss, which racks up more points from the same title because it has two
+    # separate keyword hits instead of one). Found by hand after a dense-retrieval eval kept
+    # confusing a non-salarié CNSS page with its affiliation-cnss near-duplicates. Rather than
+    # retune the generic scorer (risky: it's shared by every subtopic), this overrides the one
+    # confirmed failure mode by URL, which is stable across re-runs of this classifier.
+    url = (meta.get("url") or "")
+    if meta.get("site") == "cnss" and "/non-salarie/" in url and hint.domain == "employment":
+        return "employment", "non-salaries"
+    return hint.domain, hint.subtopic
+
+
 # -- step 3: reclassify (rule-based, no LLM) --------------------------------------------------
 def reclassify_all(state: dict, path_to_key: dict):
     taxonomy = yaml.safe_load((ROOT / "kb" / "taxonomy.yaml").read_text(encoding="utf-8"))
@@ -198,7 +235,7 @@ def reclassify_all(state: dict, path_to_key: dict):
         site = sites.get(meta.get("site"), {})
         old = (meta.get("domain_hint"), meta.get("subtopic_hint"))
         hint = classifier.classify(meta.get("title", ""), meta.get("breadcrumb") or [], body, site.get("domain"))
-        new = (hint.domain, hint.subtopic)
+        new = _subtopic_override(meta, hint)
         if new != old:
             meta["domain_hint"], meta["subtopic_hint"] = hint.domain, hint.subtopic
             meta["hint_score"], meta["hint_keywords"] = hint.score, hint.matched[:6]
@@ -286,6 +323,11 @@ def build_kb_entries(taxonomy: dict):
         front, body = m.groups()
         meta = yaml.safe_load(front)
         if meta.get("status") != "active" or meta.get("rag_exclude") or not body.strip():
+            continue
+        if meta.get("doc_type") == "form":
+            # Blank PDF form templates / raw legal-decree text dumps (all from cnss in this
+            # corpus) -- not an answerable "how do I" procedure, so not a standalone kb entry.
+            # The actual procedure page that links to the form is what should surface instead.
             continue
         lang = meta.get("lang")
         if lang not in kb_languages:

@@ -28,6 +28,8 @@ content_hash: sha256:530161a43f6da8984735209c8d09c0b943bbc55d8476c43080e1eecedff
 words: 216
 status: active
 hint_source: llm
+rag_exclude: true
+rag_exclude_reason: out_of_scope_org:CNRPS_not_CNSS
 ---
 
 # Paiement à distance des cotisations pour la situation de non-exercice professionnel spéciale

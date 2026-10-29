@@ -15,7 +15,7 @@ breadcrumb:
 doc_type: procedure
 domain_hint: employment
 subtopic_hint: affiliation-cnss
-hint_score: 11
+hint_score: 18
 hint_keywords:
 - affiliation
 - salarié

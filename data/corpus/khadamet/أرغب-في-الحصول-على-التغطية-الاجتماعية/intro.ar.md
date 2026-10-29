@@ -27,6 +27,8 @@ content_hash: sha256:94549feb17d3df51596ad7fe8722fd2b4f45a6ebee56ee8abff2e902a2b
 words: 40
 status: active
 hint_source: llm
+rag_exclude: true
+rag_exclude_reason: thin_section_landing_page
 ---
 
 ### أرغب في الحصول على التغطية الاجتماعية

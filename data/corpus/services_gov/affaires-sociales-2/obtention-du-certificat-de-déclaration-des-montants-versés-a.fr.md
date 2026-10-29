@@ -11,10 +11,10 @@ breadcrumb:
 - Obtention du certificat de déclaration des montants versés au Trésor public
 doc_type: procedure
 domain_hint: employment
-subtopic_hint: affiliation-cnss
-hint_score: 1
+subtopic_hint: patente-fiscalite
+hint_score: 999
 hint_keywords:
-- cotisations
+- manual_override
 forms: []
 render: html
 discovered_via: sitemap

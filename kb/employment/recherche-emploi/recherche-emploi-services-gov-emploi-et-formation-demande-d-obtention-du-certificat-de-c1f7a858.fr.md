@@ -1,18 +1,18 @@
 ---
-id: affiliation-cnss-services-gov-emploi-et-formation-demande-d-obtention-du-certificat-de-c1f7a858
+id: recherche-emploi-services-gov-emploi-et-formation-demande-d-obtention-du-certificat-de-c1f7a858
 title: Demande d’obtention du certificat de compétence professionnelle
 domain: employment
-subtopic: affiliation-cnss
+subtopic: recherche-emploi
 lang: fr
 translations: []
 org: Portail national des services administratifs
 keywords:
-- employeur
+- manual_override
 sources:
 - url: http://services.gov.tn/emploi-et-formation/
   breadcrumb:
   - Demande d’obtention du certificat de compétence professionnelle
-last_checked: '2026-10-28'
+last_checked: '2026-10-29'
 last_changed: '2026-10-05'
 status: active
 generated: true

@@ -17,7 +17,7 @@ sources:
   - Services Salarié
   - Sal Secteur_peche1_actions_licenciement1
   source_updated: '2016-09-02'
-last_checked: '2026-10-28'
+last_checked: '2026-10-29'
 last_changed: '2026-10-05'
 status: active
 generated: true
