@@ -12,7 +12,7 @@ sources:
 - url: http://services.gov.tn/je-souhaite-beneficier-de-la-couverture-sociale/
   breadcrumb:
   - Obtention des certificats d’adhésion
-last_checked: '2026-10-29'
+last_checked: '2026-11-01'
 last_changed: '2026-10-05'
 status: active
 generated: true

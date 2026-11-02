@@ -53004,7 +53004,9 @@
         "title": "Vous êtes nouveau bachelier",
         "trust": "official",
         "url": "https://www.ooun.rnu.tn/web/fr/bourse.html",
-        "words": 237
+        "words": 237,
+        "rag_exclude": true,
+        "rag_exclude_reason": "duplicate_of:bourses-nouveau-bachelier"
       },
       "missed_runs": 0,
       "path": "data/corpus/ooun/web/fr/bourse.html/vous-êtes-nouveau-bachelier.fr.md",

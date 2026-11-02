@@ -12,7 +12,7 @@ sources:
 - url: http://services.gov.tn/affaires-sociales-2/
   breadcrumb:
   - Obtention des certificats d’adhésion
-last_checked: '2026-10-29'
+last_checked: '2026-11-01'
 last_changed: '2026-10-05'
 status: active
 generated: true
