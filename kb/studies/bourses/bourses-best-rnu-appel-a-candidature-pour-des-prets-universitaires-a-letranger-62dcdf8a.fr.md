@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://best.rnu.tn/appel-a-candidature-pour-des-prets-universitaires-a-letranger-2/
   breadcrumb: []
-last_checked: '2026-10-29'
+last_checked: '2026-11-01'
 last_changed: '2026-10-06'
 status: active
 generated: true

@@ -28,6 +28,8 @@ content_hash: sha256:85e867303e5875272e18751c0e837855d288c790878f5223a6468c226e5
 words: 237
 status: active
 hint_source: llm
+rag_exclude: true
+rag_exclude_reason: duplicate_of:bourses-nouveau-bachelier
 ---
 
 # Vous êtes nouveau bachelier

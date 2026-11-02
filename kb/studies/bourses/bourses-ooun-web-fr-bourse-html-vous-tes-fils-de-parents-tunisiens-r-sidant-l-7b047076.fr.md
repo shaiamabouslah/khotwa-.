@@ -22,7 +22,7 @@ sources:
 - url: https://www.ooun.rnu.tn/web/fr/bourse.html
   breadcrumb:
   - Vous êtes fils de parents tunisiens résidant à l'étranger et vous postulez à une bourse ou un prêt ?
-last_checked: '2026-10-29'
+last_checked: '2026-11-01'
 last_changed: '2026-10-05'
 status: active
 generated: true

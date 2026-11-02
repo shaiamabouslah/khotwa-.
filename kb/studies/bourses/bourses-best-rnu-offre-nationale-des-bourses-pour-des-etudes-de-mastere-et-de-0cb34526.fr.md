@@ -21,7 +21,7 @@ keywords:
 sources:
 - url: https://best.rnu.tn/offre-nationale-des-bourses-pour-des-etudes-de-mastere-et-de-doctorat-a-letranger-au-titre-de-lannee-2023-2024/
   breadcrumb: []
-last_checked: '2026-10-29'
+last_checked: '2026-11-01'
 last_changed: '2026-10-06'
 status: active
 generated: true

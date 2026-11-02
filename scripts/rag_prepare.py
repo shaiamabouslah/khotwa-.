@@ -103,6 +103,13 @@ def normalize(body):
         m = re.match(r"(#{2,4} [^\n]*)\n+(.*)", s, re.S)
         if m and PLACEHOLDER.match(m.group(2).strip()):
             missing.append(re.sub(r"^#+\s*", "", m.group(1))); continue
+        # a heading with nothing (or only whitespace) after it -- found on several gov.tn
+        # portal pages as a trailing "Ajouter un commentaire" comment-widget heading the
+        # extractor picked up with no actual comment body. Keeping it as its own ~25-word
+        # chunk (mostly the repeated title prefix) let it occasionally outrank the real
+        # procedure content on keyword-dense queries.
+        if (not m and re.match(r"#{2,4} [^\n]*$", s.strip())) or (m and not m.group(2).strip()):
+            notes.append("empty_heading_removed"); continue
         out.append(s)
     b = "".join(out)
     b = re.sub(r"\n{3,}", "\n\n", b).strip()

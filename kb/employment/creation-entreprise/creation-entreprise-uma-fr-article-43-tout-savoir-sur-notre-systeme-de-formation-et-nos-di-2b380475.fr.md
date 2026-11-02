@@ -11,7 +11,7 @@ keywords:
 sources:
 - url: https://uma.rnu.tn/fr/article/43/tout-savoir-sur-notre-systeme-de-formation-et-nos-diplomes
   breadcrumb: []
-last_checked: '2026-10-29'
+last_checked: '2026-11-01'
 last_changed: '2026-10-06'
 status: active
 generated: true

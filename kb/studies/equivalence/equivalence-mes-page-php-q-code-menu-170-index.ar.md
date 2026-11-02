@@ -17,7 +17,7 @@ keywords:
 sources:
 - url: https://www.mes.tn/page.php?code_menu=170
   breadcrumb: []
-last_checked: '2026-10-29'
+last_checked: '2026-11-01'
 last_changed: '2026-10-07'
 status: active
 generated: true
