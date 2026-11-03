@@ -56,11 +56,16 @@ GREETING_REPLY = {
     "ar": "أهلاً بك! أنا خطوة، مساعد للإجراءات الإدارية للطلبة والعاملين في تونس (المنح، "
           "التسجيل، الضمان الاجتماعي، تأسيس المشاريع...). اطرح عليّ سؤالاً محدداً حول "
           "أحد هذه الإجراءات.",
+    "en": "Hello! I'm Khotwa, an assistant for administrative procedures for students and "
+          "workers in Tunisia (scholarships, enrollment, social security, starting a "
+          "business...). Ask me a specific question about one of these procedures.",
 }
 FAREWELL_REPLY = {
     "fr": "Avec plaisir ! N'hésite pas à revenir si tu as une autre question sur tes "
           "démarches. Bonne continuation !",
     "ar": "بكل سرور! لا تتردد في العودة إذا كان لديك سؤال آخر حول إجراءاتك. أراك قريباً!",
+    "en": "You're welcome! Feel free to come back if you have another question about your "
+          "procedures. Take care!",
 }
 
 NO_MATCH_MESSAGE = {
@@ -69,6 +74,8 @@ NO_MATCH_MESSAGE = {
           "plutôt que de deviner.",
     "ar": "لا تتوفر لدي معلومة موثوقة حول هذا الموضوع في قاعدة معارفي (الإجراءات الطلابية "
           "والمهنية في تونس). أفضل عدم الإجابة على التخمين.",
+    "en": "I don't have reliable information on this topic in my knowledge base (student and "
+          "professional procedures in Tunisia). I'd rather not answer than guess.",
 }
 
 SYSTEM_PROMPT = """Tu es l'assistant Khotwa, qui aide les étudiants et travailleurs tunisiens \
@@ -77,7 +84,7 @@ SYSTEM_PROMPT = """Tu es l'assistant Khotwa, qui aide les étudiants et travaill
 Règles strictes :
 1. Réponds UNIQUEMENT à partir des extraits numérotés fournis ci-dessous. N'invente aucune \
 condition, pièce, délai ou montant qui n'y figure pas.
-2. Réponds dans la même langue que la question (français ou arabe).
+2. Réponds dans la même langue que la question (français, arabe, ou anglais).
 3. Cite les sources utilisées avec leur numéro entre crochets dans le texte, ex: [1], [2]. \
 N'ajoute PAS toi-même de section "Sources" récapitulative à la fin -- les liens officiels \
 complets y sont ajoutés automatiquement après ta réponse.
@@ -104,11 +111,24 @@ def build_context(hits: list[Hit]) -> str:
     return "\n\n".join(blocks)
 
 
+_FR_STOPWORDS = {"le", "la", "les", "des", "du", "et", "pour", "est", "une", "dans", "aux", "à", "comment", "quelle", "quelles", "quel"}
+_EN_STOPWORDS = {"the", "and", "for", "is", "of", "to", "with", "your", "are", "this", "how", "what", "do", "does"}
+
+
 def detect_lang(text: str, lang: str | None = None) -> str:
-    return lang or ("ar" if any("؀" <= c <= "ۿ" for c in text) else "fr")
+    """fr/en/ar, same heuristic as crawler/classify.py's detect_lang() (Arabic by script
+    ratio, then French vs English by stopword overlap) so corpus-side and generation-side
+    language detection agree."""
+    if lang:
+        return lang
+    latin = re.findall(r"[A-Za-zÀ-ÿ]+", text)
+    if sum(1 for c in text if "؀" <= c <= "ۿ") > sum(len(w) for w in latin):
+        return "ar"
+    words = {w.lower() for w in latin}
+    return "en" if len(words & _EN_STOPWORDS) > len(words & _FR_STOPWORDS) else "fr"
 
 
-SOURCES_LABEL = {"fr": "Sources officielles", "ar": "المصادر الرسمية"}
+SOURCES_LABEL = {"fr": "Sources officielles", "ar": "المصادر الرسمية", "en": "Official sources"}
 
 
 def sources_block(hits: list[Hit], q_lang: str) -> str:

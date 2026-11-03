@@ -58,7 +58,19 @@ RERANK_MODEL = "BAAI/bge-reranker-v2-m3"
 # answer that scored 0.024 -- correctly low), true negatives topped out at 0.221. 0.3 sits in
 # that gap. Only meaningful for rerank=True -- the raw bi-encoder cosine score was not
 # calibrated this way and sits on a different scale.
+#
+# That calibration used fr/ar questions only. Found by hand: an English query ("new high
+# school graduate scholarship") whose correct top-1 doc had a perfectly normal bi_score
+# (0.621, in line with every other genuine match seen all session) but a reranker score of
+# 0.018 -- the cross-encoder's cross-lingual behavior isn't reliable for every EN<->FR term
+# pair (idiomatic terms like "nouveau bachelier" have no direct lexical match), even though
+# the same reranker handles plenty of other EN queries fine (a second English query scored
+# 0.719, no issue). Rather than reject a confidently-embedded hit on a shaky rerank score,
+# BI_SCORE_OVERRIDE lets a high bi-encoder score override a low rerank score -- not calibrated
+# against real negatives the way DEFAULT_MIN_RERANK_SCORE was, so it's deliberately
+# conservative (only fires when the bi-encoder itself is quite confident).
 DEFAULT_MIN_RERANK_SCORE = 0.3
+BI_SCORE_OVERRIDE = 0.6
 
 
 @dataclass
@@ -152,6 +164,8 @@ class Retriever:
     def _apply_min_score(hits: list["Hit"], rerank: bool, min_score: float | None) -> list["Hit"]:
         if not rerank or min_score is None or not hits or hits[0].score >= min_score:
             return hits
+        if hits[0].bi_score is not None and hits[0].bi_score >= BI_SCORE_OVERRIDE:
+            return hits  # reranker scored it low, but the bi-encoder is confident -- see BI_SCORE_OVERRIDE
         return []
 
     def search(self, query: str, k: int = 5, lang: str | None = None,
