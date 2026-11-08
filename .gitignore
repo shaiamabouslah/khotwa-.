@@ -6,3 +6,8 @@ __pycache__/
 # Crawl outputs: versioned with DVC, not git
 /data/raw/
 /data/state/crawl.log
+/mlflow.db
+/mlflow.db-shm
+/mlflow.db-wal
+/mlruns/
+/data/rag/exp_exp-fixed/

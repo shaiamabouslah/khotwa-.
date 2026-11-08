@@ -1,0 +1,39 @@
+# Khotwa RAG application and local evaluation defaults.
+# Keep API keys in .env; never put secret values in this file.
+
+app:
+  name: Khotwa
+  environment: development
+
+paths:
+  rag_data: data/rag
+  evaluation_questions: data/rag/questions.jsonl
+
+retrieval:
+  embedding_model: BAAI/bge-m3
+  reranker_model: BAAI/bge-reranker-v2-m3
+  default_k: 5
+  candidate_k: 5
+  min_rerank_score: 0.3
+  query_cache: true
+
+generation:
+  provider: groq
+  model: openai/gpt-oss-120b
+  api_key_env: GROQ_API_KEY
+  temperature: 0.2
+  context_k: 3
+
+evaluation:
+  chunking_strategy: heading
+  ragas_questions: 10
+  model: openai/gpt-oss-20b
+  judge_model: openai/gpt-oss-20b
+
+observability:
+  tracing_enabled: false
+  mlflow:
+    tracking_uri: sqlite:///mlflow.db
+    experiment: khotwa-chunking
+    server_host: 127.0.0.1
+    server_port: 5000

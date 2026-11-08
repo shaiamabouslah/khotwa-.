@@ -45,12 +45,15 @@ from pathlib import Path
 
 import numpy as np
 
+from tracing import span
+
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 ROOT = Path(__file__).resolve().parent.parent
 RAG_DIR = ROOT / "data" / "rag"
 EMBED_MODEL = "BAAI/bge-m3"
 RERANK_MODEL = "BAAI/bge-reranker-v2-m3"
+RERANKER_MAX_LENGTH = 512
 
 # Calibrated via scripts/fixes/calibrate_threshold.py on the 33 real questions (data/rag/
 # questions.jsonl) vs. 10 out-of-scope/adjacent-but-uncovered ones (data/rag/negative_questions
@@ -137,7 +140,7 @@ class Retriever:
     def _get_reranker(self):
         if self._reranker is None:
             from sentence_transformers import CrossEncoder
-            self._reranker = CrossEncoder(self.rerank_model_name)
+            self._reranker = CrossEncoder(self.rerank_model_name, max_length=RERANKER_MAX_LENGTH)
         return self._reranker
 
     def _cache_key(self, query, k, lang, domain, subtopic, rerank, candidate_k) -> str:
@@ -156,7 +159,7 @@ class Retriever:
 
     def search(self, query: str, k: int = 5, lang: str | None = None,
                domain: str | None = None, subtopic: str | None = None,
-               rerank: bool = True, candidate_k: int = 20,
+               rerank: bool = True, candidate_k: int = 5,
                min_score: float | None = DEFAULT_MIN_RERANK_SCORE) -> list[Hit]:
         """rerank=True: fetch `candidate_k` candidates with the fast bi-encoder, then rescore
         them with a cross-encoder (query, chunk_text pairs) and return the top `k` by that
@@ -175,39 +178,68 @@ class Retriever:
         cache_key = self._cache_key(query, k, lang, domain, subtopic, rerank, candidate_k)
         if self.use_query_cache and cache_key in self._query_cache:
             hits = [Hit(**h) for h in self._query_cache[cache_key]]
+            with span("search", "CHAIN") as sp:
+                sp.set_attributes({
+                    "query": query, "k": k, "rerank": rerank, "candidate_k": candidate_k,
+                    "lang": lang or "", "domain": domain or "", "subtopic": subtopic or "",
+                    "cache_hit": True, "n_results": len(hits),
+                    "top_doc_id": hits[0].doc_id if hits else "",
+                    "top_score": hits[0].score if hits else 0.0,
+                })
             return self._apply_min_score(hits, rerank, min_score)
 
-        qv = np.asarray(self._embed([query])[0], dtype=np.float32)
-        sims = self.matrix @ qv
-        order = np.argsort(-sims)
-        fetch_k = max(candidate_k, k) if rerank else k
-        hits, seen_docs = [], set()
-        for i in order:
-            c = self.chunks[i]
-            if lang and c["lang"] != lang:
-                continue
-            if domain and c["domain"] != domain:
-                continue
-            if subtopic and c["subtopic"] != subtopic:
-                continue
-            key = (c["doc_id"], c["lang"])
-            if key in seen_docs:
-                continue
-            seen_docs.add(key)
-            hits.append(Hit(score=float(sims[i]), chunk_id=c["chunk_id"], doc_id=c["doc_id"],
-                             lang=c["lang"], domain=c["domain"], subtopic=c["subtopic"],
-                             title=c["title"], org=c.get("org", ""), section=c["section"],
-                             url=c.get("url", ""), text=c["text"], n_chunks=c.get("n_chunks", 1)))
-            if len(hits) == fetch_k:
-                break
-        if rerank and hits:
-            reranker = self._get_reranker()
-            scores = reranker.predict([(query, h.text) for h in hits])
-            for h, s in zip(hits, scores):
-                h.bi_score = h.score
-                h.score = float(s)
-            hits.sort(key=lambda h: -h.score)
-            hits = hits[:k]
+        with span("search", "CHAIN") as root:
+            root.set_attributes({"k": k, "rerank": rerank, "candidate_k": candidate_k,
+                                 "query": query, "lang": lang or "", "domain": domain or "",
+                                 "subtopic": subtopic or "", "cache_hit": False})
+
+            with span("embed_query", "EMBEDDING"):
+                qv = np.asarray(self._embed([query])[0], dtype=np.float32)
+
+            with span("vector_search", "RETRIEVER") as sp:
+                sims = self.matrix @ qv
+                order = np.argsort(-sims)
+                fetch_k = max(candidate_k, k) if rerank else k
+                hits, seen_docs = [], set()
+                for i in order:
+                    c = self.chunks[i]
+                    if lang and c["lang"] != lang:
+                        continue
+                    if domain and c["domain"] != domain:
+                        continue
+                    if subtopic and c["subtopic"] != subtopic:
+                        continue
+                    key = (c["doc_id"], c["lang"])
+                    if key in seen_docs:
+                        continue
+                    seen_docs.add(key)
+                    hits.append(Hit(score=float(sims[i]), chunk_id=c["chunk_id"], doc_id=c["doc_id"],
+                                     lang=c["lang"], domain=c["domain"], subtopic=c["subtopic"],
+                                     title=c["title"], org=c.get("org", ""), section=c["section"],
+                                     url=c.get("url", ""), text=c["text"], n_chunks=c.get("n_chunks", 1)))
+                    if len(hits) == fetch_k:
+                        break
+                sp.set_attributes({"n_chunks_scanned": len(self.chunks), "n_candidates": len(hits)})
+
+            if rerank and hits:
+                with span("rerank", "CHAIN") as sp:
+                    sp.set_attributes({"pairs": len(hits),
+                                       "words": sum(len(h.text.split()) for h in hits)})
+                    with span("load_reranker", "CHAIN"):
+                        reranker = self._get_reranker()
+                    with span("score_pairs", "RERANKER"):
+                        scores = reranker.predict([(query, h.text) for h in hits])
+                    for h, s in zip(hits, scores):
+                        h.bi_score = h.score
+                        h.score = float(s)
+                    hits.sort(key=lambda h: -h.score)
+                    hits = hits[:k]
+
+            root.set_attributes({
+                "n_results": len(hits), "top_doc_id": hits[0].doc_id if hits else "",
+                "top_score": hits[0].score if hits else 0.0,
+                "top_bi_score": hits[0].bi_score if hits and hits[0].bi_score is not None else 0.0,
+            })
 
         if self.use_query_cache:
             self._query_cache[cache_key] = [asdict(h) for h in hits]

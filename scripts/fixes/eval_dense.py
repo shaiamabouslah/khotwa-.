@@ -26,7 +26,7 @@ ap.add_argument("--embed-model", default="BAAI/bge-m3")
 ap.add_argument("--no-cache", action="store_true")
 ap.add_argument("--rerank", action="store_true")
 ap.add_argument("--rerank-model", default="BAAI/bge-reranker-v2-m3")
-ap.add_argument("--candidate-k", type=int, default=20)
+ap.add_argument("--candidate-k", type=int, default=5)
 ap.add_argument("--by-subtopic", action="store_true", help="also break hit@1/MRR down by domain/subtopic")
 a = ap.parse_args()
 

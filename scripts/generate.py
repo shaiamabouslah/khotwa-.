@@ -36,6 +36,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from retriever import Retriever, Hit  # noqa: E402
+from tracing import span  # noqa: E402
 
 DEFAULT_MODEL = "openai/gpt-oss-120b"
 
@@ -104,6 +105,29 @@ def build_context(hits: list[Hit]) -> str:
     return "\n\n".join(blocks)
 
 
+def generate_text(question: str, hits: list[Hit], model: str = DEFAULT_MODEL) -> str:
+    with span("generate", "LLM") as sp:
+        sp.set_attributes({
+            "question": question, "model": model, "context_count": len(hits),
+            "context_doc_ids": ",".join(h.doc_id for h in hits),
+            "context_languages": ",".join(sorted({h.lang for h in hits})),
+        })
+        if not os.environ.get("GROQ_API_KEY"):
+            sys.exit("GROQ_API_KEY not set.")
+        with span("build_context", "CHAIN"):
+            context = build_context(hits)
+        from groq import Groq
+        resp = Groq().chat.completions.create(
+            model=model, temperature=0.2,
+            messages=[{"role": "system", "content": SYSTEM_PROMPT},
+                      {"role": "user", "content": f"Extraits disponibles :\n\n{context}\n\nQuestion : {question}"}])
+        u = resp.usage
+        sp.set_attributes({"model": model, "prompt_tokens": u.prompt_tokens,
+                           "completion_tokens": u.completion_tokens,
+                           "answer_chars": len(resp.choices[0].message.content or "")})
+        return resp.choices[0].message.content
+
+
 def detect_lang(text: str, lang: str | None = None) -> str:
     return lang or ("ar" if any("؀" <= c <= "ۿ" for c in text) else "fr")
 
@@ -142,20 +166,7 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 3, lang: 
     if not hits:
         return {"answer": NO_MATCH_MESSAGE.get(q_lang, NO_MATCH_MESSAGE["fr"]), "hits": [], "abstained": True}
 
-    if not os.environ.get("GROQ_API_KEY"):
-        sys.exit("GROQ_API_KEY not set. Export it, or put GROQ_API_KEY=... in a .env file at the repo root.")
-    from groq import Groq
-    client = Groq()  # reads GROQ_API_KEY from the environment
-    context = build_context(hits)
-    resp = client.chat.completions.create(
-        model=model,
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": f"Extraits disponibles :\n\n{context}\n\nQuestion : {question}"},
-        ],
-        temperature=0.2,
-    )
-    text = resp.choices[0].message.content + sources_block(hits, q_lang)
+    text = generate_text(question, hits, model) + sources_block(hits, q_lang)
     return {"answer": text, "hits": hits, "abstained": False}
 
 
