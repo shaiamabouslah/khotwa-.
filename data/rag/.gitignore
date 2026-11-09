@@ -1,0 +1,14 @@
+/chunks.bge-m3.npy
+/chunks.jsonl
+/parents.jsonl
+/quarantine.jsonl
+/review_dupes.json
+/cmp_fixed
+/cmp_heading
+/cmp_semantic
+
+# Pure local caches and session memory -- regenerated on demand, not worth
+# versioning in git or DVC (no reproducibility value, pure churn).
+/query_cache.json
+/generation_cache.json
+/conversations/

@@ -1,0 +1,6 @@
+outs:
+- md5: 2dfdd5b6a4f1b3c0d5be4d9daa132159.dir
+  size: 4112887
+  nfiles: 6
+  hash: md5
+  path: cmp_fixed

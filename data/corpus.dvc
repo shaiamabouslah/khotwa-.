@@ -1,0 +1,6 @@
+outs:
+- md5: e9539143f546318b261e29dcc890a5b3.dir
+  size: 6368616
+  nfiles: 849
+  hash: md5
+  path: corpus
