@@ -1,0 +1,23 @@
+# Retrieval, generation and evaluation (scripts/retriever.py, scripts/generate.py,
+# scripts/eval_ragas.py, scripts/rag_prepare.py --strategy semantic). Not needed to run the
+# crawler alone -- that's requirements.txt.
+#
+# Pinned exact (==), unlike requirements.txt's loose (>=): this stack hit real cross-version
+# breakage this project already ran into once (ragas 0.4.3 crashed against the then-installed
+# instructor 1.3.2; fixed by pinning instructor to 1.17.0 -- see scripts/eval_ragas.py's
+# comments). These versions are the ones actually verified working together; don't loosen
+# them without re-running scripts/eval_ragas.py and scripts/retriever.py by hand afterwards.
+#
+#   pip install -r requirements-rag.txt
+-r requirements.txt
+
+numpy==2.4.6
+torch==2.14.1
+sentence-transformers==6.2.0
+groq==0.37.1
+python-dotenv==1.2.4
+
+# scripts/eval_ragas.py only
+ragas==0.4.3
+openai==3.3.0
+instructor==1.17.0

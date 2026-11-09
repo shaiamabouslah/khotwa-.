@@ -17,15 +17,22 @@ adapters hit unrelated bugs in this ragas release, the openai-compatible path is
 actually works).
 
 Usage:
-  python scripts/eval_ragas.py                       # all 33 questions in data/rag/questions.jsonl
+  python scripts/eval_ragas.py                       # all questions in data/rag/questions.jsonl
   python scripts/eval_ragas.py --file data/rag/hard_questions.jsonl
   python scripts/eval_ragas.py --limit 10             # first N only, for a quick/cheap run
+  python scripts/eval_ragas.py --sleep 3              # pace calls, stay under Groq's free-tier
+                                                        # TPM cap on a full run (41+ questions)
+
+Results are written incrementally to data/rag/ragas_results.json (one entry per question, as
+soon as it's scored) so a 429 or a crash partway through a long run loses only the questions
+not yet reached, not everything scored so far.
 """
 import argparse
 import asyncio
 import json
 import os
 import sys
+import time
 import types
 from pathlib import Path
 
@@ -91,6 +98,9 @@ async def main_async():
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--judge-model", default=DEFAULT_MODEL)
     ap.add_argument("--gen-model", default=DEFAULT_MODEL)
+    ap.add_argument("--sleep", type=float, default=0.0,
+                     help="seconds to wait between questions, to stay under Groq's free-tier TPM cap")
+    ap.add_argument("--out", default="data/rag/ragas_results.json")
     a = ap.parse_args()
 
     questions = [json.loads(l) for l in open(a.file, encoding="utf-8") if l.strip()]
@@ -102,10 +112,12 @@ async def main_async():
     context_relevance = ContextRelevance(llm=judge)
     retriever = Retriever()
 
+    out_path = ROOT / a.out
     rows = []
     for i, q in enumerate(questions, 1):
         r = await eval_one(q, retriever, faithfulness, context_relevance, a.gen_model)
         rows.append(r)
+        out_path.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
         if r["abstained"]:
             tag = "ABSTAINED"
         elif r["error"]:
@@ -113,14 +125,21 @@ async def main_async():
         else:
             tag = f"faith={r['faithfulness']:.2f} ctx_rel={r['context_relevance']:.2f}"
         print(f"[{i}/{len(questions)}] {tag}  {q['q'][:70]}")
+        if a.sleep and i < len(questions):
+            time.sleep(a.sleep)
 
     scored = [r for r in rows if not r["abstained"] and not r["error"]]
     n_abstained = sum(1 for r in rows if r["abstained"])
     n_errors = sum(1 for r in rows if r["error"])
+    summary = {"file": a.file, "n_questions": len(rows), "n_scored": len(scored),
+               "n_abstained": n_abstained, "n_errors": n_errors,
+               "gen_model": a.gen_model, "judge_model": a.judge_model}
     print(f"\n=== {a.file} ({len(rows)} questions, {n_abstained} abstained, {n_errors} errors) ===")
     if scored:
         avg_faith = sum(r["faithfulness"] for r in scored) / len(scored)
         avg_ctx = sum(r["context_relevance"] for r in scored) / len(scored)
+        summary["mean_faithfulness"] = avg_faith
+        summary["mean_context_relevance"] = avg_ctx
         print(f"mean faithfulness:      {avg_faith:.3f}")
         print(f"mean context_relevance: {avg_ctx:.3f}")
         low_faith = [r for r in scored if r["faithfulness"] < 0.8]
@@ -128,6 +147,10 @@ async def main_async():
             print(f"\n{len(low_faith)} question(s) with faithfulness < 0.8 (possible hallucination):")
             for r in low_faith:
                 print(f"  {r['faithfulness']:.2f}  {r['q'][:70]}")
+
+    out_path.write_text(json.dumps({"summary": summary, "rows": rows}, ensure_ascii=False, indent=2),
+                         encoding="utf-8")
+    print(f"\nFull results written to {out_path.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

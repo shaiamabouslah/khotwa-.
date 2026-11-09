@@ -1,0 +1,38 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          # Deliberately NOT requirements-rag.txt: torch + sentence-transformers are
+          # multi-GB and only ever loaded lazily inside Retriever's instance methods, never
+          # at import time, and no test here instantiates a real Retriever (that would be a
+          # slow model-evaluation run, not a unit test -- see scripts/compare_chunking.py /
+          # scripts/fixes/eval_dense.py for that). groq is installed directly because
+          # generate.py imports it lazily inside answer() itself, and some tests exercise
+          # that code path with a mocked client. Keeps this job at seconds, not minutes.
+          pip install groq==0.37.1 numpy==2.4.6
+
+      - name: Validate sources.yaml
+        run: python -m crawler validate
+
+      - name: Validate kb/ against taxonomy.yaml
+        run: python scripts/validate_kb.py
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -t . -v

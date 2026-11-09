@@ -1,0 +1,302 @@
+{
+  "summary": {
+    "file": "data/rag/questions.jsonl",
+    "n_questions": 41,
+    "n_scored": 15,
+    "n_abstained": 17,
+    "n_errors": 9,
+    "gen_model": "openai/gpt-oss-20b",
+    "judge_model": "openai/gpt-oss-20b",
+    "mean_faithfulness": 0.790985495985496,
+    "mean_context_relevance": 0.9666666666666667
+  },
+  "rows": [
+    {
+      "q": "Comment affilier un travailleur indépendant à la CNSS ?",
+      "abstained": false,
+      "faithfulness": 0.16666666666666666,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "Quelles sont les conditions pour une bourse universitaire quand on vient d'avoir le bac ?",
+      "abstained": false,
+      "faithfulness": 0.6363636363636364,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "Quelles sont les procédures pour obtenir l'équivalence d'un diplôme étranger ?",
+      "abstained": false,
+      "faithfulness": 1.0,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "Sur quelle base juridique repose l'équivalence des diplômes en Tunisie ?",
+      "abstained": false,
+      "faithfulness": 1.0,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "Qu'est-ce que l'équivalence de diplôme exactement ?",
+      "abstained": false,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": "InstructorRetryException: Error code: 400 - {'error': {'message': \"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}"
+    },
+    {
+      "q": "Comment déclarer un projet en ligne à l'APII ?",
+      "abstained": false,
+      "faithfulness": 0.6923076923076923,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "Où se trouvent les technopoles en Tunisie ?",
+      "abstained": false,
+      "faithfulness": 1.0,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "Comment fonctionne la télé-liquidation fiscale sur Jibaya ?",
+      "abstained": false,
+      "faithfulness": 1.0,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "Comment s'immatriculer fiscalement en ligne ?",
+      "abstained": false,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": "InstructorRetryException: Error code: 400 - {'error': {'message': \"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}"
+    },
+    {
+      "q": "Quels services propose l'ANETI en ligne pour chercher un emploi ?",
+      "abstained": false,
+      "faithfulness": 1.0,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "Qu'est-ce que l'ANETI et que fait cette agence ?",
+      "abstained": false,
+      "faithfulness": 1.0,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "Comment obtenir un duplicata de mon diplôme perdu ?",
+      "abstained": false,
+      "faithfulness": 0.625,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "Comment transférer mes frais de scolarité quand je pars étudier à l'étranger ?",
+      "abstained": false,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": "InstructorRetryException: Error code: 400 - {'error': {'message': \"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}"
+    },
+    {
+      "q": "Y a-t-il une exonération des frais d'inscription pour étudier en France ?",
+      "abstained": false,
+      "faithfulness": 0.8,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "Comment se réinscrire à l'université virtuelle de Tunis ?",
+      "abstained": false,
+      "faithfulness": 1.0,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "Quelles sont les démarches pour un stage ou projet de fin d'études au Canada ?",
+      "abstained": false,
+      "faithfulness": 0.5,
+      "context_relevance": 0.5,
+      "error": null
+    },
+    {
+      "q": "Comment consulter mon relevé de carrière professionnelle ?",
+      "abstained": false,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": "InstructorRetryException: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kd8rakqmfzmvrv1kykfgjesy` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199621, Requested 2728. Please try again in 16m54.768s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "q": "Comment candidater pour une bourse de recherche avec Mitacs ?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "كيف أنخرط في الضمان الاجتماعي كعامل غير أجير؟",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "أبحث عن عمل، كيف يمكنني التسجيل في الخدمات الوطنية؟",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "كيف أتابع ملفي كباحث عن شغل؟",
+      "abstained": false,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": "InstructorRetryException: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kd8rakqmfzmvrv1kykfgjesy` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199675, Requested 1188. Please try again in 6m12.816s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "q": "Je veux monter ma boîte, qui peut m'aider dans les pôles technologiques ?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "Erasmus+ en Tunisie, comment ça marche ?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "Comment consulter mon classement par rapport à mon bac pour l'inscription universitaire ?",
+      "abstained": false,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": "InstructorRetryException: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kd8rakqmfzmvrv1kykfgjesy` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 200000, Requested 1098. Please try again in 7m54.336s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "q": "النص القانوني الخاص بالتعليم العالي الخاص",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "Où déposer une demande d'exonération des frais d'inscription pour étudier en France ?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "Qu'est-ce que le programme CapEmploi ?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "Comment fonctionne le pointage en ligne pour les demandeurs d'emploi ?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "Liens utiles pour les bourses et prêts universitaires à l'étranger",
+      "abstained": false,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": "OSError: [Errno 22] Invalid argument: 'C:\\\\Users\\\\HP\\\\Desktop\\\\Mlops\\\\data\\\\rag\\\\query_cache.json'"
+    },
+    {
+      "q": "ما هي الاستشارات المتاحة لتنظيم دورات بعث المؤسسات؟",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "Transfert d'argent pour payer les frais de scolarité à l'étranger",
+      "abstained": false,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": "InstructorRetryException: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kd8rakqmfzmvrv1kykfgjesy` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199964, Requested 1100. Please try again in 7m39.648s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "q": "Je suis nouveau bachelier, ai-je droit à une bourse ?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "Formulaire de demande de bourse ou prêt universitaire",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "How can I get a scholarship as a new high school graduate?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "What are the conditions for a university scholarship?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "How do I register as an independent worker with the CNSS?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "What is the legal basis for diploma equivalence in Tunisia?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "How can I get a duplicate of my lost diploma?",
+      "abstained": false,
+      "faithfulness": 0.6666666666666666,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "What online job search services does ANETI offer?",
+      "abstained": false,
+      "faithfulness": 0.7777777777777778,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "I want to start a business, who can help me in the technology hubs?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "How does Erasmus+ work in Tunisia?",
+      "abstained": false,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": "InstructorRetryException: Connection error."
+    }
+  ]
+}
