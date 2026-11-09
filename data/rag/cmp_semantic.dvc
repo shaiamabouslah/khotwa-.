@@ -1,6 +1,0 @@
-outs:
-- md5: 32b65c12b59b78f4276aae02d1c4084c.dir
-  size: 4538418
-  nfiles: 6
-  hash: md5
-  path: cmp_semantic

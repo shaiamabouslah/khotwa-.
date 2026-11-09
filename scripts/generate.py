@@ -88,14 +88,65 @@ BUSY_MESSAGE = {
 }
 
 NO_MATCH_MESSAGE = {
-    "fr": "Je n'ai pas d'information fiable sur ce sujet dans ma base de connaissances "
-          "(démarches étudiantes et professionnelles en Tunisie). Je préfère ne pas répondre "
-          "plutôt que de deviner.",
-    "ar": "لا تتوفر لدي معلومة موثوقة حول هذا الموضوع في قاعدة معارفي (الإجراءات الطلابية "
-          "والمهنية في تونس). أفضل عدم الإجابة على التخمين.",
-    "en": "I don't have reliable information on this topic in my knowledge base (student and "
-          "professional procedures in Tunisia). I'd rather not answer than guess.",
+    "fr": "Désolé, je n'ai pas d'information fiable sur ce sujet. Je suis un assistant "
+          "spécialisé : je réponds uniquement aux questions sur les démarches administratives "
+          "des étudiants et travailleurs en Tunisie (bourses, inscriptions, CNSS, création "
+          "d'entreprise...). Je préfère ne pas répondre plutôt que de deviner.",
+    "ar": "آسف، لا تتوفر لدي معلومة موثوقة حول هذا الموضوع. أنا مساعد متخصص: أجيب فقط عن "
+          "الأسئلة المتعلقة بالإجراءات الإدارية للطلبة والعاملين في تونس (المنح، التسجيل، "
+          "الضمان الاجتماعي، تأسيس المشاريع...). أفضل عدم الإجابة على التخمين.",
+    "en": "Sorry, I don't have reliable information on this topic. I'm a specialized "
+          "assistant: I only answer questions about administrative procedures for students "
+          "and workers in Tunisia (scholarships, enrollment, social security, starting a "
+          "business...). I'd rather not answer than guess.",
 }
+
+# affiliation-cnss and non-salaries each bundle dozens of near-duplicate CNSS pages that only
+# differ by the applicant's secteur (agricole / non agricole / peche / ...). Retrieval alone
+# can't be trusted to resolve this: that many boilerplate-sized pages embed close together, so
+# the top-k window surfaces a near-random subset instead of the full menu -- seen by hand:
+# "comment m'affilier a la cnss" flipped between "secteur non agricole" and "secteur peche"
+# pages depending on phrasing. Asking the LLM to "notice ambiguity and ask" only works if every
+# variant happens to be in its context window, which isn't guaranteed. So this is resolved
+# deterministically, before the LLM (or even the full top-k) is involved -- same pattern as
+# greetings/farewells bypassing the LLM entirely.
+SECTOR_KEYWORDS = {
+    "agricole": ["agricole", "agriculture", "فلاحي", "الفلاحي", "فلاحة"],
+    "non agricole": ["non agricole", "non-agricole", "غير فلاحي", "غير الفلاحي"],
+    "pêche": ["pêche", "peche", "pêcheur", "صيد بحري", "البحري"],
+    "gens de maison": ["gens de maison", "employé de maison", "employée de maison",
+                        "femme de ménage", "عاملة منزلية", "عملة المنازل"],
+    "chantiers": ["chantier", "chantiers", "بناء", "ورشات"],
+    "artiste": ["artiste", "فنان"],
+    "étudiant": ["étudiant", "étudiante", "طالب"],
+}
+SECTOR_LABELS = {
+    "agricole": {"fr": "agricole", "ar": "فلاحي", "en": "agricultural"},
+    "non agricole": {"fr": "non agricole", "ar": "غير فلاحي", "en": "non-agricultural"},
+    "pêche": {"fr": "pêche", "ar": "صيد بحري", "en": "fishing"},
+    "gens de maison": {"fr": "gens de maison (employé(e) de maison)", "ar": "عاملة منزلية",
+                        "en": "domestic work"},
+    "chantiers": {"fr": "chantiers / bâtiment", "ar": "ورشات البناء", "en": "construction sites"},
+    "artiste": {"fr": "artiste", "ar": "فنان", "en": "artist"},
+    "étudiant": {"fr": "étudiant", "ar": "طالب", "en": "student"},
+}
+# subtopic -> ordered sector keys that genuinely apply to it (from kb/employment/<subtopic>/).
+SECTOR_SUBTOPICS = {
+    "affiliation-cnss": ["agricole", "non agricole", "pêche", "gens de maison", "chantiers"],
+    "non-salaries": ["agricole", "non agricole", "pêche", "artiste", "étudiant"],
+}
+SECTOR_CLARIFY_MESSAGE = {
+    "fr": "Cette démarche CNSS dépend de votre secteur d'activité. De quel secteur s'agit-il : {options} ?",
+    "ar": "يعتمد هذا الإجراء المتعلق بالضمان الاجتماعي على قطاع نشاطك. ما هو القطاع المعني: {options}؟",
+    "en": "This CNSS procedure depends on your sector of activity. Which sector applies: {options}?",
+}
+
+
+def _mentions_sector(text: str, subtopic: str) -> bool:
+    low = text.lower()
+    return any(any(kw.lower() in low for kw in SECTOR_KEYWORDS[sector])
+               for sector in SECTOR_SUBTOPICS.get(subtopic, []))
+
 
 SYSTEM_PROMPT = """Tu es l'assistant Khotwa, qui aide les étudiants et travailleurs tunisiens \
 à comprendre les démarches administratives (études, emploi, CNSS...).
@@ -238,6 +289,17 @@ def detect_lang(text: str, lang: str | None = None) -> str:
 
 SOURCES_LABEL = {"fr": "Sources officielles", "ar": "المصادر الرسمية", "en": "Official sources"}
 
+# A per-call reminder, written IN the target language, appended after the retrieved context.
+# The system prompt already says "answer in the question's language" once, in French -- that
+# alone wasn't enough: with an EN question but 100% French source chunks, the model drifted
+# into French anyway (seen by hand). A directive in the target language itself, right next to
+# the question, is a much stronger signal than one generic French rule stated far upstream.
+LANG_DIRECTIVE = {
+    "fr": "Réponds à la question ci-dessus en français, même si certains extraits sont dans une autre langue.",
+    "ar": "أجب عن السؤال أعلاه باللغة العربية، حتى لو كانت بعض المقتطفات بلغة أخرى.",
+    "en": "Answer the question above in English, even if some of the excerpts are in another language.",
+}
+
 
 def sources_block(hits: list[Hit], q_lang: str) -> str:
     """A direct, clickable link per cited document -- the point is trust: the user can open
@@ -315,7 +377,11 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 3, lang: 
         if anchor:
             retrieval_query = f"{anchor} {question}"
             hits = retriever.search(retrieval_query, k=k, domain=domain, subtopic=subtopic, rerank=rerank)
-    if not hits:
+    if hits and hits[0].subtopic in SECTOR_SUBTOPICS and not _mentions_sector(retrieval_query, hits[0].subtopic):
+        options = ", ".join(SECTOR_LABELS[s][q_lang] for s in SECTOR_SUBTOPICS[hits[0].subtopic])
+        msg = SECTOR_CLARIFY_MESSAGE.get(q_lang, SECTOR_CLARIFY_MESSAGE["fr"]).format(options=options)
+        result = {"answer": msg, "hits": hits, "abstained": False}
+    elif not hits:
         result = {"answer": NO_MATCH_MESSAGE.get(q_lang, NO_MATCH_MESSAGE["fr"]), "hits": [], "abstained": True}
     else:
         if not os.environ.get("GROQ_API_KEY"):
@@ -332,7 +398,9 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 3, lang: 
         # retriever used, not the bare reply, or the model re-asks the question it just asked
         # instead of recognizing the reply as the answer to it (seen by hand: it did exactly
         # that when sent "agricole" alone, even with the right doc already in context).
-        messages.append({"role": "user", "content": f"Extraits disponibles :\n\n{context}\n\nQuestion : {retrieval_query}"})
+        directive = LANG_DIRECTIVE.get(q_lang, LANG_DIRECTIVE["fr"])
+        messages.append({"role": "user", "content":
+                          f"Extraits disponibles :\n\n{context}\n\nQuestion : {retrieval_query}\n\n{directive}"})
         try:
             resp = _call_groq_with_retry(client, model=model, temperature=0.2, messages=messages)
         except RateLimitError:

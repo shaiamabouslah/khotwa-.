@@ -1,0 +1,120 @@
+{
+  "summary": {
+    "file": "C:/Users/HP/AppData/Local/Temp/claude/32b2907e28311cc7/eb874395-4dd2-4831-aa01-0efe8b0fcfed/scratchpad/backfill_questions.jsonl",
+    "n_questions": 15,
+    "n_scored": 4,
+    "n_abstained": 9,
+    "n_errors": 2,
+    "gen_model": "openai/gpt-oss-20b",
+    "judge_model": "openai/gpt-oss-20b",
+    "mean_faithfulness": 0.675,
+    "mean_context_relevance": NaN
+  },
+  "rows": [
+    {
+      "q": "Comment candidater pour une bourse de recherche avec Mitacs ?",
+      "abstained": false,
+      "faithfulness": 0.2,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "كيف أنخرط في الضمان الاجتماعي كعامل غير أجير؟",
+      "abstained": false,
+      "faithfulness": 0.8,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "أبحث عن عمل، كيف يمكنني التسجيل في الخدمات الوطنية؟",
+      "abstained": false,
+      "faithfulness": 0.7,
+      "context_relevance": 1.0,
+      "error": null
+    },
+    {
+      "q": "Erasmus+ en Tunisie, comment ça marche ?",
+      "abstained": false,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": "IncompleteOutputException: The output is incomplete due to a max_tokens length limit."
+    },
+    {
+      "q": "النص القانوني الخاص بالتعليم العالي الخاص",
+      "abstained": false,
+      "faithfulness": 1.0,
+      "context_relevance": NaN,
+      "error": null
+    },
+    {
+      "q": "Où déposer une demande d'exonération des frais d'inscription pour étudier en France ?",
+      "abstained": false,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": "InstructorRetryException: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kd8rakqmfzmvrv1kykfgjesy` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198259, Requested 3623. Please try again in 13m33.024s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "q": "Qu'est-ce que le programme CapEmploi ?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "Comment fonctionne le pointage en ligne pour les demandeurs d'emploi ?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "ما هي الاستشارات المتاحة لتنظيم دورات بعث المؤسسات؟",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "Je suis nouveau bachelier, ai-je droit à une bourse ?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "Formulaire de demande de bourse ou prêt universitaire",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "How can I get a scholarship as a new high school graduate?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "What are the conditions for a university scholarship?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "How do I register as an independent worker with the CNSS?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    },
+    {
+      "q": "What is the legal basis for diploma equivalence in Tunisia?",
+      "abstained": true,
+      "faithfulness": null,
+      "context_relevance": null,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+stages:
+  prepare_kb:
+    desc: >
+      Production chunking (heading strategy) -- turns kb/ into the chunks +
+      embeddings the retriever actually serves from data/rag/.
+    cmd: C:\Users\HP\Desktop\Mlops\.venv\Scripts\python.exe scripts/rag_prepare.py --kb kb --out data/rag --strategy heading
+    deps:
+      - kb
+      - scripts/rag_prepare.py
+    outs:
+      - data/rag/chunks.jsonl
+      - data/rag/chunks.bge-m3.npy
+      - data/rag/parents.jsonl
+      - data/rag/quarantine.jsonl
+      - data/rag/review_dupes.json
+      - data/rag/report.md:
+          cache: false  # small human-readable report -- keep it a plain, git-diffable file
+
+  compare_chunking:
+    desc: >
+      Builds the 3 chunking strategies (heading/fixed/semantic) side by side
+      and scores each with BM25 + dense retrieval on the same questions, so
+      the numbers are directly comparable. Never touches prepare_kb's output.
+    cmd: C:\Users\HP\Desktop\Mlops\.venv\Scripts\python.exe scripts/compare_chunking.py --kb kb --file data/rag/questions.jsonl > data/rag/chunking_comparison_report.txt
+    deps:
+      - kb
+      - scripts/compare_chunking.py
+      - scripts/rag_prepare.py
+      - scripts/fixes/eval_retrieval.py
+      - scripts/fixes/eval_dense.py
+      - data/rag/questions.jsonl
+    outs:
+      - data/rag/cmp_heading
+      - data/rag/cmp_fixed
+      - data/rag/cmp_semantic
+      - data/rag/chunking_comparison_report.txt:
+          cache: false  # small human-readable report -- keep it a plain, git-diffable file
+
+  eval_ragas:
+    desc: >
+      Full generation+retrieval quality eval (faithfulness, context
+      relevance) via RAGAS, judged over Groq. Needs GROQ_API_KEY and burns
+      API quota -- not meant to auto-run on every `dvc repro`, but declared
+      here so the data lineage (which chunks produced which score) stays
+      explicit and the command is reproducible on demand.
+    cmd: C:\Users\HP\Desktop\Mlops\.venv\Scripts\python.exe scripts/eval_ragas.py --sleep 2
+    deps:
+      - scripts/eval_ragas.py
+      - scripts/generate.py
+      - scripts/retriever.py
+      - data/rag/questions.jsonl
+      - data/rag/chunks.jsonl
+      - data/rag/chunks.bge-m3.npy
+    outs:
+      - data/rag/ragas_results.json:
+          cache: false  # small, readable metrics file -- kept visible/diffable in git

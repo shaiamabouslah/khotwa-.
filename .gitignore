@@ -6,3 +6,7 @@ __pycache__/
 # Crawl outputs: versioned with DVC, not git
 /data/raw/
 /data/state/crawl.log
+
+# Pre-downloaded pip wheels (see Dockerfile) -- large binaries, not worth
+# versioning; re-downloadable from PyPI/pytorch.org whenever needed.
+/wheels/

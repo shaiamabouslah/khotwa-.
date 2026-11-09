@@ -1,0 +1,18 @@
+.venv/
+.git/
+__pycache__/
+*.pyc
+.env
+
+# Raw crawl dump and crawler run state -- not needed to serve the assistant,
+# and data/raw/ alone is 125MB+ (see data/raw.dvc).
+data/raw/
+data/state/
+
+# Local-only, regenerated on first use inside the container anyway.
+data/rag/query_cache.json
+data/rag/generation_cache.json
+data/rag/conversations/
+
+# DVC's own local cache/remote -- never meant to ship in the image.
+.dvc/cache/

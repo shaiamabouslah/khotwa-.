@@ -1,0 +1,26 @@
+
+=== heading: building chunks -> data\rag\cmp_heading ===
+- kept docs: 311
+  BM25 eval...
+  BAAI/bge-m3 dense eval (first run downloads/embeds, can take a while)...
+
+=== fixed: building chunks -> data\rag\cmp_fixed ===
+- kept docs: 311
+  BM25 eval...
+  BAAI/bge-m3 dense eval (first run downloads/embeds, can take a while)...
+
+=== semantic: building chunks -> data\rag\cmp_semantic ===
+- kept docs: 311
+  BM25 eval...
+  BAAI/bge-m3 dense eval (first run downloads/embeds, can take a while)...
+
+==============================================================================
+strategy   eval         n   hit@1   hit@3   hit@5     MRR
+------------------------------------------------------------------------------
+heading    BM25        41    0.39    0.54    0.56    0.47
+heading    dense       41    0.61    0.73    0.76    0.68
+fixed      BM25        41    0.39    0.54    0.56    0.47
+fixed      dense       41    0.63    0.73    0.76    0.69
+semantic   BM25        41    0.41    0.54    0.56    0.48
+semantic   dense       41    0.63    0.73    0.76    0.69
+==============================================================================

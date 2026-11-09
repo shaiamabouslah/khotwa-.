@@ -1,0 +1,90 @@
+schema: '2.0'
+stages:
+  prepare_kb:
+    cmd: .venv/Scripts/python.exe scripts/rag_prepare.py --kb kb --out data/rag 
+      --strategy heading
+    deps:
+    - path: kb
+      hash: md5
+      md5: e2192b2620430c572dfe4353a7a68283.dir
+      size: 1302769
+      nfiles: 340
+    - path: scripts/rag_prepare.py
+      hash: md5
+      md5: bd3e8225371ccede375186f60e015226
+      size: 18471
+    outs:
+    - path: data/rag/chunks.bge-m3.npy
+      hash: md5
+      md5: 520db51de714781f71e3be9ce305d526
+      size: 2171008
+    - path: data/rag/chunks.jsonl
+      hash: md5
+      md5: 6682800305f5caecb60b4ae24ea7aa58
+      size: 1509515
+    - path: data/rag/parents.jsonl
+      hash: md5
+      md5: 29b6cc4075cd7b75c1b5e7ae1c84cfe5
+      size: 582042
+    - path: data/rag/quarantine.jsonl
+      hash: md5
+      md5: 1ef971a07a354bddc275b0c2e3d53d07
+      size: 3176
+    - path: data/rag/report.md
+      hash: md5
+      md5: 43b9f806a491e592026ef135924e3029
+      size: 344
+    - path: data/rag/review_dupes.json
+      hash: md5
+      md5: b9fe9da3b389b9dae4dfabd383e0a11d
+      size: 3027
+  compare_chunking:
+    cmd: C:\Users\HP\Desktop\Mlops\.venv\Scripts\python.exe 
+      scripts/compare_chunking.py --kb kb --file data/rag/questions.jsonl > 
+      data/rag/chunking_comparison_report.txt
+    deps:
+    - path: data/rag/questions.jsonl
+      hash: md5
+      md5: 0ff8fe31e6863a38a77dffaedd934224
+      size: 6537
+    - path: kb
+      hash: md5
+      md5: e2192b2620430c572dfe4353a7a68283.dir
+      size: 1302769
+      nfiles: 340
+    - path: scripts/compare_chunking.py
+      hash: md5
+      md5: 27dcf01d8d3a573de9fe4c4298102b07
+      size: 3677
+    - path: scripts/fixes/eval_dense.py
+      hash: md5
+      md5: 1187724e8036f6048cfda3cbc26c1fbe
+      size: 4869
+    - path: scripts/fixes/eval_retrieval.py
+      hash: md5
+      md5: 2f40306ccc33aff0acb9f146da8eb010
+      size: 2469
+    - path: scripts/rag_prepare.py
+      hash: md5
+      md5: bd3e8225371ccede375186f60e015226
+      size: 18471
+    outs:
+    - path: data/rag/chunking_comparison_report.txt
+      hash: md5
+      md5: 374e7cb752829585e34a6d2c58e19f48
+      size: 1163
+    - path: data/rag/cmp_fixed
+      hash: md5
+      md5: 2dfdd5b6a4f1b3c0d5be4d9daa132159.dir
+      size: 4112887
+      nfiles: 6
+    - path: data/rag/cmp_heading
+      hash: md5
+      md5: 79ca787669b5573bcbf5de76b1875121.dir
+      size: 4269112
+      nfiles: 6
+    - path: data/rag/cmp_semantic
+      hash: md5
+      md5: 32b65c12b59b78f4276aae02d1c4084c.dir
+      size: 4538418
+      nfiles: 6
