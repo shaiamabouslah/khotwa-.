@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """kb/ -> RAG-ready chunks.   Usage: python scripts/rag_prepare.py [--kb kb] [--out data/rag]
 
-Stages (each one is deterministic except the chunker itself, which has 3 interchangeable
+Stages (each one is deterministic except the chunker itself, which has 4 interchangeable
 strategies -- see --strategy below):
   1 load+validate   front matter schema, path/metadata consistency
   2 normalize       unicode, bidi marks, list/heading repair, nav boilerplate, empty sections
@@ -14,7 +14,11 @@ strategies -- see --strategy below):
                     the control group, to check heading-awareness is actually worth it.
                     --strategy semantic: embed paragraph units (sentence-transformers, default
                     BGE-M3) and cut where topic similarity drops, not at a fixed size.
-                    All three reuse the same row/sentence-safe overlap packing.
+                    --strategy adaptive: heading split/group like 'heading', but an oversize
+                    group is cut by topic similarity (like 'semantic') instead of pack()'s
+                    blind word count -- hierarchical first, semantic only where structure alone
+                    leaves a section too big. See scripts/compare_chunking.py to benchmark it.
+                    All four reuse the same row/sentence-safe overlap packing where relevant.
   7 emit            chunks.jsonl, parents.jsonl (multi-chunk docs' full text, for "expand to
                     the whole procedure" hierarchical retrieval), quarantine.jsonl,
                     review_dupes.json, report.md
@@ -259,21 +263,12 @@ def _cosine(a, b):
     return float(np.dot(a, b) / ((np.linalg.norm(a) * np.linalg.norm(b)) + 1e-9))
 
 
-def chunk_semantic(fm, body, embed, threshold=0.45):
-    """Embedding-based: split into paragraph-level units, embed each, greedily merge
-    consecutive units into a chunk while they stay topically close (cosine similarity to the
-    chunk's running mean embedding above `threshold`) and under MAX_WORDS; cut a new chunk on
-    either a topic shift or the size cap. Needs an `embed(list[str]) -> list[vector]` callable
-    (dependency injected so this module has no hard torch/sentence-transformers import)."""
+def semantic_merge(units: list[str], vecs, threshold: float) -> list[str]:
+    """Greedily merge consecutive paragraph units into chunks while they stay topically close
+    (cosine similarity to the chunk's running mean embedding above `threshold`) and under
+    MAX_WORDS; cut a new chunk on either a topic shift or the size cap. Shared by chunk_semantic
+    (whole document) and chunk_adaptive (oversize heading-groups only)."""
     import numpy as np
-    title, org = fm["title"], fm.get("org", "")
-    prefix = f"[{org}] " if org else ""
-    if words(body) <= MAX_WORDS:
-        return [{"section": title, "text": f"{prefix}{title}\n\n{body}"}]
-    units = [u for blk in split_blocks(body) for u in units_of(blk)]
-    if len(units) <= 1:
-        return [{"section": title, "text": f"{prefix}{title}\n\n{p}"} for p in pack(split_blocks(body))]
-    vecs = embed(units)
     chunks, cur, cur_vecs, n = [], [], [], 0
     for u, v in zip(units, vecs):
         uw = words(u)
@@ -285,26 +280,85 @@ def chunk_semantic(fm, body, embed, threshold=0.45):
                 cur, cur_vecs, n = [], [], 0
         cur.append(u); cur_vecs.append(v); n += uw
     if cur: chunks.append("\n\n".join(cur))
-    return [{"section": title, "text": f"{prefix}{title}\n\n{piece}"} for piece in chunks]
+    return chunks
 
 
-STRATEGIES = {"heading": chunk_heading, "fixed": chunk_fixed}  # "semantic" needs an embedder, wired in main()
+def chunk_semantic(fm, body, embed, threshold=0.45):
+    """Embedding-based: split into paragraph-level units, embed each, greedily merge them by
+    topic (see semantic_merge). Needs an `embed(list[str]) -> list[vector]` callable (dependency
+    injected so this module has no hard torch/sentence-transformers import)."""
+    title, org = fm["title"], fm.get("org", "")
+    prefix = f"[{org}] " if org else ""
+    if words(body) <= MAX_WORDS:
+        return [{"section": title, "text": f"{prefix}{title}\n\n{body}"}]
+    units = [u for blk in split_blocks(body) for u in units_of(blk)]
+    if len(units) <= 1:
+        return [{"section": title, "text": f"{prefix}{title}\n\n{p}"} for p in pack(split_blocks(body))]
+    pieces = semantic_merge(units, embed(units), threshold)
+    return [{"section": title, "text": f"{prefix}{title}\n\n{piece}"} for piece in pieces]
+
+
+def chunk_adaptive(fm, body, embed, threshold=0.45):
+    """Hierarchical first, semantic fallback for oversize sections -- not a 4th independent
+    strategy so much as chunk_heading with its weakest step replaced. chunk_heading groups
+    consecutive headed sections up to TARGET_WORDS, then caps any oversize group with pack():
+    a blind word-count cut, sentence/row-safe but topic-blind. Here, a group that fits stays
+    exactly as chunk_heading would leave it (no embedding call -- most groups never need one);
+    only a group that overflows MAX_WORDS is split where topic similarity actually drops
+    (semantic_merge, same mechanism as chunk_semantic), instead of at a fixed word count."""
+    title, org = fm["title"], fm.get("org", "")
+    prefix = f"[{org}] " if org else ""
+    if words(body) <= MAX_WORDS:
+        return [{"section": title, "text": f"{prefix}{title}\n\n{body}"}]
+    parts = [p for p in re.split(r"(?m)^(?=#{2,4} )", body) if p.strip()]
+    secs, path = [], [title]
+    for p in parts:
+        m = re.match(r"(#{2,4}) ([^\n]*)\n?(.*)", p, re.S)
+        if m:
+            lvl, head = len(m.group(1)), m.group(2).strip()
+            path = path[:max(lvl - 2, 0) + 1] + ([head] if head != title else [])
+        secs.append((" > ".join(path), p.strip()))
+    groups, cur, n = [], [], 0
+    for sp, txt in secs:
+        w = words(txt)
+        if cur and n + w > TARGET_WORDS:
+            groups.append(cur); cur, n = [], 0
+        cur.append((sp, txt)); n += w
+    if cur: groups.append(cur)
+    out = []
+    for g in groups:
+        sp = g[0][0]
+        group_text = "\n\n".join(t for _, t in g)
+        if words(group_text) <= MAX_WORDS:
+            out.append({"section": sp, "text": f"{prefix}{sp}\n\n{group_text}"})
+            continue
+        units = [u for blk in split_blocks(group_text) for u in units_of(blk)]
+        pieces = (semantic_merge(units, embed(units), threshold) if len(units) > 1
+                  else pack(split_blocks(group_text)))
+        for piece in pieces:
+            out.append({"section": sp, "text": f"{prefix}{sp}\n\n{piece}"})
+    return out
+
+
+STRATEGIES = {"heading": chunk_heading, "fixed": chunk_fixed}  # "semantic"/"adaptive" need an embedder, wired in main()
 
 
 # ───────────────────────── main ─────────────────────────
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--kb", default="kb"); ap.add_argument("--out", default="data/rag")
-    ap.add_argument("--strategy", default="heading", choices=["heading", "fixed", "semantic"],
-                     help="chunking strategy; 'semantic' needs --embed-model (sentence-transformers)")
-    ap.add_argument("--embed-model", default="BAAI/bge-m3", help="only used by --strategy semantic")
+    ap.add_argument("--strategy", default="heading", choices=["heading", "fixed", "semantic", "adaptive"],
+                     help="chunking strategy; 'semantic'/'adaptive' need --embed-model (sentence-transformers)")
+    ap.add_argument("--embed-model", default="BAAI/bge-m3", help="only used by --strategy semantic/adaptive")
     a = ap.parse_args()
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
 
-    if a.strategy == "semantic":
+    if a.strategy in ("semantic", "adaptive"):
         from sentence_transformers import SentenceTransformer
         model = SentenceTransformer(a.embed_model)
-        def chunker(fm, body): return chunk_semantic(fm, body, embed=lambda texts: model.encode(texts, normalize_embeddings=True))
+        embed = lambda texts: model.encode(texts, normalize_embeddings=True)
+        fn = chunk_semantic if a.strategy == "semantic" else chunk_adaptive
+        def chunker(fm, body): return fn(fm, body, embed=embed)
     else:
         chunker = STRATEGIES[a.strategy]
 
