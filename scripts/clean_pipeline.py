@@ -387,6 +387,7 @@ def populate_kb(apply: bool):
                 "last_changed": str(meta.get("last_changed") or today)[:10],
                 "status": "active",
                 "generated": True,
+                **({"possibly_outdated": True} if meta.get("possibly_outdated") else {}),
             }
             out_path.parent.mkdir(parents=True, exist_ok=True)
             front_yaml = yaml.safe_dump(out_front, allow_unicode=True, sort_keys=False, width=1000).strip()

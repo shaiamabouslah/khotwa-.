@@ -288,7 +288,7 @@ sites:
       # tested directly against the saved raw HTML, but a --force re-crawl still produced the
       # same footer-only hash for those 5 pages -- root cause not fully tracked down (possibly
       # a fetch-cache path bypassing the fresh selector); the 5 duplicate docs were marked
-      # status=removed by scripts/mark_nav_stubs.py instead of relying on this fix. Revisit if
+      # status=removed by scripts/_archive/mark_nav_stubs.py instead of relying on this fix. Revisit if
       # erasmus_tn content quality matters more later.
       content: ["article:not(footer article)"]
 

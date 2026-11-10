@@ -35,6 +35,7 @@ last_checked: '2026-11-01'
 last_changed: '2026-10-05'
 status: active
 generated: true
+possibly_outdated: true
 ---
 
 Dans le cadre de l'encouragement au développement régional, l'Etat prend en charge, totalement ou partiellement, la contribution patronale au régime légal de sécurité sociale au titre des salaires versés aux employés tunisiens, durant les dix ou les cinq premières années à partir de la date d'entrée en activité effective.

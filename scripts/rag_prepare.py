@@ -317,6 +317,22 @@ def main():
         if errs and (fm is None or any(e.startswith("missing") or e == "bad_lang" for e in errs)):
             quarantine.append({"file": str(p), "reasons": errs}); continue
         body, missing, notes = normalize(raw)
+        # fm["notes"] is a curator-written caveat list (stale figures, contradicting sources,
+        # etc.) living in the frontmatter -- without this, it never reaches a chunk's text, so
+        # it never reaches retrieval or the LLM either. Folding it into the body as a real
+        # section is what makes it actually show up in an answer instead of silently sitting
+        # unread in the .md file (found by hand: bourses-nouveau-bachelier.fr.md's note about
+        # the French/Arabic SMIG figures contradicting each other was being dropped this way).
+        if fm.get("notes"):
+            body += "\n\n## Avertissement\n\n" + "\n".join(f"- {n}" for n in fm["notes"])
+        # Same loss pattern as fm["notes"] above, for fix_freshness.py's flag: it's set on 134
+        # corpus docs but was never in populate_kb()'s frontmatter whitelist, so it never made
+        # it past data/corpus/ at all -- 0 kb/*.md files carried it despite the flag existing.
+        if fm.get("possibly_outdated"):
+            warn = ("Cet avertissement a été généré automatiquement : la source n'a pas été "
+                    "mise à jour récemment, l'information peut être périmée.") if fm.get("lang") != "ar" else (
+                    "تم إنشاء هذا التحذير تلقائياً: لم يتم تحديث المصدر مؤخراً، قد تكون المعلومة قديمة.")
+            body += "\n\n## Avertissement\n\n- " + warn if "## Avertissement" not in body else "\n- " + warn
         reasons = errs + gates(fm, body)
         if reasons:
             quarantine.append({"file": str(p), "id": uid(fm), "reasons": reasons, "words": words(body)}); continue

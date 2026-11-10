@@ -23,6 +23,7 @@ last_checked: '2026-11-01'
 last_changed: '2026-10-05'
 status: active
 generated: true
+possibly_outdated: true
 ---
 
 ## Attestation de solde

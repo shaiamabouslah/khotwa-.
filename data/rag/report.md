@@ -1,8 +1,8 @@
 # RAG prepare report
 - files scanned: 324
 - kept docs: 311
-- chunks: 530  (words p10/median/p90: 106/261/421)
-- parent docs (multi-chunk, expandable): 65
+- chunks: 533  (words p10/median/p90: 106/263/421)
+- parent docs (multi-chunk, expandable): 67
 - quarantined: 13
 - borderline duplicate pairs to review: 8
 

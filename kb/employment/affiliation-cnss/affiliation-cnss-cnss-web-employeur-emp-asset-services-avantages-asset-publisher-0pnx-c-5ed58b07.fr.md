@@ -34,6 +34,7 @@ last_checked: '2026-11-01'
 last_changed: '2026-10-05'
 status: active
 generated: true
+possibly_outdated: true
 ---
 
 Les employeurs investissant dans le cadre de petites entreprises bénéficient de la prise en charge par l'Etat de la cotisation patronale au régime légal de sécurité sociale, au titre des salaires payés aux salariés de nationalité tunisienne, durant les trois premières années à compter de la date d'entrée en activité effective,si les conditions suivantes sont remplies :

@@ -35,6 +35,7 @@ last_checked: '2026-11-01'
 last_changed: '2026-10-05'
 status: active
 generated: true
+possibly_outdated: true
 ---
 
 Les projets d'investissement réalisés par les nouveaux promoteurs bénéficient de la prise en charge par l'Etat de la cotisation patronale au régime légal de sécurité sociale, au titre des salaires versés aux agents de nationalité tunisienne, durant les cinq premières années d'activité effective.Les nouveaux promoteurs doivent être :

@@ -34,6 +34,7 @@ last_checked: '2026-11-01'
 last_changed: '2026-10-05'
 status: active
 generated: true
+possibly_outdated: true
 ---
 
 Les pénalités de retard encourues suite à un paiement tardif des cotisations peuvent faire l'objet d'une remise gracieuse.
