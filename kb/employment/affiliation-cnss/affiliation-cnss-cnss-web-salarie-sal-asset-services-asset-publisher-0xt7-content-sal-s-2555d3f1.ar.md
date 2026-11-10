@@ -35,6 +35,7 @@ last_checked: '2026-11-01'
 last_changed: '2026-10-06'
 status: active
 generated: true
+possibly_outdated: true
 ---
 
 ## التسجيل

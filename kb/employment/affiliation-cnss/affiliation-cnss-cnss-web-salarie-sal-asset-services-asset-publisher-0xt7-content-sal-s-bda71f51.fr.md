@@ -34,6 +34,7 @@ last_checked: '2026-11-01'
 last_changed: '2026-10-06'
 status: active
 generated: true
+possibly_outdated: true
 ---
 
 L'employeur est tenu d'immatriculer le personnel embauché dans un délai d'un mois à compter de la date  d 'affiliation. Pour les travailleurs engagés ultérieurement à cette date, l'immatriculation intervient dans un délai d'un mois  à  compter de la date de leur engagement.

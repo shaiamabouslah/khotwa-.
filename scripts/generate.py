@@ -310,7 +310,7 @@ def sources_block(hits: list[Hit], q_lang: str) -> str:
     return f"\n\n**{label} :**\n" + "\n".join(lines)
 
 
-def answer(question: str, retriever: Retriever | None = None, k: int = 3, lang: str | None = None,
+def answer(question: str, retriever: Retriever | None = None, k: int = 5, lang: str | None = None,
            domain: str | None = None, subtopic: str | None = None, rerank: bool = True,
            model: str = DEFAULT_MODEL, use_cache: bool = True,
            history: list[tuple[str, str, bool]] | None = None) -> dict:
@@ -372,7 +372,18 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 3, lang: 
     # cross-lingually via BGE-M3. That was a real bug here (found while adding EN test
     # questions: every one abstained, not on merit, just because of this filter).
     hits = retriever.search(retrieval_query, k=k, domain=domain, subtopic=subtopic, rerank=rerank)
-    if not hits and history:
+    # The anchor fallback below is for a short, ambiguous follow-up ("agricole") that only
+    # makes sense combined with what was asked before -- NOT for a genuinely new, complete,
+    # unrelated question that simply has no match in the KB. Without the word-count guard, a
+    # real out-of-context question (e.g. "Quelle est la recette du couscous tunisien ?") that
+    # legitimately finds zero hits on its own got the entire prior conversation glued onto it
+    # as a retrieval query, dragged in unrelated chunks from earlier topics, and sent the LLM a
+    # message history it then "recapped" turn by turn instead of cleanly abstaining on the
+    # actual question asked (seen by hand: it answered 4 unrelated previous questions plus the
+    # new one in one numbered list, at one point even reinventing a wrong answer for one of
+    # them). A short question has no real content to go on by itself, so only it gets the
+    # history-anchored retry; anything longer is trusted to stand on its own.
+    if not hits and history and len(question.split()) <= 3:
         anchor = " ".join(h[0] for h in history if not h[2])
         if anchor:
             retrieval_query = f"{anchor} {question}"
@@ -451,7 +462,11 @@ def chat_loop(retriever: Retriever, a):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("question", nargs="?", help="omit when using --chat")
-    ap.add_argument("-k", type=int, default=3)
+    ap.add_argument("-k", type=int, default=5,
+                     help="top-k chunks sent to the LLM (default 5 -- 3 was too tight for "
+                          "cross-lingual matches: the cross-encoder reranker under-scores a "
+                          "genuinely relevant doc in a different language from the question, "
+                          "so a strong candidate can fall just past a k=3 cutoff)")
     ap.add_argument("--lang")
     ap.add_argument("--domain")
     ap.add_argument("--subtopic")

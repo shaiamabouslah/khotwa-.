@@ -1,43 +1,43 @@
 schema: '2.0'
 stages:
   prepare_kb:
-    cmd: .venv/Scripts/python.exe scripts/rag_prepare.py --kb kb --out data/rag 
-      --strategy heading
+    cmd: C:\Users\HP\Desktop\Mlops\.venv\Scripts\python.exe 
+      scripts/rag_prepare.py --kb kb --out data/rag --strategy heading
     deps:
     - path: kb
       hash: md5
-      md5: e2192b2620430c572dfe4353a7a68283.dir
-      size: 1302769
+      md5: 939f17ec9424733b355fa280d2582f11.dir
+      size: 1304669
       nfiles: 340
     - path: scripts/rag_prepare.py
       hash: md5
-      md5: bd3e8225371ccede375186f60e015226
-      size: 18471
+      md5: 960c57c08b6d97b306105785e77f1e8c
+      size: 19992
     outs:
     - path: data/rag/chunks.bge-m3.npy
       hash: md5
-      md5: 520db51de714781f71e3be9ce305d526
+      md5: 5199aa4bd65a05df4e35653ec008fff8
       size: 2171008
     - path: data/rag/chunks.jsonl
       hash: md5
-      md5: 6682800305f5caecb60b4ae24ea7aa58
-      size: 1509515
+      md5: e9b4f8e1a0c743bafb9ea41a535d013d
+      size: 1525226
     - path: data/rag/parents.jsonl
       hash: md5
-      md5: 29b6cc4075cd7b75c1b5e7ae1c84cfe5
-      size: 582042
+      md5: 27320c97e1859c356efed17edfc47e6d
+      size: 595247
     - path: data/rag/quarantine.jsonl
       hash: md5
-      md5: 1ef971a07a354bddc275b0c2e3d53d07
+      md5: abcaeb961f3089c223aa7c201d05fdb5
       size: 3176
     - path: data/rag/report.md
       hash: md5
-      md5: 43b9f806a491e592026ef135924e3029
+      md5: 2fc589d1266f16e42034a57f74794c77
       size: 344
     - path: data/rag/review_dupes.json
       hash: md5
-      md5: b9fe9da3b389b9dae4dfabd383e0a11d
-      size: 3027
+      md5: b7f59ef228f80ab46f84a956a4a2676f
+      size: 3028
   compare_chunking:
     cmd: C:\Users\HP\Desktop\Mlops\.venv\Scripts\python.exe 
       scripts/compare_chunking.py --kb kb --file data/rag/questions.jsonl > 

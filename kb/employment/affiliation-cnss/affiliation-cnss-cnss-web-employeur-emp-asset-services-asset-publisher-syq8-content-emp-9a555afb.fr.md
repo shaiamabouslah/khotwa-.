@@ -35,6 +35,7 @@ last_checked: '2026-11-01'
 last_changed: '2026-10-05'
 status: active
 generated: true
+possibly_outdated: true
 ---
 
 L'employeur affilié au régime légal et occupant au moins un salarié dont la rémunération est supérieure à  6 fois le salaire minimum interprofessionnel garanti (SMIG) par an peut s'affilier au régime complémentaire de pensions.

@@ -34,6 +34,7 @@ last_checked: '2026-11-01'
 last_changed: '2026-10-05'
 status: active
 generated: true
+possibly_outdated: true
 ---
 
 - Les entreprises employant des agents de nationalité tunisienne titulaires d'un diplôme d'enseignement supérieur ou d'un diplôme équivalent bénéficient de la prise en charge par le Fonds National de l'Emploi d'une quote-part dégressive de la cotisation patronale au régime légal de sécurité sociale, durant une période de sept ans, si les conditions suivantes sont remplies :
