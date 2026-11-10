@@ -22,11 +22,18 @@ Library usage:
     # calibrated on real questions vs. out-of-scope ones, see scripts/fixes/calibrate_threshold.py.
     hits = r.search("Quelle est la recette du couscous ?")   # -> [] (out of scope)
 
+    # hybrid=True (experimental, not yet benchmarked against dense-only): candidates come from
+    # Reciprocal Rank Fusion of the dense ranking and a BM25 ranking, not dense similarity
+    # alone -- meant to catch exact-term matches (decree numbers, program acronyms, figures)
+    # a paraphrase-tolerant embedding can miss. Still reranked afterwards same as any other call.
+    hits = r.search(q, k=5, hybrid=True)
+
 CLI usage (manual testing, one question at a time):
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py "Comment affilier un salarie ?"
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --domain employment "..."
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --lang ar "..."
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --no-rerank "..."
+    PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --hybrid "..."
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --no-query-cache "..."
     PYTHONPATH=. .venv/Scripts/python.exe scripts/retriever.py --no-min-score "..."
 
@@ -36,8 +43,10 @@ subtopic, rerank, candidate_k). It's invalidated as a whole whenever chunks.json
 mtime signature), so a kb/ rebuild can never serve a stale answer.
 """
 import argparse
+import collections
 import hashlib
 import json
+import math
 import re
 import sys
 from dataclasses import asdict, dataclass
@@ -72,6 +81,15 @@ RERANK_MODEL = "BAAI/bge-reranker-v2-m3"
 DEFAULT_MIN_RERANK_SCORE = 0.3
 BI_SCORE_OVERRIDE = 0.6
 
+# hybrid=True fuses the dense ranking with a BM25 (lexical) ranking via Reciprocal Rank Fusion
+# instead of relying on dense/cosine similarity alone -- catches exact-term matches an embedding
+# can miss (decree numbers, program acronyms, SMIG-style figures: all seen by hand this project
+# where the exact string mattered and a paraphrase-tolerant embedding wasn't the point). RRF_K is
+# the standard smoothing constant from the original RRF paper (Cormack et al. 2009) -- not
+# tuned for this corpus, same role min_score-style calibration would need before trusting hybrid
+# as a default, which hasn't been done yet (see scripts/compare_chunking.py-style experiments).
+RRF_K = 60
+
 
 @dataclass
 class Hit:
@@ -102,6 +120,7 @@ class Retriever:
         self.embed_model_name = embed_model
         self.rerank_model_name = rerank_model
         self._reranker = None  # lazy: only load the cross-encoder if search(rerank=True) is used
+        self._bm25 = None      # lazy: only built if search(hybrid=True) is used
         chunks_path = self.rag_dir / "chunks.jsonl"
         self.chunks = [json.loads(l) for l in chunks_path.open(encoding="utf-8")]
         if not self.chunks:
@@ -152,8 +171,56 @@ class Retriever:
             self._reranker = CrossEncoder(self.rerank_model_name)
         return self._reranker
 
-    def _cache_key(self, query, k, lang, domain, subtopic, rerank, candidate_k) -> str:
-        raw = "|".join(str(x) for x in (_norm_query(query), k, lang, domain, subtopic, rerank, candidate_k))
+    def _get_bm25(self):
+        """Same BM25 formula/tokenization as scripts/fixes/eval_retrieval.py (kept in sync by
+        hand: that script is the standalone eval floor, this is the live-search copy used for
+        hybrid fusion) -- built once per Retriever instance, pure Python/regex, no model."""
+        if self._bm25 is None:
+            tok = lambda s: re.findall(r"\w+", s.lower())
+            toks = [tok(c["text"]) for c in self.chunks]
+            self._bm25 = {
+                "toks": toks,
+                "tf": [collections.Counter(t) for t in toks],
+                "df": collections.Counter(t for ts in toks for t in set(ts)),
+                "avg_len": sum(map(len, toks)) / max(len(toks), 1),
+            }
+        return self._bm25
+
+    def _bm25_order(self, query: str, lang=None, domain=None, subtopic=None) -> list[int]:
+        """Chunk indices ranked by BM25 score (best first), restricted to chunks matching the
+        lang/domain/subtopic filters -- same filters search() applies to the dense ranking, so
+        the two rankings being fused in _rrf_fuse cover the same candidate universe."""
+        b = self._get_bm25()
+        N = len(self.chunks)
+        q_terms = set(re.findall(r"\w+", query.lower()))
+        scored = []
+        for i, c in enumerate(self.chunks):
+            if lang and c["lang"] != lang: continue
+            if domain and c["domain"] != domain: continue
+            if subtopic and c["subtopic"] != subtopic: continue
+            tf, dl = b["tf"][i], len(b["toks"][i])
+            s = sum(math.log(1 + (N - b["df"][t] + .5) / (b["df"][t] + .5)) * tf[t] * 2.2 /
+                    (tf[t] + 1.2 * (.25 + .75 * dl / b["avg_len"]))
+                    for t in q_terms if t in tf)
+            if s > 0:
+                scored.append((s, i))
+        scored.sort(reverse=True)
+        return [i for _, i in scored]
+
+    @staticmethod
+    def _rrf_fuse(*orders: list[int], k: int = RRF_K) -> list[int]:
+        """Reciprocal Rank Fusion: combine any number of ranked-index lists into one ranking by
+        summing 1/(k + rank) per list (0 contribution from a list an index is absent from) --
+        robust to the two input rankings living on incomparable scales (cosine similarity vs.
+        a BM25 score), unlike averaging raw scores would be."""
+        scores = collections.defaultdict(float)
+        for order in orders:
+            for rank, idx in enumerate(order, start=1):
+                scores[idx] += 1.0 / (k + rank)
+        return [idx for idx, _ in sorted(scores.items(), key=lambda kv: -kv[1])]
+
+    def _cache_key(self, query, k, lang, domain, subtopic, rerank, candidate_k, hybrid) -> str:
+        raw = "|".join(str(x) for x in (_norm_query(query), k, lang, domain, subtopic, rerank, candidate_k, hybrid))
         return hashlib.sha1(raw.encode("utf-8")).hexdigest()
 
     def _save_query_cache(self):
@@ -170,11 +237,17 @@ class Retriever:
 
     def search(self, query: str, k: int = 5, lang: str | None = None,
                domain: str | None = None, subtopic: str | None = None,
-               rerank: bool = True, candidate_k: int = 20,
+               rerank: bool = True, candidate_k: int = 20, hybrid: bool = False,
                min_score: float | None = DEFAULT_MIN_RERANK_SCORE) -> list[Hit]:
         """rerank=True: fetch `candidate_k` candidates with the fast bi-encoder, then rescore
         them with a cross-encoder (query, chunk_text pairs) and return the top `k` by that
         score -- slower per query but typically more precise, especially at k=1.
+
+        hybrid=True: candidates come from Reciprocal Rank Fusion of the dense ranking and a
+        BM25 (lexical) ranking instead of dense similarity alone -- see RRF_K above for why.
+        Still goes through the same rerank step afterwards when rerank=True; hybrid only changes
+        which candidates reach the reranker, an experiment not yet validated against dense-only
+        the way DEFAULT_MIN_RERANK_SCORE was (see scripts/compare_chunking.py-style benchmark).
 
         min_score: abstain (return []) when the top hit's score falls below this -- a question
         with no real match in the KB (or genuinely ambiguous) scores low; forcing an answer
@@ -183,17 +256,33 @@ class Retriever:
         min_score=None to always return the top k regardless of confidence.
 
         An exact repeat of the same call (same normalized query, k, lang, domain, subtopic,
-        rerank, candidate_k -- min_score is applied after the cache lookup, so it's not part
-        of the key) is served from query_cache.json without touching the embedding model or
-        the reranker."""
-        cache_key = self._cache_key(query, k, lang, domain, subtopic, rerank, candidate_k)
+        rerank, candidate_k, hybrid -- min_score is applied after the cache lookup, so it's not
+        part of the key) is served from query_cache.json without touching the embedding model,
+        BM25 or the reranker."""
+        cache_key = self._cache_key(query, k, lang, domain, subtopic, rerank, candidate_k, hybrid)
         if self.use_query_cache and cache_key in self._query_cache:
             hits = [Hit(**h) for h in self._query_cache[cache_key]]
             return self._apply_min_score(hits, rerank, min_score)
 
         qv = np.asarray(self._embed([query])[0], dtype=np.float32)
         sims = self.matrix @ qv
-        order = np.argsort(-sims)
+        dense_order = np.argsort(-sims)
+        if hybrid:
+            # Cap each side's contribution to a bounded window before fusing -- RRF over the
+            # full corpus would let a near-zero-relevance BM25 match (score > 0 from one stray
+            # shared word) still nudge the ranking; capping to a few times candidate_k keeps
+            # fusion to each side's genuinely top candidates.
+            window = candidate_k * 3
+            bm25_order = self._bm25_order(query, lang, domain, subtopic)[:window]
+            order = self._rrf_fuse(list(dense_order[:window]), bm25_order)
+            # hits below still get h.score = raw dense cosine (not the RRF score) even though
+            # `order` is RRF-ranked -- harmless when rerank=True (the default; h.score is
+            # overwritten by the cross-encoder below regardless of how the candidate was
+            # found), but means hybrid=True, rerank=False hits are RRF-ordered with a
+            # dense-cosine score label, not an RRF one. Fine for now since hybrid is meant to
+            # feed the reranker, not stand alone -- revisit if that changes.
+        else:
+            order = dense_order
         fetch_k = max(candidate_k, k) if rerank else k
         hits, seen_docs = [], set()
         for i in order:
@@ -245,6 +334,8 @@ def main():
     ap.add_argument("--expand", action="store_true", help="also print the full parent procedure for the top hit")
     ap.add_argument("--no-rerank", dest="rerank", action="store_false",
                      help="skip the cross-encoder rerank stage (on by default: +0.06 hit@1 on the eval set)")
+    ap.add_argument("--hybrid", action="store_true",
+                     help="fuse dense + BM25 candidate rankings (Reciprocal Rank Fusion) before reranking")
     ap.add_argument("--no-query-cache", dest="query_cache", action="store_false",
                      help="don't read/write data/rag/query_cache.json for this call")
     ap.add_argument("--min-score", type=float, default=DEFAULT_MIN_RERANK_SCORE,
@@ -255,7 +346,7 @@ def main():
 
     r = Retriever(use_query_cache=a.query_cache)
     hits = r.search(a.query, k=a.k, lang=a.lang, domain=a.domain, subtopic=a.subtopic,
-                     rerank=a.rerank, min_score=a.min_score)
+                     rerank=a.rerank, hybrid=a.hybrid, min_score=a.min_score)
     if not hits:
         print("no confident match for this question in the KB" if a.rerank and a.min_score is not None
               else "no results")

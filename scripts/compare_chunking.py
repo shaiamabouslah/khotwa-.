@@ -1,12 +1,17 @@
-"""Build the 3 chunking strategies (heading / fixed / semantic) side by side and score each
-one with both evaluators (BM25 and BGE-M3 dense) on the same auto-generated questions, so the
-numbers are directly comparable. Prints one summary table.
+"""Build the 4 chunking strategies (heading / fixed / semantic / adaptive) side by side and
+score each one with both evaluators (BM25 and BGE-M3 dense) on the same auto-generated
+questions, so the numbers are directly comparable. Prints one summary table.
+
+adaptive is chunk_heading with its oversize-section fallback replaced by a semantic cut
+(semantic_merge) instead of a blind word-count pack() -- see chunk_adaptive's docstring in
+rag_prepare.py. Compared here against plain heading to check it's actually worth the extra
+embedding calls, the same way semantic was checked against fixed/heading.
 
 Usage:
     PYTHONPATH=. .venv/Scripts/python.exe scripts/compare_chunking.py
     PYTHONPATH=. .venv/Scripts/python.exe scripts/compare_chunking.py --file questions.jsonl
     PYTHONPATH=. .venv/Scripts/python.exe scripts/compare_chunking.py --strategies heading,fixed
-        # skip semantic (no torch/sentence-transformers installed, or just faster)
+        # skip semantic/adaptive (no torch/sentence-transformers installed, or just faster)
 
 Output chunk sets live in data/rag/cmp_<strategy>/ -- separate from data/rag/ itself (the
 clean_pipeline.py --apply production output, always 'heading'), so comparing never touches it.
@@ -34,7 +39,7 @@ def run(cmd, label):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--kb", default="kb")
-    ap.add_argument("--strategies", default="heading,fixed,semantic")
+    ap.add_argument("--strategies", default="heading,fixed,semantic,adaptive")
     ap.add_argument("--file", help="real questions file {q, doc_id, lang} per line -- beats --auto")
     ap.add_argument("--embed-model", default="BAAI/bge-m3")
     args = ap.parse_args()
@@ -45,7 +50,7 @@ def main():
         out_dir = ROOT / "data" / "rag" / f"cmp_{strat}"
         print(f"\n=== {strat}: building chunks -> {out_dir.relative_to(ROOT)} ===")
         cmd = [sys.executable, "scripts/rag_prepare.py", "--kb", args.kb, "--out", str(out_dir), "--strategy", strat]
-        if strat == "semantic":
+        if strat in ("semantic", "adaptive"):
             cmd += ["--embed-model", args.embed_model]
         out = run(cmd, f"rag_prepare --strategy {strat}")
         if out is None:
