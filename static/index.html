@@ -361,12 +361,68 @@
     flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 12px;
     max-width: 760px; width: 100%; margin: 0 auto;
   }
-  .msg { max-width: 78%; padding: 11px 14px; border-radius: 16px; line-height: 1.5; font-size: 14px; white-space: pre-wrap; box-shadow: var(--shadow); animation: msgIn 0.18s ease; }
+  .msg { max-width: 78%; padding: 11px 14px; border-radius: 16px; line-height: 1.55; font-size: 14px; box-shadow: var(--shadow); animation: msgIn 0.18s ease; overflow-wrap: anywhere; }
+  .msg.user { white-space: pre-wrap; }
+  .msg.bot { max-width: 85%; }
+
+  /* ---------- Rendered answer (bot) ---------- */
+  .md > :first-child { margin-top: 0; }
+  .md > :last-child { margin-bottom: 0; }
+  .md p { margin: 0 0 9px; }
+  .md h3, .md h4, .md h5, .md h6 { margin: 14px 0 6px; font-size: 14.5px; font-weight: 650; }
+  .md ul, .md ol { margin: 4px 0 10px; padding-inline-start: 22px; }
+  .md li { margin: 3px 0; }
+  .md li > ul, .md li > ol { margin: 3px 0 4px; }
+  .md strong { font-weight: 650; }
+  .md code { font-family: Consolas, "SFMono-Regular", monospace; font-size: 12.5px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 5px; padding: 0 4px; }
+  .md hr { border: none; border-top: 1px solid var(--border); margin: 12px 0; }
+  .md blockquote { margin: 6px 0 10px; padding: 2px 12px; border-inline-start: 3px solid var(--border); color: var(--muted); }
+  .md a { color: var(--accent); text-decoration: none; }
+  .md a:hover { text-decoration: underline; }
+  .md .table-wrap { overflow-x: auto; margin: 6px 0 10px; }
+  .md table { border-collapse: collapse; font-size: 13px; min-width: 60%; }
+  .md th, .md td { border: 1px solid var(--border); padding: 6px 9px; text-align: start; vertical-align: top; }
+  .md th { background: var(--panel-2); font-weight: 650; }
+  .md a.cite, .md sup.cite {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 17px; height: 17px; padding: 0 4px; margin: 0 1px;
+    border-radius: 9px; font-size: 10.5px; font-weight: 650; line-height: 1;
+    vertical-align: 2px; background: rgba(37, 99, 235, 0.12); color: var(--accent);
+  }
+  .md a.cite:hover { background: var(--accent); color: var(--accent-text); text-decoration: none; }
+
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources-label { font-size: 11px; font-weight: 650; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin-bottom: 7px; }
+  .source-list { display: flex; flex-wrap: wrap; gap: 7px; }
+  .source-chip {
+    display: inline-flex; align-items: center; gap: 8px; max-width: 100%;
+    padding: 6px 10px 6px 6px; border-radius: 10px;
+    background: var(--panel); border: 1px solid var(--border);
+    color: var(--text); text-decoration: none;
+    transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .source-chip:hover { border-color: var(--accent); transform: translateY(-1px); box-shadow: var(--shadow); }
+  .source-n {
+    flex-shrink: 0; width: 20px; height: 20px; border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; color: #fff;
+    background: linear-gradient(135deg, var(--hero-2), var(--hero-3));
+  }
+  .source-text { display: flex; flex-direction: column; min-width: 0; }
+  .source-title { font-size: 12.5px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 240px; }
+  .source-host { font-size: 11px; color: var(--muted); }
+  .source-chip .icon { width: 13px; height: 13px; color: var(--muted); }
+
+  .typing { display: inline-flex; gap: 4px; padding: 3px 2px; }
+  .typing i { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); animation: typing 1.2s infinite ease-in-out; }
+  .typing i:nth-child(2) { animation-delay: 0.15s; }
+  .typing i:nth-child(3) { animation-delay: 0.3s; }
+  @keyframes typing { 0%, 60%, 100% { opacity: 0.25; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-3px); } }
   @keyframes msgIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
   .msg.user { align-self: flex-end; background: var(--accent); color: var(--accent-text); border-bottom-right-radius: 4px; }
   .msg.bot { align-self: flex-start; background: var(--bot-bubble); color: var(--bot-text); border-bottom-left-radius: 4px; }
   .msg.bot.abstained { border: 1px solid var(--abstain-border); }
-  .msg.pending { opacity: 0.6; }
+  .msg.pending { padding: 10px 14px; }
 
   #welcome { flex: 1; overflow-y: auto; display: flex; align-items: center; justify-content: center; padding: 24px; }
   .welcome-inner { max-width: 620px; text-align: center; }
@@ -1005,9 +1061,167 @@
       messagesEl.innerHTML = "";
       data.turns.forEach(function (t) {
         addMessage("user", t.question);
-        addMessage("bot", t.answer, { abstained: t.abstained });
+        addMessage("bot", t.answer, { abstained: t.abstained, sources: t.sources });
       });
     });
+  }
+
+  // ---------- Answer rendering (Markdown subset -> HTML) ----------
+  // Everything is HTML-escaped FIRST; only the formatting below is then turned into tags, so no
+  // markup or script coming from an answer (or a source document quoted in it) can execute.
+  function escapeHtml(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+  function safeUrl(u) { return /^https?:\/\//i.test(u) ? u : null; }
+
+  // The LLM sometimes writes HTML itself ("&nbsp;&nbsp;• item" to indent a sub-bullet, "<br>")
+  // -- decode that small set into plain text BEFORE escaping, so it renders as layout instead of
+  // showing up literally. Still safe: everything is escaped again right after. &amp; goes last
+  // so "&amp;lt;" isn't decoded twice.
+  function normalizeLlmText(t) {
+    return String(t)
+      .replace(/<br\s*\/?>/gi, "\n")
+      .replace(/&nbsp;|&#160;/gi, " ")
+      .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#0?39;|&#x27;/gi, "'")
+      .replace(/&amp;/g, "&");
+  }
+
+  // Non-breaking / typographic hyphens (U+2010-2013) are common in the LLM's text and harmless to
+  // read, but inside a web address they point to a different (nonexistent) domain.
+  function fixHref(url) { return url.replace(/[‐-–]/g, "-"); }
+
+  function renderInline(s, sourceMap) {
+    var links = [];
+    function keep(html) { links.push(html); return "\u0000" + (links.length - 1) + "\u0000"; }
+    s = s.replace(/`([^`]+)`/g, function (m, c) { return keep("<code>" + c + "</code>"); });
+    s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, function (m, label, url) {
+      return keep('<a href="' + fixHref(url) + '" target="_blank" rel="noopener noreferrer">' + label + "</a>");
+    });
+    // Bare URLs, with or without http(s):// ("www.registre-entreprises.tn"): keep sentence
+    // punctuation out of the link ("...D2152." used to link to a broken page), and show just the
+    // site name -- full address on hover.
+    s = s.replace(/(^|[\s(«:])((?:https?:\/\/|www\.)[^\s<]+)/gi, function (m, pre, url) {
+      var tail = "";
+      while (/[.,;:!?»)\]]$/.test(url) && !(url.slice(-1) === ")" && url.indexOf("(") !== -1)) {
+        tail = url.slice(-1) + tail;
+        url = url.slice(0, -1);
+      }
+      var href = fixHref(/^www\./i.test(url) ? "https://" + url : url);
+      var host = href.replace(/^https?:\/\/(www\.)?/i, "").split(/[\/?#]/)[0];
+      if (host.indexOf(".") === -1) return m;
+      return pre + keep('<a href="' + href + '" target="_blank" rel="noopener noreferrer" title="' + href + '">' +
+                        host + " ↗</a>") + tail;
+    });
+    s = s.replace(/\[(\d+)\]/g, function (m, n) {
+      var src = sourceMap[n];
+      if (!src || !safeUrl(src.url)) return keep('<sup class="cite">' + n + "</sup>");
+      return keep('<a class="cite" href="' + escapeHtml(src.url) + '" target="_blank" rel="noopener noreferrer" title="' +
+                  escapeHtml(src.title) + '">' + n + "</a>");
+    });
+    s = s.replace(/\*\*([^*]+?)\*\*/g, "<strong>$1</strong>").replace(/__([^_]+?)__/g, "<strong>$1</strong>");
+    s = s.replace(/(^|[^*\w])\*(?!\s)([^*]+?)\*(?!\w)/g, "$1<em>$2</em>");
+    return s.replace(/\u0000(\d+)\u0000/g, function (m, i) { return links[+i]; });
+  }
+
+  var LIST_ITEM_RE = /^(\s*)([-*•]|\d+[.)])\s+(.*)$/;
+
+  function renderList(lines, sourceMap) {
+    var out = "", stack = [];
+    lines.forEach(function (line) {
+      var m = line.match(LIST_ITEM_RE);
+      if (!m) { out += "<br>" + renderInline(line.trim(), sourceMap); return; }
+      var indent = m[1].replace(/\t/g, "    ").length;
+      var ordered = /\d/.test(m[2]);
+      var tag = ordered ? "ol" : "ul";
+      var open = "<" + tag + (ordered && parseInt(m[2], 10) !== 1 ? ' start="' + parseInt(m[2], 10) + '"' : "") + ">";
+      while (stack.length && indent < stack[stack.length - 1].indent) out += "</li></" + stack.pop().tag + ">";
+      var top = stack[stack.length - 1];
+      if (!top || indent > top.indent) { out += open; stack.push({ indent: indent, tag: tag }); }
+      else if (top.tag !== tag) { out += "</li></" + stack.pop().tag + ">" + open; stack.push({ indent: indent, tag: tag }); }
+      else out += "</li>";
+      out += "<li>" + renderInline(m[3], sourceMap);
+    });
+    while (stack.length) out += "</li></" + stack.pop().tag + ">";
+    return out;
+  }
+
+  function renderMarkdown(text, sources) {
+    var sourceMap = {};
+    (sources || []).forEach(function (s) { sourceMap[s.n] = s; });
+    var lines = escapeHtml(normalizeLlmText(text)).split(/\r?\n/);
+    var html = [], i = 0;
+    function isBlank(l) { return /^\s*$/.test(l); }
+    function isTableRow(l) { return /^\s*\|.*\|\s*$/.test(l); }
+    function startsBlock(l, next) {
+      return /^#{1,6}\s/.test(l) || LIST_ITEM_RE.test(l) || /^\s*(-{3,}|\*{3,}|_{3,})\s*$/.test(l) ||
+             /^&gt;\s?/.test(l) || (isTableRow(l) && next !== undefined && /^\s*\|?\s*:?-{3,}/.test(next));
+    }
+    while (i < lines.length) {
+      var line = lines[i];
+      if (isBlank(line)) { i++; continue; }
+      var h = line.match(/^(#{1,6})\s+(.*)$/);
+      if (h) {
+        var lvl = Math.min(h[1].length + 2, 6);
+        html.push("<h" + lvl + ">" + renderInline(h[2], sourceMap) + "</h" + lvl + ">"); i++; continue;
+      }
+      if (/^\s*(-{3,}|\*{3,}|_{3,})\s*$/.test(line)) { html.push("<hr>"); i++; continue; }
+      if (isTableRow(line) && i + 1 < lines.length && /^\s*\|?\s*:?-{3,}/.test(lines[i + 1])) {
+        var rows = [];
+        while (i < lines.length && isTableRow(lines[i])) rows.push(lines[i++]);
+        var cells = function (r) {
+          return r.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map(function (c) { return renderInline(c.trim(), sourceMap); });
+        };
+        html.push('<div class="table-wrap"><table><thead><tr>' +
+          cells(rows[0]).map(function (c) { return "<th>" + c + "</th>"; }).join("") + "</tr></thead><tbody>" +
+          rows.slice(2).map(function (r) { return "<tr>" + cells(r).map(function (c) { return "<td>" + c + "</td>"; }).join("") + "</tr>"; }).join("") +
+          "</tbody></table></div>");
+        continue;
+      }
+      if (LIST_ITEM_RE.test(line)) {
+        var block = [];
+        while (i < lines.length) {
+          var l = lines[i];
+          if (LIST_ITEM_RE.test(l) || (/^\s+\S/.test(l) && block.length)) { block.push(l); i++; continue; }
+          if (isBlank(l)) {
+            var j = i + 1;
+            while (j < lines.length && isBlank(lines[j])) j++;
+            if (j < lines.length && (LIST_ITEM_RE.test(lines[j]) || /^\s+\S/.test(lines[j]))) { i = j; continue; }
+          }
+          break;
+        }
+        html.push(renderList(block, sourceMap));
+        continue;
+      }
+      if (/^&gt;\s?/.test(line)) {
+        var quote = [];
+        while (i < lines.length && /^&gt;\s?/.test(lines[i])) quote.push(lines[i++].replace(/^&gt;\s?/, ""));
+        html.push("<blockquote>" + quote.map(function (q) { return renderInline(q, sourceMap); }).join("<br>") + "</blockquote>");
+        continue;
+      }
+      var para = [line];
+      i++;
+      while (i < lines.length && !isBlank(lines[i]) && !startsBlock(lines[i], lines[i + 1])) para.push(lines[i++]);
+      html.push("<p>" + para.map(function (p) { return renderInline(p, sourceMap); }).join("<br>") + "</p>");
+    }
+    return html.join("");
+  }
+
+  function renderSources(sources, isArabic) {
+    var shown = (sources || []).filter(function (s) { return safeUrl(s.url); });
+    if (!shown.length) return "";
+    return '<div class="sources"><div class="sources-label">' + (isArabic ? "المصادر" : "Sources") + "</div>" +
+      '<div class="source-list">' + shown.map(function (s) {
+        var host = "";
+        try { host = new URL(s.url).hostname.replace(/^www\./, ""); } catch (e) { host = ""; }
+        var hint = s.title + (s.org ? " — " + s.org : "");
+        return '<a class="source-chip" href="' + escapeHtml(s.url) + '" target="_blank" rel="noopener noreferrer" title="' +
+          escapeHtml(hint) + '"><span class="source-n">' + s.n + '</span><span class="source-text">' +
+          '<span class="source-title">' + escapeHtml(s.title) + "</span>" +
+          (host ? '<span class="source-host">' + escapeHtml(host) + "</span>" : "") + "</span>" +
+          '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +
+          '<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>';
+      }).join("") + "</div></div>";
   }
 
   // ---------- Messages ----------
@@ -1015,7 +1229,15 @@
     opts = opts || {};
     var div = document.createElement("div");
     div.className = "msg " + role + (opts.abstained ? " abstained" : "") + (opts.pending ? " pending" : "");
-    div.textContent = text;
+    div.dir = "auto";
+    if (opts.pending) {
+      div.innerHTML = '<span class="typing"><i></i><i></i><i></i></span>';
+    } else if (role === "bot") {
+      var isArabic = /[؀-ۿ]/.test(text);
+      div.innerHTML = '<div class="md">' + renderMarkdown(text, opts.sources) + "</div>" + renderSources(opts.sources, isArabic);
+    } else {
+      div.textContent = text;
+    }
     messagesEl.appendChild(div);
     messagesEl.scrollTop = messagesEl.scrollHeight;
     return div;
@@ -1032,7 +1254,7 @@
     autoGrow();
     inputEl.disabled = true;
     sendBtn.disabled = true;
-    var pending = addMessage("bot", "...", { pending: true });
+    var pending = addMessage("bot", "", { pending: true });
 
     // 150s: generous enough to cover the retriever's embedding model loading on the very first
     // real question of a server run (can legitimately take over a minute on a slow machine),
@@ -1040,7 +1262,7 @@
     api("/chat", { method: "POST", body: JSON.stringify({ conversation_id: activeConvId, question: question }) }, 300000)
       .then(function (data) {
         pending.remove();
-        addMessage("bot", data.answer, { abstained: data.abstained });
+        addMessage("bot", data.answer, { abstained: data.abstained, sources: data.sources });
         var conv = conversations.find(function (c) { return c.id === activeConvId; });
         if (conv && conv.title === "Nouvelle conversation") {
           conv.title = question.slice(0, 40);

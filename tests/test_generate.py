@@ -261,6 +261,26 @@ def make_cnss_hit() -> Hit:
                n_chunks=1, bi_score=0.7)
 
 
+class TestSplitSources(unittest.TestCase):
+    def test_round_trip_with_nested_parentheses_in_org(self):
+        hit = Hit(score=0.9, chunk_id="c1", doc_id="d1", lang="fr", domain="employment",
+                  subtopic="affiliation-cnss", title="Affiliation (salariés) — guide",
+                  org="Caisse Nationale de Sécurité Sociale (CNSS)", section="s",
+                  url="https://www.cnss.tn/x?a=1", text="t", n_chunks=1)
+        body, sources = generate.split_sources("Réponse **ici** [1]." + generate.sources_block([hit], "fr"))
+        self.assertEqual(body, "Réponse **ici** [1].")
+        self.assertEqual(sources, [{"n": 1, "title": "Affiliation (salariés) — guide",
+                                    "org": "Caisse Nationale de Sécurité Sociale (CNSS)",
+                                    "url": "https://www.cnss.tn/x?a=1"}])
+
+    def test_arabic_label_is_recognised(self):
+        _, sources = generate.split_sources("جواب" + generate.sources_block([make_hit("ع", "https://a.tn")], "ar"))
+        self.assertEqual(sources[0]["url"], "https://a.tn")
+
+    def test_text_without_sources_block_is_unchanged(self):
+        self.assertEqual(generate.split_sources("Bonjour !"), ("Bonjour !", []))
+
+
 class TestSectorGuard(unittest.TestCase):
     def _answer(self, question):
         mock_retriever = MagicMock()

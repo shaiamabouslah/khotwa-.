@@ -121,7 +121,8 @@ class TestConversations(ApiTestBase):
             self.client.post("/chat", json={"conversation_id": conv_id, "question": "Q1"})
         resp = self.client.get(f"/conversations/{conv_id}")
         self.assertEqual(resp.status_code, 200)
-        self.assertEqual(resp.json()["turns"], [{"question": "Q1", "answer": "A1", "abstained": False}])
+        self.assertEqual(resp.json()["turns"],
+                         [{"question": "Q1", "answer": "A1", "abstained": False, "sources": []}])
 
     def test_get_unknown_conversation_is_404(self):
         self._register(self.client, "etudiant1")
@@ -221,7 +222,7 @@ class TestChatEndpoint(ApiTestBase):
         with patch.object(api.generate, "answer", return_value=_answer_stub("reponse", False)):
             resp = self.client.post("/chat", json={"conversation_id": conv_id, "question": "une question"})
         self.assertEqual(resp.status_code, 200)
-        self.assertEqual(resp.json(), {"answer": "reponse", "abstained": False})
+        self.assertEqual(resp.json(), {"answer": "reponse", "abstained": False, "sources": []})
 
     def test_blank_question_rejected(self):
         self._register(self.client, "etudiant1")
@@ -266,6 +267,44 @@ class TestChatEndpoint(ApiTestBase):
              patch.object(api.generate, "answer", return_value=_answer_stub("reponse")):
             self.client.post("/chat", json={"conversation_id": conv_id, "question": "une vraie question"})
         mock_get_retriever.assert_called_once()
+
+    def _answer_with_sources(self, body):
+        from retriever import Hit
+        hits = [Hit(score=0.9, chunk_id=f"c{i}", doc_id=f"d{i}", lang="fr", domain="studies",
+                    subtopic="bourses", title=f"Titre {i}", org="Caisse Nationale de Sécurité Sociale (CNSS)",
+                    section="s", url=f"https://www.cnss.tn/page{i}", text="t", n_chunks=1)
+                for i in (1, 2, 3)]
+        return _answer_stub(body + generate.sources_block(hits, "fr"))
+
+    def test_chat_returns_sources_separately_and_only_cited_ones(self):
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        stub = self._answer_with_sources("Il faut un **dossier** [1] et une copie [3].")
+        with patch.object(api.generate, "answer", return_value=stub):
+            body = self.client.post("/chat", json={"conversation_id": conv_id, "question": "q"}).json()
+        self.assertEqual(body["answer"], "Il faut un **dossier** [1] et une copie [3].")
+        self.assertEqual([s["n"] for s in body["sources"]], [1, 3])
+        self.assertEqual(body["sources"][0]["url"], "https://www.cnss.tn/page1")
+        self.assertEqual(body["sources"][0]["org"], "Caisse Nationale de Sécurité Sociale (CNSS)")
+
+    def test_reopened_conversation_also_gets_sources_separately(self):
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        with patch.object(api.generate, "answer", return_value=self._answer_with_sources("Voir [2].")):
+            self.client.post("/chat", json={"conversation_id": conv_id, "question": "q"})
+        turn = self.client.get(f"/conversations/{conv_id}").json()["turns"][0]
+        self.assertEqual(turn["answer"], "Voir [2].")
+        self.assertEqual([s["n"] for s in turn["sources"]], [2])
+
+    def test_uncited_answer_shows_no_sources(self):
+        # e.g. "the excerpts don't cover this" -- showing source buttons would imply they back it
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        stub = self._answer_with_sources("Les extraits ne couvrent pas cette question.")
+        with patch.object(api.generate, "answer", return_value=stub):
+            body = self.client.post("/chat", json={"conversation_id": conv_id, "question": "q"}).json()
+        self.assertEqual(body["answer"], "Les extraits ne couvrent pas cette question.")
+        self.assertEqual(body["sources"], [])
 
     def test_health_reports_key_and_retriever_state(self):
         body = self.client.get("/health").json()

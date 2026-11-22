@@ -27,6 +27,7 @@ file whose name starts with "{username}__". No separate index to keep in sync.
 """
 import json
 import os
+import re
 import secrets
 import sys
 import threading
@@ -127,9 +128,26 @@ class ChatRequest(BaseModel):
     lang: str | None = None
 
 
+class Source(BaseModel):
+    n: int
+    title: str
+    org: str
+    url: str
+
+
 class ChatResponse(BaseModel):
     answer: str
     abstained: bool
+    sources: list[Source] = []
+
+
+def _present(text: str) -> tuple[str, list[dict]]:
+    """Answer body + the sources the UI shows as links: only the ones the answer actually cites
+    ([1], [3]...). A source button claims "this answer comes from here" -- an answer that cites
+    nothing (typically "the excerpts don't cover this") gets none. History keeps the full text."""
+    body, sources = generate.split_sources(text)
+    cited = {int(n) for n in re.findall(r"\[(\d+)\]", body)}
+    return body, [s for s in sources if s["n"] in cited]
 
 
 @app.get("/health")
@@ -228,8 +246,11 @@ def get_conversation(conversation_id: str, username: str = Depends(require_user)
     if not path.exists():
         raise HTTPException(404, "conversation introuvable")
     history = generate.load_history(key)
-    return {"id": conversation_id,
-            "turns": [{"question": q, "answer": a, "abstained": ab} for q, a, ab in history]}
+    turns = []
+    for q, a, ab in history:
+        body, sources = _present(a)
+        turns.append({"question": q, "answer": body, "abstained": ab, "sources": sources})
+    return {"id": conversation_id, "turns": turns}
 
 
 @app.patch("/conversations/{conversation_id}")
@@ -295,7 +316,8 @@ def chat(req: ChatRequest, username: str = Depends(require_user)):
     history.append((question, result["answer"], result["abstained"]))
     generate.save_history(key, history)
 
-    return ChatResponse(answer=result["answer"], abstained=result["abstained"])
+    body, sources = _present(result["answer"])
+    return ChatResponse(answer=body, abstained=result["abstained"], sources=sources)
 
 
 # Mounted last: StaticFiles with html=True serves static/index.html at "/" and would otherwise

@@ -376,6 +376,43 @@ def sources_block(hits: list[Hit], q_lang: str) -> str:
     return f"\n\n**{label} :**\n" + "\n".join(lines)
 
 
+_SOURCES_HEADER_RE = re.compile(
+    r"\n\n\*\*(?:" + "|".join(re.escape(v) for v in SOURCES_LABEL.values()) + r") :\*\*\n")
+_SOURCE_LINE_RE = re.compile(r"^\[(\d+)\] (.*) — (\S+)$")
+
+
+def _split_title_org(s: str) -> tuple[str, str]:
+    # "Title (Org)" where Org itself may contain parentheses, e.g. "... (Caisse Nationale de
+    # Sécurité Sociale (CNSS))" -- match the trailing balanced group, not the first "(".
+    if not s.endswith(")"):
+        return s, ""
+    depth = 0
+    for i in range(len(s) - 1, -1, -1):
+        if s[i] == ")":
+            depth += 1
+        elif s[i] == "(":
+            depth -= 1
+            if depth == 0:
+                return s[:i].rstrip(), s[i + 1:-1]
+    return s, ""
+
+
+def split_sources(text: str) -> tuple[str, list[dict]]:
+    """Inverse of sources_block(): separates the answer body from the appended source list, so a
+    UI can show sources as links instead of raw text. Stored history keeps the full text."""
+    matches = list(_SOURCES_HEADER_RE.finditer(text))
+    if not matches:
+        return text, []
+    m = matches[-1]
+    sources = []
+    for line in text[m.end():].splitlines():
+        lm = _SOURCE_LINE_RE.match(line.strip())
+        if lm:
+            title, org = _split_title_org(lm.group(2))
+            sources.append({"n": int(lm.group(1)), "title": title, "org": org, "url": lm.group(3)})
+    return text[:m.start()].rstrip(), sources
+
+
 def answer(question: str, retriever: Retriever | None = None, k: int = 5, lang: str | None = None,
            domain: str | None = None, subtopic: str | None = None, rerank: bool = True,
            model: str = DEFAULT_MODEL, use_cache: bool = True,
