@@ -48,6 +48,27 @@ class TestChitchat(unittest.TestCase):
         self.assertIsNone(generate.GREETING_RE.match(q))
         self.assertIsNone(generate.FAREWELL_RE.match(q))
 
+    def test_chitchat_lang_english_greeting_no_stopwords(self):
+        # "hello" and "thank you" have zero overlap with detect_lang()'s stopword lists -- this
+        # is exactly the case that used to silently default to French.
+        self.assertEqual(generate._chitchat_lang("hello"), "en")
+        self.assertEqual(generate._chitchat_lang("thank you"), "en")
+
+    def test_chitchat_lang_french_greeting(self):
+        self.assertEqual(generate._chitchat_lang("bonjour"), "fr")
+        self.assertEqual(generate._chitchat_lang("merci"), "fr")
+
+    def test_chitchat_lang_arabic_greeting(self):
+        self.assertEqual(generate._chitchat_lang("مرحبا"), "ar")
+
+    def test_answer_greeting_in_english_replies_in_english(self):
+        result = generate.answer("hello", retriever=None, use_cache=False)
+        self.assertEqual(result["answer"], generate.GREETING_REPLY["en"])
+
+    def test_answer_farewell_in_english_replies_in_english(self):
+        result = generate.answer("thank you", retriever=None, use_cache=False)
+        self.assertEqual(result["answer"], generate.FAREWELL_REPLY["en"])
+
     def test_answer_greeting_bypasses_retriever_entirely(self):
         # retriever=None would crash if the chitchat path ever touched it -- it must not.
         result = generate.answer("bonjour", retriever=None, use_cache=False)
@@ -135,13 +156,23 @@ class TestMultiTurnAnchorFallback(unittest.TestCase):
             ("agricole", "A2", False),
             ("tour qui a echoue", "A3", True),  # must be skipped: it abstained
         ]
-        result = generate.answer("et le delai ?", retriever=mock_retriever, use_cache=False, history=history)
+        # <=3 words: answer() only anchors short follow-ups on the history (a longer question is
+        # trusted to stand alone -- see the word-count guard in answer()).
+        result = generate.answer("le delai ?", retriever=mock_retriever, use_cache=False, history=history)
         self.assertEqual(mock_retriever.search.call_count, 2)
         first_query = mock_retriever.search.call_args_list[0].args[0]
         second_query = mock_retriever.search.call_args_list[1].args[0]
-        self.assertEqual(first_query, "et le delai ?")
-        self.assertEqual(second_query, "Q1 complete agricole et le delai ?")
+        self.assertEqual(first_query, "le delai ?")
+        self.assertEqual(second_query, "Q1 complete agricole le delai ?")
         self.assertTrue(result["abstained"])
+
+    def test_long_unrelated_question_is_not_glued_to_history(self):
+        mock_retriever = MagicMock()
+        mock_retriever.search.return_value = []
+        history = [("Q1 complete", "A1", False)]
+        generate.answer("Quelle est la recette du couscous tunisien ?", retriever=mock_retriever,
+                        use_cache=False, history=history)
+        self.assertEqual(mock_retriever.search.call_count, 1)
 
     def test_no_fallback_when_history_is_entirely_abstained(self):
         mock_retriever = MagicMock()
@@ -222,6 +253,75 @@ class TestAnswerUsesTwoTierHistory(unittest.TestCase):
         history = [("Q1", "A1", False)]
         messages = self._run_with_history(history)
         self.assertEqual(len([m for m in messages if m["role"] == "system"]), 1)  # SYSTEM_PROMPT only
+
+
+def make_cnss_hit() -> Hit:
+    return Hit(score=0.7, chunk_id="c1", doc_id="d1", lang="fr", domain="employment",
+               subtopic="affiliation-cnss", title="t", org="CNSS", section="s", url="u", text="texte",
+               n_chunks=1, bi_score=0.7)
+
+
+class TestSectorGuard(unittest.TestCase):
+    def _answer(self, question):
+        mock_retriever = MagicMock()
+        mock_retriever.search.return_value = [make_cnss_hit()]
+        return generate.answer(question, retriever=mock_retriever, use_cache=False)
+
+    def test_asks_sector_for_cnss_question_without_sector(self):
+        result = self._answer("Comment m'affilier a la CNSS ?")
+        self.assertIn("secteur", result["answer"])
+
+    def test_asks_sector_for_arabic_cnss_question(self):
+        result = self._answer("كيف أنخرط في الضمان الاجتماعي؟")
+        self.assertIn("القطاع", result["answer"])
+
+    def test_does_not_ask_sector_when_question_is_not_about_cnss(self):
+        # out-of-scope question whose nearest document happens to be a CNSS page -> must go to the
+        # LLM (which declines), not get a CNSS sector question
+        with patch.dict(os.environ, {"GROQ_API_KEY": "test-key"}), \
+             patch("groq.Groq") as mock_groq_cls:
+            mock_client = MagicMock()
+            mock_client.chat.completions.create.return_value.choices[0].message.content = "hors sujet"
+            mock_groq_cls.return_value = mock_client
+            result = self._answer("ما هي إجراءات تجديد جواز السفر التونسي؟")
+        self.assertNotIn("القطاع", result["answer"])
+        mock_client.chat.completions.create.assert_called_once()
+
+    def test_no_sector_question_when_sector_already_given(self):
+        with patch.dict(os.environ, {"GROQ_API_KEY": "test-key"}), \
+             patch("groq.Groq") as mock_groq_cls:
+            mock_client = MagicMock()
+            mock_client.chat.completions.create.return_value.choices[0].message.content = "reponse"
+            mock_groq_cls.return_value = mock_client
+            result = self._answer("Comment m'affilier a la CNSS, secteur agricole ?")
+        self.assertNotIn("De quel secteur", result["answer"])
+
+
+class TestDenseFloorWiring(unittest.TestCase):
+    def test_no_rerank_passes_the_dense_floor(self):
+        mock_retriever = MagicMock()
+        mock_retriever.search.return_value = []
+        generate.answer("une question complete", retriever=mock_retriever, rerank=False, use_cache=False)
+        self.assertEqual(mock_retriever.search.call_args.kwargs["min_dense_score"],
+                         generate.DEFAULT_MIN_DENSE_SCORE)
+
+    def test_rerank_keeps_its_own_threshold_only(self):
+        mock_retriever = MagicMock()
+        mock_retriever.search.return_value = []
+        generate.answer("une question complete", retriever=mock_retriever, rerank=True, use_cache=False)
+        self.assertIsNone(mock_retriever.search.call_args.kwargs["min_dense_score"])
+
+
+class TestMissingApiKey(unittest.TestCase):
+    def test_raises_a_normal_exception_not_systemexit(self):
+        # SystemExit inside the web server killed the worker process and left every later request
+        # hanging -- this must be an ordinary exception the server can turn into an HTTP error.
+        mock_retriever = MagicMock()
+        mock_retriever.search.return_value = [make_hit()]
+        with patch.dict(os.environ):
+            os.environ.pop("GROQ_API_KEY", None)
+            with self.assertRaises(generate.MissingApiKeyError):
+                generate.answer("une question", retriever=mock_retriever, use_cache=False)
 
 
 class TestGroqRetryAndDegradation(unittest.TestCase):

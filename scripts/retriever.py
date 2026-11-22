@@ -38,6 +38,7 @@ mtime signature), so a kb/ rebuild can never serve a stale answer.
 import argparse
 import hashlib
 import json
+import os
 import re
 import sys
 from dataclasses import asdict, dataclass
@@ -51,6 +52,21 @@ ROOT = Path(__file__).resolve().parent.parent
 RAG_DIR = ROOT / "data" / "rag"
 EMBED_MODEL = "BAAI/bge-m3"
 RERANK_MODEL = "BAAI/bge-reranker-v2-m3"
+
+
+def _model_cached(repo_id: str) -> bool:
+    hub = Path(os.environ.get("HF_HOME", Path.home() / ".cache" / "huggingface")) / "hub"
+    snapshots = hub / f"models--{repo_id.replace('/', '--')}" / "snapshots"
+    return snapshots.is_dir() and any(snapshots.iterdir())
+
+
+# Once the embedding model is in the local cache, never touch the network to load it. Without
+# this, sentence-transformers still calls huggingface.co to check for updates on every load --
+# measured: where that call is slow or blocked, Retriever() hung for 10+ minutes; with offline
+# mode the same load takes ~12s. Must run before huggingface_hub is first imported (it reads the
+# variable at import time); an explicit HF_HUB_OFFLINE set by the user always wins.
+if _model_cached(EMBED_MODEL) and _model_cached(RERANK_MODEL):
+    os.environ.setdefault("HF_HUB_OFFLINE", "1")
 
 # Calibrated via scripts/fixes/calibrate_threshold.py on the 33 real questions (data/rag/
 # questions.jsonl) vs. 10 out-of-scope/adjacent-but-uncovered ones (data/rag/negative_questions
@@ -71,6 +87,14 @@ RERANK_MODEL = "BAAI/bge-reranker-v2-m3"
 # conservative (only fires when the bi-encoder itself is quite confident).
 DEFAULT_MIN_RERANK_SCORE = 0.3
 BI_SCORE_OVERRIDE = 0.6
+
+# Abstention floor for rerank=False, on the bi-encoder cosine scale (measured 2026-11-22 on the 41
+# real questions vs the 10 negatives, no language filter): every in-scope question's top-1 scored
+# >= 0.524, while clearly off-topic ones (wifi, couscous, restaurants) topped out at 0.450 -- 0.48
+# sits in that gap. It does NOT catch out-of-scope questions that are close neighbours of the KB
+# (passport, visa, driving licence: up to 0.652, above some in-scope questions) -- no dense
+# threshold can; those rely on the generation prompt's "say so if the excerpts don't answer" rule.
+DEFAULT_MIN_DENSE_SCORE = 0.48
 
 
 @dataclass
@@ -136,9 +160,17 @@ class Retriever:
         if use_cache and cache_path.exists():
             mat = np.load(cache_path)
             if mat.shape[0] != len(self.chunks):
+                # Used to be silent -- a stale cache (530 rows vs 533 chunks, from an outdated
+                # dvc.lock) made the web server re-embed everything on CPU for many minutes at the
+                # first question, with nothing in the terminal to say why it wasn't answering.
+                print(f"WARNING: {cache_path.name} has {mat.shape[0]} rows but {chunks_path.name} has "
+                      f"{len(self.chunks)} chunks -- stale cache, re-embedding everything (slow on CPU). "
+                      "Fix for good: `dvc pull` / `dvc repro prepare_kb`, then `dvc commit` + `dvc push`.",
+                      flush=True)
                 mat = None
         if mat is None:
-            mat = np.asarray(self._embed([c["text"] for c in self.chunks]), dtype=np.float32)
+            mat = np.asarray(self.model.encode([c["text"] for c in self.chunks], normalize_embeddings=True,
+                                               show_progress_bar=True), dtype=np.float32)
             if use_cache:
                 np.save(cache_path, mat)
         self.matrix = mat
@@ -161,8 +193,13 @@ class Retriever:
         self.query_cache_path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
 
     @staticmethod
-    def _apply_min_score(hits: list["Hit"], rerank: bool, min_score: float | None) -> list["Hit"]:
-        if not rerank or min_score is None or not hits or hits[0].score >= min_score:
+    def _apply_min_score(hits: list["Hit"], rerank: bool, min_score: float | None,
+                         min_dense_score: float | None = None) -> list["Hit"]:
+        if not rerank:
+            if min_dense_score is not None and hits and hits[0].score < min_dense_score:
+                return []
+            return hits
+        if min_score is None or not hits or hits[0].score >= min_score:
             return hits
         if hits[0].bi_score is not None and hits[0].bi_score >= BI_SCORE_OVERRIDE:
             return hits  # reranker scored it low, but the bi-encoder is confident -- see BI_SCORE_OVERRIDE
@@ -171,7 +208,8 @@ class Retriever:
     def search(self, query: str, k: int = 5, lang: str | None = None,
                domain: str | None = None, subtopic: str | None = None,
                rerank: bool = True, candidate_k: int = 20,
-               min_score: float | None = DEFAULT_MIN_RERANK_SCORE) -> list[Hit]:
+               min_score: float | None = DEFAULT_MIN_RERANK_SCORE,
+               min_dense_score: float | None = None) -> list[Hit]:
         """rerank=True: fetch `candidate_k` candidates with the fast bi-encoder, then rescore
         them with a cross-encoder (query, chunk_text pairs) and return the top `k` by that
         score -- slower per query but typically more precise, especially at k=1.
@@ -189,7 +227,7 @@ class Retriever:
         cache_key = self._cache_key(query, k, lang, domain, subtopic, rerank, candidate_k)
         if self.use_query_cache and cache_key in self._query_cache:
             hits = [Hit(**h) for h in self._query_cache[cache_key]]
-            return self._apply_min_score(hits, rerank, min_score)
+            return self._apply_min_score(hits, rerank, min_score, min_dense_score)
 
         qv = np.asarray(self._embed([query])[0], dtype=np.float32)
         sims = self.matrix @ qv
@@ -226,7 +264,7 @@ class Retriever:
         if self.use_query_cache:
             self._query_cache[cache_key] = [asdict(h) for h in hits]
             self._save_query_cache()
-        return self._apply_min_score(hits, rerank, min_score)
+        return self._apply_min_score(hits, rerank, min_score, min_dense_score)
 
     def expand(self, hit: Hit) -> str | None:
         """Full procedure text for a hit that came from a multi-chunk document (small-to-big

@@ -43,7 +43,11 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from retriever import Retriever, Hit  # noqa: E402
+from retriever import Retriever, Hit, DEFAULT_MIN_DENSE_SCORE  # noqa: E402
+
+
+class MissingApiKeyError(RuntimeError):
+    """GROQ_API_KEY isn't set, so a question that needs the LLM can't be answered."""
 
 # Compared openai/gpt-oss-20b against openai/gpt-oss-120b for both generation and judging
 # (scripts/eval_ragas.py, 2026-11-03): mean faithfulness 0.837 vs 0.834 on 6 questions --
@@ -61,6 +65,22 @@ FAREWELL_RE = re.compile(
     r"^\s*(merci(\s+beaucoup)?|thanks?(\s+you)?|thx|"
     r"au\s?revoir|a\s?bient[oô]t|bonne\s+journ[ée]e|bonne\s+soir[ée]e|bye+|see\s?you|"
     r"شكرا(\s+جزيلا)?|متشكر|مع السلامة|إلى اللقاء|الى اللقاء|يعطيك الصحة)\W*\s*$", re.I)
+
+# detect_lang() below guesses language from stopword overlap, which needs a few words of real
+# content to work -- a bare "hello" or "thank you" has none, and silently defaulted to French
+# every time (found by hand: "thank you" and "hello" both got a French reply). Chitchat phrases
+# are a small closed list per language (the alternatives in GREETING_RE/FAREWELL_RE above), so
+# the matched word itself tells the language directly -- no heuristic needed, no guessing.
+_EN_CHITCHAT_RE = re.compile(
+    r"^\s*(hello+|hi|hey|thanks?(\s+you)?|thx|bye+|see\s?you)\W*\s*$", re.I)
+
+
+def _chitchat_lang(question: str) -> str:
+    if any("؀" <= c <= "ۿ" for c in question):
+        return "ar"
+    if _EN_CHITCHAT_RE.match(question):
+        return "en"
+    return "fr"
 GREETING_REPLY = {
     "fr": "Bonjour ! Je suis Khotwa, un assistant pour les démarches administratives des "
           "étudiants et travailleurs en Tunisie (bourses, inscriptions, CNSS, création "
@@ -172,6 +192,20 @@ def _split_history(history: list[tuple[str, str, bool]]):
             seen.add(q)
             older_topics.append(q)
     return short_term, older_topics
+
+
+# The sector question must only be asked when the question is actually about the CNSS -- not just
+# because the nearest document happens to be a CNSS page. Found by hand with dense-only retrieval:
+# "ما هي إجراءات تجديد جواز السفر التونسي؟" (passport renewal, out of scope) got a CNSS affiliation
+# page as its top hit and was answered with "which sector do you work in?".
+CNSS_TOPIC_KEYWORDS = ["cnss", "sécurité sociale", "securite sociale", "social security", "affili",
+                       "immatricul", "cotisation", "الضمان الاجتماعي", "ضمان اجتماعي", "أنخرط",
+                       "انخراط", "الصندوق الوطني"]
+
+
+def _mentions_cnss(text: str) -> bool:
+    low = text.lower()
+    return any(kw in low for kw in CNSS_TOPIC_KEYWORDS)
 
 
 def _mentions_sector(text: str, subtopic: str) -> bool:
@@ -389,10 +423,15 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 5, lang: 
     accumulated history as context)."""
     q_lang = detect_lang(question, lang)
 
+    # Chitchat uses its own language pick (lang if given, else _chitchat_lang), not q_lang --
+    # detect_lang()'s stopword heuristic has nothing to go on for a bare "hello"/"thank you" and
+    # was defaulting every short English chitchat phrase to French (see _chitchat_lang's comment).
     if GREETING_RE.match(question):
-        return {"answer": GREETING_REPLY.get(q_lang, GREETING_REPLY["fr"]), "hits": [], "abstained": False}
+        chit_lang = lang or _chitchat_lang(question)
+        return {"answer": GREETING_REPLY.get(chit_lang, GREETING_REPLY["fr"]), "hits": [], "abstained": False}
     if FAREWELL_RE.match(question):
-        return {"answer": FAREWELL_REPLY.get(q_lang, FAREWELL_REPLY["fr"]), "hits": [], "abstained": False}
+        chit_lang = lang or _chitchat_lang(question)
+        return {"answer": FAREWELL_REPLY.get(chit_lang, FAREWELL_REPLY["fr"]), "hits": [], "abstained": False}
 
     use_cache = use_cache and not history
     cache_key = _gen_cache_key(question, k, lang, domain, subtopic, rerank, model) if use_cache else None
@@ -409,7 +448,11 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 5, lang: 
     # silently exclude every French/Arabic doc an English query is actually meant to match
     # cross-lingually via BGE-M3. That was a real bug here (found while adding EN test
     # questions: every one abstained, not on merit, just because of this filter).
-    hits = retriever.search(retrieval_query, k=k, domain=domain, subtopic=subtopic, rerank=rerank)
+    # Without the reranker, abstention can't use the calibrated rerank threshold -- fall back to the
+    # (weaker) dense-score floor instead; see retriever.DEFAULT_MIN_DENSE_SCORE for its limits.
+    dense_floor = None if rerank else DEFAULT_MIN_DENSE_SCORE
+    hits = retriever.search(retrieval_query, k=k, domain=domain, subtopic=subtopic, rerank=rerank,
+                            min_dense_score=dense_floor)
     # The anchor fallback below is for a short, ambiguous follow-up ("agricole") that only
     # makes sense combined with what was asked before -- NOT for a genuinely new, complete,
     # unrelated question that simply has no match in the KB. Without the word-count guard, a
@@ -425,8 +468,10 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 5, lang: 
         anchor = " ".join(h[0] for h in history if not h[2])  # all turns, not just short-term
         if anchor:
             retrieval_query = f"{anchor} {question}"
-            hits = retriever.search(retrieval_query, k=k, domain=domain, subtopic=subtopic, rerank=rerank)
-    if hits and hits[0].subtopic in SECTOR_SUBTOPICS and not _mentions_sector(retrieval_query, hits[0].subtopic):
+            hits = retriever.search(retrieval_query, k=k, domain=domain, subtopic=subtopic, rerank=rerank,
+                                    min_dense_score=dense_floor)
+    if (hits and hits[0].subtopic in SECTOR_SUBTOPICS and _mentions_cnss(retrieval_query)
+            and not _mentions_sector(retrieval_query, hits[0].subtopic)):
         options = ", ".join(SECTOR_LABELS[s][q_lang] for s in SECTOR_SUBTOPICS[hits[0].subtopic])
         msg = SECTOR_CLARIFY_MESSAGE.get(q_lang, SECTOR_CLARIFY_MESSAGE["fr"]).format(options=options)
         result = {"answer": msg, "hits": hits, "abstained": False}
@@ -434,7 +479,10 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 5, lang: 
         result = {"answer": NO_MATCH_MESSAGE.get(q_lang, NO_MATCH_MESSAGE["fr"]), "hits": [], "abstained": True}
     else:
         if not os.environ.get("GROQ_API_KEY"):
-            sys.exit("GROQ_API_KEY not set. Export it, or put GROQ_API_KEY=... in a .env file at the repo root.")
+            # A real exception, not sys.exit(): inside the web server, SystemExit escapes FastAPI's
+            # error handling and kills the worker process, after which every request hangs.
+            raise MissingApiKeyError(
+                "GROQ_API_KEY not set. Export it, or put GROQ_API_KEY=... in a .env file at the repo root.")
         from groq import Groq, RateLimitError
         client = Groq()  # reads GROQ_API_KEY from the environment
         context = build_context(hits)
@@ -533,12 +581,14 @@ def main():
     except ImportError:
         pass
 
-    if a.chat:
-        chat_loop(Retriever(), a)
-        return
-
-    result = answer(a.question, k=a.k, lang=a.lang, domain=a.domain,
-                     subtopic=a.subtopic, rerank=a.rerank, model=a.model, use_cache=a.use_cache)
+    try:
+        if a.chat:
+            chat_loop(Retriever(), a)
+            return
+        result = answer(a.question, k=a.k, lang=a.lang, domain=a.domain,
+                         subtopic=a.subtopic, rerank=a.rerank, model=a.model, use_cache=a.use_cache)
+    except MissingApiKeyError as e:
+        sys.exit(str(e))
 
     print(result["answer"])
 

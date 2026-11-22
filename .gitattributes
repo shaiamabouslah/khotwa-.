@@ -1,0 +1,5 @@
+# kb/ is a DVC dependency (dvc.yaml: prepare_kb) and the source text that gets chunked and
+# embedded -- it must be byte-identical on every checkout. With core.autocrlf=true, Windows
+# checkouts used to get CRLF copies: DVC then saw kb/ as "modified" and a rebuild could embed
+# "\r" characters into the chunks. Force LF regardless of OS or git settings.
+kb/** text eol=lf

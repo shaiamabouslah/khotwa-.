@@ -14,7 +14,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from retriever import BI_SCORE_OVERRIDE, DEFAULT_MIN_RERANK_SCORE, Hit, Retriever  # noqa: E402
+from retriever import (BI_SCORE_OVERRIDE, DEFAULT_MIN_DENSE_SCORE, DEFAULT_MIN_RERANK_SCORE,  # noqa: E402
+                       Hit, Retriever)
 
 
 def make_hit(score: float, bi_score: float | None = None) -> Hit:
@@ -50,6 +51,20 @@ class TestApplyMinScore(unittest.TestCase):
     def test_rerank_false_bypasses_threshold_entirely(self):
         hits = [make_hit(0.0)]
         self.assertEqual(Retriever._apply_min_score(hits, False, DEFAULT_MIN_RERANK_SCORE), hits)
+
+    def test_dense_floor_abstains_below_it(self):
+        hits = [make_hit(DEFAULT_MIN_DENSE_SCORE - 0.01)]
+        self.assertEqual(Retriever._apply_min_score(hits, False, None, DEFAULT_MIN_DENSE_SCORE), [])
+
+    def test_dense_floor_passes_above_it(self):
+        hits = [make_hit(DEFAULT_MIN_DENSE_SCORE + 0.01)]
+        self.assertEqual(Retriever._apply_min_score(hits, False, None, DEFAULT_MIN_DENSE_SCORE), hits)
+
+    def test_dense_floor_ignored_when_reranking(self):
+        # the rerank path keeps its own calibrated threshold; the dense floor must not interfere
+        hits = [make_hit(DEFAULT_MIN_RERANK_SCORE + 0.01, bi_score=0.1)]
+        self.assertEqual(
+            Retriever._apply_min_score(hits, True, DEFAULT_MIN_RERANK_SCORE, DEFAULT_MIN_DENSE_SCORE), hits)
 
     def test_min_score_none_bypasses_threshold(self):
         hits = [make_hit(0.0)]

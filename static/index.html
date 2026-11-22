@@ -390,7 +390,6 @@
   }
   #question-input { flex: 1; border: none; background: transparent; color: var(--text); font-size: 14px; resize: none; max-height: 140px; padding: 6px 0; font-family: inherit; }
   #question-input:focus { outline: none; }
-  #mic-lang { border: none; background: transparent; color: var(--muted); font-size: 12px; cursor: pointer; }
   .round-btn { width: 34px; height: 34px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; }
   #mic-btn { background: transparent; color: var(--muted); }
   #mic-btn:hover { background: var(--border); }
@@ -403,6 +402,47 @@
   #send-btn { background: var(--accent); color: var(--accent-text); }
   #send-btn:hover { background: var(--accent-hover); }
   #send-btn:disabled { opacity: 0.5; cursor: default; }
+
+  /* ---------- Modal (replaces native confirm()/prompt() for rename/delete) ---------- */
+  #modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(10, 12, 16, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  #modal-box {
+    width: 100%;
+    max-width: 360px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.4);
+    padding: 22px;
+  }
+  #modal-message { margin: 0 0 14px; font-size: 14.5px; color: var(--text); line-height: 1.5; }
+  #modal-input-wrap { margin-bottom: 16px; }
+  #modal-input {
+    width: 100%;
+    padding: 9px 11px;
+    border-radius: 9px;
+    border: 1px solid var(--border);
+    background: var(--panel-2);
+    color: var(--text);
+    font-size: 14px;
+  }
+  #modal-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18); }
+  #modal-actions { display: flex; justify-content: flex-end; gap: 8px; }
+  .modal-btn { border: none; border-radius: 9px; padding: 8px 16px; font-size: 13.5px; font-weight: 600; cursor: pointer; }
+  .modal-btn-secondary { background: var(--panel-2); color: var(--text); border: 1px solid var(--border); }
+  .modal-btn-secondary:hover { background: var(--border); }
+  .modal-btn-primary { background: var(--accent); color: var(--accent-text); }
+  .modal-btn-primary:hover { background: var(--accent-hover); }
+  .modal-btn-danger { background: var(--danger); color: #fff; }
+  .modal-btn-danger:hover { opacity: 0.88; }
 
   @media (max-width: 760px) {
     #hamburger, #mobile-menu-btn { display: flex; }
@@ -592,11 +632,6 @@
     <div id="composer" class="hidden">
       <div id="composer-inner">
         <textarea id="question-input" rows="1" placeholder="Pose ta question..."></textarea>
-        <select id="mic-lang" title="Langue de reconnaissance vocale">
-          <option value="fr-FR" selected>FR</option>
-          <option value="ar-SA">AR</option>
-          <option value="en-US">EN</option>
-        </select>
         <button id="mic-btn" class="round-btn" type="button" title="Dicter la question">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
@@ -609,6 +644,19 @@
       </div>
     </div>
   </main>
+</div>
+
+<div id="modal-overlay" class="hidden">
+  <div id="modal-box">
+    <p id="modal-message"></p>
+    <div id="modal-input-wrap" class="hidden">
+      <input id="modal-input" type="text">
+    </div>
+    <div id="modal-actions">
+      <button id="modal-cancel" class="modal-btn modal-btn-secondary" type="button">Annuler</button>
+      <button id="modal-confirm" class="modal-btn modal-btn-primary" type="button">OK</button>
+    </div>
+  </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -624,6 +672,13 @@
   var authSubmit = document.getElementById("auth-submit");
   var authTabs = document.querySelectorAll(".auth-tab");
   var authMode = "login";
+
+  var modalOverlay = document.getElementById("modal-overlay");
+  var modalMessage = document.getElementById("modal-message");
+  var modalInputWrap = document.getElementById("modal-input-wrap");
+  var modalInput = document.getElementById("modal-input");
+  var modalCancel = document.getElementById("modal-cancel");
+  var modalConfirm = document.getElementById("modal-confirm");
 
   var sidebar = document.getElementById("sidebar");
   var sidebarBackdrop = document.getElementById("sidebar-backdrop");
@@ -642,7 +697,6 @@
   var inputEl = document.getElementById("question-input");
   var sendBtn = document.getElementById("send-btn");
   var micBtn = document.getElementById("mic-btn");
-  var micLang = document.getElementById("mic-lang");
 
   var conversations = [];
   var activeConvId = null;
@@ -688,6 +742,48 @@
         }
         throw err;
       });
+  }
+
+  // ---------- Modal (replaces native confirm()/prompt() for rename/delete) ----------
+  function openModal(opts) {
+    modalMessage.textContent = opts.message;
+    if (opts.withInput) {
+      modalInputWrap.classList.remove("hidden");
+      modalInput.value = opts.inputValue || "";
+    } else {
+      modalInputWrap.classList.add("hidden");
+    }
+    modalConfirm.textContent = opts.confirmLabel || "OK";
+    modalConfirm.className = "modal-btn " + (opts.danger ? "modal-btn-danger" : "modal-btn-primary");
+    modalOverlay.classList.remove("hidden");
+    if (opts.withInput) {
+      modalInput.focus();
+      modalInput.select();
+    }
+
+    function cleanup() {
+      modalOverlay.classList.add("hidden");
+      modalConfirm.removeEventListener("click", onConfirmClick);
+      modalCancel.removeEventListener("click", onCancelClick);
+      modalOverlay.removeEventListener("mousedown", onBackdropClick);
+      document.removeEventListener("keydown", onKeyDown);
+    }
+    function onConfirmClick() {
+      var value = opts.withInput ? modalInput.value.trim() : true;
+      if (opts.withInput && !value) return; // blank rename -- keep the modal open, don't submit
+      cleanup();
+      opts.onConfirm(value);
+    }
+    function onCancelClick() { cleanup(); }
+    function onBackdropClick(ev) { if (ev.target === modalOverlay) cleanup(); }
+    function onKeyDown(ev) {
+      if (ev.key === "Escape") cleanup();
+      else if (ev.key === "Enter" && opts.withInput) onConfirmClick();
+    }
+    modalConfirm.addEventListener("click", onConfirmClick);
+    modalCancel.addEventListener("click", onCancelClick);
+    modalOverlay.addEventListener("mousedown", onBackdropClick);
+    document.addEventListener("keydown", onKeyDown);
   }
 
   // ---------- Landing page: nav/CTA smooth-scroll + scroll animations ----------
@@ -830,31 +926,41 @@
 
   function renameConversation(id) {
     var conv = conversations.find(function (c) { return c.id === id; });
-    var next = prompt("Renommer la conversation :", conv ? conv.title : "");
-    if (next === null) return;
-    next = next.trim();
-    if (!next) return;
-    api("/conversations/" + id, { method: "PATCH", body: JSON.stringify({ title: next }) })
-      .then(function (data) {
-        if (conv) conv.title = data.title;
-        if (id === activeConvId) chatTitle.textContent = data.title;
-        renderConversationList();
-      });
+    openModal({
+      message: "Renommer la conversation",
+      withInput: true,
+      inputValue: conv ? conv.title : "",
+      confirmLabel: "Renommer",
+      onConfirm: function (next) {
+        api("/conversations/" + id, { method: "PATCH", body: JSON.stringify({ title: next }) })
+          .then(function (data) {
+            if (conv) conv.title = data.title;
+            if (id === activeConvId) chatTitle.textContent = data.title;
+            renderConversationList();
+          });
+      }
+    });
   }
 
   function deleteConversation(id) {
-    if (!confirm("Supprimer cette conversation ?")) return;
-    api("/conversations/" + id, { method: "DELETE" }).then(function () {
-      conversations = conversations.filter(function (c) { return c.id !== id; });
-      if (activeConvId === id) {
-        activeConvId = null;
-        if (conversations.length) {
-          selectConversation(conversations[0].id);
-        } else {
-          createConversation();
-        }
+    openModal({
+      message: "Supprimer cette conversation ? Cette action est irréversible.",
+      confirmLabel: "Supprimer",
+      danger: true,
+      onConfirm: function () {
+        api("/conversations/" + id, { method: "DELETE" }).then(function () {
+          conversations = conversations.filter(function (c) { return c.id !== id; });
+          if (activeConvId === id) {
+            activeConvId = null;
+            if (conversations.length) {
+              selectConversation(conversations[0].id);
+            } else {
+              createConversation();
+            }
+          }
+          renderConversationList();
+        });
       }
-      renderConversationList();
     });
   }
 
@@ -931,7 +1037,7 @@
     // 150s: generous enough to cover the retriever's embedding model loading on the very first
     // real question of a server run (can legitimately take over a minute on a slow machine),
     // without leaving the composer disabled forever if something is genuinely stuck.
-    api("/chat", { method: "POST", body: JSON.stringify({ conversation_id: activeConvId, question: question }) }, 150000)
+    api("/chat", { method: "POST", body: JSON.stringify({ conversation_id: activeConvId, question: question }) }, 300000)
       .then(function (data) {
         pending.remove();
         addMessage("bot", data.answer, { abstained: data.abstained });
@@ -944,9 +1050,14 @@
       })
       .catch(function (err) {
         pending.remove();
-        var message = err && err.isTimeout
-          ? "Le serveur met trop de temps a repondre (le modele est peut-etre encore en train de charger la premiere fois). Reessaie dans une minute."
-          : "Erreur de connexion au serveur. Réessaie dans un instant.";
+        var message;
+        if (err && err.isTimeout) {
+          message = "Le serveur met trop de temps a repondre (le modele est peut-etre encore en train de charger la premiere fois). Reessaie dans une minute.";
+        } else if (err && err.status) {
+          message = err.message;  // the server's own reason (e.g. missing API key), not a vague guess
+        } else {
+          message = "Impossible de joindre le serveur. Verifie qu'il tourne toujours, puis reessaie.";
+        }
         addMessage("bot", message, { abstained: true });
       })
       .finally(function () {
@@ -979,10 +1090,19 @@
   sidebarBackdrop.addEventListener("click", closeMobileSidebar);
 
   // ---------- Speech-to-text ----------
+  // No manual language picker -- the assistant already auto-detects the answer's language from
+  // the question text itself, so the mic shouldn't need one either. The browser's own UI
+  // language is a reasonable guess for which language is being dictated; falls back to French.
+  function guessSpeechLang() {
+    var nav = (navigator.language || "fr-FR").toLowerCase();
+    if (nav.indexOf("ar") === 0) return "ar-SA";
+    if (nav.indexOf("en") === 0) return "en-US";
+    return "fr-FR";
+  }
+
   var SpeechRecognitionImpl = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SpeechRecognitionImpl) {
     micBtn.classList.add("hidden");
-    micLang.classList.add("hidden");
   } else {
     var recognition = new SpeechRecognitionImpl();
     recognition.continuous = false;
@@ -1001,7 +1121,7 @@
         return;
       }
       try {
-        recognition.lang = micLang.value;
+        recognition.lang = guessSpeechLang();
         recognition.start();
         micBtn.classList.add("listening");
       } catch (e) { /* already running, or mic permission denied -- ignore */ }

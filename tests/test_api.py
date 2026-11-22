@@ -267,6 +267,35 @@ class TestChatEndpoint(ApiTestBase):
             self.client.post("/chat", json={"conversation_id": conv_id, "question": "une vraie question"})
         mock_get_retriever.assert_called_once()
 
+    def test_health_reports_key_and_retriever_state(self):
+        body = self.client.get("/health").json()
+        self.assertEqual(body["status"], "ok")
+        self.assertIn("groq_key", body)
+        self.assertIn("retriever_ready", body)
+
+    def test_missing_api_key_returns_503_and_server_stays_up(self):
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        with patch.object(api.generate, "answer", side_effect=generate.MissingApiKeyError("no key")):
+            resp = self.client.post("/chat", json={"conversation_id": conv_id, "question": "une question"})
+        self.assertEqual(resp.status_code, 503)
+        self.assertIn("GROQ_API_KEY", resp.json()["detail"])
+        self.assertEqual(self.client.get("/conversations").status_code, 200)
+
+    def test_chat_uses_the_web_rerank_setting(self):
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        with patch.object(api.generate, "answer", return_value=_answer_stub("A")) as mock_answer:
+            self.client.post("/chat", json={"conversation_id": conv_id, "question": "une vraie question"})
+        self.assertEqual(mock_answer.call_args.kwargs["rerank"], api.WEB_RERANK)
+
+    def test_unexpected_error_returns_500_not_a_hang(self):
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        with patch.object(api.generate, "answer", side_effect=ValueError("boom")):
+            resp = self.client.post("/chat", json={"conversation_id": conv_id, "question": "une question"})
+        self.assertEqual(resp.status_code, 500)
+
     def test_abstained_flag_passes_through(self):
         self._register(self.client, "etudiant1")
         conv_id = self._new_conversation(self.client)

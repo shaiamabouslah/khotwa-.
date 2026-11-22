@@ -6,8 +6,8 @@ stages:
     deps:
     - path: kb
       hash: md5
-      md5: 939f17ec9424733b355fa280d2582f11.dir
-      size: 1304669
+      md5: f7a9ebec014fe9eb2e4cbca781f13d7e.dir
+      size: 1280698
       nfiles: 340
     - path: scripts/rag_prepare.py
       hash: md5
@@ -16,8 +16,8 @@ stages:
     outs:
     - path: data/rag/chunks.bge-m3.npy
       hash: md5
-      md5: 5199aa4bd65a05df4e35653ec008fff8
-      size: 2171008
+      md5: f7ac98ae7798cfcaeee49b0f657be3e2
+      size: 2183296
     - path: data/rag/chunks.jsonl
       hash: md5
       md5: e9b4f8e1a0c743bafb9ea41a535d013d

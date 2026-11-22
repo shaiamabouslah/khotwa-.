@@ -16,11 +16,9 @@ needs. SESSION_SECRET should be set in .env for login sessions to survive a serv
 unset, a random one is generated at startup (fine for a quick demo, just means every restart logs
 everyone out).
 
-The retriever (embedding model + reranker) only loads on the first /chat call that actually needs
-it (see get_retriever() below) -- it can take anywhere from several seconds to a few minutes
-depending on the machine. It is deliberately NOT warmed up eagerly at server startup: doing that
-once starved unrelated requests (plain conversation list/create/delete/rename, which never touch
-the retriever) while the heavy CPU-bound load was running in the background.
+The retriever starts loading in a background thread at server startup (~15s: imports + BGE-M3 +
+the embeddings cache), so the first question doesn't pay for it. The web app answers without the
+cross-encoder reranker -- see WEB_RERANK below for the measurements behind that.
 
 Conversations: each is stored via generate.load_history/save_history under the composite key
 "{username}__{conversation_id}" -- reuses that storage mechanism completely as-is (it already
@@ -32,10 +30,17 @@ import os
 import secrets
 import sys
 import threading
+from contextlib import asynccontextmanager
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv(ROOT / ".env")
+except ImportError:
+    pass
 
 from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.staticfiles import StaticFiles
@@ -46,18 +51,23 @@ import auth  # noqa: E402
 import generate  # noqa: E402
 from retriever import Retriever  # noqa: E402
 
-try:
-    from dotenv import load_dotenv
-    load_dotenv(ROOT / ".env")
-except ImportError:
-    pass
+if not os.environ.get("GROQ_API_KEY"):
+    print("\n" + "!" * 78 + "\n"
+          f"  GROQ_API_KEY is not set ({ROOT / '.env'} missing or has no GROQ_API_KEY line).\n"
+          "  Greetings will still work, but every real question will fail until it is set.\n"
+          + "!" * 78 + "\n", flush=True)
 
-# Lazy singleton, built at most once, only when the first real question actually needs it (NOT
-# warmed up eagerly at server startup -- tried that, but loading the embedding model + reranker
-# is heavy enough on CPU that doing it in a background thread right as the server starts starved
-# unrelated requests, including plain conversation list/create/delete/rename calls that never
-# touch the retriever at all. A lock still guards against two concurrent /chat requests (e.g. two
-# different new conversations) each starting their own expensive build before the first finishes.
+# Measured 2026-11-22 on this project's laptop CPU (6 cores): with the cross-encoder reranker
+# (bge-reranker-v2-m3, 568M params, 20 candidates) a single question took ~57s to retrieve --
+# intrinsic compute, truncating inputs to 512 tokens didn't fix it. Dense-only retrieval takes
+# ~0.16s with hit@5 = 0.95 on the 41 real questions (the reranker only reorders inside the top 5,
+# which the LLM reads in full anyway). What the reranker uniquely gave was a calibrated
+# out-of-scope threshold; without it, abstention uses retriever.DEFAULT_MIN_DENSE_SCORE plus the
+# generation prompt's own "say so if the excerpts don't answer" rule.
+WEB_RERANK = False
+
+# Singleton, built once: a lock guards against two concurrent first /chat requests each starting
+# their own build. Warmed up in the background at startup (lifespan below).
 _retriever: Retriever | None = None
 _retriever_lock = threading.Lock()
 
@@ -71,7 +81,25 @@ def get_retriever() -> Retriever:
     return _retriever
 
 
-app = FastAPI(title="Khotwa API")
+def _warm_up():
+    try:
+        get_retriever()
+        print("Retriever ready.", flush=True)
+    except Exception:
+        import traceback
+        traceback.print_exc()
+
+
+@asynccontextmanager
+async def lifespan(app):
+    # Background thread, so the page and auth endpoints answer immediately while it loads. (An
+    # earlier attempt at this was reverted on a wrong diagnosis: what actually froze the server
+    # back then was generate.answer() calling sys.exit() when GROQ_API_KEY was missing.)
+    threading.Thread(target=_warm_up, daemon=True).start()
+    yield
+
+
+app = FastAPI(title="Khotwa API", lifespan=lifespan)
 
 _session_secret = os.environ.get("SESSION_SECRET")
 if not _session_secret:
@@ -106,7 +134,9 @@ class ChatResponse(BaseModel):
 
 @app.get("/health")
 def health():
-    return {"status": "ok"}
+    return {"status": "ok",
+            "groq_key": bool(os.environ.get("GROQ_API_KEY")),
+            "retriever_ready": _retriever is not None}
 
 
 @app.post("/auth/register", status_code=201)
@@ -247,10 +277,21 @@ def chat(req: ChatRequest, username: str = Depends(require_user)):
     # need one. Skip building it for exactly the same chitchat patterns answer() itself checks
     # first (generate.GREETING_RE / generate.FAREWELL_RE -- reused, not re-implemented here).
     needs_retriever = not (generate.GREETING_RE.match(question) or generate.FAREWELL_RE.match(question))
-    retriever = get_retriever() if needs_retriever else None
 
     history = generate.load_history(key)
-    result = generate.answer(question, retriever, lang=req.lang, use_cache=False, history=history)
+    try:
+        retriever = get_retriever() if needs_retriever else None
+        result = generate.answer(question, retriever, lang=req.lang, rerank=WEB_RERANK,
+                                 use_cache=False, history=history)
+    except generate.MissingApiKeyError:
+        raise HTTPException(503, "Le serveur n'a pas de cle GROQ_API_KEY configuree (fichier .env) -- "
+                                 "impossible de generer une reponse.")
+    except Exception as e:
+        # Logged in full for the developer; the browser gets a short, readable reason instead of
+        # a request that never resolves.
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(500, f"Erreur interne pendant la generation de la reponse : {type(e).__name__}")
     history.append((question, result["answer"], result["abstained"]))
     generate.save_history(key, history)
 
