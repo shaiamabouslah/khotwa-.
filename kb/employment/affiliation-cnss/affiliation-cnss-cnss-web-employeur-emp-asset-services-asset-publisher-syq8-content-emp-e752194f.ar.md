@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-e752194f
-title: Emp Secteur non agr2 Immatriculation (Employeur)
+title: التسجيل — المؤجر، القطاع غير الفلاحي
+original_title: Emp Secteur non agr2 Immatriculation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-a6baf47a
-title: Emp Secteur pêche2 Affiliation (Employeur)
+title: الانخراط — المؤجر، قطاع الصيد البحري
+original_title: Emp Secteur pêche2 Affiliation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

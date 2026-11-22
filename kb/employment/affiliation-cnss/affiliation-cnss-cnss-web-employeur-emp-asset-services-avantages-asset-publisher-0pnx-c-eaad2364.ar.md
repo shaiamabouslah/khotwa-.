@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-avantages-asset-publisher-0pnx-c-eaad2364
-title: Emp Secteur non agr2 Contenu Avantage 3 (Employeur)
+title: الامتيازات — المؤجر، القطاع غير الفلاحي
+original_title: Emp Secteur non agr2 Contenu Avantage 3 (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

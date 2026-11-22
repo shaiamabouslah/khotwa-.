@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-ef8ad1aa
-title: Non Sal autres tte Affiliation (Non Salarié)
+title: Affiliation — non-salarié, Tunisiens à l'étranger
+original_title: Non Sal autres tte Affiliation (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

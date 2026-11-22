@@ -88,13 +88,23 @@ if _model_cached(EMBED_MODEL) and _model_cached(RERANK_MODEL):
 DEFAULT_MIN_RERANK_SCORE = 0.3
 BI_SCORE_OVERRIDE = 0.6
 
-# Abstention floor for rerank=False, on the bi-encoder cosine scale (measured 2026-11-22 on the 41
-# real questions vs the 10 negatives, no language filter): every in-scope question's top-1 scored
-# >= 0.524, while clearly off-topic ones (wifi, couscous, restaurants) topped out at 0.450 -- 0.48
-# sits in that gap. It does NOT catch out-of-scope questions that are close neighbours of the KB
-# (passport, visa, driving licence: up to 0.652, above some in-scope questions) -- no dense
-# threshold can; those rely on the generation prompt's "say so if the excerpts don't answer" rule.
-DEFAULT_MIN_DENSE_SCORE = 0.48
+# Abstention floor for rerank=False, on the bi-encoder cosine scale (measured 2026-11-22). The 41
+# benchmark questions all score >= 0.524, but in-scope questions phrased in Arabic or Tunisian
+# Derja go lower (internship/PFE in Arabic 0.47, "كيفاش ناخذ منحة جامعية؟" 0.44) while
+# out-of-scope ones reach 0.46 (weather in Arabic) -- the ranges overlap, no threshold separates
+# them. A wrong "I don't know" is worse than letting a question through: the LLM itself correctly
+# declined all 7 out-of-scope neighbours tested (passport, visa, driving licence...). So this only
+# short-circuits the clearly absurd (restaurants 0.41, couscous in Arabic 0.37); everything above
+# relies on the generation prompt's "say so if the sources don't answer" rule.
+DEFAULT_MIN_DENSE_SCORE = 0.42
+
+
+def _embedding_fingerprint(embed_model: str, texts: list[str]) -> str:
+    h = hashlib.sha256(f"{embed_model}|normalize=True".encode("utf-8"))
+    for t in texts:
+        h.update(b"\x00")
+        h.update(t.encode("utf-8"))
+    return h.hexdigest()
 
 
 @dataclass
@@ -156,23 +166,31 @@ class Retriever:
 
         model_slug = embed_model.split("/")[-1]
         cache_path = chunks_path.with_suffix(f".{model_slug}.npy")
+        # The cache used to be validated by row count alone: a stale file (530 rows vs 533 chunks,
+        # from an outdated dvc.lock) made the server silently re-embed for many minutes, and edited
+        # chunks with an unchanged count would have been served with the WRONG embeddings, no
+        # warning at all. The .sig file holds a fingerprint of the model + the exact embedded texts.
+        sig_path = cache_path.with_suffix(".sig")
+        fingerprint = _embedding_fingerprint(embed_model, [c["text"] for c in self.chunks])
         mat = None
         if use_cache and cache_path.exists():
             mat = np.load(cache_path)
-            if mat.shape[0] != len(self.chunks):
-                # Used to be silent -- a stale cache (530 rows vs 533 chunks, from an outdated
-                # dvc.lock) made the web server re-embed everything on CPU for many minutes at the
-                # first question, with nothing in the terminal to say why it wasn't answering.
-                print(f"WARNING: {cache_path.name} has {mat.shape[0]} rows but {chunks_path.name} has "
-                      f"{len(self.chunks)} chunks -- stale cache, re-embedding everything (slow on CPU). "
-                      "Fix for good: `dvc pull` / `dvc repro prepare_kb`, then `dvc commit` + `dvc push`.",
-                      flush=True)
+            saved = sig_path.read_text(encoding="utf-8").strip() if sig_path.exists() else None
+            if mat.shape[0] != len(self.chunks) or (saved is not None and saved != fingerprint):
+                print(f"WARNING: {cache_path.name} doesn't match {chunks_path.name} (rows {mat.shape[0]} vs "
+                      f"{len(self.chunks)} chunks, fingerprint {'ok' if saved == fingerprint else 'differs'}) "
+                      "-- re-embedding everything (slow on CPU). Fix for good: `dvc pull`, or "
+                      "`dvc repro embed_kb` then `dvc push`.", flush=True)
                 mat = None
         if mat is None:
             mat = np.asarray(self.model.encode([c["text"] for c in self.chunks], normalize_embeddings=True,
                                                show_progress_bar=True), dtype=np.float32)
             if use_cache:
                 np.save(cache_path, mat)
+        if use_cache and (not sig_path.exists() or sig_path.read_text(encoding="utf-8").strip() != fingerprint):
+            # Also covers a cache from before .sig files existed: its row count matched, so it's
+            # adopted (as it always was) -- every later change to the chunks is then caught.
+            sig_path.write_text(fingerprint + "\n", encoding="utf-8")
         self.matrix = mat
 
     def _embed(self, texts: list[str]):
@@ -275,7 +293,9 @@ class Retriever:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("query")
+    ap.add_argument("query", nargs="?")
+    ap.add_argument("--build-embeddings", action="store_true",
+                     help="only (re)build data/rag/chunks.<model>.npy + .sig and exit (dvc.yaml: embed_kb)")
     ap.add_argument("-k", type=int, default=5)
     ap.add_argument("--lang")
     ap.add_argument("--domain")
@@ -290,8 +310,13 @@ def main():
     ap.add_argument("--no-min-score", dest="min_score", action="store_const", const=None,
                      help="always return the top k, regardless of confidence")
     a = ap.parse_args()
+    if not a.build_embeddings and not a.query:
+        ap.error("a query is required unless --build-embeddings is used")
 
     r = Retriever(use_query_cache=a.query_cache)
+    if a.build_embeddings:
+        print(f"embeddings ready: {r.matrix.shape[0]} chunks x {r.matrix.shape[1]} dims")
+        return
     hits = r.search(a.query, k=a.k, lang=a.lang, domain=a.domain, subtopic=a.subtopic,
                      rerank=a.rerank, min_score=a.min_score)
     if not hits:

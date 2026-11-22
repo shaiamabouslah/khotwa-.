@@ -14,5 +14,12 @@ data/rag/query_cache.json
 data/rag/generation_cache.json
 data/rag/conversations/
 
+# Local web accounts (password hashes) and usage logs -- must never be baked into an image.
+data/users.json
+data/monitoring/
+
+# Chunking-comparison outputs (dvc.yaml compare_chunking) -- evaluation artifacts, not served.
+data/rag/cmp_*/
+
 # DVC's own local cache/remote -- never meant to ship in the image.
 .dvc/cache/

@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-88d4a856
-title: Emp Secteuré non agr5 Affiliation (Employeur)
+title: الانخراط — المؤجر، القطاع غير الفلاحي
+original_title: Emp Secteuré non agr5 Affiliation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

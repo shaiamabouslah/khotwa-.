@@ -1,6 +1,7 @@
 ---
 id: non-salaries-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-295717f4
-title: Non Sal Secteur non agr2 avantage3 (Non Salarié)
+title: التدرج في الترسيم بشريحة الدخل بنظام العملة غير الأجراء في إطار تشجيع الباعثين… — غير الأجير، القطاع غير الفلاحي
+original_title: Non Sal Secteur non agr2 avantage3 (Non Salarié)
 domain: employment
 subtopic: non-salaries
 lang: ar

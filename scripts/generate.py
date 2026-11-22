@@ -35,6 +35,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 from dataclasses import asdict
 from pathlib import Path
 
@@ -107,6 +108,15 @@ BUSY_MESSAGE = {
     "en": "The service is temporarily busy (rate limit reached). Please try again in a minute.",
 }
 
+# Groq's free tier also caps tokens per day; once reached, "in a minute" would be untrue.
+DAILY_LIMIT_MESSAGE = {
+    "fr": "Le quota quotidien du service de génération est atteint. Merci de réessayer plus tard "
+          "(dans quelques minutes à quelques heures).",
+    "ar": "تم بلوغ الحصة اليومية لخدمة توليد الإجابات. يرجى المحاولة لاحقاً (بعد بضع دقائق إلى بضع ساعات).",
+    "en": "The answer service has reached its daily quota. Please try again later "
+          "(in a few minutes to a few hours).",
+}
+
 NO_MATCH_MESSAGE = {
     "fr": "Désolé, je n'ai pas d'information fiable sur ce sujet. Je suis un assistant "
           "spécialisé : je réponds uniquement aux questions sur les démarches administratives "
@@ -133,13 +143,17 @@ NO_MATCH_MESSAGE = {
 SECTOR_KEYWORDS = {
     "agricole": ["agricole", "agriculture", "فلاحي", "الفلاحي", "فلاحة"],
     "non agricole": ["non agricole", "non-agricole", "غير فلاحي", "غير الفلاحي"],
-    "pêche": ["pêche", "peche", "pêcheur", "صيد بحري", "البحري"],
+    "pêche": ["pêche", "peche", "pêcheur", "صيد بحري", "البحري", "fishing", "fisher"],
     "gens de maison": ["gens de maison", "employé de maison", "employée de maison",
-                        "femme de ménage", "عاملة منزلية", "عملة المنازل"],
-    "chantiers": ["chantier", "chantiers", "بناء", "ورشات"],
-    "artiste": ["artiste", "فنان"],
-    "étudiant": ["étudiant", "étudiante", "طالب"],
+                        "femme de ménage", "عاملة منزلية", "عملة المنازل", "domestic"],
+    "chantiers": ["chantier", "chantiers", "بناء", "ورشات", "construction"],
+    "artiste": ["artiste", "فنان", "artist"],
+    "étudiant": ["étudiant", "étudiante", "طالب", "student"],
 }
+# English words too: without them an English reply ("student") to the English clarification
+# didn't count as naming a sector, and the same question was asked again.
+SECTOR_KEYWORDS["agricole"] += ["agricultural", "agriculture", "farm"]
+SECTOR_KEYWORDS["non agricole"] += ["non-agricultural", "non agricultural"]
 SECTOR_LABELS = {
     "agricole": {"fr": "agricole", "ar": "فلاحي", "en": "agricultural"},
     "non agricole": {"fr": "non agricole", "ar": "غير فلاحي", "en": "non-agricultural"},
@@ -214,34 +228,111 @@ def _mentions_sector(text: str, subtopic: str) -> bool:
                for sector in SECTOR_SUBTOPICS.get(subtopic, []))
 
 
+def clarify_options(text: str) -> list[str]:
+    """The options listed in a SECTOR_CLARIFY_MESSAGE (any language), so the UI can offer them as
+    buttons and answer() can recognise a reply to it. [] for any other text."""
+    for template in SECTOR_CLARIFY_MESSAGE.values():
+        prefix, _, suffix = template.partition("{options}")
+        if text.startswith(prefix) and text.endswith(suffix) and len(text) > len(prefix) + len(suffix):
+            return [o.strip() for o in text[len(prefix):len(text) - len(suffix)].split(", ") if o.strip()]
+    return []
+
+
+def _fold(s: str) -> str:
+    return "".join(c for c in unicodedata.normalize("NFD", s.lower()) if not unicodedata.combining(c)).strip()
+
+
+def _is_reply_to_clarification(question: str, history) -> bool:
+    if not history:
+        return False
+    q = _fold(question)
+    return len(q) >= 3 and any(q in _fold(o) or _fold(o) in q for o in clarify_options(history[-1][1]))
+
+
+# CNSS pages are written per role -- the same procedure exists for the employer, the employee and
+# the self-employed, marked in their titles ("(Employeur)", "(Salarie)", "Non Sal..."). Found by
+# hand: "Comment m'affilier à la CNSS comme employeur dans le secteur non agricole ?" ranked the
+# employer pages 6th-10th (dense retrieval) behind self-employed pages -- "m'affilier" pulls
+# toward them -- so the LLM, which only sees the top 5, said it had no information. When a CNSS
+# question names a role, pages explicitly written for a DIFFERENT role move to the back; unmarked
+# pages keep their place (a first version moved matching pages to the front instead, which pushed
+# down the Arabic CNSS pages -- their titles carry no role marker -- and cost one question on the
+# 41-question benchmark). Checked in order: "non salarié" must win over "salarié", "غير أجير" over
+# "أجير", "mes salariés" (said by an employer) over "salarié".
+# Title markers: the readable titles written by scripts/cnss_titles.py ("... — employeur, ...",
+# "... — المؤجر، ..."), plus the raw CNSS codes they replaced, in case an old build is served.
+CNSS_ROLES = [
+    (["employeur", "employer", "mon entreprise", "ma société", "mes employés", "mes salariés",
+      "صاحب عمل", "مؤجر", "مشغل"], ["— employeur", "— المؤجر", "(employeur)"]),
+    (["non salarié", "non-salarié", "non salarie", "indépendant", "independant", "independent",
+      "self-employed", "غير أجير", "مستقل", "لحسابه الخاص"], ["— non-salarié", "— غير الأجير", "non sal"]),
+    (["salarié", "salarie", "employee", "أجير"], ["— salarié", "— الأجير", "(salarie)", "(salarié)"]),
+]
+ROLE_POOL = 20
+
+
+def _doc_role(title: str) -> int | None:
+    low = title.lower()
+    for i, (_, title_markers) in enumerate(CNSS_ROLES):
+        if any(m in low for m in title_markers):
+            return i
+    return None
+
+
+def _role_first(query: str, hits: list[Hit]) -> list[Hit]:
+    if not hits or not _mentions_cnss(query):
+        return hits
+    low = query.lower()
+    for i, (query_keywords, _) in enumerate(CNSS_ROLES):
+        if any(kw in low for kw in query_keywords):
+            keep = [h for h in hits if _doc_role(h.title) in (None, i)]
+            return keep + [h for h in hits if h not in keep]
+    return hits
+
+
+def retrieve(retriever, query: str, k: int = 5, domain: str | None = None, subtopic: str | None = None,
+             rerank: bool = True) -> list[Hit]:
+    """The retrieval answer() uses (dense-score floor when not reranking, CNSS role ordering),
+    exposed so evaluation scripts measure exactly what the app does."""
+    pool = retriever.search(query, k=max(k, ROLE_POOL), domain=domain, subtopic=subtopic, rerank=rerank,
+                            min_dense_score=None if rerank else DEFAULT_MIN_DENSE_SCORE)
+    return _role_first(query, pool)[:k]
+
+
 SYSTEM_PROMPT = """Tu es l'assistant Khotwa, qui aide les étudiants et travailleurs tunisiens \
 à comprendre les démarches administratives (études, emploi, CNSS...).
 
 Règles strictes :
-1. Réponds UNIQUEMENT à partir des extraits numérotés fournis ci-dessous. N'invente aucune \
-condition, pièce, délai ou montant qui n'y figure pas.
+1. Réponds UNIQUEMENT à partir des sources officielles numérotées fournies ci-dessous. \
+N'invente aucune condition, pièce, délai ou montant qui n'y figure pas.
 2. Réponds dans la même langue que la question (français, arabe, ou anglais).
 3. Cite les sources utilisées avec leur numéro entre crochets dans le texte, ex: [1], [2]. \
 N'ajoute PAS toi-même de section "Sources" récapitulative à la fin -- les liens officiels \
 complets y sont ajoutés automatiquement après ta réponse.
-4. Si les extraits fournis décrivent plusieurs variantes de la même procédure pour des \
-secteurs, catégories ou publics différents (ex: secteur agricole / non agricole / pêche, \
-salarié / non salarié / employeur) et que la question ne précise pas laquelle s'applique, \
-NE CHOISIS PAS au hasard : pose une seule question de clarification courte, en listant les \
-options distinctes trouvées dans les extraits. Si en revanche la question actuelle est une \
-réponse courte à une clarification QUE TU AS TOI-MÊME demandée au tour précédent (ex: tu as \
-demandé "quel secteur ?" et l'utilisateur répond juste "agricole"), ne repose PAS la même \
-question : utilise cette réponse pour choisir directement la bonne variante parmi les extraits \
-et réponds à la question d'origine pour ce cas précis.
-5. Si les extraits ne répondent pas vraiment à la question posée, dis-le clairement plutôt \
+4. Si les sources décrivent plusieurs variantes de la même procédure pour des secteurs, \
+catégories ou publics différents (ex: secteur agricole / non agricole / pêche, salarié / non \
+salarié / employeur) et que la question ne précise pas laquelle s'applique, NE CHOISIS PAS au \
+hasard : pose une seule question de clarification courte, en listant les options distinctes \
+trouvées dans les sources. Si en revanche la question actuelle est une réponse courte à une \
+clarification QUE TU AS TOI-MÊME demandée au tour précédent (ex: tu as demandé "quel \
+secteur ?" et l'utilisateur répond juste "agricole"), ne repose PAS la même question : utilise \
+cette réponse pour choisir directement la bonne variante et réponds à la question d'origine \
+pour ce cas précis.
+5. Si les sources ne répondent pas vraiment à la question posée, dis-le clairement plutôt \
 que de forcer une réponse approximative.
 6. Sois concis et concret : conditions, pièces à fournir, étapes, délais -- seulement ce qui \
-est présent dans les extraits.
+est présent dans les sources.
+7. Parle à l'utilisateur comme un conseiller, pas comme un système : ne dis jamais \
+« extrait », « excerpt », « مقتطف », « contexte » ou « documents fournis ». Pour lui, ce sont \
+« les sources officielles » (ou « official sources », « المصادر الرسمية »). Quand l'information \
+manque, dis-le simplement, par exemple : « Je n'ai pas trouvé cette information dans les \
+sources officielles dont je dispose. », dans la langue de la question.
 """
 
 
 GEN_CACHE_PATH = ROOT / "data" / "rag" / "generation_cache.json"
-HISTORY_DIR = ROOT / "data" / "rag" / "conversations"
+HISTORY_DIR = (Path(os.environ["KHOTWA_STATE_DIR"]) / "conversations" if os.environ.get("KHOTWA_STATE_DIR")
+               else ROOT / "data" / "rag" / "conversations")
 
 
 def _history_path(session: str) -> Path:
@@ -361,9 +452,9 @@ SOURCES_LABEL = {"fr": "Sources officielles", "ar": "المصادر الرسمي
 # into French anyway (seen by hand). A directive in the target language itself, right next to
 # the question, is a much stronger signal than one generic French rule stated far upstream.
 LANG_DIRECTIVE = {
-    "fr": "Réponds à la question ci-dessus en français, même si certains extraits sont dans une autre langue.",
-    "ar": "أجب عن السؤال أعلاه باللغة العربية، حتى لو كانت بعض المقتطفات بلغة أخرى.",
-    "en": "Answer the question above in English, even if some of the excerpts are in another language.",
+    "fr": "Réponds à la question ci-dessus en français, même si certaines sources sont dans une autre langue.",
+    "ar": "أجب عن السؤال أعلاه باللغة العربية، حتى لو كانت بعض المصادر بلغة أخرى.",
+    "en": "Answer the question above in English, even if some of the sources are in another language.",
 }
 
 
@@ -417,7 +508,8 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 5, lang: 
            domain: str | None = None, subtopic: str | None = None, rerank: bool = True,
            model: str = DEFAULT_MODEL, use_cache: bool = True,
            history: list[tuple[str, str, bool]] | None = None) -> dict:
-    """Returns {"answer": str, "hits": list[Hit], "abstained": bool}.
+    """Returns {"answer": str, "hits": list[Hit], "abstained": bool}, plus "busy": True when Groq
+    rate-limited the call (the answer is then a "retry later" message, not an answer).
 
     `retriever` is only needed past the chitchat check -- greetings/farewells are answered
     (and abstention on an empty retriever... no, see below) without ever loading the embedding
@@ -485,11 +577,15 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 5, lang: 
     # silently exclude every French/Arabic doc an English query is actually meant to match
     # cross-lingually via BGE-M3. That was a real bug here (found while adding EN test
     # questions: every one abstained, not on merit, just because of this filter).
-    # Without the reranker, abstention can't use the calibrated rerank threshold -- fall back to the
-    # (weaker) dense-score floor instead; see retriever.DEFAULT_MIN_DENSE_SCORE for its limits.
-    dense_floor = None if rerank else DEFAULT_MIN_DENSE_SCORE
-    hits = retriever.search(retrieval_query, k=k, domain=domain, subtopic=subtopic, rerank=rerank,
-                            min_dense_score=dense_floor)
+    # A reply to the sector question ("étudiant", often a click on one of its buttons) only makes
+    # sense with the question that triggered it: retrieve on both, answer in that question's
+    # language (a bare "student" has no stopwords and would be detected as French), and never ask
+    # the sector again.
+    reply_to_clarification = _is_reply_to_clarification(question, history)
+    if reply_to_clarification:
+        retrieval_query = f"{history[-1][0]} {question}"
+        q_lang = detect_lang(retrieval_query, lang)
+    hits = retrieve(retriever, retrieval_query, k=k, domain=domain, subtopic=subtopic, rerank=rerank)
     # The anchor fallback below is for a short, ambiguous follow-up ("agricole") that only
     # makes sense combined with what was asked before -- NOT for a genuinely new, complete,
     # unrelated question that simply has no match in the KB. Without the word-count guard, a
@@ -501,14 +597,13 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 5, lang: 
     # new one in one numbered list, at one point even reinventing a wrong answer for one of
     # them). A short question has no real content to go on by itself, so only it gets the
     # history-anchored retry; anything longer is trusted to stand on its own.
-    if not hits and history and len(question.split()) <= 3:
+    if not hits and history and len(question.split()) <= 3 and not reply_to_clarification:
         anchor = " ".join(h[0] for h in history if not h[2])  # all turns, not just short-term
         if anchor:
             retrieval_query = f"{anchor} {question}"
-            hits = retriever.search(retrieval_query, k=k, domain=domain, subtopic=subtopic, rerank=rerank,
-                                    min_dense_score=dense_floor)
-    if (hits and hits[0].subtopic in SECTOR_SUBTOPICS and _mentions_cnss(retrieval_query)
-            and not _mentions_sector(retrieval_query, hits[0].subtopic)):
+            hits = retrieve(retriever, retrieval_query, k=k, domain=domain, subtopic=subtopic, rerank=rerank)
+    if (hits and not reply_to_clarification and hits[0].subtopic in SECTOR_SUBTOPICS
+            and _mentions_cnss(retrieval_query) and not _mentions_sector(retrieval_query, hits[0].subtopic)):
         options = ", ".join(SECTOR_LABELS[s][q_lang] for s in SECTOR_SUBTOPICS[hits[0].subtopic])
         msg = SECTOR_CLARIFY_MESSAGE.get(q_lang, SECTOR_CLARIFY_MESSAGE["fr"]).format(options=options)
         result = {"answer": msg, "hits": hits, "abstained": False}
@@ -539,13 +634,15 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 5, lang: 
         # that when sent "agricole" alone, even with the right doc already in context).
         directive = LANG_DIRECTIVE.get(q_lang, LANG_DIRECTIVE["fr"])
         messages.append({"role": "user", "content":
-                          f"Extraits disponibles :\n\n{context}\n\nQuestion : {retrieval_query}\n\n{directive}"})
+                          f"Sources officielles disponibles :\n\n{context}\n\nQuestion : {retrieval_query}\n\n{directive}"})
         try:
             resp = _call_groq_with_retry(client, model=model, temperature=0.2, messages=messages)
-        except RateLimitError:
+        except RateLimitError as e:
             # Don't cache this -- it's a transient failure of the service, not a real answer
-            # to "question", so a repeat of the same question a minute later must try again.
-            return {"answer": BUSY_MESSAGE.get(q_lang, BUSY_MESSAGE["fr"]), "hits": [], "abstained": False}
+            # to "question", so a repeat of the same question later must try again.
+            notice = DAILY_LIMIT_MESSAGE if "per day" in str(e) else BUSY_MESSAGE
+            return {"answer": notice.get(q_lang, notice["fr"]), "hits": [], "abstained": False,
+                    "busy": True}
         text = resp.choices[0].message.content + sources_block(hits, q_lang)
         result = {"answer": text, "hits": hits, "abstained": False}
 

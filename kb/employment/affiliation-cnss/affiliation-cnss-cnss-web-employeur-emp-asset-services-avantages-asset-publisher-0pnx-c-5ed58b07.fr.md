@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-avantages-asset-publisher-0pnx-c-5ed58b07
-title: Emp Secteur peche1 Contenu Avantage 1 (Employeur)
+title: Avantages — employeur, secteur de la pêche
+original_title: Emp Secteur peche1 Contenu Avantage 1 (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

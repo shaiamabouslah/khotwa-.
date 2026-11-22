@@ -16,7 +16,10 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-USERS_PATH = ROOT / "data" / "users.json"
+# KHOTWA_STATE_DIR (set in the Docker image) moves accounts + conversations into one directory a
+# volume can persist; unset, they stay where they always were.
+USERS_PATH = (Path(os.environ["KHOTWA_STATE_DIR"]) / "users.json" if os.environ.get("KHOTWA_STATE_DIR")
+              else ROOT / "data" / "users.json")
 
 USERNAME_RE = re.compile(r"^[A-Za-z0-9_-]{3,32}$")
 _PBKDF2_ITERATIONS = 310_000

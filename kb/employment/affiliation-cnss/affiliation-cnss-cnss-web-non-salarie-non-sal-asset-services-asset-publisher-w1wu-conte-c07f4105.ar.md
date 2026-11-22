@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-c07f4105
-title: Non Sal Secteur agr3 Attestation (Non Salarié)
+title: شهادة خلاص — غير الأجير، القطاع الفلاحي
+original_title: Non Sal Secteur agr3 Attestation (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

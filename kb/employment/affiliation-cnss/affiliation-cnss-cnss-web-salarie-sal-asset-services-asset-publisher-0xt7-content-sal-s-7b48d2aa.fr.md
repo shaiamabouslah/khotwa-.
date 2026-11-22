@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-7b48d2aa
-title: Sal Secteur non agr2 actions licenciement3 (Salarie)
+title: Une aide est accordée par la CNSS aux salariés du secteur non agricole ayant… — salarié, secteur non agricole
+original_title: Sal Secteur non agr2 actions licenciement3 (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

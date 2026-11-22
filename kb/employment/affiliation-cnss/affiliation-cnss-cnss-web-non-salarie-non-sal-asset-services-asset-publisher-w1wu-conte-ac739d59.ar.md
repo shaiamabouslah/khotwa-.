@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-ac739d59
-title: Non Sal Secteur non agr5 cotisation (Non Salarié)
+title: قاعدة الاشتراكات — غير الأجير، القطاع غير الفلاحي
+original_title: Non Sal Secteur non agr5 cotisation (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

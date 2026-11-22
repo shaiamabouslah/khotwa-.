@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-fe3782de
-title: Emp gens maison Cotisations (Employeur)
+title: قاعدة الاشتراكات — المؤجر، عملة المنازل
+original_title: Emp gens maison Cotisations (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

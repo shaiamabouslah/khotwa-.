@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-f106ebc5
-title: Emp Secteur agr2 Affiliation (Employeur)
+title: الانخراط — المؤجر، القطاع الفلاحي
+original_title: Emp Secteur agr2 Affiliation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

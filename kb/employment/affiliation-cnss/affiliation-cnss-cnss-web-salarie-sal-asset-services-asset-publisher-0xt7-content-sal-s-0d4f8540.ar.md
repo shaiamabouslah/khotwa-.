@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-0d4f8540
-title: Sal Secteur peche1 actions licenciement1 (Salarie)
+title: المنح العائلية ومنحة الزيادة عن الأجر الوحيد لفائدة العمال المفصولين عن العمل — الأجير، قطاع الصيد البحري
+original_title: Sal Secteur peche1 actions licenciement1 (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

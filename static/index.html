@@ -346,8 +346,9 @@
     display: flex; align-items: center; justify-content: space-between; font-size: 13px;
   }
   #sidebar-username { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  #logout-btn { background: transparent; border: none; color: var(--sidebar-muted); cursor: pointer; padding: 4px; border-radius: 6px; display: flex; }
-  #logout-btn:hover { color: var(--sidebar-text); background: var(--sidebar-hover); }
+  #logout-btn, #stats-link { background: transparent; border: none; color: var(--sidebar-muted); cursor: pointer; padding: 4px; border-radius: 6px; display: flex; }
+  #logout-btn:hover, #stats-link:hover { color: var(--sidebar-text); background: var(--sidebar-hover); }
+  .footer-actions { display: flex; gap: 2px; }
 
   #chat-area { flex: 1; display: flex; flex-direction: column; min-width: 0; background: var(--bg); }
   #chat-header {
@@ -412,6 +413,20 @@
   .source-title { font-size: 12.5px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 240px; }
   .source-host { font-size: 11px; color: var(--muted); }
   .source-chip .icon { width: 13px; height: 13px; color: var(--muted); }
+
+  .feedback { display: flex; gap: 2px; margin-top: 8px; }
+  .fb-btn { background: transparent; border: none; color: var(--muted); padding: 4px; border-radius: 6px; cursor: pointer; display: flex; opacity: 0.7; }
+  .fb-btn .icon { width: 15px; height: 15px; }
+  .fb-btn:hover { opacity: 1; background: var(--panel-2); }
+  .fb-btn.selected { opacity: 1; color: var(--accent); }
+
+  .quick-replies { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 11px; }
+  .quick-reply {
+    border: 1px solid var(--accent); background: transparent; color: var(--accent);
+    border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 550; cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  }
+  .quick-reply:hover { background: var(--accent); color: var(--accent-text); transform: translateY(-1px); }
 
   .typing { display: inline-flex; gap: 4px; padding: 3px 2px; }
   .typing i { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); animation: typing 1.2s infinite ease-in-out; }
@@ -666,12 +681,19 @@
     <div id="conversation-list"></div>
     <div id="sidebar-footer">
       <span id="sidebar-username"></span>
-      <button id="logout-btn" type="button" title="Se déconnecter">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
-          <path d="M16 17l5-5-5-5"/><path d="M21 12H9"/>
-        </svg>
-      </button>
+      <span class="footer-actions">
+        <a id="stats-link" href="/metrics.html" title="Statistiques d'utilisation" aria-label="Statistiques d'utilisation">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 3v18h18"/><path d="M7 15v3"/><path d="M12 10v8"/><path d="M17 6v12"/>
+          </svg>
+        </a>
+        <button id="logout-btn" type="button" title="Se déconnecter">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <path d="M16 17l5-5-5-5"/><path d="M21 12H9"/>
+          </svg>
+        </button>
+      </span>
     </div>
   </aside>
 
@@ -1061,7 +1083,7 @@
       messagesEl.innerHTML = "";
       data.turns.forEach(function (t) {
         addMessage("user", t.question);
-        addMessage("bot", t.answer, { abstained: t.abstained, sources: t.sources });
+        addMessage("bot", t.answer, { abstained: t.abstained, sources: t.sources, options: t.options, turn: t.turn });
       });
     });
   }
@@ -1081,6 +1103,7 @@
   // so "&amp;lt;" isn't decoded twice.
   function normalizeLlmText(t) {
     return String(t)
+      .replace(/<(https?:\/\/[^\s<>]+)>/gi, "$1")  // Markdown autolink "<https://...>"
       .replace(/<br\s*\/?>/gi, "\n")
       .replace(/&nbsp;|&#160;/gi, " ")
       .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#0?39;|&#x27;/gi, "'")
@@ -1235,6 +1258,43 @@
     } else if (role === "bot") {
       var isArabic = /[؀-ۿ]/.test(text);
       div.innerHTML = '<div class="md">' + renderMarkdown(text, opts.sources) + "</div>" + renderSources(opts.sources, isArabic);
+      if (typeof opts.turn === "number") {
+        var fb = document.createElement("div");
+        fb.className = "feedback";
+        [["up", "Réponse utile", '<path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/>'],
+         ["down", "Réponse pas utile", '<path d="M17 14V2"/><path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"/>']
+        ].forEach(function (f) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.className = "fb-btn";
+          b.title = f[1];
+          b.setAttribute("aria-label", f[1]);
+          b.innerHTML = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' + f[2] + "</svg>";
+          b.addEventListener("click", function () {
+            api("/feedback", { method: "POST", body: JSON.stringify({ conversation_id: activeConvId, turn: opts.turn, value: f[0] }) })
+              .then(function () { fb.querySelectorAll(".fb-btn").forEach(function (x) { x.classList.toggle("selected", x === b); }); });
+          });
+          fb.appendChild(b);
+        });
+        div.appendChild(fb);
+      }
+      if (opts.options && opts.options.length) {
+        var replies = document.createElement("div");
+        replies.className = "quick-replies";
+        opts.options.forEach(function (option) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.className = "quick-reply";
+          b.textContent = option;
+          b.addEventListener("click", function () {
+            if (inputEl.disabled) return;
+            inputEl.value = option;
+            sendQuestion();
+          });
+          replies.appendChild(b);
+        });
+        div.appendChild(replies);
+      }
     } else {
       div.textContent = text;
     }
@@ -1249,6 +1309,7 @@
 
     welcomeEl.classList.add("hidden");
     messagesEl.classList.remove("hidden");
+    messagesEl.querySelectorAll(".quick-replies").forEach(function (e) { e.remove(); });  // answered now
     addMessage("user", question);
     inputEl.value = "";
     autoGrow();
@@ -1262,7 +1323,7 @@
     api("/chat", { method: "POST", body: JSON.stringify({ conversation_id: activeConvId, question: question }) }, 300000)
       .then(function (data) {
         pending.remove();
-        addMessage("bot", data.answer, { abstained: data.abstained, sources: data.sources });
+        addMessage("bot", data.answer, { abstained: data.abstained, sources: data.sources, options: data.options, turn: data.turn });
         var conv = conversations.find(function (c) { return c.id === activeConvId; });
         if (conv && conv.title === "Nouvelle conversation") {
           conv.title = question.slice(0, 40);

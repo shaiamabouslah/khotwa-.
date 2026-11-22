@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-839414dd
-title: Non Sal autres etudiants immatriculation (Non Salarié)
+title: التسجيل — غير الأجير، الطلبة
+original_title: Non Sal autres etudiants immatriculation (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

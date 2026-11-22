@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-p-1a75c8bb
-title: Sal peche3 Immatriculation (Salarie)
+title: Immatriculation — salarié, secteur de la pêche
+original_title: Sal peche3 Immatriculation (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

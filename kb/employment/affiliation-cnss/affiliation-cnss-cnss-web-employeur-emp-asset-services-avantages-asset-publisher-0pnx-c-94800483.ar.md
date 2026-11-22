@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-avantages-asset-publisher-0pnx-c-94800483
-title: Emp Secteur non agr1 Contenu Avantage1 (Employeur)
+title: الامتيازات — المؤجر، القطاع غير الفلاحي
+original_title: Emp Secteur non agr1 Contenu Avantage1 (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-g-86b5913f
-title: Sal gens maison Immatriculation (Salarie)
+title: Immatriculation — salarié, gens de maison
+original_title: Sal gens maison Immatriculation (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

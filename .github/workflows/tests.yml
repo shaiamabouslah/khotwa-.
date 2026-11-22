@@ -27,6 +27,9 @@ jobs:
           # generate.py imports it lazily inside answer() itself, and some tests exercise
           # that code path with a mocked client. Keeps this job at seconds, not minutes.
           pip install groq==0.37.1 numpy==2.4.6
+          # Web app (scripts/api.py) and its tests: FastAPI and itsdangerous (signed session
+          # cookie) are imported at module level; httpx backs FastAPI's TestClient.
+          pip install fastapi==0.121.2 itsdangerous==2.2.0 httpx==0.28.1
 
       - name: Validate sources.yaml
         run: python -m crawler validate

@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-t-8ae3f5d8
-title: Sal travailleurs chantiers Immatriculation (Salarie)
+title: التسجيل — الأجير، عملة الحضائر
+original_title: Sal travailleurs chantiers Immatriculation (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

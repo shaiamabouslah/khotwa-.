@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-c0761a32
-title: Emp Secteur pêche1 Remise penalites (Employeur)
+title: Remise des pénalités de retard — employeur, secteur de la pêche
+original_title: Emp Secteur pêche1 Remise penalites (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

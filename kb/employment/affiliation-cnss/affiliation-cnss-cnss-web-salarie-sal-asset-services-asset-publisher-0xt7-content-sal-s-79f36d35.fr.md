@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-79f36d35
-title: Sal Secteur agr2 Immatriculation (Salarie)
+title: Immatriculation — salarié, secteur agricole
+original_title: Sal Secteur agr2 Immatriculation (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

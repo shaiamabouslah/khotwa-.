@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-c57c0cd8
-title: Emp Secteur pêche1 Immatriculation (Employeur)
+title: التسجيل — المؤجر، قطاع الصيد البحري
+original_title: Emp Secteur pêche1 Immatriculation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

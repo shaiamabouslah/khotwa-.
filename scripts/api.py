@@ -31,6 +31,7 @@ import re
 import secrets
 import sys
 import threading
+import time
 from contextlib import asynccontextmanager
 from pathlib import Path
 
@@ -50,6 +51,7 @@ from starlette.middleware.sessions import SessionMiddleware
 
 import auth  # noqa: E402
 import generate  # noqa: E402
+import monitoring  # noqa: E402
 from retriever import Retriever  # noqa: E402
 
 if not os.environ.get("GROQ_API_KEY"):
@@ -139,6 +141,8 @@ class ChatResponse(BaseModel):
     answer: str
     abstained: bool
     sources: list[Source] = []
+    options: list[str] = []  # clickable replies when the answer is a clarification question
+    turn: int | None = None  # index of this exchange in the conversation (for feedback)
 
 
 def _present(text: str) -> tuple[str, list[dict]]:
@@ -247,9 +251,12 @@ def get_conversation(conversation_id: str, username: str = Depends(require_user)
         raise HTTPException(404, "conversation introuvable")
     history = generate.load_history(key)
     turns = []
-    for q, a, ab in history:
+    for i, (q, a, ab) in enumerate(history):
         body, sources = _present(a)
-        turns.append({"question": q, "answer": body, "abstained": ab, "sources": sources})
+        # only the last turn's clarification is still open; earlier ones were already answered
+        options = generate.clarify_options(body) if i == len(history) - 1 else []
+        turns.append({"question": q, "answer": body, "abstained": ab, "sources": sources, "options": options,
+                      "turn": i})
     return {"id": conversation_id, "turns": turns}
 
 
@@ -298,6 +305,10 @@ def chat(req: ChatRequest, username: str = Depends(require_user)):
     # need one. Skip building it for exactly the same chitchat patterns answer() itself checks
     # first (generate.GREETING_RE / generate.FAREWELL_RE -- reused, not re-implemented here).
     needs_retriever = not (generate.GREETING_RE.match(question) or generate.FAREWELL_RE.match(question))
+    lang = req.lang or (generate.detect_lang(question) if needs_retriever else generate._chitchat_lang(question))
+    event = {"event": "question", "user": monitoring.user_hash(username), "conversation_id": req.conversation_id,
+             "lang": lang, "question": question}
+    started = time.perf_counter()
 
     history = generate.load_history(key)
     try:
@@ -305,6 +316,8 @@ def chat(req: ChatRequest, username: str = Depends(require_user)):
         result = generate.answer(question, retriever, lang=req.lang, rerank=WEB_RERANK,
                                  use_cache=False, history=history)
     except generate.MissingApiKeyError:
+        monitoring.log_event(**event, outcome="error", error="MissingApiKeyError",
+                             latency_ms=round((time.perf_counter() - started) * 1000))
         raise HTTPException(503, "Le serveur n'a pas de cle GROQ_API_KEY configuree (fichier .env) -- "
                                  "impossible de generer une reponse.")
     except Exception as e:
@@ -312,12 +325,58 @@ def chat(req: ChatRequest, username: str = Depends(require_user)):
         # a request that never resolves.
         import traceback
         traceback.print_exc()
+        monitoring.log_event(**event, outcome="error", error=type(e).__name__,
+                             latency_ms=round((time.perf_counter() - started) * 1000))
         raise HTTPException(500, f"Erreur interne pendant la generation de la reponse : {type(e).__name__}")
+    body, sources = _present(result["answer"])
+    options = generate.clarify_options(body)
+    if not needs_retriever:
+        outcome = "chitchat"
+    elif options:
+        outcome = "clarification"
+    elif result["abstained"]:
+        outcome = "no_match"
+    elif result.get("busy"):
+        outcome = "busy"
+    else:
+        outcome = "answer" if sources else "uncited"
+    monitoring.log_event(**event, outcome=outcome, n_sources=len(sources),
+                         latency_ms=round((time.perf_counter() - started) * 1000))
+
+    # A "service busy, retry in a minute" reply is not an exchange: kept out of the history, or
+    # the model would read it as its own previous answer on the next turn, and not rateable.
+    if outcome == "busy":
+        return ChatResponse(answer=body, abstained=False)
     history.append((question, result["answer"], result["abstained"]))
     generate.save_history(key, history)
+    return ChatResponse(answer=body, abstained=result["abstained"], sources=sources, options=options,
+                        turn=len(history) - 1)
 
-    body, sources = _present(result["answer"])
-    return ChatResponse(answer=body, abstained=result["abstained"], sources=sources)
+
+class Feedback(BaseModel):
+    conversation_id: str
+    turn: int
+    value: str  # "up" | "down"
+
+
+@app.post("/feedback")
+def feedback(fb: Feedback, username: str = Depends(require_user)):
+    if fb.value not in ("up", "down"):
+        raise HTTPException(400, "value must be 'up' or 'down'")
+    key = _conversation_key(username, fb.conversation_id)
+    if not generate._history_path(key).exists():
+        raise HTTPException(404, "conversation introuvable")
+    history = generate.load_history(key)
+    if not 0 <= fb.turn < len(history):
+        raise HTTPException(404, "message introuvable")
+    monitoring.log_event(event="feedback", user=monitoring.user_hash(username), conversation_id=fb.conversation_id,
+                         turn=fb.turn, value=fb.value, question=history[fb.turn][0])
+    return {"status": "ok"}
+
+
+@app.get("/metrics")
+def metrics(username: str = Depends(require_user)):
+    return monitoring.compute_metrics(monitoring.read_events())
 
 
 # Mounted last: StaticFiles with html=True serves static/index.html at "/" and would otherwise

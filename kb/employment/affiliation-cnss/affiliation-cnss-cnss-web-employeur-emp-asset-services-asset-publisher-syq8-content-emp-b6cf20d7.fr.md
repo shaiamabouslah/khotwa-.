@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-b6cf20d7
-title: Emp Secteur pêche1 Affiliation regime complementaire (Employeur)
+title: Affiliation au régime complémentaire — employeur, secteur de la pêche
+original_title: Emp Secteur pêche1 Affiliation regime complementaire (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

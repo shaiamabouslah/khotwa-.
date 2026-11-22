@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-3d1a0cb6
-title: Emp travailleurs chantiers Affiliation (Employeur)
+title: الانخراط — المؤجر، عملة الحضائر
+original_title: Emp travailleurs chantiers Affiliation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

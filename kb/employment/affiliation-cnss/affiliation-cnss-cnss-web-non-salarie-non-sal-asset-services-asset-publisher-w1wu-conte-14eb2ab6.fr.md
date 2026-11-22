@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-14eb2ab6
-title: Non Sal Secteur non agr4 Remise penalites (Non Salarié)
+title: Remise des pénalités de retard — non-salarié, secteur non agricole
+original_title: Non Sal Secteur non agr4 Remise penalites (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

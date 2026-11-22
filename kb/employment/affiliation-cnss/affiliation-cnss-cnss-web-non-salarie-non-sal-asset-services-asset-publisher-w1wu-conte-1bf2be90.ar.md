@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-1bf2be90
-title: Non Sal Secteur peche3 Affiliation (Non Salarié)
+title: الانخراط — غير الأجير، قطاع الصيد البحري
+original_title: Non Sal Secteur peche3 Affiliation (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-1ba61f67
-title: Non Sal Secteur non agr2 Cotisations (Non Salarié)
+title: Assiette des cotisations — non-salarié, secteur non agricole
+original_title: Non Sal Secteur non agr2 Cotisations (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

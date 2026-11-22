@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-ef2fa425
-title: Sal Secteur non agr2 actions licenciement2 (Salarie)
+title: La CNSS prend en charge les indemnités et droits légaux des travailleurs ayant… — salarié, secteur non agricole
+original_title: Sal Secteur non agr2 actions licenciement2 (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

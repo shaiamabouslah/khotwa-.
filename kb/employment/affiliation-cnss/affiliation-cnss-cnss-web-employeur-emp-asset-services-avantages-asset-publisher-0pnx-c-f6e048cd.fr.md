@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-avantages-asset-publisher-0pnx-c-f6e048cd
-title: Emp Secteur non agr4 Attestations (Employeur)
+title: Attestation de solde — employeur, secteur non agricole
+original_title: Emp Secteur non agr4 Attestations (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

@@ -1,6 +1,7 @@
-# Retrieval, generation and evaluation (scripts/retriever.py, scripts/generate.py,
-# scripts/eval_ragas.py, scripts/rag_prepare.py --strategy semantic). Not needed to run the
-# crawler alone -- that's requirements.txt.
+# Full working environment for the RAG side: everything the assistant needs to run
+# (requirements-serve.txt), plus data preparation and evaluation (scripts/rag_prepare.py,
+# scripts/compare_chunking.py, scripts/eval_ragas.py). Not needed to run the crawler alone --
+# that's requirements.txt.
 #
 # Pinned exact (==), unlike requirements.txt's loose (>=): this stack hit real cross-version
 # breakage this project already ran into once (ragas 0.4.3 crashed against the then-installed
@@ -10,19 +11,9 @@
 #
 #   pip install -r requirements-rag.txt
 -r requirements.txt
-
-numpy==2.4.6
-torch==2.14.1
-sentence-transformers==6.2.0
-groq==0.37.1
-python-dotenv==1.2.4
+-r requirements-serve.txt
 
 # scripts/eval_ragas.py only
 ragas==0.4.3
 openai==3.3.0
 instructor==1.17.0
-
-# scripts/api.py only (web UI -- itsdangerous signs the login session cookie)
-fastapi==0.121.2
-uvicorn==0.38.0
-itsdangerous==2.2.0

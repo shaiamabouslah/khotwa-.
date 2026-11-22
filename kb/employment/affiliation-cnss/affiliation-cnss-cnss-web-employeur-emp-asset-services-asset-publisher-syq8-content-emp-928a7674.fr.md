@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-928a7674
-title: Emp Secteur pêche3 Assiette (Employeur)
+title: Assiette des cotisations — employeur, secteur de la pêche
+original_title: Emp Secteur pêche3 Assiette (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

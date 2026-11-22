@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-9a555afb
-title: Emp secteur-non agr1 affiliation regime complementaire (Employeur)
+title: الانخراط في النظام التكميلي — المؤجر، القطاع غير الفلاحي
+original_title: Emp secteur-non agr1 affiliation regime complementaire (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

@@ -1,6 +1,7 @@
 ---
 id: non-salaries-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-f1ea7a04
-title: Non Sal Secteur non agr1 avantage2 (Non Salarié)
+title: الامتيازات — غير الأجير، القطاع غير الفلاحي
+original_title: Non Sal Secteur non agr1 avantage2 (Non Salarié)
 domain: employment
 subtopic: non-salaries
 lang: ar

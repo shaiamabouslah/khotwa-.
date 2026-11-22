@@ -1,6 +1,7 @@
 ---
 id: non-salaries-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-72c20e08
-title: Non Sal Secteur non agr1 Remise penalites (Non Salarié)
+title: الإعفاء من خطايا التأخير — غير الأجير، القطاع غير الفلاحي
+original_title: Non Sal Secteur non agr1 Remise penalites (Non Salarié)
 domain: employment
 subtopic: non-salaries
 lang: ar

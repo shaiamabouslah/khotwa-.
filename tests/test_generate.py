@@ -317,6 +317,107 @@ class TestSectorGuard(unittest.TestCase):
         self.assertNotIn("De quel secteur", result["answer"])
 
 
+def _role_hit(title: str) -> Hit:
+    return Hit(score=0.7, chunk_id=title, doc_id=title, lang="fr", domain="employment",
+               subtopic="affiliation-cnss", title=title, org="CNSS", section="s", url="u", text="t",
+               n_chunks=1)
+
+
+class TestClarificationOptions(unittest.TestCase):
+    def test_options_parsed_back_in_every_language(self):
+        for lang in ("fr", "ar", "en"):
+            labels = [generate.SECTOR_LABELS[s][lang] for s in generate.SECTOR_SUBTOPICS["non-salaries"]]
+            msg = generate.SECTOR_CLARIFY_MESSAGE[lang].format(options=", ".join(labels))
+            self.assertEqual(generate.clarify_options(msg), labels)
+
+    def test_ordinary_text_has_no_options(self):
+        self.assertEqual(generate.clarify_options("Voici la procédure [1]."), [])
+
+    def _clarified_history(self, lang, question):
+        labels = [generate.SECTOR_LABELS[s][lang] for s in generate.SECTOR_SUBTOPICS["non-salaries"]]
+        msg = generate.SECTOR_CLARIFY_MESSAGE[lang].format(options=", ".join(labels))
+        return [(question, msg, False)]
+
+    def _answer_reply(self, reply, history):
+        mock_retriever = MagicMock()
+        hit = _role_hit("Non Sal autres etudiants immatriculation (Non Salarié)")
+        hit.subtopic = "non-salaries"
+        mock_retriever.search.return_value = [hit]
+        with patch.dict(os.environ, {"GROQ_API_KEY": "test-key"}), patch("groq.Groq") as mock_groq_cls:
+            mock_client = MagicMock()
+            mock_client.chat.completions.create.return_value.choices[0].message.content = "reponse"
+            mock_groq_cls.return_value = mock_client
+            result = generate.answer(reply, retriever=mock_retriever, use_cache=False, history=history)
+        return result, mock_retriever, mock_client
+
+    def test_reply_retrieves_with_the_original_question_and_is_not_asked_again(self):
+        history = self._clarified_history("fr", "Comment m'affilier à la CNSS ?")
+        result, retriever, _ = self._answer_reply("etudiant", history)  # no accent, typed by hand
+        self.assertEqual(retriever.search.call_args.args[0], "Comment m'affilier à la CNSS ? etudiant")
+        self.assertEqual(generate.clarify_options(result["answer"]), [])
+
+    def test_english_reply_is_answered_in_english_not_asked_again(self):
+        history = self._clarified_history("en", "How do I register as an independent worker with the CNSS?")
+        result, _, client = self._answer_reply("student", history)
+        self.assertEqual(generate.clarify_options(result["answer"]), [])
+        last_user_msg = client.chat.completions.create.call_args.kwargs["messages"][-1]["content"]
+        self.assertIn(generate.LANG_DIRECTIVE["en"], last_user_msg)
+
+
+class TestCnssRoleOrdering(unittest.TestCase):
+    def setUp(self):
+        self.pool = [_role_hit("Non Sal Secteur agr1 Affiliation (Non Salarié)"),
+                     _role_hit("Sal Secteur agr1 Immatriculation (Salarie)"),
+                     _role_hit("Emp Secteur non agr1 Affiliation (Employeur)")]
+
+    def test_employer_question_puts_employer_pages_first(self):
+        out = generate._role_first("Comment m'affilier à la CNSS comme employeur ?", self.pool)
+        self.assertIn("(Employeur)", out[0].title)
+        self.assertEqual(len(out), 3)
+
+    def test_non_salarie_is_not_mistaken_for_salarie(self):
+        out = generate._role_first("Affiliation CNSS d'un travailleur non salarié", self.pool)
+        self.assertIn("Non Sal", out[0].title)
+
+    def test_readable_titles_carry_the_role_in_both_languages(self):
+        pool = [_role_hit("Affiliation — non-salarié, secteur agricole"),
+                _role_hit("الانخراط — غير الأجير، القطاع الفلاحي"),
+                _role_hit("Affiliation — employeur, secteur agricole"),
+                _role_hit("الانخراط — المؤجر، القطاع الفلاحي")]
+        out = generate._role_first("Comment m'affilier à la CNSS comme employeur ?", pool)
+        self.assertEqual([h.title for h in out[:2]], ["Affiliation — employeur, secteur agricole",
+                                                       "الانخراط — المؤجر، القطاع الفلاحي"])
+
+    def test_unmarked_pages_keep_their_place(self):
+        # Arabic CNSS pages have Arabic titles with no role marker -- they must not be pushed down
+        arabic = _role_hit("الانخراط بالصندوق الوطني للضمان الاجتماعي")
+        pool = [arabic, _role_hit("Emp Secteur agr1 Affiliation (Employeur)"),
+                _role_hit("Non Sal Secteur agr1 Affiliation (Non Salarié)")]
+        out = generate._role_first("كيف أنخرط في الضمان الاجتماعي كعامل غير أجير؟", pool)
+        self.assertIs(out[0], arabic)
+        self.assertIn("(Employeur)", out[-1].title)  # the other role goes to the back
+
+    def test_question_without_cnss_is_left_alone(self):
+        self.assertEqual(generate._role_first("Services ANETI pour un employeur", self.pool), self.pool)
+
+    def test_cnss_question_without_role_is_left_alone(self):
+        self.assertEqual(generate._role_first("Comment m'affilier à la CNSS ?", self.pool), self.pool)
+
+
+class TestUserFacingWording(unittest.TestCase):
+    def test_llm_is_not_given_the_word_extraits(self):
+        mock_retriever = MagicMock()
+        mock_retriever.search.return_value = [make_hit()]
+        with patch.dict(os.environ, {"GROQ_API_KEY": "test-key"}), patch("groq.Groq") as mock_groq_cls:
+            mock_client = MagicMock()
+            mock_client.chat.completions.create.return_value.choices[0].message.content = "ok"
+            mock_groq_cls.return_value = mock_client
+            generate.answer("une question complete", retriever=mock_retriever, use_cache=False)
+        messages = mock_client.chat.completions.create.call_args.kwargs["messages"]
+        self.assertTrue(messages[-1]["content"].startswith("Sources officielles disponibles"))
+        self.assertNotIn("Extraits", messages[-1]["content"])
+
+
 class TestDenseFloorWiring(unittest.TestCase):
     def test_no_rerank_passes_the_dense_floor(self):
         mock_retriever = MagicMock()
@@ -381,7 +482,23 @@ class TestGroqRetryAndDegradation(unittest.TestCase):
             mock_groq_cls.return_value = MagicMock()
             result = generate.answer("une question", retriever=mock_retriever, use_cache=False)
         self.assertFalse(result["abstained"])
+        self.assertTrue(result["busy"])
         self.assertEqual(result["answer"], generate.BUSY_MESSAGE["fr"])
+
+    def test_daily_quota_gets_its_own_message(self):
+        mock_retriever = MagicMock()
+        mock_retriever.search.return_value = [make_hit()]
+        import httpx
+        from groq import RateLimitError
+        request = httpx.Request("POST", "https://api.groq.com/openai/v1/chat/completions")
+        error = RateLimitError("Rate limit reached for model on tokens per day (TPD): Limit 200000",
+                               response=httpx.Response(429, request=request), body=None)
+        with patch.dict(os.environ, {"GROQ_API_KEY": "test-key"}), \
+             patch("groq.Groq"), \
+             patch("generate._call_groq_with_retry", side_effect=error):
+            result = generate.answer("comment obtenir une bourse", retriever=mock_retriever, use_cache=False)
+        self.assertTrue(result["busy"])
+        self.assertEqual(result["answer"], generate.DAILY_LIMIT_MESSAGE["fr"])
 
 
 if __name__ == "__main__":

@@ -1,6 +1,7 @@
 ---
 id: non-salaries-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-5d9779d6
-title: Non Sal Secteur non agr2 avantage2 (Non Salarié)
+title: تأجيل دفع اشتراكات العملة غير الأجراء في إطار تشجيع الباعثين الجدد — غير الأجير، القطاع غير الفلاحي
+original_title: Non Sal Secteur non agr2 avantage2 (Non Salarié)
 domain: employment
 subtopic: non-salaries
 lang: ar

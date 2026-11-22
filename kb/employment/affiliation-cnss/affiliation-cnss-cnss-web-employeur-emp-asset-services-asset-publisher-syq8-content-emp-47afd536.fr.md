@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-47afd536
-title: Emp Secteur agr1 Assiette (Employeur)
+title: Assiette des cotisations — employeur, secteur agricole
+original_title: Emp Secteur agr1 Assiette (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

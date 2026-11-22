@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-b6cf20d7
-title: Emp Secteur pêche1 Affiliation regime complementaire (Employeur)
+title: الانخراط في النظام التكميلي — المؤجر، قطاع الصيد البحري
+original_title: Emp Secteur pêche1 Affiliation regime complementaire (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

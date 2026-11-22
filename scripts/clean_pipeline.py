@@ -55,6 +55,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from crawler.classify import Classifier, normalize  # noqa: E402
+from scripts.cnss_titles import readable_title  # noqa: E402
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
@@ -369,9 +370,12 @@ def populate_kb(apply: bool):
                 written += 1
                 continue
             keywords = meta.get("hint_keywords") or taxonomy["domains"][domain]["subtopics"][subtopic].get("keywords") or []
+            title = meta.get("title") or ""
+            readable = readable_title(title, lang, body)
             out_front = {
                 "id": kb_id,
-                "title": meta.get("title") or "",
+                "title": readable or title,
+                **({"original_title": title} if readable else {}),
                 "domain": domain,
                 "subtopic": subtopic,
                 "lang": lang,
@@ -391,7 +395,9 @@ def populate_kb(apply: bool):
             }
             out_path.parent.mkdir(parents=True, exist_ok=True)
             front_yaml = yaml.safe_dump(out_front, allow_unicode=True, sort_keys=False, width=1000).strip()
-            out_path.write_text(f"---\n{front_yaml}\n---\n\n{body}\n", encoding="utf-8")
+            # newline="\n": kb/ must be byte-identical on every OS (DVC hashes it, .gitattributes
+            # forces LF) -- plain write_text writes "\r\n" on Windows.
+            out_path.write_text(f"---\n{front_yaml}\n---\n\n{body}\n", encoding="utf-8", newline="\n")
             written += 1
 
     stale = 0

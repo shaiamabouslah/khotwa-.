@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-ab302f26
-title: Emp gens maison Affiliation (Employeur)
+title: Affiliation — employeur, gens de maison
+original_title: Emp gens maison Affiliation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

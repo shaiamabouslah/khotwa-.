@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-44b537ac
-title: Sal Secteur peche2 Immatriculation (Salarie)
+title: التسجيل — الأجير، قطاع الصيد البحري
+original_title: Sal Secteur peche2 Immatriculation (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

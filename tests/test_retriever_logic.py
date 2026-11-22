@@ -18,6 +18,25 @@ from retriever import (BI_SCORE_OVERRIDE, DEFAULT_MIN_DENSE_SCORE, DEFAULT_MIN_R
                        Hit, Retriever)
 
 
+class TestEmbeddingFingerprint(unittest.TestCase):
+    def test_same_texts_same_fingerprint(self):
+        from retriever import _embedding_fingerprint
+        self.assertEqual(_embedding_fingerprint("m", ["a", "b"]), _embedding_fingerprint("m", ["a", "b"]))
+
+    def test_edited_text_with_same_count_is_detected(self):
+        # the case a row-count check could never catch
+        from retriever import _embedding_fingerprint
+        self.assertNotEqual(_embedding_fingerprint("m", ["a", "b"]), _embedding_fingerprint("m", ["a", "c"]))
+
+    def test_model_change_is_detected(self):
+        from retriever import _embedding_fingerprint
+        self.assertNotEqual(_embedding_fingerprint("m1", ["a"]), _embedding_fingerprint("m2", ["a"]))
+
+    def test_text_boundaries_matter(self):
+        from retriever import _embedding_fingerprint
+        self.assertNotEqual(_embedding_fingerprint("m", ["ab", "c"]), _embedding_fingerprint("m", ["a", "bc"]))
+
+
 def make_hit(score: float, bi_score: float | None = None) -> Hit:
     return Hit(score=score, chunk_id="c1", doc_id="d1", lang="fr", domain="studies",
                subtopic="bourses", title="t", org="o", section="s", url="u", text="txt",

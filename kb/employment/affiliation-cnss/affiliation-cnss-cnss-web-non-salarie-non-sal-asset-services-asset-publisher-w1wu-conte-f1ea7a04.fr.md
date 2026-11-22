@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-f1ea7a04
-title: Non Sal Secteur non agr1 avantage2 (Non Salarié)
+title: Avantages — non-salarié, secteur non agricole
+original_title: Non Sal Secteur non agr1 avantage2 (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

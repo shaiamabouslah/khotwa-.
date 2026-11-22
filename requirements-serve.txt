@@ -1,0 +1,18 @@
+# What the running assistant needs, and nothing else: the web app (scripts/api.py) and the
+# command-line chat (scripts/generate.py --chat). This is what the Docker image installs.
+# Evaluation and data preparation need more -- see requirements-rag.txt.
+#
+# Pinned exact (==) for the same reason as requirements-rag.txt.
+#
+#   pip install -r requirements-serve.txt
+
+numpy==2.4.6
+torch==2.14.1
+sentence-transformers==6.2.0
+groq==0.37.1
+python-dotenv==1.2.4
+
+# itsdangerous signs the login session cookie
+fastapi==0.121.2
+uvicorn==0.38.0
+itsdangerous==2.2.0

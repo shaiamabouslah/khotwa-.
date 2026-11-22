@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-4f9bc7bc
-title: Emp gens maison Immatriculation (Employeur)
+title: التسجيل — المؤجر، عملة المنازل
+original_title: Emp gens maison Immatriculation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

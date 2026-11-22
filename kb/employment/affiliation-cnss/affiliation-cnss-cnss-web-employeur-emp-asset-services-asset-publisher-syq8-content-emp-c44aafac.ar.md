@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-c44aafac
-title: Emp Secteur pêche2 Assiette (Employeur)
+title: قاعدة الاشتراكات — المؤجر، قطاع الصيد البحري
+original_title: Emp Secteur pêche2 Assiette (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

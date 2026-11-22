@@ -20,8 +20,13 @@ Usage:
   python scripts/eval_ragas.py                       # all questions in data/rag/questions.jsonl
   python scripts/eval_ragas.py --file data/rag/hard_questions.jsonl
   python scripts/eval_ragas.py --limit 10             # first N only, for a quick/cheap run
-  python scripts/eval_ragas.py --sleep 3              # pace calls, stay under Groq's free-tier
-                                                        # TPM cap on a full run (41+ questions)
+  python scripts/eval_ragas.py --sleep 25             # pace calls, stay under Groq's free-tier
+                                                        # per-minute token cap
+  python scripts/eval_ragas.py --sleep 25 --resume    # continue a run stopped by the daily cap
+
+Groq's free tier also caps tokens per day (200k for the default model); one evaluated answer is a
+generation call plus several judge calls of a few thousand tokens each, so a full run spans more
+than one day: the run stops at the daily cap and --resume picks up where it left off.
 
 Results are written incrementally to data/rag/ragas_results.json (one entry per question, as
 soon as it's scored) so a 429 or a crash partway through a long run loses only the questions
@@ -31,6 +36,7 @@ import argparse
 import asyncio
 import json
 import os
+import re
 import sys
 import time
 import types
@@ -57,7 +63,8 @@ from openai import AsyncOpenAI  # noqa: E402
 from ragas.llms import llm_factory  # noqa: E402
 from ragas.metrics.collections import ContextRelevance, Faithfulness  # noqa: E402
 
-from generate import DEFAULT_MODEL, answer  # noqa: E402
+from api import WEB_RERANK  # noqa: E402  (score the exact retrieval setting the web app uses)
+from generate import DEFAULT_MODEL, answer, clarify_options, split_sources  # noqa: E402
 from retriever import Retriever  # noqa: E402
 
 
@@ -70,26 +77,51 @@ def build_judge(model: str):
     return llm_factory(model=model, provider="openai", client=client, max_tokens=4096)
 
 
-async def eval_one(q: dict, retriever: Retriever, faithfulness: Faithfulness,
-                    context_relevance: ContextRelevance, gen_model: str) -> dict:
-    # Everything here can hit a Groq rate limit (generation call included, not just the judge
-    # calls) -- one question's 429 must never crash the whole batch and lose every other result.
-    try:
-        result = answer(q["q"], retriever, lang=q.get("lang"), model=gen_model)
-        if result["abstained"] or not result["hits"]:
-            return {"q": q["q"], "abstained": True, "faithfulness": None, "context_relevance": None, "error": None}
+async def _score(q: dict, result: dict, faithfulness: Faithfulness, context_relevance: ContextRelevance):
+    body, _ = split_sources(result["answer"])
+    # Same text per hit the generator saw (build_context): title + chunk, not the chunk alone.
+    contexts = [f"{h.title}\n{h.text}" for h in result["hits"]]
+    faith = await faithfulness.ascore(user_input=q["q"], response=body, retrieved_contexts=contexts)
+    ctx = await context_relevance.ascore(user_input=q["q"], retrieved_contexts=contexts)
+    return faith.value, ctx.value
 
-        contexts = [h.text for h in result["hits"]]
-        faith_score = await faithfulness.ascore(
-            user_input=q["q"], response=result["answer"], retrieved_contexts=contexts)
-        ctx_score = await context_relevance.ascore(user_input=q["q"], retrieved_contexts=contexts)
-    except Exception as e:
-        return {"q": q["q"], "abstained": False, "faithfulness": None, "context_relevance": None,
-                "error": f"{type(e).__name__}: {e}"}
-    return {
-        "q": q["q"], "abstained": False,
-        "faithfulness": faith_score.value, "context_relevance": ctx_score.value, "error": None,
-    }
+
+async def eval_one(q: dict, retriever: Retriever, faithfulness: Faithfulness,
+                    context_relevance: ContextRelevance, gen_model: str, retry_wait: float,
+                    retries: int) -> dict:
+    """Scores what the web app would answer (same rerank setting as scripts/api.py, the source list
+    appended by sources_block() stripped so only the model's own claims are judged). Turns that
+    are not a generated answer -- abstention, clarification question, Groq busy, or a reply
+    citing no source -- are counted by outcome instead of being scored."""
+    row = {"q": q["q"], "lang": q.get("lang"), "outcome": None, "faithfulness": None,
+           "context_relevance": None, "error": None}
+    for attempt in range(1, retries + 2):
+        # Everything here can hit a Groq rate limit (generation included, not just the judge) --
+        # one question's 429 must never crash the batch; retry it after a pause.
+        try:
+            result = answer(q["q"], retriever, lang=q.get("lang"), model=gen_model, rerank=WEB_RERANK)
+            body, _ = split_sources(result["answer"])
+            # Checked first: a rate-limited generation also comes back with no hits, and was once
+            # miscounted as an abstention for most of a run.
+            if result.get("busy"):
+                raise RuntimeError(f"Groq rate limit: {result['answer']}")
+            if result["abstained"]:
+                row["outcome"] = "abstained"
+            elif clarify_options(body):
+                row["outcome"] = "clarification"
+            elif not re.search(r"\[\d+\]", body):
+                row["outcome"] = "declined"
+            else:
+                row["outcome"] = "answer"
+                row["faithfulness"], row["context_relevance"] = await _score(
+                    q, result, faithfulness, context_relevance)
+            row["error"] = None
+            return row
+        except Exception as e:
+            row["error"] = f"{type(e).__name__}: {e}"
+            if attempt <= retries:
+                time.sleep(retry_wait)
+    return row
 
 
 async def main_async():
@@ -100,7 +132,13 @@ async def main_async():
     ap.add_argument("--gen-model", default=DEFAULT_MODEL)
     ap.add_argument("--sleep", type=float, default=0.0,
                      help="seconds to wait between questions, to stay under Groq's free-tier TPM cap")
+    ap.add_argument("--retry-wait", type=float, default=20.0,
+                     help="seconds to wait before retrying a question that failed (usually a Groq 429)")
+    ap.add_argument("--retries", type=int, default=3, help="retries per question after a failure")
     ap.add_argument("--out", default="data/rag/ragas_results.json")
+    ap.add_argument("--resume", action="store_true",
+                     help="keep the questions already evaluated in --out, run only the missing or failed "
+                          "ones -- a full run needs more than one day of Groq's free-tier token quota")
     a = ap.parse_args()
 
     questions = [json.loads(l) for l in open(a.file, encoding="utf-8") if l.strip()]
@@ -113,43 +151,70 @@ async def main_async():
     retriever = Retriever()
 
     out_path = ROOT / a.out
+    stopped = False
+    done = {}
+    if a.resume and out_path.exists():
+        saved = json.loads(out_path.read_text(encoding="utf-8"))
+        done = {r["q"]: r for r in (saved["rows"] if isinstance(saved, dict) else saved)
+                if r.get("outcome") and not r.get("error")}
+        print(f"resuming: {len(done)} question(s) already evaluated in {a.out}")
     rows = []
     for i, q in enumerate(questions, 1):
-        r = await eval_one(q, retriever, faithfulness, context_relevance, a.gen_model)
+        if q["q"] in done:
+            rows.append(done[q["q"]])
+            continue
+        if stopped:
+            rows.append({"q": q["q"], "lang": q.get("lang"), "outcome": None, "faithfulness": None,
+                         "context_relevance": None, "error": "not run: Groq daily quota reached"})
+            continue
+        r = await eval_one(q, retriever, faithfulness, context_relevance, a.gen_model, a.retry_wait, a.retries)
         rows.append(r)
-        out_path.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
-        if r["abstained"]:
-            tag = "ABSTAINED"
-        elif r["error"]:
+        if r["error"] and "per day" in r["error"]:
+            # Nothing more can run until the rolling daily window frees up; --resume continues later.
+            stopped = True
+            print("Groq daily token quota reached -- stopping; rerun with --resume later to continue.")
+        out_path.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
+        if r["error"]:
             tag = f"ERROR: {r['error']}"
-        else:
+        elif r["outcome"] == "answer":
             tag = f"faith={r['faithfulness']:.2f} ctx_rel={r['context_relevance']:.2f}"
-        print(f"[{i}/{len(questions)}] {tag}  {q['q'][:70]}")
-        if a.sleep and i < len(questions):
+        else:
+            tag = r["outcome"].upper()
+        print(f"[{i}/{len(questions)}] [{r['lang']}] {tag}  {q['q'][:70]}")
+        if a.sleep and i < len(questions) and not stopped:
             time.sleep(a.sleep)
 
-    scored = [r for r in rows if not r["abstained"] and not r["error"]]
-    n_abstained = sum(1 for r in rows if r["abstained"])
-    n_errors = sum(1 for r in rows if r["error"])
-    summary = {"file": a.file, "n_questions": len(rows), "n_scored": len(scored),
-               "n_abstained": n_abstained, "n_errors": n_errors,
-               "gen_model": a.gen_model, "judge_model": a.judge_model}
-    print(f"\n=== {a.file} ({len(rows)} questions, {n_abstained} abstained, {n_errors} errors) ===")
-    if scored:
-        avg_faith = sum(r["faithfulness"] for r in scored) / len(scored)
-        avg_ctx = sum(r["context_relevance"] for r in scored) / len(scored)
-        summary["mean_faithfulness"] = avg_faith
-        summary["mean_context_relevance"] = avg_ctx
-        print(f"mean faithfulness:      {avg_faith:.3f}")
-        print(f"mean context_relevance: {avg_ctx:.3f}")
-        low_faith = [r for r in scored if r["faithfulness"] < 0.8]
-        if low_faith:
-            print(f"\n{len(low_faith)} question(s) with faithfulness < 0.8 (possible hallucination):")
-            for r in low_faith:
-                print(f"  {r['faithfulness']:.2f}  {r['q'][:70]}")
+    def means(group: list[dict]) -> dict:
+        scored = [r for r in group if r["outcome"] == "answer" and not r["error"]]
+        out = {"n": len(group), "n_scored": len(scored)}
+        for k in ("abstained", "clarification", "declined"):
+            out[f"n_{k}"] = sum(1 for r in group if r["outcome"] == k)
+        out["n_errors"] = sum(1 for r in group if r["error"])
+        if scored:
+            out["mean_faithfulness"] = sum(r["faithfulness"] for r in scored) / len(scored)
+            out["mean_context_relevance"] = sum(r["context_relevance"] for r in scored) / len(scored)
+        return out
+
+    summary = {"file": a.file, "gen_model": a.gen_model, "judge_model": a.judge_model,
+               "rerank": WEB_RERANK, **means(rows),
+               "by_lang": {lang: means([r for r in rows if (r["lang"] or "?") == lang])
+                           for lang in sorted({r["lang"] or "?" for r in rows})}}
+    print(f"\n=== {a.file} ===")
+    print(f"{'lang':<5}{'n':>4}{'scored':>8}{'abst':>6}{'clar':>6}{'decl':>6}{'err':>5}{'faith':>8}{'ctx_rel':>9}")
+    for lang, m in [*summary["by_lang"].items(), ("ALL", summary)]:
+        f = m.get("mean_faithfulness")
+        c = m.get("mean_context_relevance")
+        print(f"{lang:<5}{m['n']:>4}{m['n_scored']:>8}{m['n_abstained']:>6}{m['n_clarification']:>6}"
+              f"{m['n_declined']:>6}{m['n_errors']:>5}{'' if f is None else f'{f:.3f}':>8}"
+              f"{'' if c is None else f'{c:.3f}':>9}")
+    low_faith = [r for r in rows if r["faithfulness"] is not None and r["faithfulness"] < 0.8]
+    if low_faith:
+        print(f"\n{len(low_faith)} answer(s) with faithfulness < 0.8 (possible hallucination):")
+        for r in low_faith:
+            print(f"  {r['faithfulness']:.2f}  [{r['lang']}] {r['q'][:70]}")
 
     out_path.write_text(json.dumps({"summary": summary, "rows": rows}, ensure_ascii=False, indent=2),
-                         encoding="utf-8")
+                        encoding="utf-8", newline="\n")
     print(f"\nFull results written to {out_path.relative_to(ROOT)}")
 
 

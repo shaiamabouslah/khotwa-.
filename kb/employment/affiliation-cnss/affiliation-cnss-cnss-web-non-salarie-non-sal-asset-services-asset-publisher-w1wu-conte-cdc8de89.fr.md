@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-cdc8de89
-title: Non Sal Secteur peche1 Affiliation (Non Salarié)
+title: Affiliation — non-salarié, secteur de la pêche
+original_title: Non Sal Secteur peche1 Affiliation (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

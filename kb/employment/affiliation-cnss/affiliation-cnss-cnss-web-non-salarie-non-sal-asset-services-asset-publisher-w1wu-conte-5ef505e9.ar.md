@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-5ef505e9
-title: Non Sal Secteur peche3 Cotisations (Non Salarié)
+title: قاعدة الاشتراكات — غير الأجير، قطاع الصيد البحري
+original_title: Non Sal Secteur peche3 Cotisations (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

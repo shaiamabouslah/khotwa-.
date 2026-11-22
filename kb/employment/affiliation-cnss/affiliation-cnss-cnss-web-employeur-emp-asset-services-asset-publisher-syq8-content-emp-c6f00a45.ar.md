@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-c6f00a45
-title: Emp travailleurs chantiers cotisations (Employeur)
+title: قاعدة الاشتراكات — المؤجر، عملة الحضائر
+original_title: Emp travailleurs chantiers cotisations (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

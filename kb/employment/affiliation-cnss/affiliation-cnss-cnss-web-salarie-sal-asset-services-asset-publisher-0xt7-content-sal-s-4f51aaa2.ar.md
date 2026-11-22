@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-4f51aaa2
-title: Sal Secteur non agr1 actions licenciement3 (Salarie)
+title: الإجراءات في حالة الطرد — الأجير، القطاع غير الفلاحي
+original_title: Sal Secteur non agr1 actions licenciement3 (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

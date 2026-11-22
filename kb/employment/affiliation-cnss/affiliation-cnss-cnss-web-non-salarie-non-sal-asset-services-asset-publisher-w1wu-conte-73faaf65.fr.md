@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-73faaf65
-title: Non Sal Secteur agr3 Affiliation (Non Salarié)
+title: Affiliation — non-salarié, secteur agricole
+original_title: Non Sal Secteur agr3 Affiliation (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

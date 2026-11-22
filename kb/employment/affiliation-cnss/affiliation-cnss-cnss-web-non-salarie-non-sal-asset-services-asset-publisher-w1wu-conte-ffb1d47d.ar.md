@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-ffb1d47d
-title: Non Sal Secteur agr1 Affiliation (Non Salarié)
+title: الانخراط — غير الأجير، القطاع الفلاحي
+original_title: Non Sal Secteur agr1 Affiliation (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

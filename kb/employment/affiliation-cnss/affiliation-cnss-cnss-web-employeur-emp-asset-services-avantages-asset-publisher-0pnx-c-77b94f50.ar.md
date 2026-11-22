@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-avantages-asset-publisher-0pnx-c-77b94f50
-title: Emp Secteur non agr5 Contenu Avantage6 (Employeur)
+title: الامتيازات — المؤجر، القطاع غير الفلاحي
+original_title: Emp Secteur non agr5 Contenu Avantage6 (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

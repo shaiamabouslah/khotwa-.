@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-510df6a3
-title: Emp Secteuré non agr1 Affiliation (Employeur)
+title: Affiliation — employeur, secteur non agricole
+original_title: Emp Secteuré non agr1 Affiliation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-25966984
-title: Sal Secteur non agr1 Immatriculation (Salarie)
+title: التسجيل — الأجير، القطاع غير الفلاحي
+original_title: Sal Secteur non agr1 Immatriculation (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

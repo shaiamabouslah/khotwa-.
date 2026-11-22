@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-e027bee8
-title: Non Sal Secteur peche2 Cotisations (Non Salarié)
+title: Assiette des cotisations — non-salarié, secteur de la pêche
+original_title: Non Sal Secteur peche2 Cotisations (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

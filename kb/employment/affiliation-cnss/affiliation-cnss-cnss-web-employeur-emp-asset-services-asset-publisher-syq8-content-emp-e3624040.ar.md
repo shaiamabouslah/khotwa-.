@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-e3624040
-title: Emp Secteuré non agr1 Remise penalites (Employeur)
+title: الإعفاء من خطايا التأخير — المؤجر، القطاع غير الفلاحي
+original_title: Emp Secteuré non agr1 Remise penalites (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

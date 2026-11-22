@@ -38,6 +38,8 @@ class ApiTestBase(unittest.TestCase):
         # HISTORY_DIR above doesn't retroactively move it, so it's patched separately here.
         self._titles_patcher = patch.object(api, "TITLES_PATH", Path(self._tmpdir.name) / "_titles.json")
         self._titles_patcher.start()
+        self._events_patcher = patch.object(api.monitoring, "EVENTS_PATH", Path(self._tmpdir.name) / "events.jsonl")
+        self._events_patcher.start()
         api._retriever = MagicMock()
         # Each TestClient instance keeps its own cookie jar -- a fresh one per registered user
         # simulates two different browsers/people.
@@ -47,6 +49,7 @@ class ApiTestBase(unittest.TestCase):
         self._history_patcher.stop()
         self._users_patcher.stop()
         self._titles_patcher.stop()
+        self._events_patcher.stop()
         api._retriever = None
         self._tmpdir.cleanup()
 
@@ -122,7 +125,8 @@ class TestConversations(ApiTestBase):
         resp = self.client.get(f"/conversations/{conv_id}")
         self.assertEqual(resp.status_code, 200)
         self.assertEqual(resp.json()["turns"],
-                         [{"question": "Q1", "answer": "A1", "abstained": False, "sources": []}])
+                         [{"question": "Q1", "answer": "A1", "abstained": False, "sources": [], "options": [],
+                           "turn": 0}])
 
     def test_get_unknown_conversation_is_404(self):
         self._register(self.client, "etudiant1")
@@ -222,7 +226,8 @@ class TestChatEndpoint(ApiTestBase):
         with patch.object(api.generate, "answer", return_value=_answer_stub("reponse", False)):
             resp = self.client.post("/chat", json={"conversation_id": conv_id, "question": "une question"})
         self.assertEqual(resp.status_code, 200)
-        self.assertEqual(resp.json(), {"answer": "reponse", "abstained": False, "sources": []})
+        self.assertEqual(resp.json(), {"answer": "reponse", "abstained": False, "sources": [], "options": [],
+                                       "turn": 0})
 
     def test_blank_question_rejected(self):
         self._register(self.client, "etudiant1")
@@ -305,6 +310,105 @@ class TestChatEndpoint(ApiTestBase):
             body = self.client.post("/chat", json={"conversation_id": conv_id, "question": "q"}).json()
         self.assertEqual(body["answer"], "Les extraits ne couvrent pas cette question.")
         self.assertEqual(body["sources"], [])
+
+    def _clarification(self):
+        labels = [generate.SECTOR_LABELS[s]["fr"] for s in generate.SECTOR_SUBTOPICS["non-salaries"]]
+        return generate.SECTOR_CLARIFY_MESSAGE["fr"].format(options=", ".join(labels)), labels
+
+    def test_clarification_comes_with_clickable_options(self):
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        msg, labels = self._clarification()
+        with patch.object(api.generate, "answer", return_value=_answer_stub(msg)):
+            body = self.client.post("/chat", json={"conversation_id": conv_id, "question": "q"}).json()
+        self.assertEqual(body["options"], labels)
+
+    def test_reopened_conversation_offers_options_only_on_the_open_question(self):
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        msg, labels = self._clarification()
+        for reply in (msg, "Reponse finale.", msg):
+            with patch.object(api.generate, "answer", return_value=_answer_stub(reply)):
+                self.client.post("/chat", json={"conversation_id": conv_id, "question": "q"})
+        turns = self.client.get(f"/conversations/{conv_id}").json()["turns"]
+        self.assertEqual([t["options"] for t in turns], [[], [], labels])
+
+    def _events(self):
+        return api.monitoring.read_events()
+
+    def test_each_question_is_logged_with_its_outcome(self):
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        with patch.object(api.generate, "answer", return_value=self._answer_with_sources("Voir [1].")):
+            self.client.post("/chat", json={"conversation_id": conv_id, "question": "une vraie question"})
+        with patch.object(api.generate, "answer", return_value=_answer_stub("Je n'ai pas trouvé.")):
+            self.client.post("/chat", json={"conversation_id": conv_id, "question": "une autre question"})
+        with patch.object(api.generate, "answer", return_value=_answer_stub("pas d'info", abstained=True)):
+            self.client.post("/chat", json={"conversation_id": conv_id, "question": "couscous ?"})
+        with patch.object(api.generate, "answer", return_value=_answer_stub("Bonjour !")):
+            self.client.post("/chat", json={"conversation_id": conv_id, "question": "bonjour"})
+        events = self._events()
+        self.assertEqual([e["outcome"] for e in events], ["answer", "uncited", "no_match", "chitchat"])
+        self.assertTrue(all("latency_ms" in e for e in events))
+        self.assertNotIn("etudiant1", str(events))  # usernames are stored hashed
+
+    def test_failed_question_is_logged_as_error(self):
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        with patch.object(api.generate, "answer", side_effect=ValueError("boom")):
+            self.client.post("/chat", json={"conversation_id": conv_id, "question": "une question"})
+        self.assertEqual(self._events()[0]["outcome"], "error")
+
+    def test_busy_reply_is_logged_but_not_kept_in_history_nor_rateable(self):
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        busy = dict(_answer_stub(generate.BUSY_MESSAGE["ar"]), busy=True)
+        with patch.object(api.generate, "answer", return_value=busy):
+            data = self.client.post("/chat", json={"conversation_id": conv_id, "question": "سؤال"}).json()
+        self.assertIsNone(data["turn"])
+        self.assertEqual(self._events()[0]["outcome"], "busy")
+        self.assertEqual(self.client.get(f"/conversations/{conv_id}").json()["turns"], [])
+        seen = []
+        def answer(*args, history, **kwargs):
+            seen.append(list(history))
+            return self._answer_with_sources("Voir [1].")
+        with patch.object(api.generate, "answer", side_effect=answer):
+            data = self.client.post("/chat", json={"conversation_id": conv_id, "question": "سؤال"}).json()
+        self.assertEqual(seen, [[]])
+        self.assertEqual(data["turn"], 0)
+
+    def test_feedback_counts_only_the_latest_vote(self):
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        with patch.object(api.generate, "answer", return_value=self._answer_with_sources("Voir [1].")):
+            turn = self.client.post("/chat", json={"conversation_id": conv_id, "question": "q"}).json()["turn"]
+        for value in ("down", "up"):
+            r = self.client.post("/feedback", json={"conversation_id": conv_id, "turn": turn, "value": value})
+            self.assertEqual(r.status_code, 200)
+        m = self.client.get("/metrics").json()
+        self.assertEqual((m["feedback"]["up"], m["feedback"]["down"]), (1, 0))
+        self.assertEqual(m["recent_downvoted"], [])
+
+    def test_feedback_validation(self):
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        self.assertEqual(self.client.post("/feedback", json={"conversation_id": conv_id, "turn": 0,
+                                                             "value": "meh"}).status_code, 400)
+        self.assertEqual(self.client.post("/feedback", json={"conversation_id": conv_id, "turn": 5,
+                                                             "value": "up"}).status_code, 404)
+
+    def test_metrics_aggregate_and_require_login(self):
+        self.assertEqual(self.client.get("/metrics").status_code, 401)
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        with patch.object(api.generate, "answer", return_value=self._answer_with_sources("Voir [1].")):
+            self.client.post("/chat", json={"conversation_id": conv_id, "question": "q1"})
+        with patch.object(api.generate, "answer", return_value=_answer_stub("pas d'info", abstained=True)):
+            self.client.post("/chat", json={"conversation_id": conv_id, "question": "recette du couscous ?"})
+        m = self.client.get("/metrics").json()
+        self.assertEqual(m["questions"], 2)
+        self.assertEqual(m["answer_rate"], 0.5)
+        self.assertEqual(m["recent_unanswered"][0]["question"], "recette du couscous ?")
 
     def test_health_reports_key_and_retriever_state(self):
         body = self.client.get("/health").json()

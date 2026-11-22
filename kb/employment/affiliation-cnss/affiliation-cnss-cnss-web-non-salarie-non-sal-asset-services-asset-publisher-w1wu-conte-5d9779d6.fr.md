@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-5d9779d6
-title: Non Sal Secteur non agr2 avantage2 (Non Salarié)
+title: Report de paiement des cotisations des travailleurs non salariés dans le cadre… — non-salarié, secteur non agricole
+original_title: Non Sal Secteur non agr2 avantage2 (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

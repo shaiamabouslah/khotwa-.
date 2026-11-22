@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-35eb8be8
-title: Non Sal Secteur non agr3 Cotisations (Non Salarié)
+title: قاعدة الاشتراكات — غير الأجير، القطاع غير الفلاحي
+original_title: Non Sal Secteur non agr3 Cotisations (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

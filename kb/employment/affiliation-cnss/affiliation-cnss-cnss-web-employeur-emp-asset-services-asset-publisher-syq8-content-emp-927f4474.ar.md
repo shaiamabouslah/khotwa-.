@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-927f4474
-title: Emp Secteur non agr1 Attestations (Employeur)
+title: شهادة خلاص — المؤجر، القطاع غير الفلاحي
+original_title: Emp Secteur non agr1 Attestations (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

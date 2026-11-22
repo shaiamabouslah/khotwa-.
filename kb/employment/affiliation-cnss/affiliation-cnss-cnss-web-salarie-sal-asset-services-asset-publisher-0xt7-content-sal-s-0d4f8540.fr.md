@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-0d4f8540
-title: Sal Secteur peche1 actions licenciement1 (Salarie)
+title: Prestations familiales et droits aux soins pour les salariés ayant perdu leur… — salarié, secteur de la pêche
+original_title: Sal Secteur peche1 actions licenciement1 (Salarie)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

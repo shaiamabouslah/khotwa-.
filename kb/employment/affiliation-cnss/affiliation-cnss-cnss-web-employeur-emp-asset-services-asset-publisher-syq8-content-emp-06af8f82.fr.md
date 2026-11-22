@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-06af8f82
-title: Emp Secteur pêche3 Immatriculation (Employeur)
+title: Immatriculation — employeur, secteur de la pêche
+original_title: Emp Secteur pêche3 Immatriculation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

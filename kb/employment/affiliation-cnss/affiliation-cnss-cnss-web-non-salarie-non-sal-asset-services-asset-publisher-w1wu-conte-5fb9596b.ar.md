@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-5fb9596b
-title: Non Sal autres artistes Affiliation (Non Salarié)
+title: الانخراط — غير الأجير، الفنانون
+original_title: Non Sal autres artistes Affiliation (Non Salarié)
 domain: employment
 subtopic: affiliation-cnss
 lang: ar

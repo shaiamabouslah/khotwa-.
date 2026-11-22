@@ -1,6 +1,7 @@
 ---
 id: affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-4f9bc7bc
-title: Emp gens maison Immatriculation (Employeur)
+title: Immatriculation — employeur, gens de maison
+original_title: Emp gens maison Immatriculation (Employeur)
 domain: employment
 subtopic: affiliation-cnss
 lang: fr

@@ -7,8 +7,10 @@ __pycache__/
 /data/raw/
 /data/state/crawl.log
 
-# Local web UI accounts (scripts/auth.py) -- per-machine, not shared via git/DVC
+# Local web UI accounts (scripts/auth.py) and usage logs (scripts/monitoring.py) --
+# per-machine, not shared via git/DVC
 /data/users.json
+/data/monitoring/
 
 # Pre-downloaded pip wheels (see Dockerfile) -- large binaries, not worth
 # versioning; re-downloadable from PyPI/pytorch.org whenever needed.
