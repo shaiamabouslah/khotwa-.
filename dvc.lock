@@ -10,8 +10,8 @@ stages:
       nfiles: 340
     - path: scripts/rag_prepare.py
       hash: md5
-      md5: 960c57c08b6d97b306105785e77f1e8c
-      size: 19992
+      md5: caa2c09d83cd207069c5061cc6ce3226
+      size: 22983
     outs:
     - path: data/rag/chunks.jsonl
       hash: md5
