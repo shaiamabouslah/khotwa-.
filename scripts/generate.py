@@ -141,6 +141,38 @@ SECTOR_CLARIFY_MESSAGE = {
     "en": "This CNSS procedure depends on your sector of activity. Which sector applies: {options}?",
 }
 
+# A long chat sent every prior turn verbatim to Groq forever -- fine for a few turns, but token
+# usage then grows unbounded with session length, and this project has already hit Groq's
+# free-tier caps (8000 TPM / 200k TPD) repeatedly during testing. Only the most recent turns
+# need to be verbatim (exact phrasing for pronoun/follow-up resolution); anything older is
+# collapsed into a single compact "topics already covered" line instead of being dropped
+# outright or resent in full -- deterministic, no extra LLM call, same spirit as the other
+# guards in this file.
+SHORT_TERM_TURNS = 6
+LONG_TERM_DIGEST = {
+    "fr": "Sujets déjà abordés plus tôt dans cette conversation : {topics}.",
+    "ar": "المواضيع التي تم تناولها سابقاً في هذا الحوار: {topics}.",
+    "en": "Topics already covered earlier in this conversation: {topics}.",
+}
+
+
+def _split_history(history: list[tuple[str, str, bool]]):
+    """-> (short_term, older_topics): short_term is the last SHORT_TERM_TURNS raw turns (sent
+    verbatim); older_topics is the deduped list of non-abstained user questions from every turn
+    before that window (used for the long-term digest and to extend the anchor fallback past
+    the window)."""
+    if not history:
+        return [], []
+    short_term = history[-SHORT_TERM_TURNS:]
+    older = history[:-SHORT_TERM_TURNS] if len(history) > SHORT_TERM_TURNS else []
+    seen = set()
+    older_topics = []
+    for q, _, abstained in older:
+        if not abstained and q not in seen:
+            seen.add(q)
+            older_topics.append(q)
+    return short_term, older_topics
+
 
 def _mentions_sector(text: str, subtopic: str) -> bool:
     low = text.lower()
@@ -330,8 +362,14 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 5, lang: 
     `history` is given: a multi-turn answer depends on the conversation so far, not just the
     latest message, and the cache key doesn't account for that.
 
-    history: prior (user_text, assistant_text, abstained) turns, oldest first. Retrieval always
-    tries the bare `question` first -- most follow-ups are complete questions on their own and
+    history: prior (user_text, assistant_text, abstained) turns, oldest first. Only the last
+    SHORT_TERM_TURNS are sent verbatim to the LLM; anything older is collapsed into one compact
+    "topics already covered" line (see _split_history) so a long single chat doesn't resend its
+    whole transcript, and doesn't lose track of early topics either, every turn. The retrieval
+    anchor fallback below still looks at the full, un-windowed history.
+
+    Retrieval always tries the bare `question` first -- most follow-ups are complete questions on
+    their own and
     combining them with the previous turn unconditionally was found (by hand) to actively hurt:
     a 3rd/4th turn would get glued to whatever the immediately preceding turn happened to be,
     including a prior abstention, and the query would drift off-topic turn by turn. Combining
@@ -384,7 +422,7 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 5, lang: 
     # them). A short question has no real content to go on by itself, so only it gets the
     # history-anchored retry; anything longer is trusted to stand on its own.
     if not hits and history and len(question.split()) <= 3:
-        anchor = " ".join(h[0] for h in history if not h[2])
+        anchor = " ".join(h[0] for h in history if not h[2])  # all turns, not just short-term
         if anchor:
             retrieval_query = f"{anchor} {question}"
             hits = retriever.search(retrieval_query, k=k, domain=domain, subtopic=subtopic, rerank=rerank)
@@ -401,7 +439,12 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 5, lang: 
         client = Groq()  # reads GROQ_API_KEY from the environment
         context = build_context(hits)
         messages = [{"role": "system", "content": SYSTEM_PROMPT}]
-        for prev_q, prev_a, _ in (history or []):
+        short_term, older_topics = _split_history(history or [])
+        if older_topics:
+            digest = LONG_TERM_DIGEST.get(q_lang, LONG_TERM_DIGEST["fr"]).format(
+                topics="; ".join(older_topics))
+            messages.append({"role": "system", "content": digest})
+        for prev_q, prev_a, _ in short_term:
             messages.append({"role": "user", "content": prev_q})
             messages.append({"role": "assistant", "content": prev_a})
         # On a follow-up turn, `question` alone can be a single word ("agricole") that only

@@ -21,3 +21,8 @@ python-dotenv==1.2.4
 ragas==0.4.3
 openai==3.3.0
 instructor==1.17.0
+
+# scripts/api.py only (web UI -- itsdangerous signs the login session cookie)
+fastapi==0.121.2
+uvicorn==0.38.0
+itsdangerous==2.2.0

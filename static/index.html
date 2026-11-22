@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khotwa</title>
+<style>
+  :root {
+    --bg: #f3f4f6;
+    --panel: #ffffff;
+    --panel-2: #fafafa;
+    --sidebar-bg: #171a21;
+    --sidebar-text: #e5e7eb;
+    --sidebar-muted: #9aa0ab;
+    --sidebar-hover: #23272f;
+    --sidebar-active: #2d323c;
+    --border: #e5e7eb;
+    --text: #1f2328;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --accent-text: #ffffff;
+    --bot-bubble: #eef1f5;
+    --bot-text: #1f2328;
+    --abstain-border: #f59e0b;
+    --danger: #dc2626;
+    --shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.08);
+    --radius: 14px;
+    --hero-1: #122142;
+    --hero-2: #1f3a73;
+    --hero-3: #b24a35;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1115;
+      --panel: #171a21;
+      --panel-2: #1b1f27;
+      --sidebar-bg: #0b0d11;
+      --sidebar-text: #e5e7eb;
+      --sidebar-muted: #828a97;
+      --sidebar-hover: #171a21;
+      --sidebar-active: #20242d;
+      --border: #272c35;
+      --text: #e6e8eb;
+      --muted: #8b949e;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --accent-text: #ffffff;
+      --bot-bubble: #20242d;
+      --bot-text: #e6e8eb;
+      --abstain-border: #f59e0b;
+      --danger: #f87171;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body { min-height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  button { font-family: inherit; }
+  .icon { width: 18px; height: 18px; flex-shrink: 0; }
+  .hidden { display: none !important; }
+
+  /* ================= Landing page ================= */
+  #landing-nav {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: rgba(18, 33, 66, 0.82);
+    backdrop-filter: blur(8px);
+    color: #f5f6fa;
+  }
+  .nav-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .nav-inner .brand-group { display: flex; align-items: center; gap: 9px; margin-right: auto; }
+  .nav-links { display: flex; gap: 22px; }
+  .nav-links a { color: rgba(245, 246, 250, 0.82); text-decoration: none; font-size: 13.5px; }
+  .nav-links a:hover { color: #fff; }
+  .nav-cta {
+    border: none;
+    border-radius: 9px;
+    padding: 8px 16px;
+    background: #fff;
+    color: var(--hero-1);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .nav-cta:hover { background: #e9ebf1; }
+  @media (max-width: 640px) { .nav-links { display: none; } }
+
+  #hero-section {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--hero-1), var(--hero-2) 55%, var(--hero-3) 140%);
+    background-size: 220% 220%;
+    animation: heroShift 16s ease infinite;
+    color: #f5f6fa;
+    padding: 64px 24px 90px;
+  }
+  @keyframes heroShift {
+    0% { background-position: 0% 40%; }
+    50% { background-position: 100% 60%; }
+    100% { background-position: 0% 40%; }
+  }
+  .hero-blob { position: absolute; border-radius: 50%; filter: blur(70px); opacity: 0.35; }
+  .hero-blob-1 { width: 360px; height: 360px; background: #4f7cff; top: -100px; left: -100px; }
+  .hero-blob-2 { width: 300px; height: 300px; background: #e0724f; bottom: -100px; right: -60px; }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .hero-text { flex: 1 1 420px; max-width: 540px; }
+  .hero-logo {
+    width: 40px; height: 40px; border-radius: 11px;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 17px; margin-bottom: 18px;
+  }
+  .hero-text h1 { margin: 0 0 14px; font-size: 38px; line-height: 1.15; letter-spacing: -0.02em; }
+  .hero-ar {
+    margin: 0 0 16px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(245, 246, 250, 0.88);
+    font-family: "Segoe UI", Tahoma, sans-serif;
+  }
+  .hero-tagline { margin: 0 0 28px; font-size: 15px; line-height: 1.6; color: rgba(245, 246, 250, 0.78); max-width: 480px; }
+  .btn-cta {
+    border: none;
+    border-radius: 10px;
+    padding: 13px 22px;
+    background: #fff;
+    color: var(--hero-1);
+    font-size: 14.5px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    transition: transform 0.15s ease;
+  }
+  .btn-cta:hover { transform: translateY(-2px); }
+  .hero-visual { position: relative; flex: 1 1 320px; min-width: 280px; max-width: 420px; height: 300px; }
+  .hero-building { position: absolute; right: -4%; bottom: 0; width: 86%; max-width: 420px; opacity: 0.95; }
+  .hero-badge {
+    position: absolute;
+    width: 46px; height: 46px; border-radius: 14px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    animation: floatY 4.5s ease-in-out infinite;
+  }
+  .hero-badge .icon { width: 22px; height: 22px; }
+  .badge-doc { bottom: 58%; right: 4%; animation-delay: 0s; }
+  .badge-cap { bottom: 50%; right: 34%; animation-delay: 0.8s; }
+  .badge-case { bottom: 70%; right: 30%; animation-delay: 1.6s; }
+  @keyframes floatY { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+  .feature-section { padding: 72px 24px; }
+  .feature-section.alt { background: var(--panel-2); }
+  .feature-inner { max-width: 760px; margin: 0 auto; }
+  .feature-icon {
+    width: 52px; height: 52px; border-radius: 14px;
+    background: linear-gradient(135deg, var(--hero-2), var(--hero-3));
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; margin-bottom: 20px;
+  }
+  .feature-icon .icon { width: 26px; height: 26px; }
+  .feature-inner h2 { margin: 0 0 10px; font-size: 26px; }
+  .feature-inner > p { margin: 0 0 20px; color: var(--muted); font-size: 15px; line-height: 1.6; max-width: 560px; }
+  .feature-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .feature-list li {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    padding: 13px 15px;
+    font-size: 13.5px;
+    box-shadow: var(--shadow);
+  }
+
+  .cta-section { padding: 80px 24px; text-align: center; }
+  .cta-inner { max-width: 520px; margin: 0 auto; }
+  .cta-inner h2 { margin: 0 0 10px; font-size: 26px; }
+  .cta-inner p { margin: 0 0 24px; color: var(--muted); font-size: 15px; }
+  .cta-inner .btn-cta { background: var(--accent); color: #fff; box-shadow: 0 10px 24px rgba(37, 99, 235, 0.3); }
+  .cta-inner .btn-cta:hover { background: var(--accent-hover); }
+
+  #auth-section {
+    padding: 70px 24px 90px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background:
+      radial-gradient(circle at 18px 18px, rgba(31, 58, 115, 0.08) 1.5px, transparent 1.5px),
+      var(--bg);
+    background-size: 26px 26px, auto;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) #auth-section {
+      background:
+        radial-gradient(circle at 18px 18px, rgba(120, 150, 220, 0.08) 1.5px, transparent 1.5px),
+        var(--bg);
+      background-size: 26px 26px, auto;
+    }
+  }
+  .auth-card {
+    width: 100%;
+    max-width: 360px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 20px 45px -15px rgba(18, 33, 66, 0.35), var(--shadow);
+    padding: 30px 26px 26px;
+    position: relative;
+    overflow: hidden;
+  }
+  .auth-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--hero-2), var(--hero-3));
+  }
+  .auth-card-logo {
+    width: 42px; height: 42px; border-radius: 12px;
+    background: linear-gradient(135deg, var(--hero-2), var(--hero-3));
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 700; font-size: 17px;
+    margin-bottom: 14px;
+    box-shadow: 0 6px 16px rgba(31, 58, 115, 0.35);
+  }
+  .auth-card h1 { margin: 0 0 4px; font-size: 20px; }
+  .auth-card p.sub { margin: 0 0 20px; font-size: 13px; color: var(--muted); }
+  .auth-tabs {
+    display: flex; gap: 4px;
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 10px; padding: 3px; margin-bottom: 20px;
+  }
+  .auth-tab {
+    flex: 1; border: none; background: transparent; color: var(--muted);
+    padding: 8px 0; border-radius: 8px; font-size: 13px; cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .auth-tab.active { background: var(--accent); color: var(--accent-text); box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35); }
+  .field { margin-bottom: 14px; }
+  .field label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+  .field-icon { position: relative; }
+  .field-icon .field-svg {
+    position: absolute; left: 11px; top: 50%; transform: translateY(-50%);
+    width: 16px; height: 16px; color: var(--muted); pointer-events: none;
+  }
+  .field-icon input {
+    width: 100%; padding: 10px 11px 10px 34px; border-radius: 9px;
+    border: 1px solid var(--border); background: var(--panel-2); color: var(--text);
+    font-size: 14px; transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .field-icon input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18); }
+  .auth-error { font-size: 13px; color: var(--danger); margin: 4px 0 10px; min-height: 16px; }
+  .btn-primary {
+    width: 100%; padding: 11px 0; border-radius: 9px; border: none;
+    background: var(--accent); color: var(--accent-text);
+    font-size: 14px; font-weight: 600; cursor: pointer;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+    transition: background 0.15s ease, transform 0.1s ease;
+  }
+  .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-primary:disabled { opacity: 0.6; cursor: default; transform: none; }
+
+  @media (max-width: 760px) {
+    .hero-text h1 { font-size: 28px; }
+    .hero-visual { display: none; }
+  }
+
+  /* ================= Main app (post-login) ================= */
+  #main-screen {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+  }
+  #sidebar {
+    width: 268px;
+    flex-shrink: 0;
+    background: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    display: flex;
+    flex-direction: column;
+    transition: margin-left 0.2s ease;
+  }
+  #sidebar-header { padding: 16px 14px 10px; display: flex; align-items: center; justify-content: space-between; }
+  #sidebar-header .brand-group { display: flex; align-items: center; gap: 9px; }
+  .brand-mark {
+    width: 26px; height: 26px; border-radius: 8px;
+    background: linear-gradient(135deg, var(--hero-2), var(--hero-3));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; color: #fff; flex-shrink: 0;
+  }
+  #sidebar-header .brand { font-weight: 600; font-size: 15px; }
+  #hamburger { display: none; background: transparent; border: none; color: var(--sidebar-text); cursor: pointer; padding: 6px; }
+  #new-chat-btn {
+    margin: 4px 14px 10px; display: flex; align-items: center; gap: 8px;
+    padding: 9px 11px; border-radius: 9px; border: 1px solid #3a3f4a;
+    background: transparent; color: var(--sidebar-text); font-size: 13px; cursor: pointer;
+  }
+  #new-chat-btn:hover { background: var(--sidebar-hover); }
+  #conversation-list { flex: 1; overflow-y: auto; padding: 2px 8px; }
+  .conv-item {
+    display: flex; align-items: center; gap: 4px; padding: 9px 10px;
+    border-radius: 8px; cursor: pointer; font-size: 13px; color: var(--sidebar-muted); position: relative;
+  }
+  .conv-item:hover { background: var(--sidebar-hover); color: var(--sidebar-text); }
+  .conv-item.active { background: var(--sidebar-active); color: var(--sidebar-text); }
+  .conv-item .conv-title { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .conv-item .conv-rename, .conv-item .conv-delete {
+    opacity: 0; background: transparent; border: none; color: var(--sidebar-muted);
+    cursor: pointer; padding: 2px; border-radius: 5px; flex-shrink: 0;
+  }
+  .conv-item:hover .conv-rename, .conv-item:hover .conv-delete { opacity: 1; }
+  .conv-item .conv-rename:hover { color: var(--sidebar-text); background: rgba(255, 255, 255, 0.08); }
+  .conv-item .conv-delete:hover { color: var(--danger); background: rgba(220, 38, 38, 0.12); }
+  #sidebar-footer {
+    border-top: 1px solid #262b33; padding: 12px 14px;
+    display: flex; align-items: center; justify-content: space-between; font-size: 13px;
+  }
+  #sidebar-username { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  #logout-btn { background: transparent; border: none; color: var(--sidebar-muted); cursor: pointer; padding: 4px; border-radius: 6px; display: flex; }
+  #logout-btn:hover { color: var(--sidebar-text); background: var(--sidebar-hover); }
+
+  #chat-area { flex: 1; display: flex; flex-direction: column; min-width: 0; background: var(--bg); }
+  #chat-header {
+    padding: 12px 20px; border-bottom: 1px solid var(--border); background: var(--panel);
+    display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600;
+  }
+  #mobile-menu-btn { display: none; background: transparent; border: none; color: var(--text); cursor: pointer; }
+
+  #empty-state { flex: 1; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; text-align: center; padding: 24px; }
+  #messages {
+    flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 12px;
+    max-width: 760px; width: 100%; margin: 0 auto;
+  }
+  .msg { max-width: 78%; padding: 11px 14px; border-radius: 16px; line-height: 1.5; font-size: 14px; white-space: pre-wrap; box-shadow: var(--shadow); animation: msgIn 0.18s ease; }
+  @keyframes msgIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+  .msg.user { align-self: flex-end; background: var(--accent); color: var(--accent-text); border-bottom-right-radius: 4px; }
+  .msg.bot { align-self: flex-start; background: var(--bot-bubble); color: var(--bot-text); border-bottom-left-radius: 4px; }
+  .msg.bot.abstained { border: 1px solid var(--abstain-border); }
+  .msg.pending { opacity: 0.6; }
+
+  #welcome { flex: 1; overflow-y: auto; display: flex; align-items: center; justify-content: center; padding: 24px; }
+  .welcome-inner { max-width: 620px; text-align: center; }
+  .welcome-inner h2 { margin: 0 0 6px; font-size: 22px; }
+  .welcome-inner p { margin: 0 0 24px; color: var(--muted); font-size: 14px; }
+  .chip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; text-align: left; }
+  .chip {
+    display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 12px;
+    border: 1px solid var(--border); background: var(--panel); color: var(--text);
+    font-size: 13px; cursor: pointer; box-shadow: var(--shadow); text-align: left;
+  }
+  .chip:hover { border-color: var(--accent); }
+  .chip .feat-icon { width: 30px; height: 30px; border-radius: 8px; flex-shrink: 0; background: var(--panel-2); display: flex; align-items: center; justify-content: center; color: var(--accent); }
+  .chip .feat-icon .icon { width: 16px; height: 16px; }
+  @media (max-width: 560px) { .chip-grid { grid-template-columns: 1fr; } }
+
+  #composer { border-top: 1px solid var(--border); background: var(--panel); padding: 14px 20px 18px; }
+  #composer-inner {
+    max-width: 760px; margin: 0 auto; display: flex; align-items: flex-end; gap: 8px;
+    background: var(--panel-2); border: 1px solid var(--border); border-radius: 16px; padding: 8px 8px 8px 14px;
+  }
+  #question-input { flex: 1; border: none; background: transparent; color: var(--text); font-size: 14px; resize: none; max-height: 140px; padding: 6px 0; font-family: inherit; }
+  #question-input:focus { outline: none; }
+  #mic-lang { border: none; background: transparent; color: var(--muted); font-size: 12px; cursor: pointer; }
+  .round-btn { width: 34px; height: 34px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; }
+  #mic-btn { background: transparent; color: var(--muted); }
+  #mic-btn:hover { background: var(--border); }
+  #mic-btn.listening { background: var(--danger); color: #fff; animation: pulse 1.2s infinite; }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.45); }
+    70% { box-shadow: 0 0 0 9px rgba(220, 38, 38, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+  }
+  #send-btn { background: var(--accent); color: var(--accent-text); }
+  #send-btn:hover { background: var(--accent-hover); }
+  #send-btn:disabled { opacity: 0.5; cursor: default; }
+
+  @media (max-width: 760px) {
+    #hamburger, #mobile-menu-btn { display: flex; }
+    #sidebar { position: fixed; inset: 0 auto 0 0; z-index: 20; margin-left: -268px; }
+    #sidebar.open { margin-left: 0; box-shadow: 4px 0 24px rgba(0,0,0,0.3); }
+    #sidebar-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 15; }
+    #sidebar-backdrop.open { display: block; }
+    .msg { max-width: 88%; }
+  }
+</style>
+</head>
+<body>
+
+<div id="landing-screen">
+  <nav id="landing-nav">
+    <div class="nav-inner">
+      <span class="brand-group"><span class="brand-mark">K</span><span class="brand">Khotwa</span></span>
+      <div class="nav-links">
+        <a href="#section-etudes">Études</a>
+        <a href="#section-emploi">Emploi</a>
+        <a href="#section-contact">Contact</a>
+      </div>
+      <button class="nav-cta" data-scroll-to="#auth-section" type="button">Se connecter</button>
+    </div>
+  </nav>
+
+  <section id="hero-section">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-logo reveal">K</div>
+        <h1 class="reveal">Tes démarches administratives, simplifiées</h1>
+        <p class="hero-ar reveal" dir="rtl" lang="ar">خطوة وحدة تفصلك على كل معلومة إدارية -- المنح، التسجيل، الضمان الاجتماعي، بعث المشاريع</p>
+        <p class="hero-tagline reveal">Bourses, équivalences de diplôme, inscriptions, affiliation CNSS, création d'entreprise -- Khotwa répond en français, arabe ou anglais, à partir des sources officielles tunisiennes.</p>
+        <button class="btn-cta reveal" data-scroll-to="#auth-section" type="button">Commencer -- c'est gratuit</button>
+      </div>
+      <div class="hero-visual">
+        <svg class="hero-building" viewBox="0 0 400 240" preserveAspectRatio="xMidYMid meet">
+          <polygon points="80,90 200,30 320,90" fill="rgba(255,255,255,0.16)"/>
+          <rect x="70" y="90" width="260" height="12" fill="rgba(255,255,255,0.2)"/>
+          <rect x="90" y="102" width="16" height="100" fill="rgba(255,255,255,0.14)"/>
+          <rect x="145" y="102" width="16" height="100" fill="rgba(255,255,255,0.14)"/>
+          <rect x="200" y="102" width="16" height="100" fill="rgba(255,255,255,0.14)"/>
+          <rect x="255" y="102" width="16" height="100" fill="rgba(255,255,255,0.14)"/>
+          <rect x="300" y="102" width="16" height="100" fill="rgba(255,255,255,0.14)"/>
+          <rect x="60" y="202" width="280" height="9" fill="rgba(255,255,255,0.2)"/>
+          <rect x="50" y="211" width="300" height="9" fill="rgba(255,255,255,0.16)"/>
+        </svg>
+        <div class="hero-badge badge-cap">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/>
+          </svg>
+        </div>
+        <div class="hero-badge badge-case">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+          </svg>
+        </div>
+        <div class="hero-badge badge-doc">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/>
+            <path d="M9 13h6"/><path d="M9 17h6"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-etudes" class="feature-section">
+    <div class="feature-inner">
+      <div class="feature-icon">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/>
+        </svg>
+      </div>
+      <h2>Pour les étudiants</h2>
+      <p>Bourses, équivalence de diplôme, inscription universitaire, stages de fin d'études -- Khotwa connaît les démarches exactes et où les faire, directement depuis les sources officielles.</p>
+      <ul class="feature-list">
+        <li>Bourses et prêts universitaires</li>
+        <li>Équivalence de diplôme</li>
+        <li>Inscription et réinscription</li>
+        <li>Erasmus+ et mobilité internationale</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="section-emploi" class="feature-section alt">
+    <div class="feature-inner">
+      <div class="feature-icon">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+        </svg>
+      </div>
+      <h2>Pour les employés</h2>
+      <p>Affiliation à la CNSS, démarches de recherche d'emploi, création d'entreprise -- Khotwa t'oriente vers la bonne procédure selon ton secteur d'activité.</p>
+      <ul class="feature-list">
+        <li>Affiliation CNSS (salarié ou non-salarié)</li>
+        <li>Services ANETI pour chercher un emploi</li>
+        <li>Création d'entreprise et APII</li>
+        <li>Stages et contrats</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="section-contact" class="cta-section">
+    <div class="cta-inner">
+      <h2>Prêt à commencer ?</h2>
+      <p>Crée un compte en quelques secondes et pose ta première question -- en français, arabe ou anglais.</p>
+      <button class="btn-cta" data-scroll-to="#auth-section" type="button">Créer mon compte</button>
+    </div>
+  </section>
+
+  <section id="auth-section">
+    <div class="auth-card">
+      <div class="auth-card-logo">K</div>
+      <h1>Khotwa</h1>
+      <p class="sub">Démarches administratives en Tunisie -- FR / AR / EN</p>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-mode="login" type="button">Se connecter</button>
+        <button class="auth-tab" data-mode="register" type="button">Créer un compte</button>
+      </div>
+      <form id="auth-form">
+        <div class="field">
+          <label for="auth-username">Nom d'utilisateur</label>
+          <div class="field-icon">
+            <svg class="field-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+            </svg>
+            <input id="auth-username" type="text" autocomplete="username" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="auth-password">Mot de passe</label>
+          <div class="field-icon">
+            <svg class="field-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <input id="auth-password" type="password" autocomplete="current-password" required>
+          </div>
+        </div>
+        <p class="auth-error" id="auth-error"></p>
+        <button class="btn-primary" id="auth-submit" type="submit">Se connecter</button>
+      </form>
+    </div>
+  </section>
+</div>
+
+<div id="main-screen" class="hidden">
+  <div id="sidebar-backdrop"></div>
+  <aside id="sidebar">
+    <div id="sidebar-header">
+      <span class="brand-group">
+        <span class="brand-mark">K</span>
+        <span class="brand">Khotwa</span>
+      </span>
+      <button id="hamburger" type="button" aria-label="Fermer le menu">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <button id="new-chat-btn" type="button">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      Nouvelle conversation
+    </button>
+    <div id="conversation-list"></div>
+    <div id="sidebar-footer">
+      <span id="sidebar-username"></span>
+      <button id="logout-btn" type="button" title="Se déconnecter">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+          <path d="M16 17l5-5-5-5"/><path d="M21 12H9"/>
+        </svg>
+      </button>
+    </div>
+  </aside>
+
+  <main id="chat-area">
+    <div id="chat-header">
+      <button id="mobile-menu-btn" type="button" aria-label="Ouvrir le menu">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <span id="chat-title">Khotwa</span>
+    </div>
+    <div id="empty-state" class="hidden">Sélectionne une conversation, ou crée-en une nouvelle pour commencer.</div>
+    <div id="welcome" class="hidden"></div>
+    <div id="messages" class="hidden"></div>
+    <div id="composer" class="hidden">
+      <div id="composer-inner">
+        <textarea id="question-input" rows="1" placeholder="Pose ta question..."></textarea>
+        <select id="mic-lang" title="Langue de reconnaissance vocale">
+          <option value="fr-FR" selected>FR</option>
+          <option value="ar-SA">AR</option>
+          <option value="en-US">EN</option>
+        </select>
+        <button id="mic-btn" class="round-btn" type="button" title="Dicter la question">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v4"/><path d="M8 23h8"/>
+          </svg>
+        </button>
+        <button id="send-btn" class="round-btn" type="button" title="Envoyer">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>
+        </button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function () {
+  var landingScreen = document.getElementById("landing-screen");
+  var mainScreen = document.getElementById("main-screen");
+  var authForm = document.getElementById("auth-form");
+  var authUsername = document.getElementById("auth-username");
+  var authPassword = document.getElementById("auth-password");
+  var authError = document.getElementById("auth-error");
+  var authSubmit = document.getElementById("auth-submit");
+  var authTabs = document.querySelectorAll(".auth-tab");
+  var authMode = "login";
+
+  var sidebar = document.getElementById("sidebar");
+  var sidebarBackdrop = document.getElementById("sidebar-backdrop");
+  var hamburger = document.getElementById("hamburger");
+  var mobileMenuBtn = document.getElementById("mobile-menu-btn");
+  var newChatBtn = document.getElementById("new-chat-btn");
+  var conversationListEl = document.getElementById("conversation-list");
+  var sidebarUsername = document.getElementById("sidebar-username");
+  var logoutBtn = document.getElementById("logout-btn");
+
+  var chatTitle = document.getElementById("chat-title");
+  var emptyState = document.getElementById("empty-state");
+  var welcomeEl = document.getElementById("welcome");
+  var messagesEl = document.getElementById("messages");
+  var composerEl = document.getElementById("composer");
+  var inputEl = document.getElementById("question-input");
+  var sendBtn = document.getElementById("send-btn");
+  var micBtn = document.getElementById("mic-btn");
+  var micLang = document.getElementById("mic-lang");
+
+  var conversations = [];
+  var activeConvId = null;
+  var currentUsername = "";
+
+  var SUGGESTIONS = [
+    { icon: "cap", text: "Comment demander une bourse universitaire ?" },
+    { icon: "case", text: "Comment m'affilier à la CNSS ?" },
+    { icon: "doc", text: "Comment créer mon entreprise en Tunisie ?" },
+    { icon: "case", text: "Quels services propose l'ANETI pour chercher un emploi ?" },
+  ];
+  var ICON_SVG = {
+    cap: '<path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/>',
+    case: '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+    doc: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/>'
+  };
+
+  function api(path, opts, timeoutMs) {
+    opts = opts || {};
+    // A truly hung backend request (e.g. the retriever's embedding model stuck loading) would
+    // otherwise leave this fetch's promise pending forever -- which left the composer disabled
+    // and the question unanswered with no way out. An AbortController-based timeout guarantees
+    // the UI always recovers and tells the user something, instead of hanging silently.
+    timeoutMs = timeoutMs || 15000;
+    var controller = new AbortController();
+    var timer = setTimeout(function () { controller.abort(); }, timeoutMs);
+    return fetch(path, Object.assign({ headers: { "Content-Type": "application/json" }, signal: controller.signal }, opts))
+      .then(function (res) {
+        clearTimeout(timer);
+        if (!res.ok) return res.json().catch(function () { return {}; }).then(function (body) {
+          var err = new Error(body.detail || ("HTTP " + res.status));
+          err.status = res.status;
+          throw err;
+        });
+        return res.status === 204 ? null : res.json();
+      })
+      .catch(function (err) {
+        clearTimeout(timer);
+        if (err && err.name === "AbortError") {
+          var timeoutErr = new Error("request timed out");
+          timeoutErr.isTimeout = true;
+          throw timeoutErr;
+        }
+        throw err;
+      });
+  }
+
+  // ---------- Landing page: nav/CTA smooth-scroll + scroll animations ----------
+  document.querySelectorAll("[data-scroll-to]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var target = document.querySelector(btn.dataset.scrollTo);
+      if (target) target.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach(function (a) {
+    a.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      var target = document.querySelector(a.getAttribute("href"));
+      if (target) target.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  // Progressive enhancement: every animated element is fully visible by plain CSS/HTML already
+  // (no inline opacity:0 anywhere above) -- if the GSAP CDN fails to load (offline, blocked),
+  // the page still works, it just doesn't animate.
+  if (window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray(".reveal").forEach(function (el, i) {
+      gsap.fromTo(el, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.6, delay: i * 0.08, ease: "power2.out" });
+    });
+    document.querySelectorAll(".feature-section .feature-inner").forEach(function (el) {
+      gsap.fromTo(el, { opacity: 0, y: 36 }, {
+        opacity: 1, y: 0, duration: 0.7, ease: "power2.out",
+        scrollTrigger: { trigger: el, start: "top 82%" }
+      });
+    });
+    gsap.fromTo("#section-contact .cta-inner", { opacity: 0, y: 24 }, {
+      opacity: 1, y: 0, duration: 0.7, ease: "power2.out",
+      scrollTrigger: { trigger: "#section-contact", start: "top 85%" }
+    });
+  }
+
+  // ---------- Auth ----------
+  authTabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      authMode = tab.dataset.mode;
+      authTabs.forEach(function (t) { t.classList.toggle("active", t === tab); });
+      authSubmit.textContent = authMode === "login" ? "Se connecter" : "Créer le compte";
+      authError.textContent = "";
+    });
+  });
+
+  authForm.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    authError.textContent = "";
+    authSubmit.disabled = true;
+    var payload = { username: authUsername.value.trim(), password: authPassword.value };
+    var endpoint = authMode === "login" ? "/auth/login" : "/auth/register";
+    api(endpoint, { method: "POST", body: JSON.stringify(payload) })
+      .then(function (data) {
+        enterApp(data.username);
+      })
+      .catch(function (err) {
+        authError.textContent = authMode === "login"
+          ? "Nom d'utilisateur ou mot de passe incorrect."
+          : (err.status === 409 ? "Ce nom d'utilisateur est déjà pris." : "Inscription impossible.");
+      })
+      .finally(function () { authSubmit.disabled = false; });
+  });
+
+  function enterApp(username) {
+    currentUsername = username;
+    landingScreen.classList.add("hidden");
+    mainScreen.classList.remove("hidden");
+    sidebarUsername.textContent = username;
+    loadConversations();
+  }
+
+  logoutBtn.addEventListener("click", function () {
+    api("/auth/logout", { method: "POST" }).finally(function () {
+      location.reload();
+    });
+  });
+
+  // ---------- Sidebar / conversations ----------
+  function loadConversations() {
+    api("/conversations").then(function (list) {
+      conversations = list;
+      renderConversationList();
+      if (!activeConvId && conversations.length) {
+        selectConversation(conversations[0].id);
+      } else if (!conversations.length) {
+        createConversation();
+      }
+    });
+  }
+
+  function renderConversationList() {
+    conversationListEl.innerHTML = "";
+    conversations.forEach(function (conv) {
+      var item = document.createElement("div");
+      item.className = "conv-item" + (conv.id === activeConvId ? " active" : "");
+      var title = document.createElement("span");
+      title.className = "conv-title";
+      title.textContent = conv.title;
+
+      var rename = document.createElement("button");
+      rename.className = "conv-rename";
+      rename.type = "button";
+      rename.title = "Renommer";
+      rename.innerHTML = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +
+        '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>';
+      rename.addEventListener("click", function (ev) {
+        ev.stopPropagation();
+        renameConversation(conv.id);
+      });
+
+      var del = document.createElement("button");
+      del.className = "conv-delete";
+      del.type = "button";
+      del.title = "Supprimer";
+      del.innerHTML = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +
+        '<path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>' +
+        '<path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>';
+      del.addEventListener("click", function (ev) {
+        ev.stopPropagation();
+        deleteConversation(conv.id);
+      });
+
+      item.appendChild(title);
+      item.appendChild(rename);
+      item.appendChild(del);
+      item.addEventListener("click", function () { selectConversation(conv.id); });
+      conversationListEl.appendChild(item);
+    });
+  }
+
+  function createConversation() {
+    api("/conversations", { method: "POST" }).then(function (data) {
+      conversations.unshift({ id: data.id, title: "Nouvelle conversation", updated_at: Date.now() / 1000 });
+      renderConversationList();
+      selectConversation(data.id);
+    });
+  }
+
+  function renameConversation(id) {
+    var conv = conversations.find(function (c) { return c.id === id; });
+    var next = prompt("Renommer la conversation :", conv ? conv.title : "");
+    if (next === null) return;
+    next = next.trim();
+    if (!next) return;
+    api("/conversations/" + id, { method: "PATCH", body: JSON.stringify({ title: next }) })
+      .then(function (data) {
+        if (conv) conv.title = data.title;
+        if (id === activeConvId) chatTitle.textContent = data.title;
+        renderConversationList();
+      });
+  }
+
+  function deleteConversation(id) {
+    if (!confirm("Supprimer cette conversation ?")) return;
+    api("/conversations/" + id, { method: "DELETE" }).then(function () {
+      conversations = conversations.filter(function (c) { return c.id !== id; });
+      if (activeConvId === id) {
+        activeConvId = null;
+        if (conversations.length) {
+          selectConversation(conversations[0].id);
+        } else {
+          createConversation();
+        }
+      }
+      renderConversationList();
+    });
+  }
+
+  function renderWelcome() {
+    var chipsHtml = SUGGESTIONS.map(function (s) {
+      return '<button class="chip" data-q="' + s.text.replace(/"/g, "&quot;") + '">' +
+        '<span class="feat-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +
+        ICON_SVG[s.icon] + '</svg></span><span>' + s.text + '</span></button>';
+    }).join("");
+    welcomeEl.innerHTML =
+      '<div class="welcome-inner">' +
+      '<h2>Bonjour, ' + currentUsername + '</h2>' +
+      '<p>Pose ta question sur une démarche administrative, ou pars d\'une suggestion :</p>' +
+      '<div class="chip-grid">' + chipsHtml + '</div>' +
+      '</div>';
+    welcomeEl.querySelectorAll(".chip").forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        inputEl.value = chip.dataset.q;
+        sendQuestion();
+      });
+    });
+  }
+
+  function selectConversation(id) {
+    activeConvId = id;
+    renderConversationList();
+    closeMobileSidebar();
+    emptyState.classList.add("hidden");
+    composerEl.classList.remove("hidden");
+    var conv = conversations.find(function (c) { return c.id === id; });
+    chatTitle.textContent = conv ? conv.title : "Khotwa";
+    api("/conversations/" + id).then(function (data) {
+      if (!data.turns.length) {
+        messagesEl.classList.add("hidden");
+        messagesEl.innerHTML = "";
+        welcomeEl.classList.remove("hidden");
+        renderWelcome();
+        return;
+      }
+      welcomeEl.classList.add("hidden");
+      messagesEl.classList.remove("hidden");
+      messagesEl.innerHTML = "";
+      data.turns.forEach(function (t) {
+        addMessage("user", t.question);
+        addMessage("bot", t.answer, { abstained: t.abstained });
+      });
+    });
+  }
+
+  // ---------- Messages ----------
+  function addMessage(role, text, opts) {
+    opts = opts || {};
+    var div = document.createElement("div");
+    div.className = "msg " + role + (opts.abstained ? " abstained" : "") + (opts.pending ? " pending" : "");
+    div.textContent = text;
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    return div;
+  }
+
+  function sendQuestion() {
+    var question = inputEl.value.trim();
+    if (!question || !activeConvId) return;
+
+    welcomeEl.classList.add("hidden");
+    messagesEl.classList.remove("hidden");
+    addMessage("user", question);
+    inputEl.value = "";
+    autoGrow();
+    inputEl.disabled = true;
+    sendBtn.disabled = true;
+    var pending = addMessage("bot", "...", { pending: true });
+
+    // 150s: generous enough to cover the retriever's embedding model loading on the very first
+    // real question of a server run (can legitimately take over a minute on a slow machine),
+    // without leaving the composer disabled forever if something is genuinely stuck.
+    api("/chat", { method: "POST", body: JSON.stringify({ conversation_id: activeConvId, question: question }) }, 150000)
+      .then(function (data) {
+        pending.remove();
+        addMessage("bot", data.answer, { abstained: data.abstained });
+        var conv = conversations.find(function (c) { return c.id === activeConvId; });
+        if (conv && conv.title === "Nouvelle conversation") {
+          conv.title = question.slice(0, 40);
+          chatTitle.textContent = conv.title;
+          renderConversationList();
+        }
+      })
+      .catch(function (err) {
+        pending.remove();
+        var message = err && err.isTimeout
+          ? "Le serveur met trop de temps a repondre (le modele est peut-etre encore en train de charger la premiere fois). Reessaie dans une minute."
+          : "Erreur de connexion au serveur. Réessaie dans un instant.";
+        addMessage("bot", message, { abstained: true });
+      })
+      .finally(function () {
+        inputEl.disabled = false;
+        sendBtn.disabled = false;
+        inputEl.focus();
+      });
+  }
+
+  sendBtn.addEventListener("click", sendQuestion);
+  inputEl.addEventListener("keydown", function (ev) {
+    if (ev.key === "Enter" && !ev.shiftKey) {
+      ev.preventDefault();
+      sendQuestion();
+    }
+  });
+  function autoGrow() {
+    inputEl.style.height = "auto";
+    inputEl.style.height = Math.min(inputEl.scrollHeight, 140) + "px";
+  }
+  inputEl.addEventListener("input", autoGrow);
+
+  newChatBtn.addEventListener("click", createConversation);
+
+  // ---------- Mobile sidebar ----------
+  function openMobileSidebar() { sidebar.classList.add("open"); sidebarBackdrop.classList.add("open"); }
+  function closeMobileSidebar() { sidebar.classList.remove("open"); sidebarBackdrop.classList.remove("open"); }
+  mobileMenuBtn.addEventListener("click", openMobileSidebar);
+  hamburger.addEventListener("click", closeMobileSidebar);
+  sidebarBackdrop.addEventListener("click", closeMobileSidebar);
+
+  // ---------- Speech-to-text ----------
+  var SpeechRecognitionImpl = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRecognitionImpl) {
+    micBtn.classList.add("hidden");
+    micLang.classList.add("hidden");
+  } else {
+    var recognition = new SpeechRecognitionImpl();
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.onresult = function (event) {
+      var text = event.results[0][0].transcript;
+      inputEl.value = (inputEl.value ? inputEl.value.trim() + " " : "") + text;
+      autoGrow();
+    };
+    recognition.onend = function () { micBtn.classList.remove("listening"); };
+    recognition.onerror = function () { micBtn.classList.remove("listening"); };
+
+    micBtn.addEventListener("click", function () {
+      if (micBtn.classList.contains("listening")) {
+        recognition.stop();
+        return;
+      }
+      try {
+        recognition.lang = micLang.value;
+        recognition.start();
+        micBtn.classList.add("listening");
+      } catch (e) { /* already running, or mic permission denied -- ignore */ }
+    });
+  }
+
+  // ---------- Bootstrap ----------
+  api("/auth/me")
+    .then(function (data) { enterApp(data.username); })
+    .catch(function () { /* not logged in -- landing page already visible by default */ });
+})();
+</script>
+</body>
+</html>

@@ -159,6 +159,71 @@ class TestMultiTurnAnchorFallback(unittest.TestCase):
         self.assertEqual(result["answer"], generate.NO_MATCH_MESSAGE["fr"])
 
 
+class TestShortLongTermHistorySplit(unittest.TestCase):
+    def test_under_window_all_short_term_no_older_topics(self):
+        history = [("Q1", "A1", False), ("Q2", "A2", False)]
+        short_term, older_topics = generate._split_history(history)
+        self.assertEqual(short_term, history)
+        self.assertEqual(older_topics, [])
+
+    def test_over_window_splits_oldest_into_topics(self):
+        history = [(f"Q{i}", f"A{i}", False) for i in range(1, 9)]  # 8 turns, window is 6
+        short_term, older_topics = generate._split_history(history)
+        self.assertEqual(short_term, history[-6:])
+        self.assertEqual(older_topics, ["Q1", "Q2"])
+
+    def test_abstained_older_turns_excluded_from_topics(self):
+        history = [("Q1", "A1", True), ("Q2", "A2", False)] + \
+                  [(f"Qx{i}", f"A{i}", False) for i in range(6)]
+        _, older_topics = generate._split_history(history)
+        self.assertEqual(older_topics, ["Q2"])
+
+    def test_older_topics_deduped_keeping_first_occurrence(self):
+        history = [("Q1", "A1", False), ("Q1", "A1b", False)] + \
+                   [(f"Qx{i}", f"A{i}", False) for i in range(6)]
+        _, older_topics = generate._split_history(history)
+        self.assertEqual(older_topics, ["Q1"])
+
+    def test_empty_history(self):
+        self.assertEqual(generate._split_history([]), ([], []))
+
+
+class TestAnswerUsesTwoTierHistory(unittest.TestCase):
+    def _run_with_history(self, history):
+        mock_retriever = MagicMock()
+        mock_retriever.search.return_value = [make_hit()]
+        with patch.dict(os.environ, {"GROQ_API_KEY": "test-key"}), \
+             patch("groq.Groq") as mock_groq_cls:
+            mock_client = MagicMock()
+            mock_client.chat.completions.create.return_value.choices[0].message.content = "reponse"
+            mock_groq_cls.return_value = mock_client
+            generate.answer("question actuelle", retriever=mock_retriever, use_cache=False, history=history)
+            return mock_client.chat.completions.create.call_args.kwargs["messages"]
+
+    def test_long_history_sends_only_short_term_turns_verbatim(self):
+        history = [(f"Q{i}", f"A{i}", False) for i in range(1, 9)]  # 8 turns
+        messages = self._run_with_history(history)
+        user_contents = [m["content"] for m in messages if m["role"] == "user"]
+        # the 2 oldest turns must NOT appear verbatim anymore
+        self.assertNotIn("Q1", user_contents)
+        self.assertNotIn("Q2", user_contents)
+        self.assertIn("Q3", user_contents)
+
+    def test_long_history_adds_a_digest_system_message_for_older_topics(self):
+        history = [(f"Q{i}", f"A{i}", False) for i in range(1, 9)]
+        messages = self._run_with_history(history)
+        digests = [m["content"] for m in messages if m["role"] == "system"
+                   and m["content"] != generate.SYSTEM_PROMPT]
+        self.assertEqual(len(digests), 1)
+        self.assertIn("Q1", digests[0])
+        self.assertIn("Q2", digests[0])
+
+    def test_short_history_has_no_digest_message(self):
+        history = [("Q1", "A1", False)]
+        messages = self._run_with_history(history)
+        self.assertEqual(len([m for m in messages if m["role"] == "system"]), 1)  # SYSTEM_PROMPT only
+
+
 class TestGroqRetryAndDegradation(unittest.TestCase):
     def _rate_limit_error(self, retry_after: str):
         import httpx
