@@ -26,7 +26,8 @@ def evaluate(r: Retriever, questions: list[dict], hybrid: bool, rerank: bool):
     hits_at = {1: 0, 3: 0, 5: 0}
     rr_sum = 0.0
     per_question = {}
-    for q in questions:
+    for n, q in enumerate(questions, 1):
+        print(f"  [{n}/{len(questions)}] {q['q'][:60]}", flush=True)
         hits = r.search(q["q"], k=5, lang=q.get("lang"), rerank=rerank, hybrid=hybrid, min_score=None)
         doc_ids = [h.doc_id for h in hits]
         pos = doc_ids.index(q["doc_id"]) + 1 if q["doc_id"] in doc_ids else 0
