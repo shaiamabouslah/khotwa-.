@@ -14,7 +14,7 @@ Run:
 Needs GROQ_API_KEY (see generate.py's own docstring) and the same embeddings cache generate.py
 needs. SESSION_SECRET should be set in .env for login sessions to survive a server restart; if
 unset, a random one is generated at startup (fine for a quick demo, just means every restart logs
-everyone out).
+everyone out). Set SESSION_HTTPS_ONLY=1 in .env once the app is served over HTTPS.
 
 The retriever starts loading in a background thread at server startup (~15s: imports + BGE-M3 +
 the embeddings cache), so the first question doesn't pay for it. The web app answers without the
@@ -24,6 +24,12 @@ Conversations: each is stored via generate.load_history/save_history under the c
 "{username}__{conversation_id}" -- reuses that storage mechanism completely as-is (it already
 sanitizes to a safe filename), so a user's conversations are just every data/rag/conversations/
 file whose name starts with "{username}__". No separate index to keep in sync.
+
+UI-only metadata lives in sidecar files next to the history files (generate.py needs no changes):
+  _titles.json     custom conversation titles
+  _hits.json       the retrieved sources of each turn (so reopened conversations keep their
+                   routing banner and source cards exactly as first shown)
+  _feedback.jsonl  thumbs up/down given to answers (one JSON object per line)
 """
 import json
 import os
@@ -34,6 +40,7 @@ import threading
 import time
 from contextlib import asynccontextmanager
 from pathlib import Path
+from collections import defaultdict, deque
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -110,9 +117,34 @@ if not _session_secret:
     print("SESSION_SECRET not set in .env -- using a one-off key for this run; "
           "every restart will log all users out. Set SESSION_SECRET in .env to avoid that.")
     _session_secret = secrets.token_hex(32)
-# KHOTWA_HTTPS=1 when served behind HTTPS: the session cookie is then never sent over plain HTTP.
-app.add_middleware(SessionMiddleware, secret_key=_session_secret, same_site="lax",
-                   https_only=os.environ.get("KHOTWA_HTTPS") == "1")
+app.add_middleware(
+    SessionMiddleware,
+    secret_key=_session_secret,
+    same_site="lax",
+    https_only=os.environ.get("SESSION_HTTPS_ONLY") == "1",
+)
+
+
+# ---------------------------------------------------------------- rate limiting (in-memory)
+# Every /chat costs a Groq call and /auth/* accepts passwords, so both get a small sliding-window
+# limit. Single-process only (fine for this deployment); use a shared store if it ever scales out.
+_rate_lock = threading.Lock()
+_rate_hits: dict[str, deque] = defaultdict(deque)
+
+
+def rate_limit(bucket: str, limit: int, window: int = 60):
+    now = time.monotonic()
+    with _rate_lock:
+        q = _rate_hits[bucket]
+        while q and now - q[0] > window:
+            q.popleft()
+        if len(q) >= limit:
+            raise HTTPException(429, "Trop de requetes. Reessaie dans un instant.")
+        q.append(now)
+
+
+def _client_ip(request: Request) -> str:
+    return request.client.host if request.client else "unknown"
 
 
 def require_user(request: Request) -> str:
@@ -131,6 +163,10 @@ class ChatRequest(BaseModel):
     conversation_id: str
     question: str
     lang: str | None = None
+
+
+class RenameRequest(BaseModel):
+    title: str
 
 
 class Source(BaseModel):
@@ -166,6 +202,7 @@ def health():
 
 @app.post("/auth/register", status_code=201)
 def register(creds: Credentials, request: Request):
+    rate_limit(f"auth:{_client_ip(request)}", limit=10)
     try:
         auth.create_user(creds.username, creds.password)
     except auth.UserError as e:
@@ -176,6 +213,7 @@ def register(creds: Credentials, request: Request):
 
 @app.post("/auth/login")
 def login(creds: Credentials, request: Request):
+    rate_limit(f"auth:{_client_ip(request)}", limit=10)
     if not auth.verify_user(creds.username, creds.password):
         raise HTTPException(401, "nom d'utilisateur ou mot de passe incorrect")
     request.session["username"] = creds.username
@@ -197,29 +235,77 @@ def _conversation_key(username: str, conversation_id: str) -> str:
     return f"{username}__{conversation_id}"
 
 
-# Custom conversation titles (set via rename) live in a small sidecar file next to the history
-# files themselves, keyed by the same "{username}__{conversation_id}" string -- kept separate from
-# generate.py's own history JSON so a rename is pure UI metadata, not conversation content, and
-# generate.py needs zero changes to support it.
+# ------------------------------------------------------------------------- sidecar files
+_io_lock = threading.Lock()
 TITLES_PATH = generate.HISTORY_DIR / "_titles.json"
+HITS_PATH = generate.HISTORY_DIR / "_hits.json"
+FEEDBACK_PATH = generate.HISTORY_DIR / "_feedback.jsonl"
+
+# Only what the UI needs from a retrieved hit -- keeps the sidecar small.
+HIT_FIELDS = ("title", "org", "url", "domain", "subtopic")
 
 
-def _load_titles() -> dict:
-    if not TITLES_PATH.exists():
+def _load_json(path: Path) -> dict:
+    if not path.exists():
         return {}
     try:
-        return json.loads(TITLES_PATH.read_text(encoding="utf-8"))
+        return json.loads(path.read_text(encoding="utf-8"))
     except (json.JSONDecodeError, OSError):
         return {}
 
 
+def _save_json(path: Path, data: dict):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def _load_titles() -> dict:
+    return _load_json(TITLES_PATH)
+
+
 def _save_titles(titles: dict):
-    TITLES_PATH.parent.mkdir(parents=True, exist_ok=True)
-    TITLES_PATH.write_text(json.dumps(titles, ensure_ascii=False, indent=2), encoding="utf-8")
+    _save_json(TITLES_PATH, titles)
 
 
-class RenameRequest(BaseModel):
-    title: str
+def _store_turn_hits(key: str, turn_index: int, hits: list[dict]):
+    slim = [{f: h.get(f) for f in HIT_FIELDS} for h in hits]
+    with _io_lock:
+        data = _load_json(HITS_PATH)
+        per_turn = data.get(key, [])
+        while len(per_turn) <= turn_index:
+            per_turn.append(None)
+        per_turn[turn_index] = slim
+        data[key] = per_turn
+        _save_json(HITS_PATH, data)
+
+
+def _drop_conversation_sidecars(key: str):
+    with _io_lock:
+        for path in (TITLES_PATH, HITS_PATH):
+            data = _load_json(path)
+            if data.pop(key, None) is not None:
+                _save_json(path, data)
+
+
+# ------------------------------------------------------- clarification quick-reply options
+def _extract_options(answer: str) -> list[str]:
+    """When the assistant asks a clarifying question that lists the possible answers
+    ("... De quel secteur s'agit-il : agricole, non agricole, etudiant ?"), return those
+    answers so the UI can show them as tappable buttons. Heuristic on purpose: returns []
+    unless the list is clearly there (2-8 short items after the last colon, before the last
+    question mark)."""
+    text = (answer or "").strip()
+    if "?" not in text:
+        return []
+    head = text[: text.rfind("?")]
+    if ":" not in head:
+        return []
+    tail = head.rsplit(":", 1)[1].strip()
+    parts = re.split(r"\s*[,;]\s*|\s+(?:ou|or|et|and)\s+|\s*\u060c\s*|\s+\u0623\u0648\s+", tail)
+    options = [p.strip(" .;") for p in parts if p.strip(" .;")]
+    if not (2 <= len(options) <= 8) or any(len(o) > 40 for o in options):
+        return []
+    return options
 
 
 @app.get("/conversations")
@@ -244,6 +330,9 @@ def create_conversation(username: str = Depends(require_user)):
     conv_id = secrets.token_hex(4)
     generate.save_history(_conversation_key(username, conv_id), [])
     return {"id": conv_id}
+
+
+_SOURCE_LINE_RE = re.compile(r"^\[(\d+)\]\s+(.+?)\s+\(([^)]+)\)\s+[\u2014-]\s+(https?://\S+)\s*$")
 
 
 @app.get("/conversations/{conversation_id}")
@@ -272,9 +361,10 @@ def rename_conversation(conversation_id: str, body: RenameRequest, username: str
     title = body.title.strip()[:60]
     if not title:
         raise HTTPException(400, "le titre ne peut pas etre vide")
-    titles = _load_titles()
-    titles[key] = title
-    _save_titles(titles)
+    with _io_lock:
+        titles = _load_titles()
+        titles[key] = title
+        _save_titles(titles)
     return {"id": conversation_id, "title": title}
 
 
@@ -285,13 +375,12 @@ def delete_conversation(conversation_id: str, username: str = Depends(require_us
     if not path.exists():
         raise HTTPException(404, "conversation introuvable")
     path.unlink()
-    titles = _load_titles()
-    if titles.pop(key, None) is not None:
-        _save_titles(titles)
+    _drop_conversation_sidecars(key)
 
 
 @app.post("/chat", response_model=ChatResponse)
 def chat(req: ChatRequest, username: str = Depends(require_user)):
+    rate_limit(f"chat:{username}", limit=15)
     question = req.question.strip()
     if not question:
         raise HTTPException(400, "question must not be empty")

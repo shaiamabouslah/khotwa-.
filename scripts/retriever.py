@@ -22,10 +22,10 @@ Library usage:
     # calibrated on real questions vs. out-of-scope ones, see scripts/eval/calibrate_threshold.py.
     hits = r.search("Quelle est la recette du couscous ?")   # -> [] (out of scope)
 
-    # hybrid=True: candidates come from Reciprocal Rank Fusion of the dense ranking and a BM25
-    # ranking -- meant to catch exact-term matches (decree numbers, acronyms, figures). Measured
-    # by scripts/benchmark_retrieval.py: lower than dense on every language (Arabic and Derja
-    # most), so the app stays dense-only.
+    # hybrid=True (experimental, not yet benchmarked against dense-only): candidates come from
+    # Reciprocal Rank Fusion of the dense ranking and a BM25 ranking, not dense similarity
+    # alone -- meant to catch exact-term matches (decree numbers, program acronyms, figures)
+    # a paraphrase-tolerant embedding can miss. Still reranked afterwards same as any other call.
     hits = r.search(q, k=5, hybrid=True)
 
 CLI usage (manual testing, one question at a time):
@@ -55,6 +55,8 @@ from pathlib import Path
 
 import numpy as np
 
+from tracing import span
+
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -77,7 +79,7 @@ def _model_cached(repo_id: str) -> bool:
 if _model_cached(EMBED_MODEL) and _model_cached(RERANK_MODEL):
     os.environ.setdefault("HF_HUB_OFFLINE", "1")
 
-# Calibrated via scripts/eval/calibrate_threshold.py on the 33 real questions (data/rag/
+# Calibrated via scripts/fixes/calibrate_threshold.py on the 33 real questions (data/rag/
 # questions.jsonl) vs. 10 out-of-scope/adjacent-but-uncovered ones (data/rag/negative_questions
 # .jsonl): with rerank=True, genuine top-1 hits scored >=0.664 (one exception: a wrong top-1
 # answer that scored 0.024 -- correctly low), true negatives topped out at 0.221. 0.3 sits in

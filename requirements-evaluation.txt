@@ -1,0 +1,15 @@
+-r requirements.txt
+
+# Local retrieval and MLflow tracking
+mlflow>=3.17
+sentence-transformers>=3.0
+torch>=2.0
+python-dotenv>=1.0
+
+# Groq generation and RAGAS (keep LangChain on the compatible 0.3 line)
+groq>=0.30
+ragas==0.3.9
+langchain==0.3.30
+langchain-community==0.3.31
+langchain-groq==0.3.8
+langchain-huggingface==0.3.1
