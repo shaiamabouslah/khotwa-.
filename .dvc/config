@@ -1,4 +1,8 @@
 [core]
-    remote = localstorage
+    remote = dagshub
 ['remote "localstorage"']
     url = C:/Users/HP/dvc-storage/khotwa
+['remote "dagshub"']
+    url = https://dagshub.com/shaimabouslah/khotwa-..dvc
+    auth = basic
+    jobs = 2

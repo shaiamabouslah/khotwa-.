@@ -123,6 +123,17 @@ def main():
             if rid not in ids:
                 warnings.append(f"{rel}: related id '{rid}' does not exist yet")
 
+    overrides_path = ROOT / "kb" / "overrides.yaml"
+    if overrides_path.exists():
+        for oid, ov in (yaml.safe_load(overrides_path.read_text(encoding="utf-8")) or {}).items():
+            if oid not in ids:
+                errors.append(f"kb/overrides.yaml: '{oid}' is not a document id")
+            elif ov.get("title_ar") and (oid, "fr") not in metas:
+                errors.append(f"kb/overrides.yaml: '{oid}' has title_ar but no French version")
+            unknown = set(ov) - {"title_ar", "notes"}
+            if unknown:
+                errors.append(f"kb/overrides.yaml: '{oid}' has unknown field(s) {sorted(unknown)}")
+
     for w in warnings:
         print(f"WARN  {w}")
     for e in errors:

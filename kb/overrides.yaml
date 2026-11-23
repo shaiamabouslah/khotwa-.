@@ -1,0 +1,339 @@
+# Curated additions to generated kb/ documents, merged by scripts/rag_prepare.py. Kept here
+# because scripts/clean_pipeline.py rewrites the generated .md files.
+#   title_ar: Arabic title of a French-only document, added to its chunks so that an
+#             Arabic or Derja question can reach it (translated from the French title).
+#   notes:    caveats shown to the model as an "Avertissement" section.
+affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-510df6a3:
+  title_ar: الانخراط بالضمان الاجتماعي — المؤجر، القطاع غير الفلاحي
+affiliation-cnss-cnss-web-employeur-emp-asset-services-asset-publisher-syq8-content-emp-c0761a32:
+  title_ar: الإعفاء من خطايا التأخير — المؤجر، قطاع الصيد البحري
+affiliation-cnss-cnss-web-employeur-emp-asset-services-avantages-asset-publisher-0pnx-c-5ed58b07:
+  title_ar: الامتيازات — المؤجر، قطاع الصيد البحري
+affiliation-cnss-cnss-web-employeur-emp-asset-services-avantages-asset-publisher-0pnx-c-c53a5b2f:
+  title_ar: الامتيازات — المؤجر، القطاع غير الفلاحي
+affiliation-cnss-cnss-web-employeur-emp-asset-services-avantages-asset-publisher-0pnx-c-f6e048cd:
+  title_ar: شهادة خلاص — المؤجر، القطاع غير الفلاحي
+affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-14eb2ab6:
+  title_ar: الإعفاء من خطايا التأخير — غير الأجير، القطاع غير الفلاحي
+affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-1ba61f67:
+  title_ar: قاعدة احتساب الاشتراكات — غير الأجير، القطاع غير الفلاحي
+affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-1c5a91a9:
+  title_ar: الامتيازات — غير الأجير، القطاع الفلاحي
+affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-295717f4:
+  title_ar: التدرج في الترسيم بشريحة الدخل — غير الأجير، القطاع غير الفلاحي
+affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-5d9779d6:
+  title_ar: تأجيل دفع اشتراكات العملة غير الأجراء — غير الأجير، القطاع غير الفلاحي
+affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-ab5395a8:
+  title_ar: الامتيازات — غير الأجير، القطاع الفلاحي
+affiliation-cnss-cnss-web-non-salarie-non-sal-asset-services-asset-publisher-w1wu-conte-f1ea7a04:
+  title_ar: الامتيازات — غير الأجير، القطاع غير الفلاحي
+affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-g-86b5913f:
+  title_ar: التسجيل بالضمان الاجتماعي — الأجير، عملة المنازل
+affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-79f36d35:
+  title_ar: التسجيل بالضمان الاجتماعي — الأجير، القطاع الفلاحي
+affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-7b48d2aa:
+  title_ar: منحة من الصندوق الوطني للضمان الاجتماعي للأجراء الذين فقدوا عملهم — الأجير، القطاع غير الفلاحي
+affiliation-cnss-cnss-web-salarie-sal-asset-services-asset-publisher-0xt7-content-sal-s-bda71f51:
+  title_ar: التسجيل بالضمان الاجتماعي — الأجير، قطاع الصيد البحري
+attestations-services-gov-affaires-sociales-2-consultation-du-relev-de-carri-re-pro-49ac8973:
+  title_ar: الاطلاع على كشف المسيرة المهنية
+attestations-services-gov-affaires-sociales-2-consultation-du-relev-de-carri-re-pro-7131ee2e:
+  title_ar: الاطلاع على كشف المسيرة المهنية
+attestations-services-gov-affaires-sociales-2-consultation-du-relev-de-carri-re-pro-f6cdcd10:
+  title_ar: الاطلاع على كشف المسيرة المهنية
+attestations-services-gov-affaires-sociales-2-obtention-des-certificats-d-adh-sion:
+  title_ar: الحصول على شهادات الانخراط
+attestations-services-gov-je-souhaite-beneficier-de-la-couverture-sociale-obtention-54c9ae8c:
+  title_ar: الحصول على شهادات الانخراط
+bourses-best-rnu-annonce-de-candidature-aux-bourses-universitaires-pour-la-rea-26704e06:
+  title_ar: إعلان الترشح للمنح الجامعية لإنجاز مشاريع ختم الدروس (تربصات بحث Globalink)
+bourses-best-rnu-appel-a-candidature-mitacs-2025-2026-index:
+  title_ar: طلب ترشحات لمنح Mitacs 2025-2026
+bourses-best-rnu-appel-a-candidature-pour-des-prets-universitaires-a-letranger-62dcdf8a:
+  title_ar: طلب ترشحات للقروض الجامعية بالخارج
+bourses-best-rnu-appel-a-candidatures-bourses-detudes-ingenieur-ingenieur-du-g-27fe73bb:
+  title_ar: طلب ترشحات لمنح الدراسة «مهندس-مهندس» للحكومة الفرنسية
+bourses-best-rnu-appel-a-candidatures-pour-les-bourses-detudes-dans-les-etabli-3c89c4fa:
+  title_ar: طلب ترشحات لمنح الدراسة للسنة الجامعية 2025-2026
+bourses-best-rnu-attestation-de-non-boursier-index:
+  title_ar: شهادة عدم التمتع بمنحة بالخارج
+bourses-best-rnu-avis-de-reouverture-de-delai-dappel-a-candidature-index:
+  title_ar: بلاغ إعادة فتح آجال الترشح
+bourses-best-rnu-bourse-dexemption-automne-2022-index:
+  title_ar: منحة الإعفاء من معاليم الدراسة الإضافية خريف 2022
+bourses-best-rnu-bourses-dalternancecirculaire-n-43-19-relatif-aux-bourses-dal-e239a64a:
+  title_ar: 'منح التداول: المنشور عدد 43/19 المتعلق بمنح التداول'
+bourses-best-rnu-bourses-detudes-en-grandes-ecoles-francaises-2023-index:
+  title_ar: منح الدراسة في المدارس الكبرى الفرنسية 2023
+bourses-best-rnu-bourses-dexemption-des-frais-de-scolarite-majores-hiver-2022-74540dae:
+  title_ar: 'منح الإعفاء من معاليم الدراسة الإضافية: شتاء 2022'
+bourses-best-rnu-bourses-dexemption-des-frais-de-scolarite-majores-hiver-2023-1c08b523:
+  title_ar: 'منح الإعفاء من معاليم الدراسة الإضافية: شتاء 2023'
+bourses-best-rnu-bourses-dexemption-des-frais-de-scolarite-majores-session-aut-19d10d1a:
+  title_ar: 'منح الإعفاء من معاليم الدراسة الإضافية: دورة خريف 2024'
+bourses-best-rnu-bourses-dexemption-des-frais-de-scolarite-majores-session-aut-367f2c6a:
+  title_ar: 'منح الإعفاء من معاليم الدراسة الإضافية دورة خريف 2025: بلاغ التمديد في آجال الترشح'
+bourses-best-rnu-bourses-universitaires-index:
+  title_ar: المنح الجامعية بالخارج
+bourses-best-rnu-communique-bourse-dexemption-des-frais-de-scolarite-majores-s-5c3aa3bf:
+  title_ar: بلاغ منحة الإعفاء من معاليم الدراسة الإضافية دورة خريف 2025
+bourses-best-rnu-communique-bourse-dexemption-session-hiver-2024-index:
+  title_ar: بلاغ منحة الإعفاء — دورة شتاء 2024
+bourses-best-rnu-communique-bourses-dexemption-session-hiver-2025-index:
+  title_ar: بلاغ منح الإعفاء — دورة شتاء 2025
+bourses-best-rnu-communique-exemption-des-frais-de-scolarite-supplementaires-s-4e6383b6:
+  title_ar: بلاغ الإعفاء من معاليم الدراسة الإضافية — دورة خريف 2026
+bourses-best-rnu-deux-jumelles-tunisiennes-ines-et-sirine-kamoun-accedent-au-m-7cb07f45:
+  title_ar: التوأم إيناس وسيرين قمون منتفعتان بمنحة الحكومة التونسية
+bourses-best-rnu-etudiants-selectionnes-pour-les-bourses-pfe-convention-mesrs-8bac0cf3:
+  title_ar: الطلبة المقبولون لمنح مشاريع ختم الدروس — اتفاقية وزارة التعليم العالي وMitacs 2024-2025
+bourses-best-rnu-exemption-des-frais-de-scolarite-supplementaires-session-hive-67e653b2:
+  title_ar: الإعفاء من معاليم الدراسة الإضافية دورة شتاء 2026
+bourses-best-rnu-fondation-de-la-maison-de-la-tunisie-candidatures-au-logement-26f8e4b4:
+  title_ar: 'مؤسسة دار تونس بباريس: الترشح للسكن للسنة الجامعية 2022-2023'
+bourses-best-rnu-homepage-blog-layout-index:
+  title_ar: إعلانات المنح والقروض الجامعية بالخارج
+bourses-best-rnu-homepage-masonry-layout-index:
+  title_ar: إعلانات المنح والقروض الجامعية بالخارج
+bourses-best-rnu-homepage-timeline-layout-index:
+  title_ar: إعلانات المنح والقروض الجامعية بالخارج
+bourses-best-rnu-le-mot-du-directeur-general-index:
+  title_ar: كلمة المدير العام لإدارة المنح والقروض بالخارج
+bourses-best-rnu-masonry-layout-index:
+  title_ar: إعلانات المنح والقروض الجامعية بالخارج
+bourses-best-rnu-offre-de-bourses-dans-le-cadre-des-ententes-avec-luniversite-9915fbb7:
+  title_ar: عرض منح ماجستير ودكتوراه في إطار الاتفاق بين وزارة التعليم العالي وINRS
+bourses-best-rnu-offre-de-bourses-nationales-pour-des-etudes-de-master-et-de-d-42958f77:
+  title_ar: عرض منح وطنية لدراسات الماجستير والدكتوراه
+bourses-best-rnu-offre-de-bourses-partenariales-niveau-master-2-recherche-2021-f7bf9762:
+  title_ar: عرض منح شراكة — مستوى ماجستير 2 بحث — 2021
+bourses-best-rnu-offre-de-bourses-partenariales-niveau-master-2-recherches-et-687d948b:
+  title_ar: عرض منح شراكة — ماجستير 2 بحث والشهادة المزدوجة مهندس/مهندس 2023
+bourses-best-rnu-offre-nationale-des-bourses-pour-des-etudes-de-doctorat-a-let-70f3cacf:
+  title_ar: العرض الوطني لمنح الدكتوراه بالخارج للسنة الجامعية 2025-2026
+bourses-best-rnu-offre-nationale-des-bourses-pour-des-etudes-de-mastere-et-de-0cb34526:
+  title_ar: العرض الوطني لمنح الماجستير والدكتوراه بالخارج لسنة 2023-2024
+bourses-best-rnu-offre-nationale-des-bourses-pour-des-etudes-de-mastere-et-de-9ba5efe5:
+  title_ar: العرض الوطني لمنح الماجستير والدكتوراه بالخارج للسنة الجامعية 2026-2027
+bourses-best-rnu-presentation-de-la-direction-index:
+  title_ar: تقديم إدارة المنح والقروض الجامعية بالخارج
+bourses-best-rnu-prets-universitaires-index:
+  title_ar: القروض الجامعية بالخارج
+bourses-best-rnu-procedures-index:
+  title_ar: إجراءات طلب المنح والقروض الجامعية بالخارج عن بعد
+bourses-best-rnu-programme-de-bourses-detudes-ingenieur-ingenieur-2021-index:
+  title_ar: برنامج منح الدراسة مهندس/مهندس — 2021
+bourses-best-rnu-programme-de-bourses-detudes-ingenieur-ingenieur-2022-index:
+  title_ar: برنامج منح الدراسة مهندس/مهندس — 2022
+bourses-best-rnu-programme-de-bourses-detudes-ingenieur-ingenieur-2025-index:
+  title_ar: برنامج منح الدراسة مهندس/مهندس — 2025
+bourses-best-rnu-prolongation-de-la-date-limite-pour-postuler-aux-bourses-dans-8684f636:
+  title_ar: التمديد في آخر أجل للترشح للمنح في إطار الاتفاق مع Mitacs
+bourses-best-rnu-timeline-page-index:
+  title_ar: روزنامة إعلانات المنح والقروض الجامعية بالخارج
+bourses-cnrps-fr-imprimes-index:
+  title_ar: الجرايات وتوابعها — مطبوعات الصندوق الوطني للتقاعد والحيطة الاجتماعية
+bourses-nouveau-bachelier:
+  title_ar: المنحة الجامعية للناجحين الجدد في الباكالوريا
+bourses-ooun-web-fr-bourse-html-les-bourses-en-cours-d-tudes:
+  title_ar: المنح أثناء الدراسة
+bourses-ooun-web-fr-bourse-html-les-textes-l-gislatifs:
+  title_ar: النصوص التشريعية المتعلقة بالمنح الجامعية
+bourses-ooun-web-fr-bourse-html-vous-tes-ancien-tudiant-et-vous-voulez-renouve-17aaba8b:
+  title_ar: أنت طالب قديم وتريد تجديد منحتك أو قرضك الجامعي
+bourses-ooun-web-fr-bourse-html-vous-tes-doctorant-et-vous-postulez-une-bourse:
+  title_ar: أنت طالب دكتوراه وتترشح لمنحة
+bourses-ooun-web-fr-bourse-html-vous-tes-en-mast-re-ou-en-cycle-agr-gatif-et-v-302751aa:
+  title_ar: أنت طالب ماجستير أو في مرحلة التبريز وتترشح لمنحة أو قرض
+bourses-ooun-web-fr-bourse-html-vous-tes-fils-d-enseignant-e-et-vous-postulez-5baabf39:
+  title_ar: أنت ابن مدرّس(ة) وتترشح لمنحة أو قرض جامعي
+bourses-ooun-web-fr-bourse-html-vous-tes-fils-de-parents-tunisiens-r-sidant-l-7b047076:
+  title_ar: أنت ابن أبوين تونسيين مقيمين بالخارج وتترشح لمنحة أو قرض
+bourses-ooun-web-fr-bourse-html-vous-tes-tranger-et-vous-voulez-postuler-une-b-abbc5169:
+  title_ar: أنت طالب أجنبي وتريد الترشح لمنحة
+bourses-services-gov-je-poursuis-mes-etudes-a-luniversite-consultation-des-r-s-134e0097:
+  title_ar: الاطلاع على نتائج دورة المتميزين
+bourses-services-gov-je-poursuis-mes-etudes-a-luniversite-intro:
+  title_ar: أواصل دراستي بالجامعة — البوابة الوطنية للخدمات الإدارية
+bourses-services-gov-je-poursuis-mes-etudes-a-luniversite-r-sultats-de-l-tude-e754fcef:
+  title_ar: نتائج دراسة ملف طلب منحة السكن
+bourses-services-gov-je-poursuis-mes-etudes-a-luniversite-remplissage-de-la-fi-a9ba4392:
+  title_ar: تعمير بطاقة الاختيارات — دورة المترشحين المتميزين
+bourses-services-gov-je-poursuis-mes-etudes-a-luniversite-remplissage-de-la-fi-ce1940b4:
+  title_ar: تعمير بطاقة الاختيارات لدورة المتميزين
+bourses-uma-fr-article-209-bourses-dalternance-2025-accordee-aux-etudiants-ing-d77edd27:
+  title_ar: جامعة منوبة — منح التداول 2025 لطلبة الهندسة والدكتوراه والماجستير
+bourses-uma-fr-article-306-cooperation-internationale-mobilite-index:
+  title_ar: 'جامعة منوبة — التعاون الدولي: التنقل'
+creation-entreprise-apii-portal-fr-doc-asp-q-mcat-16-mrub-122-index:
+  title_ar: التصريح بمشروع على الخط
+creation-entreprise-apii-portal-fr-doc-asp-q-mcat-16-mrub-157-index:
+  title_ar: الأقطاب التكنولوجية في تونس
+creation-entreprise-apii-portal-fr-doc-asp-q-mcat-16-mrub-182-index:
+  title_ar: هياكل المساندة لإحداث المؤسسات
+creation-entreprise-apii-portal-fr-doc-asp-q-mcat-16-mrub-186-msrub-267-index:
+  title_ar: الشباك الموحد — تقديم
+creation-entreprise-apii-portal-fr-doc-asp-q-mcat-16-mrub-186-msrub-268-index:
+  title_ar: الشباك الموحد — تسليم شهادات إيداع التصريح
+creation-entreprise-apii-portal-fr-doc-asp-q-mcat-16-mrub-186-msrub-269-index:
+  title_ar: الشباك الموحد — التكوين القانوني للشركات
+creation-entreprise-apii-portal-fr-doc-asp-q-mcat-16-mrub-186-msrub-270-index:
+  title_ar: الشباك الموحد — خدمات أخرى
+creation-entreprise-apii-portal-fr-doc-asp-q-mcat-16-mrub-186-msrub-271-index:
+  title_ar: الشباك الموحد — المساعدة والإرشاد
+creation-entreprise-apii-portal-fr-doc-asp-q-mcat-16-mrub-194-index:
+  title_ar: شبكة المؤسسات الأوروبية EEN
+creation-entreprise-apii-portal-fr-doc-asp-q-mcat-16-mrub-203-index:
+  title_ar: المراكز الفنية
+creation-entreprise-jibaya-blog-declaration-pays-par-pays-index:
+  title_ar: التصريح بلدا ببلد — جباية
+creation-entreprise-jibaya-blog-fatca-tunisie-index:
+  title_ar: فاتكا تونس — جباية
+creation-entreprise-jibaya-blog-la-tele-declaration-fiscale-index:
+  title_ar: التصريح الجبائي عن بعد — جباية
+creation-entreprise-rne-rne-public-assets-pdfs-check-liste-creation-rnec001-creationt-pers-4a0c8d74:
+  title_ar: القائمة المرجعية لوثائق السجل الوطني للمؤسسات C 001
+creation-entreprise-rne-rne-public-assets-pdfs-check-liste-creation-rnec003-creation-perso-72fba5a9:
+  title_ar: القائمة المرجعية لوثائق السجل الوطني للمؤسسات C 003
+creation-entreprise-services-gov-emploi-et-formation-accompagnement-des-porteurs-de-projet-1e96159d:
+  title_ar: مرافقة باعثي المشاريع في كل مراحل إحداث مشاريعهم من الفكرة إلى ما بعد الإحداث
+creation-entreprise-sicad-fr-prestations-57-3-d5734-index:
+  title_ar: شهادة في الصبغة الثقافية في إطار الرعاية الثقافية
+creation-entreprise-uma-fr-article-43-tout-savoir-sur-notre-systeme-de-formation-et-nos-di-2b380475:
+  title_ar: جامعة منوبة — كل ما يجب معرفته عن منظومة التكوين والشهادات
+equivalence-equivalence-rnu-index-fr-html-d-finition:
+  title_ar: تعريف معادلة الشهادات
+equivalence-equivalence-rnu-index-fr-html-les-bases-juridiques:
+  title_ar: الأسس القانونية لمعادلة الشهادات
+equivalence-equivalence-rnu-index-fr-html-proc-dures-d-obtention-de-l-quivalence:
+  title_ar: إجراءات الحصول على معادلة الشهادات
+equivalence-equivalence-rnu-index-fr-html-proc-dures-de-recours:
+  title_ar: إجراءات الطعن في قرار المعادلة
+inscription-education-gov-fr-prestations-57-3-d622-index:
+  title_ar: تحويل معاليم الدراسة والإقامة لفائدة الطلبة بالخارج
+inscription-jibaya-blog-plateforme-de-transfert-et-echange-des-donnees-fiscales-te-6e70f33e:
+  title_ar: منصة تحويل وتبادل المعطيات الجبائية TEJ — جباية
+inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-consultation-de-la-r-8d28d6c3:
+  title_ar: الاطلاع على التوزيع العام والترتيب حسب نوع الباكالوريا
+inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-consultation-des-r-s-a6dc5fe7:
+  title_ar: الاطلاع على نتائج الدورة الرئيسية للتوجيه الجامعي
+inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-consultation-des-r-s-c8f0099c:
+  title_ar: الاطلاع على نتائج الدورة النهائية للتوجيه الجامعي
+inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-consultation-des-r-s-e6e9c2f1:
+  title_ar: الاطلاع على نتائج دورة إعادة التوجيه
+inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-correction-des-infor-75fdef8a:
+  title_ar: إصلاح المعطيات الشخصية للمترشحين على منصة التوجيه الجامعي
+inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-inscription-universi-e50cca1c:
+  title_ar: التسجيل الجامعي عن بعد
+inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-obtention-du-mot-de-ad6fe8ab:
+  title_ar: الحصول على كلمة العبور لمنصة التوجيه الجامعي
+inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-remplissage-de-la-fi-238ebe67:
+  title_ar: تعمير بطاقة الاختيارات في دورة إعادة التوجيه لأسباب عادية أو صحية أو اجتماعية
+inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-remplissage-de-la-fi-bf1f2804:
+  title_ar: تعمير بطاقة الاختيارات في الدورة الرئيسية للتوجيه الجامعي
+inscription-sicad-fr-prestations-57-3-d872-index:
+  title_ar: حماية مستنبط نباتي ومنح شهادة مستنبط نباتي
+inscription-uma-fr-article-390-ouverture-des-demandes-de-mutation-universitaire-an-0319862c:
+  title_ar: جامعة منوبة — فتح مطالب النقلة الجامعية للسنة 2025/2026
+mobilite-best-rnu-campagne-2021-dexoneration-des-frais-dinscription-pour-les-et-1326faca:
+  title_ar: حملة 2021 للإعفاء من معاليم التسجيل للدراسة في فرنسا
+mobilite-erasmus-tn-doc-icm-cbhe-2022-neo-tn-pdf-index:
+  title_ar: برنامج إيراسموس+ 2021-2027
+mobilite-erasmus-tn-doc-icm-pdf-index:
+  title_ar: 'برنامج إيراسموس+ في تونس: الهيكلة والتنقل الدولي للطلبة'
+mobilite-erasmus-tn-international-credit-mobility-icm-php-index:
+  title_ar: برنامج إيراسموس+ في تونس
+mobilite-erasmus-tn-le-programme-erasmus-php-index:
+  title_ar: برنامج إيراسموس+ في تونس
+mobilite-erasmus-tn-trainings-etudiants-comment-pr-parer-votre-candidature-php-e7d0b8ec:
+  title_ar: برنامج إيراسموس+ في تونس
+mobilite-ucar-call-for-applications-erasmus-mobility-scholarship-at-west-univer-527d7772:
+  title_ar: طلب ترشحات لمنحة تنقل إيراسموس+ بجامعة غرب تيميشوارا (رومانيا) — جامعة قرطاج
+mobilite-uma-fr-article-318-journee-dinformation-sur-le-programme-horizon-europ-9f80db61:
+  title_ar: جامعة منوبة — يوم إعلامي حول برنامج أفق أوروبا 2025
+mobilite-uma-fr-article-527-appel-a-candidatures-pour-la-mobilite-entrantesorta-9e7449e5:
+  title_ar: جامعة منوبة — طلب ترشحات للتنقل الوافد والصادر للأساتذة الباحثين
+mobilite-uma-fr-article-593-appel-a-candidature-mobilite-erasmus-uma-jamies-dea-b79a6cf7:
+  title_ar: طلب ترشحات للتنقل في إطار إيراسموس+ بجامعة منوبة
+non-salaries-aneti-fo-fr-global-php-q-menu1-170-index:
+  title_ar: برنامج CapEmploi لدعم التشغيل
+non-salaries-aneti-fo-fr-global-php-q-menu1-172-index:
+  title_ar: التأشير على الخط لطالبي الشغل
+non-salaries-aneti-fo-fr-global-php-q-menu1-18-index:
+  title_ar: التعاون الدولي للوكالة الوطنية للتشغيل والعمل المستقل
+non-salaries-services-gov-je-souhaite-beneficier-de-la-couverture-sociale-demande-d-02387e32:
+  title_ar: طلب التسجيل كمبادر ذاتي
+patente-fiscalite-jibaya-blog-depot-sur-support-magnetique-index:
+  title_ar: الإيداع على حامل مغناطيسي — جباية
+patente-fiscalite-jibaya-blog-la-tele-liquidation-fiscale-index:
+  title_ar: الخلاص الجبائي عن بعد — جباية
+patente-fiscalite-jibaya-blog-plateforme-dimmatriculation-fiscale-en-ligne-index:
+  title_ar: منصة التسجيل الجبائي على الخط — جباية
+patente-fiscalite-jibaya-wp-content-uploads-2026-07-guide-utilisation-dexel-pdf-index:
+  title_ar: 'الواجهة الرئيسية: متابعة المطالب على منصة جباية'
+patente-fiscalite-services-gov-affaires-sociales-2-obtention-du-certificat-annuel-de-l-i-8a2b2bb7:
+  notes:
+  - La page source (services.gov.tn) reprend par erreur la description d'un autre service (paiement à distance des cotisations) dans la rubrique « Service ». Les étapes, les références et le lien d'accès
+    concernent bien ce certificat.
+  title_ar: الحصول على الشهادة السنوية للضريبة على الدخل
+patente-fiscalite-services-gov-affaires-sociales-2-obtention-du-certificat-de-d-claratio-c20de32a:
+  notes:
+  - La page source (services.gov.tn) reprend par erreur la description d'un autre service (paiement à distance des cotisations) dans la rubrique « Service ». Les étapes, les références et le lien d'accès
+    concernent bien ce certificat.
+  title_ar: الحصول على شهادة التصريح بالمبالغ المدفوعة للخزينة العامة
+recherche-emploi-aneti-fo-fr-global-php-q-menu1-143-index:
+  title_ar: 'الوكالة الوطنية للتشغيل والعمل المستقل: عروض الشغل في تونس'
+recherche-emploi-aneti-fo-fr-global-php-q-menu1-15-index:
+  title_ar: تقديم الوكالة الوطنية للتشغيل والعمل المستقل
+recherche-emploi-aneti-fo-fr-global-php-q-menu1-153-index:
+  title_ar: الخدمات على الخط للوكالة الوطنية للتشغيل والعمل المستقل
+recherche-emploi-aneti-fo-fr-global-php-q-menu1-155-index:
+  title_ar: منصة ANETI Tkawen للتكوين المجاني عن بعد
+recherche-emploi-aneti-fo-fr-global-php-q-menu1-160-index:
+  title_ar: برامج التشجيع على التشغيل
+recherche-emploi-aneti-fo-fr-global-php-q-menu1-163-index:
+  title_ar: طلبات عروض الوكالة الوطنية للتشغيل والعمل المستقل
+recherche-emploi-aneti-fo-fr-global-php-q-menu1-171-index:
+  title_ar: طلب عروض الوكالة الوطنية للتشغيل والعمل المستقل
+recherche-emploi-aneti-fo-fr-global-php-q-menu1-63-index:
+  title_ar: مستشارو التشغيل ومستشارو التوجيه المهني
+recherche-emploi-aneti-fo-fr-global-php-q-menu2-88-index:
+  title_ar: طلبات عروض الوكالة الوطنية للتشغيل والعمل المستقل (البنك الدولي)
+recherche-emploi-services-gov-emploi-et-formation-demande-d-obtention-du-certificat-de-c1f7a858:
+  title_ar: طلب الحصول على شهادة الكفاءة المهنية
+recherche-emploi-services-gov-emploi-et-formation-espace-d-di-aux-demandes-d-emploi-l-t-1fe7fd78:
+  title_ar: فضاء مخصص لطلبات الشغل بالخارج
+recherche-emploi-services-gov-emploi-et-formation-espace-d-di-la-recherche-et-au-suivi-4987239b:
+  title_ar: فضاء مخصص للبحث ومتابعة طالبي الشغل
+recherche-emploi-services-gov-emploi-et-formation-publication-des-offres-d-emploi-en-r-84330d6e:
+  title_ar: نشر عروض الشغل استجابة لحاجيات المؤسسة
+recherche-emploi-services-gov-emploi-et-formation-recherche-d-offres-de-stage-en-milieu-865b723f:
+  title_ar: البحث عن عروض تربص في الوسط المهني لخريجي التكوين المهني حسب الاختصاص والشهادة
+recherche-emploi-services-gov-emploi-et-formation-suivi-de-l-obtention-des-demandes-de-a71ed814:
+  title_ar: متابعة الحصول على رخص اليد العاملة الأجنبية (تشغيل الأجانب)
+recherche-emploi-services-gov-emploi-et-formation-suivi-des-demandes-d-autorisation-pou-2d12998b:
+  title_ar: متابعة مطالب الترخيص لليد العاملة الأجنبية (تشغيل الأجانب)
+recherche-emploi-services-gov-je-cherche-un-emploi-espace-d-di-aux-demandes-d-emploi-l-0ceeba96:
+  title_ar: فضاء مخصص لطلبات الشغل بالخارج
+recherche-emploi-services-gov-je-cherche-un-emploi-espace-d-di-la-recherche-et-au-suivi-0f32d89b:
+  title_ar: فضاء مخصص للبحث ومتابعة طالبي الشغل
+recherche-emploi-services-gov-je-cherche-un-emploi-intro:
+  title_ar: أبحث عن عمل — البوابة الوطنية للخدمات الإدارية
+recherche-emploi-services-gov-je-cherche-un-emploi-publication-des-offres-d-emploi-en-r-f8bc9461:
+  title_ar: نشر عروض الشغل استجابة لحاجيات المؤسسة
+recherche-emploi-services-gov-je-cherche-un-emploi-recherche-de-stages-en-milieu-profes-f25c4094:
+  title_ar: البحث عن تربصات في الوسط المهني لخريجي التكوين المهني حسب الاختصاص والشهادة
+recherche-emploi-services-gov-je-cherche-un-emploi-suivi-des-demandes-d-autorisation-po-34231a10:
+  title_ar: متابعة مطالب الترخيص لليد العاملة الأجنبية (تشغيل الأجانب)
+recherche-emploi-uma-fr-article-203-enquete-dinsertion-professionnelle-des-diplomes-des-315a0aec:
+  title_ar: جامعة منوبة — بحث حول الإدماج المهني لخريجي مؤسسات الجامعة
+releves-attestations-education-gov-fr-prestation-obtention-dun-duplicata-du-diplome-ou-du-r-63255d62:
+  title_ar: الحصول على نظير من الشهادة أو من كشف الأعداد
+stages-pfe-best-rnu-projets-de-fin-detudespfe-au-canada-2022-2023-index:
+  title_ar: مشاريع ختم الدروس في كندا 2022-2023
+stages-pfe-best-rnu-projets-de-fin-detudespfe-au-canada-2023-2024-index:
+  title_ar: مشاريع ختم الدروس في كندا 2023-2024
+stages-pfe-uvt-etudiant-reinscription-index:
+  title_ar: الجامعة الافتراضية بتونس — إعادة التسجيل
+stages-pfe-uvt-reinscription-index:
+  title_ar: الجامعة الافتراضية بتونس — إعادة التسجيل

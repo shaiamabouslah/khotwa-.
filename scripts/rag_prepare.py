@@ -220,11 +220,35 @@ def pack(blocks):
     return chunks
 
 
+def chunk_prefix(fm):
+    """Organisation, plus the Arabic title of a French-only document (kb/overrides.yaml): most
+    documents exist only in French, and an Arabic question reaches them through this title."""
+    org = fm.get("org", "")
+    prefix = f"[{org}] " if org else ""
+    return prefix + (f"{fm['title_ar']} | " if fm.get("title_ar") else "")
+
+
+def load_overrides(kb_dir):
+    """kb/overrides.yaml: {doc id: {title_ar, notes}} -- curated additions kept outside the
+    generated .md files, which clean_pipeline.py rewrites."""
+    path = Path(kb_dir) / "overrides.yaml"
+    return (yaml.safe_load(path.read_text(encoding="utf-8")) or {}) if path.exists() else {}
+
+
+def apply_override(fm, overrides):
+    ov = overrides.get(fm.get("id")) or {}
+    if ov.get("notes"):
+        fm["notes"] = list(fm.get("notes") or []) + list(ov["notes"])
+    if ov.get("title_ar") and fm.get("lang") == "fr":
+        fm["title_ar"] = ov["title_ar"]
+    return fm
+
+
 def chunk_heading(fm, body):
     """Structure-aware: split on ## / ### / #### headings, group consecutive sections up to
     TARGET_WORDS, pack oversize sections row/sentence-safely. Current production default."""
     title, org = fm["title"], fm.get("org", "")
-    prefix = f"[{org}] " if org else ""
+    prefix = chunk_prefix(fm)
     # a whole procedure that fits stays ONE chunk: best unit for "how do I ..." questions
     if words(body) <= MAX_WORDS:
         return [{"section": title, "text": f"{prefix}{title}\n\n{body}"}]
@@ -258,7 +282,7 @@ def chunk_fixed(fm, body):
     variable against chunk_heading: does heading-awareness help, or is it not worth the
     complexity? "section" stays the title for every chunk since there's no structure to name."""
     title, org = fm["title"], fm.get("org", "")
-    prefix = f"[{org}] " if org else ""
+    prefix = chunk_prefix(fm)
     if words(body) <= MAX_WORDS:
         return [{"section": title, "text": f"{prefix}{title}\n\n{body}"}]
     return [{"section": title, "text": f"{prefix}{title}\n\n{piece}"}
@@ -295,7 +319,7 @@ def chunk_semantic(fm, body, embed, threshold=0.45):
     topic (see semantic_merge). Needs an `embed(list[str]) -> list[vector]` callable (dependency
     injected so this module has no hard torch/sentence-transformers import)."""
     title, org = fm["title"], fm.get("org", "")
-    prefix = f"[{org}] " if org else ""
+    prefix = chunk_prefix(fm)
     if words(body) <= MAX_WORDS:
         return [{"section": title, "text": f"{prefix}{title}\n\n{body}"}]
     units = [u for blk in split_blocks(body) for u in units_of(blk)]
@@ -314,7 +338,7 @@ def chunk_adaptive(fm, body, embed, threshold=0.45):
     only a group that overflows MAX_WORDS is split where topic similarity actually drops
     (semantic_merge, same mechanism as chunk_semantic), instead of at a fixed word count."""
     title, org = fm["title"], fm.get("org", "")
-    prefix = f"[{org}] " if org else ""
+    prefix = chunk_prefix(fm)
     if words(body) <= MAX_WORDS:
         return [{"section": title, "text": f"{prefix}{title}\n\n{body}"}]
     parts = [p for p in re.split(r"(?m)^(?=#{2,4} )", body) if p.strip()]
@@ -371,12 +395,14 @@ def main():
 
     stats, quarantine, docs = collections.Counter(), [], []
 
+    overrides = load_overrides(a.kb)
     for p in sorted(Path(a.kb).rglob("*.md")):
         if p.name == "README.md" or "_templates" in p.parts: continue
         stats["files"] += 1
         fm, raw, errs = load(p)
         if errs and (fm is None or any(e.startswith("missing") or e == "bad_lang" for e in errs)):
             quarantine.append({"file": str(p), "reasons": errs}); continue
+        apply_override(fm, overrides)
         body, missing, notes = normalize(raw)
         # fm["notes"] is a curator-written caveat list (stale figures, contradicting sources,
         # etc.) living in the frontmatter -- without this, it never reaches a chunk's text, so

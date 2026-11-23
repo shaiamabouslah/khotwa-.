@@ -152,11 +152,17 @@ Large data (`data/raw/`, `data/corpus/`, the chunks and the embeddings) is versi
 Stages call `python`, so run DVC with the virtual environment activated -- otherwise another
 Python installation, with other package versions, may run them.
 
+The default DVC remote is DagsHub (`dagshub`, https://dagshub.com/shaimabouslah/khotwa-.); the earlier local folder remote (`localstorage`) is kept as a backup. Each user stores their own DagsHub token, outside git:
+
 ```bash
+dvc remote modify dagshub --local user <dagshub-user>
+dvc remote modify dagshub --local password <dagshub-token>
 dvc pull                     # fetch the data for the current commit
 dvc repro prepare_kb embed_kb
 dvc push                     # after changing data
 ```
+
+`kb/overrides.yaml` holds curated additions to the generated KB files (Arabic titles, caveat notes), kept apart because `clean_pipeline.py --apply` rewrites those files; `validate_kb.py` checks every entry points to an existing document.
 
 ### 6. Evaluation
 
@@ -174,14 +180,14 @@ Current results (dense, as used by the app):
 
 | Group | n | hit@1 | hit@5 | MRR |
 |---|---|---|---|---|
-| All | 94 | 0.77 (95% CI 0.68-0.85) | 0.96 (0.91-0.99) | 0.84 |
-| French | 32 | 0.81 | 1.00 | 0.90 |
-| Arabic | 27 | 0.78 | 0.93 | 0.84 |
-| English | 22 | 0.73 | 0.95 | 0.82 |
-| Derja | 13 | 0.69 | 0.92 | 0.76 |
-| Robustness | 12 | 0.67 | 0.92 | 0.75 |
+| All | 94 | 0.85 (95% CI 0.78-0.93) | 0.99 (0.97-1.00) | 0.90 |
+| French | 32 | 0.81 | 1.00 | 0.89 |
+| Arabic | 27 | 0.89 | 1.00 | 0.92 |
+| English | 22 | 0.91 | 1.00 | 0.94 |
+| Derja | 13 | 0.77 | 0.92 | 0.81 |
+| Robustness | 12 | 0.75 | 0.92 | 0.81 |
 
-The LLM receives the top 5 documents, so hit@5 says whether a correct answer is possible; hit@1 says how cleanly the right source comes first. Hybrid dense+BM25 scores lower on every group (hit@5 0.68 overall, Arabic 0.37), so dense stays the default. The score floor stops 10% of the refusal questions before any LLM call: in-scope Arabic and Derja questions score as low as out-of-scope ones, so the floor only removes the clearly absurd and the generation prompt does the rest. The four chunking strategies tie on the 94 questions (dense hit@1 0.76-0.77, hit@5 0.96 for all, `data/rag/chunking_comparison_report.txt`), so the app keeps heading-based chunking.
+The Arabic titles of French-only documents (`kb/overrides.yaml`, see Known limitations) raised hit@1 from 0.77 to 0.85 and Arabic hit@5 from 0.93 to 1.00, without changing French. The LLM receives the top 5 documents, so hit@5 says whether a correct answer is possible; hit@1 says how cleanly the right source comes first. Hybrid dense+BM25 scores lower overall (hit@1 0.64, hit@5 0.89), so dense stays the default. The score floor stops 13% of the refusal questions before any LLM call: in-scope Arabic and Derja questions score as low as out-of-scope ones, so the floor only removes the clearly absurd and the generation prompt does the rest. The four chunking strategies tie on the 94 questions (dense hit@1 0.84-0.85, hit@5 0.99 for all, `data/rag/chunking_comparison_report.txt`), so the app keeps heading-based chunking.
 - **Answer quality** -- `scripts/eval_ragas.py` runs the full pipeline exactly as the web app does and scores each answer with RAGAS faithfulness (is every claim supported by the sources -- the hallucination check) and context relevance (did retrieval bring the right material), per language.
 
 ```bash
@@ -252,7 +258,9 @@ A second workflow, `.github/workflows/pipeline.yml`, needs the data: it pulls th
 
 ## Known limitations
 
-- **Arabic questions about French-only pages.** 165 of the 268 documents exist only in French. BGE-M3 bridges most of the gap, but not specialised terms: "المعرف الجبائي" (tax identifier) and "التأشير" (ANETI pointage) do not reach the right French page. Adding an Arabic title to French-only documents, or translating the question before searching, would address it; a title-only embedding field was measured and does not.
+- **Arabic titles are translations to proofread.** 164 of the 268 documents exist only in French. Arabic questions with specialised terms ("المعرف الجبائي", "التأشير") did not reach them, so each French-only document got an Arabic title in `kb/overrides.yaml`, translated from its French title and added to its chunks. Both such questions now rank first. The titles were written by an AI assistant and should be reviewed by a native speaker.
+- **Derja in Latin script (arabizi) is the weakest group.** One question ("ena weld prof, famma minha...") scores under the refusal floor and gets "no information"; the robustness set has the same pattern.
+- **Refusals rely on the LLM.** The score floor stops 13% of out-of-scope questions; in-scope Derja questions score as low as out-of-scope ones, so the floor cannot go higher without refusing real questions.
 - **Answer faithfulness is only partly measured offline.** The grounding check covers figures, links and citations on every live answer; full RAGAS faithfulness needs an LLM judge and the Groq quota.
-- **Two services.gov pages carry another service's description** ("Obtention du certificat annuel de l'impôt sur le revenu", "Obtention du certificat de déclaration des montants versés au Trésor public"): a scraping mix-up on the source portal, to fix in the corpus.
+- **Two services.gov pages carry another service's description** ("Obtention du certificat annuel de l'impôt sur le revenu", "Obtention du certificat de déclaration des montants versés au Trésor public"): the error is on the source portal itself. A note in `kb/overrides.yaml` tells the model which parts concern the certificate.
 - **The reranker is off in the web app.** bge-reranker-v2-m3 takes 5 s for 5 candidates and 40 s for 20 on this CPU.

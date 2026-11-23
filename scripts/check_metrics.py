@@ -12,11 +12,11 @@ import sys
 from pathlib import Path
 
 FLOORS = {
-    ("all", "hit@5"): 0.85,
-    ("all", "hit@1"): 0.60,
-    ("all", "mrr"): 0.68,
+    ("all", "hit@5"): 0.92,
+    ("all", "hit@1"): 0.72,
+    ("all", "mrr"): 0.80,
 }
-PER_LANGUAGE_HIT5 = 0.70
+PER_LANGUAGE_HIT5 = 0.80
 
 
 def violations(metrics: dict) -> list[str]:

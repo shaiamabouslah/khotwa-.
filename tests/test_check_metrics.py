@@ -25,7 +25,7 @@ class TestQualityGate(unittest.TestCase):
         self.assertEqual(len(violations(_metrics(hit5=0.80))), 1)
 
     def test_one_language_collapsing_fails_even_if_overall_is_fine(self):
-        self.assertEqual(violations(_metrics(ar_hit5=0.50)), ["ar hit@5 = 0.50 < 0.70"])
+        self.assertEqual(violations(_metrics(ar_hit5=0.50)), ["ar hit@5 = 0.50 < 0.80"])
 
 
 if __name__ == "__main__":
