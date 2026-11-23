@@ -152,7 +152,7 @@ def _present(text: str) -> tuple[str, list[dict]]:
     """Answer body + the sources the UI shows as links: only the ones the answer actually cites
     ([1], [3]...). A source button claims "this answer comes from here" -- an answer that cites
     nothing (typically "the excerpts don't cover this") gets none. History keeps the full text."""
-    body, sources = generate.split_sources(text)
+    body, sources = generate.split_sources(generate.normalize_citations(text))
     cited = {int(n) for n in re.findall(r"\[(\d+)\]", body)}
     return body, [s for s in sources if s["n"] in cited]
 
@@ -340,7 +340,7 @@ def chat(req: ChatRequest, username: str = Depends(require_user)):
     elif result["abstained"]:
         outcome = "no_match"
     elif result.get("busy"):
-        outcome = "busy"
+        outcome = "empty" if result.get("empty") else "busy"
     else:
         outcome = "answer" if sources else "uncited"
     extra = {}
@@ -352,7 +352,7 @@ def chat(req: ChatRequest, username: str = Depends(require_user)):
 
     # A "service busy, retry in a minute" reply is not an exchange: kept out of the history, or
     # the model would read it as its own previous answer on the next turn, and not rateable.
-    if outcome == "busy":
+    if outcome in ("busy", "empty"):
         return ChatResponse(answer=body, abstained=False)
     history.append((question, result["answer"], result["abstained"]))
     generate.save_history(key, history)

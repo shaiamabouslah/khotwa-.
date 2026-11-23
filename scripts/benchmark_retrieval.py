@@ -29,7 +29,8 @@ sys.path.insert(0, str(ROOT / "scripts"))
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 import generate  # noqa: E402
-from retriever import Retriever  # noqa: E402
+import tracking  # noqa: E402
+from retriever import EMBED_MODEL, Retriever  # noqa: E402
 
 MODES = {"dense": {"hybrid": False}, "hybrid": {"hybrid": True}}
 BOOTSTRAP_SAMPLES = 2000
@@ -154,6 +155,19 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(metrics, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(f"\nmetrics written to {a.out}")
+
+    if tracking.enabled():
+        mlflow = tracking.start("retrieval-benchmark")
+        with mlflow.start_run(run_name=f"benchmark {tracking.git_commit()}"):
+            mlflow.set_tag("git_commit", tracking.git_commit())
+            mlflow.log_params({"embed_model": EMBED_MODEL, "chunking": "heading", "k": 5, "rerank": False,
+                               "min_dense_score": generate.DEFAULT_MIN_DENSE_SCORE, "modes": a.modes,
+                               "n_questions": len(positives), "n_robustness": len(hard),
+                               "n_negatives": len(negatives), "n_chunks": len(retriever.chunks)})
+            tracking.log_metrics_tree(mlflow, metrics)
+            mlflow.log_dict(metrics, "retrieval.json")
+            mlflow.log_dict(per_mode, "per_question.json")
+        print("run logged to MLflow (experiment retrieval-benchmark)")
 
 
 if __name__ == "__main__":

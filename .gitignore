@@ -15,3 +15,8 @@ __pycache__/
 # Pre-downloaded pip wheels (see Dockerfile) -- large binaries, not worth
 # versioning; re-downloadable from PyPI/pytorch.org whenever needed.
 /wheels/
+
+# Local MLflow store (tracking goes to DagsHub) and local experiment outputs -- never in git
+mlruns/
+mlflow*.db
+data/rag/exp_*/

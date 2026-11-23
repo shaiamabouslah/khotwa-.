@@ -128,8 +128,8 @@ stages:
       size: 16394
     - path: scripts/benchmark_retrieval.py
       hash: md5
-      md5: 8782a04e6ed03ff75c7c956b671bddbf
-      size: 7312
+      md5: 119b6b3dd78ca2450b162af281ac7b96
+      size: 8216
     - path: scripts/cnss_rules.py
       hash: md5
       md5: f116c1e84495c11bd6c7f5c1abb5ebde
@@ -145,5 +145,5 @@ stages:
     outs:
     - path: data/rag/metrics/retrieval.json
       hash: md5
-      md5: f48aa04ea8dafc6f113aae5a52908d2e
+      md5: 8ea7884b5394cb1f2e5c76d64fb20f9b
       size: 2030

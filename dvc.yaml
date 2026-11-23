@@ -90,3 +90,25 @@ stages:
     outs:
       - data/rag/ragas_results.json:
           cache: false  # small, readable metrics file -- kept visible/diffable in git
+
+  eval_generation:
+    desc: >
+      A stratified sample of benchmark questions plus out-of-scope ones through
+      the full pipeline (retrieval + Groq): answer, clarification and refusal
+      rates, gold document cited, grounding check, latency. No LLM judge.
+      Uses Groq quota (about 20 answers), run on demand. With
+      MLFLOW_TRACKING_URI set, also logs a run and one trace per question to
+      DagsHub's MLflow.
+    cmd: python scripts/eval_generation.py
+    deps:
+      - scripts/eval_generation.py
+      - scripts/generate.py
+      - scripts/grounding.py
+      - scripts/retriever.py
+      - data/rag/questions.jsonl
+      - data/rag/negative_questions.jsonl
+      - data/rag/chunks.jsonl
+      - data/rag/chunks.bge-m3.npy
+    metrics:
+      - data/rag/metrics/generation.json:
+          cache: false

@@ -25,6 +25,7 @@ EVENTS_PATH = (Path(os.environ["KHOTWA_STATE_DIR"]) / "events.jsonl" if os.envir
 #   clarification  asked for the CNSS sector (with clickable options)
 #   chitchat       greeting / thanks, canned reply
 #   busy           Groq rate limit reached, "try again in a minute"
+#   empty          the model returned no text even after a retry, "please rephrase"
 #   error          the request failed (missing API key, crash...)
 # Answers also carry "grounding" (grounding.check): figures, links or citations found in no source.
 UNANSWERED = ("no_match", "uncited")
@@ -91,7 +92,7 @@ def compute_metrics(events: list[dict]) -> dict:
         "by_language": dict(Counter(e.get("lang") for e in questions)),
         "answer_rate": rate(outcomes["answer"]),
         "unanswered_rate": rate(sum(outcomes[o] for o in UNANSWERED)),
-        "error_rate": rate(outcomes["error"] + outcomes["busy"]),
+        "error_rate": rate(outcomes["error"] + outcomes["busy"] + outcomes["empty"]),
         "latency_ms": {"p50": _percentile(latency, 50), "p95": _percentile(latency, 95),
                        "count": len(latency)},
         "feedback": {"up": up, "down": down,

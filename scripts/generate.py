@@ -120,6 +120,16 @@ DAILY_LIMIT_MESSAGE = {
           "(in a few minutes to a few hours).",
 }
 
+# The model returned no text even after a retry (reasoning budget exhausted).
+EMPTY_ANSWER_MESSAGE = {
+    "fr": "Je n'ai pas réussi à formuler une réponse cette fois. Merci de reformuler ou de réessayer.",
+    "ar": "لم أتمكن من صياغة إجابة هذه المرة. يرجى إعادة صياغة السؤال أو المحاولة مجدداً.",
+    "en": "I couldn't put an answer together this time. Please rephrase or try again.",
+}
+
+# Groq's default output cap is 2,048 tokens, reasoning included; normal answers use up to ~1,600.
+MAX_COMPLETION_TOKENS = 4096
+
 NO_MATCH_MESSAGE = {
     "fr": "Désolé, je n'ai pas d'information fiable sur ce sujet. Je suis un assistant "
           "spécialisé : je réponds uniquement aux questions sur les démarches administratives "
@@ -291,6 +301,15 @@ def _call_groq_with_retry(client, max_retries: int = 1, **kwargs):
                 time.sleep(retry_after + 0.5)
                 continue
             raise
+
+
+_ALT_CITATION_RE = re.compile(r"[【［〔]\s*(\d+)\s*[】］〕]")
+
+
+def normalize_citations(text: str) -> str:
+    """gpt-oss sometimes cites as 【1】 (seen in a live answer): the UI and the monitoring only
+    recognise [1], so such an answer showed no sources and was counted as unanswered."""
+    return _ALT_CITATION_RE.sub(r"[\1]", text)
 
 
 def build_context(hits: list[Hit]) -> str:
@@ -513,14 +532,26 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 5, lang: 
         messages.append({"role": "user", "content":
                           f"Sources officielles disponibles :\n\n{context}\n\nQuestion : {retrieval_query}\n\n{directive}"})
         try:
-            resp = _call_groq_with_retry(client, model=model, temperature=0.2, messages=messages)
+            resp = _call_groq_with_retry(client, model=model, temperature=0.2, messages=messages,
+                                         max_completion_tokens=MAX_COMPLETION_TOKENS)
+            content = (resp.choices[0].message.content or "").strip()
+            if not content and model.startswith("openai/gpt-oss"):
+                # A reasoning model can spend its whole token budget thinking and return no text
+                # (finish_reason "length", seen in an MLflow trace): retry once, thinking less.
+                resp = _call_groq_with_retry(client, model=model, temperature=0.2, messages=messages,
+                                             max_completion_tokens=MAX_COMPLETION_TOKENS, reasoning_effort="low")
+                content = (resp.choices[0].message.content or "").strip()
         except RateLimitError as e:
             # Don't cache this -- it's a transient failure of the service, not a real answer
             # to "question", so a repeat of the same question later must try again.
             notice = DAILY_LIMIT_MESSAGE if "per day" in str(e) else BUSY_MESSAGE
             return {"answer": notice.get(q_lang, notice["fr"]), "hits": [], "abstained": False,
                     "busy": True}
-        text = resp.choices[0].message.content + sources_block(hits, q_lang)
+        if not content:
+            # Same handling as "busy": not cached, not kept in the conversation history.
+            return {"answer": EMPTY_ANSWER_MESSAGE.get(q_lang, EMPTY_ANSWER_MESSAGE["fr"]), "hits": [],
+                    "abstained": False, "busy": True, "empty": True}
+        text = normalize_citations(content) + sources_block(hits, q_lang)
         result = {"answer": text, "hits": hits, "abstained": False}
 
     if use_cache:

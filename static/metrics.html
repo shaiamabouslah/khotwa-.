@@ -59,7 +59,7 @@
 (function () {
   var OUTCOMES = {
     answer: "Réponse sourcée", uncited: "Sans source (non trouvé)", no_match: "Hors sujet",
-    clarification: "Clarification", chitchat: "Salutations", busy: "Limite Groq", error: "Erreur"
+    clarification: "Clarification", chitchat: "Salutations", busy: "Limite Groq", empty: "Réponse vide", error: "Erreur"
   };
   var LANGS = { fr: "Français", ar: "Arabe", en: "Anglais" };
 
@@ -109,7 +109,7 @@
         kpi("Sans réponse", pct(m.unanswered_rate), "hors sujet ou non trouvé dans les sources") +
         kpi("Latence", secs(m.latency_ms.p50), "médiane · p95 " + secs(m.latency_ms.p95)) +
         kpi("Satisfaction", pct(fb.satisfaction), fb.up + " utiles · " + fb.down + " pas utiles") +
-        kpi("Erreurs", pct(m.error_rate), "erreurs serveur + limites Groq") +
+        kpi("Erreurs", pct(m.error_rate), "erreurs serveur, limites Groq, réponses vides") +
         kpi("Non vérifiées", pct(m.grounding.flagged_rate), m.grounding.flagged + " / " + m.grounding.checked + " réponses citent un chiffre, lien ou renvoi absent des sources") +
       "</div>" +
       '<div class="grid2">' +

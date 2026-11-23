@@ -52,6 +52,20 @@ class TestCheck(unittest.TestCase):
     def test_citation_to_a_missing_source_is_flagged(self):
         self.assertEqual(check("Voir la procédure [3].", [SOURCE, SOURCE])["bad_citations"], [3])
 
+    def test_number_words_match_digits_both_ways(self):
+        source = "عدم تجاوز رقم المعاملات سنويا 75\nألف دينار"
+        self.assertTrue(check("Le plafond est de 75000 dinars [1].", [source])["grounded"])
+        self.assertTrue(check("Plafond : 75 mille dinars [1].", ["Plafond de 75 000 dinars."])["grounded"])
+        self.assertFalse(check("Plafond : 80 ألف دينار [1].", [source])["grounded"])
+
+    def test_link_with_other_scheme_or_www_is_the_same_page(self):
+        source = "Voir http://services.gov.tn/je-poursuis-mes-etudes-a-luniversite/"
+        self.assertTrue(check("Voir https://www.services.gov.tn/je-poursuis-mes-etudes-a-luniversite [1].",
+                              [source])["grounded"])
+
+    def test_k_needs_a_word_boundary(self):
+        self.assertEqual(numbers("12 km"), {"12"})
+
     def test_answer_without_facts_is_grounded(self):
         self.assertTrue(check("Je n'ai pas trouvé cette information dans les sources.", [SOURCE])["grounded"])
 

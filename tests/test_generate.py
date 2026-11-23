@@ -500,6 +500,42 @@ class TestGroqRetryAndDegradation(unittest.TestCase):
         self.assertTrue(result["busy"])
         self.assertEqual(result["answer"], generate.DAILY_LIMIT_MESSAGE["fr"])
 
+    @staticmethod
+    def _completion(content):
+        resp = MagicMock()
+        resp.choices[0].message.content = content
+        return resp
+
+    def _answer_with(self, responses, model=generate.DEFAULT_MODEL):
+        mock_retriever = MagicMock()
+        mock_retriever.search.return_value = [make_hit()]
+        with patch.dict(os.environ, {"GROQ_API_KEY": "test-key"}), patch("groq.Groq"), \
+             patch("generate._call_groq_with_retry", side_effect=responses) as call:
+            result = generate.answer("comment obtenir une bourse", retriever=mock_retriever, use_cache=False,
+                                     model=model)
+        return result, call
+
+    def test_empty_reply_is_retried_with_low_reasoning(self):
+        result, call = self._answer_with([self._completion(""), self._completion("Déposez le dossier [1].")])
+        self.assertTrue(result["answer"].startswith("Déposez le dossier [1]."))
+        self.assertEqual(call.call_args_list[1].kwargs["reasoning_effort"], "low")
+        self.assertEqual(call.call_args_list[0].kwargs["max_completion_tokens"], generate.MAX_COMPLETION_TOKENS)
+
+    def test_still_empty_reply_gets_a_message_and_is_not_kept(self):
+        result, _ = self._answer_with([self._completion(None), self._completion("  ")])
+        self.assertTrue(result["busy"] and result["empty"])
+        self.assertEqual(result["answer"], generate.EMPTY_ANSWER_MESSAGE["fr"])
+
+    def test_fullwidth_citations_become_standard_ones(self):
+        result, _ = self._answer_with([self._completion("Remplissez le formulaire【1】 puis【 2 】.")])
+        self.assertTrue(result["answer"].startswith("Remplissez le formulaire[1] puis[2]."))
+        self.assertEqual(generate.normalize_citations("voir ［3］ et 〔4〕"), "voir [3] et [4]")
+
+    def test_no_reasoning_retry_for_models_without_that_parameter(self):
+        result, call = self._answer_with([self._completion("")], model="llama-3.3-70b-versatile")
+        self.assertEqual(call.call_count, 1)
+        self.assertTrue(result["empty"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -17,3 +17,6 @@
 ragas==0.4.3
 openai==3.3.0
 instructor==1.17.0
+
+# experiment tracking and traces on DagsHub's MLflow server (scripts/tracking.py)
+mlflow-skinny==3.18.0

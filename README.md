@@ -53,6 +53,8 @@ The system aims to:
 │   ├── clean_pipeline.py     corpus -> kb/
 │   ├── validate_kb.py        kb/ checks against kb/taxonomy.yaml
 │   ├── eval_ragas.py         answer-quality evaluation
+│   ├── eval_generation.py    generation evaluation without an LLM judge (MLflow traces)
+│   ├── tracking.py           optional MLflow logging to DagsHub
 │   ├── compare_chunking.py   chunking-strategy comparison
 │   ├── benchmark_retrieval.py retrieval benchmark (DVC metrics)
 │   ├── check_metrics.py      quality gate on the benchmark (used by CI)
@@ -147,6 +149,7 @@ Large data (`data/raw/`, `data/corpus/`, the chunks and the embeddings) is versi
 - `embed_kb` -- chunks to BGE-M3 embeddings, plus a fingerprint file the retriever checks at load time (stale embeddings are detected and rebuilt, never silently used),
 - `compare_chunking` -- compares the heading / fixed / semantic / adaptive chunking strategies,
 - `benchmark_retrieval` -- retrieval quality as the app does it, written as DVC metrics,
+- `eval_generation` -- answers a sample of benchmark and out-of-scope questions through the full pipeline and scores them without an LLM judge (uses Groq quota, run on demand),
 - `eval_ragas` -- answer-quality evaluation (uses Groq quota, run on demand).
 
 Stages call `python`, so run DVC with the virtual environment activated -- otherwise another
@@ -193,6 +196,28 @@ The Arabic titles of French-only documents (`kb/overrides.yaml`, see Known limit
 ```bash
 python scripts/eval_ragas.py --sleep 25 --resume   # paced for the Groq free tier; spans several days of its daily quota
 ```
+
+- **Generation evaluation** -- `scripts/eval_generation.py` sends a sample of benchmark questions (stratified by language) and out-of-scope questions through the same pipeline as the web app and measures, without an LLM judge: answer, clarification and refusal rates, whether the answer cites the benchmark's gold document, the grounding check, empty answers and latency. Results go to `data/rag/metrics/generation.json`.
+
+```bash
+python scripts/eval_generation.py                 # 16 questions + 4 out-of-scope, about 80k Groq tokens
+python scripts/eval_generation.py --n 8 --negatives 2
+```
+
+First run (8 + 2 questions): 7 of 8 answered citing the gold document, both out-of-scope questions refused, every cited figure and link found in the sources, median latency 6 s. Its traces exposed three faults since fixed: the grounding check misread "75 ألف دينار" and http/https links (false alarms), the model once spent its whole 2,048-token budget reasoning and returned an empty answer (now 4,096 tokens, a retry with low reasoning effort, and a "please rephrase" message instead of an empty bubble), and it sometimes cites as 【1】, which the app did not recognise. It also showed a limit of the grounding check: an answer added document requirements absent from its source, which only a faithfulness judge (RAGAS) can catch.
+
+### 7. Experiment tracking (MLflow on DagsHub)
+
+DagsHub hosts an MLflow server for the repository: https://dagshub.com/shaimabouslah/khotwa-..mlflow. With `MLFLOW_TRACKING_URI` set (in `.env`, or the CI environment), `scripts/tracking.py` logs:
+
+- **retrieval-benchmark** -- one run per benchmark: parameters (embedding model, chunking, k, score floor), every metric per language and mode, the per-question results. CI logs one run per push.
+- **generation** -- one run per generation evaluation: parameters, rates, a table of every question with its answer, sources and grounding result, and one **trace** per question: the retrieval step (documents and scores), the Groq call (prompt, response, reasoning, tokens) and the outcome.
+
+```text
+MLFLOW_TRACKING_URI=https://dagshub.com/shaimabouslah/khotwa-..mlflow
+```
+
+Credentials come from `MLFLOW_TRACKING_USERNAME` / `MLFLOW_TRACKING_PASSWORD` when set, otherwise from the DagsHub user and token already stored for DVC in `.dvc/config.local`. DagsHub also lists every commit's DVC metrics on the repository's Experiments tab.
 
 ## Quick start
 

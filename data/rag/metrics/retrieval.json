@@ -49,7 +49,7 @@
       "mrr": 0.8083
     },
     "negatives_blocked_by_floor": 0.1333,
-    "seconds_per_question": 0.157
+    "seconds_per_question": 0.167
   },
   "hybrid": {
     "all": {
@@ -101,6 +101,6 @@
       "mrr": 0.5722
     },
     "negatives_blocked_by_floor": 0.2333,
-    "seconds_per_question": 0.169
+    "seconds_per_question": 0.166
   }
 }

@@ -29,14 +29,35 @@ def _norm_number(raw: str) -> str:
     return n.replace(",", ".")
 
 
+SCALE_RE = re.compile(r"\s*(ألف|آلاف|الف|mille|milles|thousand|k\b|مليون|ملايين|millions?)", re.I)
+SCALES = {"ألف": 1_000, "آلاف": 1_000, "الف": 1_000, "mille": 1_000, "milles": 1_000, "thousand": 1_000,
+          "k": 1_000, "مليون": 1_000_000, "ملايين": 1_000_000, "million": 1_000_000, "millions": 1_000_000}
+
+
+def _scaled(n: str, scale_word: str) -> str:
+    value = float(n) * SCALES[scale_word.lower()]
+    return str(int(value)) if value.is_integer() else str(value)
+
+
 def numbers(text: str) -> set[str]:
+    """Numbers of 2+ digits; "75 ألف" / "75 mille" / "1,5 million" count as their full value."""
     text = CITATION_RE.sub(" ", LIST_MARKER_RE.sub(" ", text.translate(ARABIC_INDIC)))
     text = URL_RE.sub(" ", text)
-    return {n for n in (_norm_number(m) for m in NUMBER_RE.findall(text)) if len(re.sub(r"\D", "", n)) >= 2}
+    out = set()
+    for m in NUMBER_RE.finditer(text):
+        n = _norm_number(m.group())
+        scale = SCALE_RE.match(text, m.end())
+        if scale:
+            n = _scaled(n, scale.group(1))
+        if len(re.sub(r"\D", "", n)) >= 2:
+            out.add(n)
+    return out
 
 
 def _norm_url(u: str) -> str:
-    return u.rstrip(".,;:").rstrip("/").lower()
+    """The same page written as http/https, with or without www."""
+    u = re.sub(r"^https?://(www\.)?", "", u.lower())
+    return u.rstrip(".,;:").rstrip("/")
 
 
 def check(answer: str, sources: list[str], question: str = "") -> dict:

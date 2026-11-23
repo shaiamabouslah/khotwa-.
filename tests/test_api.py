@@ -377,6 +377,18 @@ class TestChatEndpoint(ApiTestBase):
         self.assertEqual(seen, [[]])
         self.assertEqual(data["turn"], 0)
 
+    def test_empty_reply_is_logged_as_empty_and_not_kept(self):
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        empty = dict(_answer_stub(generate.EMPTY_ANSWER_MESSAGE["fr"]), busy=True, empty=True)
+        with patch.object(api.generate, "answer", return_value=empty):
+            data = self.client.post("/chat", json={"conversation_id": conv_id, "question": "une question"}).json()
+        self.assertEqual(data["answer"], generate.EMPTY_ANSWER_MESSAGE["fr"])
+        self.assertIsNone(data["turn"])
+        self.assertEqual(self._events()[0]["outcome"], "empty")
+        self.assertEqual(self.client.get(f"/conversations/{conv_id}").json()["turns"], [])
+        self.assertEqual(self.client.get("/metrics").json()["error_rate"], 1.0)
+
     def test_feedback_counts_only_the_latest_vote(self):
         self._register(self.client, "etudiant1")
         conv_id = self._new_conversation(self.client)
