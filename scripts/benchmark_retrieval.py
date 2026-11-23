@@ -77,7 +77,9 @@ def score(rows: list[dict], with_ci: bool = False) -> dict:
         samples = [_rates(rng.choices(positions, k=len(positions))) for _ in range(BOOTSTRAP_SAMPLES)]
         for metric in ("hit@1", "hit@5", "mrr"):
             vals = sorted(s[metric] for s in samples)
-            out[f"{metric}_ci95"] = [round(vals[int(0.025 * len(vals))], 4), round(vals[int(0.975 * len(vals)) - 1], 4)]
+            # two scalars, not a [low, high] list: metric viewers (DagsHub, dvc plots) show numbers only
+            out[f"{metric}_ci_low"] = round(vals[int(0.025 * len(vals))], 4)
+            out[f"{metric}_ci_high"] = round(vals[int(0.975 * len(vals)) - 1], 4)
     return out
 
 
@@ -129,8 +131,8 @@ def main():
                 print(f"{mode:<8}{group:<12}{s['n']:>4}{s['hit@1']:>8.2f}{s['hit@3']:>8.2f}{s['hit@5']:>8.2f}"
                       f"{s['mrr']:>8.2f}")
         ci = m["all"]
-        print(f"{mode:<8}95% interval: hit@1 {ci['hit@1_ci95'][0]:.2f}-{ci['hit@1_ci95'][1]:.2f}, "
-              f"hit@5 {ci['hit@5_ci95'][0]:.2f}-{ci['hit@5_ci95'][1]:.2f}")
+        print(f"{mode:<8}95% interval: hit@1 {ci['hit@1_ci_low']:.2f}-{ci['hit@1_ci_high']:.2f}, "
+              f"hit@5 {ci['hit@5_ci_low']:.2f}-{ci['hit@5_ci_high']:.2f}")
         print(f"{mode:<8}negatives stopped by the score floor: {m['negatives_blocked_by_floor']:.0%}, "
               f"{m['seconds_per_question']}s/question\n")
 

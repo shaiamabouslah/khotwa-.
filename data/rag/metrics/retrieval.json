@@ -6,18 +6,12 @@
       "hit@3": 0.9362,
       "hit@5": 0.9894,
       "mrr": 0.8988,
-      "hit@1_ci95": [
-        0.7766,
-        0.9255
-      ],
-      "hit@5_ci95": [
-        0.9681,
-        1.0
-      ],
-      "mrr_ci95": [
-        0.8454,
-        0.9468
-      ]
+      "hit@1_ci_low": 0.7766,
+      "hit@1_ci_high": 0.9255,
+      "hit@5_ci_low": 0.9681,
+      "hit@5_ci_high": 1.0,
+      "mrr_ci_low": 0.8454,
+      "mrr_ci_high": 0.9468
     },
     "ar": {
       "n": 27,
@@ -55,7 +49,7 @@
       "mrr": 0.8083
     },
     "negatives_blocked_by_floor": 0.1333,
-    "seconds_per_question": 0.139
+    "seconds_per_question": 0.157
   },
   "hybrid": {
     "all": {
@@ -64,18 +58,12 @@
       "hit@3": 0.7872,
       "hit@5": 0.8936,
       "mrr": 0.7289,
-      "hit@1_ci95": [
-        0.5426,
-        0.734
-      ],
-      "hit@5_ci95": [
-        0.8298,
-        0.9574
-      ],
-      "mrr_ci95": [
-        0.6486,
-        0.8032
-      ]
+      "hit@1_ci_low": 0.5426,
+      "hit@1_ci_high": 0.734,
+      "hit@5_ci_low": 0.8298,
+      "hit@5_ci_high": 0.9574,
+      "mrr_ci_low": 0.6486,
+      "mrr_ci_high": 0.8032
     },
     "ar": {
       "n": 27,
@@ -113,6 +101,6 @@
       "mrr": 0.5722
     },
     "negatives_blocked_by_floor": 0.2333,
-    "seconds_per_question": 0.14
+    "seconds_per_question": 0.169
   }
 }

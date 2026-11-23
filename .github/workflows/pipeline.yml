@@ -52,10 +52,20 @@ jobs:
       - name: Pull chunks and embeddings from DagsHub
         if: steps.creds.outputs.ready == 'true'
         run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" -u "$DAGSHUB_USER:$DAGSHUB_TOKEN" https://dagshub.com/api/v1/user)
+          if [ "$code" != "200" ]; then
+            echo "::error::DagsHub rejected the credentials (HTTP $code): check the DAGSHUB_USER (DagsHub username, not GitHub's) and DAGSHUB_TOKEN secrets"
+            exit 1
+          fi
           dvc remote modify --local dagshub auth basic
           dvc remote modify --local dagshub user "$DAGSHUB_USER"
           dvc remote modify --local dagshub password "$DAGSHUB_TOKEN"
-          dvc pull -r dagshub prepare_kb embed_kb
+          if ! dvc pull -r dagshub prepare_kb embed_kb > pull.log 2>&1; then
+            cat pull.log
+            echo "::error::dvc pull failed: $(grep -m 3 ERROR pull.log | tr '\n' ' ')"
+            exit 1
+          fi
+          cat pull.log
 
       - name: Cache the embedding model
         if: steps.creds.outputs.ready == 'true'
