@@ -52,9 +52,11 @@ jobs:
       - name: Pull chunks and embeddings from DagsHub
         if: steps.creds.outputs.ready == 'true'
         run: |
+          DAGSHUB_USER=$(printf '%s' "$DAGSHUB_USER" | tr -d '[:space:]')
+          DAGSHUB_TOKEN=$(printf '%s' "$DAGSHUB_TOKEN" | tr -d '[:space:]')
           code=$(curl -s -o /dev/null -w "%{http_code}" -u "$DAGSHUB_USER:$DAGSHUB_TOKEN" https://dagshub.com/api/v1/user)
           if [ "$code" != "200" ]; then
-            echo "::error::DagsHub rejected the credentials (HTTP $code): check the DAGSHUB_USER (DagsHub username, not GitHub's) and DAGSHUB_TOKEN secrets"
+            echo "::error::DagsHub rejected the credentials (HTTP $code). DAGSHUB_USER has ${#DAGSHUB_USER} characters (the DagsHub username, not GitHub's), DAGSHUB_TOKEN has ${#DAGSHUB_TOKEN} (a DagsHub token has 40)"
             exit 1
           fi
           dvc remote modify --local dagshub auth basic
