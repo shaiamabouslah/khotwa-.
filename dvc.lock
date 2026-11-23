@@ -10,92 +10,140 @@ stages:
       nfiles: 340
     - path: scripts/rag_prepare.py
       hash: md5
-      md5: caa2c09d83cd207069c5061cc6ce3226
-      size: 22983
+      md5: e062379c160acf3d79d5f545eaa6dec3
+      size: 23569
     outs:
     - path: data/rag/chunks.jsonl
       hash: md5
-      md5: a0668e3dc1eb42d024729cb7d2aee46c
-      size: 1537031
+      md5: 8a9eac8189efde3d8873db5ad2c51219
+      size: 1550528
     - path: data/rag/parents.jsonl
       hash: md5
-      md5: 7c8fbc14c81627d4d557eb09eefa6f53
-      size: 597065
+      md5: 988d3f4f104e797558434404028747da
+      size: 605349
     - path: data/rag/quarantine.jsonl
       hash: md5
-      md5: abcaeb961f3089c223aa7c201d05fdb5
-      size: 3176
+      md5: 25c6f7fad75c6c4975c51961ae6aff20
+      size: 2648
     - path: data/rag/report.md
       hash: md5
-      md5: b6875c229b76b7dd80146257a6e595e0
-      size: 344
+      md5: e46a9d709e25083c099356a9ef529f45
+      size: 324
     - path: data/rag/review_dupes.json
       hash: md5
       md5: 6113aa7b1794d61ae2522c25103ff07e
       size: 3370
   compare_chunking:
-    cmd: C:\Users\HP\Desktop\Mlops\.venv\Scripts\python.exe 
-      scripts/compare_chunking.py --kb kb --file data/rag/questions.jsonl > 
-      data/rag/chunking_comparison_report.txt
+    cmd: python scripts/compare_chunking.py --kb kb --file 
+      data/rag/questions.jsonl > data/rag/chunking_comparison_report.txt
     deps:
     - path: data/rag/questions.jsonl
       hash: md5
-      md5: 0ff8fe31e6863a38a77dffaedd934224
-      size: 6537
+      md5: f716a7cf521174aa9a0dfe7fe0d8e681
+      size: 16394
     - path: kb
       hash: md5
-      md5: e2192b2620430c572dfe4353a7a68283.dir
-      size: 1302769
+      md5: b59242edb4d0aca020cd299beea3a5e3.dir
+      size: 1291509
       nfiles: 340
     - path: scripts/compare_chunking.py
       hash: md5
-      md5: 27dcf01d8d3a573de9fe4c4298102b07
-      size: 3677
-    - path: scripts/fixes/eval_dense.py
+      md5: c488cf2e873f7a23f9f169d06d3c2b14
+      size: 4063
+    - path: scripts/eval/eval_dense.py
       hash: md5
-      md5: 1187724e8036f6048cfda3cbc26c1fbe
-      size: 4869
-    - path: scripts/fixes/eval_retrieval.py
+      md5: e7c1e9c89e2679fa48eadc3f7e32ae4b
+      size: 6113
+    - path: scripts/eval/eval_retrieval.py
       hash: md5
-      md5: 2f40306ccc33aff0acb9f146da8eb010
-      size: 2469
+      md5: f70a84f2332c32eb2e7bbd56db19c50f
+      size: 2687
     - path: scripts/rag_prepare.py
       hash: md5
-      md5: bd3e8225371ccede375186f60e015226
-      size: 18471
+      md5: e062379c160acf3d79d5f545eaa6dec3
+      size: 23569
     outs:
     - path: data/rag/chunking_comparison_report.txt
       hash: md5
-      md5: 374e7cb752829585e34a6d2c58e19f48
-      size: 1163
+      md5: 8cfee3cf9daa7f4493ff6b7305a8993d
+      size: 1453
+    - path: data/rag/cmp_adaptive
+      hash: md5
+      md5: 4ba8062b9bb4cc95ba32e645cb084e49.dir
+      size: 4594273
+      nfiles: 6
     - path: data/rag/cmp_fixed
       hash: md5
-      md5: 2dfdd5b6a4f1b3c0d5be4d9daa132159.dir
-      size: 4112887
+      md5: fe95091fceca3e683021e1834cacaa42.dir
+      size: 4203582
       nfiles: 6
     - path: data/rag/cmp_heading
       hash: md5
-      md5: 79ca787669b5573bcbf5de76b1875121.dir
-      size: 4269112
+      md5: 055e92bce654df4ae698e922ddbd4b07.dir
+      size: 4370091
       nfiles: 6
     - path: data/rag/cmp_semantic
       hash: md5
-      md5: 32b65c12b59b78f4276aae02d1c4084c.dir
-      size: 4538418
+      md5: 2ee19c10363bbd1036bb8cf5c3c345df.dir
+      size: 4808758
       nfiles: 6
   embed_kb:
     cmd: python scripts/retriever.py --build-embeddings
     deps:
     - path: data/rag/chunks.jsonl
       hash: md5
-      md5: a0668e3dc1eb42d024729cb7d2aee46c
-      size: 1537031
+      md5: 8a9eac8189efde3d8873db5ad2c51219
+      size: 1550528
     outs:
     - path: data/rag/chunks.bge-m3.npy
       hash: md5
-      md5: 1cb0acafd8a5af869ea00966b73a09d6
-      size: 2183296
+      md5: 9d0acb86632fa31a1c5c80b349d4561c
+      size: 2207872
     - path: data/rag/chunks.bge-m3.sig
       hash: md5
-      md5: 358886544e4bf560d0c220246eaf191b
+      md5: a93cbf20b8584f5496087c3fc8eff986
       size: 66
+  benchmark_retrieval:
+    cmd: python scripts/benchmark_retrieval.py
+    deps:
+    - path: data/rag/chunks.bge-m3.npy
+      hash: md5
+      md5: 9d0acb86632fa31a1c5c80b349d4561c
+      size: 2207872
+    - path: data/rag/chunks.jsonl
+      hash: md5
+      md5: 8a9eac8189efde3d8873db5ad2c51219
+      size: 1550528
+    - path: data/rag/hard_questions.jsonl
+      hash: md5
+      md5: b86a562023410e20e846feb8fb411a5b
+      size: 2278
+    - path: data/rag/negative_questions.jsonl
+      hash: md5
+      md5: 8ef68ece8db1209ca7df4b696cdd410a
+      size: 2740
+    - path: data/rag/questions.jsonl
+      hash: md5
+      md5: f716a7cf521174aa9a0dfe7fe0d8e681
+      size: 16394
+    - path: scripts/benchmark_retrieval.py
+      hash: md5
+      md5: ccabe63187fe5eff4ac9577108e60fe6
+      size: 7171
+    - path: scripts/cnss_rules.py
+      hash: md5
+      md5: f116c1e84495c11bd6c7f5c1abb5ebde
+      size: 8125
+    - path: scripts/generate.py
+      hash: md5
+      md5: 0d9b952c2007538d58f9435e65839be9
+      size: 34441
+    - path: scripts/retriever.py
+      hash: md5
+      md5: a0b28cc20d15afa5eb9ba3ef223c0efd
+      size: 23230
+    outs:
+    - path: data/rag/metrics/retrieval.json
+      hash: md5
+      md5: 16fd5617ddac88a2542082faaa6e7f12
+      size: 2042

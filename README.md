@@ -46,13 +46,18 @@ The system aims to:
 │   ├── api.py                web app backend (FastAPI)
 │   ├── auth.py               local accounts (salted PBKDF2 hashes)
 │   ├── monitoring.py         usage events + metrics
+│   ├── grounding.py          checks every figure, link and citation of an answer against its sources
 │   ├── generate.py           answer generation, clarification, conversation history
 │   ├── retriever.py          BGE-M3 retrieval, embeddings cache + fingerprint
 │   ├── rag_prepare.py        kb/ -> chunks
 │   ├── clean_pipeline.py     corpus -> kb/
 │   ├── validate_kb.py        kb/ checks against kb/taxonomy.yaml
 │   ├── eval_ragas.py         answer-quality evaluation
-│   └── compare_chunking.py   chunking-strategy comparison
+│   ├── compare_chunking.py   chunking-strategy comparison
+│   ├── benchmark_retrieval.py retrieval benchmark (DVC metrics)
+│   ├── check_metrics.py      quality gate on the benchmark (used by CI)
+│   ├── eval/                 BM25 / dense scorers used by compare_chunking, score-floor calibration
+│   └── fixes/                document-level cleaning fixes run by clean_pipeline.py
 ├── static/                   index.html (chat UI), metrics.html (usage statistics)
 ├── kb/                       curated knowledge base (taxonomy.yaml, studies/, employment/)
 ├── data/
@@ -132,14 +137,20 @@ Generation uses the Groq API and needs `GROQ_API_KEY` in `.env`.
 
 `scripts/api.py` serves the chat page with accounts, a conversation sidebar and feedback buttons (useful / not useful). Every question is logged (`data/monitoring/events.jsonl`: outcome, language, latency, no password or raw user name) and summarized on `/metrics.html`: answer rate, unanswered rate, latency p50/p95, satisfaction, and the most recent unanswered or down-voted questions.
 
+Every generated answer also goes through `scripts/grounding.py`, a check that needs no model or API call: each figure (amount, date, age, phone number), each link and each `[n]` citation must appear in the sources the LLM was given. `/metrics.html` shows the share of answers that fail it ("Non vérifiées") and what was missing from the sources -- a live, explainable hallucination signal for the facts that matter most in an administrative procedure. It cannot judge a paraphrased claim; that is what RAGAS faithfulness measures.
+
 ### 5. Data versioning and pipeline (DVC)
 
 Large data (`data/raw/`, `data/corpus/`, the chunks and the embeddings) is versioned with DVC, not git. `dvc.yaml` declares the pipeline stages:
 
 - `prepare_kb` -- kb/ to chunks,
 - `embed_kb` -- chunks to BGE-M3 embeddings, plus a fingerprint file the retriever checks at load time (stale embeddings are detected and rebuilt, never silently used),
-- `compare_chunking` -- compares the heading / fixed / semantic chunking strategies,
+- `compare_chunking` -- compares the heading / fixed / semantic / adaptive chunking strategies,
+- `benchmark_retrieval` -- retrieval quality as the app does it, written as DVC metrics,
 - `eval_ragas` -- answer-quality evaluation (uses Groq quota, run on demand).
+
+Stages call `python`, so run DVC with the virtual environment activated -- otherwise another
+Python installation, with other package versions, may run them.
 
 ```bash
 dvc pull                     # fetch the data for the current commit
@@ -149,8 +160,28 @@ dvc push                     # after changing data
 
 ### 6. Evaluation
 
-- **Retrieval benchmark** -- `data/rag/questions.jsonl`: 58 questions (28 French, 22 Arabic, 8 English) with the document that answers each one. Measured with hit@1/3/5 and MRR, per language.
-- **Refusal check** -- `data/rag/negative_questions.jsonl`: questions the assistant must decline (out of domain, or related procedures it has no source for).
+- **Retrieval benchmark** -- `scripts/benchmark_retrieval.py` on `data/rag/questions.jsonl`: 94 questions (32 French, 27 Arabic, 22 English, 13 Tunisian Derja in Arabic and Latin script) with the document that answers each one, plus `data/rag/hard_questions.jsonl` (12 typo, keyword-style and slang variants, reported as "robustness"). Measures hit@1/3/5 and MRR per group, with a 95% bootstrap interval on the overall scores, for dense retrieval (used by the app) and the hybrid dense+BM25 mode. The run stops if a label points to a document that is no longer in the index (two stale labels had been counted as retrieval misses). Results go to `data/rag/metrics/retrieval.json`, tracked as DVC metrics.
+- **Refusal check** -- `data/rag/negative_questions.jsonl`: 30 questions the assistant must decline (out of domain, or related procedures it has no source for), in French, Arabic, English and Derja. The benchmark reports how many the score floor stops before any LLM call; the rest are declined by the generation prompt.
+- **Quality gate** -- `scripts/check_metrics.py` fails when dense hit@5, hit@1 or MRR fall under fixed floors, or when any group's hit@5 drops under 0.70. The floors sit below the current scores by more than the 95% interval, so noise does not fail a build.
+
+```bash
+dvc repro benchmark_retrieval
+dvc metrics show
+dvc metrics diff main        # compare the working copy against main
+```
+
+Current results (dense, as used by the app):
+
+| Group | n | hit@1 | hit@5 | MRR |
+|---|---|---|---|---|
+| All | 94 | 0.77 (95% CI 0.68-0.85) | 0.96 (0.91-0.99) | 0.84 |
+| French | 32 | 0.81 | 1.00 | 0.90 |
+| Arabic | 27 | 0.78 | 0.93 | 0.84 |
+| English | 22 | 0.73 | 0.95 | 0.82 |
+| Derja | 13 | 0.69 | 0.92 | 0.76 |
+| Robustness | 12 | 0.67 | 0.92 | 0.75 |
+
+The LLM receives the top 5 documents, so hit@5 says whether a correct answer is possible; hit@1 says how cleanly the right source comes first. Hybrid dense+BM25 scores lower on every group (hit@5 0.68 overall, Arabic 0.37), so dense stays the default. The score floor stops 10% of the refusal questions before any LLM call: in-scope Arabic and Derja questions score as low as out-of-scope ones, so the floor only removes the clearly absurd and the generation prompt does the rest. The four chunking strategies tie on the 94 questions (dense hit@1 0.76-0.77, hit@5 0.96 for all, `data/rag/chunking_comparison_report.txt`), so the app keeps heading-based chunking.
 - **Answer quality** -- `scripts/eval_ragas.py` runs the full pipeline exactly as the web app does and scores each answer with RAGAS faithfulness (is every claim supported by the sources -- the hallucination check) and context relevance (did retrieval bring the right material), per language.
 
 ```bash
@@ -207,11 +238,21 @@ The image contains only the serving dependencies. The Hugging Face cache mount r
 python -m unittest discover -s tests -t .
 ```
 
-The same tests run on every push and pull request to `main` (GitHub Actions, `.github/workflows/tests.yml`), together with `python -m crawler validate` and `python scripts/validate_kb.py`. They test the deterministic logic only -- thresholds, caches, history, clarification, role ordering, API behaviour -- and never load the embedding model, so they take seconds.
+The same tests run on every push and pull request to `main` (GitHub Actions, `.github/workflows/tests.yml`), together with `python -m crawler validate` and `python scripts/validate_kb.py`. They test the deterministic logic only -- thresholds, caches, history, clarification, role ordering, cleaning, grounding check, quality gate, API behaviour -- and never load the embedding model, so they take seconds.
+
+A second workflow, `.github/workflows/pipeline.yml`, needs the data: it pulls the chunks and embeddings from the DagsHub DVC remote, runs the retrieval benchmark, applies the quality gate and builds the Docker image. It needs two repository secrets, `DAGSHUB_USER` and `DAGSHUB_TOKEN`; without them it reports a notice and skips.
 
 ## Notes
 
 - Source-specific rules and site configuration live in `sources.yaml`.
 - The taxonomy and classification vocabulary live in `kb/taxonomy.yaml`.
 - Keep secrets out of tracked files: `.env`, `data/users.json` and `data/monitoring/` are git-ignored and excluded from the Docker image.
+- Set `KHOTWA_HTTPS=1` when the app is served behind HTTPS: the session cookie is then never sent over plain HTTP.
 - Groq free tier: about 200,000 generation tokens per day, and an answer uses about 4,000 -- roughly 50 answered questions per day across all users. Past that, the app replies that the daily quota is reached instead of answering.
+
+## Known limitations
+
+- **Arabic questions about French-only pages.** 165 of the 268 documents exist only in French. BGE-M3 bridges most of the gap, but not specialised terms: "المعرف الجبائي" (tax identifier) and "التأشير" (ANETI pointage) do not reach the right French page. Adding an Arabic title to French-only documents, or translating the question before searching, would address it; a title-only embedding field was measured and does not.
+- **Answer faithfulness is only partly measured offline.** The grounding check covers figures, links and citations on every live answer; full RAGAS faithfulness needs an LLM judge and the Groq quota.
+- **Two services.gov pages carry another service's description** ("Obtention du certificat annuel de l'impôt sur le revenu", "Obtention du certificat de déclaration des montants versés au Trésor public"): a scraping mix-up on the source portal, to fix in the corpus.
+- **The reranker is off in the web app.** bge-reranker-v2-m3 takes 5 s for 5 candidates and 40 s for 20 on this CPU.

@@ -1,0 +1,86 @@
+name: pipeline
+
+# Data-dependent checks: needs the DVC data, so it runs only once the DagsHub remote is set up.
+# Repository secrets (Settings > Secrets and variables > Actions): DAGSHUB_USER, DAGSHUB_TOKEN.
+# Without them the job reports a notice and stops, instead of failing every push.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "kb/**"
+      - "data/**"
+      - "dvc.yaml"
+      - "dvc.lock"
+      - "Dockerfile"
+      - "requirements-serve.txt"
+      - ".github/workflows/pipeline.yml"
+  workflow_dispatch:
+
+jobs:
+  benchmark-and-image:
+    runs-on: ubuntu-latest
+    env:
+      DAGSHUB_USER: ${{ secrets.DAGSHUB_USER }}
+      DAGSHUB_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
+    steps:
+      - name: Check DagsHub credentials
+        id: creds
+        run: |
+          if [ -z "$DAGSHUB_USER" ] || [ -z "$DAGSHUB_TOKEN" ]; then
+            echo "::notice::DAGSHUB_USER / DAGSHUB_TOKEN secrets not set -- skipping the data pipeline checks."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.creds.outputs.ready == 'true'
+
+      - uses: actions/setup-python@v5
+        if: steps.creds.outputs.ready == 'true'
+        with:
+          python-version: "3.11"
+
+      - name: Install serving dependencies (CPU torch) and DVC
+        if: steps.creds.outputs.ready == 'true'
+        run: |
+          pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements-serve.txt dvc==3.67.1
+
+      - name: Pull chunks and embeddings from DagsHub
+        if: steps.creds.outputs.ready == 'true'
+        run: |
+          dvc remote modify --local dagshub auth basic
+          dvc remote modify --local dagshub user "$DAGSHUB_USER"
+          dvc remote modify --local dagshub password "$DAGSHUB_TOKEN"
+          dvc pull -r dagshub prepare_kb embed_kb
+
+      - name: Cache the embedding model
+        if: steps.creds.outputs.ready == 'true'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-bge-m3
+
+      - name: Retrieval benchmark
+        if: steps.creds.outputs.ready == 'true'
+        run: python scripts/benchmark_retrieval.py --modes dense --out data/rag/metrics/retrieval_ci.json
+
+      - name: Quality gate
+        if: steps.creds.outputs.ready == 'true'
+        run: python scripts/check_metrics.py data/rag/metrics/retrieval_ci.json
+
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.creds.outputs.ready == 'true'
+        with:
+          name: retrieval-metrics
+          path: data/rag/metrics/retrieval_ci.json
+
+      - name: Build the Docker image
+        if: steps.creds.outputs.ready == 'true'
+        run: |
+          pip download torch==2.14.1+cpu --no-deps --index-url https://download.pytorch.org/whl/cpu \
+            --python-version 3.11 --platform manylinux_2_28_x86_64 --only-binary=:all: -d wheels
+          docker build -t khotwa:ci .

@@ -59,13 +59,13 @@ def main():
 
         chunks_path = out_dir / "chunks.jsonl"
         print(f"  BM25 eval...")
-        bm25_cmd = [sys.executable, "scripts/fixes/eval_retrieval.py", "--chunks", str(chunks_path)]
+        bm25_cmd = [sys.executable, "scripts/eval/eval_retrieval.py", "--chunks", str(chunks_path)]
         bm25_cmd += ["--file", args.file] if args.file else ["--auto"]
         bm25_out = run(bm25_cmd, f"eval_retrieval {strat}") or ""
         bm25_m = HIT_RE.search(bm25_out)
 
         print(f"  {args.embed_model} dense eval (first run downloads/embeds, can take a while)...")
-        dense_cmd = [sys.executable, "scripts/fixes/eval_dense.py", "--chunks", str(chunks_path), "--embed-model", args.embed_model]
+        dense_cmd = [sys.executable, "scripts/eval/eval_dense.py", "--chunks", str(chunks_path), "--embed-model", args.embed_model]
         dense_cmd += ["--file", args.file] if args.file else ["--auto"]
         dense_out = run(dense_cmd, f"eval_dense {strat}") or ""
         dense_m = HIT_RE.search(dense_out)

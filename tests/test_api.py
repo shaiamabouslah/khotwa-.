@@ -410,6 +410,21 @@ class TestChatEndpoint(ApiTestBase):
         self.assertEqual(m["answer_rate"], 0.5)
         self.assertEqual(m["recent_unanswered"][0]["question"], "recette du couscous ?")
 
+    def test_answer_with_a_figure_in_no_source_is_flagged_on_metrics(self):
+        from retriever import Hit
+        hit = Hit(score=0.9, chunk_id="c1", doc_id="d1", lang="fr", domain="studies", subtopic="bourses",
+                  title="Bourse", org="OOUN", section="s", url="https://www.ooun.rnu.tn/bourse",
+                  text="Le revenu ne doit pas dépasser 1200 dinars.", n_chunks=1)
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        for body in ("Plafond : 1200 dinars [1].", "Plafond : 1500 dinars [1]."):
+            stub = {"answer": body + generate.sources_block([hit], "fr"), "hits": [hit], "abstained": False}
+            with patch.object(api.generate, "answer", return_value=stub):
+                self.client.post("/chat", json={"conversation_id": conv_id, "question": "plafond de revenu ?"})
+        m = self.client.get("/metrics").json()
+        self.assertEqual(m["grounding"], {"checked": 2, "flagged": 1, "flagged_rate": 0.5})
+        self.assertEqual(m["recent_flagged"][0]["unsupported"], ["1500"])
+
     def test_health_reports_key_and_retriever_state(self):
         body = self.client.get("/health").json()
         self.assertEqual(body["status"], "ok")

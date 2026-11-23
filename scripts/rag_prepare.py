@@ -35,6 +35,7 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 REQUIRED = ["id", "title", "domain", "subtopic", "lang", "sources", "last_changed"]
 MIN_WORDS = 40            # after cleaning
+LONG_HEADING_WORDS = 8    # an empty "heading" this long is content, not a widget title
 TARGET_WORDS, MAX_WORDS, OVERLAP = 280, 420, 40
 DUP_DROP, DUP_REVIEW = 0.95, 0.85
 
@@ -113,6 +114,12 @@ def normalize(body):
         # chunk (mostly the repeated title prefix) let it occasionally outrank the real
         # procedure content on keyword-dense queries.
         if (not m and re.match(r"#{2,4} [^\n]*$", s.strip())) or (m and not m.group(2).strip()):
+            # The extractor also emits real content as headings with nothing under them (the
+            # equivalence definition sentence, lists of service names on services.gov.tn):
+            # 1,096 words in 42 documents were deleted here before. Only short ones are widgets.
+            heading = re.sub(r"^#{2,4}\s*", "", s.strip())
+            if words(heading) >= LONG_HEADING_WORDS:
+                out.append(heading + "\n\n"); notes.append("long_heading_kept_as_text"); continue
             notes.append("empty_heading_removed"); continue
         out.append(s)
     b = "".join(out)

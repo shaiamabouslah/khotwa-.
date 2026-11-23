@@ -85,6 +85,12 @@
       return '<li dir="auto">' + esc(i.question) + '<div class="meta">' + esc(when(i.ts)) + (i.lang ? " · " + esc(LANGS[i.lang] || i.lang) : "") + "</div></li>";
     }).join("") + "</ul>";
   }
+  function flagged(items) {
+    if (!items.length) return '<p class="empty">Aucune — chaque chiffre et lien cité figure dans les sources.</p>';
+    return '<ul class="list">' + items.map(function (i) {
+      return '<li dir="auto">' + esc(i.question) + '<div class="meta">' + esc(when(i.ts)) + " · absent des sources : " + esc(i.unsupported.join(", ")) + "</div></li>";
+    }).join("") + "</ul>";
+  }
   function kpi(label, value, sub) {
     return '<div class="card kpi"><div class="label">' + label + '</div><div class="value">' + value + '</div><div class="sub">' + sub + "</div></div>";
   }
@@ -104,6 +110,7 @@
         kpi("Latence", secs(m.latency_ms.p50), "médiane · p95 " + secs(m.latency_ms.p95)) +
         kpi("Satisfaction", pct(fb.satisfaction), fb.up + " utiles · " + fb.down + " pas utiles") +
         kpi("Erreurs", pct(m.error_rate), "erreurs serveur + limites Groq") +
+        kpi("Non vérifiées", pct(m.grounding.flagged_rate), m.grounding.flagged + " / " + m.grounding.checked + " réponses citent un chiffre, lien ou renvoi absent des sources") +
       "</div>" +
       '<div class="grid2">' +
         '<div class="card"><h2>Résultat des questions</h2>' + bars(m.by_outcome, OUTCOMES) + "</div>" +
@@ -112,7 +119,8 @@
       '<div class="grid2">' +
         '<div class="card"><h2>Questions récentes sans réponse</h2>' + list(m.recent_unanswered, "Aucune — toutes les questions ont trouvé une source.") + "</div>" +
         '<div class="card"><h2>Réponses jugées pas utiles</h2>' + list(m.recent_downvoted, "Aucun avis négatif.") + "</div>" +
-      "</div>";
+      "</div>" +
+      '<div class="card"><h2>Réponses non vérifiées (élément absent des sources)</h2>' + flagged(m.recent_flagged) + "</div>";
   }).catch(function (e) {
     document.getElementById("content").innerHTML = '<p class="error">Impossible de charger les statistiques (' + esc(e.message) + ").</p>";
   });

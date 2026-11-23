@@ -26,6 +26,7 @@ EVENTS_PATH = (Path(os.environ["KHOTWA_STATE_DIR"]) / "events.jsonl" if os.envir
 #   chitchat       greeting / thanks, canned reply
 #   busy           Groq rate limit reached, "try again in a minute"
 #   error          the request failed (missing API key, crash...)
+# Answers also carry "grounding" (grounding.check): figures, links or citations found in no source.
 UNANSWERED = ("no_match", "uncited")
 
 _lock = threading.Lock()
@@ -78,6 +79,9 @@ def compute_metrics(events: list[dict]) -> dict:
     down = sum(1 for e in votes.values() if e.get("value") == "down")
     downvoted = sorted((e for e in votes.values() if e.get("value") == "down"), key=lambda e: e["ts"], reverse=True)
 
+    checked = [e for e in questions if "grounding" in e]
+    flagged = [e for e in checked if not e["grounding"].get("grounded")]
+
     def rate(n):
         return round(n / substantive, 3) if substantive else None
 
@@ -94,5 +98,12 @@ def compute_metrics(events: list[dict]) -> dict:
                      "satisfaction": round(up / (up + down), 3) if up + down else None},
         "recent_unanswered": [{"ts": e["ts"], "lang": e.get("lang"), "question": e.get("question")}
                               for e in reversed(questions) if e.get("outcome") in UNANSWERED][:15],
+        "grounding": {"checked": len(checked), "flagged": len(flagged),
+                      "flagged_rate": round(len(flagged) / len(checked), 3) if checked else None},
+        "recent_flagged": [{"ts": e["ts"], "question": e.get("question"),
+                            "unsupported": e["grounding"].get("unsupported_numbers", [])
+                            + e["grounding"].get("unsupported_urls", [])
+                            + [f"[{n}]" for n in e["grounding"].get("bad_citations", [])]}
+                           for e in reversed(flagged)][:10],
         "recent_downvoted": [{"ts": e["ts"], "question": e.get("question")} for e in downvoted][:10],
     }

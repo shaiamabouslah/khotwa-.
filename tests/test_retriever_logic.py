@@ -4,7 +4,7 @@ Deliberately does NOT instantiate Retriever() or import sentence_transformers/to
 static method is the one piece of retriever.py that is pure data-in/data-out logic (no model,
 no I/O), so it is tested as such -- fast, no model download, safe to run on every push. The
 model's own retrieval quality (hit@1/3/5, MRR) is a separate, slower evaluation
-(scripts/fixes/eval_dense.py, scripts/compare_chunking.py), not a unit test.
+(scripts/eval/eval_dense.py, scripts/compare_chunking.py), not a unit test.
 
 Run: python -m unittest discover -s tests -t .
 """

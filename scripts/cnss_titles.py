@@ -7,7 +7,7 @@ label -- which on that site is an internal CMS code: "Emp Secteur pêche3 Immatr
 buttons (and it is embedded in every chunk's text). This turns the code into
 "<leading heading or procedure> — <role>, <audience>", e.g. "Affiliation — employeur, secteur de
 la pêche" / "الانخراط — المؤجر، قطاع الصيد البحري". The " — <role>" suffix is what
-generate.CNSS_ROLES looks for to tell employer / employee / self-employed pages apart.
+cnss_rules.CNSS_ROLES looks for to tell employer / employee / self-employed pages apart.
 
 Used by clean_pipeline.populate_kb (so a rebuild keeps readable titles); run directly to migrate
 existing kb/ files in place (the code is kept as `original_title`):

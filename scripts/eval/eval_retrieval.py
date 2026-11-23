@@ -1,6 +1,6 @@
 """Retrieval check on data/rag/chunks.jsonl with a dependency-free BM25 (a floor: your real retriever should beat it).
-  python scripts/fixes/eval_retrieval.py --auto                       # each doc must be found from its own title
-  python scripts/fixes/eval_retrieval.py --file my_questions.jsonl    # {"q": "...", "doc_id": "...", "lang": "fr"} per line
+  python scripts/eval/eval_retrieval.py --auto                       # each doc must be found from its own title
+  python scripts/eval/eval_retrieval.py --file my_questions.jsonl    # {"q": "...", "doc_id": "...", "lang": "fr"} per line
 Reports hit@1/3/5, MRR and lists the misses. Real questions beat --auto: write 30-50."""
 import argparse, collections, json, math, re, sys
 from pathlib import Path
@@ -36,8 +36,11 @@ else:
     qs = [{"q": t, "doc_id": d, "lang": l} for (d, l), t in seen.items()]
 hits = collections.Counter(); rr = 0; miss = []
 for q in qs:
-    r = search(q["q"], q.get("lang"))
-    pos = r.index(q["doc_id"]) + 1 if q["doc_id"] in r else 0
+    # Only --auto restricts to the document's own language (a title must find its own page);
+    # a real question can be answered by a page in another language, as in the app.
+    r = search(q["q"], None if a.file else q.get("lang"))
+    gold = {q["doc_id"], *q.get("also_ok", [])}
+    pos = next((i for i, d in enumerate(r, 1) if d in gold), 0)
     for k in (1, 3, 5): hits[k] += 0 < pos <= k
     rr += 1 / pos if pos else 0
     if not pos: miss.append(q)
@@ -45,4 +48,4 @@ n = len(qs)
 print(f"{n} questions | hit@1 {hits[1]/n:.2f}  hit@3 {hits[3]/n:.2f}  hit@5 {hits[5]/n:.2f}  MRR {rr/n:.2f}")
 for m in miss[:8]:
     print("\nMISS:", m["q"], "->", m["doc_id"])
-    print("Retrieved:", search(m["q"], m.get("lang"), k=5))
+    print("Retrieved:", search(m["q"], None if a.file else m.get("lang"), k=5))

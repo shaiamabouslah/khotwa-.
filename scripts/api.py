@@ -51,6 +51,7 @@ from starlette.middleware.sessions import SessionMiddleware
 
 import auth  # noqa: E402
 import generate  # noqa: E402
+import grounding  # noqa: E402
 import monitoring  # noqa: E402
 from retriever import Retriever  # noqa: E402
 
@@ -109,7 +110,9 @@ if not _session_secret:
     print("SESSION_SECRET not set in .env -- using a one-off key for this run; "
           "every restart will log all users out. Set SESSION_SECRET in .env to avoid that.")
     _session_secret = secrets.token_hex(32)
-app.add_middleware(SessionMiddleware, secret_key=_session_secret, same_site="lax", https_only=False)
+# KHOTWA_HTTPS=1 when served behind HTTPS: the session cookie is then never sent over plain HTTP.
+app.add_middleware(SessionMiddleware, secret_key=_session_secret, same_site="lax",
+                   https_only=os.environ.get("KHOTWA_HTTPS") == "1")
 
 
 def require_user(request: Request) -> str:
@@ -340,8 +343,12 @@ def chat(req: ChatRequest, username: str = Depends(require_user)):
         outcome = "busy"
     else:
         outcome = "answer" if sources else "uncited"
+    extra = {}
+    if outcome in ("answer", "uncited") and result.get("hits"):
+        g = grounding.check(body, grounding.source_texts(result["hits"]), question)
+        extra["grounding"] = {k: v for k, v in g.items() if v}
     monitoring.log_event(**event, outcome=outcome, n_sources=len(sources),
-                         latency_ms=round((time.perf_counter() - started) * 1000))
+                         latency_ms=round((time.perf_counter() - started) * 1000), **extra)
 
     # A "service busy, retry in a minute" reply is not an exchange: kept out of the history, or
     # the model would read it as its own previous answer on the next turn, and not rateable.

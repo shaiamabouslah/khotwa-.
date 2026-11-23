@@ -32,23 +32,45 @@ stages:
 
   compare_chunking:
     desc: >
-      Builds the 3 chunking strategies (heading/fixed/semantic) side by side
-      and scores each with BM25 + dense retrieval on the same questions, so
-      the numbers are directly comparable. Never touches prepare_kb's output.
+      Builds the 4 chunking strategies (heading/fixed/semantic/adaptive) side
+      by side and scores each with BM25 + dense retrieval on the same questions,
+      so the numbers are directly comparable. Never touches prepare_kb's output.
     cmd: python scripts/compare_chunking.py --kb kb --file data/rag/questions.jsonl > data/rag/chunking_comparison_report.txt
     deps:
       - kb
       - scripts/compare_chunking.py
       - scripts/rag_prepare.py
-      - scripts/fixes/eval_retrieval.py
-      - scripts/fixes/eval_dense.py
+      - scripts/eval/eval_retrieval.py
+      - scripts/eval/eval_dense.py
       - data/rag/questions.jsonl
     outs:
       - data/rag/cmp_heading
       - data/rag/cmp_fixed
       - data/rag/cmp_semantic
+      - data/rag/cmp_adaptive
       - data/rag/chunking_comparison_report.txt:
           cache: false  # small human-readable report -- keep it a plain, git-diffable file
+
+  benchmark_retrieval:
+    desc: >
+      Retrieval as the web app does it (generate.retrieve), dense vs hybrid,
+      per question language: hit@1/3/5 and MRR, plus the share of
+      out-of-scope questions stopped by the score floor. No API calls.
+      Compare runs with `dvc metrics diff`.
+    cmd: python scripts/benchmark_retrieval.py
+    deps:
+      - scripts/benchmark_retrieval.py
+      - scripts/generate.py
+      - scripts/retriever.py
+      - scripts/cnss_rules.py
+      - data/rag/questions.jsonl
+      - data/rag/hard_questions.jsonl
+      - data/rag/negative_questions.jsonl
+      - data/rag/chunks.jsonl
+      - data/rag/chunks.bge-m3.npy
+    metrics:
+      - data/rag/metrics/retrieval.json:
+          cache: false
 
   eval_ragas:
     desc: >

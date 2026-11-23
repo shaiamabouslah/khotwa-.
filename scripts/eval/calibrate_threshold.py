@@ -19,7 +19,7 @@ neg = [json.loads(l) for l in open("data/rag/negative_questions.jsonl", encoding
 print("=== positive (genuine) questions: top-1 score ===")
 pos_scores = []
 for q in pos:
-    hits = r.search(q["q"], k=1, lang=q.get("lang"))
+    hits = r.search(q["q"], k=1)
     s = hits[0].score if hits else float("-inf")
     pos_scores.append(s)
 pos_scores.sort()

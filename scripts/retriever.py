@@ -19,13 +19,13 @@ Library usage:
 
     # min_score (default DEFAULT_MIN_RERANK_SCORE, rerank=True only): search() returns []
     # instead of a confident-looking wrong answer when the top hit's score is too low --
-    # calibrated on real questions vs. out-of-scope ones, see scripts/fixes/calibrate_threshold.py.
+    # calibrated on real questions vs. out-of-scope ones, see scripts/eval/calibrate_threshold.py.
     hits = r.search("Quelle est la recette du couscous ?")   # -> [] (out of scope)
 
-    # hybrid=True (experimental, not yet benchmarked against dense-only): candidates come from
-    # Reciprocal Rank Fusion of the dense ranking and a BM25 ranking, not dense similarity
-    # alone -- meant to catch exact-term matches (decree numbers, program acronyms, figures)
-    # a paraphrase-tolerant embedding can miss. Still reranked afterwards same as any other call.
+    # hybrid=True: candidates come from Reciprocal Rank Fusion of the dense ranking and a BM25
+    # ranking -- meant to catch exact-term matches (decree numbers, acronyms, figures). Measured
+    # by scripts/benchmark_retrieval.py: lower than dense on every language (Arabic and Derja
+    # most), so the app stays dense-only.
     hits = r.search(q, k=5, hybrid=True)
 
 CLI usage (manual testing, one question at a time):
@@ -77,7 +77,7 @@ def _model_cached(repo_id: str) -> bool:
 if _model_cached(EMBED_MODEL) and _model_cached(RERANK_MODEL):
     os.environ.setdefault("HF_HUB_OFFLINE", "1")
 
-# Calibrated via scripts/fixes/calibrate_threshold.py on the 33 real questions (data/rag/
+# Calibrated via scripts/eval/calibrate_threshold.py on the 33 real questions (data/rag/
 # questions.jsonl) vs. 10 out-of-scope/adjacent-but-uncovered ones (data/rag/negative_questions
 # .jsonl): with rerank=True, genuine top-1 hits scored >=0.664 (one exception: a wrong top-1
 # answer that scored 0.024 -- correctly low), true negatives topped out at 0.221. 0.3 sits in
@@ -101,9 +101,8 @@ BI_SCORE_OVERRIDE = 0.6
 # instead of relying on dense/cosine similarity alone -- catches exact-term matches an embedding
 # can miss (decree numbers, program acronyms, SMIG-style figures: all seen by hand this project
 # where the exact string mattered and a paraphrase-tolerant embedding wasn't the point). RRF_K is
-# the standard smoothing constant from the original RRF paper (Cormack et al. 2009) -- not
-# tuned for this corpus, same role min_score-style calibration would need before trusting hybrid
-# as a default, which hasn't been done yet (see scripts/compare_chunking.py-style experiments).
+# the standard smoothing constant from the original RRF paper (Cormack et al. 2009). Benchmarked
+# against dense-only in scripts/benchmark_retrieval.py: lower on every language, not the default.
 RRF_K = 60
 
 # Abstention floor for rerank=False, on the bi-encoder cosine scale (measured 2026-11-22). The 41
@@ -222,7 +221,7 @@ class Retriever:
         return self._reranker
 
     def _get_bm25(self):
-        """Same BM25 formula/tokenization as scripts/fixes/eval_retrieval.py (kept in sync by
+        """Same BM25 formula/tokenization as scripts/eval/eval_retrieval.py (kept in sync by
         hand: that script is the standalone eval floor, this is the live-search copy used for
         hybrid fusion) -- built once per Retriever instance, pure Python/regex, no model."""
         if self._bm25 is None:
@@ -302,8 +301,7 @@ class Retriever:
         hybrid=True: candidates come from Reciprocal Rank Fusion of the dense ranking and a
         BM25 (lexical) ranking instead of dense similarity alone -- see RRF_K above for why.
         Still goes through the same rerank step afterwards when rerank=True; hybrid only changes
-        which candidates reach the reranker, an experiment not yet validated against dense-only
-        the way DEFAULT_MIN_RERANK_SCORE was (see scripts/compare_chunking.py-style benchmark).
+        which candidates reach the reranker (benchmarked: lower than dense-only, not the default).
 
         min_score: abstain (return []) when the top hit's score falls below this -- a question
         with no real match in the KB (or genuinely ambiguous) scores low; forcing an answer

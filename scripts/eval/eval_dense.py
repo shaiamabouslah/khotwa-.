@@ -1,11 +1,11 @@
 """Retrieval check on a chunks.jsonl using a real embedding model (default: BGE-M3, multilingual
 fr/en/ar) instead of BM25 -- same protocol as eval_retrieval.py so the two are directly
 comparable: same questions, same hit@1/3/5 and MRR, only the scoring differs.
-  python scripts/fixes/eval_dense.py --auto
-  python scripts/fixes/eval_dense.py --chunks data/rag/cmp_semantic/chunks.jsonl --auto
-  python scripts/fixes/eval_dense.py --file data/rag/questions.jsonl
-  python scripts/fixes/eval_dense.py --file data/rag/questions.jsonl --rerank
-  python scripts/fixes/eval_dense.py --file data/rag/questions.jsonl --by-subtopic
+  python scripts/eval/eval_dense.py --auto
+  python scripts/eval/eval_dense.py --chunks data/rag/cmp_semantic/chunks.jsonl --auto
+  python scripts/eval/eval_dense.py --file data/rag/questions.jsonl
+  python scripts/eval/eval_dense.py --file data/rag/questions.jsonl --rerank
+  python scripts/eval/eval_dense.py --file data/rag/questions.jsonl --by-subtopic
 Embeddings are cached next to --chunks (<name>.<model>.npy) since BGE-M3 on CPU is not instant;
 delete that file (or pass --no-cache) after the chunks actually change.
 --rerank: bi-encoder fetches --candidate-k candidates, a cross-encoder (default
@@ -54,7 +54,20 @@ if not a.no_cache and cache_path.exists():
 else:
     mat = None
 if mat is None:
-    mat = np.asarray(embed([c["text"] for c in chunks]), dtype=np.float32)
+    # Chunk texts identical to production chunks (every short document, and all of the heading
+    # strategy) reuse the production embeddings instead of re-embedding: same model, same text,
+    # same vector -- cuts the CPU time of compare_chunking several-fold.
+    known = {}
+    prod_chunks, prod_npy = Path("data/rag/chunks.jsonl"), Path(f"data/rag/chunks.{model_slug}.npy")
+    if prod_npy.exists() and prod_chunks.resolve() != chunks_path.resolve():
+        prod_mat = np.load(prod_npy)
+        prod_texts = [json.loads(l)["text"] for l in prod_chunks.open(encoding="utf-8")]
+        if len(prod_texts) == prod_mat.shape[0]:
+            known = dict(zip(prod_texts, prod_mat))
+    missing = [c["text"] for c in chunks if c["text"] not in known]
+    print(f"embedding {len(missing)} of {N} chunks ({N - len(missing)} reused from data/rag/)", file=sys.stderr)
+    new = dict(zip(missing, np.asarray(embed(missing), dtype=np.float32))) if missing else {}
+    mat = np.stack([known.get(c["text"], new.get(c["text"])) for c in chunks]).astype(np.float32)
     np.save(cache_path, mat)
 
 
@@ -105,8 +118,11 @@ for c in chunks:
 hits = collections.Counter(); rr = 0; miss = []
 by_group = collections.defaultdict(lambda: {"n": 0, "hit1": 0, "rr": 0.0})
 for q in qs:
-    r = search(q["q"], q.get("lang"))
-    pos = r.index(q["doc_id"]) + 1 if q["doc_id"] in r else 0
+    # Only --auto restricts to the document's own language (a title must find its own page);
+    # a real question can be answered by a page in another language, as in the app.
+    r = search(q["q"], None if a.file else q.get("lang"))
+    gold = {q["doc_id"], *q.get("also_ok", [])}
+    pos = next((i for i, d in enumerate(r, 1) if d in gold), 0)
     for k in (1, 3, 5): hits[k] += 0 < pos <= k
     rr += 1 / pos if pos else 0
     if not pos: miss.append(q)
@@ -126,4 +142,4 @@ if a.by_subtopic:
 
 for m in miss[:8]:
     print("\nMISS:", m["q"], "->", m["doc_id"])
-    print("Retrieved:", search(m["q"], m.get("lang"), k=5))
+    print("Retrieved:", search(m["q"], None if a.file else m.get("lang"), k=5))
