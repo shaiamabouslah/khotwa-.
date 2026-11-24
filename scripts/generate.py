@@ -44,6 +44,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from retriever import Retriever, Hit, DEFAULT_MIN_DENSE_SCORE  # noqa: E402
+import tracking  # noqa: E402  (MLflow spans + prompt registry; no-ops while tracking is off)
 from cnss_rules import (  # noqa: E402
     ROLE_POOL, SECTOR_CLARIFY_MESSAGE, SECTOR_LABELS, SECTOR_SUBTOPICS, _is_reply_to_clarification,
     _mentions_cnss, _mentions_sector, _role_first, clarify_options,
@@ -177,6 +178,7 @@ def _split_history(history: list[tuple[str, str, bool]]):
     return short_term, older_topics
 
 
+@tracking.retrieval_span
 def retrieve(retriever, query: str, k: int = 5, domain: str | None = None, subtopic: str | None = None,
              rerank: bool = True, hybrid: bool = False) -> list[Hit]:
     """The retrieval answer() uses (dense-score floor when not reranking, CNSS role ordering),
@@ -253,7 +255,8 @@ def _gen_cache_sig() -> str:
     idea as retriever.py's query cache, extended to also cover the prompt."""
     chunks_path = ROOT / "data" / "rag" / "chunks.jsonl"
     st = chunks_path.stat()
-    prompt_hash = hashlib.sha1(SYSTEM_PROMPT.encode("utf-8")).hexdigest()[:12]
+    # the prompt actually in use, so promoting a new registered version invalidates the cache too
+    prompt_hash = hashlib.sha1(tracking.system_prompt(SYSTEM_PROMPT)[0].encode("utf-8")).hexdigest()[:12]
     return f"{st.st_size}:{st.st_mtime_ns}:{prompt_hash}"
 
 
@@ -400,6 +403,7 @@ def split_sources(text: str) -> tuple[str, list[dict]]:
     return text[:m.start()].rstrip(), sources
 
 
+@tracking.trace(span_type="CHAIN")
 def answer(question: str, retriever: Retriever | None = None, k: int = 5, lang: str | None = None,
            domain: str | None = None, subtopic: str | None = None, rerank: bool = True,
            model: str = DEFAULT_MODEL, use_cache: bool = True,
@@ -514,7 +518,10 @@ def answer(question: str, retriever: Retriever | None = None, k: int = 5, lang: 
         from groq import Groq, RateLimitError
         client = Groq()  # reads GROQ_API_KEY from the environment
         context = build_context(hits)
-        messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+        # The registered @production prompt when MLflow tracking is live, else SYSTEM_PROMPT.
+        system_prompt, prompt_version = tracking.system_prompt(SYSTEM_PROMPT)
+        tracking.tag_current_trace({"prompt_version": prompt_version, "model": model})
+        messages = [{"role": "system", "content": system_prompt}]
         short_term, older_topics = _split_history(history or [])
         if older_topics:
             digest = LONG_TERM_DIGEST.get(q_lang, LONG_TERM_DIGEST["fr"]).format(

@@ -20,3 +20,13 @@ __pycache__/
 mlruns/
 mlflow*.db
 data/rag/exp_*/
+mlruns/
+mlartifacts/
+mlflow*.db
+data/rag/exp_*/
+
+# Models and other heavy binaries -- version them with DVC (dvc add) or log them to MLflow on DagsHub
+*.safetensors
+*.bin
+*.pt
+*.onnx

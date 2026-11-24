@@ -2,13 +2,13 @@
 {"q": "Quelles sont les conditions pour une bourse universitaire quand on vient d'avoir le bac ?", "doc_id": "bourses-nouveau-bachelier", "lang": "fr"}
 {"q": "Quelles sont les procédures pour obtenir l'équivalence d'un diplôme étranger ?", "doc_id": "equivalence-equivalence-rnu-index-fr-html-proc-dures-d-obtention-de-l-quivalence", "lang": "fr"}
 {"q": "Sur quelle base juridique repose l'équivalence des diplômes en Tunisie ?", "doc_id": "equivalence-equivalence-rnu-index-fr-html-les-bases-juridiques", "lang": "fr"}
-{"q": "Qu'est-ce que l'équivalence de diplôme exactement ?", "doc_ids": ["equivalence-equivalence-rnu-index-fr-html-les-bases-juridiques", "equivalence-equivalence-rnu-index-fr-html-proc-dures-d-obtention-de-l-quivalence"], "lang": "fr"}
+{"q": "Qu'est-ce que l'équivalence de diplôme exactement ?", "doc_id": "equivalence-equivalence-rnu-index-fr-html-d-finition", "lang": "fr"}
 {"q": "Comment déclarer un projet en ligne à l'APII ?", "doc_id": "creation-entreprise-apii-portal-fr-doc-asp-q-mcat-16-mrub-122-index", "lang": "fr"}
 {"q": "Où se trouvent les technopoles en Tunisie ?", "doc_id": "creation-entreprise-apii-portal-fr-doc-asp-q-mcat-16-mrub-157-index", "lang": "fr"}
 {"q": "Comment fonctionne la télé-liquidation fiscale sur Jibaya ?", "doc_id": "patente-fiscalite-jibaya-blog-la-tele-liquidation-fiscale-index", "lang": "fr"}
 {"q": "Comment s'immatriculer fiscalement en ligne ?", "doc_id": "patente-fiscalite-jibaya-blog-plateforme-dimmatriculation-fiscale-en-ligne-index", "lang": "fr"}
 {"q": "Quels services propose l'ANETI en ligne pour chercher un emploi ?", "doc_id": "recherche-emploi-aneti-fo-fr-global-php-q-menu1-153-index", "lang": "fr"}
-{"q": "Qu'est-ce que l'ANETI et que fait cette agence ?", "doc_ids": ["recherche-emploi-aneti-fo-fr-global-php-q-menu1-15-index", "recherche-emploi-aneti-fo-fr-global-php-q-menu1-143-index"], "lang": "fr"}
+{"q": "Qu'est-ce que l'ANETI et que fait cette agence ?", "doc_id": "recherche-emploi-aneti-fo-fr-global-php-q-menu1-143-index", "lang": "fr"}
 {"q": "Comment obtenir un duplicata de mon diplôme perdu ?", "doc_id": "releves-attestations-education-gov-fr-prestation-obtention-dun-duplicata-du-diplome-ou-du-r-63255d62", "lang": "fr"}
 {"q": "Comment transférer mes frais de scolarité quand je pars étudier à l'étranger ?", "doc_id": "inscription-education-gov-fr-prestations-57-3-d622-index", "lang": "fr"}
 {"q": "Y a-t-il une exonération des frais d'inscription pour étudier en France ?", "doc_id": "mobilite-best-rnu-campagne-2021-dexoneration-des-frais-dinscription-pour-les-et-1326faca", "lang": "fr"}
@@ -16,7 +16,6 @@
 {"q": "Quelles sont les démarches pour un stage ou projet de fin d'études au Canada ?", "doc_id": "stages-pfe-best-rnu-projets-de-fin-detudespfe-au-canada-2023-2024-index", "lang": "fr"}
 {"q": "Comment consulter mon relevé de carrière professionnelle ?", "doc_id": "attestations-services-gov-affaires-sociales-2-consultation-du-relev-de-carri-re-pro-49ac8973", "lang": "fr"}
 {"q": "Comment candidater pour une bourse de recherche avec Mitacs ?", "doc_id": "bourses-best-rnu-appel-a-candidature-mitacs-2025-2026-index", "lang": "fr"}
-{"q": "كيف أنخرط في الضمان الاجتماعي كعامل غير أجير؟", "doc_id": "non-salaries-affiliation-non-agricole", "lang": "ar"}
 {"q": "كيف أنخرط في الضمان الاجتماعي كعامل غير أجير؟", "doc_id": "non-salaries-affiliation-non-agricole", "lang": "ar"}
 {"q": "أبحث عن عمل، كيف يمكنني التسجيل في الخدمات الوطنية؟", "doc_id": "recherche-emploi-khadamet-intro", "lang": "ar"}
 {"q": "كيف أتابع ملفي كباحث عن شغل؟", "doc_id": "recherche-emploi-khadamet", "lang": "ar"}
@@ -27,7 +26,6 @@
 {"q": "Où déposer une demande d'exonération des frais d'inscription pour étudier en France ?", "doc_id": "mobilite-best-rnu-campagne-2021-dexoneration-des-frais-dinscription-pour-les-et-1326faca", "lang": "fr"}
 {"q": "Qu'est-ce que le programme CapEmploi ?", "doc_id": "non-salaries-aneti-fo-fr-global-php-q-menu1-170-index", "lang": "fr"}
 {"q": "Comment fonctionne le pointage en ligne pour les demandeurs d'emploi ?", "doc_id": "non-salaries-aneti-fo-fr-global-php-q-menu1-172-index", "lang": "fr"}
-{"q": "Liens utiles pour les bourses et prêts universitaires à l'étranger", "doc_id": "bourses-best-rnu-procedures-index", "lang": "fr"}
 {"q": "ما هي الاستشارات المتاحة لتنظيم دورات بعث المؤسسات؟", "doc_id": "creation-entreprise-aneti-fo-fr-global-php-q-menu1-146-index", "lang": "ar"}
 {"q": "Transfert d'argent pour payer les frais de scolarité à l'étranger", "doc_id": "inscription-education-gov-fr-prestations-57-3-d622-index", "lang": "fr"}
 {"q": "Je suis nouveau bachelier, ai-je droit à une bourse ?", "doc_id": "bourses-nouveau-bachelier", "lang": "fr"}
@@ -57,3 +55,40 @@
 {"q": "كيف يعمل برنامج إيراسموس+ في تونس؟", "doc_id": "mobilite-erasmus-tn-international-credit-mobility-icm-php-index", "lang": "ar"}
 {"q": "ما هو برنامج CapEmploi؟", "doc_id": "non-salaries-aneti-fo-fr-global-php-q-menu1-170-index", "lang": "ar"}
 {"q": "كيف يتم التأشير على الخط بالنسبة لطالبي الشغل؟", "doc_id": "non-salaries-aneti-fo-fr-global-php-q-menu1-172-index", "lang": "ar"}
+{"q": "How can I appeal if my diploma equivalence is refused?", "doc_id": "equivalence-equivalence-rnu-index-fr-html-proc-dures-de-recours", "lang": "en"}
+{"q": "Can I get a university loan to study abroad?", "doc_id": "bourses-best-rnu-prets-universitaires-index", "lang": "en"}
+{"q": "I'm a PhD student, what documents do I need to apply for a scholarship?", "doc_id": "bourses-ooun-web-fr-bourse-html-vous-tes-doctorant-et-vous-postulez-une-bourse", "lang": "en"}
+{"q": "My father is a teacher, how do I apply for a scholarship or a loan?", "doc_id": "bourses-ooun-web-fr-bourse-html-vous-tes-fils-d-enseignant-e-et-vous-postulez-5baabf39", "lang": "en"}
+{"q": "How do I register online as an auto-entrepreneur?", "doc_id": "non-salaries-services-gov-je-souhaite-beneficier-de-la-couverture-sociale-demande-d-02387e32", "lang": "en", "also_ok": ["non-salaries-khadamet"]}
+{"q": "How do I enroll at university online?", "doc_id": "inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-inscription-universi-e50cca1c", "lang": "en"}
+{"q": "How can I correct my personal information on the university orientation platform?", "doc_id": "inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-correction-des-infor-75fdef8a", "lang": "en"}
+{"q": "What is ANETI Tkawen?", "doc_id": "recherche-emploi-aneti-fo-fr-global-php-q-menu1-155-index", "lang": "en"}
+{"q": "What employment incentive programmes does ANETI offer?", "doc_id": "recherche-emploi-aneti-fo-fr-global-php-q-menu1-160-index", "lang": "en"}
+{"q": "How do I get a certificate of professional competence if I have experience but no diploma?", "doc_id": "recherche-emploi-services-gov-emploi-et-formation-demande-d-obtention-du-certificat-de-c1f7a858", "lang": "en"}
+{"q": "I'm a foreign student, can I apply for a scholarship in Tunisia?", "doc_id": "bourses-ooun-web-fr-bourse-html-vous-tes-tranger-et-vous-voulez-postuler-une-b-abbc5169", "lang": "en"}
+{"q": "How do I renew my scholarship as a returning student?", "doc_id": "bourses-ooun-web-fr-bourse-html-vous-tes-ancien-tudiant-et-vous-voulez-renouve-17aaba8b", "lang": "en"}
+{"q": "How do I get a certificate stating I have no scholarship abroad?", "doc_id": "bourses-best-rnu-attestation-de-non-boursier-index", "lang": "en"}
+{"q": "Where can I see the results of the main university orientation round?", "doc_id": "inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-consultation-des-r-s-a6dc5fe7", "lang": "en"}
+{"q": "Comment obtenir une attestation de non boursier à l'étranger ?", "doc_id": "bourses-best-rnu-attestation-de-non-boursier-index", "lang": "fr"}
+{"q": "Que faire si ma demande d'équivalence est refusée ?", "doc_id": "equivalence-equivalence-rnu-index-fr-html-proc-dures-de-recours", "lang": "fr"}
+{"q": "Je suis doctorant, quels documents fournir pour une bourse ?", "doc_id": "bourses-ooun-web-fr-bourse-html-vous-tes-doctorant-et-vous-postulez-une-bourse", "lang": "fr"}
+{"q": "Je suis étranger, puis-je obtenir une bourse universitaire en Tunisie ?", "doc_id": "bourses-ooun-web-fr-bourse-html-vous-tes-tranger-et-vous-voulez-postuler-une-b-abbc5169", "lang": "fr"}
+{"q": "Comment s'inscrire comme auto-entrepreneur ?", "doc_id": "non-salaries-services-gov-je-souhaite-beneficier-de-la-couverture-sociale-demande-d-02387e32", "lang": "fr", "also_ok": ["non-salaries-khadamet"]}
+{"q": "كيف أعترض على قرار رفض معادلة شهادتي؟", "doc_id": "equivalence-equivalence-rnu-index-fr-html-proc-dures-de-recours", "lang": "ar"}
+{"q": "كيف أتحصل على شهادة الكفاءة المهنية دون شهادة علمية؟", "doc_id": "recherche-emploi-services-gov-emploi-et-formation-demande-d-obtention-du-certificat-de-c1f7a858", "lang": "ar"}
+{"q": "ما هي منصة ANETI Tkawen للتكوين عن بعد؟", "doc_id": "recherche-emploi-aneti-fo-fr-global-php-q-menu1-155-index", "lang": "ar"}
+{"q": "كيف أسجل في الجامعة عن بعد؟", "doc_id": "inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-inscription-universi-e50cca1c", "lang": "ar"}
+{"q": "كيف أصلح معطياتي الشخصية في منصة التوجيه الجامعي؟", "doc_id": "inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-correction-des-infor-75fdef8a", "lang": "ar"}
+{"q": "كيفاش نعمل معادلة لشهادة خذيتها من برا؟", "doc_id": "equivalence-equivalence-rnu-index-fr-html-proc-dures-d-obtention-de-l-quivalence", "lang": "derja"}
+{"q": "نحب نسجل روحي مبادر ذاتي، شنوة لازمني؟", "doc_id": "non-salaries-khadamet", "lang": "derja", "also_ok": ["non-salaries-services-gov-je-souhaite-beneficier-de-la-couverture-sociale-demande-d-02387e32"]}
+{"q": "مددو في آجال مطالب المنح الجامعية؟ لوقتاش؟", "doc_id": "bourses-oouc-blagh-hol-altmdyd-fy-agal-tkdym-mtalb-almnh-algamaay-al-ghay-yom-9f77ee20", "lang": "derja"}
+{"q": "شنية الوراق اللازمة لمطلب المنحة والقرض الجامعي؟", "doc_id": "bourses-oouc-blagh-hol-alothayk-almtlob-lmtalb-almnh-omnh-aladmag-oalkrod-alga-5ab816bd", "lang": "derja"}
+{"q": "القرض الجامعي شنوة وكيفاش ناخذو؟", "doc_id": "bourses-oous-ar-prets-universitaires-index", "lang": "derja"}
+{"q": "منحة التربص للطلبة الممنوحين، كيفاش نتحصل عليها؟", "doc_id": "bourses-oouc-blagh-hol-mnh-altrbs-khas-baltlb-almmnohyn-index", "lang": "derja"}
+{"q": "نحب نعمل التسجيل في الجامعة عن بعد، كيفاش؟", "doc_id": "inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-inscription-universi-e50cca1c", "lang": "derja"}
+{"q": "kifech na3mel inscription fel fac à distance?", "doc_id": "inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-inscription-universi-e50cca1c", "lang": "derja"}
+{"q": "chnowa el wra9 elli lazmin bech na3mel equivalence lel diplome mte3i?", "doc_id": "equivalence-equivalence-rnu-index-fr-html-proc-dures-d-obtention-de-l-quivalence", "lang": "derja"}
+{"q": "ena weld prof, famma minha wala 9ardh khassa bina?", "doc_id": "bourses-ooun-web-fr-bourse-html-vous-tes-fils-d-enseignant-e-et-vous-postulez-5baabf39", "lang": "derja"}
+{"q": "kifech nchouf natija mta3 l'orientation universitaire?", "doc_id": "inscription-services-gov-je-poursuis-mes-etudes-a-luniversite-consultation-des-r-s-a6dc5fe7", "lang": "derja"}
+{"q": "nheb na3mel pointage aneti en ligne kifech?", "doc_id": "non-salaries-aneti-fo-fr-global-php-q-menu1-172-index", "lang": "derja"}
+{"q": "nheb nwalli auto-entrepreneur, kifech nsajel?", "doc_id": "non-salaries-services-gov-je-souhaite-beneficier-de-la-couverture-sociale-demande-d-02387e32", "lang": "derja", "also_ok": ["non-salaries-khadamet"]}

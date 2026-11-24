@@ -112,20 +112,6 @@ def summarize(rows: list[dict]) -> dict:
     }
 
 
-def traced_retrieve(mlflow, original):
-    from mlflow.entities import SpanType
-
-    def retrieve(retriever, query, **kwargs):
-        with mlflow.start_span(name="retrieve", span_type=SpanType.RETRIEVER) as span:
-            span.set_inputs({"query": query, **kwargs})
-            hits = original(retriever, query, **kwargs)
-            span.set_outputs([{"id": h.chunk_id, "page_content": h.text,
-                               "metadata": {"doc_id": h.doc_id, "title": h.title, "lang": h.lang,
-                                            "score": round(h.score, 4), "url": h.url}} for h in hits])
-            return hits
-    return retrieve
-
-
 def answer_traced(mlflow, q: dict, retriever: Retriever, model: str) -> dict:
     from mlflow.entities import SpanType
     with mlflow.start_span(name="khotwa_answer", span_type=SpanType.CHAIN) as span:
@@ -154,13 +140,17 @@ def main():
     if tracking.enabled():
         mlflow = tracking.start("generation")
         mlflow.groq.autolog()
-        generate.retrieve = traced_retrieve(mlflow, generate.retrieve)
+        # generate.retrieve() records its own RETRIEVER span once tracking.start() has run
     run = (mlflow.start_run(run_name=f"generation {tracking.git_commit()}") if mlflow
            else contextlib.nullcontext())
 
     with run:
         if mlflow:
             mlflow.set_tag("git_commit", tracking.git_commit())
+            mlflow.set_tags(tracking.data_version())  # chunks md5, in sync with dvc.lock?, embeddings
+            prompt_text, prompt_version = tracking.system_prompt(generate.SYSTEM_PROMPT)
+            mlflow.log_param("prompt_version", prompt_version)  # KHOTWA_PROMPT_ALIAS=latest -> candidate
+            mlflow.log_text(prompt_text, "system_prompt.txt")
             mlflow.log_params({"model": a.model, "rerank": WEB_RERANK, "k": 5, "n_in_scope": a.n,
                                "n_out_of_scope": a.negatives, "seed": a.seed})
         rows = []

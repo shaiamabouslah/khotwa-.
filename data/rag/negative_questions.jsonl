@@ -1,0 +1,30 @@
+{"q": "Quelle est la recette du couscous tunisien traditionnel ?", "expect": "out_of_domain"}
+{"q": "Quel temps fait-il à Tunis aujourd'hui ?", "expect": "out_of_domain"}
+{"q": "Quel est le classement de l'équipe nationale de football de Tunisie ?", "expect": "out_of_domain"}
+{"q": "Comment configurer une connexion wifi sur mon routeur ?", "expect": "out_of_domain"}
+{"q": "Quels sont les meilleurs restaurants à Sousse ?", "expect": "out_of_domain"}
+{"q": "Comment renouveler mon passeport tunisien ?", "expect": "adjacent_not_covered"}
+{"q": "Quelle est la procédure pour un visa Schengen depuis la Tunisie ?", "expect": "adjacent_not_covered"}
+{"q": "Comment obtenir ou renouveler mon permis de conduire ?", "expect": "adjacent_not_covered"}
+{"q": "Quelle est la procédure de légalisation d'un diplôme pour l'étranger ?", "expect": "in_taxonomy_no_content"}
+{"q": "ما هي إجراءات تجديد جواز السفر التونسي؟", "expect": "adjacent_not_covered"}
+{"q": "ما هي أفضل طريقة لطهي الكسكسي؟", "expect": "out_of_domain"}
+{"q": "كم سعر صرف الأورو اليوم في تونس؟", "expect": "out_of_domain"}
+{"q": "كيف أتحصل على رخصة السياقة؟", "expect": "adjacent_not_covered"}
+{"q": "What is the best beach in Hammamet?", "expect": "out_of_domain"}
+{"q": "How do I renew my Tunisian national ID card?", "expect": "adjacent_not_covered"}
+{"q": "Comment écrire une fonction récursive en Python ?", "expect": "out_of_domain"}
+{"q": "How do I apply for a US visa from Tunisia?", "expect": "adjacent_not_covered"}
+{"q": "What is the price of an iPhone in Tunisia?", "expect": "out_of_domain"}
+{"q": "How do I get a car registration document (carte grise)?", "expect": "adjacent_not_covered"}
+{"q": "Who won the last Tunisian presidential election?", "expect": "out_of_domain"}
+{"q": "كيف أستخرج بطاقة التعريف الوطنية؟", "expect": "adjacent_not_covered"}
+{"q": "ما هي مواعيد الصلاة في صفاقس؟", "expect": "out_of_domain"}
+{"q": "وين نلقى أحسن لبلابي في تونس؟", "expect": "out_of_domain"}
+{"q": "كيفاش نخرج باسبور جديد؟", "expect": "adjacent_not_covered"}
+{"q": "chkoun rbe7 el match el bera7?", "expect": "out_of_domain"}
+{"q": "kifech nkhallas facture steg en ligne?", "expect": "adjacent_not_covered"}
+{"q": "Comment obtenir un extrait de naissance ?", "expect": "adjacent_not_covered"}
+{"q": "Comment demander un prêt immobilier à la banque ?", "expect": "adjacent_not_covered"}
+{"q": "Quel est le prix du pain subventionné en Tunisie ?", "expect": "out_of_domain"}
+{"q": "Comment s'inscrire au service militaire ?", "expect": "adjacent_not_covered"}

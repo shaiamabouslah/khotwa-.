@@ -8,6 +8,7 @@ pre-seeded with a MagicMock in setUp, before get_retriever() could lazily build 
 
 Run: python -m unittest discover -s tests -t .
 """
+import os
 import sys
 import tempfile
 import unittest
@@ -15,6 +16,7 @@ from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+os.environ["KHOTWA_MLFLOW"] = "0"  # never send traces to the MLflow server from unit tests
 
 import api  # noqa: E402
 import auth  # noqa: E402
@@ -40,6 +42,14 @@ class ApiTestBase(unittest.TestCase):
         self._titles_patcher.start()
         self._events_patcher = patch.object(api.monitoring, "EVENTS_PATH", Path(self._tmpdir.name) / "events.jsonl")
         self._events_patcher.start()
+        # the other sidecars are computed from HISTORY_DIR at import time too, like TITLES_PATH
+        self._sidecar_patchers = [patch.object(api, name, Path(self._tmpdir.name) / f"_{name.lower()}.json")
+                                  for name in ("HITS_PATH", "TRACES_PATH") if hasattr(api, name)]
+        for p in self._sidecar_patchers:
+            p.start()
+        # the in-memory rate limiter would otherwise count every test's requests (same client IP)
+        if hasattr(api, "_rate_hits"):
+            api._rate_hits.clear()
         api._retriever = MagicMock()
         # Each TestClient instance keeps its own cookie jar -- a fresh one per registered user
         # simulates two different browsers/people.
@@ -50,6 +60,8 @@ class ApiTestBase(unittest.TestCase):
         self._users_patcher.stop()
         self._titles_patcher.stop()
         self._events_patcher.stop()
+        for p in self._sidecar_patchers:
+            p.stop()
         api._retriever = None
         self._tmpdir.cleanup()
 
@@ -400,6 +412,43 @@ class TestChatEndpoint(ApiTestBase):
         m = self.client.get("/metrics").json()
         self.assertEqual((m["feedback"]["up"], m["feedback"]["down"]), (1, 0))
         self.assertEqual(m["recent_downvoted"], [])
+
+    def test_feedback_is_attached_to_the_trace_of_the_rated_answer(self):
+        import contextlib
+
+        class FakeSpan:
+            trace_id = None
+            def set_outputs(self, *_): pass
+
+        ids = iter(["tr-first", "tr-second"])
+
+        @contextlib.contextmanager
+        def fake_span(*_a, **_k):
+            sp = FakeSpan()
+            sp.trace_id = next(ids)
+            yield sp
+
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        with patch.object(api.tracking, "span", fake_span), \
+             patch.object(api.generate, "answer", return_value=self._answer_with_sources("Voir [1].")):
+            self.client.post("/chat", json={"conversation_id": conv_id, "question": "q1"})
+            self.client.post("/chat", json={"conversation_id": conv_id, "question": "q2"})
+        with patch.object(api.tracking, "log_user_feedback") as logged:
+            self.client.post("/feedback", json={"conversation_id": conv_id, "turn": 0, "value": "down"})
+        self.assertEqual(logged.call_args.args[:2], ("tr-first", "down"))
+        # deleting the conversation forgets its trace ids too
+        self.client.delete(f"/conversations/{conv_id}")
+        self.assertEqual(api._load_json(api.TRACES_PATH), {})
+
+    def test_too_many_questions_are_rate_limited(self):
+        self._register(self.client, "etudiant1")
+        conv_id = self._new_conversation(self.client)
+        with patch.object(api.generate, "answer", return_value=_answer_stub("A")):
+            codes = [self.client.post("/chat", json={"conversation_id": conv_id, "question": f"q{i}"}).status_code
+                     for i in range(16)]
+        self.assertEqual(codes[:15], [200] * 15)
+        self.assertEqual(codes[15], 429)
 
     def test_feedback_validation(self):
         self._register(self.client, "etudiant1")

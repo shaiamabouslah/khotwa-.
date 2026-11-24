@@ -5,29 +5,61 @@
   python scripts/fixes/track_mlflow.py --ragas-n 0      # skip RAGAS (no LLM calls)
   python scripts/fixes/track_mlflow.py --name rerank-5 --candidate-k 5 --ragas-n 0
   python scripts/fixes/track_mlflow.py --name rerank-10 --candidate-k 10 --ragas-n 0
-  mlflow ui                                       # browse/compare runs
+  mlflow ui                                       # browse/compare runs (local store)
+
+Runs on main as well as on exp/fixed:
+  - answers are generated exactly like the web app does (same system prompt -- the registered
+    @production version when MLflow is on, KHOTWA_PROMPT_ALIAS=latest to try a candidate --, same
+    language directive, token budget and citation clean-up), not with a separate prompt
+  - spans come from scripts/tracking.py (one module for the whole project); config.yaml is optional
+  - every run is tagged with the data version: chunks md5, whether they match dvc.lock, embeddings
 """
 import argparse, hashlib, json, math, numbers, os, platform, random, re, subprocess, sys, time
 from pathlib import Path
 
 import mlflow
 import torch
-import yaml
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "sources.yaml").exists())
 sys.path.insert(0, str(ROOT / "scripts"))
 import rag_prepare  # noqa: E402
-from retriever import Retriever, EMBED_MODEL, RERANK_MODEL, RERANKER_MAX_LENGTH  # noqa: E402
-from generate import generate_text, DEFAULT_MODEL           # noqa: E402
-from tracing import span  # noqa: E402
+import retriever as retriever_module  # noqa: E402
+from retriever import Retriever, EMBED_MODEL, RERANK_MODEL  # noqa: E402
+import generate  # noqa: E402
+from generate import DEFAULT_MODEL  # noqa: E402
+import tracking  # noqa: E402
+from tracking import span  # noqa: E402
+
+# only defined on some branches; the reranker's own default otherwise
+RERANKER_MAX_LENGTH = getattr(retriever_module, "RERANKER_MAX_LENGTH", "default")
+
+
+def generate_text(question: str, hits: list, model: str = DEFAULT_MODEL) -> str:
+    """One answer from `hits`, built exactly like generate.answer() builds a first-turn answer in
+    the web app -- so this evaluates what users actually get."""
+    if not os.environ.get("GROQ_API_KEY"):
+        sys.exit("GROQ_API_KEY not set.")
+    from groq import Groq
+    q_lang = generate.detect_lang(question)
+    system_prompt, _ = tracking.system_prompt(generate.SYSTEM_PROMPT)
+    directive = generate.LANG_DIRECTIVE.get(q_lang, generate.LANG_DIRECTIVE["fr"])
+    messages = [{"role": "system", "content": system_prompt},
+                {"role": "user", "content": f"Sources officielles disponibles :\n\n{generate.build_context(hits)}"
+                                            f"\n\nQuestion : {question}\n\n{directive}"}]
+    extra = {"max_completion_tokens": generate.MAX_COMPLETION_TOKENS} if hasattr(generate, "MAX_COMPLETION_TOKENS") else {}
+    resp = generate._call_groq_with_retry(Groq(), model=model, temperature=0.2, messages=messages, **extra)
+    text = (resp.choices[0].message.content or "").strip()
+    return generate.normalize_citations(text) if hasattr(generate, "normalize_citations") else text
 
 RETRIEVAL_K = 5
 GENERATION_K = 3
 
-config = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8")) or {}
+config = {}
+if (ROOT / "config.yaml").exists():  # exp/fixed has one; main doesn't -- built-in defaults then
+    import yaml
+    config = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8")) or {}
 evaluation_config = config.get("evaluation", {})
 mlflow_config = config.get("observability", {}).get("mlflow", {})
-os.environ["KHOTWA_TRACE"] = "1"
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--name")
@@ -109,8 +141,14 @@ experiment_name = os.environ.get("MLFLOW_EXPERIMENT_NAME", mlflow_config.get("ex
 if tracking_uri.startswith("sqlite:///") and not Path(tracking_uri.removeprefix("sqlite:///")).is_absolute():
     tracking_db = (ROOT / tracking_uri.removeprefix("sqlite:///")).resolve().as_posix()
     tracking_uri = f"sqlite:///{tracking_db}"
-mlflow.set_tracking_uri(tracking_uri)
-mlflow.set_experiment(experiment_name)
+# through scripts/tracking.py: DagsHub credentials from .dvc/config.local when needed, and the
+# project's span / prompt helpers become live for this run
+os.environ["MLFLOW_TRACKING_URI"] = tracking_uri
+tracking.start(experiment_name)
+try:
+    mlflow.groq.autolog()  # each Groq call (generation + RAGAS judge) as an LLM span with tokens
+except Exception:
+    pass
 questions_path = Path(a.questions)
 if not questions_path.is_absolute():
     questions_path = ROOT / questions_path
@@ -142,7 +180,11 @@ mlflow.set_tags({
     "evaluation.dataset": str(questions_path.relative_to(ROOT)) if questions_path.is_relative_to(ROOT) else str(questions_path),
     "evaluation.dataset_sha256": dataset_sha256,
     "evaluation.run_status": "running",
+    **tracking.data_version(str(rag_dir)),  # chunks md5, chunks_in_sync with dvc.lock, embeddings_sig
 })
+_prompt_text, _prompt_version = tracking.system_prompt(generate.SYSTEM_PROMPT)
+mlflow.log_param("prompt_version", _prompt_version)
+mlflow.log_text(_prompt_text, "system_prompt.txt")
 mlflow.log_params({
     "embed_model": EMBED_MODEL, "reranker": RERANK_MODEL, "llm": a.llm, "ragas_judge": a.judge,
     "reranker_max_length": RERANKER_MAX_LENGTH,
@@ -159,7 +201,10 @@ t = time.perf_counter()
 r = Retriever(rag_dir=rag_dir, use_query_cache=False)
 retriever_load_s = time.perf_counter() - t
 r.search("warmup", k=1, candidate_k=a.candidate_k)  # load embedder + reranker outside the timers
-reranker_device = str(r._get_reranker().model.device)
+try:
+    reranker_device = str(r._get_reranker().model.device)
+except Exception:  # attribute layout differs across sentence-transformers versions
+    reranker_device = "unknown"
 mlflow.log_param("reranker_device", reranker_device)
 mlflow.log_param("torch_num_threads", torch.get_num_threads())
 mlflow.set_tag("evaluation.reranker_device", reranker_device)

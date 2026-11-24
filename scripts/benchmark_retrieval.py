@@ -160,6 +160,7 @@ def main():
         mlflow = tracking.start("retrieval-benchmark")
         with mlflow.start_run(run_name=f"benchmark {tracking.git_commit()}"):
             mlflow.set_tag("git_commit", tracking.git_commit())
+            mlflow.set_tags(tracking.data_version())  # which chunks/embeddings this benchmark ran on
             mlflow.log_params({"embed_model": EMBED_MODEL, "chunking": "heading", "k": 5, "rerank": False,
                                "min_dense_score": generate.DEFAULT_MIN_DENSE_SCORE, "modes": a.modes,
                                "n_questions": len(positives), "n_robustness": len(hard),

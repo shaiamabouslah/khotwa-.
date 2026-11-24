@@ -30,6 +30,12 @@ UI-only metadata lives in sidecar files next to the history files (generate.py n
   _hits.json       the retrieved sources of each turn (so reopened conversations keep their
                    routing banner and source cards exactly as first shown)
   _feedback.jsonl  thumbs up/down given to answers (one JSON object per line)
+  _traces.json     the MLflow trace id of each turn, so a thumbs up/down lands on the right trace
+
+MLflow (on when MLFLOW_TRACKING_URI is set, see scripts/tracking.py): every /chat question is one
+trace in the experiment "production" -- retrieval, the Groq call, outcome, grounding, prompt and
+data version -- grouped by conversation, with each thumbs up/down attached as "user_feedback".
+KHOTWA_MLFLOW=0 turns the web app's traces off while keeping the evaluation scripts' logging.
 """
 import json
 import os
@@ -60,6 +66,7 @@ import auth  # noqa: E402
 import generate  # noqa: E402
 import grounding  # noqa: E402
 import monitoring  # noqa: E402
+import tracking  # noqa: E402
 from retriever import Retriever  # noqa: E402
 
 if not os.environ.get("GROQ_API_KEY"):
@@ -93,6 +100,7 @@ def get_retriever() -> Retriever:
 
 
 def _warm_up():
+    tracking.setup_app()  # connect to MLflow (or stay off) before the first question, not during it
     try:
         get_retriever()
         print("Retriever ready.", flush=True)
@@ -121,7 +129,8 @@ app.add_middleware(
     SessionMiddleware,
     secret_key=_session_secret,
     same_site="lax",
-    https_only=os.environ.get("SESSION_HTTPS_ONLY") == "1",
+    # SESSION_HTTPS_ONLY (this file's name) or KHOTWA_HTTPS (the name on main) -- either works
+    https_only="1" in (os.environ.get("SESSION_HTTPS_ONLY"), os.environ.get("KHOTWA_HTTPS")),
 )
 
 
@@ -240,6 +249,7 @@ _io_lock = threading.Lock()
 TITLES_PATH = generate.HISTORY_DIR / "_titles.json"
 HITS_PATH = generate.HISTORY_DIR / "_hits.json"
 FEEDBACK_PATH = generate.HISTORY_DIR / "_feedback.jsonl"
+TRACES_PATH = generate.HISTORY_DIR / "_traces.json"
 
 # Only what the UI needs from a retrieved hit -- keeps the sidecar small.
 HIT_FIELDS = ("title", "org", "url", "domain", "subtopic")
@@ -279,9 +289,27 @@ def _store_turn_hits(key: str, turn_index: int, hits: list[dict]):
         _save_json(HITS_PATH, data)
 
 
+def _store_turn_trace(key: str, turn_index: int, trace_id: str | None):
+    if not trace_id:
+        return
+    with _io_lock:
+        data = _load_json(TRACES_PATH)
+        per_turn = data.get(key, [])
+        while len(per_turn) <= turn_index:
+            per_turn.append(None)
+        per_turn[turn_index] = trace_id
+        data[key] = per_turn
+        _save_json(TRACES_PATH, data)
+
+
+def _turn_trace_id(key: str, turn_index: int) -> str | None:
+    per_turn = _load_json(TRACES_PATH).get(key, [])
+    return per_turn[turn_index] if 0 <= turn_index < len(per_turn) else None
+
+
 def _drop_conversation_sidecars(key: str):
     with _io_lock:
-        for path in (TITLES_PATH, HITS_PATH):
+        for path in (TITLES_PATH, HITS_PATH, TRACES_PATH):
             data = _load_json(path)
             if data.pop(key, None) is not None:
                 _save_json(path, data)
@@ -390,6 +418,25 @@ def chat(req: ChatRequest, username: str = Depends(require_user)):
     if not path.exists():
         raise HTTPException(404, "conversation introuvable -- cree-la via POST /conversations")
 
+    user = monitoring.user_hash(username)
+    tracking.setup_app()  # normally done at startup; instant after the first call
+    # One MLflow trace per question, rooted here: generate.answer(), retrieve() and the Groq call
+    # nest under it. A no-op while tracking is off.
+    with tracking.span("chat", "CHAIN", {"question": question, "lang": req.lang}) as span:
+        tracking.tag_current_trace({**tracking.data_version(), "web_rerank": WEB_RERANK},
+                                   session_id=f"{user}:{req.conversation_id}", user=user)
+        resp, outcome, lang, flags = _answer_turn(req, question, key, user)
+        tracking.tag_current_trace({"outcome": outcome, "lang": lang, "n_sources": len(resp.sources),
+                                    "grounded": None if outcome not in ("answer", "uncited") else str(not flags).lower()})
+        span.set_outputs({"answer": resp.answer, "outcome": outcome, "abstained": resp.abstained,
+                          "sources": [s.url for s in resp.sources], "grounding": flags})
+        if resp.turn is not None:
+            _store_turn_trace(key, resp.turn, span.trace_id)
+    return resp
+
+
+def _answer_turn(req: ChatRequest, question: str, key: str, user: str):
+    """The /chat logic itself -> (response, outcome, question language, grounding flags)."""
     # Chitchat (greeting/farewell) is answered inside generate.answer() without ever touching
     # the retriever -- but Python evaluates call arguments eagerly, so passing get_retriever()
     # directly would load the whole embedding model + reranker on EVERY first message, including
@@ -398,7 +445,7 @@ def chat(req: ChatRequest, username: str = Depends(require_user)):
     # first (generate.GREETING_RE / generate.FAREWELL_RE -- reused, not re-implemented here).
     needs_retriever = not (generate.GREETING_RE.match(question) or generate.FAREWELL_RE.match(question))
     lang = req.lang or (generate.detect_lang(question) if needs_retriever else generate._chitchat_lang(question))
-    event = {"event": "question", "user": monitoring.user_hash(username), "conversation_id": req.conversation_id,
+    event = {"event": "question", "user": user, "conversation_id": req.conversation_id,
              "lang": lang, "question": question}
     started = time.perf_counter()
 
@@ -436,17 +483,18 @@ def chat(req: ChatRequest, username: str = Depends(require_user)):
     if outcome in ("answer", "uncited") and result.get("hits"):
         g = grounding.check(body, grounding.source_texts(result["hits"]), question)
         extra["grounding"] = {k: v for k, v in g.items() if v}
+    flags = {k: v for k, v in extra.get("grounding", {}).items() if k != "grounded"}
     monitoring.log_event(**event, outcome=outcome, n_sources=len(sources),
                          latency_ms=round((time.perf_counter() - started) * 1000), **extra)
 
     # A "service busy, retry in a minute" reply is not an exchange: kept out of the history, or
     # the model would read it as its own previous answer on the next turn, and not rateable.
     if outcome in ("busy", "empty"):
-        return ChatResponse(answer=body, abstained=False)
+        return ChatResponse(answer=body, abstained=False), outcome, lang, flags
     history.append((question, result["answer"], result["abstained"]))
     generate.save_history(key, history)
-    return ChatResponse(answer=body, abstained=result["abstained"], sources=sources, options=options,
-                        turn=len(history) - 1)
+    return (ChatResponse(answer=body, abstained=result["abstained"], sources=sources, options=options,
+                         turn=len(history) - 1), outcome, lang, flags)
 
 
 class Feedback(BaseModel):
@@ -465,8 +513,12 @@ def feedback(fb: Feedback, username: str = Depends(require_user)):
     history = generate.load_history(key)
     if not 0 <= fb.turn < len(history):
         raise HTTPException(404, "message introuvable")
-    monitoring.log_event(event="feedback", user=monitoring.user_hash(username), conversation_id=fb.conversation_id,
+    user = monitoring.user_hash(username)
+    monitoring.log_event(event="feedback", user=user, conversation_id=fb.conversation_id,
                          turn=fb.turn, value=fb.value, question=history[fb.turn][0])
+    # The same rating on the MLflow trace of that answer ("user_feedback"; a later click on the
+    # other thumb adds a newer assessment, the latest one is the current rating).
+    tracking.log_user_feedback(_turn_trace_id(key, fb.turn), fb.value, user, history[fb.turn][0])
     return {"status": "ok"}
 
 
